@@ -1,9 +1,9 @@
+/.settings/
 /bin/
 /src-gen/
-/xtend-gen/
-/target/
-/.settings/
 /src/eu/paasage/camel/dsl/formatting/
 /src/eu/paasage/camel/dsl/generator/
 /src/eu/paasage/camel/dsl/scoping/
 /src/eu/paasage/camel/dsl/serializer/
+/target/
+/xtend-gen/
