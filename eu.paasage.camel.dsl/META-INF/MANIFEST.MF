@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-Vendor: %providerName
+Bundle-Version: 2015.9.1
+Bundle-SymbolicName: eu.paasage.camel.dsl; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.ocl.ecore,
+ org.eclipse.ocl.examples,
+ org.eclipse.xtext;visibility:=reexport,
+ org.eclipse.xtext.common.types,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtext.util,
+ org.antlr.runtime,
+ org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional,
+ eu.paasage.camel
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: eu.paasage.camel.dsl,
+ eu.paasage.camel.dsl.services,
+ eu.paasage.camel.dsl.serializer,
+ eu.paasage.camel.dsl.parser.antlr,
+ eu.paasage.camel.dsl.parser.antlr.internal,
+ eu.paasage.camel.dsl.validation,
+ eu.paasage.camel.dsl.scoping,
+ eu.paasage.camel.dsl.generator,
+ eu.paasage.camel.dsl.formatting
+Import-Package: org.apache.log4j

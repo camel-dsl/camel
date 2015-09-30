@@ -1,0 +1,1396 @@
+grammar eu.paasage.camel.dsl.CamelDsl with org.eclipse.xtext.common.Terminals
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+import "http://www.paasage.eu/2015/06/camel" as camel
+import "http://www.paasage.eu/2015/06/camel/deployment" as deployment
+import "http://www.paasage.eu/2015/06/camel/execution" as execution
+import "http://www.paasage.eu/2015/06/camel/location" as location
+import "http://www.paasage.eu/2015/06/camel/metric" as metric
+import "http://www.paasage.eu/2015/06/camel/organisation" as organisation
+import "http://www.paasage.eu/2015/06/camel/provider" as provider
+import "http://www.paasage.eu/2015/06/camel/requirement" as requirement
+import "http://www.paasage.eu/2015/06/camel/scalability" as scalability
+import "http://www.paasage.eu/2015/06/camel/security" as security
+import "http://www.paasage.eu/2015/06/camel/type" as type
+import "http://www.paasage.eu/2015/06/camel/unit" as unit
+
+CamelModel returns camel::CamelModel:
+    ('import ' importURI += EString)*
+    'camel model ' name = ID '{'
+    (
+        deploymentModels += DeploymentModel |
+        executionModels += ExecutionModel |
+        locationModels += LocationModel |
+        metricModels += MetricModel |
+        organisationModels += OrganisationModel |
+        providerModels += ProviderModel |
+        requirementModels += RequirementModel |
+        scalabilityModels += ScalabilityModel |
+        securityModels += SecurityModel |
+        typeModels += TypeModel |
+        unitModels += UnitModel |
+        actions += Action |
+        applications += Application
+    )*
+    '}'
+;
+
+/* Deployment model */
+
+DeploymentModel returns deployment::DeploymentModel:
+    'deployment model ' name = ID '{'
+        (
+            vms += VM |
+            internalComponents += InternalComponent |
+            vmRequirementSets += VMRequirementSet
+        )*
+        (hostings += Hosting)*
+        (communications += Communication)*
+        (
+            vmInstances += VMInstance |
+            internalComponentInstances += InternalComponentInstance
+        )*
+        (communicationInstances += CommunicationInstance)*
+        (hostingInstances += HostingInstance)*
+        ('global ' globalVMRequirementSet = [deployment::VMRequirementSet | Fqn])?
+    '}'
+;
+
+Configuration returns deployment::Configuration:
+    'configuration ' name = ID '{'
+        (
+            'download: ' downloadCommand = EString |
+            'upload: ' uploadCommand = EString |
+            'install: ' installCommand = EString |
+            'configure: ' configureCommand = EString |
+            'start: ' startCommand = EString |
+            'stop: ' stopCommand = EString
+        )*
+    '}'
+;
+
+VM returns deployment::VM:
+    'vm ' name = ID '{'
+        ('requirement set ' vmRequirementSet = [deployment::VMRequirementSet])?
+        (
+//            providedCommunications += ProvidedCommunication |
+            providedHosts += ProvidedHost |
+            configurations += Configuration
+        )*
+    '}'
+;
+
+VMRequirementSet returns deployment::VMRequirementSet:
+    'requirement set ' name = ID '{'
+        (
+            'location: ' locationRequirement = [requirement::LocationRequirement | Fqn] |
+            'qualitative hardware: ' qualitativeHardwareRequirement = [requirement::QualitativeHardwareRequirement | Fqn] |
+            'quantitative hardware: ' quantitativeHardwareRequirement = [requirement::QuantitativeHardwareRequirement | Fqn] |
+            'os: ' osOrImageRequirement = [requirement::OSRequirement | Fqn] |
+            'image: ' osOrImageRequirement = [requirement::ImageRequirement | Fqn]
+            'provider: ' providerRequirement = [requirement::ProviderRequirement | Fqn]
+        )*
+    '}'
+;
+
+InternalComponent returns deployment::InternalComponent:
+    'internal component ' name = ID '{'
+        (
+            providedCommunications += ProvidedCommunication |
+            requiredCommunications += RequiredCommunication |
+            providedHosts += ProvidedHost |
+            requiredHost = RequiredHost |
+            configurations += Configuration
+        )*
+    '}'
+;
+
+ProvidedCommunication returns deployment::ProvidedCommunication:
+    'provided communication ' name = ID
+    ('{'
+        (
+        	('port: ' portNumber = INT)
+        	(',')?
+        )*
+    '}')?
+;
+
+RequiredCommunication returns deployment::RequiredCommunication:
+    'required communication ' name = ID
+    ('{'
+        (
+        	('port: ' portNumber = INT | isMandatory ?= 'mandatory')
+        	(',')?
+        )*
+    '}')?
+;
+
+ProvidedHost returns deployment::ProvidedHost:
+    'provided host ' name = ID
+;
+
+RequiredHost returns deployment::RequiredHost:
+    'required host ' name = ID
+;
+
+enum CommunicationType returns deployment::CommunicationType:
+	LOCAL = 'LOCAL' | REMOTE = 'REMOTE' | ANY = 'ANY';
+                
+Communication returns deployment::Communication:
+    'communication ' name = ID '{'
+        ('type: ' type = CommunicationType)?
+        'from ' requiredCommunication = [deployment::RequiredCommunication | Fqn]
+        'to ' providedCommunication = [deployment::ProvidedCommunication | Fqn]
+        ('provided port ' providedPortConfiguration=Configuration)?
+        ('required port ' requiredPortConfiguration=Configuration)?
+     '}'
+;
+
+Hosting returns deployment::Hosting:
+    'hosting ' name = ID '{'
+        'from ' requiredHost = [deployment::RequiredHost | Fqn]
+    	'to ' providedHost = [deployment::ProvidedHost | Fqn]
+     '}'
+;
+
+VMInstance returns deployment::VMInstance:
+    'vm instance '  name = ID 'typed ' type = [deployment::VM | Fqn] '{'
+    	('ip: ' ip = EString)?
+    	('vm type:' vmType = [provider::Attribute | Fqn])?
+    	('vm type value:' vmTypeValue = [type::SingleValue | Fqn])?
+    	(providedHostInstances += ProvidedHostInstance)*
+    '}'
+;
+
+InternalComponentInstance returns deployment::InternalComponentInstance:
+    'internal component instance ' name = ID 'typed ' type = [deployment::InternalComponent | Fqn] '{'
+    	(
+	    	providedCommunicationInstances += ProvidedCommunicationInstance |
+	    	requiredCommunicationInstances += RequiredCommunicationInstance | 
+	    	providedHostInstances += ProvidedHostInstance |
+	    	requiredHostInstance = RequiredHostInstance
+    	)*
+    '}'
+;
+
+ProvidedCommunicationInstance returns deployment::ProvidedCommunicationInstance:
+    'provided communication instance ' name = ID 'typed ' type = [deployment::CommunicationPort | Fqn]
+;
+
+RequiredCommunicationInstance returns deployment::RequiredCommunicationInstance:
+    'required communication instance ' name = ID 'typed ' type = [deployment::CommunicationPort | Fqn]
+;
+
+ProvidedHostInstance returns deployment::ProvidedHostInstance:
+    'provided host instance ' name = ID 'typed ' type = [deployment::HostingPort | Fqn]
+;
+
+RequiredHostInstance returns deployment::RequiredHostInstance:
+    'required host instance ' name = ID  'typed ' type = [deployment::HostingPort | Fqn]
+;
+
+CommunicationInstance returns deployment::CommunicationInstance:
+    'connect ' requiredCommunicationInstance = [deployment::RequiredCommunicationInstance | Fqn] 'to ' providedCommunicationInstance = [deployment::ProvidedCommunicationInstance | Fqn] 'typed ' type = [deployment::Communication | Fqn]
+    ('named ' name = ID)?
+;
+
+HostingInstance returns deployment::HostingInstance:
+    'host ' requiredHostInstance = [deployment::RequiredHostInstance | Fqn] 'on ' providedHostInstance = [deployment::ProvidedHostInstance | Fqn] 'typed ' type = [deployment::Hosting | Fqn]
+    ('named ' name = ID)?
+;
+
+/* Execution model */
+
+ExecutionModel returns execution::ExecutionModel:
+    {execution::ExecutionModel}
+    ('importURI ' '{' importURI += EString (',' importURI += EString)* '}')?
+    'execution model ' name = ID '{'
+        (
+            actionRealisations += ActionRealisation |
+            eventInstances += EventInstance |
+            executionContexts += ExecutionContext |
+            measurements += Measurement |
+            sloAssessessments += SLOAssessment |
+            ruleTriggers += RuleTrigger
+        )*
+    '}';
+
+ActionRealisation returns execution::ActionRealisation:
+    'action realisation ' name = ID '{'
+        'action: ' action = [camel::Action | Fqn]
+        ('low level actions: ' lowLevelActions = EString)?
+        ('started on: ' startedOn = EDate)?
+        ('ended on: ' endedOn = EDate)?
+    '}';
+
+ExecutionContext returns execution::ExecutionContext:
+    'execution context ' name = ID '{'
+        ('start time: ' startTime = EDate)?
+        ('end time: ' endTime = EDate)?
+        ('total cost: ' totalCost = EDouble)?
+        'application: ' application = [camel::Application | Fqn]
+        ('cost unit: ' costUnit = [unit::MonetaryUnit | Fqn])?
+        'deployment model: ' deploymentModel = [deployment::DeploymentModel | Fqn]
+        'requirement group: ' requirementGroup = [requirement::RequirementGroup | Fqn]
+    '}';
+
+Measurement returns execution::Measurement:
+    ApplicationMeasurement | InternalComponentMeasurement | ResourceMeasurement |
+    ResourceCouplingMeasurement
+;
+
+ApplicationMeasurement returns execution::ApplicationMeasurement:
+    'application measurement ' name = ID '{'
+        'application: ' application = [camel::Application | Fqn]
+        'value: ' value = EDouble
+        ('raw data: ' rawData = EString)?
+        ('event instance: ' eventInstance = [scalability::EventInstance | Fqn])?
+        'reportedOn: ' reportedOn = EDate
+        'execution context: ' executionContext = [execution::ExecutionContext | Fqn]
+        'metric instance: ' metricInstance = [metric::MetricInstance | Fqn]
+        ('slo: ' slo = [requirement::ServiceLevelObjective | Fqn])?
+    '}';
+
+InternalComponentMeasurement returns execution::InternalComponentMeasurement:
+    'internal component measurement ' name = ID '{'
+        'internal component instance: ' internalComponentInstance = [deployment::InternalComponentInstance | Fqn]
+        'value: ' value = EDouble
+        ('raw data: ' rawData = EString)?
+        ('event instance: ' eventInstance = [scalability::EventInstance | Fqn])?
+        'reported on: ' reportedOn = EDate
+        'execution context: ' executionContext = [execution::ExecutionContext | Fqn]
+        'metric instance: ' metricInstance = [metric::MetricInstance | Fqn]
+        ('slo: ' slo = [requirement::ServiceLevelObjective | Fqn])?
+    '}';
+
+ResourceCouplingMeasurement returns execution::ResourceCouplingMeasurement:
+    'resource coupling measurement' name = ID '{'
+        'source vm instance: ' sourceVMInstance = [deployment::VMInstance | Fqn]
+        'destination vm instance: ' destinationVMInstance = [deployment::VMInstance | Fqn]
+        'value: ' value = EDouble
+        ('raw data: ' rawData = EString)?
+        ('event instance: ' eventInstance = [scalability::EventInstance | Fqn])?
+        'reported on: ' reportedOn = EDate
+        'execution context: ' executionContext = [execution::ExecutionContext | Fqn]
+        'metric instance: ' metricInstance = [metric::MetricInstance | Fqn]
+        ('slo: ' slo = [requirement::ServiceLevelObjective | Fqn])?
+    '}';
+
+ResourceMeasurement returns execution::ResourceMeasurement:
+    'resource measurement ' name = ID '{'
+        'vm instance: ' vmInstance = [deployment::VMInstance | Fqn]
+        'value: ' value = EDouble
+        ('raw data: ' rawData = EString)?
+        ('event instance: ' eventInstance = [scalability::EventInstance | Fqn])?
+        'reported on: ' reportedOn = EDate
+        'execution context: ' executionContext = [execution::ExecutionContext | Fqn]
+        'metric instance: ' metricInstance = [metric::MetricInstance | Fqn]
+        ('slo: ' slo = [requirement::ServiceLevelObjective | Fqn])?
+    '}';
+
+SLOAssessment returns execution::SLOAssessment:
+    'assessment ' name = ID '{'
+        'measurement: ' measurement = [execution::Measurement | Fqn]
+        'execution context: ' executionContext = [execution::ExecutionContext | Fqn]
+        'assessment time: ' assessmentTime = EDate
+        'slo: ' slo = [requirement::ServiceLevelObjective | Fqn]
+        assessment ?= 'violated'
+    '}';
+
+RuleTrigger returns execution::RuleTrigger:
+    'rule trigger ' name = ID '{'
+        'rule: ' scalabilityRule = [scalability::ScalabilityRule | Fqn]
+        'fired on: ' firedOn = EDate
+        'action realisations: ' '(' actionRealisations += [execution::ActionRealisation | Fqn] (',' actionRealisations += [execution::ActionRealisation | Fqn])* ')'
+        'execution context: ' executionContext = [execution::ExecutionContext | Fqn]
+        'event instances: ' '(' eventInstances += [scalability::EventInstance | Fqn] (',' eventInstances += [scalability::EventInstance | Fqn])* ')'
+    '}';
+
+/* Location model */
+
+LocationModel returns location::LocationModel:
+    {location::LocationModel}
+    'location model ' name = ID '{'
+        (
+            regions += GeographicalRegion |
+            countries += Country |
+            cloudLocations += CloudLocation
+        )*
+    '}';
+
+CloudLocation returns location::CloudLocation:
+    'cloud location ' id = ID '{'
+        (isAssignable ?= 'assignable')?
+        ('parent: ' parent = [location::CloudLocation | Fqn])?
+        ('geographical region: ' geographicalRegion = [location::GeographicalRegion | Fqn])?
+        ('sub-locations ' '[' subLocations += CloudLocation (',' subLocations += CloudLocation)* ']')?
+    '}';
+
+Country returns location::Country:
+    'country ' id = ID '{'
+        'name: ' name = EString
+        ('alternative names ' '[' alternativeNames += EString (',' alternativeNames += EString)* ']')?
+        ('parent regions ' '[' parentRegions += [location::GeographicalRegion | Fqn] (',' parentRegions += [location::GeographicalRegion | Fqn])* ']')?
+    '}';
+
+GeographicalRegion returns location::GeographicalRegion:
+    'region ' id = ID '{'
+        'name: ' name = EString
+        ('alternative names ' '[' alternativeNames += EString (',' alternativeNames += EString)* ']')?
+        ('parent regions ' '[' parentRegions += [location::GeographicalRegion | Fqn] (',' parentRegions += [location::GeographicalRegion | Fqn])* ']')?
+    '}';
+
+/* Metric model */
+
+MetricModel returns metric::MetricModel:
+    {metric::MetricModel}
+    ('importURI' '{' importURI += EString (',' importURI += EString)* '}')?
+    'metric model ' name = ID '{'
+        (
+	        contexts += ConditionContext |
+	        metrics += Metric |
+	        metricInstances += MetricInstance |
+	        conditions += Condition |
+	        properties += Property |
+	        bindings += MetricObjectBinding |
+	        windows += Window |
+	        schedules += Schedule |
+	        parameters += FormulaParameter |
+	        sensors += Sensor
+        )*
+    '}';
+
+MetricInstance returns metric::MetricInstance:
+    CompositeMetricInstance | RawMetricInstance;
+
+CompositeMetricInstance returns metric::CompositeMetricInstance:
+    'composite metric instance ' name = ID '{'
+        'metric: ' metric = [metric::Metric | Fqn]
+        'binding: ' objectBinding = [metric::MetricObjectBinding | Fqn]
+        'composing metric instances ' '[' composingMetricInstances += [metric::MetricInstance | Fqn] (',' composingMetricInstances += [metric::MetricInstance | Fqn])* ']'
+        ('schedule: ' schedule = [metric::Schedule | Fqn])?
+        ('window: ' window = [metric::Window | Fqn])?
+        ('context: ' metricContext = [metric::MetricContext | Fqn])?
+    '}';
+
+RawMetricInstance returns metric::RawMetricInstance:
+    'raw metric instance ' name = ID '{'
+        'metric: ' metric = [metric::Metric | Fqn]
+        'sensor: ' sensor = [metric::Sensor | Fqn]
+        'binding: ' objectBinding = [metric::MetricObjectBinding | Fqn]
+        ('schedule: ' schedule = [metric::Schedule | Fqn])?
+        ('window: ' window = [metric::Window | Fqn])?
+        ('context: ' metricContext = [metric::MetricContext | Fqn])?
+    '}';
+
+Window returns metric::Window:
+    'window ' name = ID '{'
+        'window type: ' windowType = WindowType
+        'size type: ' sizeType = WindowSizeType
+        ('measurement size: ' measurementSize = ELong)?
+        ('time size: ' timeSize = ELong)?
+        ('unit: ' unit = [unit::TimeIntervalUnit | Fqn])?
+    '}';
+
+enum WindowType returns metric::WindowType:
+	FIXED = 'FIXED' | SLIDING = 'SLIDING';
+
+enum WindowSizeType returns metric::WindowSizeType:
+	MEASUREMENTS_ONLY = 'MEASUREMENTS_ONLY' | TIME_ONLY = 'TIME_ONLY' | FIRST_MATCH = 'FIRST_MATCH' | BOTH_MATCH = 'BOTH_MATCH';
+
+ELong returns ecore::ELong:
+    '-'? INT;
+
+enum ScheduleType returns metric::ScheduleType:
+	FIXED_RATE = 'FIXED_RATE' | FIXED_DELAY = 'FIXED_DELAY' | SINGLE_EVENT = 'SINGLE_EVENT';
+
+Schedule returns metric::Schedule:
+    'schedule ' name = ID '{'
+        'type: ' type = ScheduleType
+        'interval: ' interval = ELong
+        'unit: ' unit = [unit::TimeIntervalUnit | Fqn]
+        ('start: ' start = EDate)?
+        ('end: ' end = EDate)?
+        ('repetitions: ' repetitions = EInt)?
+    '}';
+
+MetricComponentBinding returns metric::MetricComponentBinding:
+    'component binding ' name = ID '{'
+        'execution context: ' executionContext = [execution::ExecutionContext | Fqn]
+        'component instance: ' componentInstance = [deployment::ComponentInstance | Fqn]
+        ('vm instance: ' vmInstance = [deployment::VMInstance | Fqn])?
+    '}';
+
+MetricVMBinding returns metric::MetricVMBinding:
+    'vm binding ' name = ID '{'
+        'execution context: ' executionContext = [execution::ExecutionContext | Fqn]
+        'vm instance: ' vmInstance = [deployment::VMInstance | Fqn]
+    '}';
+
+MetricApplicationBinding returns metric::MetricApplicationBinding:
+    'application binding ' name = ID '{'
+        'execution context: ' executionContext = [execution::ExecutionContext | Fqn]
+    '}';
+
+MetricObjectBinding returns metric::MetricObjectBinding:
+    MetricApplicationBinding |  MetricComponentBinding | MetricVMBinding;
+
+Condition returns metric::Condition:
+    MetricCondition | PropertyCondition;
+
+MetricCondition returns metric::MetricCondition:
+    'metric condition ' name = ID '{'
+        'context: ' metricContext = [metric::MetricContext | Fqn]
+        'threshold: ' threshold = EDouble
+        'comparison operator: ' comparisonOperator = ComparisonOperatorType
+        ('validity: ' validity = EDate)?
+    '}';
+
+PropertyCondition returns metric::PropertyCondition:
+    'property condition ' name = ID '{'
+        'property context: ' propertyContext = [metric::PropertyContext | Fqn]
+        'threshold: ' threshold = EDouble
+        'comparison operator: ' comparisonOperator = ComparisonOperatorType
+        ('unit: ' unit = [unit::MonetaryUnit | Fqn])?
+        ('time unit: ' timeUnit = [unit::TimeIntervalUnit | Fqn])?
+        ('validity: ' validity = EDate)?
+    '}';
+
+enum ComparisonOperatorType returns metric::ComparisonOperatorType:
+    GREATER_THAN = '>' | GREATER_EQUAL_THAN = '> = ' | LESS_THAN = '<' | LESS_EQUAL_THAN = '< = ' | EQUAL = ' =  = ' | NOT_EQUAL = '<>';
+
+ConditionContext returns metric::ConditionContext:
+    CompositeMetricContext | RawMetricContext |  PropertyContext;
+
+enum QuantifierType returns metric::QuantifierType:
+	ANY = 'ANY' | ALL = 'ALL' | SOME = 'SOME';
+
+CompositeMetricContext returns metric::CompositeMetricContext:
+    'composite metric context ' name = ID '{'
+        'metric: ' metric = [metric::Metric | Fqn]
+        ('component: ' component = [deployment::Component | Fqn])?
+        ('application: ' application = [camel::Application | Fqn])?
+        ('window: ' window = [metric::Window | Fqn])?
+        ('schedule: ' schedule = [metric::Schedule | Fqn])?
+        ('composing metric contexts ' '[' composingMetricContexts += [metric::MetricContext | Fqn] (',' composingMetricContexts += [metric::MetricContext | Fqn])* ']')?
+        ('quantifier: ' quantifier = QuantifierType)?
+        (isRelative ?= 'relative')?
+        ('quantity: ' minQuantity = EDouble '..' (maxQuantity = EDouble))?
+    '}';
+
+RawMetricContext returns metric::RawMetricContext:
+    'raw metric context ' name = ID '{'
+        'metric: ' metric = [metric::Metric | Fqn]
+        'sensor: ' sensor = [metric::Sensor | Fqn]
+        ('component: ' component = [deployment::Component | Fqn])?
+        ('application: ' application = [camel::Application | Fqn])?
+        ('window: ' window = [metric::Window | Fqn])?
+        ('schedule: ' schedule = [metric::Schedule | Fqn])?
+        ('quantifier: ' quantifier = QuantifierType)?
+        (isRelative ?= 'relative')?
+        ('quantity: ' minQuantity = EDouble '..' (maxQuantity = EDouble))?
+    '}';
+
+PropertyContext returns metric::PropertyContext:
+    'property context ' name = ID '{'
+        'property: ' property = [metric::Property | Fqn]
+        ('component: ' component = [deployment::Component | Fqn])?
+        ('application: ' application = [camel::Application | Fqn])?
+        ('quantifier: ' quantifier = QuantifierType)?
+        (isRelative ?= 'relative')?
+        ('quantity: ' minQuantity = EDouble '..' (maxQuantity = EDouble))?
+    '}';
+
+
+CompositeMetric returns metric::CompositeMetric:
+    'composite metric ' name = ID '{'
+        ('description: ' description = EString)?
+        ('value direction: ' valueDirection = EShort)?
+        ('layer: ' layer = LayerType)?
+        'property: ' property = [metric::Property | Fqn]
+        'unit: ' unit = [unit::Unit | Fqn]
+        ('value type: ' valueType = [type::ValueType | Fqn])?
+        formula = MetricFormula
+    '}';
+
+RawMetric returns metric::RawMetric:
+    'raw metric ' name = ID '{'
+        ('description: ' description = EString)?
+        ('value direction: ' valueDirection = EShort)?
+        ('layer: ' layer = LayerType)?
+        'property: ' property = [metric::Property | Fqn]
+        'unit: ' unit = [unit::Unit | Fqn]
+        ('value type: ' valueType = [type::ValueType | Fqn])?
+    '}';
+
+Metric returns metric::Metric:
+    CompositeMetric | RawMetric;
+
+enum LayerType returns camel::LayerType:
+    SaaS = 'SaaS' | PaaS = 'PaaS' | IaaS = 'IaaS' | BPM = 'BPM' | SCC = 'SCC';
+
+MetricFormulaParameter returns metric::MetricFormulaParameter:
+    MetricFormulaParameter_Impl | MetricFormula | CompositeMetric | RawMetric;
+
+FormulaParameter returns metric::MetricFormulaParameter:
+    MetricFormulaParameter_Impl | MetricFormula;
+
+MetricFormulaParameter_Impl returns metric::MetricFormulaParameter:
+    {metric::MetricFormulaParameter}
+    'parameter ' name = ID '{'
+        value = [type::SingleValue | Fqn]
+    '}';
+
+MetricFormula returns metric::MetricFormula:
+    'metric formula ' name = ID '{'
+        'function arity: ' functionArity = MetricFunctionArityType
+        ('function pattern: ' functionPattern = FunctionPatternType)?
+        function = MetricFunctionType '(' parameters += [metric::MetricFormulaParameter | Fqn] (',' parameters += [metric::MetricFormulaParameter | Fqn])* ')'
+    '}';
+
+enum MetricFunctionType returns metric::MetricFunctionType:
+	PLUS = 'PLUS' | MINUS = 'MINUS' | TIMES = 'TIMES'   | DIV = 'DIV' | MODULO = 'MODULO' | MEAN = 'MEAN' | STD = 'STD' | COUNT = 'COUNT' | MIN = 'MIN' | MAX = 'MAX' | PERCENTILE = 'PERCENTILE' | DERIVATIVE = 'DERIVATIVE' | MODE = 'MODE' | MEDIAN = 'MEDIAN';
+
+enum MetricFunctionArityType returns metric::MetricFunctionArityType:
+	UNARY = 'UNARY' | BINARY = 'BINARY' | N_ARY = 'N_ARY';
+
+enum FunctionPatternType returns metric::FunctionPatternType:
+	MAP = 'MAP' | REDUCE = 'REDUCE';
+
+enum PropertyType returns metric::PropertyType:
+	ABSTRACT = 'ABSTRACT' | MEASURABLE = 'MEASURABLE';
+
+Property returns metric::Property:
+    'property ' name = ID '{'
+        ('description: ' description = EString)?
+        'type: ' type = PropertyType
+        ('sub-properties ' '[' subProperties += [metric::Property | Fqn] (',' subProperties += [metric::Property | Fqn])* ']')?
+        ('sensors ' '[' sensors += [metric::Sensor | Fqn] (',' sensors += [metric::Sensor | Fqn])* ']')?
+    '}';
+
+Sensor returns metric::Sensor:
+    'sensor ' name = ID '{'
+        ('configuration: ' configuration = EString)?
+        (isPush ?= 'push')?
+    '}';
+
+/* Organisation model */
+
+OrganisationModel returns organisation::OrganisationModel:
+    {organisation::OrganisationModel}
+    'organisation model ' name = ID '{'
+        (organisation = Organisation_Impl)?
+        (provider = CloudProvider)?
+        (
+            externalIdentifiers += ExternalIdentifier |
+            users += User |
+            userGroups += UserGroup |
+            dataCentres += DataCenter |
+            roles += Role |
+            roleAssigments += RoleAssignment |
+            permissions += Permission |
+            resourceFilters += ResourceFilter
+        )*
+        'security level: ' securityLevel = SecurityLevel
+    '}';
+
+Entity returns organisation::Entity:
+    Entity_Impl | Organisation_Impl | CloudProvider | User;
+
+Organisation returns organisation::Organisation:
+    Organisation_Impl | CloudProvider;
+
+DataCenter returns organisation::DataCenter:
+    'data centre ' name = ID '{'
+        'code name: ' codeName = EString
+        'location: ' location = [location::Location | Fqn]
+    '}';
+
+Entity_Impl returns organisation::Entity:
+    {organisation::Entity}
+    'entity'
+    ;
+
+Organisation_Impl returns organisation::Organisation:
+    'organisation ' name = ID '{'
+        ('www: ' www = EString)?
+        ('postal address: ' postalAddress = EString)?
+        'email: ' email = EString
+    '}';
+
+CloudProvider returns organisation::CloudProvider:
+    'provider ' name = ID '{'
+        ('www: ' www = EString)?
+        ('postal address: ' postalAddress = EString)?
+        'email: ' email = EString
+        (public ?= 'public')?
+        (SaaS ?= 'SaaS')?
+        (PaaS ?= 'PaaS')?
+        (IaaS ?= 'IaaS')?
+        ('security capability ' '[' securityCapability += [security::SecurityCapability | Fqn] (',' securityCapability += [security::SecurityCapability | Fqn])* ']')?
+        ('provider model: ' providerModel = [provider::ProviderModel | Fqn])?
+    '}';
+
+User returns organisation::User:
+    'user ' name = ID '{'
+        'first name: ' firstName = EString
+        'last name: ' lastName = EString
+        'email: ' email = EString
+        ('www: ' www = EString)?
+        paasageCredentials = PaaSageCredentials
+        ('cloud credentials ' '[' cloudCredentials += CloudCredentials (',' cloudCredentials += CloudCredentials)* ']')?
+        ('external identifiers ' '[' externalIdentifiers += ExternalIdentifier (',' externalIdentifiers += ExternalIdentifier)* ']')?
+        ('requirement models ' '[' requirementModels += [requirement::RequirementModel | Fqn] (',' requirementModels += [requirement::RequirementModel | Fqn])* ']')?
+        ('deployment models ' '[' deploymentModels += [deployment::DeploymentModel | Fqn] (',' deploymentModels += [deployment::DeploymentModel | Fqn])* ']')?
+    '}';
+
+ExternalIdentifier returns organisation::ExternalIdentifier:
+    'external id ' identifier = ID '{'
+        ('description: ' description = EString)?
+    '}';
+
+CloudCredentials returns organisation::CloudCredentials:
+    name = ID '{'
+        ('security group: ' securityGroup = EString)?
+        ('public SSH key: ' publicSSHKey = EString)?
+        ('private SSH key: ' privateSSHKey = EString)?
+        ('username: ' username = EString)?
+        ('password: ' password = EString)?
+        'cloud provider: ' cloudProvider = [organisation::CloudProvider | Fqn]
+    '}';
+
+PaaSageCredentials returns organisation::PaaSageCredentials:
+    'paasage credentials ' password = EString;
+
+EDate returns ecore::EDate:
+    MYDATE /* TODO: implement this rule and an appropriate IValueConverter */;
+
+UserGroup returns organisation::UserGroup:
+    'user group ' name = ID '{'
+        'users ' '[' users += [organisation::User | Fqn] (',' users += [organisation::User | Fqn])* ']'
+    '}';
+
+RoleAssignment returns organisation::RoleAssignment:
+    'role assignment ' name = ID '{'
+        ('start: ' start = EDate)?
+        ('end: ' end = EDate)?
+        'assigned on: ' assignedOn = EDate
+        ('user: ' user = [organisation::User | Fqn])?
+        'role: ' role = [organisation::Role | Fqn]
+        ('user group: ' userGroup = [organisation::UserGroup | Fqn])?
+    '}';
+
+Role returns organisation::Role:
+    'role ' name = ID;
+
+Permission returns organisation::Permission:
+    'permission ' name=ID '{'
+        'start: ' start = EDate
+        ('end: ' end = EDate)?
+        'role: ' role = [organisation::Role | Fqn]
+        'resource filter: ' resourceFilter = [organisation::ResourceFilter | Fqn]
+        'action: ' action = ActionType
+    '}';
+    
+ResourceFilter returns organisation::ResourceFilter:
+	InformationResourceFilter | ServiceResourceFilter
+;
+
+enum ResourcePattern returns organisation::ResourcePattern:
+    EXACT = 'EXACT' | TREE = 'TREE';
+    
+enum SecurityLevel returns organisation::SecurityLevel:
+    LOW = 'LOW' | MEDIUM = 'MEDIUM' | HIGH='HIGH';
+    
+InformationResourceFilter returns organisation::InformationResourceFilter:
+ 	'information resource filter ' name=ID '{'
+        'pattern: ' resourcePattern = ResourcePattern
+        ('information resource path: ' informationResourcePath = EString)?
+        everyInformationResource ?= 'all'
+    '}';
+    
+ServiceResourceFilter returns organisation::ServiceResourceFilter:
+ 	'service resource filter ' name=ID '{'
+        'pattern: ' resourcePattern = ResourcePattern
+        ('service url: ' serviceURL = EString)?
+        everyService ?= 'all'
+    '}';
+
+/* Provider model */
+
+ProviderModel returns provider::ProviderModel:
+	'provider model ' name = ID '{'
+		('constraints ' '{' (constraints += Constraint (constraints += Constraint)*)? '}')?
+		'root ' rootFeature = Feature
+	'}';
+
+Constraint returns provider::Constraint:
+	Excludes | Implies | Requires_Impl | Functional;
+
+Feature returns provider::Feature:
+	Feature_Impl | Alternative_Impl | Exclusive;
+
+Scope returns provider::Scope:
+	Instance | Product;
+
+ValueType returns type::ValueType:
+	BoolValueType | Enumeration | List | Range | RangeUnion | StringsValueType;
+
+NumericValue returns type::NumericValue:
+	IntegerValue | FloatsValue | DoublePrecisionValue | NegativeInf | PositiveInf | ValueToIncrease;
+
+Feature_Impl returns provider::Feature:
+	'feature ' name = ID '{'
+		('attributes ' '{' (attributes += Attribute (attributes += Attribute)*)? '}')?
+		('sub-features ' '{' (subFeatures += Feature (subFeatures += Feature)*)? '}')?
+		 featureCardinality = FeatCardinality
+		('clones ' '{' clones += Clone (',' clones += Clone)* '}')?
+	'}';
+
+EString returns ecore::EString:
+	STRING | ID;
+
+AttributeConstraint returns provider::AttributeConstraint:
+	'attribute constraint ' '{'
+		'from: ' from = [provider::Attribute|Fqn]
+		'to: ' to = [provider::Attribute|Fqn]
+		'from value: ' fromValue = Value
+		'to value: ' toValue = Value
+	'}';
+
+Excludes returns provider::Excludes:
+	'excludes ' name = ID '{'
+		'from: ' from = [provider::Feature|Fqn]
+		'to: ' to = [provider::Feature|Fqn]
+		('attribute constraints ' '{' (attributeConstraints += AttributeConstraint (attributeConstraints += AttributeConstraint)*)? '}')?
+	'}';
+
+Implies returns provider::Implies:
+	'implies ' name = ID '{'
+		'from: ' from = [provider::Feature|Fqn]
+		'to: ' to = [provider::Feature|Fqn]
+		('attribute constraints ' '{' attributeConstraints += AttributeConstraint (attributeConstraints += AttributeConstraint)* '}')?
+	'}';
+
+Requires_Impl returns provider::Requires:
+	'requires ' name = ID '{'
+		'from: ' from = [provider::Feature|Fqn]
+		'to: ' to = [provider::Feature|Fqn]
+		('attribute constraints ' '{' attributeConstraints += AttributeConstraint (attributeConstraints += AttributeConstraint)* '}')?
+		('scope from: ' scopeFrom = Scope)?
+		('scope to: ' scopeTo = Scope)?
+		('card from: ' cardFrom = FeatCardinality)?
+		('card to: ' cardTo = FeatCardinality)?
+	'}';
+
+Functional returns provider::Functional:
+	'functional ' name = ID '{'
+		('type: ' type = Operator)?
+		('order: ' order = EInt)?
+		'value: ' value = EInt
+		'from: ' from = [provider::Feature|Fqn]
+		'to: ' to = [provider::Feature|Fqn]
+		('attribute constraints ' '{' attributeConstraints += AttributeConstraint (attributeConstraints += AttributeConstraint)* '}')?
+		('scope from: ' scopeFrom = Scope)?
+		('scope to: ' scopeTo = Scope)?
+		('card from: ' cardFrom = FeatCardinality)?
+		('card to: ' cardTo = FeatCardinality)?
+	'}';
+
+Attribute returns provider::Attribute:
+	{provider::Attribute}
+	'attribute ' name = ID '{'
+		('unit type: ' unitType = UnitType)?
+		('value: ' value = Value)?
+		('value type: ' valueType = [type::ValueType | Fqn])?
+	'}';
+
+FeatCardinality returns provider::FeatCardinality:
+	'feature cardinality' '{'
+		'cardinality: ' cardinalityMin = EInt '..' cardinalityMax = EInt
+		('value: ' value = EInt)?
+	'}';
+
+Instance returns provider::Instance:
+	'instance' '{'
+		'feature: ' feature = [provider::Feature|Fqn]
+	'}';
+
+Product returns provider::Product:
+	{provider::Product}
+	'product'
+	;
+
+enum Operator returns provider::Operator:
+	select = 'select' | add = 'add' | remove = 'remove' | multiply = 'multiply' | divide = 'divide';
+
+Clone returns provider::Clone:
+	{provider::Clone}
+	'clone ' name = ID '{'
+		('sub-clones ' '[' subClones += [provider::Clone|Fqn] (',' subClones += [provider::Clone|Fqn])* ']')?
+	'}';
+
+Alternative_Impl returns provider::Alternative:
+	'alternative' name = ID '{'
+		('attributes ' '{' attributes += Attribute (attributes += Attribute)* '}')?
+		('sub-features ' '{' subFeatures += Feature (subFeatures += Feature)* '}')?
+		featureCardinality = FeatCardinality
+		('clones ' '{' clones += Clone (',' clones += Clone)* '}')?
+		(groupCardinality = GroupCardinality)?
+		'variants ' '{' variants += Feature (',' variants += Feature)* '}' 
+	'}';
+
+Exclusive returns provider::Exclusive:
+	'exclusive ' name = ID '{'
+		('attributes ' '{' attributes += Attribute (attributes += Attribute)* '}')?
+		('sub-features ' '{' subFeatures += Feature (subFeatures += Feature)* '}')?
+		featureCardinality = FeatCardinality
+		('clones ' '{' clones += Clone (',' clones += Clone)* '}')?
+		(groupCardinality = GroupCardinality)?
+		'variants ' '{' variants += Feature (variants += Feature)* '}' 
+	'}';
+
+GroupCardinality returns provider::GroupCardinality:
+	'group cardinality' '{'
+		'cardinality: ' cardinalityMin = EInt '..' cardinalityMax = EInt
+	'}';
+
+/* Requirements model */
+
+RequirementModel returns requirement::RequirementModel:
+    'requirement model ' name = ID '{'
+        (
+            requirements += LocationRequirement |
+            requirements += QuantitativeHardwareRequirement |
+            requirements += QualitativeHardwareRequirement |
+            requirements += ImageRequirement |
+            requirements += OSRequirement |
+            requirements += HorizontalScaleRequirement |
+            requirements += VerticalScaleRequirement |
+            requirements += SecurityRequirement |
+            requirements += ServiceLevelObjective |
+            requirements += OptimisationRequirement |
+            requirements += ProviderRequirement |
+            requirements += RequirementGroup
+        )*
+    '}'
+;
+
+RequirementGroup returns requirement::RequirementGroup:
+    'group ' name = ID '{'
+        'operator: ' requirementOperator = RequirementOperatorType
+        'requirements ' '[' requirements += [requirement::Requirement | Fqn] (',' requirements += [requirement::Requirement | Fqn])* ']'
+        ('application ' '[' application += [camel::Application | Fqn] (',' application += [camel::Application | Fqn])* ']')?
+    '}';
+
+enum RequirementOperatorType returns requirement::RequirementOperatorType:
+    AND = 'AND' | OR = 'OR' | XOR = 'XOR';
+
+
+Requirement returns requirement::Requirement:
+    LocationRequirement | HorizontalScaleRequirement | VerticalScaleRequirement |
+    SecurityRequirement | ServiceLevelObjective | OptimisationRequirement | RequirementGroup
+;
+
+ServiceLevelObjective returns requirement::ServiceLevelObjective:
+    'slo ' name = ID '{'
+        'service level: ' customServiceLevel = [metric::Condition | Fqn]
+    '}';
+    
+ProviderRequirement returns requirement::ProviderRequirement:
+    'provider requirement ' name = ID '{'
+        'providers: ' '[' providers += [organisation::CloudProvider | Fqn] (',' providers += [organisation::CloudProvider | Fqn])* ']'
+    '}';
+
+OptimisationRequirement returns requirement::OptimisationRequirement:
+    'optimisation requirement ' name = ID '{'
+        'function: ' optimisationFunction = OptimisationFunctionType
+        ('metric: ' metric = [metric::Metric | Fqn])?
+        ('property: ' property = [metric::Property | Fqn])?
+        ('application: ' application = [camel::Application | Fqn])?
+        ('component: ' component = [deployment::Component | Fqn])?
+        ('priority: ' priority = EDouble)?
+    '}';
+
+enum OptimisationFunctionType returns requirement::OptimisationFunctionType:
+    MINIMISE = 'MIN' | MAXIMISE = 'MAX';
+
+OSRequirement returns requirement::OSRequirement:
+    'os ' name = ID '{' 'os: ' os = EString (is64os ?= '64os')? '}'
+;
+
+ImageRequirement returns requirement::ImageRequirement:
+    'image ' name = ID '{'
+        'imageID: ' imageId = EString
+    '}'
+;
+
+Double returns ecore::EDouble:
+    '-'? INT? '.' INT
+;
+
+QualitativeHardwareRequirement returns requirement::QualitativeHardwareRequirement:
+    'qualitative' 'hardware ' name = ID '{'
+    	'benchmark: ' minBenchmark = Double '..' (maxBenchmark = Double)?
+	'}'
+;
+
+QuantitativeHardwareRequirement returns requirement::QuantitativeHardwareRequirement:
+    'quantitative hardware ' name = ID '{'
+        ('core: '  minCores = INT '..' (maxCores = INT)?)?
+        ('ram: ' minRAM = INT '..' (maxRAM = INT)?)?
+        ('storage: ' minStorage = INT '..' (maxStorage = INT)?)?
+        ('cpu: ' minCPU = Double '..' (maxCPU = Double)?)?
+    '}'
+;
+
+LocationRequirement returns requirement::LocationRequirement:
+    'location requirement ' + name = ID '{'
+    	('locations ' '[' (locations += [location::Location | Fqn] (',' locations += [location::Location | Fqn])*)? ']')?
+    '}'
+;
+
+/* Scalability model */
+
+ScalabilityModel returns scalability::ScalabilityModel:
+    {scalability::ScalabilityModel}
+    ('importURI' '{' importURI += EString (',' importURI += EString)* '}')?
+    'scalability model ' name = ID '{'
+        (
+            rules += ScalabilityRule |
+            events += Event |
+            eventInstances += EventInstance |
+            actions += ScalingAction |
+            timers += Timer |
+            scaleRequirements += ScaleRequirement
+        )*
+    '}';
+
+EventInstance returns scalability::EventInstance:
+    'event instance' name = ID '{'
+        'event: ' event = [scalability::SimpleEvent | Fqn]
+        'status: ' status = StatusType
+        ('layer: ' layer = LayerType)?
+        ('metric instance: ' metricInstance = [metric::MetricInstance | Fqn])?
+    '}';
+
+ScaleRequirement returns requirement::ScaleRequirement:
+    HorizontalScaleRequirement | VerticalScaleRequirement;
+
+HorizontalScaleRequirement returns requirement::HorizontalScaleRequirement:
+    'horizontal scale requirement ' name = ID '{'
+        'component: ' component = [deployment::InternalComponent | Fqn]
+        'instances: ' minInstances = EInt '..' maxInstances = EInt
+    '}';
+
+VerticalScaleRequirement returns requirement::VerticalScaleRequirement:
+    'vertical scale requirement ' name = ID '{'
+        'vm: ' vm = [deployment::VM | Fqn]
+        ('core: '  minCores = INT '..' (maxCores = INT)?)?
+        ('ram: ' minRAM = INT '..' (maxRAM = INT)?)?
+        ('storage: ' minStorage = INT '..' (maxStorage = INT)?)?
+        ('cpu: ' minCPU = Double '..' (maxCPU = Double)?)?
+    '}';
+
+
+ScalabilityRule returns scalability::ScalabilityRule:
+    'scalability rule ' name = ID '{'
+        'event: ' event = [scalability::Event | Fqn]
+        'actions ' '[' actions += [camel::Action | Fqn] (',' actions += [camel::Action | Fqn])* ']'
+        ('entities ' '[' entity += [organisation::Entity | Fqn] (',' entity += [organisation::Entity | Fqn])* ']')?
+        ('scale requirements ' '[' scaleRequirements += [requirement::ScaleRequirement | Fqn] (',' scaleRequirements += [requirement::ScaleRequirement | Fqn])* ']')?
+    '}';
+
+ScalingAction returns scalability::ScalingAction:
+    HorizontalScalingAction | VerticalScalingAction;
+
+HorizontalScalingAction returns scalability::HorizontalScalingAction:
+    'horizontal scaling action ' name = ID '{'
+        'type: ' type = ActionType
+        'vm: ' vm = [deployment::VM | Fqn]
+        'internal component: ' internalComponent = [deployment::InternalComponent | Fqn]
+        ('count: ' count = EInt)?
+    '}';
+
+VerticalScalingAction returns scalability::VerticalScalingAction:
+    'vertical scaling action ' name = ID '{'
+        'type: ' type = ActionType
+        'vm: ' vm = [deployment::VM | Fqn]
+        ('core update: ' coreUpdate = EInt)?
+        ('CPU update: ' CPUUpdate = EDouble)?
+        ('memory update: ' memoryUpdate = EInt)?
+        ('storage update: ' storageUpdate = EInt)?
+        ('io update: ' ioUpdate = EInt)?
+        ('network update: ' networkUpdate = EInt)?
+    '}';
+
+EventPattern returns scalability::EventPattern:
+    BinaryEventPattern | UnaryEventPattern;
+
+Event returns scalability::Event:
+    BinaryEventPattern | UnaryEventPattern | FunctionalEvent | NonFunctionalEvent;
+
+SimpleEvent returns scalability::SimpleEvent:
+    FunctionalEvent | NonFunctionalEvent;
+
+enum StatusType returns scalability::StatusType:
+	CRITICAL = 'CRITICAL' | WARNING = 'WARNING' | SUCCESS = 'SUCCESS' | FATAL = 'FATAL';
+
+FunctionalEvent returns scalability::FunctionalEvent:
+    'functional event ' name = ID '{'
+        'functional type: ' functionalType = EString
+    '}';
+
+NonFunctionalEvent returns scalability::NonFunctionalEvent:
+    'non-functional event ' name = ID '{'
+        'metric condition: ' metricCondition = [metric::MetricCondition | Fqn]
+        isViolation ?= 'violation'
+    '}';
+
+BinaryEventPattern returns scalability::BinaryEventPattern:
+    'binary event pattern ' name = ID '{'
+        ('left event: ' leftEvent = [scalability::Event | Fqn])?
+        ('right event: ' rightEvent = [scalability::Event | Fqn])?
+        ('timer: ' timer = [scalability::Timer | Fqn])?
+        'operator: ' operator = BinaryPatternOperatorType
+        ('lower occurrence bound: ' lowerOccurrenceBound = EInt)?
+        ('upper occurrence bound: ' upperOccurrenceBound = EInt)?
+    '}';
+
+UnaryEventPattern returns scalability::UnaryEventPattern:
+    'unary event pattern ' name = ID '{'
+        'event: ' event = [scalability::Event | Fqn]
+        'operator: ' operator = UnaryPatternOperatorType
+        ('timer: ' timer = [scalability::Timer | Fqn])?
+        ('occurrence num: ' occurrenceNum = EInt)?
+    '}';
+
+Timer returns scalability::Timer:
+    'timer ' name = ID '{'
+        'type: ' type = TimerType
+        'time value: ' timeValue = EInt
+        'unit: ' unit = [unit::TimeIntervalUnit | Fqn]
+        ('max occurrence num: ' maxOccurrenceNum = EInt)?
+    '}';
+
+enum TimerType returns scalability::TimerType:
+	WITHIN = 'WITHIN' | WITHIN_MAX = 'WITHIN_MAX' | INTERVAL = 'INTERVAL';
+
+enum BinaryPatternOperatorType returns scalability::BinaryPatternOperatorType:
+	AND = 'AND' | OR = 'OR' | XOR = 'XOR' | PRECEDES = 'PRECEDES' | REPEAT_UNTIL = 'REPEAT_UNTIL';
+
+enum UnaryPatternOperatorType returns scalability::UnaryPatternOperatorType:
+	EVERY = 'EVERY' | NOT = 'NOT' | REPEAT = 'REPEAT' | WHEN = 'WHEN';
+
+/* Security model */
+
+SecurityModel returns security::SecurityModel:
+    {security::SecurityModel}
+    ('importURI' '{' importURI += EString (',' importURI += EString)* '}')?
+    'security model ' name = ID '{'
+        (
+            securityControls += SecurityControl |
+            /*securityRequirements += SecurityRequirement | */
+            securityProperties += SecurityProperty |
+            rawSecurityMetrics += RawSecurityMetric |
+            compositeSecurityMetrics += CompositeSecurityMetric |
+            rawSecurityMetricInstances += RawSecurityMetricInstance |
+            compositeSecurityMetricInstances += CompositeSecurityMetricInstance |
+            securityDomains += SecurityDomain |
+            securityCapabilities += SecurityCapability |
+            securitySLOs += SecuritySLO
+        )*
+    '}';
+
+RawSecurityMetric returns security::RawSecurityMetric:
+    'raw security metric ' name = ID '{'
+        ('description: ' description = EString)?
+        'property: ' property = [security::SecurityProperty | Fqn]
+        ('value direction: ' valueDirection = EShort)?
+        ('layer: ' layer = LayerType)?
+        ('value: ' value = [type::SingleValue | Fqn])?
+        ('value type: ' valueType = [type::ValueType | Fqn])?
+        'unit: ' unit = [unit::Unit | Fqn]
+    '}';
+
+CompositeSecurityMetric returns security::CompositeSecurityMetric:
+    'composite security metric ' name = ID '{'
+        ('description: ' description = EString)?
+        'property: ' property = [security::SecurityProperty | Fqn]
+        ('value direction: ' valueDirection = EShort)?
+        ('layer: ' layer = LayerType)?
+        ('value: ' value = [type::SingleValue | Fqn])?
+        ('value type: ' valueType = [type::ValueType | Fqn])?
+        'unit: ' unit = [unit::Unit | Fqn]
+        formula = MetricFormula
+    '}';
+
+RawSecurityMetricInstance returns security::RawSecurityMetricInstance:
+    'raw security metric instance ' name = ID '{'
+        'metric: ' metric = [metric::Metric | Fqn]
+        'sensor: ' sensor = [metric::Sensor | Fqn]
+        'object binding: ' objectBinding = [metric::MetricObjectBinding | Fqn]
+        ('schedule: ' schedule = [metric::Schedule | Fqn])?
+        ('window: ' window = [metric::Window | Fqn])?
+        ('context: ' metricContext = [metric::MetricContext | Fqn])?
+    '}';
+
+CompositeSecurityMetricInstance returns security::CompositeSecurityMetricInstance:
+    'composite security metric instance' name = ID '{'
+        'metric: ' metric = [metric::Metric | Fqn]
+        'composing metric instances ' '[' composingMetricInstances += [metric::MetricInstance | Fqn] (',' composingMetricInstances += [metric::MetricInstance | Fqn])* ']'
+        'object binding: ' objectBinding = [metric::MetricObjectBinding | Fqn]
+        ('schedule: ' schedule = [metric::Schedule | Fqn])?
+        ('window: ' window = [metric::Window | Fqn])?
+        ('context: ' metricContext = [metric::MetricContext | Fqn])?
+    '}';
+
+SecuritySLO returns security::SecuritySLO:
+    'security slo ' name = ID '{'
+        'custom service level: ' customServiceLevel = [metric::Condition | Fqn]
+    '}';
+
+SecurityProperty returns security::SecurityProperty:
+    SecurityProperty_Impl | Certifiable;
+
+SecurityDomain returns security::SecurityDomain:
+    'domain ' id = ID '{'
+        'name: ' name = EString
+        ('sub-domains ' '[' subDomain += [security::SecurityDomain | Fqn] (',' subDomain += [security::SecurityDomain | Fqn])* ']')?
+    '}';
+
+SecurityProperty_Impl returns security::SecurityProperty:
+    'property ' name = ID '{'
+        ('description: ' description = EString)?
+        'type: ' type = PropertyType
+        ('sub-properties ' '[' subProperties += [security::SecurityProperty | Fqn] (',' subProperties += [security::SecurityProperty | Fqn])* ']')?
+        ('sensors ' '[' sensors += [metric::Sensor | Fqn] (',' sensors += [metric::Sensor | Fqn])* ']')?
+        'domain: ' domain = [security::SecurityDomain | Fqn]
+    '}';
+
+Certifiable returns security::Certifiable:
+    'certifiable' name = ID '{'
+        ('description: ' description = EString)?
+        'type: ' type = PropertyType
+        ('sensors: ' '[' sensors += [metric::Sensor | Fqn] (',' sensors += [metric::Sensor | Fqn])* ']')?
+        'domain: ' domain = [security::SecurityDomain | Fqn]
+    '}';
+
+SecurityRequirement returns requirement::SecurityRequirement:
+    'security requirement ' name = ID '{'
+        'controls ' '[' securityControls += [security::SecurityControl | Fqn] (',' securityControls += [security::SecurityControl | Fqn])* ']'
+        ('application: ' application = [camel::Application | Fqn])?
+        ('component: ' component = [deployment::InternalComponent | Fqn])?
+    '}';
+
+SecurityCapability returns security::SecurityCapability:
+    'security capability ' name = ID '{'
+        'controls ' '[' securityControls += [security::SecurityControl | Fqn] (',' securityControls += [security::SecurityControl | Fqn])* ']'
+        ('data center: ' dataCenter = [organisation::DataCenter | Fqn])?
+    '}';
+
+SecurityControl returns security::SecurityControl:
+    'security control ' name = ID '{'
+        'specification: ' specification = EString
+        'domain: ' domain = [security::SecurityDomain | Fqn]
+        'sub-domain: ' subDomain = [security::SecurityDomain | Fqn]
+        ('security properties ' '[' securityProperties += [security::SecurityProperty | Fqn] (',' securityProperties += [security::SecurityProperty | Fqn])* ']')?
+        ('raw security metrics ' '[' rawSecurityMetrics += [security::RawSecurityMetric | Fqn] (',' rawSecurityMetrics += [security::RawSecurityMetric | Fqn])* ']')?
+        ('composite security metrics ' '[' compositeSecurityMetrics += [security::CompositeSecurityMetric | Fqn] (',' compositeSecurityMetrics += [security::CompositeSecurityMetric | Fqn])* ']')?
+	'}';
+
+/* Type model */
+
+TypeModel returns type::TypeModel:
+    {type::TypeModel}
+    ('importURI' '{' importURI += EString (',' importURI += EString)* '}')?
+    'type model ' name = ID '{'
+        (
+            dataTypes += ValueType |
+            values += Value
+        )*
+    '}';
+
+Value returns type::SingleValue:
+    BoolValue | EnumerateValue | IntegerValue | FloatsValue | DoublePrecisionValue | NegativeInf | PositiveInf | ValueToIncrease | StringsValue;
+
+BoolValueType returns type::BooleanValueType:
+    'boolean value type ' name = ID '{'
+        'primitive type: ' primitiveType = TypeEnum
+    '}';
+
+Enumeration returns type::Enumeration:
+    'enumeration ' name = ID '{'
+        'values ' '[' values += EnumerateValue (',' values += EnumerateValue)* ']'
+    '}';
+
+List returns type::List:
+    'list ' name = ID '{'
+        ('primitive type: ' primitiveType = TypeEnum)?
+        ('type: ' type = [type::ValueType | Fqn])?
+        'values ' '[' values += Value (',' values += Value)* ']'
+    '}';
+
+Range returns type::Range:
+    'range ' name = ID '{'
+        'primitive type: ' primitiveType = TypeEnum
+        'lower limit ' lowerLimit = Limit
+        'upper limit ' upperLimit = Limit
+    '}';
+
+RangeUnion returns type::RangeUnion:
+    'range union ' name = ID '{'
+        'primitive type: ' primitiveType = TypeEnum
+        'ranges ' '[' ranges += Range (',' ranges += Range)* ']'
+    '}';
+
+StringsValueType returns type::StringValueType:
+    'string value type ' name = ID '{'
+        'primitive type: ' primitiveType = TypeEnum
+    '}';
+
+enum TypeEnum returns type::TypeEnum:
+	IntType = 'IntType' | StringType = 'StringType' | BooleanType = 'BooleanType' | FloatType = 'FloatType' | DoubleType = 'DoubleType';
+
+EnumerateValue returns type::EnumerateValue:
+    name = EString ':' value = EInt
+;
+
+EInt returns ecore::EInt:
+    '-'? INT;
+
+Limit returns type::Limit:
+    '{'
+        value = NumericValue
+        (included ?= 'included')?
+    '}';
+
+EBoolean returns ecore::EBoolean:
+    'true' | 'false';
+
+EShort returns ecore::EShort:
+    '-'? INT;
+
+IntegerValue returns type::IntegerValue:
+    'int value ' value = EInt
+;
+
+FloatsValue returns type::FloatsValue:
+    'float value ' value = EFloat
+;
+
+DoublePrecisionValue returns type::DoublePrecisionValue:
+    'double value ' value = EDouble
+;
+
+NegativeInf returns type::NegativeInf:
+    {type::NegativeInf}
+    'negative infinity'
+    ;
+
+PositiveInf returns type::PositiveInf:
+    {type::PositiveInf}
+    'positive infinity'
+    ;
+
+ValueToIncrease returns type::ValueToIncrease:
+    'value to increase ' value = NumericValue
+;
+
+EFloat returns ecore::EFloat:
+    '-'? INT? '.' INT (('E' | 'e') '-'? INT)?;
+
+EDouble returns ecore::EDouble:
+    '-'? INT? '.' INT (('E' | 'e') '-'? INT)?;
+
+BoolValue returns type::BoolValue:
+    'boolean value ' value = EBoolean
+    ;
+
+StringsValue returns type::StringsValue:
+    'string value ' value = EString
+;
+
+/* Unit model */
+
+UnitModel returns unit::UnitModel:
+    'unit model ' name = ID '{'
+        (
+            units += Unit
+        )*
+    '}'
+;
+
+Unit returns unit::Unit:
+    CoreUnit | Dimensionless | MonetaryUnit | RequestUnit | StorageUnit | ThroughputUnit | TimeIntervalUnit | TransactionUnit;
+
+TimeIntervalUnit returns unit::TimeIntervalUnit:
+    'time interval unit ' '{' name = ID ':' unit = UnitType '}'
+;
+
+MonetaryUnit returns unit::MonetaryUnit:
+    'monetary unit ' '{' name = ID ':' unit = UnitType '}'
+;
+
+CoreUnit returns unit::CoreUnit:
+    'core unit ' '{' name = ID ':' unit = UnitType '}'
+;
+
+Dimensionless returns unit::Dimensionless:
+    'dimensionless ' '{' name = ID ':' unit = UnitType '}'
+;
+
+RequestUnit returns unit::RequestUnit:
+    'request unit ' '{' name = ID ':' unit = UnitType '}'
+;
+
+StorageUnit returns unit::StorageUnit:
+    'storage unit ' '{' name = ID ':' unit = UnitType '}'
+;
+
+ThroughputUnit returns unit::ThroughputUnit:
+    'throughput unit ' '{' name = ID ':' unit = UnitType '}'
+;
+
+TransactionUnit returns unit::TransactionUnit:
+    'transaction unit ' '{' name = ID ':' unit = UnitType '}'
+;
+
+enum UnitType returns unit::UnitType:
+    BYTES = 'BYTES' | KILOBYTES = 'KILOBYTES' | GIGABYTES = 'GIGABYTES' | MEGABYTES = 'MEGABYTES' | EUROS = 'EUROS' | DOLLARS = 'DOLLARS' | POUNDS = 'POUNDS' | MILLISECONDS = 'MILLISECONDS' | SECONDS = 'SECONDS' | MINUTES = 'MINUTES' | HOURS = 'HOURS' | DAYS = 'DAYS' | WEEKS = 'WEEKS' | MONTHS = 'MONTHS' | REQUESTS = 'REQUESTS' | REQUESTS_PER_SECOND = 'REQUESTS_PER_SECOND' | TRANSACTIONS = 'TRANSACTIONS' | TRANSACTIONS_PER_SECOND = 'TRANSACTIONS_PER_SECOND' | BYTES_PER_SECOND = 'BYTES_PER_SECOND' | PERCENTAGE = 'PERCENTAGE' | CORES = 'CORES';
+
+
+/* Global CAMEL elements */
+
+Action returns camel::Action:
+    'action ' name = ID '{'
+        'type: ' type = ActionType
+    '}';
+
+enum ActionType returns camel::ActionType:
+    EVENT_CREATION = 'EVENT CREATION' | SCALE_IN = 'SCALE IN' | SCALE_OUT = 'SCALE OUT' | SCALE_UP = 'SCALE UP' | SCALE_DOWN = 'SCALE DOWN';
+
+Application returns camel::Application:
+    'application ' name = ID '{'
+        'version: ' version = EString
+        ('description: ' description = EString)?
+        'owner: ' owner = [organisation::Entity | Fqn]
+        ('deployment models ' '[' deploymentModels += [deployment::DeploymentModel | Fqn] (',' deploymentModels += [deployment::DeploymentModel | Fqn])* ']')?
+    '}';
+
+/* Auxiliary terminals */
+
+Fqn: ID ('.' ID)*;
+
+terminal MYDATE:
+  '0'..'9' '0'..'9' '0'..'9' '0'..'9' '-'
+  '0'..'9' '0'..'9' '-'
+  '0'..'9' '0'..'9'
+  ('T'
+    '0'..'9' '0'..'9' ':'
+    '0'..'9' '0'..'9' ':'
+    '0'..'9' '0'..'9'
+        ('.' '0'..'9' '0'..'9' '0'..'9')?
+        ('+' '0'..'9' '0'..'9' '0'..'9' '0'..'9')?
+    )?
+;

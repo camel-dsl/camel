@@ -1,0 +1,1173 @@
+camel model ScalarmModel {
+
+application ScalarmApplication {
+	version: 'v1.0'
+	owner: AGHOrganisation.morzech
+	deployment models [ScalarmModel.ScalarmDeployment]
+}
+
+organisation model AGHOrganisation {
+	organisation AGH {
+		www: 'http://www.agh.edu.pl/en/'
+		postal address: 'al. Mickiewicza 30, 30-059 Krakow, Poland'
+		email: 'morzech@agh.edu.pl'
+	}
+
+	user morzech {
+		first name: Michal
+		last name: Orzechowski
+		email: 'morzech@agh.edu.pl'
+		paasage credentials 'morzech_at_agh_dot_edu_dot_pl'
+	}
+
+	security level: HIGH
+}
+
+deployment model ScalarmDeployment {
+	requirement set CoreIntensiveUbuntuGermanyRS {
+		os: ScalarmRequirement.Ubuntu
+		quantitative hardware: ScalarmRequirement.CoreIntensive
+		location: ScalarmRequirement.GermanyReq
+	}
+
+	requirement set CPUIntensiveUbuntuGermanyRS {
+		os: ScalarmRequirement.Ubuntu
+		quantitative hardware: ScalarmRequirement.CPUIntensive
+		location: ScalarmRequirement.GermanyReq
+	}
+
+	requirement set StorageIntensiveUbuntuGermanyRS {
+		os: ScalarmRequirement.Ubuntu
+		quantitative hardware: ScalarmRequirement.StorageIntensive
+		location: ScalarmRequirement.GermanyReq
+	}
+
+	vm CoreIntensiveUbuntuGermany {
+		requirement set CoreIntensiveUbuntuGermanyRS
+		provided host CoreIntensiveUbuntuGermanyHost
+	}
+
+	vm CPUIntensiveUbuntuGermany {
+		requirement set CPUIntensiveUbuntuGermanyRS
+		provided host CPUIntensiveUbuntuGermanyHost
+	}
+
+	vm StorageIntensiveUbuntuGermany {
+		requirement set StorageIntensiveUbuntuGermanyRS
+		provided host StorageIntensiveUbuntuGermanyHost
+	}
+
+	internal component ExperimentManager {
+		provided communication ExpManPort {port: 443}
+		required communication StoManPortReq {port: 20001 mandatory}
+		required communication InfSerPortReq {port: 11300}
+		required host CoreIntensiveUbuntuGermanyHostReq
+
+		configuration ExperimentManagerConfiguration{
+			download: 'wget https://github.com/kliput/scalarm_service_scripts/archive/paasage.tar.gz && sudo apt-get update && sudo apt-get install -y groovy ant && tar -zxvf paasage.tar.gz && cd scalarm_service_scripts-paasage'
+			install: 'cd scalarm_service_scripts-paasage && ./experiment_manager_install.sh'
+			start: 'cd scalarm_service_scripts-paasage && ./experiment_manager_start.sh'
+		}
+	}
+
+	internal component InformationService {
+		provided communication InfSerPort {port: 1130}
+		required host CoreIntensiveUbuntuGermanyHostReq
+
+		configuration InformationServiceConfiguration{
+			download: 'wget https://github.com/kliput/scalarm_service_scripts/archive/paasage.tar.gz && sudo apt-get update && sudo apt-get install -y groovy ant && tar -zxvf paasage.tar.gz && cd scalarm_service_scripts-paasage'
+			install: 'cd scalarm_service_scripts-paasage && ./information_service_install.sh'
+			start: 'cd scalarm_service_scripts-paasage && ./information_service_start.sh'
+		}
+	}
+
+	internal component SimulationManager {
+		required communication InfSerPortReq {port: 11300}
+		required communication StoManPortReq {port: 20001}
+		required communication ExpManPortReq {port: 44}
+		required host CPUIntensiveUbuntuGermanyHostReq
+
+		configuration SimulationManagerConfiguration{
+			download: 'wget https://github.com/kliput/scalarm_service_scripts/archive/paasage.tar.gz && sudo apt-get update && sudo apt-get install -y groovy ant && tar -zxvf paasage.tar.gz && cd scalarm_service_scripts-paasage'
+			install: 'cd scalarm_service_scripts-paasage && ./simulation_manager_install.sh'
+			start: 'cd scalarm_service_scripts-paasage && ./simulation_manager_start.sh'
+		}
+	}
+
+	internal component StorageManager {
+		provided communication StoManPort {port: 20001}
+		required communication InfSerPortReq {port: 11300}
+		required host StorageIntensiveUbuntuGermanyHostReq
+
+		configuration StoreManagerConfiguration{
+			download: 'wget https://github.com/kliput/scalarm_service_scripts/archive/paasage.tar.gz && sudo apt-get update && sudo apt-get install -y groovy ant && tar -zxvf paasage.tar.gz && cd scalarm_service_scripts-paasage'
+			install: 'cd scalarm_service_scripts-paasage && ./storage_manager_install.sh'
+			start: 'cd scalarm_service_scripts-paasage && ./storage_manager_start.sh'
+		}
+	}
+
+	hosting StorageManagerToStorageIntensiveUbuntuGermany {
+		from StorageManager.StorageIntensiveUbuntuGermanyHostReq to StorageIntensiveUbuntuGermany.StorageIntensiveUbuntuGermanyHost
+	}
+
+	hosting ExperimentManagerToCoreIntensiveUbuntuGermany {
+		from ExperimentManager.CoreIntensiveUbuntuGermanyHostReq to CoreIntensiveUbuntuGermany.CoreIntensiveUbuntuGermanyHost
+	}
+
+	hosting InformationServiceToCoreIntensiveUbuntuGermany {
+		from InformationService.CoreIntensiveUbuntuGermanyHostReq to CoreIntensiveUbuntuGermany.CoreIntensiveUbuntuGermanyHost
+	}
+
+	hosting SimulationManagerToCPUIntensiveUbuntuGermany {
+		from SimulationManager.CPUIntensiveUbuntuGermanyHostReq to CPUIntensiveUbuntuGermany.CPUIntensiveUbuntuGermanyHost
+	}
+
+	communication StorageManagerToInformationService {
+		from StorageManager.InfSerPortReq to InformationService.InfSerPort
+	}
+
+	communication ExperimentManagerToStorageManager {
+		type: REMOTE
+		from ExperimentManager.StoManPortReq to StorageManager.StoManPort
+	}
+
+	communication ExperimentManagerToInformationService {
+		from ExperimentManager.InfSerPortReq to InformationService.InfSerPort
+	}
+
+	communication SimulationManagerToStorageManager {
+		from SimulationManager.StoManPortReq to StorageManager.StoManPort
+	}
+
+	communication SimulationManagerToExperimentManager {
+		from SimulationManager.ExpManPortReq to ExperimentManager.ExpManPort
+	}
+
+	communication SimulationManagerToInformationService {
+		from SimulationManager.InfSerPortReq to InformationService.InfSerPort
+	}
+
+	// Sample instances for the Upperware developers only. These instances should not be specified by the CAMEL users.
+//	vm instance CoreIntensiveUbuntuGermanyInst typed ScalarmModel.ScalarmDeployment.CoreIntensiveUbuntuGermany {
+//		ip: '52.3.43.117'
+//		vm type: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+//		vm type value: ScalarmModel.GWDGType.VMTypeEnum.M1.LARGE
+//		provided host instance CoreIntensiveUbuntuGermanyHostInst typed CoreIntensiveUbuntuGermany.CoreIntensiveUbuntuGermanyHost
+//	}
+//
+//	internal component instance StorageManagerInst typed ScalarmModel.ScalarmDeployment.StorageManager {
+//		provided communication instance StoManPortInst typed StorageManager.StoManPort
+//		required communication instance InfSerPortReqInst typed StorageManager.InfSerPortReq
+//		required host instance StorageIntensiveUbuntuGermanyHostReqInst typed StorageManager.StorageIntensiveUbuntuGermanyHostReq
+//	}
+//
+//	internal component instance ExperimentManagerInst typed ScalarmModel.ScalarmDeployment.ExperimentManager {
+//		provided communication instance ExpManPortInst typed ExperimentManager.ExpManPort
+//		required communication instance StoManPortReqInst typed ExperimentManager.StoManPortReq
+//		required communication instance InfSerPortReqInst typed ExperimentManager.InfSerPortReq
+//		required host instance CoreIntensiveUbuntuGermanyHostReqInst typed ExperimentManager.CoreIntensiveUbuntuGermanyHostReq
+//	}
+//
+//	connect ExperimentManagerInst.StoManPortReqInst to StorageManagerInst.StoManPortInst typed ScalarmModel.ScalarmDeployment.ExperimentManagerToStorageManager named ExperimentManagerToStorageManagerInst
+//
+//	host ExperimentManagerInst.CoreIntensiveUbuntuGermanyHostReqInst on CoreIntensiveUbuntuGermanyInst.CoreIntensiveUbuntuGermanyHostInst typed ScalarmModel.ScalarmDeployment.ExperimentManagerToCoreIntensiveUbuntuGermany
+}
+
+requirement model ScalarmRequirement {
+	quantitative hardware CoreIntensive {
+		core: 8..32
+		ram: 4096..8192
+	}
+
+	quantitative hardware CPUIntensive {
+		core: 1..
+		ram: 4096..8192
+		cpu: 1.0..
+	}
+
+	quantitative hardware StorageIntensive {
+		storage: 1000..
+	}
+
+	os Ubuntu {os: 'Ubuntu' 64os}
+
+	location requirement GermanyReq {
+		locations [ScalarmLocation.DE]
+	}
+
+	location requirement UKReq {
+		locations [ScalarmLocation.UK]
+	}
+
+	horizontal scale requirement HorizontalScaleSimulationManager {
+		component: ScalarmModel.ScalarmDeployment.SimulationManager
+		instances: 1 .. 5
+	}
+
+	slo CPUMetricSLO {
+		service level: ScalarmModel.ScalarmMetric.CPUMetricCondition
+	}
+
+	optimisation requirement MinimiseResponseTimeInformationService {
+		function: MIN
+		metric: ScalarmModel.ScalarmMetric.ResponseTimeMetric
+		component: ScalarmModel.ScalarmDeployment.InformationService
+		priority: 3.0
+	}
+
+	optimisation requirement MaximiseAvailabilityStorageManager {
+		function: MAX
+		metric: ScalarmModel.ScalarmMetric.AvailabilityMetric
+		component: ScalarmModel.ScalarmDeployment.StorageManager
+		priority: 5.0
+	}
+
+	optimisation requirement MinimisePerformanceDegradationOfExperimentManager {
+		function: MIN
+		metric: ScalarmModel.ScalarmMetric.MeanValueOfResponseTimeOfAllExprimentManagersMetric
+		component: ScalarmModel.ScalarmDeployment.ExperimentManager
+		priority: 1.0
+	}
+
+	optimisation requirement MinimiseDataFarmingExperimentMakespan {
+		function: MIN
+		metric: ScalarmModel.ScalarmMetric.MakespanMetric
+		component: ScalarmModel.ScalarmDeployment.ExperimentManager
+		priority: 1.0
+	}
+
+	group ScalarmRequirementGroup {
+		operator: AND
+		requirements [ScalarmRequirement.CPUMetricSLO, ScalarmRequirement.MinimiseResponseTimeInformationService, ScalarmRequirement.MaximiseAvailabilityStorageManager, ScalarmRequirement.MinimisePerformanceDegradationOfExperimentManager, ScalarmRequirement.MinimiseDataFarmingExperimentMakespan]
+	}
+}
+
+metric model ScalarmMetric {
+	window Win5Min {
+		window type: SLIDING
+		size type: TIME_ONLY
+		time size: 5
+		unit: ScalarmModel.ScalarmUnit.minutes
+	}
+
+	window Win1Min {
+		window type: SLIDING
+		size type: TIME_ONLY
+		time size: 1
+		unit: ScalarmModel.ScalarmUnit.minutes
+	}
+
+	schedule Schedule1Min {
+		type: FIXED_RATE
+		interval: 1
+		unit: ScalarmModel.ScalarmUnit.minutes
+	}
+
+	schedule Schedule1Sec {
+		type: FIXED_RATE
+		interval: 1
+		unit: ScalarmModel.ScalarmUnit.seconds
+	}
+
+	property AvailabilityProperty {
+		type: MEASURABLE
+		sensors [ScalarmMetric.AvailabilitySensor]
+	}
+
+	property CPUProperty {
+		type: MEASURABLE
+		sensors [ScalarmMetric.CPUSensor]
+	}
+
+	property ResponseTimeProperty {
+		type: MEASURABLE
+		sensors [ScalarmMetric.ResponseTimeSensor]
+	}
+
+	property ThroughputInSimulationsPerSecondProperty {
+		type: MEASURABLE
+		sensors [ScalarmMetric.ThroughputOfSimulationsExecutedByWorkerSensor]
+	}
+
+	property NumberOfSimulationsPerSecondProperty {
+		type: MEASURABLE
+		sensors [ScalarmMetric.NumberOfSimulationsLeftInTheExperimentSensor]
+	}
+
+	property MakespanProperty {
+		type: MEASURABLE
+	}
+
+	sensor AvailabilitySensor {
+		push
+	}
+
+	sensor CPUSensor {
+		configuration: 'de.uniulm.packagename.classname'
+		push
+	}
+
+	sensor ResponseTimeSensor {
+		push
+	}
+
+	sensor NumberOfSimulationsLeftInTheExperimentSensor {
+		push
+	}
+
+	sensor ThroughputOfSimulationsExecutedByWorkerSensor {
+		push
+	}
+
+	raw metric AvailabilityMetric {
+		value direction: 1
+		layer: SaaS
+		property: ScalarmModel.ScalarmMetric.AvailabilityProperty
+		unit: ScalarmModel.ScalarmUnit.AvailabilityUnit
+		value type: ScalarmModel.ScalarmType.DoubleRange_0_100
+	}
+
+	raw metric CPUMetric {
+		value direction: 0
+		layer: IaaS
+		property: ScalarmModel.ScalarmMetric.CPUProperty
+		unit: ScalarmModel.ScalarmUnit.CPUUnit
+		value type: ScalarmModel.ScalarmType.Range_0_100
+	}
+
+	raw metric ResponseTimeMetric {
+		value direction: 0
+		layer: SaaS
+		property: ScalarmModel.ScalarmMetric.ResponseTimeProperty
+		unit: ScalarmModel.ScalarmUnit.ResponseTimeUnit
+		value type: ScalarmModel.ScalarmType.Range_0_10000
+	}
+
+	raw metric ThroughputOfAWrokerMetric {
+		value direction: 1
+		layer: SaaS
+		property: ScalarmModel.ScalarmMetric.ThroughputInSimulationsPerSecondProperty
+		unit: ScalarmModel.ScalarmUnit.SimulationsPerSecondUnit
+	}
+
+	raw metric NumberOfSimulationsLeftInExperimentsMetric {
+		value direction: 0
+		layer: SaaS
+		property: ScalarmModel.ScalarmMetric.NumberOfSimulationsPerSecondProperty
+		unit: ScalarmModel.ScalarmUnit.NumberOfSimulationsLeftInExperimentUnit
+	}
+
+	composite metric MeanValueOfResponseTimeOfAllExprimentManagersMetric {
+		value direction: 0
+		layer: SaaS
+		property: ScalarmModel.ScalarmMetric.ResponseTimeProperty
+		unit: ScalarmModel.ScalarmUnit.ResponseTimeUnit
+
+		metric formula MeanValueOfResponseTimeOfAllExprimentManagersFormula {
+			function arity: UNARY
+			function pattern: MAP
+			MEAN(ScalarmModel.ScalarmMetric.ResponseTimeMetric)
+		}
+	}
+
+	composite metric SumOfThroughputsOfAllWorkersMetric {
+		value direction: 1
+		layer: SaaS
+		property: ScalarmModel.ScalarmMetric.ThroughputInSimulationsPerSecondProperty
+		unit: ScalarmModel.ScalarmUnit.ResponseTimeUnit
+
+		metric formula SumOfThroughputsOfAllWorkersFormula {
+			function arity: UNARY
+			function pattern: MAP
+			PLUS(ScalarmModel.ScalarmMetric.ThroughputOfAWrokerMetric)
+		}
+	}
+
+	composite metric MakespanMetric {
+		value direction: 0
+		layer: SaaS
+		property: ScalarmModel.ScalarmMetric.MakespanProperty
+		unit: ScalarmModel.ScalarmUnit.ExperimentMakespanInSecondsUnit
+
+		metric formula MakespanFormula {
+			function arity: BINARY
+			function pattern: MAP
+			DIV(ScalarmModel.ScalarmMetric.NumberOfSimulationsLeftInExperimentsMetric,ScalarmModel.ScalarmMetric.SumOfThroughputsOfAllWorkersMetric)
+		}
+	}
+
+	composite metric CPUAverage {
+		description: "Average of the CPU"
+		value direction: 1
+		layer: PaaS
+		property: ScalarmModel.ScalarmMetric.CPUProperty
+		unit: ScalarmModel.ScalarmUnit.CPUUnit
+
+		metric formula Formula_Average {
+			function arity: UNARY
+			function pattern: REDUCE
+			MEAN( ScalarmModel.ScalarmMetric.CPUMetric )
+		}
+	}
+
+	raw metric context StorageManagerAvailabilityContext {
+		metric: ScalarmModel.ScalarmMetric.AvailabilityMetric
+		sensor: ScalarmMetric.AvailabilitySensor
+		component: ScalarmModel.ScalarmDeployment.StorageManager
+		quantifier: ANY
+	}
+
+	raw metric context CPUMetricConditionContext {
+		metric: ScalarmModel.ScalarmMetric.CPUMetric
+		sensor: ScalarmMetric.CPUSensor
+		component: ScalarmModel.ScalarmDeployment.SimulationManager
+		quantifier: ANY
+	}
+
+	raw metric context ExperimentManagerResponseTimeContext {
+		metric: ScalarmModel.ScalarmMetric.ResponseTimeMetric
+		sensor: ScalarmMetric.ResponseTimeSensor
+		component: ScalarmModel.ScalarmDeployment.ExperimentManager
+		quantifier: ANY
+	}
+
+	raw metric context InformationServiceResponseTimeContext {
+		metric: ScalarmModel.ScalarmMetric.ResponseTimeMetric
+		sensor: ScalarmMetric.ResponseTimeSensor
+		component: ScalarmModel.ScalarmDeployment.InformationService
+		quantifier: ANY
+	}
+
+	raw metric context ThroughputOfAWrokerContext {
+		metric: ScalarmModel.ScalarmMetric.ThroughputOfAWrokerMetric
+		sensor: ScalarmMetric.ThroughputOfSimulationsExecutedByWorkerSensor
+		component: ScalarmModel.ScalarmDeployment.SimulationManager
+		quantifier: ANY
+	}
+
+	raw metric context NumberOfSimulationsLeftInExperimentsContext {
+		metric: ScalarmModel.ScalarmMetric.NumberOfSimulationsLeftInExperimentsMetric
+		sensor: ScalarmMetric.NumberOfSimulationsLeftInTheExperimentSensor
+		component: ScalarmModel.ScalarmDeployment.ExperimentManager
+		quantifier: ANY
+	}
+
+	raw metric context CPURawMetricContext {
+		metric: ScalarmModel.ScalarmMetric.CPUMetric
+		sensor: ScalarmMetric.CPUSensor
+		component: ScalarmModel.ScalarmDeployment.SimulationManager
+		schedule: ScalarmModel.ScalarmMetric.Schedule1Sec
+		quantifier: ALL
+	}
+
+	composite metric context AllExperimentManagersResponseTimeContext {
+		metric: ScalarmModel.ScalarmMetric.MeanValueOfResponseTimeOfAllExprimentManagersMetric
+		component: ScalarmModel.ScalarmDeployment.ExperimentManager
+		composing metric contexts [ScalarmModel.ScalarmMetric.ExperimentManagerResponseTimeContext]
+		quantifier: ANY
+	}
+
+	composite metric context SumOfThroughputsOfAllWorkersContext {
+		metric: ScalarmModel.ScalarmMetric.SumOfThroughputsOfAllWorkersMetric
+		component: ScalarmModel.ScalarmDeployment.SimulationManager
+		composing metric contexts [ScalarmModel.ScalarmMetric.ThroughputOfAWrokerContext]
+		quantifier: ANY
+	}
+
+	composite metric context MakespanContext {
+		metric: ScalarmModel.ScalarmMetric.MakespanMetric
+		component: ScalarmModel.ScalarmDeployment.ExperimentManager
+		composing metric contexts [ScalarmModel.ScalarmMetric.NumberOfSimulationsLeftInExperimentsContext, ScalarmModel.ScalarmMetric.SumOfThroughputsOfAllWorkersContext]
+		quantifier: ANY
+	}
+
+	composite metric context CPUAvgMetricContextAll {
+		metric: ScalarmModel.ScalarmMetric.CPUAverage
+		component: ScalarmModel.ScalarmDeployment.SimulationManager
+		window: ScalarmModel.ScalarmMetric.Win5Min
+		schedule: ScalarmModel.ScalarmMetric.Schedule1Min
+		composing metric contexts [ScalarmModel.ScalarmMetric.CPURawMetricContext]
+		quantifier: ALL
+	}
+
+	composite metric context CPUAvgMetricContextAny {
+		metric: ScalarmModel.ScalarmMetric.CPUAverage
+		component: ScalarmModel.ScalarmDeployment.SimulationManager
+		window: ScalarmModel.ScalarmMetric.Win1Min
+		schedule: ScalarmModel.ScalarmMetric.Schedule1Min
+		composing metric contexts [ScalarmModel.ScalarmMetric.CPURawMetricContext]
+		quantifier: ANY
+	}
+
+	metric condition StorageManagerAvailabilityCondition {
+		context: ScalarmModel.ScalarmMetric.StorageManagerAvailabilityContext
+		threshold: 99.0
+		comparison operator: >
+	}
+
+	metric condition CPUMetricCondition {
+		context: ScalarmModel.ScalarmMetric.CPUMetricConditionContext
+		threshold: 80.0
+		comparison operator: >
+	}
+
+	metric condition InformationServiceResponseCondition {
+		context: ScalarmModel.ScalarmMetric.InformationServiceResponseTimeContext
+		threshold: 700.0
+		comparison operator: <
+	}
+
+	metric condition ExperimentManagerResponseTimeCondition {
+		context: ScalarmModel.ScalarmMetric.ExperimentManagerResponseTimeContext
+		threshold: 0.3
+		comparison operator: >
+	}
+
+	metric condition CPUAvgMetricConditionAll {
+		context: ScalarmModel.ScalarmMetric.CPUAvgMetricContextAll
+		threshold: 50.0
+		comparison operator: >
+	}
+
+	metric condition CPUAvgMetricConditionAny {
+		context: ScalarmModel.ScalarmMetric.CPUAvgMetricContextAny
+		threshold: 80.0
+		comparison operator: >
+	}
+}
+
+scalability model ScalarmScalability {
+	horizontal scaling action HorizontalScalingSimulationManager {
+		type: SCALE OUT
+		vm: ScalarmModel.ScalarmDeployment.CPUIntensiveUbuntuGermany
+		internal component: ScalarmModel.ScalarmDeployment.SimulationManager
+	}
+
+	non-functional event CPUAvgMetricNFEAll {
+		metric condition: ScalarmModel.ScalarmMetric.CPUAvgMetricConditionAll
+		violation
+	}
+
+	non-functional event CPUAvgMetricNFEAny {
+		metric condition: ScalarmModel.ScalarmMetric.CPUAvgMetricConditionAny
+		violation
+	}
+
+	binary event pattern CPUAvgMetricBEPAnd {
+		left event: ScalarmModel.ScalarmScalability.CPUAvgMetricNFEAll
+		right event: ScalarmModel.ScalarmScalability.CPUAvgMetricNFEAny
+		operator: AND
+	}
+
+	scalability rule RawCPUScalabilityRule {
+		event: ScalarmModel.ScalarmScalability.CPUAvgMetricBEPAnd
+		actions [ScalarmModel.ScalarmScalability.HorizontalScalingSimulationManager]
+		scale requirements [ScalarmRequirement.HorizontalScaleSimulationManager]
+	}
+}
+
+location model ScalarmLocation {
+	region EU {
+		name: 'Europe'
+	}
+
+	country DE {
+		name: 'Germany'
+		parent regions [ScalarmLocation.EU]
+	}
+
+	country UK {
+		name: 'United Kingdom'
+		parent regions [ScalarmLocation.EU]
+	}
+
+}
+
+type model ScalarmType {
+	range Range_0_100 {
+		primitive type: IntType
+		lower limit {int value 0 included}
+		upper limit {int value 100}
+	}
+
+	range Range_0_10000 {
+		primitive type: IntType
+		lower limit {int value 0}
+		upper limit {int value 1000 included}
+	}
+
+	range DoubleRange_0_100 {
+		primitive type: DoubleType
+		lower limit {double value 0.0 included}
+		upper limit {double value 100.0 included}
+	}
+}
+
+unit model ScalarmUnit {
+	monetary unit {Euro: EUROS}
+
+	dimensionless {CPUUnit: PERCENTAGE}
+
+	time interval unit {ResponseTimeUnit: MILLISECONDS}
+
+	dimensionless {AvailabilityUnit: PERCENTAGE}
+
+	throughput unit {SimulationsPerSecondUnit: TRANSACTIONS_PER_SECOND}
+
+	time interval unit {ExperimentMakespanInSecondsUnit: SECONDS}
+
+	transaction unit {NumberOfSimulationsLeftInExperimentUnit: TRANSACTIONS}
+
+	time interval unit {minutes : MINUTES}
+
+	time interval unit {seconds : SECONDS}
+}
+
+// Sample provider model to allow references from VM instances to provider models.
+location model GWDGLocation {
+	country DE {
+		name: Germany
+	}
+}
+
+organisation model GWDGOrganisation {
+	provider GWDG {
+		www: 'www.gwdg.de'
+		postal address: 'GWDG, Am Faßberg 11, 37077 Göttingen, Germany'
+		email: 'gwdg@gwdg.de'
+		public
+		IaaS
+		provider model: ScalarmModel.GWDGProvider
+	}
+	data centre GWDGDataCentre {
+		code name: gwdg location: GWDGLocation.DE
+	}
+	security level: LOW
+}
+
+provider model GWDGProvider {
+	constraints {
+		implies M1_MICRO_VM_Constraint_Mapping {
+			from: ScalarmModel.GWDGProvider.GWDG.VM
+			to: ScalarmModel.GWDGProvider.GWDG.VM
+			attribute constraints {
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'M1.MICRO'
+					to value: int value 256
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'M1.MICRO'
+					to value: int value 1
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'M1.MICRO'
+					to value: int value 0
+				}
+			}
+		}
+		implies M1_TINY_VM_Constraint_Mapping {
+			from: ScalarmModel.GWDGProvider.GWDG.VM
+			to: ScalarmModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'M1.TINY'
+					to value: int value 512
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'M1.TINY'
+					to value: int value 1
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'M1.TINY'
+					to value: int value 0
+				}
+			}
+		}
+		implies M1_SMALL_VM_Constraint_Mapping {
+			from: ScalarmModel.GWDGProvider.GWDG.VM
+			to: ScalarmModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'M1.SMALL'
+					to value: int value 2048
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'M1.SMALL'
+					to value: int value 1
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'M1.SMALL'
+					to value: int value 20
+				}
+			}
+		}
+		implies M1_MEDIUM_VM_Constraint_Mapping {
+			from: ScalarmModel.GWDGProvider.GWDG.VM
+			to: ScalarmModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'M1.MEDIUM'
+					to value: int value 4096
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'M1.MEDIUM'
+					to value: int value 2
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'M1.MEDIUM'
+					to value: int value 40
+				}
+			}
+		}
+		implies M1_LARGE_VM_Constraint_Mapping {
+			from: ScalarmModel.GWDGProvider.GWDG.VM
+			to: ScalarmModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'M1.LARGE'
+					to value: int value 8192
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'M1.LARGE'
+					to value: int value 4
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'M1.LARGE'
+					to value: int value 80
+				}
+			}
+		}
+		implies M1_XLARGE_VM_Constraint_Mapping {
+			from: ScalarmModel.GWDGProvider.GWDG.VM
+			to: ScalarmModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'M1.XLARGE'
+					to value: int value 16384
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'M1.XLARGE'
+					to value: int value 8
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'M1.XLARGE'
+					to value: int value 160
+				}
+			}
+		}
+		implies M1_XXLARGE_VM_Constraint_Mapping {
+			from: ScalarmModel.GWDGProvider.GWDG.VM
+			to: ScalarmModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'M1.XXLARGE'
+					to value: int value 32768
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'M1.XXLARGE'
+					to value: int value 8
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'M1.XXLARGE'
+					to value: int value 160
+				}
+			}
+		}
+		implies M2_SMALL_VM_Constraint_Mapping {
+			from: ScalarmModel.GWDGProvider.GWDG.VM
+			to: ScalarmModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'M2.SMALL'
+					to value: int value 4096
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'M2.SMALL'
+					to value: int value 1
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'M2.SMALL'
+					to value: int value 20
+				}
+			}
+		}
+		implies M2_MEDIUM_VM_Constraint_Mapping {
+			from: ScalarmModel.GWDGProvider.GWDG.VM
+			to: ScalarmModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'M2.MEDIUM'
+					to value: int value 8192
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'M2.MEDIUM'
+					to value: int value 2
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'M2.MEDIUM'
+					to value: int value 40
+				}
+			}
+		}
+		implies M2_LARGE_VM_Constraint_Mapping {
+			from: ScalarmModel.GWDGProvider.GWDG.VM
+			to: ScalarmModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'M2.LARGE'
+					to value: int value 16384
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'M2.LARGE'
+					to value: int value 4
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'M2.LARGE'
+					to value: int value 80
+				}
+			}
+		}
+		implies M2_XLARGE_VM_Constraint_Mapping {
+			from: ScalarmModel.GWDGProvider.GWDG.VM
+			to: ScalarmModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'M2.XLARGE'
+					to value: int value 32768
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'M2.XLARGE'
+					to value: int value 4
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'M2.XLARGE'
+					to value: int value 160
+				}
+			}
+		}
+		implies C1_SMALL_VM_Constraint_Mapping {
+			from: ScalarmModel.GWDGProvider.GWDG.VM
+			to: ScalarmModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'C1.SMALL'
+					to value: int value 2048
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'C1.SMALL'
+					to value: int value 2
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'C1.SMALL'
+					to value: int value 20
+				}
+			}
+		}
+		implies C1_MEDIUM_VM_Constraint_Mapping {
+			from: ScalarmModel.GWDGProvider.GWDG.VM
+			to: ScalarmModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'C1.MEDIUM'
+					to value: int value 4096
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'C1.MEDIUM'
+					to value: int value 4
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'C1.MEDIUM'
+					to value: int value 40
+				}
+			}
+		}
+		implies C1_LARGE_VM_Constraint_Mapping {
+			from: ScalarmModel.GWDGProvider.GWDG.VM
+			to: ScalarmModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'C1.LARGE'
+					to value: int value 8192
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'C1.LARGE'
+					to value: int value 8
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'C1.LARGE'
+					to value: int value 80
+				}
+			}
+		}
+		implies C1_XLARGE_VM_Constraint_Mapping {
+			from: ScalarmModel.GWDGProvider.GWDG.VM
+			to: ScalarmModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'C1.XLARGE'
+					to value: int value 16384
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'C1.XLARGE'
+					to value: int value 16
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'C1.XLARGE'
+					to value: int value 160
+				}
+			}
+		}
+		implies C1_XXLARGE_VM_Constraint_Mapping {
+			from: ScalarmModel.GWDGProvider.GWDG.VM
+			to: ScalarmModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'C1.XXLARGE'
+					to value: int value 32768
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'C1.XXLARGE'
+					to value: int value 16
+				}
+				attribute constraint {
+					from: ScalarmModel.GWDGProvider.GWDG.VM.VMType
+					to: ScalarmModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'C1.XXLARGE'
+					to value: int value 160
+				}
+			}
+		}
+	}
+	root feature GWDG {
+		attributes {
+			attribute DeploymentModel {
+				value: string value 'Private'
+				value type: ScalarmModel.GWDGType.StringValueType
+			}
+			attribute ServiceModel {
+				value: string value 'IaaS'
+				value type: ScalarmModel.GWDGType.StringValueType
+			}
+			attribute Availability {
+				unit type: PERCENTAGE
+				value: string value '95'
+				value type: ScalarmModel.GWDGType.StringValueType
+			}
+			attribute Driver {
+				value: string value 'openstack-nova'
+				value type: ScalarmModel.GWDGType.StringValueType
+			}
+			attribute EndPoint {
+				value: string value 'https://api.cloud.gwdg.de:5000/v2.0/'
+				value type: ScalarmModel.GWDGType.StringValueType
+			}
+		}
+		sub-features {
+			feature VM {
+				attributes {
+					attribute VMType {
+						value type: ScalarmModel.GWDGType.VMTypeEnum
+					}
+					attribute VMOS {
+						value type: ScalarmModel.GWDGType.VMOsEnum
+					}
+					attribute VMMemory {
+						unit type: MEGABYTES value type: ScalarmModel.GWDGType.MemoryList
+					}
+					attribute VMStorage {
+						unit type: GIGABYTES value type: ScalarmModel.GWDGType.StorageList
+					}
+					attribute VMCores {
+						value type: ScalarmModel.GWDGType.CoresList
+					}
+				}
+				feature cardinality {
+					cardinality: 1 .. 8
+				}
+			}
+			feature Location {
+				sub-features {
+					feature Germany {
+						feature cardinality {
+							cardinality: 1 .. 1
+						}
+					}
+				}
+				feature cardinality {
+					cardinality: 1 .. 1
+				}
+			}
+		}
+		feature cardinality {
+			cardinality: 1 .. 1
+		}
+	}
+}
+
+type model GWDGType {
+	enumeration VMTypeEnum {
+		values [ 'M1.MICRO' : 0,
+		'M1.TINY' : 1,
+		'M1.SMALL' : 2,
+		'M1.MEDIUM' : 3,
+		'M1.LARGE' : 4,
+		'M1.XLARGE' : 5,
+		'M1.XXLARGE' : 6,
+		'M2.SMALL' : 7,
+		'M2.MEDIUM' : 8,
+		'M2.LARGE' : 9,
+		'M2.XLARGE' : 10,
+		'C1.SMALL' : 11,
+		'C1.MEDIUM' : 12,
+		'C1.LARGE' : 13,
+		'C1.XLARGE' : 14,
+		'C1.XXLARGE' : 15 ]
+	}
+	enumeration VMOsEnum {
+		values [ 'Fedora 20 server x86_64' : 0,
+		'Ubuntu 14.04 LTS Server x86_64' : 1,
+		'Debian 7.6.0 Server x86_64' : 2,
+		'Scientific Linux 6.5 Server x86_64' : 3,
+		'openSUSE 13.1 Server x86_64' : 4,
+		'CentOS 6.5 Server x86_64' : 5,
+		'Ubuntu 13.10 Desktop Unity x86_64' : 6,
+		'Fedora 20 Desktop Gnome x86_64' : 7,
+		'openSUSE 13.1 Desktop Gnome x86_64' : 8,
+		'Fedora 20 Desktop KDE x86_64' : 9,
+		'openSUSE 13.1 Desktop KDE x86_64' : 10 ]
+	}
+	range MemoryRange {
+		primitive type: IntType
+		lower limit {
+			int value 256 included
+		}
+		upper limit {
+			int value 32768 included
+		}
+	}
+	range StorageRange {
+		primitive type: IntType
+		lower limit {
+			int value 0 included
+		}
+		upper limit {
+			int value 160 included
+		}
+	}
+	range CoresRange {
+		primitive type: IntType
+		lower limit {
+			int value 1 included
+		}
+		upper limit {
+			int value 16 included
+		}
+	}
+	string value type StringValueType {
+		primitive type: StringType
+	}
+	list StorageList {
+		values [ int value 0,
+		int value 20,
+		int value 40,
+		int value 80,
+		int value 160 ]
+	}
+	list MemoryList {
+		values [ int value 256,
+		int value 512,
+		int value 2048,
+		int value 4096,
+		int value 8192,
+		int value 16384,
+		int value 32768 ]
+	}
+	list CoresList {
+		values [ int value 1,
+		int value 2,
+		int value 4,
+		int value 8,
+		int value 16 ]
+	}
+}
+
+}

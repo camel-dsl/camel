@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-Vendor: %providerName
+Bundle-Version: 2015.9.1
+Bundle-SymbolicName: eu.paasage.camel.dsl.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: eu.paasage.camel.dsl;visibility:=reexport,
+ org.eclipse.xtext.ui,
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.xtext.builder,
+ org.eclipse.xtext.common.types.ui,
+ org.eclipse.xtext.ui.codetemplates.ui,
+ org.eclipse.compare,
+ org.eclipse.ui.editors,
+ org.eclipse.ui,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: eu.paasage.camel.dsl.ui.quickfix,
+ eu.paasage.camel.dsl.ui.contentassist,
+ eu.paasage.camel.dsl.ui.internal,
+ eu.paasage.camel.dsl.ui.contentassist.antlr
+Bundle-Activator: eu.paasage.camel.dsl.ui.internal.CamelDslActivator

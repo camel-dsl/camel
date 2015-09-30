@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="ASCII"?>
+<camel:CamelModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camel="http://www.paasage.eu/2015/06/camel" xmlns:provider="http://www.paasage.eu/2015/06/camel/provider" xmlns:type="http://www.paasage.eu/2015/06/camel/type" xsi:schemaLocation="http://www.paasage.eu/2015/06/camel/provider http://www.paasage.eu/2015/06/camel#//provider http://www.paasage.eu/2015/06/camel/type http://www.paasage.eu/2015/06/camel#//type" name="AmazonEC2Model">
+  <locationModels name="AmazonEC2Location">
+    <countries id="EU" name="EU"/>
+    <countries id="USEast" name="US East"/>
+    <countries id="USWest" name="US West"/>
+  </locationModels>
+  <organisationModels name="AmazonEC2Organisation">
+    <provider name="AmazonEC2" www="aws.amazon.com/ec2&#x200e;" email="info@amazon.com" public="true" IaaS="true" providerModel="//@providerModels.0"/>
+    <dataCentres name="AmazonEC2DataCentreEU" codeName="amazoneu" location="//@locationModels.0/@countries.0"/>
+    <dataCentres name="AmazonEC2DataCentreUSEast" codeName="amazonuseast" location="//@locationModels.0/@countries.1"/>
+    <dataCentres name="AmazonEC2DataCentreUSWest" codeName="amazonuswest" location="//@locationModels.0/@countries.2"/>
+  </organisationModels>
+  <providerModels name="AmazonEC2Provider">
+    <constraints xsi:type="provider:Implies" name="S_VM_Constraint_Mapping" from="//@providerModels.0/@rootFeature/@subFeatures.0" to="//@providerModels.0/@rootFeature/@subFeatures.0">
+      <attributeConstraints from="//@providerModels.0/@rootFeature/@subFeatures.0/@attributes.0" to="//@providerModels.0/@rootFeature/@subFeatures.0/@attributes.2">
+        <fromValue xsi:type="type:StringsValue" value="S"/>
+        <toValue xsi:type="type:IntegerValue" value="2"/>
+      </attributeConstraints>
+      <attributeConstraints from="//@providerModels.0/@rootFeature/@subFeatures.0/@attributes.0" to="//@providerModels.0/@rootFeature/@subFeatures.0/@attributes.4">
+        <fromValue xsi:type="type:StringsValue" value="S"/>
+        <toValue xsi:type="type:IntegerValue" value="1"/>
+      </attributeConstraints>
+      <attributeConstraints from="//@providerModels.0/@rootFeature/@subFeatures.0/@attributes.0" to="//@providerModels.0/@rootFeature/@subFeatures.0/@attributes.3">
+        <fromValue xsi:type="type:StringsValue" value="S"/>
+        <toValue xsi:type="type:IntegerValue" value="160"/>
+      </attributeConstraints>
+    </constraints>
+    <constraints xsi:type="provider:Implies" name="M_VM_Constraint_Mapping" from="//@providerModels.0/@rootFeature/@subFeatures.0" to="//@providerModels.0/@rootFeature/@subFeatures.0">
+      <attributeConstraints from="//@providerModels.0/@rootFeature/@subFeatures.0/@attributes.0" to="//@providerModels.0/@rootFeature/@subFeatures.0/@attributes.2">
+        <fromValue xsi:type="type:StringsValue" value="M"/>
+        <toValue xsi:type="type:IntegerValue" value="4"/>
+      </attributeConstraints>
+      <attributeConstraints from="//@providerModels.0/@rootFeature/@subFeatures.0/@attributes.0" to="//@providerModels.0/@rootFeature/@subFeatures.0/@attributes.4">
+        <fromValue xsi:type="type:StringsValue" value="M"/>
+        <toValue xsi:type="type:IntegerValue" value="1"/>
+      </attributeConstraints>
+      <attributeConstraints from="//@providerModels.0/@rootFeature/@subFeatures.0/@attributes.0" to="//@providerModels.0/@rootFeature/@subFeatures.0/@attributes.3">
+        <fromValue xsi:type="type:StringsValue" value="M"/>
+        <toValue xsi:type="type:IntegerValue" value="410"/>
+      </attributeConstraints>
+    </constraints>
+    <constraints xsi:type="provider:Implies" name="L_VM_Constraint_Mapping" from="//@providerModels.0/@rootFeature/@subFeatures.0" to="//@providerModels.0/@rootFeature/@subFeatures.0">
+      <attributeConstraints from="//@providerModels.0/@rootFeature/@subFeatures.0/@attributes.0" to="//@providerModels.0/@rootFeature/@subFeatures.0/@attributes.2">
+        <fromValue xsi:type="type:StringsValue" value="L"/>
+        <toValue xsi:type="type:IntegerValue" value="8"/>
+      </attributeConstraints>
+      <attributeConstraints from="//@providerModels.0/@rootFeature/@subFeatures.0/@attributes.0" to="//@providerModels.0/@rootFeature/@subFeatures.0/@attributes.4">
+        <fromValue xsi:type="type:StringsValue" value="L"/>
+        <toValue xsi:type="type:IntegerValue" value="2"/>
+      </attributeConstraints>
+      <attributeConstraints from="//@providerModels.0/@rootFeature/@subFeatures.0/@attributes.0" to="//@providerModels.0/@rootFeature/@subFeatures.0/@attributes.3">
+        <fromValue xsi:type="type:StringsValue" value="L"/>
+        <toValue xsi:type="type:IntegerValue" value="840"/>
+      </attributeConstraints>
+    </constraints>
+    <constraints xsi:type="provider:Implies" name="XL_VM_Constraint_Mapping" from="//@providerModels.0/@rootFeature/@subFeatures.0" to="//@providerModels.0/@rootFeature/@subFeatures.0">
+      <attributeConstraints from="//@providerModels.0/@rootFeature/@subFeatures.0/@attributes.0" to="//@providerModels.0/@rootFeature/@subFeatures.0/@attributes.2">
+        <fromValue xsi:type="type:StringsValue" value="XL"/>
+        <toValue xsi:type="type:IntegerValue" value="15"/>
+      </attributeConstraints>
+      <attributeConstraints from="//@providerModels.0/@rootFeature/@subFeatures.0/@attributes.0" to="//@providerModels.0/@rootFeature/@subFeatures.0/@attributes.4">
+        <fromValue xsi:type="type:StringsValue" value="XL"/>
+        <toValue xsi:type="type:IntegerValue" value="4"/>
+      </attributeConstraints>
+      <attributeConstraints from="//@providerModels.0/@rootFeature/@subFeatures.0/@attributes.0" to="//@providerModels.0/@rootFeature/@subFeatures.0/@attributes.3">
+        <fromValue xsi:type="type:StringsValue" value="XL"/>
+        <toValue xsi:type="type:IntegerValue" value="1680"/>
+      </attributeConstraints>
+    </constraints>
+    <rootFeature name="AmazonEC2">
+      <attributes name="DeploymentModel">
+        <value xsi:type="type:StringsValue" value="Public"/>
+      </attributes>
+      <attributes name="ServiceModel">
+        <value xsi:type="type:StringsValue" value="IaaS"/>
+      </attributes>
+      <attributes name="Driver" valueType="//@typeModels.0/@dataTypes.5">
+        <value xsi:type="type:StringsValue" value="ec2"/>
+      </attributes>
+      <subFeatures name="VM">
+        <attributes name="VMType" valueType="//@typeModels.0/@dataTypes.0"/>
+        <attributes name="VMOS" valueType="//@typeModels.0/@dataTypes.1"/>
+        <attributes name="VMMemory" valueType="//@typeModels.0/@dataTypes.2"/>
+        <attributes name="VMStorage" valueType="//@typeModels.0/@dataTypes.3"/>
+        <attributes name="VMCores" valueType="//@typeModels.0/@dataTypes.4"/>
+        <featureCardinality cardinalityMin="1" cardinalityMax="100"/>
+      </subFeatures>
+      <subFeatures xsi:type="provider:Exclusive" name="Location">
+        <featureCardinality cardinalityMin="1" cardinalityMax="1"/>
+        <groupCardinality cardinalityMin="1" cardinalityMax="1"/>
+        <variants name="EU">
+          <featureCardinality cardinalityMax="1"/>
+        </variants>
+        <variants name="USEast">
+          <featureCardinality cardinalityMax="1"/>
+        </variants>
+        <variants name="USWest">
+          <featureCardinality cardinalityMax="1"/>
+        </variants>
+      </subFeatures>
+      <subFeatures name="PricingModel">
+        <subFeatures name="PerHour">
+          <featureCardinality cardinalityMin="1" cardinalityMax="1"/>
+        </subFeatures>
+        <featureCardinality cardinalityMin="1" cardinalityMax="1"/>
+      </subFeatures>
+      <subFeatures name="Services">
+        <subFeatures name="AmazonVPC">
+          <subFeatures name="VPNConnection">
+            <featureCardinality cardinalityMax="1"/>
+          </subFeatures>
+          <featureCardinality cardinalityMax="1"/>
+        </subFeatures>
+        <featureCardinality cardinalityMax="1"/>
+      </subFeatures>
+      <featureCardinality cardinalityMin="1" cardinalityMax="1"/>
+    </rootFeature>
+  </providerModels>
+  <typeModels name="AmazonEC2Type">
+    <dataTypes xsi:type="type:Enumeration" name="VMTypeEnum">
+      <values name="S"/>
+      <values name="M" value="1"/>
+      <values name="L" value="2"/>
+      <values name="XL" value="3"/>
+    </dataTypes>
+    <dataTypes xsi:type="type:Enumeration" name="VMOSEnum">
+      <values name="Ubuntu"/>
+      <values name="Windows_Server" value="1"/>
+      <values name="Red_Hat_Enterprise" value="2"/>
+      <values name="Linux" value="3"/>
+    </dataTypes>
+    <dataTypes xsi:type="type:List" name="VMMemoryList">
+      <values xsi:type="type:IntegerValue" value="2"/>
+      <values xsi:type="type:IntegerValue" value="4"/>
+      <values xsi:type="type:IntegerValue" value="8"/>
+      <values xsi:type="type:IntegerValue" value="15"/>
+    </dataTypes>
+    <dataTypes xsi:type="type:List" name="VMStorageList">
+      <values xsi:type="type:IntegerValue" value="80"/>
+      <values xsi:type="type:IntegerValue" value="160"/>
+      <values xsi:type="type:IntegerValue" value="410"/>
+      <values xsi:type="type:IntegerValue" value="840"/>
+      <values xsi:type="type:IntegerValue" value="1680"/>
+    </dataTypes>
+    <dataTypes xsi:type="type:List" name="VMCoresList">
+      <values xsi:type="type:IntegerValue" value="1"/>
+      <values xsi:type="type:IntegerValue" value="2"/>
+      <values xsi:type="type:IntegerValue" value="4"/>
+      <values xsi:type="type:IntegerValue" value="8"/>
+      <values xsi:type="type:IntegerValue" value="16"/>
+      <values xsi:type="type:IntegerValue" value="32"/>
+    </dataTypes>
+    <dataTypes xsi:type="type:StringValueType" name="StringValueType" primitiveType="StringType"/>
+  </typeModels>
+</camel:CamelModel>

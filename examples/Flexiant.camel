@@ -1,0 +1,345 @@
+camel model FlexiantModel {
+
+location model FlexiantLocation {
+	country UK {
+		name: 'United Kingdom'
+	}
+}
+
+organisation model FlexiantOrganisation {
+	provider Flexiant {
+		www: 'www.flexiant.com'
+		postal address: 'Flexiant Limited, Geddes House, Kirkton North, Livingston, EH54 6GU, UK'
+		email: 'contact@flexiant.com'
+		public
+		IaaS
+		provider model: FlexiantModel.FlexiantProvider
+	}
+	data centre FlexiantDataCentre {
+		code name: flexiant location: FlexiantLocation.UK
+	}
+	security level: LOW
+}
+
+provider model FlexiantProvider {
+	constraints {
+		implies LOWEST_VM_Constraint_Mapping {
+			from: FlexiantModel.FlexiantProvider.Flexiant.VM
+			to: FlexiantModel.FlexiantProvider.Flexiant.VM attribute constraints {
+				attribute constraint {
+					from: FlexiantModel.FlexiantProvider.Flexiant.VM.VMType
+					to: FlexiantModel.FlexiantProvider.Flexiant.VM.VMMemory
+					from value: string value 'LOWEST'
+					to value: int value 512
+				}
+				attribute constraint {
+					from: FlexiantModel.FlexiantProvider.Flexiant.VM.VMType
+					to: FlexiantModel.FlexiantProvider.Flexiant.VM.VMCores
+					from value: string value 'LOWEST'
+					to value: int value 1
+				}
+			}
+		}
+		implies LOWER_VM_Constraint_Mapping {
+			from: FlexiantModel.FlexiantProvider.Flexiant.VM
+			to: FlexiantModel.FlexiantProvider.Flexiant.VM attribute constraints {
+				attribute constraint {
+					from: FlexiantModel.FlexiantProvider.Flexiant.VM.VMType
+					to: FlexiantModel.FlexiantProvider.Flexiant.VM.VMMemory
+					from value: string value 'LOWER'
+					to value: int value 1024
+				}
+				attribute constraint {
+					from: FlexiantModel.FlexiantProvider.Flexiant.VM.VMType
+					to: FlexiantModel.FlexiantProvider.Flexiant.VM.VMCores
+					from value: string value 'LOWER'
+					to value: int value 1
+				}
+			}
+		}
+		implies LOW_VM_Constraint_Mapping {
+			from: FlexiantModel.FlexiantProvider.Flexiant.VM
+			to: FlexiantModel.FlexiantProvider.Flexiant.VM attribute constraints {
+				attribute constraint {
+					from: FlexiantModel.FlexiantProvider.Flexiant.VM.VMType
+					to: FlexiantModel.FlexiantProvider.Flexiant.VM.VMMemory
+					from value: string value 'LOW'
+					to value: int value 2048
+				}
+				attribute constraint {
+					from: FlexiantModel.FlexiantProvider.Flexiant.VM.VMType
+					to: FlexiantModel.FlexiantProvider.Flexiant.VM.VMCores
+					from value: string value 'LOW'
+					to value: int value 1
+				}
+			}
+		}
+		implies MEDIUM_VM_Constraint_Mapping {
+			from: FlexiantModel.FlexiantProvider.Flexiant.VM
+			to: FlexiantModel.FlexiantProvider.Flexiant.VM attribute constraints {
+				attribute constraint {
+					from: FlexiantModel.FlexiantProvider.Flexiant.VM.VMType
+					to: FlexiantModel.FlexiantProvider.Flexiant.VM.VMMemory
+					from value: string value 'MEDIUM'
+					to value: int value 2048
+				}
+				attribute constraint {
+					from: FlexiantModel.FlexiantProvider.Flexiant.VM.VMType
+					to: FlexiantModel.FlexiantProvider.Flexiant.VM.VMCores
+					from value: string value 'MEDIUM'
+					to value: int value 2
+				}
+			}
+		}
+		implies HIGH_VM_Constraint_Mapping {
+			from: FlexiantModel.FlexiantProvider.Flexiant.VM
+			to: FlexiantModel.FlexiantProvider.Flexiant.VM attribute constraints {
+				attribute constraint {
+					from: FlexiantModel.FlexiantProvider.Flexiant.VM.VMType
+					to: FlexiantModel.FlexiantProvider.Flexiant.VM.VMMemory
+					from value: string value 'HIGH'
+					to value: int value 4096
+				}
+				attribute constraint {
+					from: FlexiantModel.FlexiantProvider.Flexiant.VM.VMType
+					to: FlexiantModel.FlexiantProvider.Flexiant.VM.VMCores
+					from value: string value 'HIGH'
+					to value: int value 2
+				}
+			}
+		}
+		implies HIGHER_VM_Constraint_Mapping {
+			from: FlexiantModel.FlexiantProvider.Flexiant.VM
+			to: FlexiantModel.FlexiantProvider.Flexiant.VM attribute constraints {
+				attribute constraint {
+					from: FlexiantModel.FlexiantProvider.Flexiant.VM.VMType
+					to: FlexiantModel.FlexiantProvider.Flexiant.VM.VMMemory
+					from value: string value 'HIGHER'
+					to value: int value 4096
+				}
+				attribute constraint {
+					from: FlexiantModel.FlexiantProvider.Flexiant.VM.VMType
+					to: FlexiantModel.FlexiantProvider.Flexiant.VM.VMCores
+					from value: string value 'HIGHER'
+					to value: int value 3
+				}
+			}
+		}
+		implies HIGHEST_VM_Constraint_Mapping {
+			from: FlexiantModel.FlexiantProvider.Flexiant.VM
+			to: FlexiantModel.FlexiantProvider.Flexiant.VM attribute constraints {
+				attribute constraint {
+					from: FlexiantModel.FlexiantProvider.Flexiant.VM.VMType
+					to: FlexiantModel.FlexiantProvider.Flexiant.VM.VMMemory
+					from value: string value 'HIGHEST'
+					to value: int value 4096
+				}
+				attribute constraint {
+					from: FlexiantModel.FlexiantProvider.Flexiant.VM.VMType
+					to: FlexiantModel.FlexiantProvider.Flexiant.VM.VMCores
+					from value: string value 'HIGHEST'
+					to value: int value 4
+				}
+			}
+		}
+		implies IMAGE1_OS {
+			from: FlexiantModel.FlexiantProvider.Flexiant.VM
+			to: FlexiantModel.FlexiantProvider.Flexiant.VM attribute constraints {
+				attribute constraint {
+					from: FlexiantModel.FlexiantProvider.Flexiant.VM.VMImageId
+					to: FlexiantModel.FlexiantProvider.Flexiant.VM.VMOS
+					from value: 'Image1' : 0
+					to value: 'CentOS_6_2' : 0
+				}
+			}
+		}
+		implies IMAGE2_OS {
+			from: FlexiantModel.FlexiantProvider.Flexiant.VM
+			to: FlexiantModel.FlexiantProvider.Flexiant.VM attribute constraints {
+				attribute constraint {
+					from: FlexiantModel.FlexiantProvider.Flexiant.VM.VMImageId
+					to: FlexiantModel.FlexiantProvider.Flexiant.VM.VMOS
+					from value: 'Image2' : 1
+					to value: 'Ubuntu_12_04' : 1
+				}
+			}
+		}
+		implies IMAGE3_OS {
+			from: FlexiantModel.FlexiantProvider.Flexiant.VM
+			to: FlexiantModel.FlexiantProvider.Flexiant.VM attribute constraints {
+				attribute constraint {
+					from: FlexiantModel.FlexiantProvider.Flexiant.VM.VMImageId
+					to: FlexiantModel.FlexiantProvider.Flexiant.VM.VMOS
+					from value: 'Image3' : 2
+					to value: 'Ubuntu_14_04' : 2
+				}
+			}
+		}
+		implies IMAGE4_OS {
+			from: FlexiantModel.FlexiantProvider.Flexiant.VM
+			to: FlexiantModel.FlexiantProvider.Flexiant.VM attribute constraints {
+				attribute constraint {
+					from: FlexiantModel.FlexiantProvider.Flexiant.VM.VMImageId
+					to: FlexiantModel.FlexiantProvider.Flexiant.VM.VMOS
+					from value: 'Image4' : 3
+					to value: 'Windows_2008_R2' : 2
+				}
+			}
+		}
+	}
+	root feature Flexiant {
+		attributes {
+			attribute DeploymentModel {
+				value: string value 'Public'
+				value type: FlexiantModel.FlexiantType.StringValueType
+			}
+			attribute ServiceModel {
+				value: string value 'IaaS' 
+				value type: FlexiantModel.FlexiantType.StringValueType
+			}
+			attribute Availability {
+				unit type: PERCENTAGE
+				value: string value '99'
+				value type: FlexiantModel.FlexiantType.StringValueType
+			}
+			attribute Driver {
+				value: string value flexiant
+				value type: FlexiantModel.FlexiantType.StringValueType
+			}
+			attribute EndPoint {
+				value: string value 'https://api.sd1.flexiant.net:4442'
+				value type: FlexiantModel.FlexiantType.StringValueType
+			}
+		}
+		sub-features {
+			feature VM {
+				attributes {
+					attribute VMType {
+						value type: FlexiantModel.FlexiantType.VMTypeEnum
+					}
+					attribute VMOS {
+						value type: FlexiantModel.FlexiantType.VMOSEnum
+					}
+					attribute VMImageId {
+						value type: FlexiantModel.FlexiantType.VMImageIdEnum
+					}
+					attribute VMMemory {
+						unit type: MEGABYTES
+						value type: FlexiantModel.FlexiantType.MemoryList
+					}
+					attribute VMStorage {
+						unit type: GIGABYTES
+						value type: FlexiantModel.FlexiantType.StorageRange
+					}
+					attribute VMCores {
+						value type: FlexiantModel.FlexiantType.CoresRange
+					}
+					attribute CostPerHour {
+						value type: FlexiantModel.FlexiantType.CostRange
+					}
+					attribute BecnhmarkRate {
+						value type: FlexiantModel.FlexiantType.BenchmarkRange
+					}
+				}
+				feature cardinality {
+					cardinality: 1 .. 8
+				}
+			}
+			feature Location {
+				sub-features {
+					feature Scotland {
+						feature cardinality {
+							cardinality: 1 .. 1
+						}
+					}
+				}
+				feature cardinality {
+					cardinality: 1 .. 1
+				}
+			}
+		}
+		feature cardinality {
+			cardinality: 1 .. 1
+		}
+	}
+}
+
+type model FlexiantType {
+	enumeration VMTypeEnum {
+		values [ 'LOWEST' : 0,
+		'LOWER' : 1,
+		'LOW' : 2,
+		'MEDIUM' : 3,
+		'HIGH' : 4,
+		'HIGHER' : 5,
+		'HIGHEST' : 6 ]
+	}
+	enumeration VMOSEnum {
+		values [ 'CentOS_6_2' : 0,
+		'Ubuntu_12_04' : 1,
+		'Ubuntu_14_04' : 2,
+		'Windows_2008_R2' : 3 ]
+	}
+	enumeration VMImageIdEnum {
+		values [ 'Image1' : 0,
+		'Image2' : 1,
+		'Image3' : 2,
+		'Image4' : 3 ]
+	}
+	range MemoryRange {
+		primitive type: IntType
+		lower limit {
+			int value 512 included
+		}
+		upper limit {
+			int value 4096 included
+		}
+	}
+	range StorageRange {
+		primitive type: IntType
+		lower limit {
+			int value 1 included
+		}
+		upper limit {
+			int value 1000 included
+		}
+	}
+	range CoresRange {
+		primitive type: IntType
+		lower limit {
+			int value 1 included
+		}
+		upper limit {
+			int value 4 included
+		}
+	}
+	range CostRange {
+		primitive type: DoubleType
+		lower limit {
+			double value 0.084 included
+		}
+		upper limit {
+			double value 0.144 included
+		}
+	}
+	range BenchmarkRange {
+		primitive type: DoubleType
+		lower limit {
+			double value 0.0 included
+		}
+		upper limit {
+			double value 0.0 included
+		}
+	}
+	string value type StringValueType {
+		primitive type: StringType
+	}
+	list MemoryList {
+		values [ int value 512,
+		int value 1024,
+		int value 2048,
+		int value 4096 ]
+	}
+}
+
+}

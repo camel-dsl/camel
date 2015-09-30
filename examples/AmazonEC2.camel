@@ -1,0 +1,260 @@
+camel model AmazonEC2Model {
+
+location model AmazonEC2Location {
+	country EU {
+		name: 'EU'
+	}
+	country USEast {
+		name: 'US East'
+	}
+	country USWest {
+		name: 'US West'
+	}
+}
+
+organisation model AmazonEC2Organisation {
+	provider AmazonEC2 {
+		www: 'aws.amazon.com/ec2‎'
+		email: 'info@amazon.com'
+		public
+		IaaS
+		provider model: AmazonEC2Model.AmazonEC2Provider
+	}
+	data centre AmazonEC2DataCentreEU {
+		code name: 'amazoneu'
+		location: AmazonEC2Location.EU
+	}
+	data centre AmazonEC2DataCentreUSEast {
+		code name: 'amazonuseast'
+		location: AmazonEC2Location.USEast
+	}
+	data centre AmazonEC2DataCentreUSWest {
+		code name: 'amazonuswest'
+		location: AmazonEC2Location.USWest
+	}
+	security level: LOW
+}
+
+provider model AmazonEC2Provider {
+	constraints {
+		implies S_VM_Constraint_Mapping {
+			from: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM
+			to: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM
+			attribute constraints {
+				attribute constraint {
+					from: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM.VMType
+					to: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM.VMMemory
+					from value: string value 'S'
+					to value: int value 2
+				}
+				attribute constraint {
+					from: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM.VMType
+					to: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM.VMCores
+					from value: string value 'S'
+					to value: int value 1
+				}
+				attribute constraint {
+					from: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM.VMType
+					to: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM.VMStorage
+					from value: string value 'S'
+					to value: int value 160
+				}
+			}
+		}
+		implies M_VM_Constraint_Mapping{
+			from: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM
+			to: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM
+			attribute constraints {
+				attribute constraint {
+					from: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM.VMType
+					to: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM.VMMemory
+					from value: string value 'M'
+					to value: int value 4
+				}
+				attribute constraint {
+					from: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM.VMType
+					to: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM.VMCores
+					from value: string value 'M'
+					to value: int value 1
+				}
+				attribute constraint {
+					from: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM.VMType
+					to: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM.VMStorage
+					from value: string value 'M'
+					to value: int value 410
+				}
+			}
+		}
+		implies L_VM_Constraint_Mapping {
+			from: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM
+			to: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM
+			attribute constraints {
+				attribute constraint {
+					from: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM.VMType
+					to: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM.VMMemory
+					from value: string value 'L'
+					to value: int value 8
+				}
+				attribute constraint {
+					from: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM.VMType
+					to: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM.VMCores
+					from value: string value 'L'
+					to value: int value 2
+				}
+				attribute constraint {
+					from: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM.VMType
+					to: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM.VMStorage
+					from value: string value 'L'
+					to value: int value 840
+				}
+			}
+		}
+		implies XL_VM_Constraint_Mapping {
+			from: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM
+			to: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM
+			attribute constraints {
+				attribute constraint {
+					from: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM.VMType
+					to: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM.VMMemory
+					from value: string value 'XL'
+					to value: int value 15
+				}
+				attribute constraint {
+					from: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM.VMType
+					to: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM.VMCores
+					from value: string value 'XL'
+					to value: int value 4
+				}
+				attribute constraint {
+					from: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM.VMType
+					to: AmazonEC2Model.AmazonEC2Provider.AmazonEC2.VM.VMStorage
+					from value: string value 'XL'
+					to value: int value 1680
+				}
+			}
+		}
+	}
+	root feature AmazonEC2 {
+		attributes {
+			attribute DeploymentModel {
+				value: string value 'Public'
+			}
+			attribute ServiceModel {
+				value: string value 'IaaS'
+			}
+			attribute Driver {
+				value: string value 'ec2'
+				value type: AmazonEC2Model.AmazonEC2Type.StringValueType
+			}
+		}
+		sub-features {
+			feature VM{
+				attributes {
+					attribute VMType {
+						value type: AmazonEC2Model.AmazonEC2Type.VMTypeEnum
+					}
+					attribute VMOS {
+						value type: AmazonEC2Model.AmazonEC2Type.VMOSEnum
+					}
+					attribute VMMemory {
+						value type: AmazonEC2Model.AmazonEC2Type.VMMemoryList
+					}
+					attribute VMStorage {
+						value type: AmazonEC2Model.AmazonEC2Type.VMStorageList
+					}
+					attribute VMCores {
+						value type: AmazonEC2Model.AmazonEC2Type.VMCoresList
+					}
+				}
+				feature cardinality {
+					cardinality: 1..100
+				}
+			}
+			exclusive Location {
+				feature cardinality {
+					cardinality: 1..1
+				}
+				group cardinality {
+					cardinality: 1..1
+				}
+				variants {
+					feature EU {
+						feature cardinality {
+							cardinality: 0..1
+						}
+					}
+					feature USEast {
+						feature cardinality {
+							cardinality: 0..1
+						}
+					}
+					feature USWest {
+						feature cardinality {
+							cardinality: 0..1
+						}
+					}
+				}
+			}
+			feature PricingModel {
+				sub-features {
+					feature PerHour {
+						feature cardinality {
+							cardinality: 1..1
+						}
+					}
+				}
+				feature cardinality {
+					cardinality: 1..1
+				}
+			}
+			feature Services {
+				sub-features {
+					feature AmazonVPC {
+						sub-features {
+							feature VPNConnection {
+								feature cardinality {
+									cardinality: 0..1
+								}
+							}
+						}
+						feature cardinality {
+							cardinality: 0..1
+						}
+					}
+				}
+				feature cardinality {
+					cardinality: 0..1
+				}
+			}
+		}
+		feature cardinality {
+			cardinality: 1..1
+		}
+	}
+}
+
+type model AmazonEC2Type {
+	enumeration VMTypeEnum {
+		values ['S': 0, 'M': 1, 'L': 2, 'XL': 3]
+	}
+	enumeration VMOSEnum {
+		values ['Ubuntu': 0, 'Windows_Server': 1, 'Red_Hat_Enterprise': 2, 'Linux': 3]
+	}
+	list VMMemoryList {
+		primitive type: IntType
+		values [int value 2, int value 4, int value 8, int value 15]
+	}
+	list VMStorageList {
+		primitive type: IntType
+		values [int value 80, int value 160, int value 410, int value 840, int value 1680]
+	}
+	list VMCoresList {
+		primitive type: IntType
+		values [int value 1, int value 2, int value 4, int value 8, int value 16, int value 32]
+	}
+	string value type StringValueType {
+		primitive type: StringType
+	}
+}
+
+}

@@ -1,0 +1,553 @@
+camel model GWDGModel {
+
+location model GWDGLocation {
+	country DE {
+		name: Germany
+	}
+}
+
+organisation model GWDGOrganisation {
+	provider GWDG {
+		www: 'www.gwdg.de'
+		postal address: 'GWDG, Am Faßberg 11, 37077 Göttingen, Germany'
+		email: 'gwdg@gwdg.de'
+		public
+		IaaS
+		provider model: GWDGModel.GWDGProvider
+	}
+	data centre GWDGDataCentre {
+		code name: gwdg location: GWDGLocation.DE
+	}
+	security level: LOW
+}
+
+provider model GWDGProvider {
+	constraints {
+		implies M1_MICRO_VM_Constraint_Mapping {
+			from: GWDGModel.GWDGProvider.GWDG.VM
+			to: GWDGModel.GWDGProvider.GWDG.VM
+			attribute constraints {
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'M1.MICRO'
+					to value: int value 256
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'M1.MICRO'
+					to value: int value 1
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'M1.MICRO'
+					to value: int value 0
+				}
+			}
+		}
+		implies M1_TINY_VM_Constraint_Mapping {
+			from: GWDGModel.GWDGProvider.GWDG.VM
+			to: GWDGModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'M1.TINY'
+					to value: int value 512
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'M1.TINY'
+					to value: int value 1
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'M1.TINY'
+					to value: int value 0
+				}
+			}
+		}
+		implies M1_SMALL_VM_Constraint_Mapping {
+			from: GWDGModel.GWDGProvider.GWDG.VM
+			to: GWDGModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'M1.SMALL'
+					to value: int value 2048
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'M1.SMALL'
+					to value: int value 1
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'M1.SMALL'
+					to value: int value 20
+				}
+			}
+		}
+		implies M1_MEDIUM_VM_Constraint_Mapping {
+			from: GWDGModel.GWDGProvider.GWDG.VM
+			to: GWDGModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'M1.MEDIUM'
+					to value: int value 4096
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'M1.MEDIUM'
+					to value: int value 2
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'M1.MEDIUM'
+					to value: int value 40
+				}
+			}
+		}
+		implies M1_LARGE_VM_Constraint_Mapping {
+			from: GWDGModel.GWDGProvider.GWDG.VM
+			to: GWDGModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'M1.LARGE'
+					to value: int value 8192
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'M1.LARGE'
+					to value: int value 4
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'M1.LARGE'
+					to value: int value 80
+				}
+			}
+		}
+		implies M1_XLARGE_VM_Constraint_Mapping {
+			from: GWDGModel.GWDGProvider.GWDG.VM
+			to: GWDGModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'M1.XLARGE'
+					to value: int value 16384
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'M1.XLARGE'
+					to value: int value 8
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'M1.XLARGE'
+					to value: int value 160
+				}
+			}
+		}
+		implies M1_XXLARGE_VM_Constraint_Mapping {
+			from: GWDGModel.GWDGProvider.GWDG.VM
+			to: GWDGModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'M1.XXLARGE'
+					to value: int value 32768
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'M1.XXLARGE'
+					to value: int value 8
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'M1.XXLARGE'
+					to value: int value 160
+				}
+			}
+		}
+		implies M2_SMALL_VM_Constraint_Mapping {
+			from: GWDGModel.GWDGProvider.GWDG.VM
+			to: GWDGModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'M2.SMALL'
+					to value: int value 4096
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'M2.SMALL'
+					to value: int value 1
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'M2.SMALL'
+					to value: int value 20
+				}
+			}
+		}
+		implies M2_MEDIUM_VM_Constraint_Mapping {
+			from: GWDGModel.GWDGProvider.GWDG.VM
+			to: GWDGModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'M2.MEDIUM'
+					to value: int value 8192
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'M2.MEDIUM'
+					to value: int value 2
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'M2.MEDIUM'
+					to value: int value 40
+				}
+			}
+		}
+		implies M2_LARGE_VM_Constraint_Mapping {
+			from: GWDGModel.GWDGProvider.GWDG.VM
+			to: GWDGModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'M2.LARGE'
+					to value: int value 16384
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'M2.LARGE'
+					to value: int value 4
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'M2.LARGE'
+					to value: int value 80
+				}
+			}
+		}
+		implies M2_XLARGE_VM_Constraint_Mapping {
+			from: GWDGModel.GWDGProvider.GWDG.VM
+			to: GWDGModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'M2.XLARGE'
+					to value: int value 32768
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'M2.XLARGE'
+					to value: int value 4
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'M2.XLARGE'
+					to value: int value 160
+				}
+			}
+		}
+		implies C1_SMALL_VM_Constraint_Mapping {
+			from: GWDGModel.GWDGProvider.GWDG.VM
+			to: GWDGModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'C1.SMALL'
+					to value: int value 2048
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'C1.SMALL'
+					to value: int value 2
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'C1.SMALL'
+					to value: int value 20
+				}
+			}
+		}
+		implies C1_MEDIUM_VM_Constraint_Mapping {
+			from: GWDGModel.GWDGProvider.GWDG.VM
+			to: GWDGModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'C1.MEDIUM'
+					to value: int value 4096
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'C1.MEDIUM'
+					to value: int value 4
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'C1.MEDIUM'
+					to value: int value 40
+				}
+			}
+		}
+		implies C1_LARGE_VM_Constraint_Mapping {
+			from: GWDGModel.GWDGProvider.GWDG.VM
+			to: GWDGModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'C1.LARGE'
+					to value: int value 8192
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'C1.LARGE'
+					to value: int value 8
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'C1.LARGE'
+					to value: int value 80
+				}
+			}
+		}
+		implies C1_XLARGE_VM_Constraint_Mapping {
+			from: GWDGModel.GWDGProvider.GWDG.VM
+			to: GWDGModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'C1.XLARGE'
+					to value: int value 16384
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'C1.XLARGE'
+					to value: int value 16
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'C1.XLARGE'
+					to value: int value 160
+				}
+			}
+		}
+		implies C1_XXLARGE_VM_Constraint_Mapping {
+			from: GWDGModel.GWDGProvider.GWDG.VM
+			to: GWDGModel.GWDGProvider.GWDG.VM attribute constraints {
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMMemory
+					from value: string value 'C1.XXLARGE'
+					to value: int value 32768
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMCores
+					from value: string value 'C1.XXLARGE'
+					to value: int value 16
+				}
+				attribute constraint {
+					from: GWDGModel.GWDGProvider.GWDG.VM.VMType
+					to: GWDGModel.GWDGProvider.GWDG.VM.VMStorage
+					from value: string value 'C1.XXLARGE'
+					to value: int value 160
+				}
+			}
+		}
+	}
+	root feature GWDG {
+		attributes {
+			attribute DeploymentModel {
+				value: string value 'Private'
+				value type: GWDGModel.GWDGType.StringValueType
+			}
+			attribute ServiceModel {
+				value: string value 'IaaS'
+				value type: GWDGModel.GWDGType.StringValueType
+			}
+			attribute Availability {
+				unit type: PERCENTAGE
+				value: string value '95'
+				value type: GWDGModel.GWDGType.StringValueType
+			}
+			attribute Driver {
+				value: string value 'openstack-nova'
+				value type: GWDGModel.GWDGType.StringValueType
+			}
+			attribute EndPoint {
+				value: string value 'https://api.cloud.gwdg.de:5000/v2.0/'
+				value type: GWDGModel.GWDGType.StringValueType
+			}
+			attribute ProviderID {
+				value: string value 'RegionOne'
+				value type: GWDGModel.GWDGType.StringValueType
+			}
+		}
+		sub-features {
+			feature VM {
+				attributes {
+					attribute VMType {
+						value type: GWDGModel.GWDGType.VMTypeEnum
+					}
+					attribute VMOS {
+						value type: GWDGModel.GWDGType.VMOsEnum
+					}
+					attribute VMMemory {
+						unit type: MEGABYTES value type: GWDGModel.GWDGType.MemoryList
+					}
+					attribute VMStorage {
+						unit type: GIGABYTES value type: GWDGModel.GWDGType.StorageList
+					}
+					attribute VMCores {
+						value type: GWDGModel.GWDGType.CoresList
+					}
+				}
+				feature cardinality {
+					cardinality: 1 .. 8
+				}
+			}
+			feature Location {
+				sub-features {
+					feature Germany {
+						feature cardinality {
+							cardinality: 1 .. 1
+						}
+					}
+				}
+				feature cardinality {
+					cardinality: 1 .. 1
+				}
+			}
+		}
+		feature cardinality {
+			cardinality: 1 .. 1
+		}
+	}
+}
+
+type model GWDGType {
+	enumeration VMTypeEnum {
+		values [ 'M1.MICRO' : 0,
+		'M1.TINY' : 1,
+		'M1.SMALL' : 2,
+		'M1.MEDIUM' : 3,
+		'M1.LARGE' : 4,
+		'M1.XLARGE' : 5,
+		'M1.XXLARGE' : 6,
+		'M2.SMALL' : 7,
+		'M2.MEDIUM' : 8,
+		'M2.LARGE' : 9,
+		'M2.XLARGE' : 10,
+		'C1.SMALL' : 11,
+		'C1.MEDIUM' : 12,
+		'C1.LARGE' : 13,
+		'C1.XLARGE' : 14,
+		'C1.XXLARGE' : 15 ]
+	}
+	enumeration VMOsEnum {
+		values [ 'Fedora 20 server x86_64' : 0,
+		'Ubuntu 14.04 LTS Server x86_64' : 1,
+		'Debian 7.6.0 Server x86_64' : 2,
+		'Scientific Linux 6.5 Server x86_64' : 3,
+		'openSUSE 13.1 Server x86_64' : 4,
+		'CentOS 6.5 Server x86_64' : 5,
+		'Ubuntu 13.10 Desktop Unity x86_64' : 6,
+		'Fedora 20 Desktop Gnome x86_64' : 7,
+		'openSUSE 13.1 Desktop Gnome x86_64' : 8,
+		'Fedora 20 Desktop KDE x86_64' : 9,
+		'openSUSE 13.1 Desktop KDE x86_64' : 10 ]
+	}
+	range MemoryRange {
+		primitive type: IntType
+		lower limit {
+			int value 256 included
+		}
+		upper limit {
+			int value 32768 included
+		}
+	}
+	range StorageRange {
+		primitive type: IntType
+		lower limit {
+			int value 0 included
+		}
+		upper limit {
+			int value 160 included
+		}
+	}
+	range CoresRange {
+		primitive type: IntType
+		lower limit {
+			int value 1 included
+		}
+		upper limit {
+			int value 16 included
+		}
+	}
+	string value type StringValueType {
+		primitive type: StringType
+	}
+	list StorageList {
+		values [ int value 0,
+		int value 20,
+		int value 40,
+		int value 80,
+		int value 160 ]
+	}
+	list MemoryList {
+		values [ int value 256,
+		int value 512,
+		int value 2048,
+		int value 4096,
+		int value 8192,
+		int value 16384,
+		int value 32768 ]
+	}
+	list CoresList {
+		values [ int value 1,
+		int value 2,
+		int value 4,
+		int value 8,
+		int value 16 ]
+	}
+}
+
+}
