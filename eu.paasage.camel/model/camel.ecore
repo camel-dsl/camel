@@ -351,8 +351,8 @@
           iD="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="action" lowerBound="1"
           eType="#//Action"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="startedOn" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="endedOn" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="startTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="endTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="lowLevelActions" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ExecutionContext">
@@ -409,7 +409,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="rawData" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="reportedOn" lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="measurementTime" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="slo" eType="#//requirement/ServiceLevelObjective"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="eventInstance" eType="#//scalability/EventInstance"/>
@@ -437,7 +437,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="internalComponentInstance"
           lowerBound="1" eType="#//deployment/InternalComponentInstance"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ResourceCouplingMeasurement" eSuperTypes="#//execution/Measurement">
+    <eClassifiers xsi:type="ecore:EClass" name="CommunicationMeasurement" eSuperTypes="#//execution/Measurement">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
         <details key="constraints" value="resource_coupling_measurement_diff_vm_instances"/>
       </eAnnotations>
@@ -449,7 +449,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="destinationVMInstance"
           lowerBound="1" eType="#//deployment/VMInstance"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ResourceMeasurement" eSuperTypes="#//execution/Measurement">
+    <eClassifiers xsi:type="ecore:EClass" name="VMMeasurement" eSuperTypes="#//execution/Measurement">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
         <details key="constraints" value="resource_measurement_ec_deployment_model_vm_instance resource_measurement_metric_vm_instance"/>
       </eAnnotations>
@@ -498,7 +498,7 @@
           upperBound="-1" eType="#//scalability/EventInstance"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="actionRealisations" lowerBound="1"
           upperBound="-1" eType="#//execution/ActionRealisation"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="firedOn" lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="trigerringTime" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="executionContext" lowerBound="1"
           eType="#//execution/ExecutionContext"/>
@@ -602,7 +602,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="MetricInstance" abstract="true">
       <eOperations name="checkRecursiveness" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="System.out.println(&quot;Checking recursiveness for MetricInstance: &quot; + m1.getName());&#xA;&#x9;&#x9;CompositeMetricInstance cmi = (CompositeMetricInstance)m1;&#xA;&#x9;&#x9;for (MetricInstance m: cmi.getComposingMetricInstances()){&#xA;&#x9;&#x9;&#x9;if (m.getName().equals(m2.getName())) return Boolean.TRUE;&#xA;&#x9;&#x9;&#x9;if (m instanceof CompositeMetricInstance &amp;&amp; checkRecursiveness(m,m2)) return Boolean.TRUE;&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;return Boolean.FALSE;"/>
+          <details key="body" value="System.out.println(&quot;Checking recursiveness for MetricInstance: &quot; + m1.getName());&#xA;&#x9;&#x9;eu.paasage.camel.metric.CompositeMetricInstance cmi = (eu.paasage.camel.metric.CompositeMetricInstance)m1;&#xA;&#x9;&#x9;for (eu.paasage.camel.metric.MetricInstance m: cmi.getComposingMetricInstances()){&#xA;&#x9;&#x9;&#x9;if (m.getName().equals(m2.getName())) return Boolean.TRUE;&#xA;&#x9;&#x9;&#x9;if (m instanceof eu.paasage.camel.metric.CompositeMetricInstance &amp;&amp; checkRecursiveness(m,m2)) return Boolean.TRUE;&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;return Boolean.FALSE;"/>
         </eAnnotations>
         <eParameters name="m1" eType="#//metric/MetricInstance"/>
         <eParameters name="m2" eType="#//metric/MetricInstance"/>
@@ -688,7 +688,7 @@
       </eAnnotations>
       <eOperations name="checkRecursiveness" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="System.out.println(&quot;Checking recursiveness for Metric: &quot; + mt1.getName());&#xA;&#x9;&#x9;CompositeMetric m1 = (CompositeMetric)mt1;&#xA;&#x9;&#x9;for (eu.paasage.camel.metric.MetricFormulaParameter param: m1.getFormula().getParameters()){&#xA;&#x9;&#x9;&#x9;if (param instanceof Metric){&#xA;&#x9;&#x9;&#x9;&#x9;Metric mt = (Metric)param;&#xA;&#x9;&#x9;&#x9;&#x9;if (mt.getName().equals(mt2.getName())) return Boolean.TRUE;&#xA;&#x9;&#x9;&#x9;&#x9;if (mt instanceof CompositeMetric &amp;&amp; checkRecursiveness(mt,mt2)) return Boolean.TRUE;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;return Boolean.FALSE;"/>
+          <details key="body" value="System.out.println(&quot;Checking recursiveness for Metric: &quot; + mt1.getName());&#xA;&#x9;&#x9;eu.paasage.camel.metric.CompositeMetric m1 = (eu.paasage.camel.metric.CompositeMetric)mt1;&#xA;&#x9;&#x9;for (eu.paasage.camel.metric.MetricFormulaParameter param: m1.getFormula().getParameters()){&#xA;&#x9;&#x9;&#x9;if (param instanceof eu.paasage.camel.metric.Metric){&#xA;&#x9;&#x9;&#x9;&#x9;eu.paasage.camel.metric.Metric mt = (eu.paasage.camel.metric.Metric)param;&#xA;&#x9;&#x9;&#x9;&#x9;if (mt.getName().equals(mt2.getName())) return Boolean.TRUE;&#xA;&#x9;&#x9;&#x9;&#x9;if (mt instanceof eu.paasage.camel.metric.CompositeMetric &amp;&amp; checkRecursiveness(mt,mt2)) return Boolean.TRUE;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;return Boolean.FALSE;"/>
         </eAnnotations>
         <eParameters name="mt1" eType="#//metric/Metric"/>
         <eParameters name="mt2" eType="#//metric/Metric"/>

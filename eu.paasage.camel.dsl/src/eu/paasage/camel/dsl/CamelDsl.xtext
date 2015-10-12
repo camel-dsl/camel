@@ -219,8 +219,8 @@ ActionRealisation returns execution::ActionRealisation:
     'action realisation ' name = ID '{'
         'action: ' action = [camel::Action | Fqn]
         ('low level actions: ' lowLevelActions = EString)?
-        ('started on: ' startedOn = EDate)?
-        ('ended on: ' endedOn = EDate)?
+        ('start time: ' startTime = EDate)?
+        ('end time: ' endTime = EDate)?
     '}';
 
 ExecutionContext returns execution::ExecutionContext:
@@ -235,8 +235,8 @@ ExecutionContext returns execution::ExecutionContext:
     '}';
 
 Measurement returns execution::Measurement:
-    ApplicationMeasurement | InternalComponentMeasurement | ResourceMeasurement |
-    ResourceCouplingMeasurement
+    ApplicationMeasurement | InternalComponentMeasurement | VMMeasurement |
+    CommunicationMeasurement
 ;
 
 ApplicationMeasurement returns execution::ApplicationMeasurement:
@@ -245,7 +245,7 @@ ApplicationMeasurement returns execution::ApplicationMeasurement:
         'value: ' value = EDouble
         ('raw data: ' rawData = EString)?
         ('event instance: ' eventInstance = [scalability::EventInstance | Fqn])?
-        'reportedOn: ' reportedOn = EDate
+        'measurement time: ' measurementTime = EDate
         'execution context: ' executionContext = [execution::ExecutionContext | Fqn]
         'metric instance: ' metricInstance = [metric::MetricInstance | Fqn]
         ('slo: ' slo = [requirement::ServiceLevelObjective | Fqn])?
@@ -257,32 +257,32 @@ InternalComponentMeasurement returns execution::InternalComponentMeasurement:
         'value: ' value = EDouble
         ('raw data: ' rawData = EString)?
         ('event instance: ' eventInstance = [scalability::EventInstance | Fqn])?
-        'reported on: ' reportedOn = EDate
+        'measurement time: ' measurementTime = EDate
         'execution context: ' executionContext = [execution::ExecutionContext | Fqn]
         'metric instance: ' metricInstance = [metric::MetricInstance | Fqn]
         ('slo: ' slo = [requirement::ServiceLevelObjective | Fqn])?
     '}';
 
-ResourceCouplingMeasurement returns execution::ResourceCouplingMeasurement:
+CommunicationMeasurement returns execution::CommunicationMeasurement:
     'resource coupling measurement' name = ID '{'
         'source vm instance: ' sourceVMInstance = [deployment::VMInstance | Fqn]
         'destination vm instance: ' destinationVMInstance = [deployment::VMInstance | Fqn]
         'value: ' value = EDouble
         ('raw data: ' rawData = EString)?
         ('event instance: ' eventInstance = [scalability::EventInstance | Fqn])?
-        'reported on: ' reportedOn = EDate
+        'measurement time: ' measurementTime = EDate
         'execution context: ' executionContext = [execution::ExecutionContext | Fqn]
         'metric instance: ' metricInstance = [metric::MetricInstance | Fqn]
         ('slo: ' slo = [requirement::ServiceLevelObjective | Fqn])?
     '}';
 
-ResourceMeasurement returns execution::ResourceMeasurement:
-    'resource measurement ' name = ID '{'
+VMMeasurement returns execution::VMMeasurement:
+    'vm measurement ' name = ID '{'
         'vm instance: ' vmInstance = [deployment::VMInstance | Fqn]
         'value: ' value = EDouble
         ('raw data: ' rawData = EString)?
         ('event instance: ' eventInstance = [scalability::EventInstance | Fqn])?
-        'reported on: ' reportedOn = EDate
+        'measurement time: ' measurementTime = EDate
         'execution context: ' executionContext = [execution::ExecutionContext | Fqn]
         'metric instance: ' metricInstance = [metric::MetricInstance | Fqn]
         ('slo: ' slo = [requirement::ServiceLevelObjective | Fqn])?
@@ -300,7 +300,7 @@ SLOAssessment returns execution::SLOAssessment:
 RuleTrigger returns execution::RuleTrigger:
     'rule trigger ' name = ID '{'
         'rule: ' scalabilityRule = [scalability::ScalabilityRule | Fqn]
-        'fired on: ' firedOn = EDate
+        'triggering time: ' trigerringTime = EDate
         'action realisations: ' '(' actionRealisations += [execution::ActionRealisation | Fqn] (',' actionRealisations += [execution::ActionRealisation | Fqn])* ')'
         'execution context: ' executionContext = [execution::ExecutionContext | Fqn]
         'event instances: ' '(' eventInstances += [scalability::EventInstance | Fqn] (',' eventInstances += [scalability::EventInstance | Fqn])* ')'
