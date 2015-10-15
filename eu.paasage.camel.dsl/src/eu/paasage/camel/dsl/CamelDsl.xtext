@@ -672,9 +672,9 @@ UserGroup returns organisation::UserGroup:
 
 RoleAssignment returns organisation::RoleAssignment:
     'role assignment ' name = ID '{'
-        ('start: ' start = EDate)?
-        ('end: ' end = EDate)?
-        'assigned on: ' assignedOn = EDate
+        ('start: ' startTime = EDate)?
+        ('end: ' endTime = EDate)?
+        'assigned on: ' assignmentTime = EDate
         ('user: ' user = [organisation::User | Fqn])?
         'role: ' role = [organisation::Role | Fqn]
         ('user group: ' userGroup = [organisation::UserGroup | Fqn])?
@@ -685,8 +685,8 @@ Role returns organisation::Role:
 
 Permission returns organisation::Permission:
     'permission ' name=ID '{'
-        'start: ' start = EDate
-        ('end: ' end = EDate)?
+        'start: ' startTime = EDate
+        ('end: ' endTime = EDate)?
         'role: ' role = [organisation::Role | Fqn]
         'resource filter: ' resourceFilter = [organisation::ResourceFilter | Fqn]
         'action: ' action = ActionType

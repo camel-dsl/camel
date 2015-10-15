@@ -23058,7 +23058,7 @@ public class InternalCamelDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRoleAssignment"
-    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9880:1: ruleRoleAssignment returns [EObject current=null] : (otherlv_0= 'role assignment ' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'start: ' ( (lv_start_4_0= ruleEDate ) ) )? (otherlv_5= 'end: ' ( (lv_end_6_0= ruleEDate ) ) )? otherlv_7= 'assigned on: ' ( (lv_assignedOn_8_0= ruleEDate ) ) (otherlv_9= 'user: ' ( ( ruleFqn ) ) )? otherlv_11= 'role: ' ( ( ruleFqn ) ) (otherlv_13= 'user group: ' ( ( ruleFqn ) ) )? otherlv_15= '}' ) ;
+    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9880:1: ruleRoleAssignment returns [EObject current=null] : (otherlv_0= 'role assignment ' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'start: ' ( (lv_startTime_4_0= ruleEDate ) ) )? (otherlv_5= 'end: ' ( (lv_endTime_6_0= ruleEDate ) ) )? otherlv_7= 'assigned on: ' ( (lv_assignmentTime_8_0= ruleEDate ) ) (otherlv_9= 'user: ' ( ( ruleFqn ) ) )? otherlv_11= 'role: ' ( ( ruleFqn ) ) (otherlv_13= 'user group: ' ( ( ruleFqn ) ) )? otherlv_15= '}' ) ;
     public final EObject ruleRoleAssignment() throws RecognitionException {
         EObject current = null;
 
@@ -23072,21 +23072,21 @@ public class InternalCamelDslParser extends AbstractInternalAntlrParser {
         Token otherlv_11=null;
         Token otherlv_13=null;
         Token otherlv_15=null;
-        AntlrDatatypeRuleToken lv_start_4_0 = null;
+        AntlrDatatypeRuleToken lv_startTime_4_0 = null;
 
-        AntlrDatatypeRuleToken lv_end_6_0 = null;
+        AntlrDatatypeRuleToken lv_endTime_6_0 = null;
 
-        AntlrDatatypeRuleToken lv_assignedOn_8_0 = null;
+        AntlrDatatypeRuleToken lv_assignmentTime_8_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9883:28: ( (otherlv_0= 'role assignment ' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'start: ' ( (lv_start_4_0= ruleEDate ) ) )? (otherlv_5= 'end: ' ( (lv_end_6_0= ruleEDate ) ) )? otherlv_7= 'assigned on: ' ( (lv_assignedOn_8_0= ruleEDate ) ) (otherlv_9= 'user: ' ( ( ruleFqn ) ) )? otherlv_11= 'role: ' ( ( ruleFqn ) ) (otherlv_13= 'user group: ' ( ( ruleFqn ) ) )? otherlv_15= '}' ) )
-            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9884:1: (otherlv_0= 'role assignment ' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'start: ' ( (lv_start_4_0= ruleEDate ) ) )? (otherlv_5= 'end: ' ( (lv_end_6_0= ruleEDate ) ) )? otherlv_7= 'assigned on: ' ( (lv_assignedOn_8_0= ruleEDate ) ) (otherlv_9= 'user: ' ( ( ruleFqn ) ) )? otherlv_11= 'role: ' ( ( ruleFqn ) ) (otherlv_13= 'user group: ' ( ( ruleFqn ) ) )? otherlv_15= '}' )
+            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9883:28: ( (otherlv_0= 'role assignment ' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'start: ' ( (lv_startTime_4_0= ruleEDate ) ) )? (otherlv_5= 'end: ' ( (lv_endTime_6_0= ruleEDate ) ) )? otherlv_7= 'assigned on: ' ( (lv_assignmentTime_8_0= ruleEDate ) ) (otherlv_9= 'user: ' ( ( ruleFqn ) ) )? otherlv_11= 'role: ' ( ( ruleFqn ) ) (otherlv_13= 'user group: ' ( ( ruleFqn ) ) )? otherlv_15= '}' ) )
+            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9884:1: (otherlv_0= 'role assignment ' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'start: ' ( (lv_startTime_4_0= ruleEDate ) ) )? (otherlv_5= 'end: ' ( (lv_endTime_6_0= ruleEDate ) ) )? otherlv_7= 'assigned on: ' ( (lv_assignmentTime_8_0= ruleEDate ) ) (otherlv_9= 'user: ' ( ( ruleFqn ) ) )? otherlv_11= 'role: ' ( ( ruleFqn ) ) (otherlv_13= 'user group: ' ( ( ruleFqn ) ) )? otherlv_15= '}' )
             {
-            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9884:1: (otherlv_0= 'role assignment ' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'start: ' ( (lv_start_4_0= ruleEDate ) ) )? (otherlv_5= 'end: ' ( (lv_end_6_0= ruleEDate ) ) )? otherlv_7= 'assigned on: ' ( (lv_assignedOn_8_0= ruleEDate ) ) (otherlv_9= 'user: ' ( ( ruleFqn ) ) )? otherlv_11= 'role: ' ( ( ruleFqn ) ) (otherlv_13= 'user group: ' ( ( ruleFqn ) ) )? otherlv_15= '}' )
-            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9884:3: otherlv_0= 'role assignment ' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'start: ' ( (lv_start_4_0= ruleEDate ) ) )? (otherlv_5= 'end: ' ( (lv_end_6_0= ruleEDate ) ) )? otherlv_7= 'assigned on: ' ( (lv_assignedOn_8_0= ruleEDate ) ) (otherlv_9= 'user: ' ( ( ruleFqn ) ) )? otherlv_11= 'role: ' ( ( ruleFqn ) ) (otherlv_13= 'user group: ' ( ( ruleFqn ) ) )? otherlv_15= '}'
+            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9884:1: (otherlv_0= 'role assignment ' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'start: ' ( (lv_startTime_4_0= ruleEDate ) ) )? (otherlv_5= 'end: ' ( (lv_endTime_6_0= ruleEDate ) ) )? otherlv_7= 'assigned on: ' ( (lv_assignmentTime_8_0= ruleEDate ) ) (otherlv_9= 'user: ' ( ( ruleFqn ) ) )? otherlv_11= 'role: ' ( ( ruleFqn ) ) (otherlv_13= 'user group: ' ( ( ruleFqn ) ) )? otherlv_15= '}' )
+            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9884:3: otherlv_0= 'role assignment ' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'start: ' ( (lv_startTime_4_0= ruleEDate ) ) )? (otherlv_5= 'end: ' ( (lv_endTime_6_0= ruleEDate ) ) )? otherlv_7= 'assigned on: ' ( (lv_assignmentTime_8_0= ruleEDate ) ) (otherlv_9= 'user: ' ( ( ruleFqn ) ) )? otherlv_11= 'role: ' ( ( ruleFqn ) ) (otherlv_13= 'user group: ' ( ( ruleFqn ) ) )? otherlv_15= '}'
             {
             otherlv_0=(Token)match(input,206,FollowSets000.FOLLOW_206_in_ruleRoleAssignment20049); 
 
@@ -23122,7 +23122,7 @@ public class InternalCamelDslParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_2, grammarAccess.getRoleAssignmentAccess().getLeftCurlyBracketKeyword_2());
                 
-            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9910:1: (otherlv_3= 'start: ' ( (lv_start_4_0= ruleEDate ) ) )?
+            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9910:1: (otherlv_3= 'start: ' ( (lv_startTime_4_0= ruleEDate ) ) )?
             int alt167=2;
             int LA167_0 = input.LA(1);
 
@@ -23131,23 +23131,23 @@ public class InternalCamelDslParser extends AbstractInternalAntlrParser {
             }
             switch (alt167) {
                 case 1 :
-                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9910:3: otherlv_3= 'start: ' ( (lv_start_4_0= ruleEDate ) )
+                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9910:3: otherlv_3= 'start: ' ( (lv_startTime_4_0= ruleEDate ) )
                     {
                     otherlv_3=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleRoleAssignment20096); 
 
                         	newLeafNode(otherlv_3, grammarAccess.getRoleAssignmentAccess().getStartKeyword_3_0());
                         
-                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9914:1: ( (lv_start_4_0= ruleEDate ) )
-                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9915:1: (lv_start_4_0= ruleEDate )
+                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9914:1: ( (lv_startTime_4_0= ruleEDate ) )
+                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9915:1: (lv_startTime_4_0= ruleEDate )
                     {
-                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9915:1: (lv_start_4_0= ruleEDate )
-                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9916:3: lv_start_4_0= ruleEDate
+                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9915:1: (lv_startTime_4_0= ruleEDate )
+                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9916:3: lv_startTime_4_0= ruleEDate
                     {
                      
-                    	        newCompositeNode(grammarAccess.getRoleAssignmentAccess().getStartEDateParserRuleCall_3_1_0()); 
+                    	        newCompositeNode(grammarAccess.getRoleAssignmentAccess().getStartTimeEDateParserRuleCall_3_1_0()); 
                     	    
                     pushFollow(FollowSets000.FOLLOW_ruleEDate_in_ruleRoleAssignment20117);
-                    lv_start_4_0=ruleEDate();
+                    lv_startTime_4_0=ruleEDate();
 
                     state._fsp--;
 
@@ -23157,8 +23157,8 @@ public class InternalCamelDslParser extends AbstractInternalAntlrParser {
                     	        }
                            		set(
                            			current, 
-                           			"start",
-                            		lv_start_4_0, 
+                           			"startTime",
+                            		lv_startTime_4_0, 
                             		"EDate");
                     	        afterParserOrEnumRuleCall();
                     	    
@@ -23174,7 +23174,7 @@ public class InternalCamelDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9932:4: (otherlv_5= 'end: ' ( (lv_end_6_0= ruleEDate ) ) )?
+            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9932:4: (otherlv_5= 'end: ' ( (lv_endTime_6_0= ruleEDate ) ) )?
             int alt168=2;
             int LA168_0 = input.LA(1);
 
@@ -23183,23 +23183,23 @@ public class InternalCamelDslParser extends AbstractInternalAntlrParser {
             }
             switch (alt168) {
                 case 1 :
-                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9932:6: otherlv_5= 'end: ' ( (lv_end_6_0= ruleEDate ) )
+                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9932:6: otherlv_5= 'end: ' ( (lv_endTime_6_0= ruleEDate ) )
                     {
                     otherlv_5=(Token)match(input,134,FollowSets000.FOLLOW_134_in_ruleRoleAssignment20132); 
 
                         	newLeafNode(otherlv_5, grammarAccess.getRoleAssignmentAccess().getEndKeyword_4_0());
                         
-                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9936:1: ( (lv_end_6_0= ruleEDate ) )
-                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9937:1: (lv_end_6_0= ruleEDate )
+                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9936:1: ( (lv_endTime_6_0= ruleEDate ) )
+                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9937:1: (lv_endTime_6_0= ruleEDate )
                     {
-                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9937:1: (lv_end_6_0= ruleEDate )
-                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9938:3: lv_end_6_0= ruleEDate
+                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9937:1: (lv_endTime_6_0= ruleEDate )
+                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9938:3: lv_endTime_6_0= ruleEDate
                     {
                      
-                    	        newCompositeNode(grammarAccess.getRoleAssignmentAccess().getEndEDateParserRuleCall_4_1_0()); 
+                    	        newCompositeNode(grammarAccess.getRoleAssignmentAccess().getEndTimeEDateParserRuleCall_4_1_0()); 
                     	    
                     pushFollow(FollowSets000.FOLLOW_ruleEDate_in_ruleRoleAssignment20153);
-                    lv_end_6_0=ruleEDate();
+                    lv_endTime_6_0=ruleEDate();
 
                     state._fsp--;
 
@@ -23209,8 +23209,8 @@ public class InternalCamelDslParser extends AbstractInternalAntlrParser {
                     	        }
                            		set(
                            			current, 
-                           			"end",
-                            		lv_end_6_0, 
+                           			"endTime",
+                            		lv_endTime_6_0, 
                             		"EDate");
                     	        afterParserOrEnumRuleCall();
                     	    
@@ -23230,17 +23230,17 @@ public class InternalCamelDslParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_7, grammarAccess.getRoleAssignmentAccess().getAssignedOnKeyword_5());
                 
-            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9958:1: ( (lv_assignedOn_8_0= ruleEDate ) )
-            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9959:1: (lv_assignedOn_8_0= ruleEDate )
+            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9958:1: ( (lv_assignmentTime_8_0= ruleEDate ) )
+            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9959:1: (lv_assignmentTime_8_0= ruleEDate )
             {
-            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9959:1: (lv_assignedOn_8_0= ruleEDate )
-            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9960:3: lv_assignedOn_8_0= ruleEDate
+            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9959:1: (lv_assignmentTime_8_0= ruleEDate )
+            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:9960:3: lv_assignmentTime_8_0= ruleEDate
             {
              
-            	        newCompositeNode(grammarAccess.getRoleAssignmentAccess().getAssignedOnEDateParserRuleCall_6_0()); 
+            	        newCompositeNode(grammarAccess.getRoleAssignmentAccess().getAssignmentTimeEDateParserRuleCall_6_0()); 
             	    
             pushFollow(FollowSets000.FOLLOW_ruleEDate_in_ruleRoleAssignment20188);
-            lv_assignedOn_8_0=ruleEDate();
+            lv_assignmentTime_8_0=ruleEDate();
 
             state._fsp--;
 
@@ -23250,8 +23250,8 @@ public class InternalCamelDslParser extends AbstractInternalAntlrParser {
             	        }
                    		set(
                    			current, 
-                   			"assignedOn",
-                    		lv_assignedOn_8_0, 
+                   			"assignmentTime",
+                    		lv_assignmentTime_8_0, 
                     		"EDate");
             	        afterParserOrEnumRuleCall();
             	    
@@ -23555,7 +23555,7 @@ public class InternalCamelDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePermission"
-    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10097:1: rulePermission returns [EObject current=null] : (otherlv_0= 'permission ' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'start: ' ( (lv_start_4_0= ruleEDate ) ) (otherlv_5= 'end: ' ( (lv_end_6_0= ruleEDate ) ) )? otherlv_7= 'role: ' ( ( ruleFqn ) ) otherlv_9= 'resource filter: ' ( ( ruleFqn ) ) otherlv_11= 'action: ' ( (lv_action_12_0= ruleActionType ) ) otherlv_13= '}' ) ;
+    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10097:1: rulePermission returns [EObject current=null] : (otherlv_0= 'permission ' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'start: ' ( (lv_startTime_4_0= ruleEDate ) ) (otherlv_5= 'end: ' ( (lv_endTime_6_0= ruleEDate ) ) )? otherlv_7= 'role: ' ( ( ruleFqn ) ) otherlv_9= 'resource filter: ' ( ( ruleFqn ) ) otherlv_11= 'action: ' ( (lv_action_12_0= ruleActionType ) ) otherlv_13= '}' ) ;
     public final EObject rulePermission() throws RecognitionException {
         EObject current = null;
 
@@ -23568,9 +23568,9 @@ public class InternalCamelDslParser extends AbstractInternalAntlrParser {
         Token otherlv_9=null;
         Token otherlv_11=null;
         Token otherlv_13=null;
-        AntlrDatatypeRuleToken lv_start_4_0 = null;
+        AntlrDatatypeRuleToken lv_startTime_4_0 = null;
 
-        AntlrDatatypeRuleToken lv_end_6_0 = null;
+        AntlrDatatypeRuleToken lv_endTime_6_0 = null;
 
         Enumerator lv_action_12_0 = null;
 
@@ -23578,11 +23578,11 @@ public class InternalCamelDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10100:28: ( (otherlv_0= 'permission ' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'start: ' ( (lv_start_4_0= ruleEDate ) ) (otherlv_5= 'end: ' ( (lv_end_6_0= ruleEDate ) ) )? otherlv_7= 'role: ' ( ( ruleFqn ) ) otherlv_9= 'resource filter: ' ( ( ruleFqn ) ) otherlv_11= 'action: ' ( (lv_action_12_0= ruleActionType ) ) otherlv_13= '}' ) )
-            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10101:1: (otherlv_0= 'permission ' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'start: ' ( (lv_start_4_0= ruleEDate ) ) (otherlv_5= 'end: ' ( (lv_end_6_0= ruleEDate ) ) )? otherlv_7= 'role: ' ( ( ruleFqn ) ) otherlv_9= 'resource filter: ' ( ( ruleFqn ) ) otherlv_11= 'action: ' ( (lv_action_12_0= ruleActionType ) ) otherlv_13= '}' )
+            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10100:28: ( (otherlv_0= 'permission ' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'start: ' ( (lv_startTime_4_0= ruleEDate ) ) (otherlv_5= 'end: ' ( (lv_endTime_6_0= ruleEDate ) ) )? otherlv_7= 'role: ' ( ( ruleFqn ) ) otherlv_9= 'resource filter: ' ( ( ruleFqn ) ) otherlv_11= 'action: ' ( (lv_action_12_0= ruleActionType ) ) otherlv_13= '}' ) )
+            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10101:1: (otherlv_0= 'permission ' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'start: ' ( (lv_startTime_4_0= ruleEDate ) ) (otherlv_5= 'end: ' ( (lv_endTime_6_0= ruleEDate ) ) )? otherlv_7= 'role: ' ( ( ruleFqn ) ) otherlv_9= 'resource filter: ' ( ( ruleFqn ) ) otherlv_11= 'action: ' ( (lv_action_12_0= ruleActionType ) ) otherlv_13= '}' )
             {
-            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10101:1: (otherlv_0= 'permission ' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'start: ' ( (lv_start_4_0= ruleEDate ) ) (otherlv_5= 'end: ' ( (lv_end_6_0= ruleEDate ) ) )? otherlv_7= 'role: ' ( ( ruleFqn ) ) otherlv_9= 'resource filter: ' ( ( ruleFqn ) ) otherlv_11= 'action: ' ( (lv_action_12_0= ruleActionType ) ) otherlv_13= '}' )
-            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10101:3: otherlv_0= 'permission ' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'start: ' ( (lv_start_4_0= ruleEDate ) ) (otherlv_5= 'end: ' ( (lv_end_6_0= ruleEDate ) ) )? otherlv_7= 'role: ' ( ( ruleFqn ) ) otherlv_9= 'resource filter: ' ( ( ruleFqn ) ) otherlv_11= 'action: ' ( (lv_action_12_0= ruleActionType ) ) otherlv_13= '}'
+            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10101:1: (otherlv_0= 'permission ' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'start: ' ( (lv_startTime_4_0= ruleEDate ) ) (otherlv_5= 'end: ' ( (lv_endTime_6_0= ruleEDate ) ) )? otherlv_7= 'role: ' ( ( ruleFqn ) ) otherlv_9= 'resource filter: ' ( ( ruleFqn ) ) otherlv_11= 'action: ' ( (lv_action_12_0= ruleActionType ) ) otherlv_13= '}' )
+            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10101:3: otherlv_0= 'permission ' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'start: ' ( (lv_startTime_4_0= ruleEDate ) ) (otherlv_5= 'end: ' ( (lv_endTime_6_0= ruleEDate ) ) )? otherlv_7= 'role: ' ( ( ruleFqn ) ) otherlv_9= 'resource filter: ' ( ( ruleFqn ) ) otherlv_11= 'action: ' ( (lv_action_12_0= ruleActionType ) ) otherlv_13= '}'
             {
             otherlv_0=(Token)match(input,212,FollowSets000.FOLLOW_212_in_rulePermission20499); 
 
@@ -23622,17 +23622,17 @@ public class InternalCamelDslParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_3, grammarAccess.getPermissionAccess().getStartKeyword_3());
                 
-            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10131:1: ( (lv_start_4_0= ruleEDate ) )
-            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10132:1: (lv_start_4_0= ruleEDate )
+            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10131:1: ( (lv_startTime_4_0= ruleEDate ) )
+            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10132:1: (lv_startTime_4_0= ruleEDate )
             {
-            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10132:1: (lv_start_4_0= ruleEDate )
-            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10133:3: lv_start_4_0= ruleEDate
+            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10132:1: (lv_startTime_4_0= ruleEDate )
+            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10133:3: lv_startTime_4_0= ruleEDate
             {
              
-            	        newCompositeNode(grammarAccess.getPermissionAccess().getStartEDateParserRuleCall_4_0()); 
+            	        newCompositeNode(grammarAccess.getPermissionAccess().getStartTimeEDateParserRuleCall_4_0()); 
             	    
             pushFollow(FollowSets001.FOLLOW_ruleEDate_in_rulePermission20566);
-            lv_start_4_0=ruleEDate();
+            lv_startTime_4_0=ruleEDate();
 
             state._fsp--;
 
@@ -23642,8 +23642,8 @@ public class InternalCamelDslParser extends AbstractInternalAntlrParser {
             	        }
                    		set(
                    			current, 
-                   			"start",
-                    		lv_start_4_0, 
+                   			"startTime",
+                    		lv_startTime_4_0, 
                     		"EDate");
             	        afterParserOrEnumRuleCall();
             	    
@@ -23653,7 +23653,7 @@ public class InternalCamelDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10149:2: (otherlv_5= 'end: ' ( (lv_end_6_0= ruleEDate ) ) )?
+            // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10149:2: (otherlv_5= 'end: ' ( (lv_endTime_6_0= ruleEDate ) ) )?
             int alt171=2;
             int LA171_0 = input.LA(1);
 
@@ -23662,23 +23662,23 @@ public class InternalCamelDslParser extends AbstractInternalAntlrParser {
             }
             switch (alt171) {
                 case 1 :
-                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10149:4: otherlv_5= 'end: ' ( (lv_end_6_0= ruleEDate ) )
+                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10149:4: otherlv_5= 'end: ' ( (lv_endTime_6_0= ruleEDate ) )
                     {
                     otherlv_5=(Token)match(input,134,FollowSets001.FOLLOW_134_in_rulePermission20579); 
 
                         	newLeafNode(otherlv_5, grammarAccess.getPermissionAccess().getEndKeyword_5_0());
                         
-                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10153:1: ( (lv_end_6_0= ruleEDate ) )
-                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10154:1: (lv_end_6_0= ruleEDate )
+                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10153:1: ( (lv_endTime_6_0= ruleEDate ) )
+                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10154:1: (lv_endTime_6_0= ruleEDate )
                     {
-                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10154:1: (lv_end_6_0= ruleEDate )
-                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10155:3: lv_end_6_0= ruleEDate
+                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10154:1: (lv_endTime_6_0= ruleEDate )
+                    // ../eu.paasage.camel.dsl/src-gen/eu/paasage/camel/dsl/parser/antlr/internal/InternalCamelDsl.g:10155:3: lv_endTime_6_0= ruleEDate
                     {
                      
-                    	        newCompositeNode(grammarAccess.getPermissionAccess().getEndEDateParserRuleCall_5_1_0()); 
+                    	        newCompositeNode(grammarAccess.getPermissionAccess().getEndTimeEDateParserRuleCall_5_1_0()); 
                     	    
                     pushFollow(FollowSets001.FOLLOW_ruleEDate_in_rulePermission20600);
-                    lv_end_6_0=ruleEDate();
+                    lv_endTime_6_0=ruleEDate();
 
                     state._fsp--;
 
@@ -23688,8 +23688,8 @@ public class InternalCamelDslParser extends AbstractInternalAntlrParser {
                     	        }
                            		set(
                            			current, 
-                           			"end",
-                            		lv_end_6_0, 
+                           			"endTime",
+                            		lv_endTime_6_0, 
                             		"EDate");
                     	        afterParserOrEnumRuleCall();
                     	    

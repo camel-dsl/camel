@@ -7192,15 +7192,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Keyword cStartKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cStartAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cStartEDateParserRuleCall_3_1_0 = (RuleCall)cStartAssignment_3_1.eContents().get(0);
+		private final Assignment cStartTimeAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cStartTimeEDateParserRuleCall_3_1_0 = (RuleCall)cStartTimeAssignment_3_1.eContents().get(0);
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
 		private final Keyword cEndKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cEndAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cEndEDateParserRuleCall_4_1_0 = (RuleCall)cEndAssignment_4_1.eContents().get(0);
+		private final Assignment cEndTimeAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cEndTimeEDateParserRuleCall_4_1_0 = (RuleCall)cEndTimeAssignment_4_1.eContents().get(0);
 		private final Keyword cAssignedOnKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cAssignedOnAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cAssignedOnEDateParserRuleCall_6_0 = (RuleCall)cAssignedOnAssignment_6.eContents().get(0);
+		private final Assignment cAssignmentTimeAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cAssignmentTimeEDateParserRuleCall_6_0 = (RuleCall)cAssignmentTimeAssignment_6.eContents().get(0);
 		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
 		private final Keyword cUserKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
 		private final Assignment cUserAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
@@ -7218,13 +7218,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
 		//RoleAssignment returns organisation::RoleAssignment:
-		//	"role assignment " name=ID "{" ("start: " start=EDate)? ("end: " end=EDate)? "assigned on: " assignedOn=EDate
-		//	("user: " user=[organisation::User|Fqn])? "role: " role=[organisation::Role|Fqn] ("user group: "
+		//	"role assignment " name=ID "{" ("start: " startTime=EDate)? ("end: " endTime=EDate)? "assigned on: "
+		//	assignmentTime=EDate ("user: " user=[organisation::User|Fqn])? "role: " role=[organisation::Role|Fqn] ("user group: "
 		//	userGroup=[organisation::UserGroup|Fqn])? "}";
 		public ParserRule getRule() { return rule; }
 
-		//"role assignment " name=ID "{" ("start: " start=EDate)? ("end: " end=EDate)? "assigned on: " assignedOn=EDate ("user: "
-		//user=[organisation::User|Fqn])? "role: " role=[organisation::Role|Fqn] ("user group: "
+		//"role assignment " name=ID "{" ("start: " startTime=EDate)? ("end: " endTime=EDate)? "assigned on: "
+		//assignmentTime=EDate ("user: " user=[organisation::User|Fqn])? "role: " role=[organisation::Role|Fqn] ("user group: "
 		//userGroup=[organisation::UserGroup|Fqn])? "}"
 		public Group getGroup() { return cGroup; }
 
@@ -7240,38 +7240,38 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("start: " start=EDate)?
+		//("start: " startTime=EDate)?
 		public Group getGroup_3() { return cGroup_3; }
 
 		//"start: "
 		public Keyword getStartKeyword_3_0() { return cStartKeyword_3_0; }
 
-		//start=EDate
-		public Assignment getStartAssignment_3_1() { return cStartAssignment_3_1; }
+		//startTime=EDate
+		public Assignment getStartTimeAssignment_3_1() { return cStartTimeAssignment_3_1; }
 
 		//EDate
-		public RuleCall getStartEDateParserRuleCall_3_1_0() { return cStartEDateParserRuleCall_3_1_0; }
+		public RuleCall getStartTimeEDateParserRuleCall_3_1_0() { return cStartTimeEDateParserRuleCall_3_1_0; }
 
-		//("end: " end=EDate)?
+		//("end: " endTime=EDate)?
 		public Group getGroup_4() { return cGroup_4; }
 
 		//"end: "
 		public Keyword getEndKeyword_4_0() { return cEndKeyword_4_0; }
 
-		//end=EDate
-		public Assignment getEndAssignment_4_1() { return cEndAssignment_4_1; }
+		//endTime=EDate
+		public Assignment getEndTimeAssignment_4_1() { return cEndTimeAssignment_4_1; }
 
 		//EDate
-		public RuleCall getEndEDateParserRuleCall_4_1_0() { return cEndEDateParserRuleCall_4_1_0; }
+		public RuleCall getEndTimeEDateParserRuleCall_4_1_0() { return cEndTimeEDateParserRuleCall_4_1_0; }
 
 		//"assigned on: "
 		public Keyword getAssignedOnKeyword_5() { return cAssignedOnKeyword_5; }
 
-		//assignedOn=EDate
-		public Assignment getAssignedOnAssignment_6() { return cAssignedOnAssignment_6; }
+		//assignmentTime=EDate
+		public Assignment getAssignmentTimeAssignment_6() { return cAssignmentTimeAssignment_6; }
 
 		//EDate
-		public RuleCall getAssignedOnEDateParserRuleCall_6_0() { return cAssignedOnEDateParserRuleCall_6_0; }
+		public RuleCall getAssignmentTimeEDateParserRuleCall_6_0() { return cAssignmentTimeEDateParserRuleCall_6_0; }
 
 		//("user: " user=[organisation::User|Fqn])?
 		public Group getGroup_7() { return cGroup_7; }
@@ -7351,12 +7351,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Keyword cStartKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cStartAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cStartEDateParserRuleCall_4_0 = (RuleCall)cStartAssignment_4.eContents().get(0);
+		private final Assignment cStartTimeAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cStartTimeEDateParserRuleCall_4_0 = (RuleCall)cStartTimeAssignment_4.eContents().get(0);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
 		private final Keyword cEndKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cEndAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cEndEDateParserRuleCall_5_1_0 = (RuleCall)cEndAssignment_5_1.eContents().get(0);
+		private final Assignment cEndTimeAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cEndTimeEDateParserRuleCall_5_1_0 = (RuleCall)cEndTimeAssignment_5_1.eContents().get(0);
 		private final Keyword cRoleKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		private final Assignment cRoleAssignment_7 = (Assignment)cGroup.eContents().get(7);
 		private final CrossReference cRoleRoleCrossReference_7_0 = (CrossReference)cRoleAssignment_7.eContents().get(0);
@@ -7371,11 +7371,11 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		
 		//Permission returns organisation::Permission:
-		//	"permission " name=ID "{" "start: " start=EDate ("end: " end=EDate)? "role: " role=[organisation::Role|Fqn]
+		//	"permission " name=ID "{" "start: " startTime=EDate ("end: " endTime=EDate)? "role: " role=[organisation::Role|Fqn]
 		//	"resource filter: " resourceFilter=[organisation::ResourceFilter|Fqn] "action: " action=ActionType "}";
 		public ParserRule getRule() { return rule; }
 
-		//"permission " name=ID "{" "start: " start=EDate ("end: " end=EDate)? "role: " role=[organisation::Role|Fqn]
+		//"permission " name=ID "{" "start: " startTime=EDate ("end: " endTime=EDate)? "role: " role=[organisation::Role|Fqn]
 		//"resource filter: " resourceFilter=[organisation::ResourceFilter|Fqn] "action: " action=ActionType "}"
 		public Group getGroup() { return cGroup; }
 
@@ -7394,23 +7394,23 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//"start: "
 		public Keyword getStartKeyword_3() { return cStartKeyword_3; }
 
-		//start=EDate
-		public Assignment getStartAssignment_4() { return cStartAssignment_4; }
+		//startTime=EDate
+		public Assignment getStartTimeAssignment_4() { return cStartTimeAssignment_4; }
 
 		//EDate
-		public RuleCall getStartEDateParserRuleCall_4_0() { return cStartEDateParserRuleCall_4_0; }
+		public RuleCall getStartTimeEDateParserRuleCall_4_0() { return cStartTimeEDateParserRuleCall_4_0; }
 
-		//("end: " end=EDate)?
+		//("end: " endTime=EDate)?
 		public Group getGroup_5() { return cGroup_5; }
 
 		//"end: "
 		public Keyword getEndKeyword_5_0() { return cEndKeyword_5_0; }
 
-		//end=EDate
-		public Assignment getEndAssignment_5_1() { return cEndAssignment_5_1; }
+		//endTime=EDate
+		public Assignment getEndTimeAssignment_5_1() { return cEndTimeAssignment_5_1; }
 
 		//EDate
-		public RuleCall getEndEDateParserRuleCall_5_1_0() { return cEndEDateParserRuleCall_5_1_0; }
+		public RuleCall getEndTimeEDateParserRuleCall_5_1_0() { return cEndTimeEDateParserRuleCall_5_1_0; }
 
 		//"role: "
 		public Keyword getRoleKeyword_6() { return cRoleKeyword_6; }
@@ -17802,8 +17802,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//RoleAssignment returns organisation::RoleAssignment:
-	//	"role assignment " name=ID "{" ("start: " start=EDate)? ("end: " end=EDate)? "assigned on: " assignedOn=EDate
-	//	("user: " user=[organisation::User|Fqn])? "role: " role=[organisation::Role|Fqn] ("user group: "
+	//	"role assignment " name=ID "{" ("start: " startTime=EDate)? ("end: " endTime=EDate)? "assigned on: "
+	//	assignmentTime=EDate ("user: " user=[organisation::User|Fqn])? "role: " role=[organisation::Role|Fqn] ("user group: "
 	//	userGroup=[organisation::UserGroup|Fqn])? "}";
 	public RoleAssignmentElements getRoleAssignmentAccess() {
 		return pRoleAssignment;
@@ -17824,7 +17824,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Permission returns organisation::Permission:
-	//	"permission " name=ID "{" "start: " start=EDate ("end: " end=EDate)? "role: " role=[organisation::Role|Fqn]
+	//	"permission " name=ID "{" "start: " startTime=EDate ("end: " endTime=EDate)? "role: " role=[organisation::Role|Fqn]
 	//	"resource filter: " resourceFilter=[organisation::ResourceFilter|Fqn] "action: " action=ActionType "}";
 	public PermissionElements getPermissionAccess() {
 		return pPermission;

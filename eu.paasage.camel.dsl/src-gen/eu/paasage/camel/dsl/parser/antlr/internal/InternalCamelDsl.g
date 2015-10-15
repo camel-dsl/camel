@@ -9914,16 +9914,16 @@ ruleRoleAssignment returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getRoleAssignmentAccess().getStartEDateParserRuleCall_3_1_0()); 
+	        newCompositeNode(grammarAccess.getRoleAssignmentAccess().getStartTimeEDateParserRuleCall_3_1_0()); 
 	    }
-		lv_start_4_0=ruleEDate		{
+		lv_startTime_4_0=ruleEDate		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getRoleAssignmentRule());
 	        }
        		set(
        			$current, 
-       			"start",
-        		lv_start_4_0, 
+       			"startTime",
+        		lv_startTime_4_0, 
         		"EDate");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -9936,16 +9936,16 @@ ruleRoleAssignment returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getRoleAssignmentAccess().getEndEDateParserRuleCall_4_1_0()); 
+	        newCompositeNode(grammarAccess.getRoleAssignmentAccess().getEndTimeEDateParserRuleCall_4_1_0()); 
 	    }
-		lv_end_6_0=ruleEDate		{
+		lv_endTime_6_0=ruleEDate		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getRoleAssignmentRule());
 	        }
        		set(
        			$current, 
-       			"end",
-        		lv_end_6_0, 
+       			"endTime",
+        		lv_endTime_6_0, 
         		"EDate");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -9958,16 +9958,16 @@ ruleRoleAssignment returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getRoleAssignmentAccess().getAssignedOnEDateParserRuleCall_6_0()); 
+	        newCompositeNode(grammarAccess.getRoleAssignmentAccess().getAssignmentTimeEDateParserRuleCall_6_0()); 
 	    }
-		lv_assignedOn_8_0=ruleEDate		{
+		lv_assignmentTime_8_0=ruleEDate		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getRoleAssignmentRule());
 	        }
        		set(
        			$current, 
-       			"assignedOn",
-        		lv_assignedOn_8_0, 
+       			"assignmentTime",
+        		lv_assignmentTime_8_0, 
         		"EDate");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -10131,16 +10131,16 @@ rulePermission returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getPermissionAccess().getStartEDateParserRuleCall_4_0()); 
+	        newCompositeNode(grammarAccess.getPermissionAccess().getStartTimeEDateParserRuleCall_4_0()); 
 	    }
-		lv_start_4_0=ruleEDate		{
+		lv_startTime_4_0=ruleEDate		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getPermissionRule());
 	        }
        		set(
        			$current, 
-       			"start",
-        		lv_start_4_0, 
+       			"startTime",
+        		lv_startTime_4_0, 
         		"EDate");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -10153,16 +10153,16 @@ rulePermission returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getPermissionAccess().getEndEDateParserRuleCall_5_1_0()); 
+	        newCompositeNode(grammarAccess.getPermissionAccess().getEndTimeEDateParserRuleCall_5_1_0()); 
 	    }
-		lv_end_6_0=ruleEDate		{
+		lv_endTime_6_0=ruleEDate		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getPermissionRule());
 	        }
        		set(
        			$current, 
-       			"end",
-        		lv_end_6_0, 
+       			"endTime",
+        		lv_endTime_6_0, 
         		"EDate");
 	        afterParserOrEnumRuleCall();
 	    }

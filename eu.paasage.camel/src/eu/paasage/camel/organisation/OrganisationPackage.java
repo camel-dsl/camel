@@ -783,22 +783,22 @@ public interface OrganisationPackage extends EPackage {
 	int PERMISSION__ROLE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Start</b></em>' attribute.
+	 * The feature id for the '<em><b>Start Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PERMISSION__START = 2;
+	int PERMISSION__START_TIME = 2;
 
 	/**
-	 * The feature id for the '<em><b>End</b></em>' attribute.
+	 * The feature id for the '<em><b>End Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PERMISSION__END = 3;
+	int PERMISSION__END_TIME = 3;
 
 	/**
 	 * The feature id for the '<em><b>Resource Filter</b></em>' reference.
@@ -1103,31 +1103,31 @@ public interface OrganisationPackage extends EPackage {
 	int ROLE_ASSIGNMENT__USER_GROUP = 3;
 
 	/**
-	 * The feature id for the '<em><b>Start</b></em>' attribute.
+	 * The feature id for the '<em><b>Start Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROLE_ASSIGNMENT__START = 4;
+	int ROLE_ASSIGNMENT__START_TIME = 4;
 
 	/**
-	 * The feature id for the '<em><b>End</b></em>' attribute.
+	 * The feature id for the '<em><b>End Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROLE_ASSIGNMENT__END = 5;
+	int ROLE_ASSIGNMENT__END_TIME = 5;
 
 	/**
-	 * The feature id for the '<em><b>Assigned On</b></em>' attribute.
+	 * The feature id for the '<em><b>Assignment Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROLE_ASSIGNMENT__ASSIGNED_ON = 6;
+	int ROLE_ASSIGNMENT__ASSIGNMENT_TIME = 6;
 
 	/**
 	 * The number of structural features of the '<em>Role Assignment</em>' class.
@@ -1865,26 +1865,26 @@ public interface OrganisationPackage extends EPackage {
 	EReference getPermission_Role();
 
 	/**
-	 * Returns the meta object for the attribute '{@link eu.paasage.camel.organisation.Permission#getStart <em>Start</em>}'.
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.organisation.Permission#getStartTime <em>Start Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Start</em>'.
-	 * @see eu.paasage.camel.organisation.Permission#getStart()
+	 * @return the meta object for the attribute '<em>Start Time</em>'.
+	 * @see eu.paasage.camel.organisation.Permission#getStartTime()
 	 * @see #getPermission()
 	 * @generated
 	 */
-	EAttribute getPermission_Start();
+	EAttribute getPermission_StartTime();
 
 	/**
-	 * Returns the meta object for the attribute '{@link eu.paasage.camel.organisation.Permission#getEnd <em>End</em>}'.
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.organisation.Permission#getEndTime <em>End Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>End</em>'.
-	 * @see eu.paasage.camel.organisation.Permission#getEnd()
+	 * @return the meta object for the attribute '<em>End Time</em>'.
+	 * @see eu.paasage.camel.organisation.Permission#getEndTime()
 	 * @see #getPermission()
 	 * @generated
 	 */
-	EAttribute getPermission_End();
+	EAttribute getPermission_EndTime();
 
 	/**
 	 * Returns the meta object for the reference '{@link eu.paasage.camel.organisation.Permission#getResourceFilter <em>Resource Filter</em>}'.
@@ -2090,37 +2090,37 @@ public interface OrganisationPackage extends EPackage {
 	EReference getRoleAssignment_UserGroup();
 
 	/**
-	 * Returns the meta object for the attribute '{@link eu.paasage.camel.organisation.RoleAssignment#getStart <em>Start</em>}'.
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.organisation.RoleAssignment#getStartTime <em>Start Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Start</em>'.
-	 * @see eu.paasage.camel.organisation.RoleAssignment#getStart()
+	 * @return the meta object for the attribute '<em>Start Time</em>'.
+	 * @see eu.paasage.camel.organisation.RoleAssignment#getStartTime()
 	 * @see #getRoleAssignment()
 	 * @generated
 	 */
-	EAttribute getRoleAssignment_Start();
+	EAttribute getRoleAssignment_StartTime();
 
 	/**
-	 * Returns the meta object for the attribute '{@link eu.paasage.camel.organisation.RoleAssignment#getEnd <em>End</em>}'.
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.organisation.RoleAssignment#getEndTime <em>End Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>End</em>'.
-	 * @see eu.paasage.camel.organisation.RoleAssignment#getEnd()
+	 * @return the meta object for the attribute '<em>End Time</em>'.
+	 * @see eu.paasage.camel.organisation.RoleAssignment#getEndTime()
 	 * @see #getRoleAssignment()
 	 * @generated
 	 */
-	EAttribute getRoleAssignment_End();
+	EAttribute getRoleAssignment_EndTime();
 
 	/**
-	 * Returns the meta object for the attribute '{@link eu.paasage.camel.organisation.RoleAssignment#getAssignedOn <em>Assigned On</em>}'.
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.organisation.RoleAssignment#getAssignmentTime <em>Assignment Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Assigned On</em>'.
-	 * @see eu.paasage.camel.organisation.RoleAssignment#getAssignedOn()
+	 * @return the meta object for the attribute '<em>Assignment Time</em>'.
+	 * @see eu.paasage.camel.organisation.RoleAssignment#getAssignmentTime()
 	 * @see #getRoleAssignment()
 	 * @generated
 	 */
-	EAttribute getRoleAssignment_AssignedOn();
+	EAttribute getRoleAssignment_AssignmentTime();
 
 	/**
 	 * Returns the meta object for the '{@link eu.paasage.camel.organisation.RoleAssignment#checkAssignedOnDates(eu.paasage.camel.organisation.RoleAssignment) <em>Check Assigned On Dates</em>}' operation.
@@ -2699,20 +2699,20 @@ public interface OrganisationPackage extends EPackage {
 		EReference PERMISSION__ROLE = eINSTANCE.getPermission_Role();
 
 		/**
-		 * The meta object literal for the '<em><b>Start</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Start Time</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PERMISSION__START = eINSTANCE.getPermission_Start();
+		EAttribute PERMISSION__START_TIME = eINSTANCE.getPermission_StartTime();
 
 		/**
-		 * The meta object literal for the '<em><b>End</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>End Time</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PERMISSION__END = eINSTANCE.getPermission_End();
+		EAttribute PERMISSION__END_TIME = eINSTANCE.getPermission_EndTime();
 
 		/**
 		 * The meta object literal for the '<em><b>Resource Filter</b></em>' reference feature.
@@ -2877,28 +2877,28 @@ public interface OrganisationPackage extends EPackage {
 		EReference ROLE_ASSIGNMENT__USER_GROUP = eINSTANCE.getRoleAssignment_UserGroup();
 
 		/**
-		 * The meta object literal for the '<em><b>Start</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Start Time</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ROLE_ASSIGNMENT__START = eINSTANCE.getRoleAssignment_Start();
+		EAttribute ROLE_ASSIGNMENT__START_TIME = eINSTANCE.getRoleAssignment_StartTime();
 
 		/**
-		 * The meta object literal for the '<em><b>End</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>End Time</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ROLE_ASSIGNMENT__END = eINSTANCE.getRoleAssignment_End();
+		EAttribute ROLE_ASSIGNMENT__END_TIME = eINSTANCE.getRoleAssignment_EndTime();
 
 		/**
-		 * The meta object literal for the '<em><b>Assigned On</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Assignment Time</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ROLE_ASSIGNMENT__ASSIGNED_ON = eINSTANCE.getRoleAssignment_AssignedOn();
+		EAttribute ROLE_ASSIGNMENT__ASSIGNMENT_TIME = eINSTANCE.getRoleAssignment_AssignmentTime();
 
 		/**
 		 * The meta object literal for the '<em><b>Check Assigned On Dates</b></em>' operation.

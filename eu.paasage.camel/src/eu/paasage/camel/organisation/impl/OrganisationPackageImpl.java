@@ -825,7 +825,7 @@ public class OrganisationPackageImpl extends EPackageImpl implements Organisatio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPermission_Start() {
+	public EAttribute getPermission_StartTime() {
 		return (EAttribute)permissionEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -834,7 +834,7 @@ public class OrganisationPackageImpl extends EPackageImpl implements Organisatio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPermission_End() {
+	public EAttribute getPermission_EndTime() {
 		return (EAttribute)permissionEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1014,7 +1014,7 @@ public class OrganisationPackageImpl extends EPackageImpl implements Organisatio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRoleAssignment_Start() {
+	public EAttribute getRoleAssignment_StartTime() {
 		return (EAttribute)roleAssignmentEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -1023,7 +1023,7 @@ public class OrganisationPackageImpl extends EPackageImpl implements Organisatio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRoleAssignment_End() {
+	public EAttribute getRoleAssignment_EndTime() {
 		return (EAttribute)roleAssignmentEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -1032,7 +1032,7 @@ public class OrganisationPackageImpl extends EPackageImpl implements Organisatio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRoleAssignment_AssignedOn() {
+	public EAttribute getRoleAssignment_AssignmentTime() {
 		return (EAttribute)roleAssignmentEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -1209,8 +1209,8 @@ public class OrganisationPackageImpl extends EPackageImpl implements Organisatio
 		permissionEClass = createEClass(PERMISSION);
 		createEAttribute(permissionEClass, PERMISSION__NAME);
 		createEReference(permissionEClass, PERMISSION__ROLE);
-		createEAttribute(permissionEClass, PERMISSION__START);
-		createEAttribute(permissionEClass, PERMISSION__END);
+		createEAttribute(permissionEClass, PERMISSION__START_TIME);
+		createEAttribute(permissionEClass, PERMISSION__END_TIME);
 		createEReference(permissionEClass, PERMISSION__RESOURCE_FILTER);
 		createEAttribute(permissionEClass, PERMISSION__ACTION);
 		createEOperation(permissionEClass, PERMISSION___CHECK_START_END_DATES__PERMISSION);
@@ -1235,9 +1235,9 @@ public class OrganisationPackageImpl extends EPackageImpl implements Organisatio
 		createEReference(roleAssignmentEClass, ROLE_ASSIGNMENT__USER);
 		createEReference(roleAssignmentEClass, ROLE_ASSIGNMENT__ROLE);
 		createEReference(roleAssignmentEClass, ROLE_ASSIGNMENT__USER_GROUP);
-		createEAttribute(roleAssignmentEClass, ROLE_ASSIGNMENT__START);
-		createEAttribute(roleAssignmentEClass, ROLE_ASSIGNMENT__END);
-		createEAttribute(roleAssignmentEClass, ROLE_ASSIGNMENT__ASSIGNED_ON);
+		createEAttribute(roleAssignmentEClass, ROLE_ASSIGNMENT__START_TIME);
+		createEAttribute(roleAssignmentEClass, ROLE_ASSIGNMENT__END_TIME);
+		createEAttribute(roleAssignmentEClass, ROLE_ASSIGNMENT__ASSIGNMENT_TIME);
 		createEOperation(roleAssignmentEClass, ROLE_ASSIGNMENT___CHECK_ASSIGNED_ON_DATES__ROLEASSIGNMENT);
 		createEOperation(roleAssignmentEClass, ROLE_ASSIGNMENT___CHECK_START_END_DATES__ROLEASSIGNMENT);
 
@@ -1363,8 +1363,8 @@ public class OrganisationPackageImpl extends EPackageImpl implements Organisatio
 		initEClass(permissionEClass, Permission.class, "Permission", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPermission_Name(), ecorePackage.getEString(), "name", null, 1, 1, Permission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPermission_Role(), this.getRole(), null, "role", null, 1, 1, Permission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPermission_Start(), ecorePackage.getEDate(), "start", null, 1, 1, Permission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPermission_End(), ecorePackage.getEDate(), "end", null, 0, 1, Permission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPermission_StartTime(), ecorePackage.getEDate(), "startTime", null, 1, 1, Permission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPermission_EndTime(), ecorePackage.getEDate(), "endTime", null, 0, 1, Permission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPermission_ResourceFilter(), this.getResourceFilter(), null, "resourceFilter", null, 1, 1, Permission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPermission_Action(), theCamelPackage.getActionType(), "action", null, 1, 1, Permission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1391,9 +1391,9 @@ public class OrganisationPackageImpl extends EPackageImpl implements Organisatio
 		initEReference(getRoleAssignment_User(), this.getUser(), null, "user", null, 0, 1, RoleAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRoleAssignment_Role(), this.getRole(), null, "role", null, 1, 1, RoleAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRoleAssignment_UserGroup(), this.getUserGroup(), null, "userGroup", null, 0, 1, RoleAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRoleAssignment_Start(), ecorePackage.getEDate(), "start", null, 0, 1, RoleAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRoleAssignment_End(), ecorePackage.getEDate(), "end", null, 0, 1, RoleAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRoleAssignment_AssignedOn(), ecorePackage.getEDate(), "assignedOn", null, 1, 1, RoleAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRoleAssignment_StartTime(), ecorePackage.getEDate(), "startTime", null, 0, 1, RoleAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRoleAssignment_EndTime(), ecorePackage.getEDate(), "endTime", null, 0, 1, RoleAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRoleAssignment_AssignmentTime(), ecorePackage.getEDate(), "assignmentTime", null, 1, 1, RoleAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getRoleAssignment__CheckAssignedOnDates__RoleAssignment(), ecorePackage.getEBoolean(), "checkAssignedOnDates", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getRoleAssignment(), "this_", 1, 1, IS_UNIQUE, IS_ORDERED);
@@ -1423,8 +1423,6 @@ public class OrganisationPackageImpl extends EPackageImpl implements Organisatio
 		createEcoreAnnotations();
 		// http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot
 		createPivotAnnotations();
-		// http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName
-		createEmofAnnotations();
 	}
 
 	/**
@@ -1526,120 +1524,6 @@ public class OrganisationPackageImpl extends EPackageImpl implements Organisatio
 		   new String[] {
 			 "role_assignment_at_least_user_or_group", "Tuple {\n\tmessage : String = \'There is no user or user group associated to RoleAssigment:\' +\n\t\t\t\t\tself.name,\n\tstatus : Boolean = self.user <> null or self.userGroup <> null\n}.status",
 			 "same_role_concurrent_assignments", "Tuple {\n\tmessage : String = \'There are two or more role assignments which are odentical, i.e., refer to the same organisation, user/user group and role\',\n\tstatus : Boolean = RoleAssignment.allInstances()\n\t\t\t\t\t->forAll(p1, p2 | p1 <> p2 and ((p1.user <> null and p2.user <> null and p1.user = p2.user) or (p1.userGroup <>\n\t\t\t\t\t\tnull and p2.userGroup <> null and p1.userGroup = p2.userGroup)) implies p1.role <> p2.role)\n}.status"
-		   });
-	}
-
-	/**
-	 * Initializes the annotations for <b>http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName</b>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void createEmofAnnotations() {
-		String source = "http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName";	
-		addAnnotation
-		  (getDataCenter_Name(), 
-		   source, 
-		   new String[] {
-			 "body", "CloudCredentials",
-			 "unique", "false",
-			 "upper", "*"
-		   });	
-		addAnnotation
-		  (getOrganisation_Www(), 
-		   source, 
-		   new String[] {
-			 "body", "Clone",
-			 "unique", "false",
-			 "upper", "*"
-		   });	
-		addAnnotation
-		  (getCloudProvider_SaaS(), 
-		   source, 
-		   new String[] {
-			 "body", "Constraint",
-			 "unique", "false",
-			 "upper", "*"
-		   });	
-		addAnnotation
-		  (getCloudProvider_SaaS(), 
-		   source, 
-		   new String[] {
-			 "body", "Clone",
-			 "unique", "false",
-			 "upper", "*"
-		   });	
-		addAnnotation
-		  (getCloudProvider_SaaS(), 
-		   source, 
-		   new String[] {
-			 "body", "Clone",
-			 "unique", "false",
-			 "upper", "*"
-		   });	
-		addAnnotation
-		  (getCloudProvider_PaaS(), 
-		   source, 
-		   new String[] {
-			 "body", "Constraint",
-			 "unique", "false",
-			 "upper", "*"
-		   });	
-		addAnnotation
-		  (getCloudProvider_IaaS(), 
-		   source, 
-		   new String[] {
-			 "body", "Constraint"
-		   });	
-		addAnnotation
-		  (getUser_Www(), 
-		   source, 
-		   new String[] {
-			 "body", "CloudProvider",
-			 "unique", "false",
-			 "upper", "*"
-		   });	
-		addAnnotation
-		  (getPermission_Start(), 
-		   source, 
-		   new String[] {
-			 "body", "Requires"
-		   });	
-		addAnnotation
-		  (getPermission_Start(), 
-		   source, 
-		   new String[] {
-			 "body", "Requires"
-		   });	
-		addAnnotation
-		  (getPermission_End(), 
-		   source, 
-		   new String[] {
-			 "body", "Requires"
-		   });	
-		addAnnotation
-		  (getPermission_End(), 
-		   source, 
-		   new String[] {
-			 "body", "Requires"
-		   });	
-		addAnnotation
-		  (getRole_Name(), 
-		   source, 
-		   new String[] {
-			 "body", "Alternative"
-		   });	
-		addAnnotation
-		  (getRole_Name(), 
-		   source, 
-		   new String[] {
-			 "body", "Feature"
-		   });	
-		addAnnotation
-		  (getRole_Name(), 
-		   source, 
-		   new String[] {
-			 "body", "Alternative"
 		   });
 	}
 

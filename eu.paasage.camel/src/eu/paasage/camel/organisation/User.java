@@ -149,7 +149,7 @@ public interface User extends Entity {
 	 * @return the value of the '<em>Www</em>' attribute.
 	 * @see #setWww(String)
 	 * @see eu.paasage.camel.organisation.OrganisationPackage#getUser_Www()
-	 * @model annotation="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName body='CloudProvider' unique='false' upper='*'"
+	 * @model
 	 * @generated
 	 */
 	String getWww();

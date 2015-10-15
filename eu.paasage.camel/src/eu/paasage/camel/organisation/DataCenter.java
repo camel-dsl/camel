@@ -39,7 +39,6 @@ public interface DataCenter extends CDOObject {
 	 * @see #setName(String)
 	 * @see eu.paasage.camel.organisation.OrganisationPackage#getDataCenter_Name()
 	 * @model required="true"
-	 *        annotation="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName body='CloudCredentials' unique='false' upper='*'"
 	 * @generated
 	 */
 	String getName();

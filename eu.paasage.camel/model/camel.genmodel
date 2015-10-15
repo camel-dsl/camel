@@ -633,8 +633,8 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//organisation/Permission/name"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference camel.ecore#//organisation/Permission/role"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//organisation/Permission/start"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//organisation/Permission/end"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//organisation/Permission/startTime"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//organisation/Permission/endTime"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference camel.ecore#//organisation/Permission/resourceFilter"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//organisation/Permission/action"/>
@@ -665,9 +665,9 @@
             ecoreFeature="ecore:EReference camel.ecore#//organisation/RoleAssignment/role"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference camel.ecore#//organisation/RoleAssignment/userGroup"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//organisation/RoleAssignment/start"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//organisation/RoleAssignment/end"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//organisation/RoleAssignment/assignedOn"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//organisation/RoleAssignment/startTime"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//organisation/RoleAssignment/endTime"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//organisation/RoleAssignment/assignmentTime"/>
         <genOperations ecoreOperation="camel.ecore#//organisation/RoleAssignment/checkAssignedOnDates">
           <genParameters ecoreParameter="camel.ecore#//organisation/RoleAssignment/checkAssignedOnDates/this"/>
         </genOperations>

@@ -2367,8 +2367,8 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 * Constraint:
 	 *     (
 	 *         name=ID 
-	 *         start=EDate 
-	 *         end=EDate? 
+	 *         startTime=EDate 
+	 *         endTime=EDate? 
 	 *         role=[Role|Fqn] 
 	 *         resourceFilter=[ResourceFilter|Fqn] 
 	 *         action=ActionType
@@ -2812,9 +2812,9 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 * Constraint:
 	 *     (
 	 *         name=ID 
-	 *         start=EDate? 
-	 *         end=EDate? 
-	 *         assignedOn=EDate 
+	 *         startTime=EDate? 
+	 *         endTime=EDate? 
+	 *         assignmentTime=EDate 
 	 *         user=[User|Fqn]? 
 	 *         role=[Role|Fqn] 
 	 *         userGroup=[UserGroup|Fqn]?
