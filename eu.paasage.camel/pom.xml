@@ -2,6 +2,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>camel</artifactId>
+	<groupId>org.ow2.paasage</groupId>
+	<version>2015.9.1-SNAPSHOT</version>
 	<parent>
 		<groupId>org.ow2.paasage</groupId>
 		<artifactId>paasage-pom</artifactId>
