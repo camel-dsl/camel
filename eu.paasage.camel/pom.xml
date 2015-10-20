@@ -51,12 +51,12 @@
 	</dependencies>
 	<repositories>
 		<repository>
-			<id>ow2.releases</id>
+			<id>ow2.release</id>
 			<name>OW2 repository</name>
 			<url>http://repository.ow2.org/nexus/content/repositories/releases/</url>
 		</repository>
 		<repository>
-			<id>ow2.snapshots</id>
+			<id>ow2.snapshot</id>
 			<name>OW2 repository</name>
 			<url>http://repository.ow2.org/nexus/content/repositories/snapshots/</url>
 		</repository>
@@ -68,12 +68,12 @@
 	</repositories>
 	<distributionManagement>
 		<repository>
-			<id>ow2.releases</id>
+			<id>ow2.release</id>
 			<name>OW2 repository</name>
 			<url>http://repository.ow2.org/nexus/content/repositories/releases/</url>
 		</repository>
 		<snapshotRepository>
-			<id>ow2.snapshots</id>
+			<id>ow2.snapshot</id>
 			<name>OW2 repository</name>
 			<url>http://repository.ow2.org/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
