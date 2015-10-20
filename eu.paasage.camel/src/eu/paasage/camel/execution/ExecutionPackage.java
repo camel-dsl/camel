@@ -3,6 +3,7 @@
 package eu.paasage.camel.execution;
 
 import eu.paasage.camel.CamelPackage;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -187,22 +188,22 @@ public interface ExecutionPackage extends EPackage {
 	int ACTION_REALISATION__ACTION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Started On</b></em>' attribute.
+	 * The feature id for the '<em><b>Start Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION_REALISATION__STARTED_ON = 2;
+	int ACTION_REALISATION__START_TIME = 2;
 
 	/**
-	 * The feature id for the '<em><b>Ended On</b></em>' attribute.
+	 * The feature id for the '<em><b>End Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION_REALISATION__ENDED_ON = 3;
+	int ACTION_REALISATION__END_TIME = 3;
 
 	/**
 	 * The feature id for the '<em><b>Low Level Actions</b></em>' attribute.
@@ -387,13 +388,13 @@ public interface ExecutionPackage extends EPackage {
 	int MEASUREMENT__RAW_DATA = 4;
 
 	/**
-	 * The feature id for the '<em><b>Reported On</b></em>' attribute.
+	 * The feature id for the '<em><b>Measurement Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEASUREMENT__REPORTED_ON = 5;
+	int MEASUREMENT__MEASUREMENT_TIME = 5;
 
 	/**
 	 * The feature id for the '<em><b>Slo</b></em>' reference.
@@ -487,13 +488,13 @@ public interface ExecutionPackage extends EPackage {
 	int APPLICATION_MEASUREMENT__RAW_DATA = MEASUREMENT__RAW_DATA;
 
 	/**
-	 * The feature id for the '<em><b>Reported On</b></em>' attribute.
+	 * The feature id for the '<em><b>Measurement Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION_MEASUREMENT__REPORTED_ON = MEASUREMENT__REPORTED_ON;
+	int APPLICATION_MEASUREMENT__MEASUREMENT_TIME = MEASUREMENT__MEASUREMENT_TIME;
 
 	/**
 	 * The feature id for the '<em><b>Slo</b></em>' reference.
@@ -596,13 +597,13 @@ public interface ExecutionPackage extends EPackage {
 	int INTERNAL_COMPONENT_MEASUREMENT__RAW_DATA = MEASUREMENT__RAW_DATA;
 
 	/**
-	 * The feature id for the '<em><b>Reported On</b></em>' attribute.
+	 * The feature id for the '<em><b>Measurement Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNAL_COMPONENT_MEASUREMENT__REPORTED_ON = MEASUREMENT__REPORTED_ON;
+	int INTERNAL_COMPONENT_MEASUREMENT__MEASUREMENT_TIME = MEASUREMENT__MEASUREMENT_TIME;
 
 	/**
 	 * The feature id for the '<em><b>Slo</b></em>' reference.
@@ -650,14 +651,14 @@ public interface ExecutionPackage extends EPackage {
 	int INTERNAL_COMPONENT_MEASUREMENT_OPERATION_COUNT = MEASUREMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link eu.paasage.camel.execution.impl.ResourceCouplingMeasurementImpl <em>Resource Coupling Measurement</em>}' class.
+	 * The meta object id for the '{@link eu.paasage.camel.execution.impl.CommunicationMeasurementImpl <em>Communication Measurement</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see eu.paasage.camel.execution.impl.ResourceCouplingMeasurementImpl
-	 * @see eu.paasage.camel.execution.impl.ExecutionPackageImpl#getResourceCouplingMeasurement()
+	 * @see eu.paasage.camel.execution.impl.CommunicationMeasurementImpl
+	 * @see eu.paasage.camel.execution.impl.ExecutionPackageImpl#getCommunicationMeasurement()
 	 * @generated
 	 */
-	int RESOURCE_COUPLING_MEASUREMENT = 6;
+	int COMMUNICATION_MEASUREMENT = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -666,7 +667,7 @@ public interface ExecutionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_COUPLING_MEASUREMENT__NAME = MEASUREMENT__NAME;
+	int COMMUNICATION_MEASUREMENT__NAME = MEASUREMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Execution Context</b></em>' reference.
@@ -675,7 +676,7 @@ public interface ExecutionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_COUPLING_MEASUREMENT__EXECUTION_CONTEXT = MEASUREMENT__EXECUTION_CONTEXT;
+	int COMMUNICATION_MEASUREMENT__EXECUTION_CONTEXT = MEASUREMENT__EXECUTION_CONTEXT;
 
 	/**
 	 * The feature id for the '<em><b>Metric Instance</b></em>' reference.
@@ -684,7 +685,7 @@ public interface ExecutionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_COUPLING_MEASUREMENT__METRIC_INSTANCE = MEASUREMENT__METRIC_INSTANCE;
+	int COMMUNICATION_MEASUREMENT__METRIC_INSTANCE = MEASUREMENT__METRIC_INSTANCE;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -693,7 +694,7 @@ public interface ExecutionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_COUPLING_MEASUREMENT__VALUE = MEASUREMENT__VALUE;
+	int COMMUNICATION_MEASUREMENT__VALUE = MEASUREMENT__VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Raw Data</b></em>' attribute.
@@ -702,16 +703,16 @@ public interface ExecutionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_COUPLING_MEASUREMENT__RAW_DATA = MEASUREMENT__RAW_DATA;
+	int COMMUNICATION_MEASUREMENT__RAW_DATA = MEASUREMENT__RAW_DATA;
 
 	/**
-	 * The feature id for the '<em><b>Reported On</b></em>' attribute.
+	 * The feature id for the '<em><b>Measurement Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_COUPLING_MEASUREMENT__REPORTED_ON = MEASUREMENT__REPORTED_ON;
+	int COMMUNICATION_MEASUREMENT__MEASUREMENT_TIME = MEASUREMENT__MEASUREMENT_TIME;
 
 	/**
 	 * The feature id for the '<em><b>Slo</b></em>' reference.
@@ -720,7 +721,7 @@ public interface ExecutionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_COUPLING_MEASUREMENT__SLO = MEASUREMENT__SLO;
+	int COMMUNICATION_MEASUREMENT__SLO = MEASUREMENT__SLO;
 
 	/**
 	 * The feature id for the '<em><b>Event Instance</b></em>' reference.
@@ -729,7 +730,7 @@ public interface ExecutionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_COUPLING_MEASUREMENT__EVENT_INSTANCE = MEASUREMENT__EVENT_INSTANCE;
+	int COMMUNICATION_MEASUREMENT__EVENT_INSTANCE = MEASUREMENT__EVENT_INSTANCE;
 
 	/**
 	 * The feature id for the '<em><b>Source VM Instance</b></em>' reference.
@@ -738,7 +739,7 @@ public interface ExecutionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_COUPLING_MEASUREMENT__SOURCE_VM_INSTANCE = MEASUREMENT_FEATURE_COUNT + 0;
+	int COMMUNICATION_MEASUREMENT__SOURCE_VM_INSTANCE = MEASUREMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Destination VM Instance</b></em>' reference.
@@ -747,35 +748,35 @@ public interface ExecutionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_COUPLING_MEASUREMENT__DESTINATION_VM_INSTANCE = MEASUREMENT_FEATURE_COUNT + 1;
+	int COMMUNICATION_MEASUREMENT__DESTINATION_VM_INSTANCE = MEASUREMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Resource Coupling Measurement</em>' class.
+	 * The number of structural features of the '<em>Communication Measurement</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_COUPLING_MEASUREMENT_FEATURE_COUNT = MEASUREMENT_FEATURE_COUNT + 2;
+	int COMMUNICATION_MEASUREMENT_FEATURE_COUNT = MEASUREMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>Resource Coupling Measurement</em>' class.
+	 * The number of operations of the '<em>Communication Measurement</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_COUPLING_MEASUREMENT_OPERATION_COUNT = MEASUREMENT_OPERATION_COUNT + 0;
+	int COMMUNICATION_MEASUREMENT_OPERATION_COUNT = MEASUREMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link eu.paasage.camel.execution.impl.ResourceMeasurementImpl <em>Resource Measurement</em>}' class.
+	 * The meta object id for the '{@link eu.paasage.camel.execution.impl.VMMeasurementImpl <em>VM Measurement</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see eu.paasage.camel.execution.impl.ResourceMeasurementImpl
-	 * @see eu.paasage.camel.execution.impl.ExecutionPackageImpl#getResourceMeasurement()
+	 * @see eu.paasage.camel.execution.impl.VMMeasurementImpl
+	 * @see eu.paasage.camel.execution.impl.ExecutionPackageImpl#getVMMeasurement()
 	 * @generated
 	 */
-	int RESOURCE_MEASUREMENT = 7;
+	int VM_MEASUREMENT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -784,7 +785,7 @@ public interface ExecutionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MEASUREMENT__NAME = MEASUREMENT__NAME;
+	int VM_MEASUREMENT__NAME = MEASUREMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Execution Context</b></em>' reference.
@@ -793,7 +794,7 @@ public interface ExecutionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MEASUREMENT__EXECUTION_CONTEXT = MEASUREMENT__EXECUTION_CONTEXT;
+	int VM_MEASUREMENT__EXECUTION_CONTEXT = MEASUREMENT__EXECUTION_CONTEXT;
 
 	/**
 	 * The feature id for the '<em><b>Metric Instance</b></em>' reference.
@@ -802,7 +803,7 @@ public interface ExecutionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MEASUREMENT__METRIC_INSTANCE = MEASUREMENT__METRIC_INSTANCE;
+	int VM_MEASUREMENT__METRIC_INSTANCE = MEASUREMENT__METRIC_INSTANCE;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -811,7 +812,7 @@ public interface ExecutionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MEASUREMENT__VALUE = MEASUREMENT__VALUE;
+	int VM_MEASUREMENT__VALUE = MEASUREMENT__VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Raw Data</b></em>' attribute.
@@ -820,16 +821,16 @@ public interface ExecutionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MEASUREMENT__RAW_DATA = MEASUREMENT__RAW_DATA;
+	int VM_MEASUREMENT__RAW_DATA = MEASUREMENT__RAW_DATA;
 
 	/**
-	 * The feature id for the '<em><b>Reported On</b></em>' attribute.
+	 * The feature id for the '<em><b>Measurement Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MEASUREMENT__REPORTED_ON = MEASUREMENT__REPORTED_ON;
+	int VM_MEASUREMENT__MEASUREMENT_TIME = MEASUREMENT__MEASUREMENT_TIME;
 
 	/**
 	 * The feature id for the '<em><b>Slo</b></em>' reference.
@@ -838,7 +839,7 @@ public interface ExecutionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MEASUREMENT__SLO = MEASUREMENT__SLO;
+	int VM_MEASUREMENT__SLO = MEASUREMENT__SLO;
 
 	/**
 	 * The feature id for the '<em><b>Event Instance</b></em>' reference.
@@ -847,7 +848,7 @@ public interface ExecutionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MEASUREMENT__EVENT_INSTANCE = MEASUREMENT__EVENT_INSTANCE;
+	int VM_MEASUREMENT__EVENT_INSTANCE = MEASUREMENT__EVENT_INSTANCE;
 
 	/**
 	 * The feature id for the '<em><b>Vm Instance</b></em>' reference.
@@ -856,25 +857,25 @@ public interface ExecutionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MEASUREMENT__VM_INSTANCE = MEASUREMENT_FEATURE_COUNT + 0;
+	int VM_MEASUREMENT__VM_INSTANCE = MEASUREMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Resource Measurement</em>' class.
+	 * The number of structural features of the '<em>VM Measurement</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MEASUREMENT_FEATURE_COUNT = MEASUREMENT_FEATURE_COUNT + 1;
+	int VM_MEASUREMENT_FEATURE_COUNT = MEASUREMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Resource Measurement</em>' class.
+	 * The number of operations of the '<em>VM Measurement</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MEASUREMENT_OPERATION_COUNT = MEASUREMENT_OPERATION_COUNT + 0;
+	int VM_MEASUREMENT_OPERATION_COUNT = MEASUREMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link eu.paasage.camel.execution.impl.SLOAssessmentImpl <em>SLO Assessment</em>}' class.
@@ -1005,13 +1006,13 @@ public interface ExecutionPackage extends EPackage {
 	int RULE_TRIGGER__ACTION_REALISATIONS = 3;
 
 	/**
-	 * The feature id for the '<em><b>Fired On</b></em>' attribute.
+	 * The feature id for the '<em><b>Trigerring Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RULE_TRIGGER__FIRED_ON = 4;
+	int RULE_TRIGGER__TRIGERRING_TIME = 4;
 
 	/**
 	 * The feature id for the '<em><b>Execution Context</b></em>' reference.
@@ -1150,26 +1151,26 @@ public interface ExecutionPackage extends EPackage {
 	EReference getActionRealisation_Action();
 
 	/**
-	 * Returns the meta object for the attribute '{@link eu.paasage.camel.execution.ActionRealisation#getStartedOn <em>Started On</em>}'.
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.execution.ActionRealisation#getStartTime <em>Start Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Started On</em>'.
-	 * @see eu.paasage.camel.execution.ActionRealisation#getStartedOn()
+	 * @return the meta object for the attribute '<em>Start Time</em>'.
+	 * @see eu.paasage.camel.execution.ActionRealisation#getStartTime()
 	 * @see #getActionRealisation()
 	 * @generated
 	 */
-	EAttribute getActionRealisation_StartedOn();
+	EAttribute getActionRealisation_StartTime();
 
 	/**
-	 * Returns the meta object for the attribute '{@link eu.paasage.camel.execution.ActionRealisation#getEndedOn <em>Ended On</em>}'.
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.execution.ActionRealisation#getEndTime <em>End Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Ended On</em>'.
-	 * @see eu.paasage.camel.execution.ActionRealisation#getEndedOn()
+	 * @return the meta object for the attribute '<em>End Time</em>'.
+	 * @see eu.paasage.camel.execution.ActionRealisation#getEndTime()
 	 * @see #getActionRealisation()
 	 * @generated
 	 */
-	EAttribute getActionRealisation_EndedOn();
+	EAttribute getActionRealisation_EndTime();
 
 	/**
 	 * Returns the meta object for the attribute '{@link eu.paasage.camel.execution.ActionRealisation#getLowLevelActions <em>Low Level Actions</em>}'.
@@ -1193,17 +1194,6 @@ public interface ExecutionPackage extends EPackage {
 	EClass getExecutionContext();
 
 	/**
-	 * Returns the meta object for the reference '{@link eu.paasage.camel.execution.ExecutionContext#getApplication <em>Application</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Application</em>'.
-	 * @see eu.paasage.camel.execution.ExecutionContext#getApplication()
-	 * @see #getExecutionContext()
-	 * @generated
-	 */
-	EReference getExecutionContext_Application();
-
-	/**
 	 * Returns the meta object for the attribute '{@link eu.paasage.camel.execution.ExecutionContext#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1213,6 +1203,17 @@ public interface ExecutionPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getExecutionContext_Name();
+
+	/**
+	 * Returns the meta object for the reference '{@link eu.paasage.camel.execution.ExecutionContext#getApplication <em>Application</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Application</em>'.
+	 * @see eu.paasage.camel.execution.ExecutionContext#getApplication()
+	 * @see #getExecutionContext()
+	 * @generated
+	 */
+	EReference getExecutionContext_Application();
 
 	/**
 	 * Returns the meta object for the attribute '{@link eu.paasage.camel.execution.ExecutionContext#getStartTime <em>Start Time</em>}'.
@@ -1346,15 +1347,15 @@ public interface ExecutionPackage extends EPackage {
 	EAttribute getMeasurement_RawData();
 
 	/**
-	 * Returns the meta object for the attribute '{@link eu.paasage.camel.execution.Measurement#getReportedOn <em>Reported On</em>}'.
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.execution.Measurement#getMeasurementTime <em>Measurement Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Reported On</em>'.
-	 * @see eu.paasage.camel.execution.Measurement#getReportedOn()
+	 * @return the meta object for the attribute '<em>Measurement Time</em>'.
+	 * @see eu.paasage.camel.execution.Measurement#getMeasurementTime()
 	 * @see #getMeasurement()
 	 * @generated
 	 */
-	EAttribute getMeasurement_ReportedOn();
+	EAttribute getMeasurement_MeasurementTime();
 
 	/**
 	 * Returns the meta object for the reference '{@link eu.paasage.camel.execution.Measurement#getSlo <em>Slo</em>}'.
@@ -1421,57 +1422,57 @@ public interface ExecutionPackage extends EPackage {
 	EReference getInternalComponentMeasurement_InternalComponentInstance();
 
 	/**
-	 * Returns the meta object for class '{@link eu.paasage.camel.execution.ResourceCouplingMeasurement <em>Resource Coupling Measurement</em>}'.
+	 * Returns the meta object for class '{@link eu.paasage.camel.execution.CommunicationMeasurement <em>Communication Measurement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Resource Coupling Measurement</em>'.
-	 * @see eu.paasage.camel.execution.ResourceCouplingMeasurement
+	 * @return the meta object for class '<em>Communication Measurement</em>'.
+	 * @see eu.paasage.camel.execution.CommunicationMeasurement
 	 * @generated
 	 */
-	EClass getResourceCouplingMeasurement();
+	EClass getCommunicationMeasurement();
 
 	/**
-	 * Returns the meta object for the reference '{@link eu.paasage.camel.execution.ResourceCouplingMeasurement#getSourceVMInstance <em>Source VM Instance</em>}'.
+	 * Returns the meta object for the reference '{@link eu.paasage.camel.execution.CommunicationMeasurement#getSourceVMInstance <em>Source VM Instance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Source VM Instance</em>'.
-	 * @see eu.paasage.camel.execution.ResourceCouplingMeasurement#getSourceVMInstance()
-	 * @see #getResourceCouplingMeasurement()
+	 * @see eu.paasage.camel.execution.CommunicationMeasurement#getSourceVMInstance()
+	 * @see #getCommunicationMeasurement()
 	 * @generated
 	 */
-	EReference getResourceCouplingMeasurement_SourceVMInstance();
+	EReference getCommunicationMeasurement_SourceVMInstance();
 
 	/**
-	 * Returns the meta object for the reference '{@link eu.paasage.camel.execution.ResourceCouplingMeasurement#getDestinationVMInstance <em>Destination VM Instance</em>}'.
+	 * Returns the meta object for the reference '{@link eu.paasage.camel.execution.CommunicationMeasurement#getDestinationVMInstance <em>Destination VM Instance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Destination VM Instance</em>'.
-	 * @see eu.paasage.camel.execution.ResourceCouplingMeasurement#getDestinationVMInstance()
-	 * @see #getResourceCouplingMeasurement()
+	 * @see eu.paasage.camel.execution.CommunicationMeasurement#getDestinationVMInstance()
+	 * @see #getCommunicationMeasurement()
 	 * @generated
 	 */
-	EReference getResourceCouplingMeasurement_DestinationVMInstance();
+	EReference getCommunicationMeasurement_DestinationVMInstance();
 
 	/**
-	 * Returns the meta object for class '{@link eu.paasage.camel.execution.ResourceMeasurement <em>Resource Measurement</em>}'.
+	 * Returns the meta object for class '{@link eu.paasage.camel.execution.VMMeasurement <em>VM Measurement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Resource Measurement</em>'.
-	 * @see eu.paasage.camel.execution.ResourceMeasurement
+	 * @return the meta object for class '<em>VM Measurement</em>'.
+	 * @see eu.paasage.camel.execution.VMMeasurement
 	 * @generated
 	 */
-	EClass getResourceMeasurement();
+	EClass getVMMeasurement();
 
 	/**
-	 * Returns the meta object for the reference '{@link eu.paasage.camel.execution.ResourceMeasurement#getVmInstance <em>Vm Instance</em>}'.
+	 * Returns the meta object for the reference '{@link eu.paasage.camel.execution.VMMeasurement#getVmInstance <em>Vm Instance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Vm Instance</em>'.
-	 * @see eu.paasage.camel.execution.ResourceMeasurement#getVmInstance()
-	 * @see #getResourceMeasurement()
+	 * @see eu.paasage.camel.execution.VMMeasurement#getVmInstance()
+	 * @see #getVMMeasurement()
 	 * @generated
 	 */
-	EReference getResourceMeasurement_VmInstance();
+	EReference getVMMeasurement_VmInstance();
 
 	/**
 	 * Returns the meta object for class '{@link eu.paasage.camel.execution.SLOAssessment <em>SLO Assessment</em>}'.
@@ -1604,15 +1605,15 @@ public interface ExecutionPackage extends EPackage {
 	EReference getRuleTrigger_ActionRealisations();
 
 	/**
-	 * Returns the meta object for the attribute '{@link eu.paasage.camel.execution.RuleTrigger#getFiredOn <em>Fired On</em>}'.
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.execution.RuleTrigger#getTrigerringTime <em>Trigerring Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Fired On</em>'.
-	 * @see eu.paasage.camel.execution.RuleTrigger#getFiredOn()
+	 * @return the meta object for the attribute '<em>Trigerring Time</em>'.
+	 * @see eu.paasage.camel.execution.RuleTrigger#getTrigerringTime()
 	 * @see #getRuleTrigger()
 	 * @generated
 	 */
-	EAttribute getRuleTrigger_FiredOn();
+	EAttribute getRuleTrigger_TrigerringTime();
 
 	/**
 	 * Returns the meta object for the reference '{@link eu.paasage.camel.execution.RuleTrigger#getExecutionContext <em>Execution Context</em>}'.
@@ -1733,20 +1734,20 @@ public interface ExecutionPackage extends EPackage {
 		EReference ACTION_REALISATION__ACTION = eINSTANCE.getActionRealisation_Action();
 
 		/**
-		 * The meta object literal for the '<em><b>Started On</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Start Time</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ACTION_REALISATION__STARTED_ON = eINSTANCE.getActionRealisation_StartedOn();
+		EAttribute ACTION_REALISATION__START_TIME = eINSTANCE.getActionRealisation_StartTime();
 
 		/**
-		 * The meta object literal for the '<em><b>Ended On</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>End Time</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ACTION_REALISATION__ENDED_ON = eINSTANCE.getActionRealisation_EndedOn();
+		EAttribute ACTION_REALISATION__END_TIME = eINSTANCE.getActionRealisation_EndTime();
 
 		/**
 		 * The meta object literal for the '<em><b>Low Level Actions</b></em>' attribute feature.
@@ -1767,20 +1768,20 @@ public interface ExecutionPackage extends EPackage {
 		EClass EXECUTION_CONTEXT = eINSTANCE.getExecutionContext();
 
 		/**
-		 * The meta object literal for the '<em><b>Application</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXECUTION_CONTEXT__APPLICATION = eINSTANCE.getExecutionContext_Application();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute EXECUTION_CONTEXT__NAME = eINSTANCE.getExecutionContext_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Application</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXECUTION_CONTEXT__APPLICATION = eINSTANCE.getExecutionContext_Application();
 
 		/**
 		 * The meta object literal for the '<em><b>Start Time</b></em>' attribute feature.
@@ -1881,12 +1882,12 @@ public interface ExecutionPackage extends EPackage {
 		EAttribute MEASUREMENT__RAW_DATA = eINSTANCE.getMeasurement_RawData();
 
 		/**
-		 * The meta object literal for the '<em><b>Reported On</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Measurement Time</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MEASUREMENT__REPORTED_ON = eINSTANCE.getMeasurement_ReportedOn();
+		EAttribute MEASUREMENT__MEASUREMENT_TIME = eINSTANCE.getMeasurement_MeasurementTime();
 
 		/**
 		 * The meta object literal for the '<em><b>Slo</b></em>' reference feature.
@@ -1941,14 +1942,14 @@ public interface ExecutionPackage extends EPackage {
 		EReference INTERNAL_COMPONENT_MEASUREMENT__INTERNAL_COMPONENT_INSTANCE = eINSTANCE.getInternalComponentMeasurement_InternalComponentInstance();
 
 		/**
-		 * The meta object literal for the '{@link eu.paasage.camel.execution.impl.ResourceCouplingMeasurementImpl <em>Resource Coupling Measurement</em>}' class.
+		 * The meta object literal for the '{@link eu.paasage.camel.execution.impl.CommunicationMeasurementImpl <em>Communication Measurement</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see eu.paasage.camel.execution.impl.ResourceCouplingMeasurementImpl
-		 * @see eu.paasage.camel.execution.impl.ExecutionPackageImpl#getResourceCouplingMeasurement()
+		 * @see eu.paasage.camel.execution.impl.CommunicationMeasurementImpl
+		 * @see eu.paasage.camel.execution.impl.ExecutionPackageImpl#getCommunicationMeasurement()
 		 * @generated
 		 */
-		EClass RESOURCE_COUPLING_MEASUREMENT = eINSTANCE.getResourceCouplingMeasurement();
+		EClass COMMUNICATION_MEASUREMENT = eINSTANCE.getCommunicationMeasurement();
 
 		/**
 		 * The meta object literal for the '<em><b>Source VM Instance</b></em>' reference feature.
@@ -1956,7 +1957,7 @@ public interface ExecutionPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESOURCE_COUPLING_MEASUREMENT__SOURCE_VM_INSTANCE = eINSTANCE.getResourceCouplingMeasurement_SourceVMInstance();
+		EReference COMMUNICATION_MEASUREMENT__SOURCE_VM_INSTANCE = eINSTANCE.getCommunicationMeasurement_SourceVMInstance();
 
 		/**
 		 * The meta object literal for the '<em><b>Destination VM Instance</b></em>' reference feature.
@@ -1964,17 +1965,17 @@ public interface ExecutionPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESOURCE_COUPLING_MEASUREMENT__DESTINATION_VM_INSTANCE = eINSTANCE.getResourceCouplingMeasurement_DestinationVMInstance();
+		EReference COMMUNICATION_MEASUREMENT__DESTINATION_VM_INSTANCE = eINSTANCE.getCommunicationMeasurement_DestinationVMInstance();
 
 		/**
-		 * The meta object literal for the '{@link eu.paasage.camel.execution.impl.ResourceMeasurementImpl <em>Resource Measurement</em>}' class.
+		 * The meta object literal for the '{@link eu.paasage.camel.execution.impl.VMMeasurementImpl <em>VM Measurement</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see eu.paasage.camel.execution.impl.ResourceMeasurementImpl
-		 * @see eu.paasage.camel.execution.impl.ExecutionPackageImpl#getResourceMeasurement()
+		 * @see eu.paasage.camel.execution.impl.VMMeasurementImpl
+		 * @see eu.paasage.camel.execution.impl.ExecutionPackageImpl#getVMMeasurement()
 		 * @generated
 		 */
-		EClass RESOURCE_MEASUREMENT = eINSTANCE.getResourceMeasurement();
+		EClass VM_MEASUREMENT = eINSTANCE.getVMMeasurement();
 
 		/**
 		 * The meta object literal for the '<em><b>Vm Instance</b></em>' reference feature.
@@ -1982,7 +1983,7 @@ public interface ExecutionPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESOURCE_MEASUREMENT__VM_INSTANCE = eINSTANCE.getResourceMeasurement_VmInstance();
+		EReference VM_MEASUREMENT__VM_INSTANCE = eINSTANCE.getVMMeasurement_VmInstance();
 
 		/**
 		 * The meta object literal for the '{@link eu.paasage.camel.execution.impl.SLOAssessmentImpl <em>SLO Assessment</em>}' class.
@@ -2085,12 +2086,12 @@ public interface ExecutionPackage extends EPackage {
 		EReference RULE_TRIGGER__ACTION_REALISATIONS = eINSTANCE.getRuleTrigger_ActionRealisations();
 
 		/**
-		 * The meta object literal for the '<em><b>Fired On</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Trigerring Time</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RULE_TRIGGER__FIRED_ON = eINSTANCE.getRuleTrigger_FiredOn();
+		EAttribute RULE_TRIGGER__TRIGERRING_TIME = eINSTANCE.getRuleTrigger_TrigerringTime();
 
 		/**
 		 * The meta object literal for the '<em><b>Execution Context</b></em>' reference feature.

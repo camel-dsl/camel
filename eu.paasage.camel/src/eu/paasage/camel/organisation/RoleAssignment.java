@@ -3,6 +3,7 @@
 package eu.paasage.camel.organisation;
 
 import java.util.Date;
+
 import org.eclipse.emf.cdo.CDOObject;
 
 /**
@@ -17,9 +18,9 @@ import org.eclipse.emf.cdo.CDOObject;
  *   <li>{@link eu.paasage.camel.organisation.RoleAssignment#getUser <em>User</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.RoleAssignment#getRole <em>Role</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.RoleAssignment#getUserGroup <em>User Group</em>}</li>
- *   <li>{@link eu.paasage.camel.organisation.RoleAssignment#getStart <em>Start</em>}</li>
- *   <li>{@link eu.paasage.camel.organisation.RoleAssignment#getEnd <em>End</em>}</li>
- *   <li>{@link eu.paasage.camel.organisation.RoleAssignment#getAssignedOn <em>Assigned On</em>}</li>
+ *   <li>{@link eu.paasage.camel.organisation.RoleAssignment#getStartTime <em>Start Time</em>}</li>
+ *   <li>{@link eu.paasage.camel.organisation.RoleAssignment#getEndTime <em>End Time</em>}</li>
+ *   <li>{@link eu.paasage.camel.organisation.RoleAssignment#getAssignmentTime <em>Assignment Time</em>}</li>
  * </ul>
  * </p>
  *
@@ -135,88 +136,88 @@ public interface RoleAssignment extends CDOObject {
 	void setUserGroup(UserGroup value);
 
 	/**
-	 * Returns the value of the '<em><b>Start</b></em>' attribute.
+	 * Returns the value of the '<em><b>Start Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Start</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Start Time</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Start</em>' attribute.
-	 * @see #setStart(Date)
-	 * @see eu.paasage.camel.organisation.OrganisationPackage#getRoleAssignment_Start()
+	 * @return the value of the '<em>Start Time</em>' attribute.
+	 * @see #setStartTime(Date)
+	 * @see eu.paasage.camel.organisation.OrganisationPackage#getRoleAssignment_StartTime()
 	 * @model
 	 * @generated
 	 */
-	Date getStart();
+	Date getStartTime();
 
 	/**
-	 * Sets the value of the '{@link eu.paasage.camel.organisation.RoleAssignment#getStart <em>Start</em>}' attribute.
+	 * Sets the value of the '{@link eu.paasage.camel.organisation.RoleAssignment#getStartTime <em>Start Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Start</em>' attribute.
-	 * @see #getStart()
+	 * @param value the new value of the '<em>Start Time</em>' attribute.
+	 * @see #getStartTime()
 	 * @generated
 	 */
-	void setStart(Date value);
+	void setStartTime(Date value);
 
 	/**
-	 * Returns the value of the '<em><b>End</b></em>' attribute.
+	 * Returns the value of the '<em><b>End Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>End</em>' attribute isn't clear,
+	 * If the meaning of the '<em>End Time</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>End</em>' attribute.
-	 * @see #setEnd(Date)
-	 * @see eu.paasage.camel.organisation.OrganisationPackage#getRoleAssignment_End()
+	 * @return the value of the '<em>End Time</em>' attribute.
+	 * @see #setEndTime(Date)
+	 * @see eu.paasage.camel.organisation.OrganisationPackage#getRoleAssignment_EndTime()
 	 * @model
 	 * @generated
 	 */
-	Date getEnd();
+	Date getEndTime();
 
 	/**
-	 * Sets the value of the '{@link eu.paasage.camel.organisation.RoleAssignment#getEnd <em>End</em>}' attribute.
+	 * Sets the value of the '{@link eu.paasage.camel.organisation.RoleAssignment#getEndTime <em>End Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>End</em>' attribute.
-	 * @see #getEnd()
+	 * @param value the new value of the '<em>End Time</em>' attribute.
+	 * @see #getEndTime()
 	 * @generated
 	 */
-	void setEnd(Date value);
+	void setEndTime(Date value);
 
 	/**
-	 * Returns the value of the '<em><b>Assigned On</b></em>' attribute.
+	 * Returns the value of the '<em><b>Assignment Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Assigned On</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Assignment Time</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Assigned On</em>' attribute.
-	 * @see #setAssignedOn(Date)
-	 * @see eu.paasage.camel.organisation.OrganisationPackage#getRoleAssignment_AssignedOn()
+	 * @return the value of the '<em>Assignment Time</em>' attribute.
+	 * @see #setAssignmentTime(Date)
+	 * @see eu.paasage.camel.organisation.OrganisationPackage#getRoleAssignment_AssignmentTime()
 	 * @model required="true"
 	 * @generated
 	 */
-	Date getAssignedOn();
+	Date getAssignmentTime();
 
 	/**
-	 * Sets the value of the '{@link eu.paasage.camel.organisation.RoleAssignment#getAssignedOn <em>Assigned On</em>}' attribute.
+	 * Sets the value of the '{@link eu.paasage.camel.organisation.RoleAssignment#getAssignmentTime <em>Assignment Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Assigned On</em>' attribute.
-	 * @see #getAssignedOn()
+	 * @param value the new value of the '<em>Assignment Time</em>' attribute.
+	 * @see #getAssignmentTime()
 	 * @generated
 	 */
-	void setAssignedOn(Date value);
+	void setAssignmentTime(Date value);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model thisRequired="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='System.out.println(\"CHECKING Assignment_Assigned_Before_Start: \" + this + \" \" + this.getStart() + \" \" + this.getEnd() + \" \" + this.getAssignedOn()); java.util.Date date1 = this.getStart(); java.util.Date date2 = this.getEnd(); java.util.Date date = this.getAssignedOn(); if (date == null) return Boolean.TRUE; else if (date1 != null){ if (date.equals(date1) || date.before(date1)) return Boolean.TRUE; else return Boolean.FALSE;} else if (date2 != null && date.before(date2)) return Boolean.TRUE; return Boolean.FALSE;'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='System.out.println(\"CHECKING Assignment_Assigned_Before_Start: \" + this + \" \" + this.getStartTime() + \" \" + this.getEndTime() + \" \" + this.getAssignmentTime()); java.util.Date date1 = this.getStartTime(); java.util.Date date2 = this.getEndTime(); java.util.Date date = this.getAssignmentTime(); if (date == null) return Boolean.TRUE; else if (date1 != null){ if (date.equals(date1) || date.before(date1)) return Boolean.TRUE; else return Boolean.FALSE;} else if (date2 != null && date.before(date2)) return Boolean.TRUE; return Boolean.FALSE;'"
 	 * @generated
 	 */
 	boolean checkAssignedOnDates(RoleAssignment this_);
@@ -225,7 +226,7 @@ public interface RoleAssignment extends CDOObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model thisRequired="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='System.out.println(\"CHECKING Assignment_Start_Before_End: \" + this + \" \" + this.getStart() + \" \" + this.getEnd() + \" \" + this.getAssignedOn()); java.util.Date date1 = this.getStart(); java.util.Date date2 = this.getEnd(); if (date1 == null || date2 == null || (date1 != null && date2 != null && date1.before(date2))) return Boolean.TRUE; return Boolean.FALSE;'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='System.out.println(\"CHECKING Assignment_Start_Before_End: \" + this + \" \" + this.getStartTime() + \" \" + this.getEndTime() + \" \" + this.getAssignmentTime()); java.util.Date date1 = this.getStartTime(); java.util.Date date2 = this.getEndTime(); if (date1 == null || date2 == null || (date1 != null && date2 != null && date1.before(date2))) return Boolean.TRUE; return Boolean.FALSE;'"
 	 * @generated
 	 */
 	boolean checkStartEndDates(RoleAssignment this_);

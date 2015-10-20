@@ -22,8 +22,8 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <ul>
  *   <li>{@link eu.paasage.camel.execution.impl.ActionRealisationImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.impl.ActionRealisationImpl#getAction <em>Action</em>}</li>
- *   <li>{@link eu.paasage.camel.execution.impl.ActionRealisationImpl#getStartedOn <em>Started On</em>}</li>
- *   <li>{@link eu.paasage.camel.execution.impl.ActionRealisationImpl#getEndedOn <em>Ended On</em>}</li>
+ *   <li>{@link eu.paasage.camel.execution.impl.ActionRealisationImpl#getStartTime <em>Start Time</em>}</li>
+ *   <li>{@link eu.paasage.camel.execution.impl.ActionRealisationImpl#getEndTime <em>End Time</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.impl.ActionRealisationImpl#getLowLevelActions <em>Low Level Actions</em>}</li>
  * </ul>
  * </p>
@@ -101,8 +101,8 @@ public class ActionRealisationImpl extends CDOObjectImpl implements ActionRealis
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getStartedOn() {
-		return (Date)eGet(ExecutionPackage.Literals.ACTION_REALISATION__STARTED_ON, true);
+	public Date getStartTime() {
+		return (Date)eGet(ExecutionPackage.Literals.ACTION_REALISATION__START_TIME, true);
 	}
 
 	/**
@@ -110,8 +110,8 @@ public class ActionRealisationImpl extends CDOObjectImpl implements ActionRealis
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStartedOn(Date newStartedOn) {
-		eSet(ExecutionPackage.Literals.ACTION_REALISATION__STARTED_ON, newStartedOn);
+	public void setStartTime(Date newStartTime) {
+		eSet(ExecutionPackage.Literals.ACTION_REALISATION__START_TIME, newStartTime);
 	}
 
 	/**
@@ -119,8 +119,8 @@ public class ActionRealisationImpl extends CDOObjectImpl implements ActionRealis
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getEndedOn() {
-		return (Date)eGet(ExecutionPackage.Literals.ACTION_REALISATION__ENDED_ON, true);
+	public Date getEndTime() {
+		return (Date)eGet(ExecutionPackage.Literals.ACTION_REALISATION__END_TIME, true);
 	}
 
 	/**
@@ -128,8 +128,8 @@ public class ActionRealisationImpl extends CDOObjectImpl implements ActionRealis
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEndedOn(Date newEndedOn) {
-		eSet(ExecutionPackage.Literals.ACTION_REALISATION__ENDED_ON, newEndedOn);
+	public void setEndTime(Date newEndTime) {
+		eSet(ExecutionPackage.Literals.ACTION_REALISATION__END_TIME, newEndTime);
 	}
 
 	/**

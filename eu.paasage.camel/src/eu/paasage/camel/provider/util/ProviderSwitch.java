@@ -3,6 +3,7 @@
 package eu.paasage.camel.provider.util;
 
 import eu.paasage.camel.Model;
+
 import eu.paasage.camel.provider.*;
 
 import org.eclipse.emf.ecore.EObject;

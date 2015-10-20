@@ -26,7 +26,9 @@ public enum ActionType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	EVENT_CREATION(0, "EVENT_CREATION", "EVENT_CREATION"), /**
+	EVENT_CREATION(0, "EVENT_CREATION", "EVENT_CREATION"),
+
+	/**
 	 * The '<em><b>SCALE IN</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -64,7 +66,9 @@ public enum ActionType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	SCALE_DOWN(4, "SCALE_DOWN", "SCALE_DOWN"), /**
+	SCALE_DOWN(4, "SCALE_DOWN", "SCALE_DOWN"),
+
+	/**
 	 * The '<em><b>READ</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -72,7 +76,9 @@ public enum ActionType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	READ(5, "READ", "READ"), /**
+	READ(5, "READ", "READ"),
+
+	/**
 	 * The '<em><b>WRITE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -4,8 +4,11 @@ package eu.paasage.camel.execution;
 
 import eu.paasage.camel.scalability.EventInstance;
 import eu.paasage.camel.scalability.ScalabilityRule;
+
 import java.util.Date;
+
 import org.eclipse.emf.cdo.CDOObject;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -20,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link eu.paasage.camel.execution.RuleTrigger#getScalabilityRule <em>Scalability Rule</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.RuleTrigger#getEventInstances <em>Event Instances</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.RuleTrigger#getActionRealisations <em>Action Realisations</em>}</li>
- *   <li>{@link eu.paasage.camel.execution.RuleTrigger#getFiredOn <em>Fired On</em>}</li>
+ *   <li>{@link eu.paasage.camel.execution.RuleTrigger#getTrigerringTime <em>Trigerring Time</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.RuleTrigger#getExecutionContext <em>Execution Context</em>}</li>
  * </ul>
  * </p>
@@ -61,6 +64,10 @@ public interface RuleTrigger extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Scalability Rule</b></em>' reference.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Scalability Rule</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Scalability Rule</em>' reference.
 	 * @see #setScalabilityRule(ScalabilityRule)
@@ -113,30 +120,30 @@ public interface RuleTrigger extends CDOObject {
 	EList<ActionRealisation> getActionRealisations();
 
 	/**
-	 * Returns the value of the '<em><b>Fired On</b></em>' attribute.
+	 * Returns the value of the '<em><b>Trigerring Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Fired On</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Trigerring Time</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Fired On</em>' attribute.
-	 * @see #setFiredOn(Date)
-	 * @see eu.paasage.camel.execution.ExecutionPackage#getRuleTrigger_FiredOn()
+	 * @return the value of the '<em>Trigerring Time</em>' attribute.
+	 * @see #setTrigerringTime(Date)
+	 * @see eu.paasage.camel.execution.ExecutionPackage#getRuleTrigger_TrigerringTime()
 	 * @model required="true"
 	 * @generated
 	 */
-	Date getFiredOn();
+	Date getTrigerringTime();
 
 	/**
-	 * Sets the value of the '{@link eu.paasage.camel.execution.RuleTrigger#getFiredOn <em>Fired On</em>}' attribute.
+	 * Sets the value of the '{@link eu.paasage.camel.execution.RuleTrigger#getTrigerringTime <em>Trigerring Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Fired On</em>' attribute.
-	 * @see #getFiredOn()
+	 * @param value the new value of the '<em>Trigerring Time</em>' attribute.
+	 * @see #getTrigerringTime()
 	 * @generated
 	 */
-	void setFiredOn(Date value);
+	void setTrigerringTime(Date value);
 
 	/**
 	 * Returns the value of the '<em><b>Execution Context</b></em>' reference.

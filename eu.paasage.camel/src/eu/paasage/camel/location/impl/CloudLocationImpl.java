@@ -5,8 +5,11 @@ package eu.paasage.camel.location.impl;
 import eu.paasage.camel.location.CloudLocation;
 import eu.paasage.camel.location.GeographicalRegion;
 import eu.paasage.camel.location.LocationPackage;
+
 import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

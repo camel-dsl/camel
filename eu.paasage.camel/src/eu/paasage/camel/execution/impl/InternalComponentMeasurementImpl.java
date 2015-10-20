@@ -3,8 +3,10 @@
 package eu.paasage.camel.execution.impl;
 
 import eu.paasage.camel.deployment.InternalComponentInstance;
+
 import eu.paasage.camel.execution.ExecutionPackage;
 import eu.paasage.camel.execution.InternalComponentMeasurement;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

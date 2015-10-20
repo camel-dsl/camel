@@ -3,7 +3,9 @@
 package eu.paasage.camel.metric;
 
 import eu.paasage.camel.Application;
+
 import eu.paasage.camel.deployment.Component;
+
 import org.eclipse.emf.cdo.CDOObject;
 
 /**

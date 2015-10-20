@@ -7,6 +7,7 @@ import eu.paasage.camel.Application;
 import eu.paasage.camel.deployment.InternalComponent;
 
 import eu.paasage.camel.security.SecurityControl;
+
 import org.eclipse.emf.common.util.EList;
 
 /**

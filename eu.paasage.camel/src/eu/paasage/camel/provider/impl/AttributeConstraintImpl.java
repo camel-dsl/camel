@@ -5,8 +5,11 @@ package eu.paasage.camel.provider.impl;
 import eu.paasage.camel.provider.Attribute;
 import eu.paasage.camel.provider.AttributeConstraint;
 import eu.paasage.camel.provider.ProviderPackage;
+
 import eu.paasage.camel.type.SingleValue;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 /**
@@ -54,6 +57,24 @@ public class AttributeConstraintImpl extends CDOObjectImpl implements AttributeC
 	@Override
 	protected int eStaticFeatureCount() {
 		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return (String)eGet(ProviderPackage.Literals.ATTRIBUTE_CONSTRAINT__NAME, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		eSet(ProviderPackage.Literals.ATTRIBUTE_CONSTRAINT__NAME, newName);
 	}
 
 	/**
@@ -126,24 +147,6 @@ public class AttributeConstraintImpl extends CDOObjectImpl implements AttributeC
 	 */
 	public void setToValue(SingleValue newToValue) {
 		eSet(ProviderPackage.Literals.ATTRIBUTE_CONSTRAINT__TO_VALUE, newToValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return (String)eGet(ProviderPackage.Literals.ATTRIBUTE_CONSTRAINT__NAME, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		eSet(ProviderPackage.Literals.ATTRIBUTE_CONSTRAINT__NAME, newName);
 	}
 
 } //AttributeConstraintImpl

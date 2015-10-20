@@ -3,12 +3,15 @@
 package eu.paasage.camel.location.impl;
 
 import eu.paasage.camel.impl.ModelImpl;
+
 import eu.paasage.camel.location.CloudLocation;
 import eu.paasage.camel.location.Country;
 import eu.paasage.camel.location.GeographicalRegion;
 import eu.paasage.camel.location.LocationModel;
 import eu.paasage.camel.location.LocationPackage;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

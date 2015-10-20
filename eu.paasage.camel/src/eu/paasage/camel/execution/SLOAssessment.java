@@ -3,7 +3,9 @@
 package eu.paasage.camel.execution;
 
 import eu.paasage.camel.requirement.ServiceLevelObjective;
+
 import java.util.Date;
+
 import org.eclipse.emf.cdo.CDOObject;
 
 /**
@@ -59,6 +61,10 @@ public interface SLOAssessment extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Slo</b></em>' reference.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Slo</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Slo</em>' reference.
 	 * @see #setSlo(ServiceLevelObjective)

@@ -5,6 +5,7 @@ package eu.paasage.camel.deployment.impl;
 import eu.paasage.camel.deployment.CommunicationPort;
 import eu.paasage.camel.deployment.CommunicationPortInstance;
 import eu.paasage.camel.deployment.DeploymentPackage;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

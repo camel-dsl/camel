@@ -67,9 +67,7 @@ public interface CloudProvider extends Organisation {
 	 * @return the value of the '<em>Saa S</em>' attribute.
 	 * @see #setSaaS(boolean)
 	 * @see eu.paasage.camel.organisation.OrganisationPackage#getCloudProvider_SaaS()
-	 * @model annotation="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName body='Constraint' unique='false' upper='*'"
-	 *        annotation="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName body='Clone' unique='false' upper='*'"
-	 *        annotation="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName body='Clone' unique='false' upper='*'"
+	 * @model
 	 * @generated
 	 */
 	boolean isSaaS();
@@ -95,7 +93,7 @@ public interface CloudProvider extends Organisation {
 	 * @return the value of the '<em>Paa S</em>' attribute.
 	 * @see #setPaaS(boolean)
 	 * @see eu.paasage.camel.organisation.OrganisationPackage#getCloudProvider_PaaS()
-	 * @model annotation="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName body='Constraint' unique='false' upper='*'"
+	 * @model
 	 * @generated
 	 */
 	boolean isPaaS();
@@ -121,7 +119,7 @@ public interface CloudProvider extends Organisation {
 	 * @return the value of the '<em>Iaa S</em>' attribute.
 	 * @see #setIaaS(boolean)
 	 * @see eu.paasage.camel.organisation.OrganisationPackage#getCloudProvider_IaaS()
-	 * @model annotation="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName body='Constraint'"
+	 * @model
 	 * @generated
 	 */
 	boolean isIaaS();

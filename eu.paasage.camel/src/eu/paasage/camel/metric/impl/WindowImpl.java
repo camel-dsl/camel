@@ -66,6 +66,24 @@ public class WindowImpl extends CDOObjectImpl implements Window {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return (String)eGet(MetricPackage.Literals.WINDOW__NAME, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		eSet(MetricPackage.Literals.WINDOW__NAME, newName);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TimeIntervalUnit getUnit() {
 		return (TimeIntervalUnit)eGet(MetricPackage.Literals.WINDOW__UNIT, true);
 	}
@@ -149,24 +167,6 @@ public class WindowImpl extends CDOObjectImpl implements Window {
 	 */
 	public void setTimeSize(long newTimeSize) {
 		eSet(MetricPackage.Literals.WINDOW__TIME_SIZE, newTimeSize);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return (String)eGet(MetricPackage.Literals.WINDOW__NAME, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		eSet(MetricPackage.Literals.WINDOW__NAME, newName);
 	}
 
 } //WindowImpl

@@ -3,11 +3,14 @@
 package eu.paasage.camel.provider.impl;
 
 import eu.paasage.camel.impl.ModelImpl;
+
 import eu.paasage.camel.provider.Constraint;
 import eu.paasage.camel.provider.Feature;
 import eu.paasage.camel.provider.ProviderModel;
 import eu.paasage.camel.provider.ProviderPackage;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

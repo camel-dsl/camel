@@ -60,7 +60,7 @@ public interface Organisation extends Entity {
 	 * @return the value of the '<em>Www</em>' attribute.
 	 * @see #setWww(String)
 	 * @see eu.paasage.camel.organisation.OrganisationPackage#getOrganisation_Www()
-	 * @model annotation="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName body='Clone' unique='false' upper='*'"
+	 * @model
 	 * @generated
 	 */
 	String getWww();

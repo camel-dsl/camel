@@ -3,9 +3,13 @@
 package eu.paasage.camel.execution;
 
 import eu.paasage.camel.metric.MetricInstance;
+
 import eu.paasage.camel.requirement.ServiceLevelObjective;
+
 import eu.paasage.camel.scalability.EventInstance;
+
 import java.util.Date;
+
 import org.eclipse.emf.cdo.CDOObject;
 
 /**
@@ -21,7 +25,7 @@ import org.eclipse.emf.cdo.CDOObject;
  *   <li>{@link eu.paasage.camel.execution.Measurement#getMetricInstance <em>Metric Instance</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.Measurement#getValue <em>Value</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.Measurement#getRawData <em>Raw Data</em>}</li>
- *   <li>{@link eu.paasage.camel.execution.Measurement#getReportedOn <em>Reported On</em>}</li>
+ *   <li>{@link eu.paasage.camel.execution.Measurement#getMeasurementTime <em>Measurement Time</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.Measurement#getSlo <em>Slo</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.Measurement#getEventInstance <em>Event Instance</em>}</li>
  * </ul>
@@ -165,30 +169,30 @@ public interface Measurement extends CDOObject {
 	void setRawData(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Reported On</b></em>' attribute.
+	 * Returns the value of the '<em><b>Measurement Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Reported On</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Measurement Time</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reported On</em>' attribute.
-	 * @see #setReportedOn(Date)
-	 * @see eu.paasage.camel.execution.ExecutionPackage#getMeasurement_ReportedOn()
+	 * @return the value of the '<em>Measurement Time</em>' attribute.
+	 * @see #setMeasurementTime(Date)
+	 * @see eu.paasage.camel.execution.ExecutionPackage#getMeasurement_MeasurementTime()
 	 * @model required="true"
 	 * @generated
 	 */
-	Date getReportedOn();
+	Date getMeasurementTime();
 
 	/**
-	 * Sets the value of the '{@link eu.paasage.camel.execution.Measurement#getReportedOn <em>Reported On</em>}' attribute.
+	 * Sets the value of the '{@link eu.paasage.camel.execution.Measurement#getMeasurementTime <em>Measurement Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Reported On</em>' attribute.
-	 * @see #getReportedOn()
+	 * @param value the new value of the '<em>Measurement Time</em>' attribute.
+	 * @see #getMeasurementTime()
 	 * @generated
 	 */
-	void setReportedOn(Date value);
+	void setMeasurementTime(Date value);
 
 	/**
 	 * Returns the value of the '<em><b>Slo</b></em>' reference.

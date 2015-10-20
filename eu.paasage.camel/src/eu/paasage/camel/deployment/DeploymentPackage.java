@@ -3,6 +3,7 @@
 package eu.paasage.camel.deployment;
 
 import eu.paasage.camel.CamelPackage;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -1760,7 +1761,6 @@ public interface DeploymentPackage extends EPackage {
 	 */
 	int REQUIRED_HOST_INSTANCE_OPERATION_COUNT = HOSTING_PORT_INSTANCE_OPERATION_COUNT + 0;
 
-
 	/**
 	 * The meta object id for the '{@link eu.paasage.camel.deployment.CommunicationType <em>Communication Type</em>}' enum.
 	 * <!-- begin-user-doc -->
@@ -1859,17 +1859,6 @@ public interface DeploymentPackage extends EPackage {
 	EReference getDeploymentModel_Communications();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link eu.paasage.camel.deployment.DeploymentModel#getHostings <em>Hostings</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Hostings</em>'.
-	 * @see eu.paasage.camel.deployment.DeploymentModel#getHostings()
-	 * @see #getDeploymentModel()
-	 * @generated
-	 */
-	EReference getDeploymentModel_Hostings();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link eu.paasage.camel.deployment.DeploymentModel#getCommunicationInstances <em>Communication Instances</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1879,6 +1868,17 @@ public interface DeploymentPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDeploymentModel_CommunicationInstances();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link eu.paasage.camel.deployment.DeploymentModel#getHostings <em>Hostings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Hostings</em>'.
+	 * @see eu.paasage.camel.deployment.DeploymentModel#getHostings()
+	 * @see #getDeploymentModel()
+	 * @generated
+	 */
+	EReference getDeploymentModel_Hostings();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link eu.paasage.camel.deployment.DeploymentModel#getHostingInstances <em>Hosting Instances</em>}'.
@@ -1967,17 +1967,6 @@ public interface DeploymentPackage extends EPackage {
 	EClass getInternalComponent();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link eu.paasage.camel.deployment.InternalComponent#getRequiredCommunications <em>Required Communications</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Required Communications</em>'.
-	 * @see eu.paasage.camel.deployment.InternalComponent#getRequiredCommunications()
-	 * @see #getInternalComponent()
-	 * @generated
-	 */
-	EReference getInternalComponent_RequiredCommunications();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link eu.paasage.camel.deployment.InternalComponent#getCompositeInternalComponents <em>Composite Internal Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1987,6 +1976,17 @@ public interface DeploymentPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getInternalComponent_CompositeInternalComponents();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link eu.paasage.camel.deployment.InternalComponent#getRequiredCommunications <em>Required Communications</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Required Communications</em>'.
+	 * @see eu.paasage.camel.deployment.InternalComponent#getRequiredCommunications()
+	 * @see #getInternalComponent()
+	 * @generated
+	 */
+	EReference getInternalComponent_RequiredCommunications();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link eu.paasage.camel.deployment.InternalComponent#getRequiredHost <em>Required Host</em>}'.
@@ -2204,6 +2204,17 @@ public interface DeploymentPackage extends EPackage {
 	EAttribute getCommunication_Type();
 
 	/**
+	 * Returns the meta object for the reference '{@link eu.paasage.camel.deployment.Communication#getProvidedCommunication <em>Provided Communication</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Provided Communication</em>'.
+	 * @see eu.paasage.camel.deployment.Communication#getProvidedCommunication()
+	 * @see #getCommunication()
+	 * @generated
+	 */
+	EReference getCommunication_ProvidedCommunication();
+
+	/**
 	 * Returns the meta object for the reference '{@link eu.paasage.camel.deployment.Communication#getRequiredCommunication <em>Required Communication</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2235,17 +2246,6 @@ public interface DeploymentPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCommunication_RequiredPortConfiguration();
-
-	/**
-	 * Returns the meta object for the reference '{@link eu.paasage.camel.deployment.Communication#getProvidedCommunication <em>Provided Communication</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Provided Communication</em>'.
-	 * @see eu.paasage.camel.deployment.Communication#getProvidedCommunication()
-	 * @see #getCommunication()
-	 * @generated
-	 */
-	EReference getCommunication_ProvidedCommunication();
 
 	/**
 	 * Returns the meta object for class '{@link eu.paasage.camel.deployment.CommunicationPort <em>Communication Port</em>}'.
@@ -2502,17 +2502,6 @@ public interface DeploymentPackage extends EPackage {
 	EReference getVMInstance_VmType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link eu.paasage.camel.deployment.VMInstance#getIp <em>Ip</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Ip</em>'.
-	 * @see eu.paasage.camel.deployment.VMInstance#getIp()
-	 * @see #getVMInstance()
-	 * @generated
-	 */
-	EAttribute getVMInstance_Ip();
-
-	/**
 	 * Returns the meta object for the reference '{@link eu.paasage.camel.deployment.VMInstance#getVmTypeValue <em>Vm Type Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2522,6 +2511,17 @@ public interface DeploymentPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getVMInstance_VmTypeValue();
+
+	/**
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.deployment.VMInstance#getIp <em>Ip</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ip</em>'.
+	 * @see eu.paasage.camel.deployment.VMInstance#getIp()
+	 * @see #getVMInstance()
+	 * @generated
+	 */
+	EAttribute getVMInstance_Ip();
 
 	/**
 	 * Returns the meta object for the '{@link eu.paasage.camel.deployment.VMInstance#checkDates(eu.paasage.camel.deployment.VMInstance) <em>Check Dates</em>}' operation.
@@ -2803,20 +2803,20 @@ public interface DeploymentPackage extends EPackage {
 		EReference DEPLOYMENT_MODEL__COMMUNICATIONS = eINSTANCE.getDeploymentModel_Communications();
 
 		/**
-		 * The meta object literal for the '<em><b>Hostings</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DEPLOYMENT_MODEL__HOSTINGS = eINSTANCE.getDeploymentModel_Hostings();
-
-		/**
 		 * The meta object literal for the '<em><b>Communication Instances</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference DEPLOYMENT_MODEL__COMMUNICATION_INSTANCES = eINSTANCE.getDeploymentModel_CommunicationInstances();
+
+		/**
+		 * The meta object literal for the '<em><b>Hostings</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DEPLOYMENT_MODEL__HOSTINGS = eINSTANCE.getDeploymentModel_Hostings();
 
 		/**
 		 * The meta object literal for the '<em><b>Hosting Instances</b></em>' containment reference list feature.
@@ -2887,20 +2887,20 @@ public interface DeploymentPackage extends EPackage {
 		EClass INTERNAL_COMPONENT = eINSTANCE.getInternalComponent();
 
 		/**
-		 * The meta object literal for the '<em><b>Required Communications</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INTERNAL_COMPONENT__REQUIRED_COMMUNICATIONS = eINSTANCE.getInternalComponent_RequiredCommunications();
-
-		/**
 		 * The meta object literal for the '<em><b>Composite Internal Components</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference INTERNAL_COMPONENT__COMPOSITE_INTERNAL_COMPONENTS = eINSTANCE.getInternalComponent_CompositeInternalComponents();
+
+		/**
+		 * The meta object literal for the '<em><b>Required Communications</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INTERNAL_COMPONENT__REQUIRED_COMMUNICATIONS = eINSTANCE.getInternalComponent_RequiredCommunications();
 
 		/**
 		 * The meta object literal for the '<em><b>Required Host</b></em>' containment reference feature.
@@ -3071,6 +3071,14 @@ public interface DeploymentPackage extends EPackage {
 		EAttribute COMMUNICATION__TYPE = eINSTANCE.getCommunication_Type();
 
 		/**
+		 * The meta object literal for the '<em><b>Provided Communication</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMMUNICATION__PROVIDED_COMMUNICATION = eINSTANCE.getCommunication_ProvidedCommunication();
+
+		/**
 		 * The meta object literal for the '<em><b>Required Communication</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3093,14 +3101,6 @@ public interface DeploymentPackage extends EPackage {
 		 * @generated
 		 */
 		EReference COMMUNICATION__REQUIRED_PORT_CONFIGURATION = eINSTANCE.getCommunication_RequiredPortConfiguration();
-
-		/**
-		 * The meta object literal for the '<em><b>Provided Communication</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMMUNICATION__PROVIDED_COMMUNICATION = eINSTANCE.getCommunication_ProvidedCommunication();
 
 		/**
 		 * The meta object literal for the '{@link eu.paasage.camel.deployment.impl.CommunicationPortImpl <em>Communication Port</em>}' class.
@@ -3315,20 +3315,20 @@ public interface DeploymentPackage extends EPackage {
 		EReference VM_INSTANCE__VM_TYPE = eINSTANCE.getVMInstance_VmType();
 
 		/**
-		 * The meta object literal for the '<em><b>Ip</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VM_INSTANCE__IP = eINSTANCE.getVMInstance_Ip();
-
-		/**
 		 * The meta object literal for the '<em><b>Vm Type Value</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference VM_INSTANCE__VM_TYPE_VALUE = eINSTANCE.getVMInstance_VmTypeValue();
+
+		/**
+		 * The meta object literal for the '<em><b>Ip</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VM_INSTANCE__IP = eINSTANCE.getVMInstance_Ip();
 
 		/**
 		 * The meta object literal for the '<em><b>Check Dates</b></em>' operation.

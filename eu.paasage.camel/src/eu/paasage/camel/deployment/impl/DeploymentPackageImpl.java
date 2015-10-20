@@ -3,6 +3,7 @@
 package eu.paasage.camel.deployment.impl;
 
 import eu.paasage.camel.CamelPackage;
+
 import eu.paasage.camel.deployment.Communication;
 import eu.paasage.camel.deployment.CommunicationInstance;
 import eu.paasage.camel.deployment.CommunicationPort;
@@ -31,28 +32,51 @@ import eu.paasage.camel.deployment.RequiredHost;
 import eu.paasage.camel.deployment.RequiredHostInstance;
 import eu.paasage.camel.deployment.VMInstance;
 import eu.paasage.camel.deployment.VMRequirementSet;
+
 import eu.paasage.camel.deployment.util.DeploymentValidator;
+
 import eu.paasage.camel.execution.ExecutionPackage;
+
 import eu.paasage.camel.execution.impl.ExecutionPackageImpl;
+
 import eu.paasage.camel.impl.CamelPackageImpl;
+
 import eu.paasage.camel.location.LocationPackage;
+
 import eu.paasage.camel.location.impl.LocationPackageImpl;
+
 import eu.paasage.camel.metric.MetricPackage;
+
 import eu.paasage.camel.metric.impl.MetricPackageImpl;
+
 import eu.paasage.camel.organisation.OrganisationPackage;
+
 import eu.paasage.camel.organisation.impl.OrganisationPackageImpl;
+
 import eu.paasage.camel.provider.ProviderPackage;
+
 import eu.paasage.camel.provider.impl.ProviderPackageImpl;
+
 import eu.paasage.camel.requirement.RequirementPackage;
+
 import eu.paasage.camel.requirement.impl.RequirementPackageImpl;
+
 import eu.paasage.camel.scalability.ScalabilityPackage;
+
 import eu.paasage.camel.scalability.impl.ScalabilityPackageImpl;
+
 import eu.paasage.camel.security.SecurityPackage;
+
 import eu.paasage.camel.security.impl.SecurityPackageImpl;
+
 import eu.paasage.camel.type.TypePackage;
+
 import eu.paasage.camel.type.impl.TypePackageImpl;
+
 import eu.paasage.camel.unit.UnitPackage;
+
 import eu.paasage.camel.unit.impl.UnitPackageImpl;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -60,6 +84,7 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -440,8 +465,8 @@ public class DeploymentPackageImpl extends EPackageImpl implements DeploymentPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDeploymentModel_Hostings() {
-		return (EReference)deploymentModelEClass.getEStructuralFeatures().get(6);
+	public EReference getDeploymentModel_CommunicationInstances() {
+		return (EReference)deploymentModelEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -449,8 +474,8 @@ public class DeploymentPackageImpl extends EPackageImpl implements DeploymentPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDeploymentModel_CommunicationInstances() {
-		return (EReference)deploymentModelEClass.getEStructuralFeatures().get(5);
+	public EReference getDeploymentModel_Hostings() {
+		return (EReference)deploymentModelEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -530,8 +555,8 @@ public class DeploymentPackageImpl extends EPackageImpl implements DeploymentPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInternalComponent_RequiredCommunications() {
-		return (EReference)internalComponentEClass.getEStructuralFeatures().get(1);
+	public EReference getInternalComponent_CompositeInternalComponents() {
+		return (EReference)internalComponentEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -539,8 +564,8 @@ public class DeploymentPackageImpl extends EPackageImpl implements DeploymentPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInternalComponent_CompositeInternalComponents() {
-		return (EReference)internalComponentEClass.getEStructuralFeatures().get(0);
+	public EReference getInternalComponent_RequiredCommunications() {
+		return (EReference)internalComponentEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -728,6 +753,15 @@ public class DeploymentPackageImpl extends EPackageImpl implements DeploymentPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getCommunication_ProvidedCommunication() {
+		return (EReference)communicationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getCommunication_RequiredCommunication() {
 		return (EReference)communicationEClass.getEStructuralFeatures().get(2);
 	}
@@ -748,15 +782,6 @@ public class DeploymentPackageImpl extends EPackageImpl implements DeploymentPac
 	 */
 	public EReference getCommunication_RequiredPortConfiguration() {
 		return (EReference)communicationEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCommunication_ProvidedCommunication() {
-		return (EReference)communicationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -980,8 +1005,8 @@ public class DeploymentPackageImpl extends EPackageImpl implements DeploymentPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVMInstance_Ip() {
-		return (EAttribute)vmInstanceEClass.getEStructuralFeatures().get(2);
+	public EReference getVMInstance_VmTypeValue() {
+		return (EReference)vmInstanceEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -989,8 +1014,8 @@ public class DeploymentPackageImpl extends EPackageImpl implements DeploymentPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVMInstance_VmTypeValue() {
-		return (EReference)vmInstanceEClass.getEStructuralFeatures().get(1);
+	public EAttribute getVMInstance_Ip() {
+		return (EAttribute)vmInstanceEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**

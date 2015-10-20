@@ -7,6 +7,7 @@ import eu.paasage.camel.metric.MetricContext;
 import eu.paasage.camel.metric.MetricPackage;
 import eu.paasage.camel.metric.Schedule;
 import eu.paasage.camel.metric.Window;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

@@ -3,7 +3,9 @@
 package eu.paasage.camel.execution;
 
 import eu.paasage.camel.Model;
+
 import eu.paasage.camel.scalability.EventInstance;
+
 import org.eclipse.emf.common.util.EList;
 
 /**

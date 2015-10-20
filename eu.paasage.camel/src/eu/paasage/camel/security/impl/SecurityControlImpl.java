@@ -8,8 +8,11 @@ import eu.paasage.camel.security.SecurityControl;
 import eu.paasage.camel.security.SecurityDomain;
 import eu.paasage.camel.security.SecurityPackage;
 import eu.paasage.camel.security.SecurityProperty;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 /**

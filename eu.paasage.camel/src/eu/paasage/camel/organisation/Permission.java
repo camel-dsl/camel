@@ -3,7 +3,9 @@
 package eu.paasage.camel.organisation;
 
 import eu.paasage.camel.ActionType;
+
 import java.util.Date;
+
 import org.eclipse.emf.cdo.CDOObject;
 
 /**
@@ -16,8 +18,8 @@ import org.eclipse.emf.cdo.CDOObject;
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.Permission#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.Permission#getRole <em>Role</em>}</li>
- *   <li>{@link eu.paasage.camel.organisation.Permission#getStart <em>Start</em>}</li>
- *   <li>{@link eu.paasage.camel.organisation.Permission#getEnd <em>End</em>}</li>
+ *   <li>{@link eu.paasage.camel.organisation.Permission#getStartTime <em>Start Time</em>}</li>
+ *   <li>{@link eu.paasage.camel.organisation.Permission#getEndTime <em>End Time</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.Permission#getResourceFilter <em>Resource Filter</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.Permission#getAction <em>Action</em>}</li>
  * </ul>
@@ -83,59 +85,56 @@ public interface Permission extends CDOObject {
 	void setRole(Role value);
 
 	/**
-	 * Returns the value of the '<em><b>Start</b></em>' attribute.
+	 * Returns the value of the '<em><b>Start Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Start</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Start Time</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Start</em>' attribute.
-	 * @see #setStart(Date)
-	 * @see eu.paasage.camel.organisation.OrganisationPackage#getPermission_Start()
+	 * @return the value of the '<em>Start Time</em>' attribute.
+	 * @see #setStartTime(Date)
+	 * @see eu.paasage.camel.organisation.OrganisationPackage#getPermission_StartTime()
 	 * @model required="true"
-	 *        annotation="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName body='Requires'"
-	 *        annotation="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName body='Requires'"
 	 * @generated
 	 */
-	Date getStart();
+	Date getStartTime();
 
 	/**
-	 * Sets the value of the '{@link eu.paasage.camel.organisation.Permission#getStart <em>Start</em>}' attribute.
+	 * Sets the value of the '{@link eu.paasage.camel.organisation.Permission#getStartTime <em>Start Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Start</em>' attribute.
-	 * @see #getStart()
+	 * @param value the new value of the '<em>Start Time</em>' attribute.
+	 * @see #getStartTime()
 	 * @generated
 	 */
-	void setStart(Date value);
+	void setStartTime(Date value);
 
 	/**
-	 * Returns the value of the '<em><b>End</b></em>' attribute.
+	 * Returns the value of the '<em><b>End Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>End</em>' attribute isn't clear,
+	 * If the meaning of the '<em>End Time</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>End</em>' attribute.
-	 * @see #setEnd(Date)
-	 * @see eu.paasage.camel.organisation.OrganisationPackage#getPermission_End()
-	 * @model annotation="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName body='Requires'"
-	 *        annotation="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName body='Requires'"
+	 * @return the value of the '<em>End Time</em>' attribute.
+	 * @see #setEndTime(Date)
+	 * @see eu.paasage.camel.organisation.OrganisationPackage#getPermission_EndTime()
+	 * @model
 	 * @generated
 	 */
-	Date getEnd();
+	Date getEndTime();
 
 	/**
-	 * Sets the value of the '{@link eu.paasage.camel.organisation.Permission#getEnd <em>End</em>}' attribute.
+	 * Sets the value of the '{@link eu.paasage.camel.organisation.Permission#getEndTime <em>End Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>End</em>' attribute.
-	 * @see #getEnd()
+	 * @param value the new value of the '<em>End Time</em>' attribute.
+	 * @see #getEndTime()
 	 * @generated
 	 */
-	void setEnd(Date value);
+	void setEndTime(Date value);
 
 	/**
 	 * Returns the value of the '<em><b>Resource Filter</b></em>' reference.
@@ -196,7 +195,7 @@ public interface Permission extends CDOObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model thisRequired="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='System.out.println(\"CHECKING Permission_Start_Before_End: \" + this + \" \" + this.getStart() + \" \" + this.getEnd()); java.util.Date date1 = this.getStart(); java.util.Date date2 = this.getEnd(); if (date1 == null || date2 == null || (date1 != null && date2 != null && date1.before(date2))) return Boolean.TRUE; return Boolean.FALSE;'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='System.out.println(\"CHECKING Permission_Start_Before_End: \" + this + \" \" + this.getStartTime() + \" \" + this.getEndTime()); java.util.Date date1 = this.getStartTime(); java.util.Date date2 = this.getEndTime(); if (date1 == null || date2 == null || (date1 != null && date2 != null && date1.before(date2))) return Boolean.TRUE; return Boolean.FALSE;'"
 	 * @generated
 	 */
 	boolean checkStartEndDates(Permission this_);

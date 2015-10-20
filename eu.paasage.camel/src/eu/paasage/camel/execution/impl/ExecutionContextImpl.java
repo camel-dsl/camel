@@ -74,24 +74,6 @@ public class ExecutionContextImpl extends CDOObjectImpl implements ExecutionCont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Application getApplication() {
-		return (Application)eGet(ExecutionPackage.Literals.EXECUTION_CONTEXT__APPLICATION, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setApplication(Application newApplication) {
-		eSet(ExecutionPackage.Literals.EXECUTION_CONTEXT__APPLICATION, newApplication);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getName() {
 		return (String)eGet(ExecutionPackage.Literals.EXECUTION_CONTEXT__NAME, true);
 	}
@@ -103,6 +85,24 @@ public class ExecutionContextImpl extends CDOObjectImpl implements ExecutionCont
 	 */
 	public void setName(String newName) {
 		eSet(ExecutionPackage.Literals.EXECUTION_CONTEXT__NAME, newName);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Application getApplication() {
+		return (Application)eGet(ExecutionPackage.Literals.EXECUTION_CONTEXT__APPLICATION, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setApplication(Application newApplication) {
+		eSet(ExecutionPackage.Literals.EXECUTION_CONTEXT__APPLICATION, newApplication);
 	}
 
 	/**

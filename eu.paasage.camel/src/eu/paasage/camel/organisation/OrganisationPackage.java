@@ -3,6 +3,7 @@
 package eu.paasage.camel.organisation;
 
 import eu.paasage.camel.CamelPackage;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -782,22 +783,22 @@ public interface OrganisationPackage extends EPackage {
 	int PERMISSION__ROLE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Start</b></em>' attribute.
+	 * The feature id for the '<em><b>Start Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PERMISSION__START = 2;
+	int PERMISSION__START_TIME = 2;
 
 	/**
-	 * The feature id for the '<em><b>End</b></em>' attribute.
+	 * The feature id for the '<em><b>End Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PERMISSION__END = 3;
+	int PERMISSION__END_TIME = 3;
 
 	/**
 	 * The feature id for the '<em><b>Resource Filter</b></em>' reference.
@@ -1102,31 +1103,31 @@ public interface OrganisationPackage extends EPackage {
 	int ROLE_ASSIGNMENT__USER_GROUP = 3;
 
 	/**
-	 * The feature id for the '<em><b>Start</b></em>' attribute.
+	 * The feature id for the '<em><b>Start Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROLE_ASSIGNMENT__START = 4;
+	int ROLE_ASSIGNMENT__START_TIME = 4;
 
 	/**
-	 * The feature id for the '<em><b>End</b></em>' attribute.
+	 * The feature id for the '<em><b>End Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROLE_ASSIGNMENT__END = 5;
+	int ROLE_ASSIGNMENT__END_TIME = 5;
 
 	/**
-	 * The feature id for the '<em><b>Assigned On</b></em>' attribute.
+	 * The feature id for the '<em><b>Assignment Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROLE_ASSIGNMENT__ASSIGNED_ON = 6;
+	int ROLE_ASSIGNMENT__ASSIGNMENT_TIME = 6;
 
 	/**
 	 * The number of structural features of the '<em>Role Assignment</em>' class.
@@ -1210,7 +1211,6 @@ public interface OrganisationPackage extends EPackage {
 	 */
 	int USER_GROUP_OPERATION_COUNT = 0;
 
-
 	/**
 	 * The meta object id for the '{@link eu.paasage.camel.organisation.impl.PaaSageCredentialsImpl <em>Paa Sage Credentials</em>}' class.
 	 * <!-- begin-user-doc -->
@@ -1248,7 +1248,6 @@ public interface OrganisationPackage extends EPackage {
 	 */
 	int PAA_SAGE_CREDENTIALS_OPERATION_COUNT = CREDENTIALS_OPERATION_COUNT + 0;
 
-
 	/**
 	 * The meta object id for the '{@link eu.paasage.camel.organisation.SecurityLevel <em>Security Level</em>}' enum.
 	 * <!-- begin-user-doc -->
@@ -1281,15 +1280,15 @@ public interface OrganisationPackage extends EPackage {
 	EClass getOrganisationModel();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link eu.paasage.camel.organisation.OrganisationModel#getUsers <em>Users</em>}'.
+	 * Returns the meta object for the containment reference '{@link eu.paasage.camel.organisation.OrganisationModel#getOrganisation <em>Organisation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Users</em>'.
-	 * @see eu.paasage.camel.organisation.OrganisationModel#getUsers()
+	 * @return the meta object for the containment reference '<em>Organisation</em>'.
+	 * @see eu.paasage.camel.organisation.OrganisationModel#getOrganisation()
 	 * @see #getOrganisationModel()
 	 * @generated
 	 */
-	EReference getOrganisationModel_Users();
+	EReference getOrganisationModel_Organisation();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link eu.paasage.camel.organisation.OrganisationModel#getProvider <em>Provider</em>}'.
@@ -1303,15 +1302,26 @@ public interface OrganisationPackage extends EPackage {
 	EReference getOrganisationModel_Provider();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link eu.paasage.camel.organisation.OrganisationModel#getOrganisation <em>Organisation</em>}'.
+	 * Returns the meta object for the containment reference list '{@link eu.paasage.camel.organisation.OrganisationModel#getExternalIdentifiers <em>External Identifiers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Organisation</em>'.
-	 * @see eu.paasage.camel.organisation.OrganisationModel#getOrganisation()
+	 * @return the meta object for the containment reference list '<em>External Identifiers</em>'.
+	 * @see eu.paasage.camel.organisation.OrganisationModel#getExternalIdentifiers()
 	 * @see #getOrganisationModel()
 	 * @generated
 	 */
-	EReference getOrganisationModel_Organisation();
+	EReference getOrganisationModel_ExternalIdentifiers();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link eu.paasage.camel.organisation.OrganisationModel#getUsers <em>Users</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Users</em>'.
+	 * @see eu.paasage.camel.organisation.OrganisationModel#getUsers()
+	 * @see #getOrganisationModel()
+	 * @generated
+	 */
+	EReference getOrganisationModel_Users();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link eu.paasage.camel.organisation.OrganisationModel#getUserGroups <em>User Groups</em>}'.
@@ -1336,17 +1346,6 @@ public interface OrganisationPackage extends EPackage {
 	EReference getOrganisationModel_DataCentres();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link eu.paasage.camel.organisation.OrganisationModel#getRoleAssigments <em>Role Assigments</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Role Assigments</em>'.
-	 * @see eu.paasage.camel.organisation.OrganisationModel#getRoleAssigments()
-	 * @see #getOrganisationModel()
-	 * @generated
-	 */
-	EReference getOrganisationModel_RoleAssigments();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link eu.paasage.camel.organisation.OrganisationModel#getRoles <em>Roles</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1356,6 +1355,17 @@ public interface OrganisationPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getOrganisationModel_Roles();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link eu.paasage.camel.organisation.OrganisationModel#getRoleAssigments <em>Role Assigments</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Role Assigments</em>'.
+	 * @see eu.paasage.camel.organisation.OrganisationModel#getRoleAssigments()
+	 * @see #getOrganisationModel()
+	 * @generated
+	 */
+	EReference getOrganisationModel_RoleAssigments();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link eu.paasage.camel.organisation.OrganisationModel#getPermissions <em>Permissions</em>}'.
@@ -1389,17 +1399,6 @@ public interface OrganisationPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getOrganisationModel_ResourceFilters();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link eu.paasage.camel.organisation.OrganisationModel#getExternalIdentifiers <em>External Identifiers</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>External Identifiers</em>'.
-	 * @see eu.paasage.camel.organisation.OrganisationModel#getExternalIdentifiers()
-	 * @see #getOrganisationModel()
-	 * @generated
-	 */
-	EReference getOrganisationModel_ExternalIdentifiers();
 
 	/**
 	 * Returns the meta object for class '{@link eu.paasage.camel.organisation.Credentials <em>Credentials</em>}'.
@@ -1703,6 +1702,17 @@ public interface OrganisationPackage extends EPackage {
 	EAttribute getUser_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.organisation.User#getEmail <em>Email</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Email</em>'.
+	 * @see eu.paasage.camel.organisation.User#getEmail()
+	 * @see #getUser()
+	 * @generated
+	 */
+	EAttribute getUser_Email();
+
+	/**
 	 * Returns the meta object for the attribute '{@link eu.paasage.camel.organisation.User#getFirstName <em>First Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1723,17 +1733,6 @@ public interface OrganisationPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getUser_LastName();
-
-	/**
-	 * Returns the meta object for the attribute '{@link eu.paasage.camel.organisation.User#getEmail <em>Email</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Email</em>'.
-	 * @see eu.paasage.camel.organisation.User#getEmail()
-	 * @see #getUser()
-	 * @generated
-	 */
-	EAttribute getUser_Email();
 
 	/**
 	 * Returns the meta object for the attribute '{@link eu.paasage.camel.organisation.User#getWww <em>Www</em>}'.
@@ -1866,26 +1865,26 @@ public interface OrganisationPackage extends EPackage {
 	EReference getPermission_Role();
 
 	/**
-	 * Returns the meta object for the attribute '{@link eu.paasage.camel.organisation.Permission#getStart <em>Start</em>}'.
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.organisation.Permission#getStartTime <em>Start Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Start</em>'.
-	 * @see eu.paasage.camel.organisation.Permission#getStart()
+	 * @return the meta object for the attribute '<em>Start Time</em>'.
+	 * @see eu.paasage.camel.organisation.Permission#getStartTime()
 	 * @see #getPermission()
 	 * @generated
 	 */
-	EAttribute getPermission_Start();
+	EAttribute getPermission_StartTime();
 
 	/**
-	 * Returns the meta object for the attribute '{@link eu.paasage.camel.organisation.Permission#getEnd <em>End</em>}'.
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.organisation.Permission#getEndTime <em>End Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>End</em>'.
-	 * @see eu.paasage.camel.organisation.Permission#getEnd()
+	 * @return the meta object for the attribute '<em>End Time</em>'.
+	 * @see eu.paasage.camel.organisation.Permission#getEndTime()
 	 * @see #getPermission()
 	 * @generated
 	 */
-	EAttribute getPermission_End();
+	EAttribute getPermission_EndTime();
 
 	/**
 	 * Returns the meta object for the reference '{@link eu.paasage.camel.organisation.Permission#getResourceFilter <em>Resource Filter</em>}'.
@@ -2091,37 +2090,37 @@ public interface OrganisationPackage extends EPackage {
 	EReference getRoleAssignment_UserGroup();
 
 	/**
-	 * Returns the meta object for the attribute '{@link eu.paasage.camel.organisation.RoleAssignment#getStart <em>Start</em>}'.
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.organisation.RoleAssignment#getStartTime <em>Start Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Start</em>'.
-	 * @see eu.paasage.camel.organisation.RoleAssignment#getStart()
+	 * @return the meta object for the attribute '<em>Start Time</em>'.
+	 * @see eu.paasage.camel.organisation.RoleAssignment#getStartTime()
 	 * @see #getRoleAssignment()
 	 * @generated
 	 */
-	EAttribute getRoleAssignment_Start();
+	EAttribute getRoleAssignment_StartTime();
 
 	/**
-	 * Returns the meta object for the attribute '{@link eu.paasage.camel.organisation.RoleAssignment#getEnd <em>End</em>}'.
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.organisation.RoleAssignment#getEndTime <em>End Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>End</em>'.
-	 * @see eu.paasage.camel.organisation.RoleAssignment#getEnd()
+	 * @return the meta object for the attribute '<em>End Time</em>'.
+	 * @see eu.paasage.camel.organisation.RoleAssignment#getEndTime()
 	 * @see #getRoleAssignment()
 	 * @generated
 	 */
-	EAttribute getRoleAssignment_End();
+	EAttribute getRoleAssignment_EndTime();
 
 	/**
-	 * Returns the meta object for the attribute '{@link eu.paasage.camel.organisation.RoleAssignment#getAssignedOn <em>Assigned On</em>}'.
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.organisation.RoleAssignment#getAssignmentTime <em>Assignment Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Assigned On</em>'.
-	 * @see eu.paasage.camel.organisation.RoleAssignment#getAssignedOn()
+	 * @return the meta object for the attribute '<em>Assignment Time</em>'.
+	 * @see eu.paasage.camel.organisation.RoleAssignment#getAssignmentTime()
 	 * @see #getRoleAssignment()
 	 * @generated
 	 */
-	EAttribute getRoleAssignment_AssignedOn();
+	EAttribute getRoleAssignment_AssignmentTime();
 
 	/**
 	 * Returns the meta object for the '{@link eu.paasage.camel.organisation.RoleAssignment#checkAssignedOnDates(eu.paasage.camel.organisation.RoleAssignment) <em>Check Assigned On Dates</em>}' operation.
@@ -2250,12 +2249,12 @@ public interface OrganisationPackage extends EPackage {
 		EClass ORGANISATION_MODEL = eINSTANCE.getOrganisationModel();
 
 		/**
-		 * The meta object literal for the '<em><b>Users</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Organisation</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ORGANISATION_MODEL__USERS = eINSTANCE.getOrganisationModel_Users();
+		EReference ORGANISATION_MODEL__ORGANISATION = eINSTANCE.getOrganisationModel_Organisation();
 
 		/**
 		 * The meta object literal for the '<em><b>Provider</b></em>' containment reference feature.
@@ -2266,12 +2265,20 @@ public interface OrganisationPackage extends EPackage {
 		EReference ORGANISATION_MODEL__PROVIDER = eINSTANCE.getOrganisationModel_Provider();
 
 		/**
-		 * The meta object literal for the '<em><b>Organisation</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>External Identifiers</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ORGANISATION_MODEL__ORGANISATION = eINSTANCE.getOrganisationModel_Organisation();
+		EReference ORGANISATION_MODEL__EXTERNAL_IDENTIFIERS = eINSTANCE.getOrganisationModel_ExternalIdentifiers();
+
+		/**
+		 * The meta object literal for the '<em><b>Users</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ORGANISATION_MODEL__USERS = eINSTANCE.getOrganisationModel_Users();
 
 		/**
 		 * The meta object literal for the '<em><b>User Groups</b></em>' containment reference list feature.
@@ -2290,20 +2297,20 @@ public interface OrganisationPackage extends EPackage {
 		EReference ORGANISATION_MODEL__DATA_CENTRES = eINSTANCE.getOrganisationModel_DataCentres();
 
 		/**
-		 * The meta object literal for the '<em><b>Role Assigments</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ORGANISATION_MODEL__ROLE_ASSIGMENTS = eINSTANCE.getOrganisationModel_RoleAssigments();
-
-		/**
 		 * The meta object literal for the '<em><b>Roles</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference ORGANISATION_MODEL__ROLES = eINSTANCE.getOrganisationModel_Roles();
+
+		/**
+		 * The meta object literal for the '<em><b>Role Assigments</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ORGANISATION_MODEL__ROLE_ASSIGMENTS = eINSTANCE.getOrganisationModel_RoleAssigments();
 
 		/**
 		 * The meta object literal for the '<em><b>Permissions</b></em>' containment reference list feature.
@@ -2328,14 +2335,6 @@ public interface OrganisationPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ORGANISATION_MODEL__RESOURCE_FILTERS = eINSTANCE.getOrganisationModel_ResourceFilters();
-
-		/**
-		 * The meta object literal for the '<em><b>External Identifiers</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ORGANISATION_MODEL__EXTERNAL_IDENTIFIERS = eINSTANCE.getOrganisationModel_ExternalIdentifiers();
 
 		/**
 		 * The meta object literal for the '{@link eu.paasage.camel.organisation.impl.CredentialsImpl <em>Credentials</em>}' class.
@@ -2576,6 +2575,14 @@ public interface OrganisationPackage extends EPackage {
 		EAttribute USER__NAME = eINSTANCE.getUser_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Email</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute USER__EMAIL = eINSTANCE.getUser_Email();
+
+		/**
 		 * The meta object literal for the '<em><b>First Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2590,14 +2597,6 @@ public interface OrganisationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute USER__LAST_NAME = eINSTANCE.getUser_LastName();
-
-		/**
-		 * The meta object literal for the '<em><b>Email</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute USER__EMAIL = eINSTANCE.getUser_Email();
 
 		/**
 		 * The meta object literal for the '<em><b>Www</b></em>' attribute feature.
@@ -2700,20 +2699,20 @@ public interface OrganisationPackage extends EPackage {
 		EReference PERMISSION__ROLE = eINSTANCE.getPermission_Role();
 
 		/**
-		 * The meta object literal for the '<em><b>Start</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Start Time</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PERMISSION__START = eINSTANCE.getPermission_Start();
+		EAttribute PERMISSION__START_TIME = eINSTANCE.getPermission_StartTime();
 
 		/**
-		 * The meta object literal for the '<em><b>End</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>End Time</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PERMISSION__END = eINSTANCE.getPermission_End();
+		EAttribute PERMISSION__END_TIME = eINSTANCE.getPermission_EndTime();
 
 		/**
 		 * The meta object literal for the '<em><b>Resource Filter</b></em>' reference feature.
@@ -2878,28 +2877,28 @@ public interface OrganisationPackage extends EPackage {
 		EReference ROLE_ASSIGNMENT__USER_GROUP = eINSTANCE.getRoleAssignment_UserGroup();
 
 		/**
-		 * The meta object literal for the '<em><b>Start</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Start Time</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ROLE_ASSIGNMENT__START = eINSTANCE.getRoleAssignment_Start();
+		EAttribute ROLE_ASSIGNMENT__START_TIME = eINSTANCE.getRoleAssignment_StartTime();
 
 		/**
-		 * The meta object literal for the '<em><b>End</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>End Time</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ROLE_ASSIGNMENT__END = eINSTANCE.getRoleAssignment_End();
+		EAttribute ROLE_ASSIGNMENT__END_TIME = eINSTANCE.getRoleAssignment_EndTime();
 
 		/**
-		 * The meta object literal for the '<em><b>Assigned On</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Assignment Time</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ROLE_ASSIGNMENT__ASSIGNED_ON = eINSTANCE.getRoleAssignment_AssignedOn();
+		EAttribute ROLE_ASSIGNMENT__ASSIGNMENT_TIME = eINSTANCE.getRoleAssignment_AssignmentTime();
 
 		/**
 		 * The meta object literal for the '<em><b>Check Assigned On Dates</b></em>' operation.

@@ -3,8 +3,10 @@
 package eu.paasage.camel.requirement.impl;
 
 import eu.paasage.camel.metric.Condition;
+
 import eu.paasage.camel.requirement.RequirementPackage;
 import eu.paasage.camel.requirement.ServiceLevelObjective;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

@@ -3,6 +3,7 @@
 package eu.paasage.camel.deployment;
 
 import eu.paasage.camel.Model;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -112,22 +113,6 @@ public interface DeploymentModel extends Model {
 	EList<Communication> getCommunications();
 
 	/**
-	 * Returns the value of the '<em><b>Hostings</b></em>' containment reference list.
-	 * The list contents are of type {@link eu.paasage.camel.deployment.Hosting}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Hostings</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Hostings</em>' containment reference list.
-	 * @see eu.paasage.camel.deployment.DeploymentPackage#getDeploymentModel_Hostings()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Hosting> getHostings();
-
-	/**
 	 * Returns the value of the '<em><b>Communication Instances</b></em>' containment reference list.
 	 * The list contents are of type {@link eu.paasage.camel.deployment.CommunicationInstance}.
 	 * <!-- begin-user-doc -->
@@ -142,6 +127,22 @@ public interface DeploymentModel extends Model {
 	 * @generated
 	 */
 	EList<CommunicationInstance> getCommunicationInstances();
+
+	/**
+	 * Returns the value of the '<em><b>Hostings</b></em>' containment reference list.
+	 * The list contents are of type {@link eu.paasage.camel.deployment.Hosting}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Hostings</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Hostings</em>' containment reference list.
+	 * @see eu.paasage.camel.deployment.DeploymentPackage#getDeploymentModel_Hostings()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Hosting> getHostings();
 
 	/**
 	 * Returns the value of the '<em><b>Hosting Instances</b></em>' containment reference list.

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/camel/src" modelPluginID="camel" modelName="Camel"
-    rootExtendsInterface="org.eclipse.emf.cdo.CDOObject" rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/eu.paasage.camel/src" modelPluginID="eu.paasage.camel"
+    modelName="Camel" rootExtendsInterface="org.eclipse.emf.cdo.CDOObject" rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl"
     reflectiveDelegation="true" importerID="org.eclipse.emf.importer.cdo" featureDelegation="Reflective"
     complianceLevel="8.0" copyrightFields="false" providerRootExtendsClass="org.eclipse.emf.cdo.edit.CDOItemProviderAdapter"
     operationReflection="true" importOrganizing="true">
@@ -55,7 +55,8 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference camel.ecore#//Application/owner"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference camel.ecore#//Application/deploymentModels"/>
     </genClasses>
-    <nestedGenPackages prefix="Deployment" disposableProviderFactory="true" ecorePackage="camel.ecore#//deployment">
+    <nestedGenPackages prefix="Deployment" basePackage="eu.paasage.camel" disposableProviderFactory="true"
+        ecorePackage="camel.ecore#//deployment">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="camel.ecore#//deployment/CommunicationType">
         <genEnumLiterals ecoreEnumLiteral="camel.ecore#//deployment/CommunicationType/ANY"/>
         <genEnumLiterals ecoreEnumLiteral="camel.ecore#//deployment/CommunicationType/LOCAL"/>
@@ -194,7 +195,8 @@
       <genClasses ecoreClass="camel.ecore#//deployment/ProvidedHostInstance"/>
       <genClasses ecoreClass="camel.ecore#//deployment/RequiredHostInstance"/>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Execution" disposableProviderFactory="true" ecorePackage="camel.ecore#//execution">
+    <nestedGenPackages prefix="Execution" basePackage="eu.paasage.camel" disposableProviderFactory="true"
+        ecorePackage="camel.ecore#//execution">
       <genClasses ecoreClass="camel.ecore#//execution/ExecutionModel">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camel.ecore#//execution/ExecutionModel/actionRealisations"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camel.ecore#//execution/ExecutionModel/eventInstances"/>
@@ -207,8 +209,8 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//execution/ActionRealisation/name"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference camel.ecore#//execution/ActionRealisation/action"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//execution/ActionRealisation/startedOn"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//execution/ActionRealisation/endedOn"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//execution/ActionRealisation/startTime"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//execution/ActionRealisation/endTime"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//execution/ActionRealisation/lowLevelActions"/>
       </genClasses>
       <genClasses ecoreClass="camel.ecore#//execution/ExecutionContext">
@@ -233,7 +235,7 @@
             ecoreFeature="ecore:EReference camel.ecore#//execution/Measurement/metricInstance"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//execution/Measurement/value"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//execution/Measurement/rawData"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//execution/Measurement/reportedOn"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//execution/Measurement/measurementTime"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference camel.ecore#//execution/Measurement/slo"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -247,15 +249,15 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference camel.ecore#//execution/InternalComponentMeasurement/internalComponentInstance"/>
       </genClasses>
-      <genClasses ecoreClass="camel.ecore#//execution/ResourceCouplingMeasurement">
+      <genClasses ecoreClass="camel.ecore#//execution/CommunicationMeasurement">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference camel.ecore#//execution/ResourceCouplingMeasurement/sourceVMInstance"/>
+            ecoreFeature="ecore:EReference camel.ecore#//execution/CommunicationMeasurement/sourceVMInstance"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference camel.ecore#//execution/ResourceCouplingMeasurement/destinationVMInstance"/>
+            ecoreFeature="ecore:EReference camel.ecore#//execution/CommunicationMeasurement/destinationVMInstance"/>
       </genClasses>
-      <genClasses ecoreClass="camel.ecore#//execution/ResourceMeasurement">
+      <genClasses ecoreClass="camel.ecore#//execution/VMMeasurement">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference camel.ecore#//execution/ResourceMeasurement/vmInstance"/>
+            ecoreFeature="ecore:EReference camel.ecore#//execution/VMMeasurement/vmInstance"/>
       </genClasses>
       <genClasses ecoreClass="camel.ecore#//execution/SLOAssessment">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//execution/SLOAssessment/name"/>
@@ -276,12 +278,13 @@
             ecoreFeature="ecore:EReference camel.ecore#//execution/RuleTrigger/eventInstances"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference camel.ecore#//execution/RuleTrigger/actionRealisations"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//execution/RuleTrigger/firedOn"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//execution/RuleTrigger/trigerringTime"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference camel.ecore#//execution/RuleTrigger/executionContext"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Location" disposableProviderFactory="true" ecorePackage="camel.ecore#//location">
+    <nestedGenPackages prefix="Location" basePackage="eu.paasage.camel" disposableProviderFactory="true"
+        ecorePackage="camel.ecore#//location">
       <genClasses ecoreClass="camel.ecore#//location/LocationModel">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camel.ecore#//location/LocationModel/cloudLocations"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camel.ecore#//location/LocationModel/countries"/>
@@ -310,7 +313,8 @@
       </genClasses>
       <genClasses ecoreClass="camel.ecore#//location/Country"/>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Metric" disposableProviderFactory="true" ecorePackage="camel.ecore#//metric">
+    <nestedGenPackages prefix="Metric" basePackage="eu.paasage.camel" disposableProviderFactory="true"
+        ecorePackage="camel.ecore#//metric">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="camel.ecore#//metric/ComparisonOperatorType">
         <genEnumLiterals ecoreEnumLiteral="camel.ecore#//metric/ComparisonOperatorType/GREATER_THAN"/>
         <genEnumLiterals ecoreEnumLiteral="camel.ecore#//metric/ComparisonOperatorType/GREATER_EQUAL_THAN"/>
@@ -549,7 +553,8 @@
             ecoreFeature="ecore:EReference camel.ecore#//metric/PropertyContext/property"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Organisation" disposableProviderFactory="true" ecorePackage="camel.ecore#//organisation">
+    <nestedGenPackages prefix="Organisation" basePackage="eu.paasage.camel" disposableProviderFactory="true"
+        ecorePackage="camel.ecore#//organisation">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="camel.ecore#//organisation/SecurityLevel">
         <genEnumLiterals ecoreEnumLiteral="camel.ecore#//organisation/SecurityLevel/LOW"/>
         <genEnumLiterals ecoreEnumLiteral="camel.ecore#//organisation/SecurityLevel/MEDIUM"/>
@@ -628,8 +633,8 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//organisation/Permission/name"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference camel.ecore#//organisation/Permission/role"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//organisation/Permission/start"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//organisation/Permission/end"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//organisation/Permission/startTime"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//organisation/Permission/endTime"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference camel.ecore#//organisation/Permission/resourceFilter"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//organisation/Permission/action"/>
@@ -660,9 +665,9 @@
             ecoreFeature="ecore:EReference camel.ecore#//organisation/RoleAssignment/role"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference camel.ecore#//organisation/RoleAssignment/userGroup"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//organisation/RoleAssignment/start"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//organisation/RoleAssignment/end"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//organisation/RoleAssignment/assignedOn"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//organisation/RoleAssignment/startTime"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//organisation/RoleAssignment/endTime"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//organisation/RoleAssignment/assignmentTime"/>
         <genOperations ecoreOperation="camel.ecore#//organisation/RoleAssignment/checkAssignedOnDates">
           <genParameters ecoreParameter="camel.ecore#//organisation/RoleAssignment/checkAssignedOnDates/this"/>
         </genOperations>
@@ -679,7 +684,8 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//organisation/PaaSageCredentials/password"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Provider" disposableProviderFactory="true" ecorePackage="camel.ecore#//provider">
+    <nestedGenPackages prefix="Provider" basePackage="eu.paasage.camel" disposableProviderFactory="true"
+        ecorePackage="camel.ecore#//provider">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="camel.ecore#//provider/Operator">
         <genEnumLiterals ecoreEnumLiteral="camel.ecore#//provider/Operator/select"/>
         <genEnumLiterals ecoreEnumLiteral="camel.ecore#//provider/Operator/add"/>
@@ -764,7 +770,8 @@
       </genClasses>
       <genClasses ecoreClass="camel.ecore#//provider/Product"/>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Requirement" disposableProviderFactory="true" ecorePackage="camel.ecore#//requirement">
+    <nestedGenPackages prefix="Requirement" basePackage="eu.paasage.camel" disposableProviderFactory="true"
+        ecorePackage="camel.ecore#//requirement">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="camel.ecore#//requirement/RequirementOperatorType">
         <genEnumLiterals ecoreEnumLiteral="camel.ecore#//requirement/RequirementOperatorType/AND"/>
         <genEnumLiterals ecoreEnumLiteral="camel.ecore#//requirement/RequirementOperatorType/OR"/>
@@ -871,7 +878,8 @@
             ecoreFeature="ecore:EReference camel.ecore#//requirement/VerticalScaleRequirement/vm"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Scalability" disposableProviderFactory="true" ecorePackage="camel.ecore#//scalability">
+    <nestedGenPackages prefix="Scalability" basePackage="eu.paasage.camel" disposableProviderFactory="true"
+        ecorePackage="camel.ecore#//scalability">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="camel.ecore#//scalability/BinaryPatternOperatorType">
         <genEnumLiterals ecoreEnumLiteral="camel.ecore#//scalability/BinaryPatternOperatorType/AND"/>
         <genEnumLiterals ecoreEnumLiteral="camel.ecore#//scalability/BinaryPatternOperatorType/OR"/>
@@ -995,7 +1003,8 @@
             ecoreFeature="ecore:EReference camel.ecore#//scalability/Timer/unit"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Security" disposableProviderFactory="true" ecorePackage="camel.ecore#//security">
+    <nestedGenPackages prefix="Security" basePackage="eu.paasage.camel" disposableProviderFactory="true"
+        ecorePackage="camel.ecore#//security">
       <genClasses ecoreClass="camel.ecore#//security/SecurityModel">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camel.ecore#//security/SecurityModel/securityControls"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camel.ecore#//security/SecurityModel/securityRequirements"/>
@@ -1046,7 +1055,8 @@
       <genClasses ecoreClass="camel.ecore#//security/CompositeSecurityMetric"/>
       <genClasses ecoreClass="camel.ecore#//security/CompositeSecurityMetricInstance"/>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Type" disposableProviderFactory="true" ecorePackage="camel.ecore#//type">
+    <nestedGenPackages prefix="Type" basePackage="eu.paasage.camel" disposableProviderFactory="true"
+        ecorePackage="camel.ecore#//type">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="camel.ecore#//type/TypeEnum">
         <genEnumLiterals ecoreEnumLiteral="camel.ecore#//type/TypeEnum/IntType"/>
         <genEnumLiterals ecoreEnumLiteral="camel.ecore#//type/TypeEnum/StringType"/>
@@ -1146,7 +1156,8 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//type/StringValueType/primitiveType"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Unit" disposableProviderFactory="true" ecorePackage="camel.ecore#//unit">
+    <nestedGenPackages prefix="Unit" basePackage="eu.paasage.camel" disposableProviderFactory="true"
+        ecorePackage="camel.ecore#//unit">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="camel.ecore#//unit/UnitType">
         <genEnumLiterals ecoreEnumLiteral="camel.ecore#//unit/UnitType/BYTES"/>
         <genEnumLiterals ecoreEnumLiteral="camel.ecore#//unit/UnitType/BYTES_PER_SECOND"/>

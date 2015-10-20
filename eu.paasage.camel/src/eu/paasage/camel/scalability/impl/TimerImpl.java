@@ -64,6 +64,24 @@ public class TimerImpl extends CDOObjectImpl implements Timer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return (String)eGet(ScalabilityPackage.Literals.TIMER__NAME, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		eSet(ScalabilityPackage.Literals.TIMER__NAME, newName);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TimerType getType() {
 		return (TimerType)eGet(ScalabilityPackage.Literals.TIMER__TYPE, true);
 	}
@@ -129,24 +147,6 @@ public class TimerImpl extends CDOObjectImpl implements Timer {
 	 */
 	public void setUnit(TimeIntervalUnit newUnit) {
 		eSet(ScalabilityPackage.Literals.TIMER__UNIT, newUnit);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return (String)eGet(ScalabilityPackage.Literals.TIMER__NAME, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		eSet(ScalabilityPackage.Literals.TIMER__NAME, newName);
 	}
 
 } //TimerImpl

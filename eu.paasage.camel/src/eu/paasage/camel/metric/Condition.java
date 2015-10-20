@@ -3,6 +3,7 @@
 package eu.paasage.camel.metric;
 
 import java.util.Date;
+
 import org.eclipse.emf.cdo.CDOObject;
 
 /**
@@ -26,32 +27,6 @@ import org.eclipse.emf.cdo.CDOObject;
  * @generated
  */
 public interface Condition extends CDOObject {
-	/**
-	 * Returns the value of the '<em><b>Validity</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Validity</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Validity</em>' attribute.
-	 * @see #setValidity(Date)
-	 * @see eu.paasage.camel.metric.MetricPackage#getCondition_Validity()
-	 * @model annotation="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName body='MetricCondition' unique='false' upper='*'"
-	 * @generated
-	 */
-	Date getValidity();
-
-	/**
-	 * Sets the value of the '{@link eu.paasage.camel.metric.Condition#getValidity <em>Validity</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Validity</em>' attribute.
-	 * @see #getValidity()
-	 * @generated
-	 */
-	void setValidity(Date value);
-
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -77,32 +52,6 @@ public interface Condition extends CDOObject {
 	 * @generated
 	 */
 	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Threshold</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Threshold</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Threshold</em>' attribute.
-	 * @see #setThreshold(double)
-	 * @see eu.paasage.camel.metric.MetricPackage#getCondition_Threshold()
-	 * @model required="true"
-	 * @generated
-	 */
-	double getThreshold();
-
-	/**
-	 * Sets the value of the '{@link eu.paasage.camel.metric.Condition#getThreshold <em>Threshold</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Threshold</em>' attribute.
-	 * @see #getThreshold()
-	 * @generated
-	 */
-	void setThreshold(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Comparison Operator</b></em>' attribute.
@@ -132,5 +81,57 @@ public interface Condition extends CDOObject {
 	 * @generated
 	 */
 	void setComparisonOperator(ComparisonOperatorType value);
+
+	/**
+	 * Returns the value of the '<em><b>Threshold</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Threshold</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Threshold</em>' attribute.
+	 * @see #setThreshold(double)
+	 * @see eu.paasage.camel.metric.MetricPackage#getCondition_Threshold()
+	 * @model required="true"
+	 * @generated
+	 */
+	double getThreshold();
+
+	/**
+	 * Sets the value of the '{@link eu.paasage.camel.metric.Condition#getThreshold <em>Threshold</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Threshold</em>' attribute.
+	 * @see #getThreshold()
+	 * @generated
+	 */
+	void setThreshold(double value);
+
+	/**
+	 * Returns the value of the '<em><b>Validity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Validity</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Validity</em>' attribute.
+	 * @see #setValidity(Date)
+	 * @see eu.paasage.camel.metric.MetricPackage#getCondition_Validity()
+	 * @model annotation="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName body='MetricCondition' unique='false' upper='*'"
+	 * @generated
+	 */
+	Date getValidity();
+
+	/**
+	 * Sets the value of the '{@link eu.paasage.camel.metric.Condition#getValidity <em>Validity</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Validity</em>' attribute.
+	 * @see #getValidity()
+	 * @generated
+	 */
+	void setValidity(Date value);
 
 } // Condition

@@ -8,6 +8,7 @@ import eu.paasage.camel.requirement.LocationRequirement;
 import eu.paasage.camel.requirement.RequirementPackage;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

@@ -72,6 +72,24 @@ public class ScheduleImpl extends CDOObjectImpl implements Schedule {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return (String)eGet(MetricPackage.Literals.SCHEDULE__NAME, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		eSet(MetricPackage.Literals.SCHEDULE__NAME, newName);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Date getStart() {
 		return (Date)eGet(MetricPackage.Literals.SCHEDULE__START, true);
 	}
@@ -173,24 +191,6 @@ public class ScheduleImpl extends CDOObjectImpl implements Schedule {
 	 */
 	public void setInterval(long newInterval) {
 		eSet(MetricPackage.Literals.SCHEDULE__INTERVAL, newInterval);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return (String)eGet(MetricPackage.Literals.SCHEDULE__NAME, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		eSet(MetricPackage.Literals.SCHEDULE__NAME, newName);
 	}
 
 	/**

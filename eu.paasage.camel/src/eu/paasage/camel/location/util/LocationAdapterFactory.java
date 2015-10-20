@@ -3,6 +3,7 @@
 package eu.paasage.camel.location.util;
 
 import eu.paasage.camel.Model;
+
 import eu.paasage.camel.location.*;
 
 import org.eclipse.emf.common.notify.Adapter;

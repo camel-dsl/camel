@@ -7,10 +7,15 @@ import eu.paasage.camel.organisation.Role;
 import eu.paasage.camel.organisation.RoleAssignment;
 import eu.paasage.camel.organisation.User;
 import eu.paasage.camel.organisation.UserGroup;
+
 import java.lang.reflect.InvocationTargetException;
+
 import java.util.Date;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 /**
@@ -24,9 +29,9 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  *   <li>{@link eu.paasage.camel.organisation.impl.RoleAssignmentImpl#getUser <em>User</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.impl.RoleAssignmentImpl#getRole <em>Role</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.impl.RoleAssignmentImpl#getUserGroup <em>User Group</em>}</li>
- *   <li>{@link eu.paasage.camel.organisation.impl.RoleAssignmentImpl#getStart <em>Start</em>}</li>
- *   <li>{@link eu.paasage.camel.organisation.impl.RoleAssignmentImpl#getEnd <em>End</em>}</li>
- *   <li>{@link eu.paasage.camel.organisation.impl.RoleAssignmentImpl#getAssignedOn <em>Assigned On</em>}</li>
+ *   <li>{@link eu.paasage.camel.organisation.impl.RoleAssignmentImpl#getStartTime <em>Start Time</em>}</li>
+ *   <li>{@link eu.paasage.camel.organisation.impl.RoleAssignmentImpl#getEndTime <em>End Time</em>}</li>
+ *   <li>{@link eu.paasage.camel.organisation.impl.RoleAssignmentImpl#getAssignmentTime <em>Assignment Time</em>}</li>
  * </ul>
  * </p>
  *
@@ -139,8 +144,8 @@ public class RoleAssignmentImpl extends CDOObjectImpl implements RoleAssignment 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getStart() {
-		return (Date)eGet(OrganisationPackage.Literals.ROLE_ASSIGNMENT__START, true);
+	public Date getStartTime() {
+		return (Date)eGet(OrganisationPackage.Literals.ROLE_ASSIGNMENT__START_TIME, true);
 	}
 
 	/**
@@ -148,8 +153,8 @@ public class RoleAssignmentImpl extends CDOObjectImpl implements RoleAssignment 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStart(Date newStart) {
-		eSet(OrganisationPackage.Literals.ROLE_ASSIGNMENT__START, newStart);
+	public void setStartTime(Date newStartTime) {
+		eSet(OrganisationPackage.Literals.ROLE_ASSIGNMENT__START_TIME, newStartTime);
 	}
 
 	/**
@@ -157,8 +162,8 @@ public class RoleAssignmentImpl extends CDOObjectImpl implements RoleAssignment 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getEnd() {
-		return (Date)eGet(OrganisationPackage.Literals.ROLE_ASSIGNMENT__END, true);
+	public Date getEndTime() {
+		return (Date)eGet(OrganisationPackage.Literals.ROLE_ASSIGNMENT__END_TIME, true);
 	}
 
 	/**
@@ -166,8 +171,8 @@ public class RoleAssignmentImpl extends CDOObjectImpl implements RoleAssignment 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEnd(Date newEnd) {
-		eSet(OrganisationPackage.Literals.ROLE_ASSIGNMENT__END, newEnd);
+	public void setEndTime(Date newEndTime) {
+		eSet(OrganisationPackage.Literals.ROLE_ASSIGNMENT__END_TIME, newEndTime);
 	}
 
 	/**
@@ -175,8 +180,8 @@ public class RoleAssignmentImpl extends CDOObjectImpl implements RoleAssignment 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getAssignedOn() {
-		return (Date)eGet(OrganisationPackage.Literals.ROLE_ASSIGNMENT__ASSIGNED_ON, true);
+	public Date getAssignmentTime() {
+		return (Date)eGet(OrganisationPackage.Literals.ROLE_ASSIGNMENT__ASSIGNMENT_TIME, true);
 	}
 
 	/**
@@ -184,8 +189,8 @@ public class RoleAssignmentImpl extends CDOObjectImpl implements RoleAssignment 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAssignedOn(Date newAssignedOn) {
-		eSet(OrganisationPackage.Literals.ROLE_ASSIGNMENT__ASSIGNED_ON, newAssignedOn);
+	public void setAssignmentTime(Date newAssignmentTime) {
+		eSet(OrganisationPackage.Literals.ROLE_ASSIGNMENT__ASSIGNMENT_TIME, newAssignmentTime);
 	}
 
 	/**
@@ -194,7 +199,7 @@ public class RoleAssignmentImpl extends CDOObjectImpl implements RoleAssignment 
 	 * @generated
 	 */
 	public boolean checkAssignedOnDates(final RoleAssignment this_) {
-		System.out.println("CHECKING Assignment_Assigned_Before_Start: " + this + " " + this.getStart() + " " + this.getEnd() + " " + this.getAssignedOn()); java.util.Date date1 = this.getStart(); java.util.Date date2 = this.getEnd(); java.util.Date date = this.getAssignedOn(); if (date == null) return Boolean.TRUE; else if (date1 != null){ if (date.equals(date1) || date.before(date1)) return Boolean.TRUE; else return Boolean.FALSE;} else if (date2 != null && date.before(date2)) return Boolean.TRUE; return Boolean.FALSE;
+		System.out.println("CHECKING Assignment_Assigned_Before_Start: " + this + " " + this.getStartTime() + " " + this.getEndTime() + " " + this.getAssignmentTime()); java.util.Date date1 = this.getStartTime(); java.util.Date date2 = this.getEndTime(); java.util.Date date = this.getAssignmentTime(); if (date == null) return Boolean.TRUE; else if (date1 != null){ if (date.equals(date1) || date.before(date1)) return Boolean.TRUE; else return Boolean.FALSE;} else if (date2 != null && date.before(date2)) return Boolean.TRUE; return Boolean.FALSE;
 	}
 
 	/**
@@ -203,7 +208,7 @@ public class RoleAssignmentImpl extends CDOObjectImpl implements RoleAssignment 
 	 * @generated
 	 */
 	public boolean checkStartEndDates(final RoleAssignment this_) {
-		System.out.println("CHECKING Assignment_Start_Before_End: " + this + " " + this.getStart() + " " + this.getEnd() + " " + this.getAssignedOn()); java.util.Date date1 = this.getStart(); java.util.Date date2 = this.getEnd(); if (date1 == null || date2 == null || (date1 != null && date2 != null && date1.before(date2))) return Boolean.TRUE; return Boolean.FALSE;
+		System.out.println("CHECKING Assignment_Start_Before_End: " + this + " " + this.getStartTime() + " " + this.getEndTime() + " " + this.getAssignmentTime()); java.util.Date date1 = this.getStartTime(); java.util.Date date2 = this.getEndTime(); if (date1 == null || date2 == null || (date1 != null && date2 != null && date1.before(date2))) return Boolean.TRUE; return Boolean.FALSE;
 	}
 
 	/**

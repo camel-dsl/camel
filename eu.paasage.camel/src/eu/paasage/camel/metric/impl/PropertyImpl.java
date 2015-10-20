@@ -5,8 +5,8 @@ package eu.paasage.camel.metric.impl;
 import eu.paasage.camel.metric.MetricPackage;
 import eu.paasage.camel.metric.Property;
 import eu.paasage.camel.metric.PropertyType;
-
 import eu.paasage.camel.metric.Sensor;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -101,6 +101,24 @@ public class PropertyImpl extends CDOObjectImpl implements Property {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public PropertyType getType() {
+		return (PropertyType)eGet(MetricPackage.Literals.PROPERTY__TYPE, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setType(PropertyType newType) {
+		eSet(MetricPackage.Literals.PROPERTY__TYPE, newType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	public EList<Property> getSubProperties() {
 		return (EList<Property>)eGet(MetricPackage.Literals.PROPERTY__SUB_PROPERTIES, true);
@@ -114,24 +132,6 @@ public class PropertyImpl extends CDOObjectImpl implements Property {
 	@SuppressWarnings("unchecked")
 	public EList<Sensor> getSensors() {
 		return (EList<Sensor>)eGet(MetricPackage.Literals.PROPERTY__SENSORS, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PropertyType getType() {
-		return (PropertyType)eGet(MetricPackage.Literals.PROPERTY__TYPE, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setType(PropertyType newType) {
-		eSet(MetricPackage.Literals.PROPERTY__TYPE, newType);
 	}
 
 } //PropertyImpl

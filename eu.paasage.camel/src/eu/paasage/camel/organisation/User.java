@@ -3,7 +3,9 @@
 package eu.paasage.camel.organisation;
 
 import eu.paasage.camel.deployment.DeploymentModel;
+
 import eu.paasage.camel.requirement.RequirementModel;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -59,6 +61,32 @@ public interface User extends Entity {
 	void setName(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Email</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Email</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Email</em>' attribute.
+	 * @see #setEmail(String)
+	 * @see eu.paasage.camel.organisation.OrganisationPackage#getUser_Email()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getEmail();
+
+	/**
+	 * Sets the value of the '{@link eu.paasage.camel.organisation.User#getEmail <em>Email</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Email</em>' attribute.
+	 * @see #getEmail()
+	 * @generated
+	 */
+	void setEmail(String value);
+
+	/**
 	 * Returns the value of the '<em><b>First Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -111,32 +139,6 @@ public interface User extends Entity {
 	void setLastName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Email</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Email</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Email</em>' attribute.
-	 * @see #setEmail(String)
-	 * @see eu.paasage.camel.organisation.OrganisationPackage#getUser_Email()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getEmail();
-
-	/**
-	 * Sets the value of the '{@link eu.paasage.camel.organisation.User#getEmail <em>Email</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Email</em>' attribute.
-	 * @see #getEmail()
-	 * @generated
-	 */
-	void setEmail(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Www</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -147,7 +149,7 @@ public interface User extends Entity {
 	 * @return the value of the '<em>Www</em>' attribute.
 	 * @see #setWww(String)
 	 * @see eu.paasage.camel.organisation.OrganisationPackage#getUser_Www()
-	 * @model annotation="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName body='CloudProvider' unique='false' upper='*'"
+	 * @model
 	 * @generated
 	 */
 	String getWww();

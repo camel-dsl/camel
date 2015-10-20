@@ -3,14 +3,17 @@
 package eu.paasage.camel.metric.impl;
 
 import eu.paasage.camel.LayerType;
+
 import eu.paasage.camel.metric.CompositeMetric;
 import eu.paasage.camel.metric.MetricFormula;
 import eu.paasage.camel.metric.MetricPackage;
 
 import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.WrappedException;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 

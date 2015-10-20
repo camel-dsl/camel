@@ -16,5 +16,4 @@ import org.eclipse.emf.cdo.CDOObject;
  * @generated
  */
 public interface Credentials extends CDOObject {
-
 } // Credentials

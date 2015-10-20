@@ -3,8 +3,11 @@
 package eu.paasage.camel;
 
 import eu.paasage.camel.deployment.DeploymentModel;
+
 import eu.paasage.camel.organisation.Entity;
+
 import org.eclipse.emf.cdo.CDOObject;
+
 import org.eclipse.emf.common.util.EList;
 
 /**

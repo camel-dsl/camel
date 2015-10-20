@@ -14,5 +14,4 @@ package eu.paasage.camel.deployment;
  * @generated
  */
 public interface ProvidedCommunication extends CommunicationPort {
-
 } // ProvidedCommunication

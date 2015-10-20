@@ -3,7 +3,9 @@
 package eu.paasage.camel.scalability;
 
 import eu.paasage.camel.LayerType;
+
 import eu.paasage.camel.metric.MetricInstance;
+
 import org.eclipse.emf.cdo.CDOObject;
 
 /**

@@ -3,14 +3,19 @@
 package eu.paasage.camel.metric.impl;
 
 import eu.paasage.camel.LayerType;
-import eu.paasage.camel.metric.CompositeMetric;
+
 import eu.paasage.camel.metric.Metric;
 import eu.paasage.camel.metric.MetricPackage;
 import eu.paasage.camel.metric.Property;
+
 import eu.paasage.camel.type.ValueType;
+
 import eu.paasage.camel.unit.Unit;
+
 import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -166,12 +171,12 @@ public abstract class MetricImpl extends MetricFormulaParameterImpl implements M
 	 */
 	public boolean checkRecursiveness(final Metric mt1, final Metric mt2) {
 		System.out.println("Checking recursiveness for Metric: " + mt1.getName());
-				CompositeMetric m1 = (CompositeMetric)mt1;
+				eu.paasage.camel.metric.CompositeMetric m1 = (eu.paasage.camel.metric.CompositeMetric)mt1;
 				for (eu.paasage.camel.metric.MetricFormulaParameter param: m1.getFormula().getParameters()){
-					if (param instanceof Metric){
-						Metric mt = (Metric)param;
+					if (param instanceof eu.paasage.camel.metric.Metric){
+						eu.paasage.camel.metric.Metric mt = (eu.paasage.camel.metric.Metric)param;
 						if (mt.getName().equals(mt2.getName())) return Boolean.TRUE;
-						if (mt instanceof CompositeMetric && checkRecursiveness(mt,mt2)) return Boolean.TRUE;
+						if (mt instanceof eu.paasage.camel.metric.CompositeMetric && checkRecursiveness(mt,mt2)) return Boolean.TRUE;
 					}
 				}
 				return Boolean.FALSE;

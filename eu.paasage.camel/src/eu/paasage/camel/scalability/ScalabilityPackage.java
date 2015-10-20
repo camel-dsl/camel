@@ -1752,6 +1752,17 @@ public interface ScalabilityPackage extends EPackage {
 	EClass getTimer();
 
 	/**
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.scalability.Timer#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see eu.paasage.camel.scalability.Timer#getName()
+	 * @see #getTimer()
+	 * @generated
+	 */
+	EAttribute getTimer_Name();
+
+	/**
 	 * Returns the meta object for the attribute '{@link eu.paasage.camel.scalability.Timer#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1794,17 +1805,6 @@ public interface ScalabilityPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTimer_Unit();
-
-	/**
-	 * Returns the meta object for the attribute '{@link eu.paasage.camel.scalability.Timer#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see eu.paasage.camel.scalability.Timer#getName()
-	 * @see #getTimer()
-	 * @generated
-	 */
-	EAttribute getTimer_Name();
 
 	/**
 	 * Returns the meta object for enum '{@link eu.paasage.camel.scalability.BinaryPatternOperatorType <em>Binary Pattern Operator Type</em>}'.
@@ -2354,6 +2354,14 @@ public interface ScalabilityPackage extends EPackage {
 		EClass TIMER = eINSTANCE.getTimer();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TIMER__NAME = eINSTANCE.getTimer_Name();
+
+		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2384,14 +2392,6 @@ public interface ScalabilityPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TIMER__UNIT = eINSTANCE.getTimer_Unit();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TIMER__NAME = eINSTANCE.getTimer_Name();
 
 		/**
 		 * The meta object literal for the '{@link eu.paasage.camel.scalability.BinaryPatternOperatorType <em>Binary Pattern Operator Type</em>}' enum.

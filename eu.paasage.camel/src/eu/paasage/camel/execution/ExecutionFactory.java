@@ -76,22 +76,22 @@ public interface ExecutionFactory extends EFactory {
 	InternalComponentMeasurement createInternalComponentMeasurement();
 
 	/**
-	 * Returns a new object of class '<em>Resource Coupling Measurement</em>'.
+	 * Returns a new object of class '<em>Communication Measurement</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Resource Coupling Measurement</em>'.
+	 * @return a new object of class '<em>Communication Measurement</em>'.
 	 * @generated
 	 */
-	ResourceCouplingMeasurement createResourceCouplingMeasurement();
+	CommunicationMeasurement createCommunicationMeasurement();
 
 	/**
-	 * Returns a new object of class '<em>Resource Measurement</em>'.
+	 * Returns a new object of class '<em>VM Measurement</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Resource Measurement</em>'.
+	 * @return a new object of class '<em>VM Measurement</em>'.
 	 * @generated
 	 */
-	ResourceMeasurement createResourceMeasurement();
+	VMMeasurement createVMMeasurement();
 
 	/**
 	 * Returns a new object of class '<em>SLO Assessment</em>'.

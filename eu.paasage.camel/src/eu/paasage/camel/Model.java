@@ -3,6 +3,7 @@
 package eu.paasage.camel;
 
 import org.eclipse.emf.cdo.CDOObject;
+
 import org.eclipse.emf.common.util.EList;
 
 /**

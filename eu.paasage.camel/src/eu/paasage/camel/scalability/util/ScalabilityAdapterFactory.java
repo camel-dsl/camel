@@ -3,8 +3,8 @@
 package eu.paasage.camel.scalability.util;
 
 import eu.paasage.camel.Action;
-
 import eu.paasage.camel.Model;
+
 import eu.paasage.camel.scalability.*;
 
 import org.eclipse.emf.common.notify.Adapter;

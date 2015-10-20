@@ -4,10 +4,15 @@ package eu.paasage.camel.deployment.impl;
 
 import eu.paasage.camel.deployment.DeploymentPackage;
 import eu.paasage.camel.deployment.VMInstance;
+
 import eu.paasage.camel.provider.Attribute;
+
 import eu.paasage.camel.type.SingleValue;
+
 import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -68,24 +73,6 @@ public class VMInstanceImpl extends ComponentInstanceImpl implements VMInstance 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getIp() {
-		return (String)eGet(DeploymentPackage.Literals.VM_INSTANCE__IP, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIp(String newIp) {
-		eSet(DeploymentPackage.Literals.VM_INSTANCE__IP, newIp);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public SingleValue getVmTypeValue() {
 		return (SingleValue)eGet(DeploymentPackage.Literals.VM_INSTANCE__VM_TYPE_VALUE, true);
 	}
@@ -97,6 +84,24 @@ public class VMInstanceImpl extends ComponentInstanceImpl implements VMInstance 
 	 */
 	public void setVmTypeValue(SingleValue newVmTypeValue) {
 		eSet(DeploymentPackage.Literals.VM_INSTANCE__VM_TYPE_VALUE, newVmTypeValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getIp() {
+		return (String)eGet(DeploymentPackage.Literals.VM_INSTANCE__IP, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIp(String newIp) {
+		eSet(DeploymentPackage.Literals.VM_INSTANCE__IP, newIp);
 	}
 
 	/**

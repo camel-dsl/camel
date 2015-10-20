@@ -4,7 +4,6 @@ package eu.paasage.camel.metric;
 
 import eu.paasage.camel.LayerType;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Composite Metric</b></em>'.

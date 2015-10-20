@@ -3,7 +3,9 @@
 package eu.paasage.camel.security.impl;
 
 import eu.paasage.camel.impl.ModelImpl;
+
 import eu.paasage.camel.requirement.SecurityRequirement;
+
 import eu.paasage.camel.security.CompositeSecurityMetric;
 import eu.paasage.camel.security.CompositeSecurityMetricInstance;
 import eu.paasage.camel.security.RawSecurityMetric;
@@ -15,7 +17,9 @@ import eu.paasage.camel.security.SecurityModel;
 import eu.paasage.camel.security.SecurityPackage;
 import eu.paasage.camel.security.SecurityProperty;
 import eu.paasage.camel.security.SecuritySLO;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

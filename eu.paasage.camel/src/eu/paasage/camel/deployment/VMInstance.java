@@ -3,6 +3,7 @@
 package eu.paasage.camel.deployment;
 
 import eu.paasage.camel.provider.Attribute;
+
 import eu.paasage.camel.type.SingleValue;
 
 /**
@@ -52,32 +53,6 @@ public interface VMInstance extends ComponentInstance {
 	void setVmType(Attribute value);
 
 	/**
-	 * Returns the value of the '<em><b>Ip</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Ip</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ip</em>' attribute.
-	 * @see #setIp(String)
-	 * @see eu.paasage.camel.deployment.DeploymentPackage#getVMInstance_Ip()
-	 * @model annotation="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName body='CommunicationInstance' unique='false' upper='*'"
-	 * @generated
-	 */
-	String getIp();
-
-	/**
-	 * Sets the value of the '{@link eu.paasage.camel.deployment.VMInstance#getIp <em>Ip</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ip</em>' attribute.
-	 * @see #getIp()
-	 * @generated
-	 */
-	void setIp(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Vm Type Value</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -102,6 +77,32 @@ public interface VMInstance extends ComponentInstance {
 	 * @generated
 	 */
 	void setVmTypeValue(SingleValue value);
+
+	/**
+	 * Returns the value of the '<em><b>Ip</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Ip</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Ip</em>' attribute.
+	 * @see #setIp(String)
+	 * @see eu.paasage.camel.deployment.DeploymentPackage#getVMInstance_Ip()
+	 * @model annotation="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName body='CommunicationInstance' unique='false' upper='*'"
+	 * @generated
+	 */
+	String getIp();
+
+	/**
+	 * Sets the value of the '{@link eu.paasage.camel.deployment.VMInstance#getIp <em>Ip</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Ip</em>' attribute.
+	 * @see #getIp()
+	 * @generated
+	 */
+	void setIp(String value);
 
 	/**
 	 * <!-- begin-user-doc -->

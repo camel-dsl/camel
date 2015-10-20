@@ -63,24 +63,6 @@ public abstract class ConditionImpl extends CDOObjectImpl implements Condition {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getValidity() {
-		return (Date)eGet(MetricPackage.Literals.CONDITION__VALIDITY, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setValidity(Date newValidity) {
-		eSet(MetricPackage.Literals.CONDITION__VALIDITY, newValidity);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getName() {
 		return (String)eGet(MetricPackage.Literals.CONDITION__NAME, true);
 	}
@@ -92,6 +74,24 @@ public abstract class ConditionImpl extends CDOObjectImpl implements Condition {
 	 */
 	public void setName(String newName) {
 		eSet(MetricPackage.Literals.CONDITION__NAME, newName);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ComparisonOperatorType getComparisonOperator() {
+		return (ComparisonOperatorType)eGet(MetricPackage.Literals.CONDITION__COMPARISON_OPERATOR, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setComparisonOperator(ComparisonOperatorType newComparisonOperator) {
+		eSet(MetricPackage.Literals.CONDITION__COMPARISON_OPERATOR, newComparisonOperator);
 	}
 
 	/**
@@ -117,8 +117,8 @@ public abstract class ConditionImpl extends CDOObjectImpl implements Condition {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ComparisonOperatorType getComparisonOperator() {
-		return (ComparisonOperatorType)eGet(MetricPackage.Literals.CONDITION__COMPARISON_OPERATOR, true);
+	public Date getValidity() {
+		return (Date)eGet(MetricPackage.Literals.CONDITION__VALIDITY, true);
 	}
 
 	/**
@@ -126,8 +126,8 @@ public abstract class ConditionImpl extends CDOObjectImpl implements Condition {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setComparisonOperator(ComparisonOperatorType newComparisonOperator) {
-		eSet(MetricPackage.Literals.CONDITION__COMPARISON_OPERATOR, newComparisonOperator);
+	public void setValidity(Date newValidity) {
+		eSet(MetricPackage.Literals.CONDITION__VALIDITY, newValidity);
 	}
 
 } //ConditionImpl

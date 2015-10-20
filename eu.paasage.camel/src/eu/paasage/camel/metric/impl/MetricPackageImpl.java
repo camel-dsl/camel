@@ -3,13 +3,21 @@
 package eu.paasage.camel.metric.impl;
 
 import eu.paasage.camel.CamelPackage;
+
 import eu.paasage.camel.deployment.DeploymentPackage;
+
 import eu.paasage.camel.deployment.impl.DeploymentPackageImpl;
+
 import eu.paasage.camel.execution.ExecutionPackage;
+
 import eu.paasage.camel.execution.impl.ExecutionPackageImpl;
+
 import eu.paasage.camel.impl.CamelPackageImpl;
+
 import eu.paasage.camel.location.LocationPackage;
+
 import eu.paasage.camel.location.impl.LocationPackageImpl;
+
 import eu.paasage.camel.metric.ComparisonOperatorType;
 import eu.paasage.camel.metric.CompositeMetric;
 import eu.paasage.camel.metric.CompositeMetricContext;
@@ -46,21 +54,37 @@ import eu.paasage.camel.metric.Sensor;
 import eu.paasage.camel.metric.Window;
 import eu.paasage.camel.metric.WindowSizeType;
 import eu.paasage.camel.metric.WindowType;
+
 import eu.paasage.camel.metric.util.MetricValidator;
+
 import eu.paasage.camel.organisation.OrganisationPackage;
+
 import eu.paasage.camel.organisation.impl.OrganisationPackageImpl;
+
 import eu.paasage.camel.provider.ProviderPackage;
+
 import eu.paasage.camel.provider.impl.ProviderPackageImpl;
+
 import eu.paasage.camel.requirement.RequirementPackage;
+
 import eu.paasage.camel.requirement.impl.RequirementPackageImpl;
+
 import eu.paasage.camel.scalability.ScalabilityPackage;
+
 import eu.paasage.camel.scalability.impl.ScalabilityPackageImpl;
+
 import eu.paasage.camel.security.SecurityPackage;
+
 import eu.paasage.camel.security.impl.SecurityPackageImpl;
+
 import eu.paasage.camel.type.TypePackage;
+
 import eu.paasage.camel.type.impl.TypePackageImpl;
+
 import eu.paasage.camel.unit.UnitPackage;
+
 import eu.paasage.camel.unit.impl.UnitPackageImpl;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -68,6 +92,7 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -434,8 +459,8 @@ public class MetricPackageImpl extends EPackageImpl implements MetricPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCondition_Validity() {
-		return (EAttribute)conditionEClass.getEStructuralFeatures().get(3);
+	public EAttribute getCondition_Name() {
+		return (EAttribute)conditionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -443,8 +468,8 @@ public class MetricPackageImpl extends EPackageImpl implements MetricPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCondition_Name() {
-		return (EAttribute)conditionEClass.getEStructuralFeatures().get(0);
+	public EAttribute getCondition_ComparisonOperator() {
+		return (EAttribute)conditionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -461,8 +486,8 @@ public class MetricPackageImpl extends EPackageImpl implements MetricPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCondition_ComparisonOperator() {
-		return (EAttribute)conditionEClass.getEStructuralFeatures().get(1);
+	public EAttribute getCondition_Validity() {
+		return (EAttribute)conditionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -641,8 +666,8 @@ public class MetricPackageImpl extends EPackageImpl implements MetricPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMetricFormulaParameter_Value() {
-		return (EReference)metricFormulaParameterEClass.getEStructuralFeatures().get(1);
+	public EAttribute getMetricFormulaParameter_Name() {
+		return (EAttribute)metricFormulaParameterEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -650,8 +675,8 @@ public class MetricPackageImpl extends EPackageImpl implements MetricPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMetricFormulaParameter_Name() {
-		return (EAttribute)metricFormulaParameterEClass.getEStructuralFeatures().get(0);
+	public EReference getMetricFormulaParameter_Value() {
+		return (EReference)metricFormulaParameterEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -929,6 +954,15 @@ public class MetricPackageImpl extends EPackageImpl implements MetricPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getProperty_Type() {
+		return (EAttribute)propertyEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getProperty_SubProperties() {
 		return (EReference)propertyEClass.getEStructuralFeatures().get(3);
 	}
@@ -947,8 +981,8 @@ public class MetricPackageImpl extends EPackageImpl implements MetricPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getProperty_Type() {
-		return (EAttribute)propertyEClass.getEStructuralFeatures().get(2);
+	public EClass getSchedule() {
+		return scheduleEClass;
 	}
 
 	/**
@@ -956,8 +990,8 @@ public class MetricPackageImpl extends EPackageImpl implements MetricPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSchedule() {
-		return scheduleEClass;
+	public EAttribute getSchedule_Name() {
+		return (EAttribute)scheduleEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1012,15 +1046,6 @@ public class MetricPackageImpl extends EPackageImpl implements MetricPackage {
 	 */
 	public EAttribute getSchedule_Interval() {
 		return (EAttribute)scheduleEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSchedule_Name() {
-		return (EAttribute)scheduleEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1091,6 +1116,15 @@ public class MetricPackageImpl extends EPackageImpl implements MetricPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getWindow_Name() {
+		return (EAttribute)windowEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getWindow_Unit() {
 		return (EReference)windowEClass.getEStructuralFeatures().get(1);
 	}
@@ -1129,15 +1163,6 @@ public class MetricPackageImpl extends EPackageImpl implements MetricPackage {
 	 */
 	public EAttribute getWindow_TimeSize() {
 		return (EAttribute)windowEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getWindow_Name() {
-		return (EAttribute)windowEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1937,56 +1962,6 @@ public class MetricPackageImpl extends EPackageImpl implements MetricPackage {
 	}
 
 	/**
-	 * Initializes the annotations for <b>http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName</b>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void createEmofAnnotations() {
-		String source = "http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName";	
-		addAnnotation
-		  (getCondition_Validity(), 
-		   source, 
-		   new String[] {
-			 "body", "MetricCondition",
-			 "unique", "false",
-			 "upper", "*"
-		   });	
-		addAnnotation
-		  (getMetricInstance_Name(), 
-		   source, 
-		   new String[] {
-			 "body", "MetricFormulaParameter",
-			 "unique", "false",
-			 "upper", "*"
-		   });	
-		addAnnotation
-		  (getSchedule_Type(), 
-		   source, 
-		   new String[] {
-			 "body", "HorizontalScalingPolicy",
-			 "unique", "false",
-			 "upper", "*"
-		   });	
-		addAnnotation
-		  (getSensor_Configuration(), 
-		   source, 
-		   new String[] {
-			 "body", "ResourceGroup",
-			 "unique", "false",
-			 "upper", "*"
-		   });	
-		addAnnotation
-		  (getSensor_IsPush(), 
-		   source, 
-		   new String[] {
-			 "body", "ScalabilityRule",
-			 "unique", "false",
-			 "upper", "*"
-		   });
-	}
-
-	/**
 	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore</b>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2079,6 +2054,56 @@ public class MetricPackageImpl extends EPackageImpl implements MetricPackage {
 		   source, 
 		   new String[] {
 			 "constraints", "raw_metric_context_correct_metric_type"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createEmofAnnotations() {
+		String source = "http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName";	
+		addAnnotation
+		  (getCondition_Validity(), 
+		   source, 
+		   new String[] {
+			 "body", "MetricCondition",
+			 "unique", "false",
+			 "upper", "*"
+		   });	
+		addAnnotation
+		  (getMetricInstance_Name(), 
+		   source, 
+		   new String[] {
+			 "body", "MetricFormulaParameter",
+			 "unique", "false",
+			 "upper", "*"
+		   });	
+		addAnnotation
+		  (getSchedule_Type(), 
+		   source, 
+		   new String[] {
+			 "body", "HorizontalScalingPolicy",
+			 "unique", "false",
+			 "upper", "*"
+		   });	
+		addAnnotation
+		  (getSensor_Configuration(), 
+		   source, 
+		   new String[] {
+			 "body", "ResourceGroup",
+			 "unique", "false",
+			 "upper", "*"
+		   });	
+		addAnnotation
+		  (getSensor_IsPush(), 
+		   source, 
+		   new String[] {
+			 "body", "ScalabilityRule",
+			 "unique", "false",
+			 "upper", "*"
 		   });
 	}
 

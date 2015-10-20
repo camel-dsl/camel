@@ -6,18 +6,31 @@ import eu.paasage.camel.Action;
 import eu.paasage.camel.Application;
 import eu.paasage.camel.CamelModel;
 import eu.paasage.camel.CamelPackage;
+
 import eu.paasage.camel.deployment.DeploymentModel;
+
 import eu.paasage.camel.execution.ExecutionModel;
+
 import eu.paasage.camel.location.LocationModel;
+
 import eu.paasage.camel.metric.MetricModel;
+
 import eu.paasage.camel.organisation.OrganisationModel;
+
 import eu.paasage.camel.provider.ProviderModel;
+
 import eu.paasage.camel.requirement.RequirementModel;
+
 import eu.paasage.camel.scalability.ScalabilityModel;
+
 import eu.paasage.camel.security.SecurityModel;
+
 import eu.paasage.camel.type.TypeModel;
+
 import eu.paasage.camel.unit.UnitModel;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

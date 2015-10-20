@@ -3,7 +3,9 @@
 package eu.paasage.camel.security;
 
 import eu.paasage.camel.organisation.DataCenter;
+
 import org.eclipse.emf.cdo.CDOObject;
+
 import org.eclipse.emf.common.util.EList;
 
 /**

@@ -3,6 +3,7 @@
 package eu.paasage.camel.metric.impl;
 
 import eu.paasage.camel.impl.ModelImpl;
+
 import eu.paasage.camel.metric.Condition;
 import eu.paasage.camel.metric.ConditionContext;
 import eu.paasage.camel.metric.Metric;
@@ -15,8 +16,11 @@ import eu.paasage.camel.metric.Property;
 import eu.paasage.camel.metric.Schedule;
 import eu.paasage.camel.metric.Sensor;
 import eu.paasage.camel.metric.Window;
+
 import eu.paasage.camel.unit.Unit;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

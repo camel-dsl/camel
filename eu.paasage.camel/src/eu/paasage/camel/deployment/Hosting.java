@@ -79,7 +79,7 @@ public interface Hosting extends DeploymentElement {
 	 * Returns the value of the '<em><b>Provided Host Configuration</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Provided Host Configuration</em>' reference isn't clear,
+	 * If the meaning of the '<em>Provided Host Configuration</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -105,7 +105,7 @@ public interface Hosting extends DeploymentElement {
 	 * Returns the value of the '<em><b>Required Host Configuration</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Required Host Configuration</em>' reference isn't clear,
+	 * If the meaning of the '<em>Required Host Configuration</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

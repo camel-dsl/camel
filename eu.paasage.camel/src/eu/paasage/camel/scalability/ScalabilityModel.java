@@ -3,7 +3,9 @@
 package eu.paasage.camel.scalability;
 
 import eu.paasage.camel.Model;
+
 import eu.paasage.camel.requirement.ScaleRequirement;
+
 import org.eclipse.emf.common.util.EList;
 
 /**

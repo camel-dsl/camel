@@ -3,23 +3,41 @@
 package eu.paasage.camel.security.impl;
 
 import eu.paasage.camel.CamelPackage;
+
 import eu.paasage.camel.deployment.DeploymentPackage;
+
 import eu.paasage.camel.deployment.impl.DeploymentPackageImpl;
+
 import eu.paasage.camel.execution.ExecutionPackage;
+
 import eu.paasage.camel.execution.impl.ExecutionPackageImpl;
+
 import eu.paasage.camel.impl.CamelPackageImpl;
+
 import eu.paasage.camel.location.LocationPackage;
+
 import eu.paasage.camel.location.impl.LocationPackageImpl;
+
 import eu.paasage.camel.metric.MetricPackage;
+
 import eu.paasage.camel.metric.impl.MetricPackageImpl;
+
 import eu.paasage.camel.organisation.OrganisationPackage;
+
 import eu.paasage.camel.organisation.impl.OrganisationPackageImpl;
+
 import eu.paasage.camel.provider.ProviderPackage;
+
 import eu.paasage.camel.provider.impl.ProviderPackageImpl;
+
 import eu.paasage.camel.requirement.RequirementPackage;
+
 import eu.paasage.camel.requirement.impl.RequirementPackageImpl;
+
 import eu.paasage.camel.scalability.ScalabilityPackage;
+
 import eu.paasage.camel.scalability.impl.ScalabilityPackageImpl;
+
 import eu.paasage.camel.security.Certifiable;
 import eu.paasage.camel.security.CompositeSecurityMetric;
 import eu.paasage.camel.security.CompositeSecurityMetricInstance;
@@ -33,16 +51,23 @@ import eu.paasage.camel.security.SecurityModel;
 import eu.paasage.camel.security.SecurityPackage;
 import eu.paasage.camel.security.SecurityProperty;
 import eu.paasage.camel.security.SecuritySLO;
+
 import eu.paasage.camel.security.util.SecurityValidator;
+
 import eu.paasage.camel.type.TypePackage;
+
 import eu.paasage.camel.type.impl.TypePackageImpl;
+
 import eu.paasage.camel.unit.UnitPackage;
+
 import eu.paasage.camel.unit.impl.UnitPackageImpl;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -756,6 +781,34 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 	}
 
 	/**
+	 * Initializes the annotations for <b>teneo.jpa</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createTeneoAnnotations() {
+		String source = "teneo.jpa";	
+		addAnnotation
+		  (getSecurityModel_RawSecurityMetricInstances(), 
+		   source, 
+		   new String[] {
+			 "value", "@JoinColumn(name=\"rawsecuritymetricInstances\")"
+		   });	
+		addAnnotation
+		  (getSecurityModel_CompositeSecurityMetricInstances(), 
+		   source, 
+		   new String[] {
+			 "value", "@JoinColumn(name=\"compositesecuritymetricInstances\")"
+		   });	
+		addAnnotation
+		  (getSecurityControl_Specification(), 
+		   source, 
+		   new String[] {
+			 "value", "@Column(length=4000)"
+		   });
+	}
+
+	/**
 	 * Initializes the annotations for <b>http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName</b>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -786,34 +839,6 @@ public class SecurityPackageImpl extends EPackageImpl implements SecurityPackage
 		   source, 
 		   new String[] {
 			 "body", "ServiceLevelObjectiveType"
-		   });
-	}
-
-	/**
-	 * Initializes the annotations for <b>teneo.jpa</b>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void createTeneoAnnotations() {
-		String source = "teneo.jpa";	
-		addAnnotation
-		  (getSecurityModel_RawSecurityMetricInstances(), 
-		   source, 
-		   new String[] {
-			 "value", "@JoinColumn(name=\"rawsecuritymetricInstances\")"
-		   });	
-		addAnnotation
-		  (getSecurityModel_CompositeSecurityMetricInstances(), 
-		   source, 
-		   new String[] {
-			 "value", "@JoinColumn(name=\"compositesecuritymetricInstances\")"
-		   });	
-		addAnnotation
-		  (getSecurityControl_Specification(), 
-		   source, 
-		   new String[] {
-			 "value", "@Column(length=4000)"
 		   });
 	}
 

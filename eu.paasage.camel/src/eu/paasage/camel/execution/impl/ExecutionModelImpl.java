@@ -9,9 +9,13 @@ import eu.paasage.camel.execution.ExecutionPackage;
 import eu.paasage.camel.execution.Measurement;
 import eu.paasage.camel.execution.RuleTrigger;
 import eu.paasage.camel.execution.SLOAssessment;
+
 import eu.paasage.camel.impl.ModelImpl;
+
 import eu.paasage.camel.scalability.EventInstance;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

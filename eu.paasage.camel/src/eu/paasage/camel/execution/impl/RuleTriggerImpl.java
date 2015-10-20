@@ -29,7 +29,7 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  *   <li>{@link eu.paasage.camel.execution.impl.RuleTriggerImpl#getScalabilityRule <em>Scalability Rule</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.impl.RuleTriggerImpl#getEventInstances <em>Event Instances</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.impl.RuleTriggerImpl#getActionRealisations <em>Action Realisations</em>}</li>
- *   <li>{@link eu.paasage.camel.execution.impl.RuleTriggerImpl#getFiredOn <em>Fired On</em>}</li>
+ *   <li>{@link eu.paasage.camel.execution.impl.RuleTriggerImpl#getTrigerringTime <em>Trigerring Time</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.impl.RuleTriggerImpl#getExecutionContext <em>Execution Context</em>}</li>
  * </ul>
  * </p>
@@ -127,8 +127,8 @@ public class RuleTriggerImpl extends CDOObjectImpl implements RuleTrigger {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getFiredOn() {
-		return (Date)eGet(ExecutionPackage.Literals.RULE_TRIGGER__FIRED_ON, true);
+	public Date getTrigerringTime() {
+		return (Date)eGet(ExecutionPackage.Literals.RULE_TRIGGER__TRIGERRING_TIME, true);
 	}
 
 	/**
@@ -136,8 +136,8 @@ public class RuleTriggerImpl extends CDOObjectImpl implements RuleTrigger {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFiredOn(Date newFiredOn) {
-		eSet(ExecutionPackage.Literals.RULE_TRIGGER__FIRED_ON, newFiredOn);
+	public void setTrigerringTime(Date newTrigerringTime) {
+		eSet(ExecutionPackage.Literals.RULE_TRIGGER__TRIGERRING_TIME, newTrigerringTime);
 	}
 
 	/**

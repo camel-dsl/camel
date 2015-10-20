@@ -3,15 +3,16 @@
 package eu.paasage.camel.security.util;
 
 import eu.paasage.camel.Model;
+
 import eu.paasage.camel.metric.CompositeMetric;
 import eu.paasage.camel.metric.CompositeMetricInstance;
 import eu.paasage.camel.metric.Metric;
 import eu.paasage.camel.metric.MetricFormulaParameter;
 import eu.paasage.camel.metric.MetricInstance;
 import eu.paasage.camel.metric.Property;
-
 import eu.paasage.camel.metric.RawMetric;
 import eu.paasage.camel.metric.RawMetricInstance;
+
 import eu.paasage.camel.requirement.HardRequirement;
 import eu.paasage.camel.requirement.Requirement;
 import eu.paasage.camel.requirement.ServiceLevelObjective;

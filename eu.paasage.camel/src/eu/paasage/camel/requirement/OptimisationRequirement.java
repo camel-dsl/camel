@@ -3,7 +3,9 @@
 package eu.paasage.camel.requirement;
 
 import eu.paasage.camel.Application;
+
 import eu.paasage.camel.deployment.Component;
+
 import eu.paasage.camel.metric.Metric;
 import eu.paasage.camel.metric.Property;
 
