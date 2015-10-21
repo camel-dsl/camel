@@ -25,22 +25,6 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface InternalComponent extends Component {
 	/**
-	 * Returns the value of the '<em><b>Required Communications</b></em>' containment reference list.
-	 * The list contents are of type {@link eu.paasage.camel.deployment.RequiredCommunication}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Required Communications</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Required Communications</em>' containment reference list.
-	 * @see eu.paasage.camel.deployment.DeploymentPackage#getInternalComponent_RequiredCommunications()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<RequiredCommunication> getRequiredCommunications();
-
-	/**
 	 * Returns the value of the '<em><b>Composite Internal Components</b></em>' containment reference list.
 	 * The list contents are of type {@link eu.paasage.camel.deployment.InternalComponent}.
 	 * <!-- begin-user-doc -->
@@ -55,6 +39,22 @@ public interface InternalComponent extends Component {
 	 * @generated
 	 */
 	EList<InternalComponent> getCompositeInternalComponents();
+
+	/**
+	 * Returns the value of the '<em><b>Required Communications</b></em>' containment reference list.
+	 * The list contents are of type {@link eu.paasage.camel.deployment.RequiredCommunication}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Required Communications</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Required Communications</em>' containment reference list.
+	 * @see eu.paasage.camel.deployment.DeploymentPackage#getInternalComponent_RequiredCommunications()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<RequiredCommunication> getRequiredCommunications();
 
 	/**
 	 * Returns the value of the '<em><b>Required Host</b></em>' containment reference.

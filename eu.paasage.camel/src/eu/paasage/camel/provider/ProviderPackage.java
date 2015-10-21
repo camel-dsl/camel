@@ -3,6 +3,7 @@
 package eu.paasage.camel.provider;
 
 import eu.paasage.camel.CamelPackage;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -1348,6 +1349,17 @@ public interface ProviderPackage extends EPackage {
 	EClass getAttributeConstraint();
 
 	/**
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.provider.AttributeConstraint#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see eu.paasage.camel.provider.AttributeConstraint#getName()
+	 * @see #getAttributeConstraint()
+	 * @generated
+	 */
+	EAttribute getAttributeConstraint_Name();
+
+	/**
 	 * Returns the meta object for the reference '{@link eu.paasage.camel.provider.AttributeConstraint#getFrom <em>From</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1390,17 +1402,6 @@ public interface ProviderPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getAttributeConstraint_ToValue();
-
-	/**
-	 * Returns the meta object for the attribute '{@link eu.paasage.camel.provider.AttributeConstraint#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see eu.paasage.camel.provider.AttributeConstraint#getName()
-	 * @see #getAttributeConstraint()
-	 * @generated
-	 */
-	EAttribute getAttributeConstraint_Name();
 
 	/**
 	 * Returns the meta object for class '{@link eu.paasage.camel.provider.Cardinality <em>Cardinality</em>}'.
@@ -1679,6 +1680,17 @@ public interface ProviderPackage extends EPackage {
 	EClass getFeature();
 
 	/**
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.provider.Feature#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see eu.paasage.camel.provider.Feature#getName()
+	 * @see #getFeature()
+	 * @generated
+	 */
+	EAttribute getFeature_Name();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link eu.paasage.camel.provider.Feature#getAttributes <em>Attributes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1721,17 +1733,6 @@ public interface ProviderPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getFeature_Clones();
-
-	/**
-	 * Returns the meta object for the attribute '{@link eu.paasage.camel.provider.Feature#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see eu.paasage.camel.provider.Feature#getName()
-	 * @see #getFeature()
-	 * @generated
-	 */
-	EAttribute getFeature_Name();
 
 	/**
 	 * Returns the meta object for class '{@link eu.paasage.camel.provider.Alternative <em>Alternative</em>}'.
@@ -1936,6 +1937,14 @@ public interface ProviderPackage extends EPackage {
 		EClass ATTRIBUTE_CONSTRAINT = eINSTANCE.getAttributeConstraint();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATTRIBUTE_CONSTRAINT__NAME = eINSTANCE.getAttributeConstraint_Name();
+
+		/**
 		 * The meta object literal for the '<em><b>From</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1966,14 +1975,6 @@ public interface ProviderPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ATTRIBUTE_CONSTRAINT__TO_VALUE = eINSTANCE.getAttributeConstraint_ToValue();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ATTRIBUTE_CONSTRAINT__NAME = eINSTANCE.getAttributeConstraint_Name();
 
 		/**
 		 * The meta object literal for the '{@link eu.paasage.camel.provider.impl.CardinalityImpl <em>Cardinality</em>}' class.
@@ -2204,6 +2205,14 @@ public interface ProviderPackage extends EPackage {
 		EClass FEATURE = eINSTANCE.getFeature();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FEATURE__NAME = eINSTANCE.getFeature_Name();
+
+		/**
 		 * The meta object literal for the '<em><b>Attributes</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2234,14 +2243,6 @@ public interface ProviderPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FEATURE__CLONES = eINSTANCE.getFeature_Clones();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FEATURE__NAME = eINSTANCE.getFeature_Name();
 
 		/**
 		 * The meta object literal for the '{@link eu.paasage.camel.provider.impl.AlternativeImpl <em>Alternative</em>}' class.

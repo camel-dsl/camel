@@ -7,6 +7,7 @@ import eu.paasage.camel.requirement.OSOrImageRequirement;
 import eu.paasage.camel.requirement.ProviderRequirement;
 import eu.paasage.camel.requirement.QualitativeHardwareRequirement;
 import eu.paasage.camel.requirement.QuantitativeHardwareRequirement;
+
 import org.eclipse.emf.cdo.CDOObject;
 
 /**

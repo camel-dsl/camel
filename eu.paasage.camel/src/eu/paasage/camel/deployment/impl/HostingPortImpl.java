@@ -4,6 +4,7 @@ package eu.paasage.camel.deployment.impl;
 
 import eu.paasage.camel.deployment.DeploymentPackage;
 import eu.paasage.camel.deployment.HostingPort;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

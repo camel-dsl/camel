@@ -3,19 +3,33 @@
 package eu.paasage.camel.requirement.impl;
 
 import eu.paasage.camel.CamelPackage;
+
 import eu.paasage.camel.deployment.DeploymentPackage;
+
 import eu.paasage.camel.deployment.impl.DeploymentPackageImpl;
+
 import eu.paasage.camel.execution.ExecutionPackage;
+
 import eu.paasage.camel.execution.impl.ExecutionPackageImpl;
+
 import eu.paasage.camel.impl.CamelPackageImpl;
+
 import eu.paasage.camel.location.LocationPackage;
+
 import eu.paasage.camel.location.impl.LocationPackageImpl;
+
 import eu.paasage.camel.metric.MetricPackage;
+
 import eu.paasage.camel.metric.impl.MetricPackageImpl;
+
 import eu.paasage.camel.organisation.OrganisationPackage;
+
 import eu.paasage.camel.organisation.impl.OrganisationPackageImpl;
+
 import eu.paasage.camel.provider.ProviderPackage;
+
 import eu.paasage.camel.provider.impl.ProviderPackageImpl;
+
 import eu.paasage.camel.requirement.HardRequirement;
 import eu.paasage.camel.requirement.HardwareRequirement;
 import eu.paasage.camel.requirement.HorizontalScaleRequirement;
@@ -39,15 +53,25 @@ import eu.paasage.camel.requirement.SecurityRequirement;
 import eu.paasage.camel.requirement.ServiceLevelObjective;
 import eu.paasage.camel.requirement.SoftRequirement;
 import eu.paasage.camel.requirement.VerticalScaleRequirement;
+
 import eu.paasage.camel.requirement.util.RequirementValidator;
+
 import eu.paasage.camel.scalability.ScalabilityPackage;
+
 import eu.paasage.camel.scalability.impl.ScalabilityPackageImpl;
+
 import eu.paasage.camel.security.SecurityPackage;
+
 import eu.paasage.camel.security.impl.SecurityPackageImpl;
+
 import eu.paasage.camel.type.TypePackage;
+
 import eu.paasage.camel.type.impl.TypePackageImpl;
+
 import eu.paasage.camel.unit.UnitPackage;
+
 import eu.paasage.camel.unit.impl.UnitPackageImpl;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -55,6 +79,7 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -1168,6 +1193,66 @@ public class RequirementPackageImpl extends EPackageImpl implements RequirementP
 	}
 
 	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createEcoreAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore";	
+		addAnnotation
+		  (this, 
+		   source, 
+		   new String[] {
+			 "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			 "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
+		   });	
+		addAnnotation
+		  (requirementGroupEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "applications_in_sub_groups_in_group requirement_group_no_conflict_reqs requirements_in_group_refer_to_group_applications"
+		   });	
+		addAnnotation
+		  (softRequirementEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "non_negative_priorities_for_soft_requirement"
+		   });	
+		addAnnotation
+		  (optimisationRequirementEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "optimization_requirement_metric_or_prop"
+		   });	
+		addAnnotation
+		  (quantitativeHardwareRequirementEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "one_alternative_provided_in_quantitative_req quantitative_req_correct_input"
+		   });	
+		addAnnotation
+		  (securityRequirementEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "security_req_component_in_app"
+		   });	
+		addAnnotation
+		  (horizontalScaleRequirementEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "horiz_scale_requirement_min_max_enforcement"
+		   });	
+		addAnnotation
+		  (verticalScaleRequirementEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "vert_scale_requirement_correct_param_vals vert_scale_requirement_activ_one_alt"
+		   });
+	}
+
+	/**
 	 * Initializes the annotations for <b>http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName</b>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1316,66 +1401,6 @@ public class RequirementPackageImpl extends EPackageImpl implements RequirementP
 			 "body", "ScalabilityRule",
 			 "unique", "false",
 			 "upper", "*"
-		   });
-	}
-
-	/**
-	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore</b>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void createEcoreAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore";	
-		addAnnotation
-		  (this, 
-		   source, 
-		   new String[] {
-			 "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-			 "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
-		   });	
-		addAnnotation
-		  (requirementGroupEClass, 
-		   source, 
-		   new String[] {
-			 "constraints", "applications_in_sub_groups_in_group requirement_group_no_conflict_reqs requirements_in_group_refer_to_group_applications"
-		   });	
-		addAnnotation
-		  (softRequirementEClass, 
-		   source, 
-		   new String[] {
-			 "constraints", "non_negative_priorities_for_soft_requirement"
-		   });	
-		addAnnotation
-		  (optimisationRequirementEClass, 
-		   source, 
-		   new String[] {
-			 "constraints", "optimization_requirement_metric_or_prop"
-		   });	
-		addAnnotation
-		  (quantitativeHardwareRequirementEClass, 
-		   source, 
-		   new String[] {
-			 "constraints", "one_alternative_provided_in_quantitative_req quantitative_req_correct_input"
-		   });	
-		addAnnotation
-		  (securityRequirementEClass, 
-		   source, 
-		   new String[] {
-			 "constraints", "security_req_component_in_app"
-		   });	
-		addAnnotation
-		  (horizontalScaleRequirementEClass, 
-		   source, 
-		   new String[] {
-			 "constraints", "horiz_scale_requirement_min_max_enforcement"
-		   });	
-		addAnnotation
-		  (verticalScaleRequirementEClass, 
-		   source, 
-		   new String[] {
-			 "constraints", "vert_scale_requirement_correct_param_vals vert_scale_requirement_activ_one_alt"
 		   });
 	}
 

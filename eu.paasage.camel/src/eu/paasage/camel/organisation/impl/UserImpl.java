@@ -3,13 +3,17 @@
 package eu.paasage.camel.organisation.impl;
 
 import eu.paasage.camel.deployment.DeploymentModel;
+
 import eu.paasage.camel.organisation.CloudCredentials;
 import eu.paasage.camel.organisation.ExternalIdentifier;
 import eu.paasage.camel.organisation.OrganisationPackage;
 import eu.paasage.camel.organisation.PaaSageCredentials;
 import eu.paasage.camel.organisation.User;
+
 import eu.paasage.camel.requirement.RequirementModel;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -77,6 +81,24 @@ public class UserImpl extends EntityImpl implements User {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getEmail() {
+		return (String)eGet(OrganisationPackage.Literals.USER__EMAIL, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEmail(String newEmail) {
+		eSet(OrganisationPackage.Literals.USER__EMAIL, newEmail);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getFirstName() {
 		return (String)eGet(OrganisationPackage.Literals.USER__FIRST_NAME, true);
 	}
@@ -106,24 +128,6 @@ public class UserImpl extends EntityImpl implements User {
 	 */
 	public void setLastName(String newLastName) {
 		eSet(OrganisationPackage.Literals.USER__LAST_NAME, newLastName);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getEmail() {
-		return (String)eGet(OrganisationPackage.Literals.USER__EMAIL, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setEmail(String newEmail) {
-		eSet(OrganisationPackage.Literals.USER__EMAIL, newEmail);
 	}
 
 	/**

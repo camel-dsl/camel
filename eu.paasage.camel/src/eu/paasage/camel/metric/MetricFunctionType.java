@@ -46,7 +46,9 @@ public enum MetricFunctionType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	TIMES(2, "TIMES", "TIMES"), /**
+	TIMES(2, "TIMES", "TIMES"),
+
+	/**
 	 * The '<em><b>DIV</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

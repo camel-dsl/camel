@@ -3,12 +3,16 @@
 package eu.paasage.camel.requirement.impl;
 
 import eu.paasage.camel.Application;
+
 import eu.paasage.camel.deployment.Component;
+
 import eu.paasage.camel.metric.Metric;
 import eu.paasage.camel.metric.Property;
+
 import eu.paasage.camel.requirement.OptimisationFunctionType;
 import eu.paasage.camel.requirement.OptimisationRequirement;
 import eu.paasage.camel.requirement.RequirementPackage;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

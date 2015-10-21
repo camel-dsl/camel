@@ -5,11 +5,15 @@ package eu.paasage.camel.unit.impl;
 import eu.paasage.camel.unit.Unit;
 import eu.paasage.camel.unit.UnitPackage;
 import eu.paasage.camel.unit.UnitType;
+
 import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.WrappedException;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
+
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 /**

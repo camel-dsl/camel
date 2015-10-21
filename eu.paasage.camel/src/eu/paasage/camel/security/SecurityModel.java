@@ -3,7 +3,9 @@
 package eu.paasage.camel.security;
 
 import eu.paasage.camel.Model;
+
 import eu.paasage.camel.requirement.SecurityRequirement;
+
 import org.eclipse.emf.common.util.EList;
 
 /**

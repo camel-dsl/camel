@@ -4,10 +4,15 @@ package eu.paasage.camel.impl;
 
 import eu.paasage.camel.Application;
 import eu.paasage.camel.CamelPackage;
+
 import eu.paasage.camel.deployment.DeploymentModel;
+
 import eu.paasage.camel.organisation.Entity;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 /**

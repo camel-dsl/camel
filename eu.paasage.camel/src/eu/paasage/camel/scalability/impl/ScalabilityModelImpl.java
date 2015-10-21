@@ -3,7 +3,9 @@
 package eu.paasage.camel.scalability.impl;
 
 import eu.paasage.camel.impl.ModelImpl;
+
 import eu.paasage.camel.requirement.ScaleRequirement;
+
 import eu.paasage.camel.scalability.Event;
 import eu.paasage.camel.scalability.EventInstance;
 import eu.paasage.camel.scalability.EventPattern;
@@ -12,7 +14,9 @@ import eu.paasage.camel.scalability.ScalabilityPackage;
 import eu.paasage.camel.scalability.ScalabilityRule;
 import eu.paasage.camel.scalability.ScalingAction;
 import eu.paasage.camel.scalability.Timer;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

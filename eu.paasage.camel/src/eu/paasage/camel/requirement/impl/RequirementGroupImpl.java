@@ -3,13 +3,17 @@
 package eu.paasage.camel.requirement.impl;
 
 import eu.paasage.camel.Application;
+
 import eu.paasage.camel.requirement.HardRequirement;
 import eu.paasage.camel.requirement.Requirement;
 import eu.paasage.camel.requirement.RequirementGroup;
 import eu.paasage.camel.requirement.RequirementOperatorType;
 import eu.paasage.camel.requirement.RequirementPackage;
+
 import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

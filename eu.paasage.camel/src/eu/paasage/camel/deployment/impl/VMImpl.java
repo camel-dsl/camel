@@ -5,6 +5,7 @@ package eu.paasage.camel.deployment.impl;
 import eu.paasage.camel.deployment.DeploymentPackage;
 import eu.paasage.camel.deployment.VM;
 import eu.paasage.camel.deployment.VMRequirementSet;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

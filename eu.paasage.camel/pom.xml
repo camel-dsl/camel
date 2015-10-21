@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	<artifactId>camel</artifactId>
 	<groupId>org.ow2.paasage</groupId>
 	<version>2015.9.1-SNAPSHOT</version>
-	<artifactId>camel</artifactId>
 	<parent>
 		<groupId>org.ow2.paasage</groupId>
 		<artifactId>paasage-pom</artifactId>
@@ -51,12 +51,12 @@
 	</dependencies>
 	<repositories>
 		<repository>
-			<id>ow2.releases</id>
+			<id>ow2.release</id>
 			<name>OW2 repository</name>
 			<url>http://repository.ow2.org/nexus/content/repositories/releases/</url>
 		</repository>
 		<repository>
-			<id>ow2.snapshots</id>
+			<id>ow2.snapshot</id>
 			<name>OW2 repository</name>
 			<url>http://repository.ow2.org/nexus/content/repositories/snapshots/</url>
 		</repository>
@@ -68,14 +68,14 @@
 	</repositories>
 	<distributionManagement>
 		<repository>
-			<id>deployment</id>
-			<name>Internal Releases</name>
+			<id>ow2.release</id>
+			<name>OW2 repository</name>
 			<url>http://repository.ow2.org/nexus/content/repositories/releases/</url>
 		</repository>
 		<snapshotRepository>
-			<id>deployment</id>
-			<name>Internal Releases</name>
-			<url>http://repository.ow2.org/nexus/content/repositories/snapshots</url>
+			<id>ow2.snapshot</id>
+			<name>OW2 repository</name>
+			<url>http://repository.ow2.org/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 </project>

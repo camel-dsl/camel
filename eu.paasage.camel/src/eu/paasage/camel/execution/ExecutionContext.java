@@ -3,10 +3,15 @@
 package eu.paasage.camel.execution;
 
 import eu.paasage.camel.Application;
+
 import eu.paasage.camel.deployment.DeploymentModel;
+
 import eu.paasage.camel.requirement.RequirementGroup;
+
 import eu.paasage.camel.unit.MonetaryUnit;
+
 import java.util.Date;
+
 import org.eclipse.emf.cdo.CDOObject;
 
 /**
@@ -36,28 +41,6 @@ import org.eclipse.emf.cdo.CDOObject;
  */
 public interface ExecutionContext extends CDOObject {
 	/**
-	 * Returns the value of the '<em><b>Application</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Application</em>' reference.
-	 * @see #setApplication(Application)
-	 * @see eu.paasage.camel.execution.ExecutionPackage#getExecutionContext_Application()
-	 * @model required="true"
-	 * @generated
-	 */
-	Application getApplication();
-
-	/**
-	 * Sets the value of the '{@link eu.paasage.camel.execution.ExecutionContext#getApplication <em>Application</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Application</em>' reference.
-	 * @see #getApplication()
-	 * @generated
-	 */
-	void setApplication(Application value);
-
-	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -83,6 +66,32 @@ public interface ExecutionContext extends CDOObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Application</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Application</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Application</em>' reference.
+	 * @see #setApplication(Application)
+	 * @see eu.paasage.camel.execution.ExecutionPackage#getExecutionContext_Application()
+	 * @model required="true"
+	 * @generated
+	 */
+	Application getApplication();
+
+	/**
+	 * Sets the value of the '{@link eu.paasage.camel.execution.ExecutionContext#getApplication <em>Application</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Application</em>' reference.
+	 * @see #getApplication()
+	 * @generated
+	 */
+	void setApplication(Application value);
 
 	/**
 	 * Returns the value of the '<em><b>Start Time</b></em>' attribute.

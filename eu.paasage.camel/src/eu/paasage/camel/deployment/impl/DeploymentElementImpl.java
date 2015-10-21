@@ -4,7 +4,9 @@ package eu.paasage.camel.deployment.impl;
 
 import eu.paasage.camel.deployment.DeploymentElement;
 import eu.paasage.camel.deployment.DeploymentPackage;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 /**

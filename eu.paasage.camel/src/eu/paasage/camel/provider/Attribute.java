@@ -4,7 +4,9 @@ package eu.paasage.camel.provider;
 
 import eu.paasage.camel.type.SingleValue;
 import eu.paasage.camel.type.ValueType;
+
 import eu.paasage.camel.unit.UnitType;
+
 import org.eclipse.emf.cdo.CDOObject;
 
 /**
@@ -85,7 +87,7 @@ public interface Attribute extends CDOObject {
 	 * Returns the value of the '<em><b>Value Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Value Type</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Value Type</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

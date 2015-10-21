@@ -3,9 +3,12 @@
 package eu.paasage.camel.organisation.impl;
 
 import eu.paasage.camel.location.Location;
+
 import eu.paasage.camel.organisation.DataCenter;
 import eu.paasage.camel.organisation.OrganisationPackage;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 /**

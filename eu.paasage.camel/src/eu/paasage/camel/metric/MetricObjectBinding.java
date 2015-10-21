@@ -3,6 +3,7 @@
 package eu.paasage.camel.metric;
 
 import eu.paasage.camel.execution.ExecutionContext;
+
 import org.eclipse.emf.cdo.CDOObject;
 
 /**

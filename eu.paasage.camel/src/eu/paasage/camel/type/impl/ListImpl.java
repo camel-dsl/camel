@@ -7,10 +7,13 @@ import eu.paasage.camel.type.SingleValue;
 import eu.paasage.camel.type.TypeEnum;
 import eu.paasage.camel.type.TypePackage;
 import eu.paasage.camel.type.ValueType;
+
 import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.WrappedException;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 

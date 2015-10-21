@@ -36,7 +36,9 @@ public enum UnitType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BYTES_PER_SECOND(1, "BYTES_PER_SECOND", "BYTES_PER_SECOND"), /**
+	BYTES_PER_SECOND(1, "BYTES_PER_SECOND", "BYTES_PER_SECOND"),
+
+	/**
 	 * The '<em><b>KILOBYTES</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -44,7 +46,9 @@ public enum UnitType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	KILOBYTES(2, "KILOBYTES", "KILOBYTES"), /**
+	KILOBYTES(2, "KILOBYTES", "KILOBYTES"),
+
+	/**
 	 * The '<em><b>MEGABYTES</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -52,7 +56,9 @@ public enum UnitType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MEGABYTES(3, "MEGABYTES", "MEGABYTES"), /**
+	MEGABYTES(3, "MEGABYTES", "MEGABYTES"),
+
+	/**
 	 * The '<em><b>GIGABYTES</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -60,7 +66,9 @@ public enum UnitType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	GIGABYTES(4, "GIGABYTES", "GIGABYTES"), /**
+	GIGABYTES(4, "GIGABYTES", "GIGABYTES"),
+
+	/**
 	 * The '<em><b>MILLISECONDS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -68,7 +76,9 @@ public enum UnitType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MILLISECONDS(5, "MILLISECONDS", "MILLISECONDS"), /**
+	MILLISECONDS(5, "MILLISECONDS", "MILLISECONDS"),
+
+	/**
 	 * The '<em><b>SECONDS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -76,7 +86,9 @@ public enum UnitType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	SECONDS(6, "SECONDS", "SECONDS"), /**
+	SECONDS(6, "SECONDS", "SECONDS"),
+
+	/**
 	 * The '<em><b>MINUTES</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -84,7 +96,9 @@ public enum UnitType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MINUTES(7, "MINUTES", "MINUTES"), /**
+	MINUTES(7, "MINUTES", "MINUTES"),
+
+	/**
 	 * The '<em><b>HOURS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -92,7 +106,9 @@ public enum UnitType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	HOURS(8, "HOURS", "HOURS"), /**
+	HOURS(8, "HOURS", "HOURS"),
+
+	/**
 	 * The '<em><b>DAYS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -100,7 +116,9 @@ public enum UnitType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DAYS(9, "DAYS", "DAYS"), /**
+	DAYS(9, "DAYS", "DAYS"),
+
+	/**
 	 * The '<em><b>WEEKS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -108,7 +126,9 @@ public enum UnitType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	WEEKS(10, "WEEKS", "WEEKS"), /**
+	WEEKS(10, "WEEKS", "WEEKS"),
+
+	/**
 	 * The '<em><b>MONTHS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -116,7 +136,9 @@ public enum UnitType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MONTHS(11, "MONTHS", "MONTHS"), /**
+	MONTHS(11, "MONTHS", "MONTHS"),
+
+	/**
 	 * The '<em><b>REQUESTS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -124,7 +146,9 @@ public enum UnitType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	REQUESTS(12, "REQUESTS", "REQUESTS"), /**
+	REQUESTS(12, "REQUESTS", "REQUESTS"),
+
+	/**
 	 * The '<em><b>REQUESTS PER SECOND</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -132,7 +156,9 @@ public enum UnitType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	REQUESTS_PER_SECOND(13, "REQUESTS_PER_SECOND", "REQUESTS_PER_SECOND"), /**
+	REQUESTS_PER_SECOND(13, "REQUESTS_PER_SECOND", "REQUESTS_PER_SECOND"),
+
+	/**
 	 * The '<em><b>TRANSACTIONS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -140,7 +166,9 @@ public enum UnitType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	TRANSACTIONS(14, "TRANSACTIONS", "TRANSACTIONS"), /**
+	TRANSACTIONS(14, "TRANSACTIONS", "TRANSACTIONS"),
+
+	/**
 	 * The '<em><b>TRANSACTIONS PER SECOND</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -158,7 +186,9 @@ public enum UnitType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	CORES(16, "CORES", "CORES"), /**
+	CORES(16, "CORES", "CORES"),
+
+	/**
 	 * The '<em><b>PERCENTAGE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -166,7 +196,9 @@ public enum UnitType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	PERCENTAGE(17, "PERCENTAGE", "PERCENTAGE"), /**
+	PERCENTAGE(17, "PERCENTAGE", "PERCENTAGE"),
+
+	/**
 	 * The '<em><b>EUROS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -174,7 +206,9 @@ public enum UnitType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	EUROS(18, "EUROS", "EUROS"), /**
+	EUROS(18, "EUROS", "EUROS"),
+
+	/**
 	 * The '<em><b>POUNDS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -182,7 +216,9 @@ public enum UnitType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	POUNDS(19, "POUNDS", "POUNDS"), /**
+	POUNDS(19, "POUNDS", "POUNDS"),
+
+	/**
 	 * The '<em><b>DOLLARS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

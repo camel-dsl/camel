@@ -3,6 +3,7 @@
 package eu.paasage.camel.requirement;
 
 import eu.paasage.camel.CamelPackage;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -1168,7 +1169,6 @@ public interface RequirementPackage extends EPackage {
 	 * @generated
 	 */
 	int REQUIREMENT_OPERATOR_TYPE = 19;
-
 
 	/**
 	 * The meta object id for the '{@link eu.paasage.camel.requirement.OptimisationFunctionType <em>Optimisation Function Type</em>}' enum.

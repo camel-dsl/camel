@@ -57,8 +57,8 @@ public class InternalComponentImpl extends ComponentImpl implements InternalComp
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<RequiredCommunication> getRequiredCommunications() {
-		return (EList<RequiredCommunication>)eGet(DeploymentPackage.Literals.INTERNAL_COMPONENT__REQUIRED_COMMUNICATIONS, true);
+	public EList<InternalComponent> getCompositeInternalComponents() {
+		return (EList<InternalComponent>)eGet(DeploymentPackage.Literals.INTERNAL_COMPONENT__COMPOSITE_INTERNAL_COMPONENTS, true);
 	}
 
 	/**
@@ -67,8 +67,8 @@ public class InternalComponentImpl extends ComponentImpl implements InternalComp
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<InternalComponent> getCompositeInternalComponents() {
-		return (EList<InternalComponent>)eGet(DeploymentPackage.Literals.INTERNAL_COMPONENT__COMPOSITE_INTERNAL_COMPONENTS, true);
+	public EList<RequiredCommunication> getRequiredCommunications() {
+		return (EList<RequiredCommunication>)eGet(DeploymentPackage.Literals.INTERNAL_COMPONENT__REQUIRED_COMMUNICATIONS, true);
 	}
 
 	/**

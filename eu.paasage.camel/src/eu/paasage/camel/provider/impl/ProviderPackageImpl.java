@@ -3,17 +3,29 @@
 package eu.paasage.camel.provider.impl;
 
 import eu.paasage.camel.CamelPackage;
+
 import eu.paasage.camel.deployment.DeploymentPackage;
+
 import eu.paasage.camel.deployment.impl.DeploymentPackageImpl;
+
 import eu.paasage.camel.execution.ExecutionPackage;
+
 import eu.paasage.camel.execution.impl.ExecutionPackageImpl;
+
 import eu.paasage.camel.impl.CamelPackageImpl;
+
 import eu.paasage.camel.location.LocationPackage;
+
 import eu.paasage.camel.location.impl.LocationPackageImpl;
+
 import eu.paasage.camel.metric.MetricPackage;
+
 import eu.paasage.camel.metric.impl.MetricPackageImpl;
+
 import eu.paasage.camel.organisation.OrganisationPackage;
+
 import eu.paasage.camel.organisation.impl.OrganisationPackageImpl;
+
 import eu.paasage.camel.provider.Alternative;
 import eu.paasage.camel.provider.Attribute;
 import eu.paasage.camel.provider.AttributeConstraint;
@@ -35,17 +47,29 @@ import eu.paasage.camel.provider.ProviderModel;
 import eu.paasage.camel.provider.ProviderPackage;
 import eu.paasage.camel.provider.Requires;
 import eu.paasage.camel.provider.Scope;
+
 import eu.paasage.camel.provider.util.ProviderValidator;
+
 import eu.paasage.camel.requirement.RequirementPackage;
+
 import eu.paasage.camel.requirement.impl.RequirementPackageImpl;
+
 import eu.paasage.camel.scalability.ScalabilityPackage;
+
 import eu.paasage.camel.scalability.impl.ScalabilityPackageImpl;
+
 import eu.paasage.camel.security.SecurityPackage;
+
 import eu.paasage.camel.security.impl.SecurityPackageImpl;
+
 import eu.paasage.camel.type.TypePackage;
+
 import eu.paasage.camel.type.impl.TypePackageImpl;
+
 import eu.paasage.camel.unit.UnitPackage;
+
 import eu.paasage.camel.unit.impl.UnitPackageImpl;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -53,6 +77,7 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -395,6 +420,15 @@ public class ProviderPackageImpl extends EPackageImpl implements ProviderPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getAttributeConstraint_Name() {
+		return (EAttribute)attributeConstraintEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getAttributeConstraint_From() {
 		return (EReference)attributeConstraintEClass.getEStructuralFeatures().get(1);
 	}
@@ -424,15 +458,6 @@ public class ProviderPackageImpl extends EPackageImpl implements ProviderPackage
 	 */
 	public EReference getAttributeConstraint_ToValue() {
 		return (EReference)attributeConstraintEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getAttributeConstraint_Name() {
-		return (EAttribute)attributeConstraintEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -674,6 +699,15 @@ public class ProviderPackageImpl extends EPackageImpl implements ProviderPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getFeature_Name() {
+		return (EAttribute)featureEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getFeature_Attributes() {
 		return (EReference)featureEClass.getEStructuralFeatures().get(1);
 	}
@@ -703,15 +737,6 @@ public class ProviderPackageImpl extends EPackageImpl implements ProviderPackage
 	 */
 	public EReference getFeature_Clones() {
 		return (EReference)featureEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getFeature_Name() {
-		return (EAttribute)featureEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**

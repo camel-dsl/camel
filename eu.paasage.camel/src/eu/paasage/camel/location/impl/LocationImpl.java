@@ -4,7 +4,9 @@ package eu.paasage.camel.location.impl;
 
 import eu.paasage.camel.location.Location;
 import eu.paasage.camel.location.LocationPackage;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 /**

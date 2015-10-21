@@ -12,6 +12,7 @@ import eu.paasage.camel.requirement.SecurityRequirement;
 import eu.paasage.camel.security.SecurityControl;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

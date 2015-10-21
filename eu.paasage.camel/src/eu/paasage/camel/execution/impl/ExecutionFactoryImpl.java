@@ -62,8 +62,8 @@ public class ExecutionFactoryImpl extends EFactoryImpl implements ExecutionFacto
 			case ExecutionPackage.MEASUREMENT: return (EObject)createMeasurement();
 			case ExecutionPackage.APPLICATION_MEASUREMENT: return (EObject)createApplicationMeasurement();
 			case ExecutionPackage.INTERNAL_COMPONENT_MEASUREMENT: return (EObject)createInternalComponentMeasurement();
-			case ExecutionPackage.RESOURCE_COUPLING_MEASUREMENT: return (EObject)createResourceCouplingMeasurement();
-			case ExecutionPackage.RESOURCE_MEASUREMENT: return (EObject)createResourceMeasurement();
+			case ExecutionPackage.COMMUNICATION_MEASUREMENT: return (EObject)createCommunicationMeasurement();
+			case ExecutionPackage.VM_MEASUREMENT: return (EObject)createVMMeasurement();
 			case ExecutionPackage.SLO_ASSESSMENT: return (EObject)createSLOAssessment();
 			case ExecutionPackage.RULE_TRIGGER: return (EObject)createRuleTrigger();
 			default:
@@ -136,9 +136,9 @@ public class ExecutionFactoryImpl extends EFactoryImpl implements ExecutionFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResourceCouplingMeasurement createResourceCouplingMeasurement() {
-		ResourceCouplingMeasurementImpl resourceCouplingMeasurement = new ResourceCouplingMeasurementImpl();
-		return resourceCouplingMeasurement;
+	public CommunicationMeasurement createCommunicationMeasurement() {
+		CommunicationMeasurementImpl communicationMeasurement = new CommunicationMeasurementImpl();
+		return communicationMeasurement;
 	}
 
 	/**
@@ -146,9 +146,9 @@ public class ExecutionFactoryImpl extends EFactoryImpl implements ExecutionFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResourceMeasurement createResourceMeasurement() {
-		ResourceMeasurementImpl resourceMeasurement = new ResourceMeasurementImpl();
-		return resourceMeasurement;
+	public VMMeasurement createVMMeasurement() {
+		VMMeasurementImpl vmMeasurement = new VMMeasurementImpl();
+		return vmMeasurement;
 	}
 
 	/**

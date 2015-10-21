@@ -4,15 +4,21 @@ package eu.paasage.camel.provider.impl;
 
 import eu.paasage.camel.provider.Attribute;
 import eu.paasage.camel.provider.ProviderPackage;
+
 import eu.paasage.camel.type.SingleValue;
 import eu.paasage.camel.type.ValueType;
+
 import eu.paasage.camel.unit.UnitType;
+
 import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.WrappedException;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
+
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 /**

@@ -2,7 +2,6 @@
  */
 package eu.paasage.camel.metric.impl;
 
-import eu.paasage.camel.metric.CompositeMetricInstance;
 import eu.paasage.camel.metric.Metric;
 import eu.paasage.camel.metric.MetricContext;
 import eu.paasage.camel.metric.MetricInstance;
@@ -14,7 +13,9 @@ import eu.paasage.camel.metric.Window;
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 /**
@@ -180,10 +181,10 @@ public abstract class MetricInstanceImpl extends CDOObjectImpl implements Metric
 	 */
 	public boolean checkRecursiveness(final MetricInstance m1, final MetricInstance m2) {
 		System.out.println("Checking recursiveness for MetricInstance: " + m1.getName());
-				CompositeMetricInstance cmi = (CompositeMetricInstance)m1;
-				for (MetricInstance m: cmi.getComposingMetricInstances()){
+				eu.paasage.camel.metric.CompositeMetricInstance cmi = (eu.paasage.camel.metric.CompositeMetricInstance)m1;
+				for (eu.paasage.camel.metric.MetricInstance m: cmi.getComposingMetricInstances()){
 					if (m.getName().equals(m2.getName())) return Boolean.TRUE;
-					if (m instanceof CompositeMetricInstance && checkRecursiveness(m,m2)) return Boolean.TRUE;
+					if (m instanceof eu.paasage.camel.metric.CompositeMetricInstance && checkRecursiveness(m,m2)) return Boolean.TRUE;
 				}
 				return Boolean.FALSE;
 	}

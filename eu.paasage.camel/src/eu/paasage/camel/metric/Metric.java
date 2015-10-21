@@ -5,6 +5,7 @@ package eu.paasage.camel.metric;
 import eu.paasage.camel.LayerType;
 
 import eu.paasage.camel.type.ValueType;
+
 import eu.paasage.camel.unit.Unit;
 
 /**
@@ -61,7 +62,7 @@ public interface Metric extends MetricFormulaParameter {
 	 * Returns the value of the '<em><b>Value Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Value Type</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Value Type</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -193,7 +194,7 @@ public interface Metric extends MetricFormulaParameter {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='System.out.println(\"Checking recursiveness for Metric: \" + mt1.getName());\n\t\tCompositeMetric m1 = (CompositeMetric)mt1;\n\t\tfor (eu.paasage.camel.metric.MetricFormulaParameter param: m1.getFormula().getParameters()){\n\t\t\tif (param instanceof Metric){\n\t\t\t\tMetric mt = (Metric)param;\n\t\t\t\tif (mt.getName().equals(mt2.getName())) return Boolean.TRUE;\n\t\t\t\tif (mt instanceof CompositeMetric && checkRecursiveness(mt,mt2)) return Boolean.TRUE;\n\t\t\t}\n\t\t}\n\t\treturn Boolean.FALSE;'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='System.out.println(\"Checking recursiveness for Metric: \" + mt1.getName());\n\t\teu.paasage.camel.metric.CompositeMetric m1 = (eu.paasage.camel.metric.CompositeMetric)mt1;\n\t\tfor (eu.paasage.camel.metric.MetricFormulaParameter param: m1.getFormula().getParameters()){\n\t\t\tif (param instanceof eu.paasage.camel.metric.Metric){\n\t\t\t\teu.paasage.camel.metric.Metric mt = (eu.paasage.camel.metric.Metric)param;\n\t\t\t\tif (mt.getName().equals(mt2.getName())) return Boolean.TRUE;\n\t\t\t\tif (mt instanceof eu.paasage.camel.metric.CompositeMetric && checkRecursiveness(mt,mt2)) return Boolean.TRUE;\n\t\t\t}\n\t\t}\n\t\treturn Boolean.FALSE;'"
 	 * @generated
 	 */
 	boolean checkRecursiveness(Metric mt1, Metric mt2);

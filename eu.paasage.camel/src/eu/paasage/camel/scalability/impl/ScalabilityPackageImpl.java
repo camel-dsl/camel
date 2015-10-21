@@ -3,21 +3,37 @@
 package eu.paasage.camel.scalability.impl;
 
 import eu.paasage.camel.CamelPackage;
+
 import eu.paasage.camel.deployment.DeploymentPackage;
+
 import eu.paasage.camel.deployment.impl.DeploymentPackageImpl;
+
 import eu.paasage.camel.execution.ExecutionPackage;
+
 import eu.paasage.camel.execution.impl.ExecutionPackageImpl;
+
 import eu.paasage.camel.impl.CamelPackageImpl;
+
 import eu.paasage.camel.location.LocationPackage;
+
 import eu.paasage.camel.location.impl.LocationPackageImpl;
+
 import eu.paasage.camel.metric.MetricPackage;
+
 import eu.paasage.camel.metric.impl.MetricPackageImpl;
+
 import eu.paasage.camel.organisation.OrganisationPackage;
+
 import eu.paasage.camel.organisation.impl.OrganisationPackageImpl;
+
 import eu.paasage.camel.provider.ProviderPackage;
+
 import eu.paasage.camel.provider.impl.ProviderPackageImpl;
+
 import eu.paasage.camel.requirement.RequirementPackage;
+
 import eu.paasage.camel.requirement.impl.RequirementPackageImpl;
+
 import eu.paasage.camel.scalability.BinaryEventPattern;
 import eu.paasage.camel.scalability.BinaryPatternOperatorType;
 import eu.paasage.camel.scalability.Event;
@@ -38,13 +54,21 @@ import eu.paasage.camel.scalability.TimerType;
 import eu.paasage.camel.scalability.UnaryEventPattern;
 import eu.paasage.camel.scalability.UnaryPatternOperatorType;
 import eu.paasage.camel.scalability.VerticalScalingAction;
+
 import eu.paasage.camel.scalability.util.ScalabilityValidator;
+
 import eu.paasage.camel.security.SecurityPackage;
+
 import eu.paasage.camel.security.impl.SecurityPackageImpl;
+
 import eu.paasage.camel.type.TypePackage;
+
 import eu.paasage.camel.type.impl.TypePackageImpl;
+
 import eu.paasage.camel.unit.UnitPackage;
+
 import eu.paasage.camel.unit.impl.UnitPackageImpl;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -52,6 +76,7 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -810,6 +835,15 @@ public class ScalabilityPackageImpl extends EPackageImpl implements ScalabilityP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getTimer_Name() {
+		return (EAttribute)timerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EAttribute getTimer_Type() {
 		return (EAttribute)timerEClass.getEStructuralFeatures().get(1);
 	}
@@ -839,15 +873,6 @@ public class ScalabilityPackageImpl extends EPackageImpl implements ScalabilityP
 	 */
 	public EReference getTimer_Unit() {
 		return (EReference)timerEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTimer_Name() {
-		return (EAttribute)timerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**

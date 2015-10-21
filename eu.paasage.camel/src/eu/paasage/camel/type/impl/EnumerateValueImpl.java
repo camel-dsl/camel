@@ -46,24 +46,6 @@ public class EnumerateValueImpl extends SingleValueImpl implements EnumerateValu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getValue() {
-		return (Integer)eGet(TypePackage.Literals.ENUMERATE_VALUE__VALUE, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setValue(int newValue) {
-		eSet(TypePackage.Literals.ENUMERATE_VALUE__VALUE, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getName() {
 		return (String)eGet(TypePackage.Literals.ENUMERATE_VALUE__NAME, true);
 	}
@@ -75,6 +57,24 @@ public class EnumerateValueImpl extends SingleValueImpl implements EnumerateValu
 	 */
 	public void setName(String newName) {
 		eSet(TypePackage.Literals.ENUMERATE_VALUE__NAME, newName);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getValue() {
+		return (Integer)eGet(TypePackage.Literals.ENUMERATE_VALUE__VALUE, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setValue(int newValue) {
+		eSet(TypePackage.Literals.ENUMERATE_VALUE__VALUE, newValue);
 	}
 
 } //EnumerateValueImpl

@@ -7,6 +7,7 @@ import eu.paasage.camel.deployment.DeploymentPackage;
 import eu.paasage.camel.deployment.Hosting;
 import eu.paasage.camel.deployment.ProvidedHost;
 import eu.paasage.camel.deployment.RequiredHost;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

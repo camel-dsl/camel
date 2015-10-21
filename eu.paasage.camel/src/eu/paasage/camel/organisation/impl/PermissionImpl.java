@@ -3,14 +3,20 @@
 package eu.paasage.camel.organisation.impl;
 
 import eu.paasage.camel.ActionType;
+
 import eu.paasage.camel.organisation.OrganisationPackage;
 import eu.paasage.camel.organisation.Permission;
 import eu.paasage.camel.organisation.ResourceFilter;
 import eu.paasage.camel.organisation.Role;
+
 import java.lang.reflect.InvocationTargetException;
+
 import java.util.Date;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 /**
@@ -22,8 +28,8 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.impl.PermissionImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.impl.PermissionImpl#getRole <em>Role</em>}</li>
- *   <li>{@link eu.paasage.camel.organisation.impl.PermissionImpl#getStart <em>Start</em>}</li>
- *   <li>{@link eu.paasage.camel.organisation.impl.PermissionImpl#getEnd <em>End</em>}</li>
+ *   <li>{@link eu.paasage.camel.organisation.impl.PermissionImpl#getStartTime <em>Start Time</em>}</li>
+ *   <li>{@link eu.paasage.camel.organisation.impl.PermissionImpl#getEndTime <em>End Time</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.impl.PermissionImpl#getResourceFilter <em>Resource Filter</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.impl.PermissionImpl#getAction <em>Action</em>}</li>
  * </ul>
@@ -102,8 +108,8 @@ public class PermissionImpl extends CDOObjectImpl implements Permission {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getStart() {
-		return (Date)eGet(OrganisationPackage.Literals.PERMISSION__START, true);
+	public Date getStartTime() {
+		return (Date)eGet(OrganisationPackage.Literals.PERMISSION__START_TIME, true);
 	}
 
 	/**
@@ -111,8 +117,8 @@ public class PermissionImpl extends CDOObjectImpl implements Permission {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStart(Date newStart) {
-		eSet(OrganisationPackage.Literals.PERMISSION__START, newStart);
+	public void setStartTime(Date newStartTime) {
+		eSet(OrganisationPackage.Literals.PERMISSION__START_TIME, newStartTime);
 	}
 
 	/**
@@ -120,8 +126,8 @@ public class PermissionImpl extends CDOObjectImpl implements Permission {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getEnd() {
-		return (Date)eGet(OrganisationPackage.Literals.PERMISSION__END, true);
+	public Date getEndTime() {
+		return (Date)eGet(OrganisationPackage.Literals.PERMISSION__END_TIME, true);
 	}
 
 	/**
@@ -129,8 +135,8 @@ public class PermissionImpl extends CDOObjectImpl implements Permission {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEnd(Date newEnd) {
-		eSet(OrganisationPackage.Literals.PERMISSION__END, newEnd);
+	public void setEndTime(Date newEndTime) {
+		eSet(OrganisationPackage.Literals.PERMISSION__END_TIME, newEndTime);
 	}
 
 	/**
@@ -175,7 +181,7 @@ public class PermissionImpl extends CDOObjectImpl implements Permission {
 	 * @generated
 	 */
 	public boolean checkStartEndDates(final Permission this_) {
-		System.out.println("CHECKING Permission_Start_Before_End: " + this + " " + this.getStart() + " " + this.getEnd()); java.util.Date date1 = this.getStart(); java.util.Date date2 = this.getEnd(); if (date1 == null || date2 == null || (date1 != null && date2 != null && date1.before(date2))) return Boolean.TRUE; return Boolean.FALSE;
+		System.out.println("CHECKING Permission_Start_Before_End: " + this + " " + this.getStartTime() + " " + this.getEndTime()); java.util.Date date1 = this.getStartTime(); java.util.Date date2 = this.getEndTime(); if (date1 == null || date2 == null || (date1 != null && date2 != null && date1.before(date2))) return Boolean.TRUE; return Boolean.FALSE;
 	}
 
 	/**

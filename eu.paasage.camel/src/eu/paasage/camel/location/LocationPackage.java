@@ -3,6 +3,7 @@
 package eu.paasage.camel.location;
 
 import eu.paasage.camel.CamelPackage;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;

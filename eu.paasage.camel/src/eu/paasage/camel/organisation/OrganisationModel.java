@@ -3,6 +3,7 @@
 package eu.paasage.camel.organisation;
 
 import eu.paasage.camel.Model;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -34,20 +35,30 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface OrganisationModel extends Model {
 	/**
-	 * Returns the value of the '<em><b>Users</b></em>' containment reference list.
-	 * The list contents are of type {@link eu.paasage.camel.organisation.User}.
+	 * Returns the value of the '<em><b>Organisation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Users</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Organisation</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Users</em>' containment reference list.
-	 * @see eu.paasage.camel.organisation.OrganisationPackage#getOrganisationModel_Users()
-	 * @model containment="true" ordered="false"
+	 * @return the value of the '<em>Organisation</em>' containment reference.
+	 * @see #setOrganisation(Organisation)
+	 * @see eu.paasage.camel.organisation.OrganisationPackage#getOrganisationModel_Organisation()
+	 * @model containment="true"
 	 * @generated
 	 */
-	EList<User> getUsers();
+	Organisation getOrganisation();
+
+	/**
+	 * Sets the value of the '{@link eu.paasage.camel.organisation.OrganisationModel#getOrganisation <em>Organisation</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Organisation</em>' containment reference.
+	 * @see #getOrganisation()
+	 * @generated
+	 */
+	void setOrganisation(Organisation value);
 
 	/**
 	 * Returns the value of the '<em><b>Provider</b></em>' containment reference.
@@ -76,30 +87,36 @@ public interface OrganisationModel extends Model {
 	void setProvider(CloudProvider value);
 
 	/**
-	 * Returns the value of the '<em><b>Organisation</b></em>' containment reference.
+	 * Returns the value of the '<em><b>External Identifiers</b></em>' containment reference list.
+	 * The list contents are of type {@link eu.paasage.camel.organisation.ExternalIdentifier}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Organisation</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>External Identifiers</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Organisation</em>' containment reference.
-	 * @see #setOrganisation(Organisation)
-	 * @see eu.paasage.camel.organisation.OrganisationPackage#getOrganisationModel_Organisation()
-	 * @model containment="true"
+	 * @return the value of the '<em>External Identifiers</em>' containment reference list.
+	 * @see eu.paasage.camel.organisation.OrganisationPackage#getOrganisationModel_ExternalIdentifiers()
+	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
-	Organisation getOrganisation();
+	EList<ExternalIdentifier> getExternalIdentifiers();
 
 	/**
-	 * Sets the value of the '{@link eu.paasage.camel.organisation.OrganisationModel#getOrganisation <em>Organisation</em>}' containment reference.
+	 * Returns the value of the '<em><b>Users</b></em>' containment reference list.
+	 * The list contents are of type {@link eu.paasage.camel.organisation.User}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Users</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Organisation</em>' containment reference.
-	 * @see #getOrganisation()
+	 * @return the value of the '<em>Users</em>' containment reference list.
+	 * @see eu.paasage.camel.organisation.OrganisationPackage#getOrganisationModel_Users()
+	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
-	void setOrganisation(Organisation value);
+	EList<User> getUsers();
 
 	/**
 	 * Returns the value of the '<em><b>User Groups</b></em>' containment reference list.
@@ -134,22 +151,6 @@ public interface OrganisationModel extends Model {
 	EList<DataCenter> getDataCentres();
 
 	/**
-	 * Returns the value of the '<em><b>Role Assigments</b></em>' containment reference list.
-	 * The list contents are of type {@link eu.paasage.camel.organisation.RoleAssignment}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Role Assigments</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Role Assigments</em>' containment reference list.
-	 * @see eu.paasage.camel.organisation.OrganisationPackage#getOrganisationModel_RoleAssigments()
-	 * @model containment="true" ordered="false"
-	 * @generated
-	 */
-	EList<RoleAssignment> getRoleAssigments();
-
-	/**
 	 * Returns the value of the '<em><b>Roles</b></em>' containment reference list.
 	 * The list contents are of type {@link eu.paasage.camel.organisation.Role}.
 	 * <!-- begin-user-doc -->
@@ -164,6 +165,22 @@ public interface OrganisationModel extends Model {
 	 * @generated
 	 */
 	EList<Role> getRoles();
+
+	/**
+	 * Returns the value of the '<em><b>Role Assigments</b></em>' containment reference list.
+	 * The list contents are of type {@link eu.paasage.camel.organisation.RoleAssignment}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Role Assigments</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Role Assigments</em>' containment reference list.
+	 * @see eu.paasage.camel.organisation.OrganisationPackage#getOrganisationModel_RoleAssigments()
+	 * @model containment="true" ordered="false"
+	 * @generated
+	 */
+	EList<RoleAssignment> getRoleAssigments();
 
 	/**
 	 * Returns the value of the '<em><b>Permissions</b></em>' containment reference list.
@@ -225,21 +242,5 @@ public interface OrganisationModel extends Model {
 	 * @generated
 	 */
 	EList<ResourceFilter> getResourceFilters();
-
-	/**
-	 * Returns the value of the '<em><b>External Identifiers</b></em>' containment reference list.
-	 * The list contents are of type {@link eu.paasage.camel.organisation.ExternalIdentifier}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>External Identifiers</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>External Identifiers</em>' containment reference list.
-	 * @see eu.paasage.camel.organisation.OrganisationPackage#getOrganisationModel_ExternalIdentifiers()
-	 * @model containment="true" ordered="false"
-	 * @generated
-	 */
-	EList<ExternalIdentifier> getExternalIdentifiers();
 
 } // OrganisationModel

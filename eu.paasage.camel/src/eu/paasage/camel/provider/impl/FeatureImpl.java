@@ -66,6 +66,24 @@ public class FeatureImpl extends CDOObjectImpl implements Feature {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return (String)eGet(ProviderPackage.Literals.FEATURE__NAME, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		eSet(ProviderPackage.Literals.FEATURE__NAME, newName);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	public EList<Attribute> getAttributes() {
 		return (EList<Attribute>)eGet(ProviderPackage.Literals.FEATURE__ATTRIBUTES, true);
@@ -107,24 +125,6 @@ public class FeatureImpl extends CDOObjectImpl implements Feature {
 	@SuppressWarnings("unchecked")
 	public EList<Clone> getClones() {
 		return (EList<Clone>)eGet(ProviderPackage.Literals.FEATURE__CLONES, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return (String)eGet(ProviderPackage.Literals.FEATURE__NAME, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		eSet(ProviderPackage.Literals.FEATURE__NAME, newName);
 	}
 
 } //FeatureImpl

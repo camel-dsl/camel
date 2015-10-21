@@ -3,45 +3,70 @@
 package eu.paasage.camel.execution.impl;
 
 import eu.paasage.camel.CamelPackage;
+
 import eu.paasage.camel.deployment.DeploymentPackage;
+
 import eu.paasage.camel.deployment.impl.DeploymentPackageImpl;
+
 import eu.paasage.camel.execution.ActionRealisation;
 import eu.paasage.camel.execution.ApplicationMeasurement;
+import eu.paasage.camel.execution.CommunicationMeasurement;
 import eu.paasage.camel.execution.ExecutionContext;
 import eu.paasage.camel.execution.ExecutionFactory;
 import eu.paasage.camel.execution.ExecutionModel;
 import eu.paasage.camel.execution.ExecutionPackage;
 import eu.paasage.camel.execution.InternalComponentMeasurement;
 import eu.paasage.camel.execution.Measurement;
-import eu.paasage.camel.execution.ResourceCouplingMeasurement;
-import eu.paasage.camel.execution.ResourceMeasurement;
 import eu.paasage.camel.execution.RuleTrigger;
 import eu.paasage.camel.execution.SLOAssessment;
+import eu.paasage.camel.execution.VMMeasurement;
+
 import eu.paasage.camel.execution.util.ExecutionValidator;
+
 import eu.paasage.camel.impl.CamelPackageImpl;
+
 import eu.paasage.camel.location.LocationPackage;
+
 import eu.paasage.camel.location.impl.LocationPackageImpl;
+
 import eu.paasage.camel.metric.MetricPackage;
+
 import eu.paasage.camel.metric.impl.MetricPackageImpl;
+
 import eu.paasage.camel.organisation.OrganisationPackage;
+
 import eu.paasage.camel.organisation.impl.OrganisationPackageImpl;
+
 import eu.paasage.camel.provider.ProviderPackage;
+
 import eu.paasage.camel.provider.impl.ProviderPackageImpl;
+
 import eu.paasage.camel.requirement.RequirementPackage;
+
 import eu.paasage.camel.requirement.impl.RequirementPackageImpl;
+
 import eu.paasage.camel.scalability.ScalabilityPackage;
+
 import eu.paasage.camel.scalability.impl.ScalabilityPackageImpl;
+
 import eu.paasage.camel.security.SecurityPackage;
+
 import eu.paasage.camel.security.impl.SecurityPackageImpl;
+
 import eu.paasage.camel.type.TypePackage;
+
 import eu.paasage.camel.type.impl.TypePackageImpl;
+
 import eu.paasage.camel.unit.UnitPackage;
+
 import eu.paasage.camel.unit.impl.UnitPackageImpl;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -98,14 +123,14 @@ public class ExecutionPackageImpl extends EPackageImpl implements ExecutionPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass resourceCouplingMeasurementEClass = null;
+	private EClass communicationMeasurementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass resourceMeasurementEClass = null;
+	private EClass vmMeasurementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -321,7 +346,7 @@ public class ExecutionPackageImpl extends EPackageImpl implements ExecutionPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getActionRealisation_StartedOn() {
+	public EAttribute getActionRealisation_StartTime() {
 		return (EAttribute)actionRealisationEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -330,7 +355,7 @@ public class ExecutionPackageImpl extends EPackageImpl implements ExecutionPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getActionRealisation_EndedOn() {
+	public EAttribute getActionRealisation_EndTime() {
 		return (EAttribute)actionRealisationEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -357,8 +382,8 @@ public class ExecutionPackageImpl extends EPackageImpl implements ExecutionPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getExecutionContext_Application() {
-		return (EReference)executionContextEClass.getEStructuralFeatures().get(1);
+	public EAttribute getExecutionContext_Name() {
+		return (EAttribute)executionContextEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -366,8 +391,8 @@ public class ExecutionPackageImpl extends EPackageImpl implements ExecutionPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getExecutionContext_Name() {
-		return (EAttribute)executionContextEClass.getEStructuralFeatures().get(0);
+	public EReference getExecutionContext_Application() {
+		return (EReference)executionContextEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -483,7 +508,7 @@ public class ExecutionPackageImpl extends EPackageImpl implements ExecutionPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMeasurement_ReportedOn() {
+	public EAttribute getMeasurement_MeasurementTime() {
 		return (EAttribute)measurementEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -546,8 +571,8 @@ public class ExecutionPackageImpl extends EPackageImpl implements ExecutionPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getResourceCouplingMeasurement() {
-		return resourceCouplingMeasurementEClass;
+	public EClass getCommunicationMeasurement() {
+		return communicationMeasurementEClass;
 	}
 
 	/**
@@ -555,8 +580,8 @@ public class ExecutionPackageImpl extends EPackageImpl implements ExecutionPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getResourceCouplingMeasurement_SourceVMInstance() {
-		return (EReference)resourceCouplingMeasurementEClass.getEStructuralFeatures().get(0);
+	public EReference getCommunicationMeasurement_SourceVMInstance() {
+		return (EReference)communicationMeasurementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -564,8 +589,8 @@ public class ExecutionPackageImpl extends EPackageImpl implements ExecutionPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getResourceCouplingMeasurement_DestinationVMInstance() {
-		return (EReference)resourceCouplingMeasurementEClass.getEStructuralFeatures().get(1);
+	public EReference getCommunicationMeasurement_DestinationVMInstance() {
+		return (EReference)communicationMeasurementEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -573,8 +598,8 @@ public class ExecutionPackageImpl extends EPackageImpl implements ExecutionPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getResourceMeasurement() {
-		return resourceMeasurementEClass;
+	public EClass getVMMeasurement() {
+		return vmMeasurementEClass;
 	}
 
 	/**
@@ -582,8 +607,8 @@ public class ExecutionPackageImpl extends EPackageImpl implements ExecutionPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getResourceMeasurement_VmInstance() {
-		return (EReference)resourceMeasurementEClass.getEStructuralFeatures().get(0);
+	public EReference getVMMeasurement_VmInstance() {
+		return (EReference)vmMeasurementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -699,7 +724,7 @@ public class ExecutionPackageImpl extends EPackageImpl implements ExecutionPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRuleTrigger_FiredOn() {
+	public EAttribute getRuleTrigger_TrigerringTime() {
 		return (EAttribute)ruleTriggerEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -751,8 +776,8 @@ public class ExecutionPackageImpl extends EPackageImpl implements ExecutionPacka
 		actionRealisationEClass = createEClass(ACTION_REALISATION);
 		createEAttribute(actionRealisationEClass, ACTION_REALISATION__NAME);
 		createEReference(actionRealisationEClass, ACTION_REALISATION__ACTION);
-		createEAttribute(actionRealisationEClass, ACTION_REALISATION__STARTED_ON);
-		createEAttribute(actionRealisationEClass, ACTION_REALISATION__ENDED_ON);
+		createEAttribute(actionRealisationEClass, ACTION_REALISATION__START_TIME);
+		createEAttribute(actionRealisationEClass, ACTION_REALISATION__END_TIME);
 		createEAttribute(actionRealisationEClass, ACTION_REALISATION__LOW_LEVEL_ACTIONS);
 
 		executionContextEClass = createEClass(EXECUTION_CONTEXT);
@@ -771,7 +796,7 @@ public class ExecutionPackageImpl extends EPackageImpl implements ExecutionPacka
 		createEReference(measurementEClass, MEASUREMENT__METRIC_INSTANCE);
 		createEAttribute(measurementEClass, MEASUREMENT__VALUE);
 		createEAttribute(measurementEClass, MEASUREMENT__RAW_DATA);
-		createEAttribute(measurementEClass, MEASUREMENT__REPORTED_ON);
+		createEAttribute(measurementEClass, MEASUREMENT__MEASUREMENT_TIME);
 		createEReference(measurementEClass, MEASUREMENT__SLO);
 		createEReference(measurementEClass, MEASUREMENT__EVENT_INSTANCE);
 
@@ -781,12 +806,12 @@ public class ExecutionPackageImpl extends EPackageImpl implements ExecutionPacka
 		internalComponentMeasurementEClass = createEClass(INTERNAL_COMPONENT_MEASUREMENT);
 		createEReference(internalComponentMeasurementEClass, INTERNAL_COMPONENT_MEASUREMENT__INTERNAL_COMPONENT_INSTANCE);
 
-		resourceCouplingMeasurementEClass = createEClass(RESOURCE_COUPLING_MEASUREMENT);
-		createEReference(resourceCouplingMeasurementEClass, RESOURCE_COUPLING_MEASUREMENT__SOURCE_VM_INSTANCE);
-		createEReference(resourceCouplingMeasurementEClass, RESOURCE_COUPLING_MEASUREMENT__DESTINATION_VM_INSTANCE);
+		communicationMeasurementEClass = createEClass(COMMUNICATION_MEASUREMENT);
+		createEReference(communicationMeasurementEClass, COMMUNICATION_MEASUREMENT__SOURCE_VM_INSTANCE);
+		createEReference(communicationMeasurementEClass, COMMUNICATION_MEASUREMENT__DESTINATION_VM_INSTANCE);
 
-		resourceMeasurementEClass = createEClass(RESOURCE_MEASUREMENT);
-		createEReference(resourceMeasurementEClass, RESOURCE_MEASUREMENT__VM_INSTANCE);
+		vmMeasurementEClass = createEClass(VM_MEASUREMENT);
+		createEReference(vmMeasurementEClass, VM_MEASUREMENT__VM_INSTANCE);
 
 		sloAssessmentEClass = createEClass(SLO_ASSESSMENT);
 		createEAttribute(sloAssessmentEClass, SLO_ASSESSMENT__NAME);
@@ -801,7 +826,7 @@ public class ExecutionPackageImpl extends EPackageImpl implements ExecutionPacka
 		createEReference(ruleTriggerEClass, RULE_TRIGGER__SCALABILITY_RULE);
 		createEReference(ruleTriggerEClass, RULE_TRIGGER__EVENT_INSTANCES);
 		createEReference(ruleTriggerEClass, RULE_TRIGGER__ACTION_REALISATIONS);
-		createEAttribute(ruleTriggerEClass, RULE_TRIGGER__FIRED_ON);
+		createEAttribute(ruleTriggerEClass, RULE_TRIGGER__TRIGERRING_TIME);
 		createEReference(ruleTriggerEClass, RULE_TRIGGER__EXECUTION_CONTEXT);
 	}
 
@@ -844,8 +869,8 @@ public class ExecutionPackageImpl extends EPackageImpl implements ExecutionPacka
 		executionModelEClass.getESuperTypes().add(theCamelPackage.getModel());
 		applicationMeasurementEClass.getESuperTypes().add(this.getMeasurement());
 		internalComponentMeasurementEClass.getESuperTypes().add(this.getMeasurement());
-		resourceCouplingMeasurementEClass.getESuperTypes().add(this.getMeasurement());
-		resourceMeasurementEClass.getESuperTypes().add(this.getMeasurement());
+		communicationMeasurementEClass.getESuperTypes().add(this.getMeasurement());
+		vmMeasurementEClass.getESuperTypes().add(this.getMeasurement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(executionModelEClass, ExecutionModel.class, "ExecutionModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -859,8 +884,8 @@ public class ExecutionPackageImpl extends EPackageImpl implements ExecutionPacka
 		initEClass(actionRealisationEClass, ActionRealisation.class, "ActionRealisation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getActionRealisation_Name(), ecorePackage.getEString(), "name", null, 1, 1, ActionRealisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActionRealisation_Action(), theCamelPackage.getAction(), null, "action", null, 1, 1, ActionRealisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getActionRealisation_StartedOn(), ecorePackage.getEDate(), "startedOn", null, 0, 1, ActionRealisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getActionRealisation_EndedOn(), ecorePackage.getEDate(), "endedOn", null, 0, 1, ActionRealisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getActionRealisation_StartTime(), ecorePackage.getEDate(), "startTime", null, 0, 1, ActionRealisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getActionRealisation_EndTime(), ecorePackage.getEDate(), "endTime", null, 0, 1, ActionRealisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getActionRealisation_LowLevelActions(), ecorePackage.getEString(), "lowLevelActions", null, 0, 1, ActionRealisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(executionContextEClass, ExecutionContext.class, "ExecutionContext", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -879,7 +904,7 @@ public class ExecutionPackageImpl extends EPackageImpl implements ExecutionPacka
 		initEReference(getMeasurement_MetricInstance(), theMetricPackage.getMetricInstance(), null, "metricInstance", null, 1, 1, Measurement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMeasurement_Value(), ecorePackage.getEDouble(), "value", null, 1, 1, Measurement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMeasurement_RawData(), ecorePackage.getEString(), "rawData", null, 0, 1, Measurement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMeasurement_ReportedOn(), ecorePackage.getEDate(), "reportedOn", null, 1, 1, Measurement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMeasurement_MeasurementTime(), ecorePackage.getEDate(), "measurementTime", null, 1, 1, Measurement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMeasurement_Slo(), theRequirementPackage.getServiceLevelObjective(), null, "slo", null, 0, 1, Measurement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMeasurement_EventInstance(), theScalabilityPackage.getEventInstance(), null, "eventInstance", null, 0, 1, Measurement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -889,12 +914,12 @@ public class ExecutionPackageImpl extends EPackageImpl implements ExecutionPacka
 		initEClass(internalComponentMeasurementEClass, InternalComponentMeasurement.class, "InternalComponentMeasurement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInternalComponentMeasurement_InternalComponentInstance(), theDeploymentPackage.getInternalComponentInstance(), null, "internalComponentInstance", null, 1, 1, InternalComponentMeasurement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(resourceCouplingMeasurementEClass, ResourceCouplingMeasurement.class, "ResourceCouplingMeasurement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getResourceCouplingMeasurement_SourceVMInstance(), theDeploymentPackage.getVMInstance(), null, "sourceVMInstance", null, 1, 1, ResourceCouplingMeasurement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getResourceCouplingMeasurement_DestinationVMInstance(), theDeploymentPackage.getVMInstance(), null, "destinationVMInstance", null, 1, 1, ResourceCouplingMeasurement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(communicationMeasurementEClass, CommunicationMeasurement.class, "CommunicationMeasurement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCommunicationMeasurement_SourceVMInstance(), theDeploymentPackage.getVMInstance(), null, "sourceVMInstance", null, 1, 1, CommunicationMeasurement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCommunicationMeasurement_DestinationVMInstance(), theDeploymentPackage.getVMInstance(), null, "destinationVMInstance", null, 1, 1, CommunicationMeasurement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(resourceMeasurementEClass, ResourceMeasurement.class, "ResourceMeasurement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getResourceMeasurement_VmInstance(), theDeploymentPackage.getVMInstance(), null, "vmInstance", null, 1, 1, ResourceMeasurement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(vmMeasurementEClass, VMMeasurement.class, "VMMeasurement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVMMeasurement_VmInstance(), theDeploymentPackage.getVMInstance(), null, "vmInstance", null, 1, 1, VMMeasurement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(sloAssessmentEClass, SLOAssessment.class, "SLOAssessment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSLOAssessment_Name(), ecorePackage.getEString(), "name", null, 1, 1, SLOAssessment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -909,7 +934,7 @@ public class ExecutionPackageImpl extends EPackageImpl implements ExecutionPacka
 		initEReference(getRuleTrigger_ScalabilityRule(), theScalabilityPackage.getScalabilityRule(), null, "scalabilityRule", null, 1, 1, RuleTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRuleTrigger_EventInstances(), theScalabilityPackage.getEventInstance(), null, "eventInstances", null, 1, -1, RuleTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRuleTrigger_ActionRealisations(), this.getActionRealisation(), null, "actionRealisations", null, 1, -1, RuleTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRuleTrigger_FiredOn(), ecorePackage.getEDate(), "firedOn", null, 1, 1, RuleTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRuleTrigger_TrigerringTime(), ecorePackage.getEDate(), "trigerringTime", null, 1, 1, RuleTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRuleTrigger_ExecutionContext(), this.getExecutionContext(), null, "executionContext", null, 1, 1, RuleTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create annotations
@@ -962,13 +987,13 @@ public class ExecutionPackageImpl extends EPackageImpl implements ExecutionPacka
 			 "constraints", "internal_component_measurement_metric_refer_to_same_component internal_component_measurement_included_in_execution_context"
 		   });	
 		addAnnotation
-		  (resourceCouplingMeasurementEClass, 
+		  (communicationMeasurementEClass, 
 		   source, 
 		   new String[] {
 			 "constraints", "resource_coupling_measurement_diff_vm_instances"
 		   });	
 		addAnnotation
-		  (resourceMeasurementEClass, 
+		  (vmMeasurementEClass, 
 		   source, 
 		   new String[] {
 			 "constraints", "resource_measurement_ec_deployment_model_vm_instance resource_measurement_metric_vm_instance"
@@ -1025,13 +1050,13 @@ public class ExecutionPackageImpl extends EPackageImpl implements ExecutionPacka
 			 "internal_component_measurement_included_in_execution_context", "Tuple {\n\tmessage : String = \'ComponentInstance: \' +\n\t\t\t\tinternalComponentInstance.name + \' is not included in the deployment model of execution context: \' +\n\t\t\t\tself.executionContext.name + \' for InternalComponentMeasurement: \' +\n\t\t\t\tself.name,\n\tstatus : Boolean = executionContext.deploymentModel.internalComponentInstances\n\t\t\t\t->includes(internalComponentInstance)\n}.status"
 		   });	
 		addAnnotation
-		  (resourceCouplingMeasurementEClass, 
+		  (communicationMeasurementEClass, 
 		   source, 
 		   new String[] {
 			 "resource_coupling_measurement_diff_vm_instances", "Tuple {\n\tmessage : String = \'The source: \' + sourceVMInstance.name +\n\t\t\t\t\' and destination: \' + destinationVMInstance.name + \' VM instances of ResourceCouplingMeasurement: \' + self.name +\n\t\t\t\t\' are either identical or not included in the deployment model of the respective execution context: \' +\n\t\t\t\tself.executionContext.name,\n\tstatus : Boolean = sourceVMInstance <> destinationVMInstance and\n\t\t\t\t(executionContext.deploymentModel.vmInstances\n\t\t\t\t->includes(sourceVMInstance)) and (executionContext.deploymentModel.vmInstances\n\t\t\t\t->includes(destinationVMInstance))\n}.status"
 		   });	
 		addAnnotation
-		  (resourceMeasurementEClass, 
+		  (vmMeasurementEClass, 
 		   source, 
 		   new String[] {
 			 "resource_measurement_ec_deployment_model_vm_instance", "Tuple {\n\tmessage : String = \'The VMInstance: \' + vmInstance.name +\n\t\t\t\t\' of ResourceMeasurement: \' + self.name +\n\t\t\t\t\' is not included in the deployment model of the respective execution context: \' +\n\t\t\t\tself.executionContext.name,\n\tstatus : Boolean = vmInstance <> null implies (executionContext.deploymentModel.vmInstances\n\t\t\t\t->includes(vmInstance))\n}.status",

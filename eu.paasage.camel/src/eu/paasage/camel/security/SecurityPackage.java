@@ -3,6 +3,7 @@
 package eu.paasage.camel.security;
 
 import eu.paasage.camel.CamelPackage;
+
 import eu.paasage.camel.metric.MetricPackage;
 
 import eu.paasage.camel.requirement.RequirementPackage;
@@ -818,7 +819,6 @@ public interface SecurityPackage extends EPackage {
 	 */
 	int SECURITY_CAPABILITY_OPERATION_COUNT = 0;
 
-
 	/**
 	 * The meta object id for the '{@link eu.paasage.camel.security.impl.CompositeSecurityMetricImpl <em>Composite Security Metric</em>}' class.
 	 * <!-- begin-user-doc -->
@@ -945,7 +945,6 @@ public interface SecurityPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPOSITE_SECURITY_METRIC_OPERATION_COUNT = MetricPackage.COMPOSITE_METRIC_OPERATION_COUNT + 0;
-
 
 	/**
 	 * The meta object id for the '{@link eu.paasage.camel.security.impl.CompositeSecurityMetricInstanceImpl <em>Composite Security Metric Instance</em>}' class.

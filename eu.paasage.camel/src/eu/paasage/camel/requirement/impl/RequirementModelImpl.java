@@ -3,10 +3,13 @@
 package eu.paasage.camel.requirement.impl;
 
 import eu.paasage.camel.impl.ModelImpl;
+
 import eu.paasage.camel.requirement.Requirement;
 import eu.paasage.camel.requirement.RequirementModel;
 import eu.paasage.camel.requirement.RequirementPackage;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

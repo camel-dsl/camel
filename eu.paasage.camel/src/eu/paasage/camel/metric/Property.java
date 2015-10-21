@@ -3,6 +3,7 @@
 package eu.paasage.camel.metric;
 
 import org.eclipse.emf.cdo.CDOObject;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -80,6 +81,35 @@ public interface Property extends CDOObject {
 	void setDescription(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Type</b></em>' attribute.
+	 * The literals are from the enumeration {@link eu.paasage.camel.metric.PropertyType}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Type</em>' attribute.
+	 * @see eu.paasage.camel.metric.PropertyType
+	 * @see #setType(PropertyType)
+	 * @see eu.paasage.camel.metric.MetricPackage#getProperty_Type()
+	 * @model required="true"
+	 * @generated
+	 */
+	PropertyType getType();
+
+	/**
+	 * Sets the value of the '{@link eu.paasage.camel.metric.Property#getType <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Type</em>' attribute.
+	 * @see eu.paasage.camel.metric.PropertyType
+	 * @see #getType()
+	 * @generated
+	 */
+	void setType(PropertyType value);
+
+	/**
 	 * Returns the value of the '<em><b>Sub Properties</b></em>' reference list.
 	 * The list contents are of type {@link eu.paasage.camel.metric.Property}.
 	 * <!-- begin-user-doc -->
@@ -110,34 +140,5 @@ public interface Property extends CDOObject {
 	 * @generated
 	 */
 	EList<Sensor> getSensors();
-
-	/**
-	 * Returns the value of the '<em><b>Type</b></em>' attribute.
-	 * The literals are from the enumeration {@link eu.paasage.camel.metric.PropertyType}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type</em>' attribute.
-	 * @see eu.paasage.camel.metric.PropertyType
-	 * @see #setType(PropertyType)
-	 * @see eu.paasage.camel.metric.MetricPackage#getProperty_Type()
-	 * @model required="true"
-	 * @generated
-	 */
-	PropertyType getType();
-
-	/**
-	 * Sets the value of the '{@link eu.paasage.camel.metric.Property#getType <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type</em>' attribute.
-	 * @see eu.paasage.camel.metric.PropertyType
-	 * @see #getType()
-	 * @generated
-	 */
-	void setType(PropertyType value);
 
 } // Property

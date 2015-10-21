@@ -3,6 +3,7 @@
 package eu.paasage.camel.organisation.impl;
 
 import eu.paasage.camel.impl.ModelImpl;
+
 import eu.paasage.camel.organisation.CloudProvider;
 import eu.paasage.camel.organisation.DataCenter;
 import eu.paasage.camel.organisation.ExternalIdentifier;
@@ -16,7 +17,9 @@ import eu.paasage.camel.organisation.RoleAssignment;
 import eu.paasage.camel.organisation.SecurityLevel;
 import eu.paasage.camel.organisation.User;
 import eu.paasage.camel.organisation.UserGroup;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -67,9 +70,17 @@ public class OrganisationModelImpl extends ModelImpl implements OrganisationMode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
-	public EList<User> getUsers() {
-		return (EList<User>)eGet(OrganisationPackage.Literals.ORGANISATION_MODEL__USERS, true);
+	public Organisation getOrganisation() {
+		return (Organisation)eGet(OrganisationPackage.Literals.ORGANISATION_MODEL__ORGANISATION, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOrganisation(Organisation newOrganisation) {
+		eSet(OrganisationPackage.Literals.ORGANISATION_MODEL__ORGANISATION, newOrganisation);
 	}
 
 	/**
@@ -95,8 +106,9 @@ public class OrganisationModelImpl extends ModelImpl implements OrganisationMode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Organisation getOrganisation() {
-		return (Organisation)eGet(OrganisationPackage.Literals.ORGANISATION_MODEL__ORGANISATION, true);
+	@SuppressWarnings("unchecked")
+	public EList<ExternalIdentifier> getExternalIdentifiers() {
+		return (EList<ExternalIdentifier>)eGet(OrganisationPackage.Literals.ORGANISATION_MODEL__EXTERNAL_IDENTIFIERS, true);
 	}
 
 	/**
@@ -104,8 +116,9 @@ public class OrganisationModelImpl extends ModelImpl implements OrganisationMode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOrganisation(Organisation newOrganisation) {
-		eSet(OrganisationPackage.Literals.ORGANISATION_MODEL__ORGANISATION, newOrganisation);
+	@SuppressWarnings("unchecked")
+	public EList<User> getUsers() {
+		return (EList<User>)eGet(OrganisationPackage.Literals.ORGANISATION_MODEL__USERS, true);
 	}
 
 	/**
@@ -134,8 +147,8 @@ public class OrganisationModelImpl extends ModelImpl implements OrganisationMode
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<RoleAssignment> getRoleAssigments() {
-		return (EList<RoleAssignment>)eGet(OrganisationPackage.Literals.ORGANISATION_MODEL__ROLE_ASSIGMENTS, true);
+	public EList<Role> getRoles() {
+		return (EList<Role>)eGet(OrganisationPackage.Literals.ORGANISATION_MODEL__ROLES, true);
 	}
 
 	/**
@@ -144,8 +157,8 @@ public class OrganisationModelImpl extends ModelImpl implements OrganisationMode
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Role> getRoles() {
-		return (EList<Role>)eGet(OrganisationPackage.Literals.ORGANISATION_MODEL__ROLES, true);
+	public EList<RoleAssignment> getRoleAssigments() {
+		return (EList<RoleAssignment>)eGet(OrganisationPackage.Literals.ORGANISATION_MODEL__ROLE_ASSIGMENTS, true);
 	}
 
 	/**
@@ -184,16 +197,6 @@ public class OrganisationModelImpl extends ModelImpl implements OrganisationMode
 	@SuppressWarnings("unchecked")
 	public EList<ResourceFilter> getResourceFilters() {
 		return (EList<ResourceFilter>)eGet(OrganisationPackage.Literals.ORGANISATION_MODEL__RESOURCE_FILTERS, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<ExternalIdentifier> getExternalIdentifiers() {
-		return (EList<ExternalIdentifier>)eGet(OrganisationPackage.Literals.ORGANISATION_MODEL__EXTERNAL_IDENTIFIERS, true);
 	}
 
 } //OrganisationModelImpl

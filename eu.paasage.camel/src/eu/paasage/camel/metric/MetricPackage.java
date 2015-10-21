@@ -3,6 +3,7 @@
 package eu.paasage.camel.metric;
 
 import eu.paasage.camel.CamelPackage;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -2379,7 +2380,6 @@ public interface MetricPackage extends EPackage {
 	 */
 	int QUANTIFIER_TYPE = 32;
 
-
 	/**
 	 * The meta object id for the '{@link eu.paasage.camel.metric.FunctionPatternType <em>Function Pattern Type</em>}' enum.
 	 * <!-- begin-user-doc -->
@@ -2402,17 +2402,6 @@ public interface MetricPackage extends EPackage {
 	EClass getCondition();
 
 	/**
-	 * Returns the meta object for the attribute '{@link eu.paasage.camel.metric.Condition#getValidity <em>Validity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Validity</em>'.
-	 * @see eu.paasage.camel.metric.Condition#getValidity()
-	 * @see #getCondition()
-	 * @generated
-	 */
-	EAttribute getCondition_Validity();
-
-	/**
 	 * Returns the meta object for the attribute '{@link eu.paasage.camel.metric.Condition#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2422,6 +2411,17 @@ public interface MetricPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCondition_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.metric.Condition#getComparisonOperator <em>Comparison Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Comparison Operator</em>'.
+	 * @see eu.paasage.camel.metric.Condition#getComparisonOperator()
+	 * @see #getCondition()
+	 * @generated
+	 */
+	EAttribute getCondition_ComparisonOperator();
 
 	/**
 	 * Returns the meta object for the attribute '{@link eu.paasage.camel.metric.Condition#getThreshold <em>Threshold</em>}'.
@@ -2435,15 +2435,15 @@ public interface MetricPackage extends EPackage {
 	EAttribute getCondition_Threshold();
 
 	/**
-	 * Returns the meta object for the attribute '{@link eu.paasage.camel.metric.Condition#getComparisonOperator <em>Comparison Operator</em>}'.
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.metric.Condition#getValidity <em>Validity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Comparison Operator</em>'.
-	 * @see eu.paasage.camel.metric.Condition#getComparisonOperator()
+	 * @return the meta object for the attribute '<em>Validity</em>'.
+	 * @see eu.paasage.camel.metric.Condition#getValidity()
 	 * @see #getCondition()
 	 * @generated
 	 */
-	EAttribute getCondition_ComparisonOperator();
+	EAttribute getCondition_Validity();
 
 	/**
 	 * Returns the meta object for class '{@link eu.paasage.camel.metric.MetricCondition <em>Condition</em>}'.
@@ -2648,17 +2648,6 @@ public interface MetricPackage extends EPackage {
 	EClass getMetricFormulaParameter();
 
 	/**
-	 * Returns the meta object for the reference '{@link eu.paasage.camel.metric.MetricFormulaParameter#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Value</em>'.
-	 * @see eu.paasage.camel.metric.MetricFormulaParameter#getValue()
-	 * @see #getMetricFormulaParameter()
-	 * @generated
-	 */
-	EReference getMetricFormulaParameter_Value();
-
-	/**
 	 * Returns the meta object for the attribute '{@link eu.paasage.camel.metric.MetricFormulaParameter#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2668,6 +2657,17 @@ public interface MetricPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMetricFormulaParameter_Name();
+
+	/**
+	 * Returns the meta object for the reference '{@link eu.paasage.camel.metric.MetricFormulaParameter#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Value</em>'.
+	 * @see eu.paasage.camel.metric.MetricFormulaParameter#getValue()
+	 * @see #getMetricFormulaParameter()
+	 * @generated
+	 */
+	EReference getMetricFormulaParameter_Value();
 
 	/**
 	 * Returns the meta object for class '{@link eu.paasage.camel.metric.MetricFormula <em>Formula</em>}'.
@@ -2988,6 +2988,17 @@ public interface MetricPackage extends EPackage {
 	EAttribute getProperty_Description();
 
 	/**
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.metric.Property#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see eu.paasage.camel.metric.Property#getType()
+	 * @see #getProperty()
+	 * @generated
+	 */
+	EAttribute getProperty_Type();
+
+	/**
 	 * Returns the meta object for the reference list '{@link eu.paasage.camel.metric.Property#getSubProperties <em>Sub Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3010,17 +3021,6 @@ public interface MetricPackage extends EPackage {
 	EReference getProperty_Sensors();
 
 	/**
-	 * Returns the meta object for the attribute '{@link eu.paasage.camel.metric.Property#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see eu.paasage.camel.metric.Property#getType()
-	 * @see #getProperty()
-	 * @generated
-	 */
-	EAttribute getProperty_Type();
-
-	/**
 	 * Returns the meta object for class '{@link eu.paasage.camel.metric.Schedule <em>Schedule</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3029,6 +3029,17 @@ public interface MetricPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getSchedule();
+
+	/**
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.metric.Schedule#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see eu.paasage.camel.metric.Schedule#getName()
+	 * @see #getSchedule()
+	 * @generated
+	 */
+	EAttribute getSchedule_Name();
 
 	/**
 	 * Returns the meta object for the attribute '{@link eu.paasage.camel.metric.Schedule#getStart <em>Start</em>}'.
@@ -3095,17 +3106,6 @@ public interface MetricPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getSchedule_Interval();
-
-	/**
-	 * Returns the meta object for the attribute '{@link eu.paasage.camel.metric.Schedule#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see eu.paasage.camel.metric.Schedule#getName()
-	 * @see #getSchedule()
-	 * @generated
-	 */
-	EAttribute getSchedule_Name();
 
 	/**
 	 * Returns the meta object for the '{@link eu.paasage.camel.metric.Schedule#checkStartEndDates(eu.paasage.camel.metric.Schedule) <em>Check Start End Dates</em>}' operation.
@@ -3181,6 +3181,17 @@ public interface MetricPackage extends EPackage {
 	EClass getWindow();
 
 	/**
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.metric.Window#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see eu.paasage.camel.metric.Window#getName()
+	 * @see #getWindow()
+	 * @generated
+	 */
+	EAttribute getWindow_Name();
+
+	/**
 	 * Returns the meta object for the reference '{@link eu.paasage.camel.metric.Window#getUnit <em>Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3234,17 +3245,6 @@ public interface MetricPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getWindow_TimeSize();
-
-	/**
-	 * Returns the meta object for the attribute '{@link eu.paasage.camel.metric.Window#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see eu.paasage.camel.metric.Window#getName()
-	 * @see #getWindow()
-	 * @generated
-	 */
-	EAttribute getWindow_Name();
 
 	/**
 	 * Returns the meta object for class '{@link eu.paasage.camel.metric.ConditionContext <em>Condition Context</em>}'.
@@ -3694,20 +3694,20 @@ public interface MetricPackage extends EPackage {
 		EClass CONDITION = eINSTANCE.getCondition();
 
 		/**
-		 * The meta object literal for the '<em><b>Validity</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CONDITION__VALIDITY = eINSTANCE.getCondition_Validity();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute CONDITION__NAME = eINSTANCE.getCondition_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Comparison Operator</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONDITION__COMPARISON_OPERATOR = eINSTANCE.getCondition_ComparisonOperator();
 
 		/**
 		 * The meta object literal for the '<em><b>Threshold</b></em>' attribute feature.
@@ -3718,12 +3718,12 @@ public interface MetricPackage extends EPackage {
 		EAttribute CONDITION__THRESHOLD = eINSTANCE.getCondition_Threshold();
 
 		/**
-		 * The meta object literal for the '<em><b>Comparison Operator</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Validity</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONDITION__COMPARISON_OPERATOR = eINSTANCE.getCondition_ComparisonOperator();
+		EAttribute CONDITION__VALIDITY = eINSTANCE.getCondition_Validity();
 
 		/**
 		 * The meta object literal for the '{@link eu.paasage.camel.metric.impl.MetricConditionImpl <em>Condition</em>}' class.
@@ -3890,20 +3890,20 @@ public interface MetricPackage extends EPackage {
 		EClass METRIC_FORMULA_PARAMETER = eINSTANCE.getMetricFormulaParameter();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference METRIC_FORMULA_PARAMETER__VALUE = eINSTANCE.getMetricFormulaParameter_Value();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute METRIC_FORMULA_PARAMETER__NAME = eINSTANCE.getMetricFormulaParameter_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference METRIC_FORMULA_PARAMETER__VALUE = eINSTANCE.getMetricFormulaParameter_Value();
 
 		/**
 		 * The meta object literal for the '{@link eu.paasage.camel.metric.impl.MetricFormulaImpl <em>Formula</em>}' class.
@@ -4164,6 +4164,14 @@ public interface MetricPackage extends EPackage {
 		EAttribute PROPERTY__DESCRIPTION = eINSTANCE.getProperty_Description();
 
 		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROPERTY__TYPE = eINSTANCE.getProperty_Type();
+
+		/**
 		 * The meta object literal for the '<em><b>Sub Properties</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4180,14 +4188,6 @@ public interface MetricPackage extends EPackage {
 		EReference PROPERTY__SENSORS = eINSTANCE.getProperty_Sensors();
 
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PROPERTY__TYPE = eINSTANCE.getProperty_Type();
-
-		/**
 		 * The meta object literal for the '{@link eu.paasage.camel.metric.impl.ScheduleImpl <em>Schedule</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4196,6 +4196,14 @@ public interface MetricPackage extends EPackage {
 		 * @generated
 		 */
 		EClass SCHEDULE = eINSTANCE.getSchedule();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SCHEDULE__NAME = eINSTANCE.getSchedule_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Start</b></em>' attribute feature.
@@ -4244,14 +4252,6 @@ public interface MetricPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SCHEDULE__INTERVAL = eINSTANCE.getSchedule_Interval();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SCHEDULE__NAME = eINSTANCE.getSchedule_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Check Start End Dates</b></em>' operation.
@@ -4314,6 +4314,14 @@ public interface MetricPackage extends EPackage {
 		EClass WINDOW = eINSTANCE.getWindow();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WINDOW__NAME = eINSTANCE.getWindow_Name();
+
+		/**
 		 * The meta object literal for the '<em><b>Unit</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4352,14 +4360,6 @@ public interface MetricPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute WINDOW__TIME_SIZE = eINSTANCE.getWindow_TimeSize();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WINDOW__NAME = eINSTANCE.getWindow_Name();
 
 		/**
 		 * The meta object literal for the '{@link eu.paasage.camel.metric.impl.ConditionContextImpl <em>Condition Context</em>}' class.

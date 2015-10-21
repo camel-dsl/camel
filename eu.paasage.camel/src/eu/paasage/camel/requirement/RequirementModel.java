@@ -3,6 +3,7 @@
 package eu.paasage.camel.requirement;
 
 import eu.paasage.camel.Model;
+
 import org.eclipse.emf.common.util.EList;
 
 /**

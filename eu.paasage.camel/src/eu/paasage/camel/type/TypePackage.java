@@ -3,6 +3,7 @@
 package eu.paasage.camel.type;
 
 import eu.paasage.camel.CamelPackage;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -1206,17 +1207,6 @@ public interface TypePackage extends EPackage {
 	EClass getEnumerateValue();
 
 	/**
-	 * Returns the meta object for the attribute '{@link eu.paasage.camel.type.EnumerateValue#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see eu.paasage.camel.type.EnumerateValue#getValue()
-	 * @see #getEnumerateValue()
-	 * @generated
-	 */
-	EAttribute getEnumerateValue_Value();
-
-	/**
 	 * Returns the meta object for the attribute '{@link eu.paasage.camel.type.EnumerateValue#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1226,6 +1216,17 @@ public interface TypePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getEnumerateValue_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.type.EnumerateValue#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see eu.paasage.camel.type.EnumerateValue#getValue()
+	 * @see #getEnumerateValue()
+	 * @generated
+	 */
+	EAttribute getEnumerateValue_Value();
 
 	/**
 	 * Returns the meta object for class '{@link eu.paasage.camel.type.NumericValue <em>Numeric Value</em>}'.
@@ -1776,20 +1777,20 @@ public interface TypePackage extends EPackage {
 		EClass ENUMERATE_VALUE = eINSTANCE.getEnumerateValue();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENUMERATE_VALUE__VALUE = eINSTANCE.getEnumerateValue_Value();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute ENUMERATE_VALUE__NAME = eINSTANCE.getEnumerateValue_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENUMERATE_VALUE__VALUE = eINSTANCE.getEnumerateValue_Value();
 
 		/**
 		 * The meta object literal for the '{@link eu.paasage.camel.type.impl.NumericValueImpl <em>Numeric Value</em>}' class.

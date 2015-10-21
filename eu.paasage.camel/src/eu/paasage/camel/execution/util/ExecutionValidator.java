@@ -99,10 +99,10 @@ public class ExecutionValidator extends EObjectValidator {
 				return validateApplicationMeasurement((ApplicationMeasurement)value, diagnostics, context);
 			case ExecutionPackage.INTERNAL_COMPONENT_MEASUREMENT:
 				return validateInternalComponentMeasurement((InternalComponentMeasurement)value, diagnostics, context);
-			case ExecutionPackage.RESOURCE_COUPLING_MEASUREMENT:
-				return validateResourceCouplingMeasurement((ResourceCouplingMeasurement)value, diagnostics, context);
-			case ExecutionPackage.RESOURCE_MEASUREMENT:
-				return validateResourceMeasurement((ResourceMeasurement)value, diagnostics, context);
+			case ExecutionPackage.COMMUNICATION_MEASUREMENT:
+				return validateCommunicationMeasurement((CommunicationMeasurement)value, diagnostics, context);
+			case ExecutionPackage.VM_MEASUREMENT:
+				return validateVMMeasurement((VMMeasurement)value, diagnostics, context);
 			case ExecutionPackage.SLO_ASSESSMENT:
 				return validateSLOAssessment((SLOAssessment)value, diagnostics, context);
 			case ExecutionPackage.RULE_TRIGGER:
@@ -550,31 +550,31 @@ public class ExecutionValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateResourceCouplingMeasurement(ResourceCouplingMeasurement resourceCouplingMeasurement, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment((EObject)resourceCouplingMeasurement, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms((EObject)resourceCouplingMeasurement, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)resourceCouplingMeasurement, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)resourceCouplingMeasurement, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)resourceCouplingMeasurement, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)resourceCouplingMeasurement, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID((EObject)resourceCouplingMeasurement, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)resourceCouplingMeasurement, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)resourceCouplingMeasurement, diagnostics, context);
-		if (result || diagnostics != null) result &= validateMeasurement_measurement_slo_refer_to_correct_metric(resourceCouplingMeasurement, diagnostics, context);
-		if (result || diagnostics != null) result &= validateMeasurement_measurement_event_instance_same_metric(resourceCouplingMeasurement, diagnostics, context);
-		if (result || diagnostics != null) result &= validateMeasurement_correct_measurement_value(resourceCouplingMeasurement, diagnostics, context);
-		if (result || diagnostics != null) result &= validateMeasurement_measurement_metric_refers_to_correct_execution_context(resourceCouplingMeasurement, diagnostics, context);
-		if (result || diagnostics != null) result &= validateResourceCouplingMeasurement_resource_coupling_measurement_diff_vm_instances(resourceCouplingMeasurement, diagnostics, context);
+	public boolean validateCommunicationMeasurement(CommunicationMeasurement communicationMeasurement, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment((EObject)communicationMeasurement, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)communicationMeasurement, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)communicationMeasurement, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)communicationMeasurement, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)communicationMeasurement, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)communicationMeasurement, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)communicationMeasurement, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)communicationMeasurement, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)communicationMeasurement, diagnostics, context);
+		if (result || diagnostics != null) result &= validateMeasurement_measurement_slo_refer_to_correct_metric(communicationMeasurement, diagnostics, context);
+		if (result || diagnostics != null) result &= validateMeasurement_measurement_event_instance_same_metric(communicationMeasurement, diagnostics, context);
+		if (result || diagnostics != null) result &= validateMeasurement_correct_measurement_value(communicationMeasurement, diagnostics, context);
+		if (result || diagnostics != null) result &= validateMeasurement_measurement_metric_refers_to_correct_execution_context(communicationMeasurement, diagnostics, context);
+		if (result || diagnostics != null) result &= validateCommunicationMeasurement_resource_coupling_measurement_diff_vm_instances(communicationMeasurement, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * The cached validation expression for the resource_coupling_measurement_diff_vm_instances constraint of '<em>Resource Coupling Measurement</em>'.
+	 * The cached validation expression for the resource_coupling_measurement_diff_vm_instances constraint of '<em>Communication Measurement</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String RESOURCE_COUPLING_MEASUREMENT__RESOURCE_COUPLING_MEASUREMENT_DIFF_VM_INSTANCES__EEXPRESSION = "Tuple {\n" +
+	protected static final String COMMUNICATION_MEASUREMENT__RESOURCE_COUPLING_MEASUREMENT_DIFF_VM_INSTANCES__EEXPRESSION = "Tuple {\n" +
 		"\tmessage : String = 'The source: ' + sourceVMInstance.name +\n" +
 		"\t\t\t\t' and destination: ' + destinationVMInstance.name + ' VM instances of ResourceCouplingMeasurement: ' + self.name +\n" +
 		"\t\t\t\t' are either identical or not included in the deployment model of the respective execution context: ' +\n" +
@@ -586,21 +586,21 @@ public class ExecutionValidator extends EObjectValidator {
 		"}.status";
 
 	/**
-	 * Validates the resource_coupling_measurement_diff_vm_instances constraint of '<em>Resource Coupling Measurement</em>'.
+	 * Validates the resource_coupling_measurement_diff_vm_instances constraint of '<em>Communication Measurement</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateResourceCouplingMeasurement_resource_coupling_measurement_diff_vm_instances(ResourceCouplingMeasurement resourceCouplingMeasurement, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateCommunicationMeasurement_resource_coupling_measurement_diff_vm_instances(CommunicationMeasurement communicationMeasurement, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
-				(ExecutionPackage.Literals.RESOURCE_COUPLING_MEASUREMENT,
-				 resourceCouplingMeasurement,
+				(ExecutionPackage.Literals.COMMUNICATION_MEASUREMENT,
+				 communicationMeasurement,
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "resource_coupling_measurement_diff_vm_instances",
-				 RESOURCE_COUPLING_MEASUREMENT__RESOURCE_COUPLING_MEASUREMENT_DIFF_VM_INSTANCES__EEXPRESSION,
+				 COMMUNICATION_MEASUREMENT__RESOURCE_COUPLING_MEASUREMENT_DIFF_VM_INSTANCES__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
@@ -611,32 +611,32 @@ public class ExecutionValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateResourceMeasurement(ResourceMeasurement resourceMeasurement, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment((EObject)resourceMeasurement, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms((EObject)resourceMeasurement, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)resourceMeasurement, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)resourceMeasurement, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)resourceMeasurement, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)resourceMeasurement, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID((EObject)resourceMeasurement, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)resourceMeasurement, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)resourceMeasurement, diagnostics, context);
-		if (result || diagnostics != null) result &= validateMeasurement_measurement_slo_refer_to_correct_metric(resourceMeasurement, diagnostics, context);
-		if (result || diagnostics != null) result &= validateMeasurement_measurement_event_instance_same_metric(resourceMeasurement, diagnostics, context);
-		if (result || diagnostics != null) result &= validateMeasurement_correct_measurement_value(resourceMeasurement, diagnostics, context);
-		if (result || diagnostics != null) result &= validateMeasurement_measurement_metric_refers_to_correct_execution_context(resourceMeasurement, diagnostics, context);
-		if (result || diagnostics != null) result &= validateResourceMeasurement_resource_measurement_ec_deployment_model_vm_instance(resourceMeasurement, diagnostics, context);
-		if (result || diagnostics != null) result &= validateResourceMeasurement_resource_measurement_metric_vm_instance(resourceMeasurement, diagnostics, context);
+	public boolean validateVMMeasurement(VMMeasurement vmMeasurement, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment((EObject)vmMeasurement, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)vmMeasurement, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)vmMeasurement, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)vmMeasurement, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)vmMeasurement, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)vmMeasurement, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)vmMeasurement, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)vmMeasurement, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)vmMeasurement, diagnostics, context);
+		if (result || diagnostics != null) result &= validateMeasurement_measurement_slo_refer_to_correct_metric(vmMeasurement, diagnostics, context);
+		if (result || diagnostics != null) result &= validateMeasurement_measurement_event_instance_same_metric(vmMeasurement, diagnostics, context);
+		if (result || diagnostics != null) result &= validateMeasurement_correct_measurement_value(vmMeasurement, diagnostics, context);
+		if (result || diagnostics != null) result &= validateMeasurement_measurement_metric_refers_to_correct_execution_context(vmMeasurement, diagnostics, context);
+		if (result || diagnostics != null) result &= validateVMMeasurement_resource_measurement_ec_deployment_model_vm_instance(vmMeasurement, diagnostics, context);
+		if (result || diagnostics != null) result &= validateVMMeasurement_resource_measurement_metric_vm_instance(vmMeasurement, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * The cached validation expression for the resource_measurement_ec_deployment_model_vm_instance constraint of '<em>Resource Measurement</em>'.
+	 * The cached validation expression for the resource_measurement_ec_deployment_model_vm_instance constraint of '<em>VM Measurement</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String RESOURCE_MEASUREMENT__RESOURCE_MEASUREMENT_EC_DEPLOYMENT_MODEL_VM_INSTANCE__EEXPRESSION = "Tuple {\n" +
+	protected static final String VM_MEASUREMENT__RESOURCE_MEASUREMENT_EC_DEPLOYMENT_MODEL_VM_INSTANCE__EEXPRESSION = "Tuple {\n" +
 		"\tmessage : String = 'The VMInstance: ' + vmInstance.name +\n" +
 		"\t\t\t\t' of ResourceMeasurement: ' + self.name +\n" +
 		"\t\t\t\t' is not included in the deployment model of the respective execution context: ' +\n" +
@@ -646,33 +646,33 @@ public class ExecutionValidator extends EObjectValidator {
 		"}.status";
 
 	/**
-	 * Validates the resource_measurement_ec_deployment_model_vm_instance constraint of '<em>Resource Measurement</em>'.
+	 * Validates the resource_measurement_ec_deployment_model_vm_instance constraint of '<em>VM Measurement</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateResourceMeasurement_resource_measurement_ec_deployment_model_vm_instance(ResourceMeasurement resourceMeasurement, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateVMMeasurement_resource_measurement_ec_deployment_model_vm_instance(VMMeasurement vmMeasurement, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
-				(ExecutionPackage.Literals.RESOURCE_MEASUREMENT,
-				 resourceMeasurement,
+				(ExecutionPackage.Literals.VM_MEASUREMENT,
+				 vmMeasurement,
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "resource_measurement_ec_deployment_model_vm_instance",
-				 RESOURCE_MEASUREMENT__RESOURCE_MEASUREMENT_EC_DEPLOYMENT_MODEL_VM_INSTANCE__EEXPRESSION,
+				 VM_MEASUREMENT__RESOURCE_MEASUREMENT_EC_DEPLOYMENT_MODEL_VM_INSTANCE__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
 	}
 
 	/**
-	 * The cached validation expression for the resource_measurement_metric_vm_instance constraint of '<em>Resource Measurement</em>'.
+	 * The cached validation expression for the resource_measurement_metric_vm_instance constraint of '<em>VM Measurement</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String RESOURCE_MEASUREMENT__RESOURCE_MEASUREMENT_METRIC_VM_INSTANCE__EEXPRESSION = "Tuple {\n" +
+	protected static final String VM_MEASUREMENT__RESOURCE_MEASUREMENT_METRIC_VM_INSTANCE__EEXPRESSION = "Tuple {\n" +
 		"\tmessage : String = 'The binding of metric instance: ' + metricInstance.name +\n" +
 		"\t\t\t\t' associated to ResourceMeasurement: ' + self.name +\n" +
 		"\t\t\t\t' refers to a different VMInstance from the one related to this measurement',\n" +
@@ -682,21 +682,21 @@ public class ExecutionValidator extends EObjectValidator {
 		"}.status";
 
 	/**
-	 * Validates the resource_measurement_metric_vm_instance constraint of '<em>Resource Measurement</em>'.
+	 * Validates the resource_measurement_metric_vm_instance constraint of '<em>VM Measurement</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateResourceMeasurement_resource_measurement_metric_vm_instance(ResourceMeasurement resourceMeasurement, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateVMMeasurement_resource_measurement_metric_vm_instance(VMMeasurement vmMeasurement, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
-				(ExecutionPackage.Literals.RESOURCE_MEASUREMENT,
-				 resourceMeasurement,
+				(ExecutionPackage.Literals.VM_MEASUREMENT,
+				 vmMeasurement,
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "resource_measurement_metric_vm_instance",
-				 RESOURCE_MEASUREMENT__RESOURCE_MEASUREMENT_METRIC_VM_INSTANCE__EEXPRESSION,
+				 VM_MEASUREMENT__RESOURCE_MEASUREMENT_METRIC_VM_INSTANCE__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);

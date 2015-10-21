@@ -3,6 +3,7 @@
 package eu.paasage.camel.execution.util;
 
 import eu.paasage.camel.Model;
+
 import eu.paasage.camel.execution.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -93,12 +94,12 @@ public class ExecutionAdapterFactory extends AdapterFactoryImpl {
 				return createInternalComponentMeasurementAdapter();
 			}
 			@Override
-			public Adapter caseResourceCouplingMeasurement(ResourceCouplingMeasurement object) {
-				return createResourceCouplingMeasurementAdapter();
+			public Adapter caseCommunicationMeasurement(CommunicationMeasurement object) {
+				return createCommunicationMeasurementAdapter();
 			}
 			@Override
-			public Adapter caseResourceMeasurement(ResourceMeasurement object) {
-				return createResourceMeasurementAdapter();
+			public Adapter caseVMMeasurement(VMMeasurement object) {
+				return createVMMeasurementAdapter();
 			}
 			@Override
 			public Adapter caseSLOAssessment(SLOAssessment object) {
@@ -217,30 +218,30 @@ public class ExecutionAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link eu.paasage.camel.execution.ResourceCouplingMeasurement <em>Resource Coupling Measurement</em>}'.
+	 * Creates a new adapter for an object of class '{@link eu.paasage.camel.execution.CommunicationMeasurement <em>Communication Measurement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see eu.paasage.camel.execution.ResourceCouplingMeasurement
+	 * @see eu.paasage.camel.execution.CommunicationMeasurement
 	 * @generated
 	 */
-	public Adapter createResourceCouplingMeasurementAdapter() {
+	public Adapter createCommunicationMeasurementAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link eu.paasage.camel.execution.ResourceMeasurement <em>Resource Measurement</em>}'.
+	 * Creates a new adapter for an object of class '{@link eu.paasage.camel.execution.VMMeasurement <em>VM Measurement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see eu.paasage.camel.execution.ResourceMeasurement
+	 * @see eu.paasage.camel.execution.VMMeasurement
 	 * @generated
 	 */
-	public Adapter createResourceMeasurementAdapter() {
+	public Adapter createVMMeasurementAdapter() {
 		return null;
 	}
 

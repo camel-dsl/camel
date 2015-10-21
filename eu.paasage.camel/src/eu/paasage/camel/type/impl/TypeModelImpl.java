@@ -3,11 +3,14 @@
 package eu.paasage.camel.type.impl;
 
 import eu.paasage.camel.impl.ModelImpl;
+
 import eu.paasage.camel.type.SingleValue;
 import eu.paasage.camel.type.TypeModel;
 import eu.paasage.camel.type.TypePackage;
 import eu.paasage.camel.type.ValueType;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

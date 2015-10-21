@@ -3,6 +3,7 @@
 package eu.paasage.camel.execution.util;
 
 import eu.paasage.camel.Model;
+
 import eu.paasage.camel.execution.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -106,17 +107,17 @@ public class ExecutionSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ExecutionPackage.RESOURCE_COUPLING_MEASUREMENT: {
-				ResourceCouplingMeasurement resourceCouplingMeasurement = (ResourceCouplingMeasurement)theEObject;
-				T result = caseResourceCouplingMeasurement(resourceCouplingMeasurement);
-				if (result == null) result = caseMeasurement(resourceCouplingMeasurement);
+			case ExecutionPackage.COMMUNICATION_MEASUREMENT: {
+				CommunicationMeasurement communicationMeasurement = (CommunicationMeasurement)theEObject;
+				T result = caseCommunicationMeasurement(communicationMeasurement);
+				if (result == null) result = caseMeasurement(communicationMeasurement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ExecutionPackage.RESOURCE_MEASUREMENT: {
-				ResourceMeasurement resourceMeasurement = (ResourceMeasurement)theEObject;
-				T result = caseResourceMeasurement(resourceMeasurement);
-				if (result == null) result = caseMeasurement(resourceMeasurement);
+			case ExecutionPackage.VM_MEASUREMENT: {
+				VMMeasurement vmMeasurement = (VMMeasurement)theEObject;
+				T result = caseVMMeasurement(vmMeasurement);
+				if (result == null) result = caseMeasurement(vmMeasurement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -227,32 +228,32 @@ public class ExecutionSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Resource Coupling Measurement</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Communication Measurement</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Resource Coupling Measurement</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Communication Measurement</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseResourceCouplingMeasurement(ResourceCouplingMeasurement object) {
+	public T caseCommunicationMeasurement(CommunicationMeasurement object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Resource Measurement</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VM Measurement</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Resource Measurement</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VM Measurement</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseResourceMeasurement(ResourceMeasurement object) {
+	public T caseVMMeasurement(VMMeasurement object) {
 		return null;
 	}
 

@@ -3,9 +3,13 @@
 package eu.paasage.camel.scalability;
 
 import eu.paasage.camel.Action;
+
 import eu.paasage.camel.organisation.Entity;
+
 import eu.paasage.camel.requirement.ScaleRequirement;
+
 import org.eclipse.emf.cdo.CDOObject;
+
 import org.eclipse.emf.common.util.EList;
 
 /**

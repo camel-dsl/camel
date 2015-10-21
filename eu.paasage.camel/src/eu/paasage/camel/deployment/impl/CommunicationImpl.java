@@ -8,6 +8,7 @@ import eu.paasage.camel.deployment.Configuration;
 import eu.paasage.camel.deployment.DeploymentPackage;
 import eu.paasage.camel.deployment.ProvidedCommunication;
 import eu.paasage.camel.deployment.RequiredCommunication;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -70,6 +71,24 @@ public class CommunicationImpl extends DeploymentElementImpl implements Communic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ProvidedCommunication getProvidedCommunication() {
+		return (ProvidedCommunication)eGet(DeploymentPackage.Literals.COMMUNICATION__PROVIDED_COMMUNICATION, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setProvidedCommunication(ProvidedCommunication newProvidedCommunication) {
+		eSet(DeploymentPackage.Literals.COMMUNICATION__PROVIDED_COMMUNICATION, newProvidedCommunication);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public RequiredCommunication getRequiredCommunication() {
 		return (RequiredCommunication)eGet(DeploymentPackage.Literals.COMMUNICATION__REQUIRED_COMMUNICATION, true);
 	}
@@ -117,24 +136,6 @@ public class CommunicationImpl extends DeploymentElementImpl implements Communic
 	 */
 	public void setRequiredPortConfiguration(Configuration newRequiredPortConfiguration) {
 		eSet(DeploymentPackage.Literals.COMMUNICATION__REQUIRED_PORT_CONFIGURATION, newRequiredPortConfiguration);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ProvidedCommunication getProvidedCommunication() {
-		return (ProvidedCommunication)eGet(DeploymentPackage.Literals.COMMUNICATION__PROVIDED_COMMUNICATION, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setProvidedCommunication(ProvidedCommunication newProvidedCommunication) {
-		eSet(DeploymentPackage.Literals.COMMUNICATION__PROVIDED_COMMUNICATION, newProvidedCommunication);
 	}
 
 } //CommunicationImpl

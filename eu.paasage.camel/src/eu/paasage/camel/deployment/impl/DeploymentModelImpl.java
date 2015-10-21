@@ -13,8 +13,11 @@ import eu.paasage.camel.deployment.InternalComponentInstance;
 import eu.paasage.camel.deployment.VM;
 import eu.paasage.camel.deployment.VMInstance;
 import eu.paasage.camel.deployment.VMRequirementSet;
+
 import eu.paasage.camel.impl.ModelImpl;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -115,8 +118,8 @@ public class DeploymentModelImpl extends ModelImpl implements DeploymentModel {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Hosting> getHostings() {
-		return (EList<Hosting>)eGet(DeploymentPackage.Literals.DEPLOYMENT_MODEL__HOSTINGS, true);
+	public EList<CommunicationInstance> getCommunicationInstances() {
+		return (EList<CommunicationInstance>)eGet(DeploymentPackage.Literals.DEPLOYMENT_MODEL__COMMUNICATION_INSTANCES, true);
 	}
 
 	/**
@@ -125,8 +128,8 @@ public class DeploymentModelImpl extends ModelImpl implements DeploymentModel {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<CommunicationInstance> getCommunicationInstances() {
-		return (EList<CommunicationInstance>)eGet(DeploymentPackage.Literals.DEPLOYMENT_MODEL__COMMUNICATION_INSTANCES, true);
+	public EList<Hosting> getHostings() {
+		return (EList<Hosting>)eGet(DeploymentPackage.Literals.DEPLOYMENT_MODEL__HOSTINGS, true);
 	}
 
 	/**

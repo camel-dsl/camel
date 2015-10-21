@@ -30,7 +30,7 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  *   <li>{@link eu.paasage.camel.execution.impl.MeasurementImpl#getMetricInstance <em>Metric Instance</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.impl.MeasurementImpl#getValue <em>Value</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.impl.MeasurementImpl#getRawData <em>Raw Data</em>}</li>
- *   <li>{@link eu.paasage.camel.execution.impl.MeasurementImpl#getReportedOn <em>Reported On</em>}</li>
+ *   <li>{@link eu.paasage.camel.execution.impl.MeasurementImpl#getMeasurementTime <em>Measurement Time</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.impl.MeasurementImpl#getSlo <em>Slo</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.impl.MeasurementImpl#getEventInstance <em>Event Instance</em>}</li>
  * </ul>
@@ -163,8 +163,8 @@ public class MeasurementImpl extends CDOObjectImpl implements Measurement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getReportedOn() {
-		return (Date)eGet(ExecutionPackage.Literals.MEASUREMENT__REPORTED_ON, true);
+	public Date getMeasurementTime() {
+		return (Date)eGet(ExecutionPackage.Literals.MEASUREMENT__MEASUREMENT_TIME, true);
 	}
 
 	/**
@@ -172,8 +172,8 @@ public class MeasurementImpl extends CDOObjectImpl implements Measurement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setReportedOn(Date newReportedOn) {
-		eSet(ExecutionPackage.Literals.MEASUREMENT__REPORTED_ON, newReportedOn);
+	public void setMeasurementTime(Date newMeasurementTime) {
+		eSet(ExecutionPackage.Literals.MEASUREMENT__MEASUREMENT_TIME, newMeasurementTime);
 	}
 
 	/**

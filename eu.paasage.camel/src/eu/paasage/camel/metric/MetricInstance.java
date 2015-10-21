@@ -187,7 +187,7 @@ public interface MetricInstance extends CDOObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='System.out.println(\"Checking recursiveness for MetricInstance: \" + m1.getName());\n\t\tCompositeMetricInstance cmi = (CompositeMetricInstance)m1;\n\t\tfor (MetricInstance m: cmi.getComposingMetricInstances()){\n\t\t\tif (m.getName().equals(m2.getName())) return Boolean.TRUE;\n\t\t\tif (m instanceof CompositeMetricInstance && checkRecursiveness(m,m2)) return Boolean.TRUE;\n\t\t}\n\t\treturn Boolean.FALSE;'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='System.out.println(\"Checking recursiveness for MetricInstance: \" + m1.getName());\n\t\teu.paasage.camel.metric.CompositeMetricInstance cmi = (eu.paasage.camel.metric.CompositeMetricInstance)m1;\n\t\tfor (eu.paasage.camel.metric.MetricInstance m: cmi.getComposingMetricInstances()){\n\t\t\tif (m.getName().equals(m2.getName())) return Boolean.TRUE;\n\t\t\tif (m instanceof eu.paasage.camel.metric.CompositeMetricInstance && checkRecursiveness(m,m2)) return Boolean.TRUE;\n\t\t}\n\t\treturn Boolean.FALSE;'"
 	 * @generated
 	 */
 	boolean checkRecursiveness(MetricInstance m1, MetricInstance m2);

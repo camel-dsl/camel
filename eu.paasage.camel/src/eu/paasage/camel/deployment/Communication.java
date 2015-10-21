@@ -56,6 +56,32 @@ public interface Communication extends DeploymentElement {
 	void setType(CommunicationType value);
 
 	/**
+	 * Returns the value of the '<em><b>Provided Communication</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Provided Communication</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Provided Communication</em>' reference.
+	 * @see #setProvidedCommunication(ProvidedCommunication)
+	 * @see eu.paasage.camel.deployment.DeploymentPackage#getCommunication_ProvidedCommunication()
+	 * @model required="true"
+	 * @generated
+	 */
+	ProvidedCommunication getProvidedCommunication();
+
+	/**
+	 * Sets the value of the '{@link eu.paasage.camel.deployment.Communication#getProvidedCommunication <em>Provided Communication</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Provided Communication</em>' reference.
+	 * @see #getProvidedCommunication()
+	 * @generated
+	 */
+	void setProvidedCommunication(ProvidedCommunication value);
+
+	/**
 	 * Returns the value of the '<em><b>Required Communication</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -132,31 +158,5 @@ public interface Communication extends DeploymentElement {
 	 * @generated
 	 */
 	void setRequiredPortConfiguration(Configuration value);
-
-	/**
-	 * Returns the value of the '<em><b>Provided Communication</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Provided Communication</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Provided Communication</em>' reference.
-	 * @see #setProvidedCommunication(ProvidedCommunication)
-	 * @see eu.paasage.camel.deployment.DeploymentPackage#getCommunication_ProvidedCommunication()
-	 * @model required="true"
-	 * @generated
-	 */
-	ProvidedCommunication getProvidedCommunication();
-
-	/**
-	 * Sets the value of the '{@link eu.paasage.camel.deployment.Communication#getProvidedCommunication <em>Provided Communication</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Provided Communication</em>' reference.
-	 * @see #getProvidedCommunication()
-	 * @generated
-	 */
-	void setProvidedCommunication(ProvidedCommunication value);
 
 } // Communication
