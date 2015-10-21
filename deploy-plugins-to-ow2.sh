@@ -12,11 +12,6 @@ $DRY mvn deploy:deploy-file -DcreateChecksum=true \
      -Dfile=$file_name
 }
 
-groupId=org.ow2.paasage
-version=2015.9.1-SNAPSHOT
-artifactId=camel
-file_name=org.ow2.paasage.camel_2015.9.1.jar
-deploy_file
 groupId=org.ow2.paasage.camel
 version=2015.9.1-SNAPSHOT
 artifactId=dsl
