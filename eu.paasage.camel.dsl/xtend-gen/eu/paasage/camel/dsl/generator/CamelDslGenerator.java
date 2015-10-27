@@ -24,6 +24,7 @@ import org.eclipse.xtext.xbase.lib.Exceptions;
  */
 @SuppressWarnings("all")
 public class CamelDslGenerator implements IGenerator {
+  @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess fsa) {
     try {
       final TreeIterator<EObject> objit = resource.getAllContents();
