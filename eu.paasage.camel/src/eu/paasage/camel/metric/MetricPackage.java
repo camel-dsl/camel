@@ -709,13 +709,22 @@ public interface MetricPackage extends EPackage {
 	int METRIC_FORMULA___CONTAINS_METRIC__METRIC = METRIC_FORMULA_PARAMETER_OPERATION_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Has Metric</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METRIC_FORMULA___HAS_METRIC = METRIC_FORMULA_PARAMETER_OPERATION_COUNT + 1;
+
+	/**
 	 * The number of operations of the '<em>Formula</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int METRIC_FORMULA_OPERATION_COUNT = METRIC_FORMULA_PARAMETER_OPERATION_COUNT + 1;
+	int METRIC_FORMULA_OPERATION_COUNT = METRIC_FORMULA_PARAMETER_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link eu.paasage.camel.metric.impl.MetricImpl <em>Metric</em>}' class.
@@ -2734,6 +2743,16 @@ public interface MetricPackage extends EPackage {
 	EOperation getMetricFormula__ContainsMetric__Metric();
 
 	/**
+	 * Returns the meta object for the '{@link eu.paasage.camel.metric.MetricFormula#hasMetric() <em>Has Metric</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Has Metric</em>' operation.
+	 * @see eu.paasage.camel.metric.MetricFormula#hasMetric()
+	 * @generated
+	 */
+	EOperation getMetricFormula__HasMetric();
+
+	/**
 	 * Returns the meta object for class '{@link eu.paasage.camel.metric.Metric <em>Metric</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3954,6 +3973,14 @@ public interface MetricPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation METRIC_FORMULA___CONTAINS_METRIC__METRIC = eINSTANCE.getMetricFormula__ContainsMetric__Metric();
+
+		/**
+		 * The meta object literal for the '<em><b>Has Metric</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation METRIC_FORMULA___HAS_METRIC = eINSTANCE.getMetricFormula__HasMetric();
 
 		/**
 		 * The meta object literal for the '{@link eu.paasage.camel.metric.impl.MetricImpl <em>Metric</em>}' class.

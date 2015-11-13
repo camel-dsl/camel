@@ -482,7 +482,7 @@ public class MetricValidator extends EObjectValidator {
 		"\t\t\t\t\t->size().toString(),\n" +
 		"\tstatus : Boolean = ((self.functionArity = MetricFunctionArityType::UNARY) implies (self.parameters\n" +
 		"\t\t\t\t\t->size() = 1 and self.parameters\n" +
-		"\t\t\t\t\t->select(p | p.oclIsKindOf(Metric))\n" +
+		"\t\t\t\t\t->select(p | p.oclIsKindOf(Metric) or (p.oclIsTypeOf(MetricFormula) and p.oclAsType(MetricFormula).hasMetric()))\n" +
 		"\t\t\t\t\t->size() = 1)) and ((self.functionArity = MetricFunctionArityType::BINARY) implies self.parameters\n" +
 		"\t\t\t\t\t->size() = 2) and ((self.functionArity = MetricFunctionArityType::N_ARY) implies self.parameters\n" +
 		"\t\t\t\t\t->size() >= 2)\n" +

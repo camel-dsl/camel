@@ -429,6 +429,7 @@
         <genOperations ecoreOperation="camel.ecore#//metric/MetricFormula/containsMetric">
           <genParameters ecoreParameter="camel.ecore#//metric/MetricFormula/containsMetric/m"/>
         </genOperations>
+        <genOperations ecoreOperation="camel.ecore#//metric/MetricFormula/hasMetric"/>
       </genClasses>
       <genClasses image="false" ecoreClass="camel.ecore#//metric/Metric">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camel.ecore#//metric/Metric/description"/>

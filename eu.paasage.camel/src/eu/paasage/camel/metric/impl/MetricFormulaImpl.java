@@ -144,6 +144,30 @@ public class MetricFormulaImpl extends MetricFormulaParameterImpl implements Met
 	}
 
 	/**
+	 * The cached invocation delegate for the '{@link #hasMetric() <em>Has Metric</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #hasMetric()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final EOperation.Internal.InvocationDelegate HAS_METRIC__EINVOCATION_DELEGATE = ((EOperation.Internal)MetricPackage.Literals.METRIC_FORMULA___HAS_METRIC).getInvocationDelegate();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean hasMetric() {
+		try {
+			return (Boolean)HAS_METRIC__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
+		}
+		catch (InvocationTargetException ite) {
+			throw new WrappedException(ite);
+		}
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -153,6 +177,8 @@ public class MetricFormulaImpl extends MetricFormulaParameterImpl implements Met
 		switch (operationID) {
 			case MetricPackage.METRIC_FORMULA___CONTAINS_METRIC__METRIC:
 				return containsMetric((Metric)arguments.get(0));
+			case MetricPackage.METRIC_FORMULA___HAS_METRIC:
+				return hasMetric();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

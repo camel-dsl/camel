@@ -82,8 +82,10 @@ public class CamelDslScopeProvider extends AbstractDeclarativeScopeProvider {
           list.addAll(_requiredCommunicationInstances);
         }
       }
-      final Function<RequiredCommunicationInstance, QualifiedName> _function = (RequiredCommunicationInstance e) -> {
-        return this._provider.qualifiedName(e);
+      final Function<RequiredCommunicationInstance, QualifiedName> _function = new Function<RequiredCommunicationInstance, QualifiedName>() {
+        public QualifiedName apply(final RequiredCommunicationInstance e) {
+          return CamelDslScopeProvider.this._provider.qualifiedName(e);
+        }
       };
       IScope _scopeFor = Scopes.scopeFor(clist);
       return Scopes.<RequiredCommunicationInstance>scopeFor(list, _function, _scopeFor);
@@ -97,9 +99,11 @@ public class CamelDslScopeProvider extends AbstractDeclarativeScopeProvider {
       EObject _eContainer = vm.eContainer();
       final DeploymentModel dm = ((DeploymentModel) _eContainer);
       final EList<VMRequirementSet> list = dm.getVmRequirementSets();
-      final Function<VMRequirementSet, QualifiedName> _function = (VMRequirementSet e) -> {
-        String _name = e.getName();
-        return QualifiedName.create(_name);
+      final Function<VMRequirementSet, QualifiedName> _function = new Function<VMRequirementSet, QualifiedName>() {
+        public QualifiedName apply(final VMRequirementSet e) {
+          String _name = e.getName();
+          return QualifiedName.create(_name);
+        }
       };
       ArrayList<DeploymentModel> _newArrayList = CollectionLiterals.<DeploymentModel>newArrayList(dm);
       IScope _scopeFor = Scopes.scopeFor(_newArrayList);
@@ -129,8 +133,10 @@ public class CamelDslScopeProvider extends AbstractDeclarativeScopeProvider {
         list.addAll(_providedCommunicationInstances);
       }
     }
-    final Function<ProvidedCommunicationInstance, QualifiedName> _function = (ProvidedCommunicationInstance e) -> {
-      return this._provider.qualifiedName(e);
+    final Function<ProvidedCommunicationInstance, QualifiedName> _function = new Function<ProvidedCommunicationInstance, QualifiedName>() {
+      public QualifiedName apply(final ProvidedCommunicationInstance e) {
+        return CamelDslScopeProvider.this._provider.qualifiedName(e);
+      }
     };
     IScope _scopeFor = Scopes.scopeFor(clist);
     return Scopes.<ProvidedCommunicationInstance>scopeFor(list, _function, _scopeFor);
@@ -157,8 +163,10 @@ public class CamelDslScopeProvider extends AbstractDeclarativeScopeProvider {
         list.addAll(_providedHostInstances);
       }
     }
-    final Function<ProvidedHostInstance, QualifiedName> _function = (ProvidedHostInstance e) -> {
-      return this._provider.qualifiedName(e);
+    final Function<ProvidedHostInstance, QualifiedName> _function = new Function<ProvidedHostInstance, QualifiedName>() {
+      public QualifiedName apply(final ProvidedHostInstance e) {
+        return CamelDslScopeProvider.this._provider.qualifiedName(e);
+      }
     };
     IScope _scopeFor = Scopes.scopeFor(clist);
     return Scopes.<ProvidedHostInstance>scopeFor(list, _function, _scopeFor);
@@ -168,12 +176,16 @@ public class CamelDslScopeProvider extends AbstractDeclarativeScopeProvider {
     EObject _eContainer = ri.eContainer();
     final DeploymentModel model = ((DeploymentModel) _eContainer);
     EList<InternalComponentInstance> _internalComponentInstances = model.getInternalComponentInstances();
-    final Function1<InternalComponentInstance, RequiredHostInstance> _function = (InternalComponentInstance e) -> {
-      return e.getRequiredHostInstance();
+    final Function1<InternalComponentInstance, RequiredHostInstance> _function = new Function1<InternalComponentInstance, RequiredHostInstance>() {
+      public RequiredHostInstance apply(final InternalComponentInstance e) {
+        return e.getRequiredHostInstance();
+      }
     };
     List<RequiredHostInstance> _map = ListExtensions.<InternalComponentInstance, RequiredHostInstance>map(_internalComponentInstances, _function);
-    final Function<RequiredHostInstance, QualifiedName> _function_1 = (RequiredHostInstance e) -> {
-      return this._provider.qualifiedName(e);
+    final Function<RequiredHostInstance, QualifiedName> _function_1 = new Function<RequiredHostInstance, QualifiedName>() {
+      public QualifiedName apply(final RequiredHostInstance e) {
+        return CamelDslScopeProvider.this._provider.qualifiedName(e);
+      }
     };
     EList<InternalComponentInstance> _internalComponentInstances_1 = model.getInternalComponentInstances();
     IScope _scopeFor = Scopes.scopeFor(_internalComponentInstances_1);
@@ -186,8 +198,10 @@ public class CamelDslScopeProvider extends AbstractDeclarativeScopeProvider {
       EObject _eContainer = rg.eContainer();
       final RequirementModel om = ((RequirementModel) _eContainer);
       final EList<Requirement> list = om.getRequirements();
-      final Function<Requirement, QualifiedName> _function = (Requirement e) -> {
-        return this._provider.qualifiedName(e);
+      final Function<Requirement, QualifiedName> _function = new Function<Requirement, QualifiedName>() {
+        public QualifiedName apply(final Requirement e) {
+          return CamelDslScopeProvider.this._provider.qualifiedName(e);
+        }
       };
       ArrayList<RequirementModel> _newArrayList = CollectionLiterals.<RequirementModel>newArrayList(om);
       IScope _scopeFor = Scopes.scopeFor(_newArrayList);
@@ -202,8 +216,10 @@ public class CamelDslScopeProvider extends AbstractDeclarativeScopeProvider {
       EObject _eContainer = ra.eContainer();
       final OrganisationModel om = ((OrganisationModel) _eContainer);
       final EList<User> list = om.getUsers();
-      final Function<User, QualifiedName> _function = (User e) -> {
-        return this._provider.qualifiedName(e);
+      final Function<User, QualifiedName> _function = new Function<User, QualifiedName>() {
+        public QualifiedName apply(final User e) {
+          return CamelDslScopeProvider.this._provider.qualifiedName(e);
+        }
       };
       ArrayList<OrganisationModel> _newArrayList = CollectionLiterals.<OrganisationModel>newArrayList(om);
       IScope _scopeFor = Scopes.scopeFor(_newArrayList);
@@ -218,8 +234,10 @@ public class CamelDslScopeProvider extends AbstractDeclarativeScopeProvider {
       EObject _eContainer = ra.eContainer();
       final MetricModel mm = ((MetricModel) _eContainer);
       final EList<Sensor> sensors = mm.getSensors();
-      final Function<Sensor, QualifiedName> _function = (Sensor e) -> {
-        return this._provider.qualifiedName(e);
+      final Function<Sensor, QualifiedName> _function = new Function<Sensor, QualifiedName>() {
+        public QualifiedName apply(final Sensor e) {
+          return CamelDslScopeProvider.this._provider.qualifiedName(e);
+        }
       };
       ArrayList<MetricModel> _newArrayList = CollectionLiterals.<MetricModel>newArrayList(mm);
       IScope _scopeFor = Scopes.scopeFor(_newArrayList);
@@ -234,8 +252,10 @@ public class CamelDslScopeProvider extends AbstractDeclarativeScopeProvider {
       EObject _eContainer = m.eContainer();
       final ExecutionModel mm = ((ExecutionModel) _eContainer);
       final EList<ExecutionContext> ecs = mm.getExecutionContexts();
-      final Function<ExecutionContext, QualifiedName> _function = (ExecutionContext e) -> {
-        return this._provider.qualifiedName(e);
+      final Function<ExecutionContext, QualifiedName> _function = new Function<ExecutionContext, QualifiedName>() {
+        public QualifiedName apply(final ExecutionContext e) {
+          return CamelDslScopeProvider.this._provider.qualifiedName(e);
+        }
       };
       ArrayList<ExecutionModel> _newArrayList = CollectionLiterals.<ExecutionModel>newArrayList(mm);
       IScope _scopeFor = Scopes.scopeFor(_newArrayList);
@@ -253,8 +273,10 @@ public class CamelDslScopeProvider extends AbstractDeclarativeScopeProvider {
       EList<ExecutionModel> _executionModels = mm.getExecutionModels();
       ExecutionModel _get = _executionModels.get(0);
       final EList<ExecutionContext> ecs = _get.getExecutionContexts();
-      final Function<ExecutionContext, QualifiedName> _function = (ExecutionContext e) -> {
-        return this._provider.qualifiedName(e);
+      final Function<ExecutionContext, QualifiedName> _function = new Function<ExecutionContext, QualifiedName>() {
+        public QualifiedName apply(final ExecutionContext e) {
+          return CamelDslScopeProvider.this._provider.qualifiedName(e);
+        }
       };
       ArrayList<CamelModel> _newArrayList = CollectionLiterals.<CamelModel>newArrayList(mm);
       IScope _scopeFor = Scopes.scopeFor(_newArrayList);
@@ -269,8 +291,10 @@ public class CamelDslScopeProvider extends AbstractDeclarativeScopeProvider {
       EObject _eContainer = a.eContainer();
       final ExecutionModel mm = ((ExecutionModel) _eContainer);
       final EList<Measurement> ecs = mm.getMeasurements();
-      final Function<Measurement, QualifiedName> _function = (Measurement e) -> {
-        return this._provider.qualifiedName(e);
+      final Function<Measurement, QualifiedName> _function = new Function<Measurement, QualifiedName>() {
+        public QualifiedName apply(final Measurement e) {
+          return CamelDslScopeProvider.this._provider.qualifiedName(e);
+        }
       };
       ArrayList<ExecutionModel> _newArrayList = CollectionLiterals.<ExecutionModel>newArrayList(mm);
       IScope _scopeFor = Scopes.scopeFor(_newArrayList);
@@ -285,8 +309,10 @@ public class CamelDslScopeProvider extends AbstractDeclarativeScopeProvider {
       EObject _eContainer = a.eContainer();
       final SecurityModel sm = ((SecurityModel) _eContainer);
       final EList<SecurityControl> ecs = sm.getSecurityControls();
-      final Function<SecurityControl, QualifiedName> _function = (SecurityControl e) -> {
-        return this._provider.qualifiedName(e);
+      final Function<SecurityControl, QualifiedName> _function = new Function<SecurityControl, QualifiedName>() {
+        public QualifiedName apply(final SecurityControl e) {
+          return CamelDslScopeProvider.this._provider.qualifiedName(e);
+        }
       };
       ArrayList<SecurityModel> _newArrayList = CollectionLiterals.<SecurityModel>newArrayList(sm);
       IScope _scopeFor = Scopes.scopeFor(_newArrayList);

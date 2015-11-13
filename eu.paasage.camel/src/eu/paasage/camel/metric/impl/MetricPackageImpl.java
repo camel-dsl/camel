@@ -738,6 +738,15 @@ public class MetricPackageImpl extends EPackageImpl implements MetricPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getMetricFormula__HasMetric() {
+		return metricFormulaEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMetric() {
 		return metricEClass;
 	}
@@ -1583,6 +1592,7 @@ public class MetricPackageImpl extends EPackageImpl implements MetricPackage {
 		createEAttribute(metricFormulaEClass, METRIC_FORMULA__FUNCTION_PATTERN);
 		createEReference(metricFormulaEClass, METRIC_FORMULA__PARAMETERS);
 		createEOperation(metricFormulaEClass, METRIC_FORMULA___CONTAINS_METRIC__METRIC);
+		createEOperation(metricFormulaEClass, METRIC_FORMULA___HAS_METRIC);
 
 		metricEClass = createEClass(METRIC);
 		createEAttribute(metricEClass, METRIC__DESCRIPTION);
@@ -1788,6 +1798,8 @@ public class MetricPackageImpl extends EPackageImpl implements MetricPackage {
 
 		op = initEOperation(getMetricFormula__ContainsMetric__Metric(), ecorePackage.getEBoolean(), "containsMetric", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMetric(), "m", 1, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getMetricFormula__HasMetric(), ecorePackage.getEBoolean(), "hasMetric", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(metricEClass, Metric.class, "Metric", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMetric_Description(), ecorePackage.getEString(), "description", null, 0, 1, Metric.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2139,7 +2151,7 @@ public class MetricPackageImpl extends EPackageImpl implements MetricPackage {
 		  (metricFormulaEClass, 
 		   source, 
 		   new String[] {
-			 "metric_formula_correct_arity_for_function_wrt_parameters", "Tuple {\n\tmessage : String = \'MetricFormula: \' + self.toString() +\n\t\t\t\t\t\' has an incorrect arity: \' + functionArity.toString() + \' according to the size of the parameters list: \' +\n\t\t\t\t\tparameters\n\t\t\t\t\t->size().toString(),\n\tstatus : Boolean = ((self.functionArity = MetricFunctionArityType::UNARY) implies (self.parameters\n\t\t\t\t\t->size() = 1 and self.parameters\n\t\t\t\t\t->select(p | p.oclIsKindOf(Metric))\n\t\t\t\t\t->size() = 1)) and ((self.functionArity = MetricFunctionArityType::BINARY) implies self.parameters\n\t\t\t\t\t->size() = 2) and ((self.functionArity = MetricFunctionArityType::N_ARY) implies self.parameters\n\t\t\t\t\t->size() >= 2)\n}.status",
+			 "metric_formula_correct_arity_for_function_wrt_parameters", "Tuple {\n\tmessage : String = \'MetricFormula: \' + self.toString() +\n\t\t\t\t\t\' has an incorrect arity: \' + functionArity.toString() + \' according to the size of the parameters list: \' +\n\t\t\t\t\tparameters\n\t\t\t\t\t->size().toString(),\n\tstatus : Boolean = ((self.functionArity = MetricFunctionArityType::UNARY) implies (self.parameters\n\t\t\t\t\t->size() = 1 and self.parameters\n\t\t\t\t\t->select(p | p.oclIsKindOf(Metric) or (p.oclIsTypeOf(MetricFormula) and p.oclAsType(MetricFormula).hasMetric()))\n\t\t\t\t\t->size() = 1)) and ((self.functionArity = MetricFunctionArityType::BINARY) implies self.parameters\n\t\t\t\t\t->size() = 2) and ((self.functionArity = MetricFunctionArityType::N_ARY) implies self.parameters\n\t\t\t\t\t->size() >= 2)\n}.status",
 			 "metric_formula_correct_arity_for_function", "Tuple {\n\tmessage : String = \'MetricFormula: \' + self.toString() + \' has function: \' +\n\t\t\t\t\tfunction.toString() + \' that does not correctly correspond to its arity: \' +\n\t\t\t\t\tfunctionArity.toString(),\n\tstatus : Boolean = ((self.function = MetricFunctionType::MODULO or self.function =\n\t\t\t\t\tMetricFunctionType::PERCENTILE) implies self.functionArity = MetricFunctionArityType::BINARY) and (((self.function\n\t\t\t\t\t= MetricFunctionType::MEAN or self.function = MetricFunctionType::STD or self.function = MetricFunctionType::MIN\n\t\t\t\t\tor self.function = MetricFunctionType::MAX or self.function = MetricFunctionType::MODE or self.function =\n\t\t\t\t\tMetricFunctionType::MEDIAN or self.function = MetricFunctionType::DERIVATIVE or self.function =\n\t\t\t\t\tMetricFunctionType::COUNT) implies self.functionArity = MetricFunctionArityType::UNARY)) and (((self.function =\n\t\t\t\t\tMetricFunctionType::TIMES or self.function = MetricFunctionType::DIV) implies (self.functionArity =\n\t\t\t\t\tMetricFunctionArityType::BINARY or self.functionArity = MetricFunctionArityType::N_ARY)))\n}.status"
 		   });	
 		addAnnotation
@@ -2147,6 +2159,12 @@ public class MetricPackageImpl extends EPackageImpl implements MetricPackage {
 		   source, 
 		   new String[] {
 			 "body", "self.parameters\n\t\t\t\t\t\t->includes(m) or self.parameters\n\t\t\t\t\t\t->exists(p | p.oclIsTypeOf(MetricFormula) and p.oclAsType(MetricFormula).containsMetric(m))"
+		   });	
+		addAnnotation
+		  (getMetricFormula__HasMetric(), 
+		   source, 
+		   new String[] {
+			 "body", "self.parameters\n\t\t\t\t\t\t->exists(p | p.oclIsKindOf(Metric)) or \n\t\t\t\t\t\tself.parameters->exists(p | p.oclIsTypeOf(MetricFormula) and p.oclAsType(MetricFormula).hasMetric())"
 		   });	
 		addAnnotation
 		  (metricEClass, 
