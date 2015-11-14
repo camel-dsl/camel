@@ -464,9 +464,43 @@ public class MetricValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)metricFormula, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)metricFormula, diagnostics, context);
 		if (result || diagnostics != null) result &= validateMetricFormulaParameter_value_attribute_set_for_non_metric_formula_parameters(metricFormula, diagnostics, context);
+		if (result || diagnostics != null) result &= validateMetricFormula_metric_formula_has_metric(metricFormula, diagnostics, context);
 		if (result || diagnostics != null) result &= validateMetricFormula_metric_formula_correct_arity_for_function_wrt_parameters(metricFormula, diagnostics, context);
 		if (result || diagnostics != null) result &= validateMetricFormula_metric_formula_correct_arity_for_function(metricFormula, diagnostics, context);
 		return result;
+	}
+
+	/**
+	 * The cached validation expression for the metric_formula_has_metric constraint of '<em>Formula</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String METRIC_FORMULA__METRIC_FORMULA_HAS_METRIC__EEXPRESSION = "Tuple {\n" +
+		"\tmessage : String = 'MetricFormula: ' + self.toString() + ' does not involve any metric as input parameter',\n" +
+		"\tstatus : Boolean = \n" +
+		"\t\t\t\thasMetric()\n" +
+		"}.status";
+
+	/**
+	 * Validates the metric_formula_has_metric constraint of '<em>Formula</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateMetricFormula_metric_formula_has_metric(MetricFormula metricFormula, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(MetricPackage.Literals.METRIC_FORMULA,
+				 metricFormula,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "metric_formula_has_metric",
+				 METRIC_FORMULA__METRIC_FORMULA_HAS_METRIC__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
 	}
 
 	/**
@@ -481,8 +515,6 @@ public class MetricValidator extends EObjectValidator {
 		"\t\t\t\t\tparameters\n" +
 		"\t\t\t\t\t->size().toString(),\n" +
 		"\tstatus : Boolean = ((self.functionArity = MetricFunctionArityType::UNARY) implies (self.parameters\n" +
-		"\t\t\t\t\t->size() = 1 and self.parameters\n" +
-		"\t\t\t\t\t->select(p | p.oclIsKindOf(Metric) or (p.oclIsTypeOf(MetricFormula) and p.oclAsType(MetricFormula).hasMetric()))\n" +
 		"\t\t\t\t\t->size() = 1)) and ((self.functionArity = MetricFunctionArityType::BINARY) implies self.parameters\n" +
 		"\t\t\t\t\t->size() = 2) and ((self.functionArity = MetricFunctionArityType::N_ARY) implies self.parameters\n" +
 		"\t\t\t\t\t->size() >= 2)\n" +

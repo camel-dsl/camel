@@ -12,7 +12,13 @@
   <eClassifiers xsi:type="ecore:EClass" name="Model" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="importURI" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName">
+        <details key="body" value="Metric"/>
+        <details key="unique" value="false"/>
+        <details key="upper" value="*"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CamelModel" eSuperTypes="#//Model">
     <eStructuralFeatures xsi:type="ecore:EReference" name="actions" ordered="false"
@@ -659,10 +665,11 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="MetricFormula" eSuperTypes="#//metric/MetricFormulaParameter">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-        <details key="constraints" value="metric_formula_correct_arity_for_function_wrt_parameters metric_formula_correct_arity_for_function"/>
+        <details key="constraints" value="metric_formula_has_metric metric_formula_correct_arity_for_function_wrt_parameters metric_formula_correct_arity_for_function"/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="metric_formula_correct_arity_for_function_wrt_parameters" value="Tuple {&#xA;&#x9;message : String = 'MetricFormula: ' + self.toString() +&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;' has an incorrect arity: ' + functionArity.toString() + ' according to the size of the parameters list: ' +&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;parameters&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;->size().toString(),&#xA;&#x9;status : Boolean = ((self.functionArity = MetricFunctionArityType::UNARY) implies (self.parameters&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;->size() = 1 and self.parameters&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;->select(p | p.oclIsKindOf(Metric) or (p.oclIsTypeOf(MetricFormula) and p.oclAsType(MetricFormula).hasMetric()))&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;->size() = 1)) and ((self.functionArity = MetricFunctionArityType::BINARY) implies self.parameters&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;->size() = 2) and ((self.functionArity = MetricFunctionArityType::N_ARY) implies self.parameters&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;->size() >= 2)&#xA;}.status"/>
+        <details key="metric_formula_has_metric" value="Tuple {&#xA;&#x9;message : String = 'MetricFormula: ' + self.toString() + ' does not involve any metric as input parameter',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;&#x9;&#x9;hasMetric()&#xA;}.status"/>
+        <details key="metric_formula_correct_arity_for_function_wrt_parameters" value="Tuple {&#xA;&#x9;message : String = 'MetricFormula: ' + self.toString() +&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;' has an incorrect arity: ' + functionArity.toString() + ' according to the size of the parameters list: ' +&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;parameters&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;->size().toString(),&#xA;&#x9;status : Boolean = ((self.functionArity = MetricFunctionArityType::UNARY) implies (self.parameters&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;->size() = 1)) and ((self.functionArity = MetricFunctionArityType::BINARY) implies self.parameters&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;->size() = 2) and ((self.functionArity = MetricFunctionArityType::N_ARY) implies self.parameters&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;->size() >= 2)&#xA;}.status"/>
         <details key="metric_formula_correct_arity_for_function" value="Tuple {&#xA;&#x9;message : String = 'MetricFormula: ' + self.toString() + ' has function: ' +&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;function.toString() + ' that does not correctly correspond to its arity: ' +&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;functionArity.toString(),&#xA;&#x9;status : Boolean = ((self.function = MetricFunctionType::MODULO or self.function =&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;MetricFunctionType::PERCENTILE) implies self.functionArity = MetricFunctionArityType::BINARY) and (((self.function&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;= MetricFunctionType::MEAN or self.function = MetricFunctionType::STD or self.function = MetricFunctionType::MIN&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;or self.function = MetricFunctionType::MAX or self.function = MetricFunctionType::MODE or self.function =&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;MetricFunctionType::MEDIAN or self.function = MetricFunctionType::DERIVATIVE or self.function =&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;MetricFunctionType::COUNT) implies self.functionArity = MetricFunctionArityType::UNARY)) and (((self.function =&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;MetricFunctionType::TIMES or self.function = MetricFunctionType::DIV) implies (self.functionArity =&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;MetricFunctionArityType::BINARY or self.functionArity = MetricFunctionArityType::N_ARY)))&#xA;}.status"/>
       </eAnnotations>
       <eOperations name="containsMetric" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">

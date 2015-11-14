@@ -2011,7 +2011,7 @@ public class MetricPackageImpl extends EPackageImpl implements MetricPackage {
 		  (metricFormulaEClass, 
 		   source, 
 		   new String[] {
-			 "constraints", "metric_formula_correct_arity_for_function_wrt_parameters metric_formula_correct_arity_for_function"
+			 "constraints", "metric_formula_has_metric metric_formula_correct_arity_for_function_wrt_parameters metric_formula_correct_arity_for_function"
 		   });	
 		addAnnotation
 		  (metricEClass, 
@@ -2151,7 +2151,8 @@ public class MetricPackageImpl extends EPackageImpl implements MetricPackage {
 		  (metricFormulaEClass, 
 		   source, 
 		   new String[] {
-			 "metric_formula_correct_arity_for_function_wrt_parameters", "Tuple {\n\tmessage : String = \'MetricFormula: \' + self.toString() +\n\t\t\t\t\t\' has an incorrect arity: \' + functionArity.toString() + \' according to the size of the parameters list: \' +\n\t\t\t\t\tparameters\n\t\t\t\t\t->size().toString(),\n\tstatus : Boolean = ((self.functionArity = MetricFunctionArityType::UNARY) implies (self.parameters\n\t\t\t\t\t->size() = 1 and self.parameters\n\t\t\t\t\t->select(p | p.oclIsKindOf(Metric) or (p.oclIsTypeOf(MetricFormula) and p.oclAsType(MetricFormula).hasMetric()))\n\t\t\t\t\t->size() = 1)) and ((self.functionArity = MetricFunctionArityType::BINARY) implies self.parameters\n\t\t\t\t\t->size() = 2) and ((self.functionArity = MetricFunctionArityType::N_ARY) implies self.parameters\n\t\t\t\t\t->size() >= 2)\n}.status",
+			 "metric_formula_has_metric", "Tuple {\n\tmessage : String = \'MetricFormula: \' + self.toString() + \' does not involve any metric as input parameter\',\n\tstatus : Boolean = \n\t\t\t\thasMetric()\n}.status",
+			 "metric_formula_correct_arity_for_function_wrt_parameters", "Tuple {\n\tmessage : String = \'MetricFormula: \' + self.toString() +\n\t\t\t\t\t\' has an incorrect arity: \' + functionArity.toString() + \' according to the size of the parameters list: \' +\n\t\t\t\t\tparameters\n\t\t\t\t\t->size().toString(),\n\tstatus : Boolean = ((self.functionArity = MetricFunctionArityType::UNARY) implies (self.parameters\n\t\t\t\t\t->size() = 1)) and ((self.functionArity = MetricFunctionArityType::BINARY) implies self.parameters\n\t\t\t\t\t->size() = 2) and ((self.functionArity = MetricFunctionArityType::N_ARY) implies self.parameters\n\t\t\t\t\t->size() >= 2)\n}.status",
 			 "metric_formula_correct_arity_for_function", "Tuple {\n\tmessage : String = \'MetricFormula: \' + self.toString() + \' has function: \' +\n\t\t\t\t\tfunction.toString() + \' that does not correctly correspond to its arity: \' +\n\t\t\t\t\tfunctionArity.toString(),\n\tstatus : Boolean = ((self.function = MetricFunctionType::MODULO or self.function =\n\t\t\t\t\tMetricFunctionType::PERCENTILE) implies self.functionArity = MetricFunctionArityType::BINARY) and (((self.function\n\t\t\t\t\t= MetricFunctionType::MEAN or self.function = MetricFunctionType::STD or self.function = MetricFunctionType::MIN\n\t\t\t\t\tor self.function = MetricFunctionType::MAX or self.function = MetricFunctionType::MODE or self.function =\n\t\t\t\t\tMetricFunctionType::MEDIAN or self.function = MetricFunctionType::DERIVATIVE or self.function =\n\t\t\t\t\tMetricFunctionType::COUNT) implies self.functionArity = MetricFunctionArityType::UNARY)) and (((self.function =\n\t\t\t\t\tMetricFunctionType::TIMES or self.function = MetricFunctionType::DIV) implies (self.functionArity =\n\t\t\t\t\tMetricFunctionArityType::BINARY or self.functionArity = MetricFunctionArityType::N_ARY)))\n}.status"
 		   });	
 		addAnnotation

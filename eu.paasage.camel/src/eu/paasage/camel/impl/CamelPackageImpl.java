@@ -647,10 +647,10 @@ public class CamelPackageImpl extends EPackageImpl implements CamelPackage {
 		createImportAnnotations();
 		// http://www.eclipse.org/emf/2002/Ecore
 		createEcoreAnnotations();
-		// http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot
-		createPivotAnnotations();
 		// http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName
 		createEmofAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot
+		createPivotAnnotations();
 	}
 
 	/**
@@ -717,6 +717,14 @@ public class CamelPackageImpl extends EPackageImpl implements CamelPackage {
 	 */
 	protected void createEmofAnnotations() {
 		String source = "http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName";	
+		addAnnotation
+		  (getModel_ImportURI(), 
+		   source, 
+		   new String[] {
+			 "body", "Metric",
+			 "unique", "false",
+			 "upper", "*"
+		   });	
 		addAnnotation
 		  (getAction_Name(), 
 		   source, 

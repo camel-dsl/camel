@@ -62,7 +62,7 @@ public interface Model extends CDOObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Import URI</em>' attribute list.
 	 * @see eu.paasage.camel.CamelPackage#getModel_ImportURI()
-	 * @model
+	 * @model annotation="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName body='Metric' unique='false' upper='*'"
 	 * @generated
 	 */
 	EList<String> getImportURI();
