@@ -1624,7 +1624,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		@Override public ParserRule getRule() { return rule; }
 
 		//"host " requiredHostInstance=[deployment::RequiredHostInstance|Fqn] "on "
-		//providedHostInstance=[deployment::ProvidedHostInstance|Fqn] "typed " type=[deployment::Hosting|Fqn] ("named " name=ID)?
+		//providedHostInstance=[deployment::ProvidedHostInstance|Fqn] "typed " type=[deployment::Hosting|Fqn] ("named "
+		//name=ID)?
 		public Group getGroup() { return cGroup; }
 
 		//"host "
@@ -2143,8 +2144,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//"application measurement " name=ID "{" "application: " application=[camel::Application|Fqn] "value: " value=EDouble
 		//("raw data: " rawData=EString)? ("event instance: " eventInstance=[scalability::EventInstance|Fqn])?
 		//"measurement time: " measurementTime=EDate "execution context: " executionContext=[execution::ExecutionContext|Fqn]
-		//"metric instance: " metricInstance=[metric::MetricInstance|Fqn] ("slo: " slo=[requirement::ServiceLevelObjective|Fqn])?
-		//"}"
+		//"metric instance: " metricInstance=[metric::MetricInstance|Fqn] ("slo: "
+		//slo=[requirement::ServiceLevelObjective|Fqn])? "}"
 		public Group getGroup() { return cGroup; }
 
 		//"application measurement "
@@ -2663,8 +2664,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//"vm measurement " name=ID "{" "vm instance: " vmInstance=[deployment::VMInstance|Fqn] "value: " value=EDouble
 		//("raw data: " rawData=EString)? ("event instance: " eventInstance=[scalability::EventInstance|Fqn])?
 		//"measurement time: " measurementTime=EDate "execution context: " executionContext=[execution::ExecutionContext|Fqn]
-		//"metric instance: " metricInstance=[metric::MetricInstance|Fqn] ("slo: " slo=[requirement::ServiceLevelObjective|Fqn])?
-		//"}"
+		//"metric instance: " metricInstance=[metric::MetricInstance|Fqn] ("slo: "
+		//slo=[requirement::ServiceLevelObjective|Fqn])? "}"
 		public Group getGroup() { return cGroup; }
 
 		//"vm measurement "
@@ -3926,8 +3927,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		@Override public ParserRule getRule() { return rule; }
 
 		//"raw metric instance " name=ID "{" "metric: " metric=[metric::Metric|Fqn] "sensor: " sensor=[metric::Sensor|Fqn]
-		//"binding: " objectBinding=[metric::MetricObjectBinding|Fqn] ("schedule: " schedule=[metric::Schedule|Fqn])? ("window: "
-		//window=[metric::Window|Fqn])? ("context: " metricContext=[metric::MetricContext|Fqn])? "}"
+		//"binding: " objectBinding=[metric::MetricObjectBinding|Fqn] ("schedule: " schedule=[metric::Schedule|Fqn])?
+		//("window: " window=[metric::Window|Fqn])? ("context: " metricContext=[metric::MetricContext|Fqn])? "}"
 		public Group getGroup() { return cGroup; }
 
 		//"raw metric instance "
@@ -4196,7 +4197,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		@Override public ParserRule getRule() { return rule; }
 
 		//"schedule " name=ID "{" "type: " type=ScheduleType "interval: " interval=ELong "unit: "
-		//unit=[unit::TimeIntervalUnit|Fqn] ("start: " start=EDate)? ("end: " end=EDate)? ("repetitions: " repetitions=EInt)? "}"
+		//unit=[unit::TimeIntervalUnit|Fqn] ("start: " start=EDate)? ("end: " end=EDate)? ("repetitions: " repetitions=EInt)?
+		//"}"
 		public Group getGroup() { return cGroup; }
 
 		//"schedule "
@@ -4837,8 +4839,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	"composite metric context " name=ID "{" "metric: " metric=[metric::Metric|Fqn] ("component: "
 		//	component=[deployment::Component|Fqn])? ("application: " application=[camel::Application|Fqn])? ("window: "
 		//	window=[metric::Window|Fqn])? ("schedule: " schedule=[metric::Schedule|Fqn])? ("composing metric contexts " "["
-		//	composingMetricContexts+=[metric::MetricContext|Fqn] ("," composingMetricContexts+=[metric::MetricContext|Fqn])* "]")?
-		//	("quantifier: " quantifier=QuantifierType)? isRelative?="relative"? ("quantity: " minQuantity=EDouble ".."
+		//	composingMetricContexts+=[metric::MetricContext|Fqn] ("," composingMetricContexts+=[metric::MetricContext|Fqn])*
+		//	"]")? ("quantifier: " quantifier=QuantifierType)? isRelative?="relative"? ("quantity: " minQuantity=EDouble ".."
 		//	maxQuantity=EDouble)? "}";
 		@Override public ParserRule getRule() { return rule; }
 
@@ -5536,17 +5538,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cValueTypeAssignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
 		private final CrossReference cValueTypeValueTypeCrossReference_10_1_0 = (CrossReference)cValueTypeAssignment_10_1.eContents().get(0);
 		private final RuleCall cValueTypeValueTypeFqnParserRuleCall_10_1_0_1 = (RuleCall)cValueTypeValueTypeCrossReference_10_1_0.eContents().get(1);
-		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Assignment cIsVariableAssignment_11 = (Assignment)cGroup.eContents().get(11);
+		private final Keyword cIsVariableVariableKeyword_11_0 = (Keyword)cIsVariableAssignment_11.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		
 		//RawMetric returns metric::RawMetric:
 		//	"raw metric " name=ID "{" ("description: " description=EString)? ("value direction: " valueDirection=EShort)?
 		//	("layer: " layer=LayerType)? "property: " property=[metric::Property|Fqn] "unit: " unit=[unit::Unit|Fqn]
-		//	("value type: " valueType=[type::ValueType|Fqn])? "}";
+		//	("value type: " valueType=[type::ValueType|Fqn])? isVariable?="variable"? "}";
 		@Override public ParserRule getRule() { return rule; }
 
 		//"raw metric " name=ID "{" ("description: " description=EString)? ("value direction: " valueDirection=EShort)? ("layer: "
 		//layer=LayerType)? "property: " property=[metric::Property|Fqn] "unit: " unit=[unit::Unit|Fqn] ("value type: "
-		//valueType=[type::ValueType|Fqn])? "}"
+		//valueType=[type::ValueType|Fqn])? isVariable?="variable"? "}"
 		public Group getGroup() { return cGroup; }
 
 		//"raw metric "
@@ -5636,8 +5640,14 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getValueTypeValueTypeFqnParserRuleCall_10_1_0_1() { return cValueTypeValueTypeFqnParserRuleCall_10_1_0_1; }
 
+		//isVariable?="variable"?
+		public Assignment getIsVariableAssignment_11() { return cIsVariableAssignment_11; }
+
+		//"variable"
+		public Keyword getIsVariableVariableKeyword_11_0() { return cIsVariableVariableKeyword_11_0; }
+
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
+		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
 	}
 
 	public class MetricElements extends AbstractParserRuleElementFinder {
@@ -5786,8 +5796,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//MetricFormula returns metric::MetricFormula:
 		//	"metric formula " name=ID "{" "function arity: " functionArity=MetricFunctionArityType ("function pattern: "
-		//	functionPattern=FunctionPatternType)? function=MetricFunctionType "(" parameters+=[metric::MetricFormulaParameter|Fqn]
-		//	("," parameters+=[metric::MetricFormulaParameter|Fqn])* ")" "}";
+		//	functionPattern=FunctionPatternType)? function=MetricFunctionType "("
+		//	parameters+=[metric::MetricFormulaParameter|Fqn] ("," parameters+=[metric::MetricFormulaParameter|Fqn])* ")" "}";
 		@Override public ParserRule getRule() { return rule; }
 
 		//"metric formula " name=ID "{" "function arity: " functionArity=MetricFunctionArityType ("function pattern: "
@@ -6372,8 +6382,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//Organisation_Impl returns organisation::Organisation:
-		//	"organisation " name=ID "{" ("www: " www=EString)? ("postal address: " postalAddress=EString)? "email: " email=EString
-		//	"}";
+		//	"organisation " name=ID "{" ("www: " www=EString)? ("postal address: " postalAddress=EString)? "email: "
+		//	email=EString "}";
 		@Override public ParserRule getRule() { return rule; }
 
 		//"organisation " name=ID "{" ("www: " www=EString)? ("postal address: " postalAddress=EString)? "email: " email=EString
@@ -7128,7 +7138,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//UserGroup returns organisation::UserGroup:
-		//	"user group " name=ID "{" "users " "[" users+=[organisation::User|Fqn] ("," users+=[organisation::User|Fqn])* "]" "}";
+		//	"user group " name=ID "{" "users " "[" users+=[organisation::User|Fqn] ("," users+=[organisation::User|Fqn])* "]"
+		//	"}";
 		@Override public ParserRule getRule() { return rule; }
 
 		//"user group " name=ID "{" "users " "[" users+=[organisation::User|Fqn] ("," users+=[organisation::User|Fqn])* "]" "}"
@@ -8033,8 +8044,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
 		//AttributeConstraint returns provider::AttributeConstraint:
-		//	"attribute constraint " "{" "from: " from=[provider::Attribute|Fqn] "to: " to=[provider::Attribute|Fqn] "from value: "
-		//	fromValue=Value "to value: " toValue=Value "}";
+		//	"attribute constraint " "{" "from: " from=[provider::Attribute|Fqn] "to: " to=[provider::Attribute|Fqn]
+		//	"from value: " fromValue=Value "to value: " toValue=Value "}";
 		@Override public ParserRule getRule() { return rule; }
 
 		//"attribute constraint " "{" "from: " from=[provider::Attribute|Fqn] "to: " to=[provider::Attribute|Fqn] "from value: "
@@ -9032,8 +9043,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"alternative" name=ID "{" ("attributes " "{" attributes+=Attribute attributes+=Attribute* "}")? ("sub-features " "{"
 		//subFeatures+=Feature subFeatures+=Feature* "}")? featureCardinality=FeatCardinality ("clones " "{" clones+=Clone (","
-		//clones+=Clone)* "}")? groupCardinality=GroupCardinality? "variants " "{" variants+=Feature ("," variants+=Feature)* "}"
-		//"}"
+		//clones+=Clone)* "}")? groupCardinality=GroupCardinality? "variants " "{" variants+=Feature ("," variants+=Feature)*
+		//"}" "}"
 		public Group getGroup() { return cGroup; }
 
 		//"alternative"
@@ -9218,7 +9229,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Exclusive returns provider::Exclusive:
 		//	"exclusive " name=ID "{" ("attributes " "{" attributes+=Attribute attributes+=Attribute* "}")? ("sub-features " "{"
 		//	subFeatures+=Feature subFeatures+=Feature* "}")? featureCardinality=FeatCardinality ("clones " "{" clones+=Clone (","
-		//	clones+=Clone)* "}")? groupCardinality=GroupCardinality? "variants " "{" variants+=Feature variants+=Feature* "}" "}";
+		//	clones+=Clone)* "}")? groupCardinality=GroupCardinality? "variants " "{" variants+=Feature variants+=Feature* "}"
+		//	"}";
 		@Override public ParserRule getRule() { return rule; }
 
 		//"exclusive " name=ID "{" ("attributes " "{" attributes+=Attribute attributes+=Attribute* "}")? ("sub-features " "{"
@@ -9445,8 +9457,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"requirement model " name=ID "{" (requirements+=LocationRequirement | requirements+=QuantitativeHardwareRequirement |
 		//requirements+=QualitativeHardwareRequirement | requirements+=ImageRequirement | requirements+=OSRequirement |
-		//requirements+=HorizontalScaleRequirement | requirements+=VerticalScaleRequirement | requirements+=SecurityRequirement |
-		//requirements+=ServiceLevelObjective | requirements+=OptimisationRequirement | requirements+=ProviderRequirement |
+		//requirements+=HorizontalScaleRequirement | requirements+=VerticalScaleRequirement | requirements+=SecurityRequirement
+		//| requirements+=ServiceLevelObjective | requirements+=OptimisationRequirement | requirements+=ProviderRequirement |
 		//requirements+=RequirementGroup)* "}"
 		public Group getGroup() { return cGroup; }
 
@@ -9464,8 +9476,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 
 		//(requirements+=LocationRequirement | requirements+=QuantitativeHardwareRequirement |
 		//requirements+=QualitativeHardwareRequirement | requirements+=ImageRequirement | requirements+=OSRequirement |
-		//requirements+=HorizontalScaleRequirement | requirements+=VerticalScaleRequirement | requirements+=SecurityRequirement |
-		//requirements+=ServiceLevelObjective | requirements+=OptimisationRequirement | requirements+=ProviderRequirement |
+		//requirements+=HorizontalScaleRequirement | requirements+=VerticalScaleRequirement | requirements+=SecurityRequirement
+		//| requirements+=ServiceLevelObjective | requirements+=OptimisationRequirement | requirements+=ProviderRequirement |
 		//requirements+=RequirementGroup)*
 		public Alternatives getAlternatives_3() { return cAlternatives_3; }
 
@@ -11583,8 +11595,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//BinaryEventPattern returns scalability::BinaryEventPattern:
 		//	"binary event pattern " name=ID "{" ("left event: " leftEvent=[scalability::Event|Fqn])? ("right event: "
 		//	rightEvent=[scalability::Event|Fqn])? ("timer: " timer=[scalability::Timer|Fqn])? "operator: "
-		//	operator=BinaryPatternOperatorType ("lower occurrence bound: " lowerOccurrenceBound=EInt)? ("upper occurrence bound: "
-		//	upperOccurrenceBound=EInt)? "}";
+		//	operator=BinaryPatternOperatorType ("lower occurrence bound: " lowerOccurrenceBound=EInt)?
+		//	("upper occurrence bound: " upperOccurrenceBound=EInt)? "}";
 		@Override public ParserRule getRule() { return rule; }
 
 		//"binary event pattern " name=ID "{" ("left event: " leftEvent=[scalability::Event|Fqn])? ("right event: "
@@ -11714,8 +11726,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//UnaryEventPattern returns scalability::UnaryEventPattern:
 		//	"unary event pattern " name=ID "{" "event: " event=[scalability::Event|Fqn] "operator: "
-		//	operator=UnaryPatternOperatorType ("timer: " timer=[scalability::Timer|Fqn])? ("occurrence num: " occurrenceNum=EInt)?
-		//	"}";
+		//	operator=UnaryPatternOperatorType ("timer: " timer=[scalability::Timer|Fqn])? ("occurrence num: "
+		//	occurrenceNum=EInt)? "}";
 		@Override public ParserRule getRule() { return rule; }
 
 		//"unary event pattern " name=ID "{" "event: " event=[scalability::Event|Fqn] "operator: "
@@ -16195,8 +16207,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCORESCORESKeyword_20_0 = (Keyword)cCORESEnumLiteralDeclaration_20.eContents().get(0);
 		
 		//enum UnitType returns unit::UnitType:
-		//	BYTES | KILOBYTES | GIGABYTES | MEGABYTES | EUROS | DOLLARS | POUNDS | MILLISECONDS | SECONDS | MINUTES | HOURS | DAYS
-		//	| WEEKS | MONTHS | REQUESTS | REQUESTS_PER_SECOND | TRANSACTIONS | TRANSACTIONS_PER_SECOND | BYTES_PER_SECOND |
+		//	BYTES | KILOBYTES | GIGABYTES | MEGABYTES | EUROS | DOLLARS | POUNDS | MILLISECONDS | SECONDS | MINUTES | HOURS |
+		//	DAYS | WEEKS | MONTHS | REQUESTS | REQUESTS_PER_SECOND | TRANSACTIONS | TRANSACTIONS_PER_SECOND | BYTES_PER_SECOND |
 		//	PERCENTAGE | CORES;
 		public EnumRule getRule() { return rule; }
 
@@ -17472,8 +17484,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	"composite metric context " name=ID "{" "metric: " metric=[metric::Metric|Fqn] ("component: "
 	//	component=[deployment::Component|Fqn])? ("application: " application=[camel::Application|Fqn])? ("window: "
 	//	window=[metric::Window|Fqn])? ("schedule: " schedule=[metric::Schedule|Fqn])? ("composing metric contexts " "["
-	//	composingMetricContexts+=[metric::MetricContext|Fqn] ("," composingMetricContexts+=[metric::MetricContext|Fqn])* "]")?
-	//	("quantifier: " quantifier=QuantifierType)? isRelative?="relative"? ("quantity: " minQuantity=EDouble ".."
+	//	composingMetricContexts+=[metric::MetricContext|Fqn] ("," composingMetricContexts+=[metric::MetricContext|Fqn])*
+	//	"]")? ("quantifier: " quantifier=QuantifierType)? isRelative?="relative"? ("quantity: " minQuantity=EDouble ".."
 	//	maxQuantity=EDouble)? "}";
 	public CompositeMetricContextElements getCompositeMetricContextAccess() {
 		return pCompositeMetricContext;
@@ -17523,7 +17535,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	//RawMetric returns metric::RawMetric:
 	//	"raw metric " name=ID "{" ("description: " description=EString)? ("value direction: " valueDirection=EShort)?
 	//	("layer: " layer=LayerType)? "property: " property=[metric::Property|Fqn] "unit: " unit=[unit::Unit|Fqn]
-	//	("value type: " valueType=[type::ValueType|Fqn])? "}";
+	//	("value type: " valueType=[type::ValueType|Fqn])? isVariable?="variable"? "}";
 	public RawMetricElements getRawMetricAccess() {
 		return pRawMetric;
 	}
@@ -17584,8 +17596,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 
 	//MetricFormula returns metric::MetricFormula:
 	//	"metric formula " name=ID "{" "function arity: " functionArity=MetricFunctionArityType ("function pattern: "
-	//	functionPattern=FunctionPatternType)? function=MetricFunctionType "(" parameters+=[metric::MetricFormulaParameter|Fqn]
-	//	("," parameters+=[metric::MetricFormulaParameter|Fqn])* ")" "}";
+	//	functionPattern=FunctionPatternType)? function=MetricFunctionType "("
+	//	parameters+=[metric::MetricFormulaParameter|Fqn] ("," parameters+=[metric::MetricFormulaParameter|Fqn])* ")" "}";
 	public MetricFormulaElements getMetricFormulaAccess() {
 		return pMetricFormula;
 	}
@@ -17710,8 +17722,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Organisation_Impl returns organisation::Organisation:
-	//	"organisation " name=ID "{" ("www: " www=EString)? ("postal address: " postalAddress=EString)? "email: " email=EString
-	//	"}";
+	//	"organisation " name=ID "{" ("www: " www=EString)? ("postal address: " postalAddress=EString)? "email: "
+	//	email=EString "}";
 	public Organisation_ImplElements getOrganisation_ImplAccess() {
 		return pOrganisation_Impl;
 	}
@@ -17792,7 +17804,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//UserGroup returns organisation::UserGroup:
-	//	"user group " name=ID "{" "users " "[" users+=[organisation::User|Fqn] ("," users+=[organisation::User|Fqn])* "]" "}";
+	//	"user group " name=ID "{" "users " "[" users+=[organisation::User|Fqn] ("," users+=[organisation::User|Fqn])* "]"
+	//	"}";
 	public UserGroupElements getUserGroupAccess() {
 		return pUserGroup;
 	}
@@ -17970,8 +17983,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//AttributeConstraint returns provider::AttributeConstraint:
-	//	"attribute constraint " "{" "from: " from=[provider::Attribute|Fqn] "to: " to=[provider::Attribute|Fqn] "from value: "
-	//	fromValue=Value "to value: " toValue=Value "}";
+	//	"attribute constraint " "{" "from: " from=[provider::Attribute|Fqn] "to: " to=[provider::Attribute|Fqn]
+	//	"from value: " fromValue=Value "to value: " toValue=Value "}";
 	public AttributeConstraintElements getAttributeConstraintAccess() {
 		return pAttributeConstraint;
 	}
@@ -18109,7 +18122,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	//Exclusive returns provider::Exclusive:
 	//	"exclusive " name=ID "{" ("attributes " "{" attributes+=Attribute attributes+=Attribute* "}")? ("sub-features " "{"
 	//	subFeatures+=Feature subFeatures+=Feature* "}")? featureCardinality=FeatCardinality ("clones " "{" clones+=Clone (","
-	//	clones+=Clone)* "}")? groupCardinality=GroupCardinality? "variants " "{" variants+=Feature variants+=Feature* "}" "}";
+	//	clones+=Clone)* "}")? groupCardinality=GroupCardinality? "variants " "{" variants+=Feature variants+=Feature* "}"
+	//	"}";
 	public ExclusiveElements getExclusiveAccess() {
 		return pExclusive;
 	}
@@ -18448,8 +18462,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	//BinaryEventPattern returns scalability::BinaryEventPattern:
 	//	"binary event pattern " name=ID "{" ("left event: " leftEvent=[scalability::Event|Fqn])? ("right event: "
 	//	rightEvent=[scalability::Event|Fqn])? ("timer: " timer=[scalability::Timer|Fqn])? "operator: "
-	//	operator=BinaryPatternOperatorType ("lower occurrence bound: " lowerOccurrenceBound=EInt)? ("upper occurrence bound: "
-	//	upperOccurrenceBound=EInt)? "}";
+	//	operator=BinaryPatternOperatorType ("lower occurrence bound: " lowerOccurrenceBound=EInt)?
+	//	("upper occurrence bound: " upperOccurrenceBound=EInt)? "}";
 	public BinaryEventPatternElements getBinaryEventPatternAccess() {
 		return pBinaryEventPattern;
 	}
@@ -18460,8 +18474,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 
 	//UnaryEventPattern returns scalability::UnaryEventPattern:
 	//	"unary event pattern " name=ID "{" "event: " event=[scalability::Event|Fqn] "operator: "
-	//	operator=UnaryPatternOperatorType ("timer: " timer=[scalability::Timer|Fqn])? ("occurrence num: " occurrenceNum=EInt)?
-	//	"}";
+	//	operator=UnaryPatternOperatorType ("timer: " timer=[scalability::Timer|Fqn])? ("occurrence num: "
+	//	occurrenceNum=EInt)? "}";
 	public UnaryEventPatternElements getUnaryEventPatternAccess() {
 		return pUnaryEventPattern;
 	}
@@ -19022,8 +19036,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum UnitType returns unit::UnitType:
-	//	BYTES | KILOBYTES | GIGABYTES | MEGABYTES | EUROS | DOLLARS | POUNDS | MILLISECONDS | SECONDS | MINUTES | HOURS | DAYS
-	//	| WEEKS | MONTHS | REQUESTS | REQUESTS_PER_SECOND | TRANSACTIONS | TRANSACTIONS_PER_SECOND | BYTES_PER_SECOND |
+	//	BYTES | KILOBYTES | GIGABYTES | MEGABYTES | EUROS | DOLLARS | POUNDS | MILLISECONDS | SECONDS | MINUTES | HOURS |
+	//	DAYS | WEEKS | MONTHS | REQUESTS | REQUESTS_PER_SECOND | TRANSACTIONS | TRANSACTIONS_PER_SECOND | BYTES_PER_SECOND |
 	//	PERCENTAGE | CORES;
 	public UnitTypeElements getUnitTypeAccess() {
 		return unknownRuleUnitType;

@@ -429,13 +429,22 @@ public interface RequirementPackage extends EPackage {
 	int OPTIMISATION_REQUIREMENT__COMPONENT = SOFT_REQUIREMENT_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Metric Context</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPTIMISATION_REQUIREMENT__METRIC_CONTEXT = SOFT_REQUIREMENT_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>Optimisation Requirement</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPTIMISATION_REQUIREMENT_FEATURE_COUNT = SOFT_REQUIREMENT_FEATURE_COUNT + 5;
+	int OPTIMISATION_REQUIREMENT_FEATURE_COUNT = SOFT_REQUIREMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Optimisation Requirement</em>' class.
@@ -1394,6 +1403,17 @@ public interface RequirementPackage extends EPackage {
 	EReference getOptimisationRequirement_Component();
 
 	/**
+	 * Returns the meta object for the reference '{@link eu.paasage.camel.requirement.OptimisationRequirement#getMetricContext <em>Metric Context</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Metric Context</em>'.
+	 * @see eu.paasage.camel.requirement.OptimisationRequirement#getMetricContext()
+	 * @see #getOptimisationRequirement()
+	 * @generated
+	 */
+	EReference getOptimisationRequirement_MetricContext();
+
+	/**
 	 * Returns the meta object for class '{@link eu.paasage.camel.requirement.HardwareRequirement <em>Hardware Requirement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2059,6 +2079,14 @@ public interface RequirementPackage extends EPackage {
 		 * @generated
 		 */
 		EReference OPTIMISATION_REQUIREMENT__COMPONENT = eINSTANCE.getOptimisationRequirement_Component();
+
+		/**
+		 * The meta object literal for the '<em><b>Metric Context</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OPTIMISATION_REQUIREMENT__METRIC_CONTEXT = eINSTANCE.getOptimisationRequirement_MetricContext();
 
 		/**
 		 * The meta object literal for the '{@link eu.paasage.camel.requirement.impl.HardwareRequirementImpl <em>Hardware Requirement</em>}' class.

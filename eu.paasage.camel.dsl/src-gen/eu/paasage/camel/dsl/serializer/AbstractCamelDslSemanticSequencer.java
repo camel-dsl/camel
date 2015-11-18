@@ -2108,7 +2108,8 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         layer=LayerType? 
 	 *         property=[Property|Fqn] 
 	 *         unit=[Unit|Fqn] 
-	 *         valueType=[ValueType|Fqn]?
+	 *         valueType=[ValueType|Fqn]? 
+	 *         isVariable?='variable'?
 	 *     )
 	 */
 	protected void sequence_RawMetric(EObject context, RawMetric semanticObject) {

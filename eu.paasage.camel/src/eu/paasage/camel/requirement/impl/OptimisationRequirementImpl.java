@@ -7,6 +7,7 @@ import eu.paasage.camel.Application;
 import eu.paasage.camel.deployment.Component;
 
 import eu.paasage.camel.metric.Metric;
+import eu.paasage.camel.metric.MetricContext;
 import eu.paasage.camel.metric.Property;
 
 import eu.paasage.camel.requirement.OptimisationFunctionType;
@@ -28,6 +29,7 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link eu.paasage.camel.requirement.impl.OptimisationRequirementImpl#getProperty <em>Property</em>}</li>
  *   <li>{@link eu.paasage.camel.requirement.impl.OptimisationRequirementImpl#getApplication <em>Application</em>}</li>
  *   <li>{@link eu.paasage.camel.requirement.impl.OptimisationRequirementImpl#getComponent <em>Component</em>}</li>
+ *   <li>{@link eu.paasage.camel.requirement.impl.OptimisationRequirementImpl#getMetricContext <em>Metric Context</em>}</li>
  * </ul>
  *
  * @generated
@@ -140,6 +142,24 @@ public class OptimisationRequirementImpl extends SoftRequirementImpl implements 
 	 */
 	public void setComponent(Component newComponent) {
 		eSet(RequirementPackage.Literals.OPTIMISATION_REQUIREMENT__COMPONENT, newComponent);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MetricContext getMetricContext() {
+		return (MetricContext)eGet(RequirementPackage.Literals.OPTIMISATION_REQUIREMENT__METRIC_CONTEXT, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMetricContext(MetricContext newMetricContext) {
+		eSet(RequirementPackage.Literals.OPTIMISATION_REQUIREMENT__METRIC_CONTEXT, newMetricContext);
 	}
 
 } //OptimisationRequirementImpl

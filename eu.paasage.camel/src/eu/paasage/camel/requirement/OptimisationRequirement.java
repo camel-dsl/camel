@@ -7,6 +7,7 @@ import eu.paasage.camel.Application;
 import eu.paasage.camel.deployment.Component;
 
 import eu.paasage.camel.metric.Metric;
+import eu.paasage.camel.metric.MetricContext;
 import eu.paasage.camel.metric.Property;
 
 /**
@@ -23,6 +24,7 @@ import eu.paasage.camel.metric.Property;
  *   <li>{@link eu.paasage.camel.requirement.OptimisationRequirement#getProperty <em>Property</em>}</li>
  *   <li>{@link eu.paasage.camel.requirement.OptimisationRequirement#getApplication <em>Application</em>}</li>
  *   <li>{@link eu.paasage.camel.requirement.OptimisationRequirement#getComponent <em>Component</em>}</li>
+ *   <li>{@link eu.paasage.camel.requirement.OptimisationRequirement#getMetricContext <em>Metric Context</em>}</li>
  * </ul>
  *
  * @see eu.paasage.camel.requirement.RequirementPackage#getOptimisationRequirement()
@@ -163,5 +165,31 @@ public interface OptimisationRequirement extends SoftRequirement {
 	 * @generated
 	 */
 	void setComponent(Component value);
+
+	/**
+	 * Returns the value of the '<em><b>Metric Context</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Metric Context</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Metric Context</em>' reference.
+	 * @see #setMetricContext(MetricContext)
+	 * @see eu.paasage.camel.requirement.RequirementPackage#getOptimisationRequirement_MetricContext()
+	 * @model
+	 * @generated
+	 */
+	MetricContext getMetricContext();
+
+	/**
+	 * Sets the value of the '{@link eu.paasage.camel.requirement.OptimisationRequirement#getMetricContext <em>Metric Context</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Metric Context</em>' reference.
+	 * @see #getMetricContext()
+	 * @generated
+	 */
+	void setMetricContext(MetricContext value);
 
 } // OptimisationRequirement

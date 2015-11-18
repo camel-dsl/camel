@@ -1504,6 +1504,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="property" eType="#//metric/Property"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="application" eType="#//Application"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="component" eType="#//deployment/Component"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="metricContext" eType="#//metric/MetricContext"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="HardwareRequirement" abstract="true"
         eSuperTypes="#//requirement/HardRequirement"/>

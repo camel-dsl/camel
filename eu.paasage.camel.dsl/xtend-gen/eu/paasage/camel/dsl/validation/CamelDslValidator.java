@@ -3,7 +3,26 @@
  */
 package eu.paasage.camel.dsl.validation;
 
+import com.google.common.base.Objects;
+import eu.paasage.camel.CamelModel;
+import eu.paasage.camel.CamelPackage;
+import eu.paasage.camel.deployment.DeploymentElement;
 import eu.paasage.camel.dsl.validation.AbstractCamelDslValidator;
+import eu.paasage.camel.provider.Attribute;
+import eu.paasage.camel.provider.AttributeConstraint;
+import eu.paasage.camel.provider.Constraint;
+import eu.paasage.camel.provider.FeatCardinality;
+import eu.paasage.camel.provider.Feature;
+import eu.paasage.camel.provider.ProviderModel;
+import eu.paasage.camel.provider.ProviderPackage;
+import eu.paasage.camel.type.SingleValue;
+import eu.paasage.camel.type.ValueType;
+import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.ocl.ecore.delegate.OCLDelegateDomain;
 import org.eclipse.xtext.validation.Check;
 
 /**
@@ -16,21 +35,28 @@ public class CamelDslValidator extends AbstractCamelDslValidator {
   public static int counter = 0;
   
   @Check
-  public void checkCamelModelBeforeFurtherValidation(final /* CamelModel */Object cm) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nDeploymentElement cannot be resolved to a type."
-      + "\neResource cannot be resolved"
-      + "\nresourceSet cannot be resolved"
-      + "\neResource cannot be resolved"
-      + "\nallContents cannot be resolved"
-      + "\nhasNext cannot be resolved"
-      + "\nnext cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\n== cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\neClass cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\n+ cannot be resolved");
+  public void checkCamelModelBeforeFurtherValidation(final CamelModel cm) {
+    Resource _eResource = cm.eResource();
+    ResourceSet _resourceSet = _eResource.getResourceSet();
+    OCLDelegateDomain.initialize(_resourceSet);
+    Resource _eResource_1 = cm.eResource();
+    final TreeIterator<EObject> objit = _eResource_1.getAllContents();
+    while (objit.hasNext()) {
+      {
+        final EObject elem = objit.next();
+        if ((elem instanceof DeploymentElement)) {
+          String _name = ((DeploymentElement)elem).getName();
+          boolean _equals = Objects.equal(_name, null);
+          if (_equals) {
+            EClass _eClass = ((DeploymentElement)elem).eClass();
+            String _name_1 = _eClass.getName();
+            String _plus = (_name_1 + Integer.valueOf(CamelDslValidator.counter));
+            ((DeploymentElement)elem).setName(_plus);
+            CamelDslValidator.counter = (CamelDslValidator.counter + 1);
+          }
+        }
+      }
+    }
   }
   
   public final static String INVALID_NAME = "invalidName";
@@ -46,142 +72,200 @@ public class CamelDslValidator extends AbstractCamelDslValidator {
   public final static String INVALID_ATTRIBUTE_VALUE = "invalidAttributeValue";
   
   @Check
-  public void checkProviderModelName(final /* ProviderModel */Object model) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method or field CamelPackage is undefined for the type CamelDslValidator"
-      + "\nname cannot be resolved"
-      + "\n== cannot be resolved"
-      + "\nLiterals cannot be resolved"
-      + "\nMODEL__NAME cannot be resolved");
+  public void checkProviderModelName(final ProviderModel model) {
+    String _name = model.getName();
+    boolean _equals = Objects.equal(_name, null);
+    if (_equals) {
+      this.error("You have to specify the name of the provider model", CamelPackage.Literals.MODEL__NAME, 
+        CamelDslValidator.INVALID_NAME);
+      return;
+    }
   }
   
   @Check
-  public void checkRootFeature(final /* ProviderModel */Object model) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method or field ProviderPackage is undefined for the type CamelDslValidator"
-      + "\nname cannot be resolved"
-      + "\n!= cannot be resolved"
-      + "\n&& cannot be resolved"
-      + "\nrootFeature cannot be resolved"
-      + "\n== cannot be resolved"
-      + "\nLiterals cannot be resolved"
-      + "\nPROVIDER_MODEL__ROOT_FEATURE cannot be resolved");
+  public void checkRootFeature(final ProviderModel model) {
+    boolean _and = false;
+    String _name = model.getName();
+    boolean _notEquals = (!Objects.equal(_name, null));
+    if (!_notEquals) {
+      _and = false;
+    } else {
+      Feature _rootFeature = model.getRootFeature();
+      boolean _equals = Objects.equal(_rootFeature, null);
+      _and = _equals;
+    }
+    if (_and) {
+      this.error("You have to define the root feature of the provider model", 
+        ProviderPackage.Literals.PROVIDER_MODEL__ROOT_FEATURE, CamelDslValidator.INVALID_FEATURE);
+      return;
+    }
   }
   
   @Check
-  public void checkFeatureName(final /* Feature */Object feature) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method or field ProviderPackage is undefined for the type CamelDslValidator"
-      + "\nname cannot be resolved"
-      + "\n== cannot be resolved"
-      + "\nLiterals cannot be resolved"
-      + "\nFEATURE__NAME cannot be resolved");
+  public void checkFeatureName(final Feature feature) {
+    String _name = feature.getName();
+    boolean _equals = Objects.equal(_name, null);
+    if (_equals) {
+      this.error("You have to specify the name of the feature", ProviderPackage.Literals.FEATURE__NAME, CamelDslValidator.INVALID_NAME);
+      return;
+    }
   }
   
   @Check
-  public void checkFeatureCardinality(final /* Feature */Object feature) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method or field ProviderPackage is undefined for the type CamelDslValidator"
-      + "\nname cannot be resolved"
-      + "\n!= cannot be resolved"
-      + "\n&& cannot be resolved"
-      + "\nfeatureCardinality cannot be resolved"
-      + "\n== cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\nLiterals cannot be resolved"
-      + "\nFEATURE__FEATURE_CARDINALITY cannot be resolved");
+  public void checkFeatureCardinality(final Feature feature) {
+    boolean _and = false;
+    String _name = feature.getName();
+    boolean _notEquals = (!Objects.equal(_name, null));
+    if (!_notEquals) {
+      _and = false;
+    } else {
+      FeatCardinality _featureCardinality = feature.getFeatureCardinality();
+      boolean _equals = Objects.equal(_featureCardinality, null);
+      _and = _equals;
+    }
+    if (_and) {
+      String _name_1 = feature.getName();
+      String _plus = ("You have to specify the cardinality of the feature " + _name_1);
+      this.error(_plus, 
+        ProviderPackage.Literals.FEATURE__FEATURE_CARDINALITY, CamelDslValidator.INVALID_CARDINALITY);
+      return;
+    }
   }
   
   @Check
-  public void checkFeatureCardinalityMinMax(final /* Feature */Object feature) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method or field ProviderPackage is undefined for the type CamelDslValidator"
-      + "\nname cannot be resolved"
-      + "\n!= cannot be resolved"
-      + "\n&& cannot be resolved"
-      + "\nfeatureCardinality cannot be resolved"
-      + "\n!= cannot be resolved"
-      + "\nfeatureCardinality cannot be resolved"
-      + "\ncardinalityMin cannot be resolved"
-      + "\n> cannot be resolved"
-      + "\nfeatureCardinality cannot be resolved"
-      + "\ncardinalityMax cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\nLiterals cannot be resolved"
-      + "\nFEATURE__FEATURE_CARDINALITY cannot be resolved");
+  public void checkFeatureCardinalityMinMax(final Feature feature) {
+    boolean _and = false;
+    String _name = feature.getName();
+    boolean _notEquals = (!Objects.equal(_name, null));
+    if (!_notEquals) {
+      _and = false;
+    } else {
+      FeatCardinality _featureCardinality = feature.getFeatureCardinality();
+      boolean _notEquals_1 = (!Objects.equal(_featureCardinality, null));
+      _and = _notEquals_1;
+    }
+    if (_and) {
+      FeatCardinality _featureCardinality_1 = feature.getFeatureCardinality();
+      int _cardinalityMin = _featureCardinality_1.getCardinalityMin();
+      FeatCardinality _featureCardinality_2 = feature.getFeatureCardinality();
+      int _cardinalityMax = _featureCardinality_2.getCardinalityMax();
+      boolean _greaterThan = (_cardinalityMin > _cardinalityMax);
+      if (_greaterThan) {
+        String _name_1 = feature.getName();
+        String _plus = ("cardinalityMin should be lower or equals to cardinalityMax in feature " + _name_1);
+        this.error(_plus, 
+          ProviderPackage.Literals.FEATURE__FEATURE_CARDINALITY, CamelDslValidator.INVALID_CARDINALITY);
+        return;
+      }
+    }
   }
   
   @Check
-  public void checkAttributeName(final /* Attribute */Object attribute) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method or field ProviderPackage is undefined for the type CamelDslValidator"
-      + "\nname cannot be resolved"
-      + "\n== cannot be resolved"
-      + "\nLiterals cannot be resolved"
-      + "\nATTRIBUTE__NAME cannot be resolved");
+  public void checkAttributeName(final Attribute attribute) {
+    String _name = attribute.getName();
+    boolean _equals = Objects.equal(_name, null);
+    if (_equals) {
+      this.error("You have to specify the name of the attribute", ProviderPackage.Literals.ATTRIBUTE__NAME, 
+        CamelDslValidator.INVALID_NAME);
+      return;
+    }
   }
   
   @Check
-  public void checkAttributeValue(final /* Attribute */Object attribute) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method or field ProviderPackage is undefined for the type CamelDslValidator"
-      + "\nname cannot be resolved"
-      + "\n!= cannot be resolved"
-      + "\n&& cannot be resolved"
-      + "\nvalue cannot be resolved"
-      + "\n== cannot be resolved"
-      + "\n&& cannot be resolved"
-      + "\nvalueType cannot be resolved"
-      + "\n== cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\nLiterals cannot be resolved"
-      + "\nATTRIBUTE__VALUE cannot be resolved");
+  public void checkAttributeValue(final Attribute attribute) {
+    boolean _and = false;
+    String _name = attribute.getName();
+    boolean _notEquals = (!Objects.equal(_name, null));
+    if (!_notEquals) {
+      _and = false;
+    } else {
+      boolean _and_1 = false;
+      SingleValue _value = attribute.getValue();
+      boolean _equals = Objects.equal(_value, null);
+      if (!_equals) {
+        _and_1 = false;
+      } else {
+        ValueType _valueType = attribute.getValueType();
+        boolean _equals_1 = Objects.equal(_valueType, null);
+        _and_1 = _equals_1;
+      }
+      _and = _and_1;
+    }
+    if (_and) {
+      String _name_1 = attribute.getName();
+      String _plus = ("You have to specify the value or the value type of the " + _name_1);
+      String _plus_1 = (_plus + " attribute ");
+      this.error(_plus_1, 
+        ProviderPackage.Literals.ATTRIBUTE__VALUE, CamelDslValidator.INVALID_VALUE);
+      return;
+    }
   }
   
   @Check
-  public void checkConstraint(final /* Constraint */Object constraint) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method or field ProviderPackage is undefined for the type CamelDslValidator"
-      + "\nThe method or field ProviderPackage is undefined for the type CamelDslValidator"
-      + "\nThe method or field ProviderPackage is undefined for the type CamelDslValidator"
-      + "\nname cannot be resolved"
-      + "\n== cannot be resolved"
-      + "\nLiterals cannot be resolved"
-      + "\nCONSTRAINT__NAME cannot be resolved"
-      + "\nfrom cannot be resolved"
-      + "\n== cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\nLiterals cannot be resolved"
-      + "\nCONSTRAINT__FROM cannot be resolved"
-      + "\nto cannot be resolved"
-      + "\n== cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\nLiterals cannot be resolved"
-      + "\nCONSTRAINT__TO cannot be resolved");
+  public void checkConstraint(final Constraint constraint) {
+    String _name = constraint.getName();
+    boolean _equals = Objects.equal(_name, null);
+    if (_equals) {
+      this.error("You have to specify the name of the constraint ", ProviderPackage.Literals.CONSTRAINT__NAME, 
+        CamelDslValidator.INVALID_NAME);
+      return;
+    } else {
+      Feature _from = constraint.getFrom();
+      boolean _equals_1 = Objects.equal(_from, null);
+      if (_equals_1) {
+        String _name_1 = constraint.getName();
+        String _plus = ("You have to specify the from feature of the " + _name_1);
+        String _plus_1 = (_plus + " constraint ");
+        this.error(_plus_1, 
+          ProviderPackage.Literals.CONSTRAINT__FROM, CamelDslValidator.INVALID_FEATURE);
+        return;
+      } else {
+        Feature _to = constraint.getTo();
+        boolean _equals_2 = Objects.equal(_to, null);
+        if (_equals_2) {
+          String _name_2 = constraint.getName();
+          String _plus_2 = ("You have to specify the to feature of the " + _name_2);
+          String _plus_3 = (_plus_2 + " constraint ");
+          this.error(_plus_3, 
+            ProviderPackage.Literals.CONSTRAINT__TO, CamelDslValidator.INVALID_FEATURE);
+          return;
+        }
+      }
+    }
   }
   
   @Check
-  public void checkAttributeConstraint(final /* AttributeConstraint */Object ac) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method or field ProviderPackage is undefined for the type CamelDslValidator"
-      + "\nThe method or field ProviderPackage is undefined for the type CamelDslValidator"
-      + "\nThe method or field ProviderPackage is undefined for the type CamelDslValidator"
-      + "\nThe method or field ProviderPackage is undefined for the type CamelDslValidator"
-      + "\nfrom cannot be resolved"
-      + "\n== cannot be resolved"
-      + "\nLiterals cannot be resolved"
-      + "\nATTRIBUTE_CONSTRAINT__FROM cannot be resolved"
-      + "\nto cannot be resolved"
-      + "\n== cannot be resolved"
-      + "\nLiterals cannot be resolved"
-      + "\nATTRIBUTE_CONSTRAINT__TO cannot be resolved"
-      + "\nfromValue cannot be resolved"
-      + "\n== cannot be resolved"
-      + "\nLiterals cannot be resolved"
-      + "\nATTRIBUTE_CONSTRAINT__FROM_VALUE cannot be resolved"
-      + "\ntoValue cannot be resolved"
-      + "\n== cannot be resolved"
-      + "\nLiterals cannot be resolved"
-      + "\nATTRIBUTE_CONSTRAINT__TO_VALUE cannot be resolved");
+  public void checkAttributeConstraint(final AttributeConstraint ac) {
+    Attribute _from = ac.getFrom();
+    boolean _equals = Objects.equal(_from, null);
+    if (_equals) {
+      this.error("You have to specify the from attribute of the attribute constraint ", 
+        ProviderPackage.Literals.ATTRIBUTE_CONSTRAINT__FROM, CamelDslValidator.INVALID_ATTRIBUTE);
+      return;
+    } else {
+      Attribute _to = ac.getTo();
+      boolean _equals_1 = Objects.equal(_to, null);
+      if (_equals_1) {
+        this.error("You have to specify the to attribute of the attribute constraint ", 
+          ProviderPackage.Literals.ATTRIBUTE_CONSTRAINT__TO, CamelDslValidator.INVALID_ATTRIBUTE);
+        return;
+      } else {
+        SingleValue _fromValue = ac.getFromValue();
+        boolean _equals_2 = Objects.equal(_fromValue, null);
+        if (_equals_2) {
+          this.error("You have to specify the from attribute value of the attribute constraint ", 
+            ProviderPackage.Literals.ATTRIBUTE_CONSTRAINT__FROM_VALUE, CamelDslValidator.INVALID_ATTRIBUTE_VALUE);
+          return;
+        } else {
+          SingleValue _toValue = ac.getToValue();
+          boolean _equals_3 = Objects.equal(_toValue, null);
+          if (_equals_3) {
+            this.error("You have to specify the to attribute value of the attribute constraint ", 
+              ProviderPackage.Literals.ATTRIBUTE_CONSTRAINT__TO_VALUE, CamelDslValidator.INVALID_ATTRIBUTE_VALUE);
+            return;
+          }
+        }
+      }
+    }
   }
 }

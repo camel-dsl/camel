@@ -526,6 +526,15 @@ public class RequirementPackageImpl extends EPackageImpl implements RequirementP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getOptimisationRequirement_MetricContext() {
+		return (EReference)optimisationRequirementEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getHardwareRequirement() {
 		return hardwareRequirementEClass;
 	}
@@ -971,6 +980,7 @@ public class RequirementPackageImpl extends EPackageImpl implements RequirementP
 		createEReference(optimisationRequirementEClass, OPTIMISATION_REQUIREMENT__PROPERTY);
 		createEReference(optimisationRequirementEClass, OPTIMISATION_REQUIREMENT__APPLICATION);
 		createEReference(optimisationRequirementEClass, OPTIMISATION_REQUIREMENT__COMPONENT);
+		createEReference(optimisationRequirementEClass, OPTIMISATION_REQUIREMENT__METRIC_CONTEXT);
 
 		hardwareRequirementEClass = createEClass(HARDWARE_REQUIREMENT);
 
@@ -1118,6 +1128,7 @@ public class RequirementPackageImpl extends EPackageImpl implements RequirementP
 		initEReference(getOptimisationRequirement_Property(), theMetricPackage.getProperty(), null, "property", null, 0, 1, OptimisationRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOptimisationRequirement_Application(), theCamelPackage.getApplication(), null, "application", null, 0, 1, OptimisationRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOptimisationRequirement_Component(), theDeploymentPackage.getComponent(), null, "component", null, 0, 1, OptimisationRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOptimisationRequirement_MetricContext(), theMetricPackage.getMetricContext(), null, "metricContext", null, 0, 1, OptimisationRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(hardwareRequirementEClass, HardwareRequirement.class, "HardwareRequirement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

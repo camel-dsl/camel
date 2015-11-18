@@ -7750,9 +7750,24 @@ ruleRawMetric returns [EObject current=null]
 	    }
 
 )
-))?	otherlv_15='}' 
+))?(
+(
+		lv_isVariable_15_0=	'variable' 
     {
-    	newLeafNode(otherlv_15, grammarAccess.getRawMetricAccess().getRightCurlyBracketKeyword_11());
+        newLeafNode(lv_isVariable_15_0, grammarAccess.getRawMetricAccess().getIsVariableVariableKeyword_11_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getRawMetricRule());
+	        }
+       		setWithLastConsumed($current, "isVariable", true, "variable");
+	    }
+
+)
+)?	otherlv_16='}' 
+    {
+    	newLeafNode(otherlv_16, grammarAccess.getRawMetricAccess().getRightCurlyBracketKeyword_12());
     }
 )
 ;

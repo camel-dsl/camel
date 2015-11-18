@@ -5,7 +5,7 @@
 '-'=235
 '.'=367
 '..'=256
-'64os'=477
+'64os'=478
 ':'=449
 '< = '=31
 '<'=30
@@ -114,7 +114,7 @@
 'action: '=171
 'actions '=387
 'add'=68
-'all'=476
+'all'=477
 'alternative names '=215
 'alternative'=348
 'application '=356
@@ -235,7 +235,7 @@
 'import '=122
 'importURI '=169
 'importURI'=219
-'included'=479
+'included'=480
 'information resource filter '=312
 'information resource path: '=314
 'install: '=128
@@ -322,8 +322,8 @@
 'provider: '=139
 'providers: '=360
 'public SSH key: '=297
-'public'=475
-'push'=474
+'public'=476
+'push'=475
 'qualitative hardware: '=135
 'qualitative'=368
 'quantifier: '=254
@@ -446,12 +446,13 @@
 'value type: '=264
 'value: '=182
 'values '=441
+'variable'=474
 'variants '=349
 'version: '=468
 'vertical scale requirement '=384
 'vertical scaling action '=393
 'violated'=471
-'violation'=478
+'violation'=479
 'vm '=132
 'vm binding '=242
 'vm instance '=154
@@ -890,6 +891,7 @@ T__477=477
 T__478=478
 T__479=479
 T__47=47
+T__480=480
 T__48=48
 T__49=49
 T__50=50
