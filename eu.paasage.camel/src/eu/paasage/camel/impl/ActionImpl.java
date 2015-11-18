@@ -16,11 +16,11 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.impl.ActionImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.impl.ActionImpl#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

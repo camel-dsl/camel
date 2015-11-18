@@ -15,6 +15,7 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.scalability.EventInstance#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.EventInstance#getStatus <em>Status</em>}</li>
@@ -22,7 +23,6 @@ import org.eclipse.emf.cdo.CDOObject;
  *   <li>{@link eu.paasage.camel.scalability.EventInstance#getEvent <em>Event</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.EventInstance#getMetricInstance <em>Metric Instance</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.scalability.ScalabilityPackage#getEventInstance()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='event_instance_same_layer_of_metric_as_in_event event_instance_metric_in_event'"

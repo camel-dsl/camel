@@ -10,6 +10,7 @@ package eu.paasage.camel.scalability;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.scalability.BinaryEventPattern#getLeftEvent <em>Left Event</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.BinaryEventPattern#getRightEvent <em>Right Event</em>}</li>
@@ -17,7 +18,6 @@ package eu.paasage.camel.scalability;
  *   <li>{@link eu.paasage.camel.scalability.BinaryEventPattern#getUpperOccurrenceBound <em>Upper Occurrence Bound</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.BinaryEventPattern#getOperator <em>Operator</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.scalability.ScalabilityPackage#getBinaryEventPattern()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='binary_event_pattern_at_least_left_right binary_event_pattern_timer_one_event binary_event_pattern_occur_bounds'"

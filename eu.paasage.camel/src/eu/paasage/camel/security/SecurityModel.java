@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.security.SecurityModel#getSecurityControls <em>Security Controls</em>}</li>
  *   <li>{@link eu.paasage.camel.security.SecurityModel#getSecurityRequirements <em>Security Requirements</em>}</li>
@@ -27,7 +28,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link eu.paasage.camel.security.SecurityModel#getSecurityCapabilities <em>Security Capabilities</em>}</li>
  *   <li>{@link eu.paasage.camel.security.SecurityModel#getSecuritySLOs <em>Security SL Os</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.security.SecurityPackage#getSecurityModel()
  * @model

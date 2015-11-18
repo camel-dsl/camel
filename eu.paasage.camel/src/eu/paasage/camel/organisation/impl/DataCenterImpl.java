@@ -17,12 +17,12 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.impl.DataCenterImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.impl.DataCenterImpl#getCodeName <em>Code Name</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.impl.DataCenterImpl#getLocation <em>Location</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

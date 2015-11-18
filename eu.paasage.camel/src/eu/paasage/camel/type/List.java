@@ -11,12 +11,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.type.List#getValues <em>Values</em>}</li>
  *   <li>{@link eu.paasage.camel.type.List#getPrimitiveType <em>Primitive Type</em>}</li>
  *   <li>{@link eu.paasage.camel.type.List#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.type.TypePackage#getList()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='list_must_have_type all_list_values_correct_type'"

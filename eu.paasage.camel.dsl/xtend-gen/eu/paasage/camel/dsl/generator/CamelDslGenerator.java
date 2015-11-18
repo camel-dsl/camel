@@ -3,19 +3,9 @@
  */
 package eu.paasage.camel.dsl.generator;
 
-import eu.paasage.camel.CamelModel;
-import java.io.ByteArrayOutputStream;
-import java.util.HashMap;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.TreeIterator;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.xmi.XMIResource;
-import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;
 import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.generator.IGenerator;
-import org.eclipse.xtext.util.StringInputStream;
-import org.eclipse.xtext.xbase.lib.Exceptions;
 
 /**
  * Generates code from your model files on save.
@@ -24,25 +14,11 @@ import org.eclipse.xtext.xbase.lib.Exceptions;
  */
 @SuppressWarnings("all")
 public class CamelDslGenerator implements IGenerator {
+  @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess fsa) {
-    try {
-      final TreeIterator<EObject> objit = resource.getAllContents();
-      EList<EObject> _contents = resource.getContents();
-      EObject _get = _contents.get(0);
-      final String fileName = ((CamelModel) _get).getName();
-      final XMIResourceImpl xmires = new XMIResourceImpl();
-      EList<EObject> _contents_1 = xmires.getContents();
-      EList<EObject> _contents_2 = resource.getContents();
-      _contents_1.addAll(_contents_2);
-      final ByteArrayOutputStream baos = new ByteArrayOutputStream();
-      final HashMap<String, Object> opts = new HashMap<String, Object>();
-      opts.put(XMIResource.OPTION_SCHEMA_LOCATION, Boolean.valueOf(true));
-      xmires.save(baos, opts);
-      final String result = baos.toString();
-      fsa.generateFile((fileName + ".xmi"), result);
-      final StringInputStream instream = new StringInputStream(result);
-    } catch (Throwable _e) {
-      throw Exceptions.sneakyThrow(_e);
-    }
+    throw new Error("Unresolved compilation problems:"
+      + "\nCamelModel cannot be resolved to a type."
+      + "\ngetName cannot be resolved"
+      + "\n+ cannot be resolved");
   }
 }

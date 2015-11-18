@@ -16,11 +16,11 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.impl.MetricComponentBindingImpl#getVmInstance <em>Vm Instance</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.impl.MetricComponentBindingImpl#getComponentInstance <em>Component Instance</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.deployment.impl.ComponentInstanceImpl#getType <em>Type</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.impl.ComponentInstanceImpl#getProvidedCommunicationInstances <em>Provided Communication Instances</em>}</li>
@@ -27,7 +28,6 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link eu.paasage.camel.deployment.impl.ComponentInstanceImpl#getInstantiatedOn <em>Instantiated On</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.impl.ComponentInstanceImpl#getDestroyedOn <em>Destroyed On</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

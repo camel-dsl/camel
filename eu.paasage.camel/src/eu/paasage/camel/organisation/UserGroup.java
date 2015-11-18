@@ -13,11 +13,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.UserGroup#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.UserGroup#getUsers <em>Users</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.organisation.OrganisationPackage#getUserGroup()
  * @model

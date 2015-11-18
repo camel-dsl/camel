@@ -16,12 +16,12 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.impl.MetricContextImpl#getMetric <em>Metric</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.impl.MetricContextImpl#getWindow <em>Window</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.impl.MetricContextImpl#getSchedule <em>Schedule</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.CloudProvider#isPublic <em>Public</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.CloudProvider#isSaaS <em>Saa S</em>}</li>
@@ -23,7 +24,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link eu.paasage.camel.organisation.CloudProvider#getProviderModel <em>Provider Model</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.CloudProvider#getSecurityCapability <em>Security Capability</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.organisation.OrganisationPackage#getCloudProvider()
  * @model

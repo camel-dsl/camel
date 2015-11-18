@@ -810,6 +810,15 @@ public class MetricPackageImpl extends EPackageImpl implements MetricPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMetric_IsVariable() {
+		return (EAttribute)metricEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getMetric__CheckRecursiveness__Metric_Metric() {
 		return metricEClass.getEOperations().get(0);
 	}
@@ -1601,6 +1610,7 @@ public class MetricPackageImpl extends EPackageImpl implements MetricPackage {
 		createEReference(metricEClass, METRIC__UNIT);
 		createEAttribute(metricEClass, METRIC__LAYER);
 		createEReference(metricEClass, METRIC__PROPERTY);
+		createEAttribute(metricEClass, METRIC__IS_VARIABLE);
 		createEOperation(metricEClass, METRIC___CHECK_RECURSIVENESS__METRIC_METRIC);
 
 		compositeMetricEClass = createEClass(COMPOSITE_METRIC);
@@ -1808,6 +1818,7 @@ public class MetricPackageImpl extends EPackageImpl implements MetricPackage {
 		initEReference(getMetric_Unit(), theUnitPackage.getUnit(), null, "unit", null, 1, 1, Metric.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMetric_Layer(), theCamelPackage.getLayerType(), "layer", null, 0, 1, Metric.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMetric_Property(), this.getProperty(), null, "property", null, 1, 1, Metric.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMetric_IsVariable(), ecorePackage.getEBoolean(), "isVariable", null, 0, 1, Metric.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getMetric__CheckRecursiveness__Metric_Metric(), ecorePackage.getEBoolean(), "checkRecursiveness", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMetric(), "mt1", 0, 1, IS_UNIQUE, IS_ORDERED);

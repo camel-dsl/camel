@@ -18,6 +18,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.execution.RuleTrigger#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.RuleTrigger#getScalabilityRule <em>Scalability Rule</em>}</li>
@@ -26,7 +27,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link eu.paasage.camel.execution.RuleTrigger#getTrigerringTime <em>Trigerring Time</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.RuleTrigger#getExecutionContext <em>Execution Context</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.execution.ExecutionPackage#getRuleTrigger()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='rule_trigger_event_instance_correct_events rule_trigger_correct_action rule_trigger_scal_reqs_of_correct_dep_model'"

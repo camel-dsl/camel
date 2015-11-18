@@ -11,12 +11,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.location.GeographicalRegion#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.location.GeographicalRegion#getParentRegions <em>Parent Regions</em>}</li>
  *   <li>{@link eu.paasage.camel.location.GeographicalRegion#getAlternativeNames <em>Alternative Names</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.location.LocationPackage#getGeographicalRegion()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='geographical_region_not_in_parents'"

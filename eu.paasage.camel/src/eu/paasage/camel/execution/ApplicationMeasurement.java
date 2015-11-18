@@ -11,10 +11,10 @@ import eu.paasage.camel.Application;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.execution.ApplicationMeasurement#getApplication <em>Application</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.execution.ExecutionPackage#getApplicationMeasurement()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='application_measurement_same_app'"

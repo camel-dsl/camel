@@ -713,6 +713,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="layer" eType="#//LayerType"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="property" lowerBound="1"
           eType="#//metric/Property"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isVariable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="CompositeMetric" eSuperTypes="#//metric/Metric">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">

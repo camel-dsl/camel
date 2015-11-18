@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.impl.MetricModelImpl#getContexts <em>Contexts</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.impl.MetricModelImpl#getMetrics <em>Metrics</em>}</li>
@@ -42,7 +43,6 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link eu.paasage.camel.metric.impl.MetricModelImpl#getSensors <em>Sensors</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.impl.MetricModelImpl#getUnits <em>Units</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

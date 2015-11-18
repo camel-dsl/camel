@@ -11,13 +11,13 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.MetricFormula#getFunction <em>Function</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.MetricFormula#getFunctionArity <em>Function Arity</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.MetricFormula#getFunctionPattern <em>Function Pattern</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.MetricFormula#getParameters <em>Parameters</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.metric.MetricPackage#getMetricFormula()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='metric_formula_has_metric metric_formula_correct_arity_for_function_wrt_parameters metric_formula_correct_arity_for_function'"

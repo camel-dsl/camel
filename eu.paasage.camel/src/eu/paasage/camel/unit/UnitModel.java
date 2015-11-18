@@ -13,10 +13,10 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.unit.UnitModel#getUnits <em>Units</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.unit.UnitPackage#getUnitModel()
  * @model

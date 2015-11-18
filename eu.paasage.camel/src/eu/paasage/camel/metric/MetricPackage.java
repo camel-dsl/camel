@@ -809,13 +809,22 @@ public interface MetricPackage extends EPackage {
 	int METRIC__PROPERTY = METRIC_FORMULA_PARAMETER_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Is Variable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METRIC__IS_VARIABLE = METRIC_FORMULA_PARAMETER_FEATURE_COUNT + 6;
+
+	/**
 	 * The number of structural features of the '<em>Metric</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int METRIC_FEATURE_COUNT = METRIC_FORMULA_PARAMETER_FEATURE_COUNT + 6;
+	int METRIC_FEATURE_COUNT = METRIC_FORMULA_PARAMETER_FEATURE_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>Check Recursiveness</em>' operation.
@@ -916,6 +925,15 @@ public interface MetricPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPOSITE_METRIC__PROPERTY = METRIC__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Is Variable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_METRIC__IS_VARIABLE = METRIC__IS_VARIABLE;
 
 	/**
 	 * The feature id for the '<em><b>Formula</b></em>' containment reference.
@@ -1043,6 +1061,15 @@ public interface MetricPackage extends EPackage {
 	 * @ordered
 	 */
 	int RAW_METRIC__PROPERTY = METRIC__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Is Variable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RAW_METRIC__IS_VARIABLE = METRIC__IS_VARIABLE;
 
 	/**
 	 * The number of structural features of the '<em>Raw Metric</em>' class.
@@ -2829,6 +2856,17 @@ public interface MetricPackage extends EPackage {
 	EReference getMetric_Property();
 
 	/**
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.metric.Metric#isIsVariable <em>Is Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Variable</em>'.
+	 * @see eu.paasage.camel.metric.Metric#isIsVariable()
+	 * @see #getMetric()
+	 * @generated
+	 */
+	EAttribute getMetric_IsVariable();
+
+	/**
 	 * Returns the meta object for the '{@link eu.paasage.camel.metric.Metric#checkRecursiveness(eu.paasage.camel.metric.Metric, eu.paasage.camel.metric.Metric) <em>Check Recursiveness</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4039,6 +4077,14 @@ public interface MetricPackage extends EPackage {
 		 * @generated
 		 */
 		EReference METRIC__PROPERTY = eINSTANCE.getMetric_Property();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Variable</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute METRIC__IS_VARIABLE = eINSTANCE.getMetric_IsVariable();
 
 		/**
 		 * The meta object literal for the '<em><b>Check Recursiveness</b></em>' operation.

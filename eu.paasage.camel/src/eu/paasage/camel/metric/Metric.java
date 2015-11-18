@@ -15,6 +15,7 @@ import eu.paasage.camel.unit.Unit;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.Metric#getDescription <em>Description</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.Metric#getValueType <em>Value Type</em>}</li>
@@ -22,8 +23,8 @@ import eu.paasage.camel.unit.Unit;
  *   <li>{@link eu.paasage.camel.metric.Metric#getUnit <em>Unit</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.Metric#getLayer <em>Layer</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.Metric#getProperty <em>Property</em>}</li>
+ *   <li>{@link eu.paasage.camel.metric.Metric#isIsVariable <em>Is Variable</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.metric.MetricPackage#getMetric()
  * @model abstract="true"
@@ -190,6 +191,32 @@ public interface Metric extends MetricFormulaParameter {
 	 * @generated
 	 */
 	void setProperty(Property value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Variable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Variable</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Variable</em>' attribute.
+	 * @see #setIsVariable(boolean)
+	 * @see eu.paasage.camel.metric.MetricPackage#getMetric_IsVariable()
+	 * @model
+	 * @generated
+	 */
+	boolean isIsVariable();
+
+	/**
+	 * Sets the value of the '{@link eu.paasage.camel.metric.Metric#isIsVariable <em>Is Variable</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Variable</em>' attribute.
+	 * @see #isIsVariable()
+	 * @generated
+	 */
+	void setIsVariable(boolean value);
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -11,6 +11,7 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.MetricInstance#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.MetricInstance#getMetric <em>Metric</em>}</li>
@@ -19,7 +20,6 @@ import org.eclipse.emf.cdo.CDOObject;
  *   <li>{@link eu.paasage.camel.metric.MetricInstance#getObjectBinding <em>Object Binding</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.MetricInstance#getMetricContext <em>Metric Context</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.metric.MetricPackage#getMetricInstance()
  * @model abstract="true"

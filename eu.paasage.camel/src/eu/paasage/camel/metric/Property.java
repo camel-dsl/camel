@@ -13,6 +13,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.Property#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.Property#getDescription <em>Description</em>}</li>
@@ -20,7 +21,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link eu.paasage.camel.metric.Property#getSubProperties <em>Sub Properties</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.Property#getSensors <em>Sensors</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.metric.MetricPackage#getProperty()
  * @model

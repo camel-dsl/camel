@@ -20,6 +20,7 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.provider.impl.FeatureImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.impl.FeatureImpl#getAttributes <em>Attributes</em>}</li>
@@ -27,7 +28,6 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  *   <li>{@link eu.paasage.camel.provider.impl.FeatureImpl#getFeatureCardinality <em>Feature Cardinality</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.impl.FeatureImpl#getClones <em>Clones</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

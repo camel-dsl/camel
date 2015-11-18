@@ -11,11 +11,11 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.type.Limit#isIncluded <em>Included</em>}</li>
  *   <li>{@link eu.paasage.camel.type.Limit#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.type.TypePackage#getLimit()
  * @model

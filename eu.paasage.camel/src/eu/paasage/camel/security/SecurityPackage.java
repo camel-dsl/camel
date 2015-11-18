@@ -528,6 +528,15 @@ public interface SecurityPackage extends EPackage {
 	int RAW_SECURITY_METRIC__PROPERTY = MetricPackage.RAW_METRIC__PROPERTY;
 
 	/**
+	 * The feature id for the '<em><b>Is Variable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RAW_SECURITY_METRIC__IS_VARIABLE = MetricPackage.RAW_METRIC__IS_VARIABLE;
+
+	/**
 	 * The number of structural features of the '<em>Raw Security Metric</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -900,6 +909,15 @@ public interface SecurityPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPOSITE_SECURITY_METRIC__PROPERTY = MetricPackage.COMPOSITE_METRIC__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Is Variable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_SECURITY_METRIC__IS_VARIABLE = MetricPackage.COMPOSITE_METRIC__IS_VARIABLE;
 
 	/**
 	 * The feature id for the '<em><b>Formula</b></em>' containment reference.

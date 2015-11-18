@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.scalability.impl.ScalabilityModelImpl#getRules <em>Rules</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.impl.ScalabilityModelImpl#getEvents <em>Events</em>}</li>
@@ -34,7 +35,6 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link eu.paasage.camel.scalability.impl.ScalabilityModelImpl#getTimers <em>Timers</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.impl.ScalabilityModelImpl#getScaleRequirements <em>Scale Requirements</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

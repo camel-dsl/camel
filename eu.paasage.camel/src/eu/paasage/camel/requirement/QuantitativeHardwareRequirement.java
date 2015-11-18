@@ -10,6 +10,7 @@ package eu.paasage.camel.requirement;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.requirement.QuantitativeHardwareRequirement#getMinCPU <em>Min CPU</em>}</li>
  *   <li>{@link eu.paasage.camel.requirement.QuantitativeHardwareRequirement#getMaxCPU <em>Max CPU</em>}</li>
@@ -20,7 +21,6 @@ package eu.paasage.camel.requirement;
  *   <li>{@link eu.paasage.camel.requirement.QuantitativeHardwareRequirement#getMinStorage <em>Min Storage</em>}</li>
  *   <li>{@link eu.paasage.camel.requirement.QuantitativeHardwareRequirement#getMaxStorage <em>Max Storage</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.requirement.RequirementPackage#getQuantitativeHardwareRequirement()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='one_alternative_provided_in_quantitative_req quantitative_req_correct_input'"

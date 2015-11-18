@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.MetricModel#getContexts <em>Contexts</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.MetricModel#getMetrics <em>Metrics</em>}</li>
@@ -28,7 +29,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link eu.paasage.camel.metric.MetricModel#getSensors <em>Sensors</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.MetricModel#getUnits <em>Units</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.metric.MetricPackage#getMetricModel()
  * @model

@@ -17,6 +17,7 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.deployment.VMRequirementSet#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.VMRequirementSet#getLocationRequirement <em>Location Requirement</em>}</li>
@@ -25,7 +26,6 @@ import org.eclipse.emf.cdo.CDOObject;
  *   <li>{@link eu.paasage.camel.deployment.VMRequirementSet#getQuantitativeHardwareRequirement <em>Quantitative Hardware Requirement</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.VMRequirementSet#getOsOrImageRequirement <em>Os Or Image Requirement</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.deployment.DeploymentPackage#getVMRequirementSet()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='at_least_one_alternative_in_vm_req_set'"

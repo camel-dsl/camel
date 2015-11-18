@@ -19,6 +19,7 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.execution.impl.ActionRealisationImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.impl.ActionRealisationImpl#getAction <em>Action</em>}</li>
@@ -26,7 +27,6 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  *   <li>{@link eu.paasage.camel.execution.impl.ActionRealisationImpl#getEndTime <em>End Time</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.impl.ActionRealisationImpl#getLowLevelActions <em>Low Level Actions</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

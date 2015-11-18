@@ -10,6 +10,7 @@ package eu.paasage.camel.deployment;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.deployment.Communication#getType <em>Type</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.Communication#getProvidedCommunication <em>Provided Communication</em>}</li>
@@ -17,7 +18,6 @@ package eu.paasage.camel.deployment;
  *   <li>{@link eu.paasage.camel.deployment.Communication#getProvidedPortConfiguration <em>Provided Port Configuration</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.Communication#getRequiredPortConfiguration <em>Required Port Configuration</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.deployment.DeploymentPackage#getCommunication()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='local_communication_both_comp_same_vm'"

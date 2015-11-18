@@ -13,10 +13,10 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.requirement.LocationRequirement#getLocations <em>Locations</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.requirement.RequirementPackage#getLocationRequirement()
  * @model

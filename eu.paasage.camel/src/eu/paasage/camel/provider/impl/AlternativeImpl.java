@@ -17,11 +17,11 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.provider.impl.AlternativeImpl#getGroupCardinality <em>Group Cardinality</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.impl.AlternativeImpl#getVariants <em>Variants</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.impl.MetricImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.impl.MetricImpl#getValueType <em>Value Type</em>}</li>
@@ -31,8 +32,8 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link eu.paasage.camel.metric.impl.MetricImpl#getUnit <em>Unit</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.impl.MetricImpl#getLayer <em>Layer</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.impl.MetricImpl#getProperty <em>Property</em>}</li>
+ *   <li>{@link eu.paasage.camel.metric.impl.MetricImpl#isIsVariable <em>Is Variable</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -162,6 +163,24 @@ public abstract class MetricImpl extends MetricFormulaParameterImpl implements M
 	 */
 	public void setProperty(Property newProperty) {
 		eSet(MetricPackage.Literals.METRIC__PROPERTY, newProperty);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isIsVariable() {
+		return (Boolean)eGet(MetricPackage.Literals.METRIC__IS_VARIABLE, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsVariable(boolean newIsVariable) {
+		eSet(MetricPackage.Literals.METRIC__IS_VARIABLE, newIsVariable);
 	}
 
 	/**

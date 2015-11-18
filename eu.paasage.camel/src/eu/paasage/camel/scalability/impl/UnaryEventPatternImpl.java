@@ -15,12 +15,12 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.scalability.impl.UnaryEventPatternImpl#getEvent <em>Event</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.impl.UnaryEventPatternImpl#getOccurrenceNum <em>Occurrence Num</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.impl.UnaryEventPatternImpl#getOperator <em>Operator</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

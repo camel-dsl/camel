@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.requirement.impl.OptimisationRequirementImpl#getOptimisationFunction <em>Optimisation Function</em>}</li>
  *   <li>{@link eu.paasage.camel.requirement.impl.OptimisationRequirementImpl#getMetric <em>Metric</em>}</li>
@@ -28,7 +29,6 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link eu.paasage.camel.requirement.impl.OptimisationRequirementImpl#getApplication <em>Application</em>}</li>
  *   <li>{@link eu.paasage.camel.requirement.impl.OptimisationRequirementImpl#getComponent <em>Component</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

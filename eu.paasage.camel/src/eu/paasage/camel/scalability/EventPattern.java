@@ -10,10 +10,10 @@ package eu.paasage.camel.scalability;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.scalability.EventPattern#getTimer <em>Timer</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.scalability.ScalabilityPackage#getEventPattern()
  * @model abstract="true"

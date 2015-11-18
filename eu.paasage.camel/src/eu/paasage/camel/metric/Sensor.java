@@ -11,12 +11,12 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.Sensor#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.Sensor#getConfiguration <em>Configuration</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.Sensor#isIsPush <em>Is Push</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.metric.MetricPackage#getSensor()
  * @model

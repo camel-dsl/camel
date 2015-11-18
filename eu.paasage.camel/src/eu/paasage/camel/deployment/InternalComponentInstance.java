@@ -11,11 +11,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.deployment.InternalComponentInstance#getRequiredCommunicationInstances <em>Required Communication Instances</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.InternalComponentInstance#getRequiredHostInstance <em>Required Host Instance</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.deployment.DeploymentPackage#getInternalComponentInstance()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='internal_component_port_instances_of_correct_type'"

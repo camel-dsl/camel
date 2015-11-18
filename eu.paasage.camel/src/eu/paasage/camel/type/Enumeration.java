@@ -11,10 +11,10 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.type.Enumeration#getValues <em>Values</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.type.TypePackage#getEnumeration()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='enumeration_all_values_diff'"

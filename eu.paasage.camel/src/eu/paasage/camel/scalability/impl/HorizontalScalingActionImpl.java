@@ -15,11 +15,11 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.scalability.impl.HorizontalScalingActionImpl#getCount <em>Count</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.impl.HorizontalScalingActionImpl#getInternalComponent <em>Internal Component</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

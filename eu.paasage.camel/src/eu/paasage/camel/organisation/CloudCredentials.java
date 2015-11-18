@@ -10,6 +10,7 @@ package eu.paasage.camel.organisation;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.CloudCredentials#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.CloudCredentials#getCloudProvider <em>Cloud Provider</em>}</li>
@@ -19,7 +20,6 @@ package eu.paasage.camel.organisation;
  *   <li>{@link eu.paasage.camel.organisation.CloudCredentials#getUsername <em>Username</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.CloudCredentials#getPassword <em>Password</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.organisation.OrganisationPackage#getCloudCredentials()
  * @model

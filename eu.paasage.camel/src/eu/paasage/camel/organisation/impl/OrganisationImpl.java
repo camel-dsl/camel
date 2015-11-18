@@ -13,13 +13,13 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.impl.OrganisationImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.impl.OrganisationImpl#getWww <em>Www</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.impl.OrganisationImpl#getPostalAddress <em>Postal Address</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.impl.OrganisationImpl#getEmail <em>Email</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -11,10 +11,10 @@ import eu.paasage.camel.LayerType;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.CompositeMetric#getFormula <em>Formula</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.metric.MetricPackage#getCompositeMetric()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='metric_layer_enforcement metric_percentage_unit_enforcement metric_composite_unit_enforcement'"

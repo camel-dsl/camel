@@ -16,13 +16,13 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.deployment.impl.HostingImpl#getProvidedHost <em>Provided Host</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.impl.HostingImpl#getRequiredHost <em>Required Host</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.impl.HostingImpl#getProvidedHostConfiguration <em>Provided Host Configuration</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.impl.HostingImpl#getRequiredHostConfiguration <em>Required Host Configuration</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

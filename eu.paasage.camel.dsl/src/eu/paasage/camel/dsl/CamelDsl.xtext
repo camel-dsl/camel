@@ -521,6 +521,7 @@ RawMetric returns metric::RawMetric:
         'property: ' property = [metric::Property | Fqn]
         'unit: ' unit = [unit::Unit | Fqn]
         ('value type: ' valueType = [type::ValueType | Fqn])?
+        (isVariable ?= 'variable')?
     '}';
 
 Metric returns metric::Metric:

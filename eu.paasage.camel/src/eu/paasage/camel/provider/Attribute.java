@@ -16,13 +16,13 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.provider.Attribute#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.Attribute#getValue <em>Value</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.Attribute#getValueType <em>Value Type</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.Attribute#getUnitType <em>Unit Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.provider.ProviderPackage#getAttribute()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='attribute_must_have_at_least_value_or_value_type attribute_value_in_value_type'"

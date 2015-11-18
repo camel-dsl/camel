@@ -13,6 +13,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.deployment.DeploymentModel#getInternalComponents <em>Internal Components</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.DeploymentModel#getInternalComponentInstances <em>Internal Component Instances</em>}</li>
@@ -25,7 +26,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link eu.paasage.camel.deployment.DeploymentModel#getVmRequirementSets <em>Vm Requirement Sets</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.DeploymentModel#getGlobalVMRequirementSet <em>Global VM Requirement Set</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.deployment.DeploymentPackage#getDeploymentModel()
  * @model

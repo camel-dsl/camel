@@ -13,11 +13,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.provider.ProviderModel#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.ProviderModel#getRootFeature <em>Root Feature</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.provider.ProviderPackage#getProviderModel()
  * @model
