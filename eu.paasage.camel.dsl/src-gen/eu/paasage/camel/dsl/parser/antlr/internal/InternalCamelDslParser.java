@@ -53018,14 +53018,11 @@ public class InternalCamelDslParser extends AbstractInternalAntlrParser {
     static final String DFA2_maxS =
         "\1\u017a\4\uffff\1\16\12\uffff\1\7\2\44\1\7\1\u0157\2\44";
     static final String DFA2_acceptS =
-        "\1\uffff\1\16\1\1\1\2\1\3\1\uffff\1\4\1\5\1\6\1\7\1\10\1\11\1\12"+
-        "\1\13\1\14\1\15\7\uffff";
+        "\1\uffff\1\16\1\1\1\2\1\3\1\uffff\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\7\uffff";
     static final String DFA2_specialS =
         "\27\uffff}>";
     static final String[] DFA2_transitionS = {
-            "\1\1\1\2\55\uffff\2\3\45\uffff\1\4\14\uffff\1\5\1\6\72\uffff"+
-            "\1\7\56\uffff\1\10\42\uffff\1\11\3\uffff\1\17\26\uffff\1\12"+
-            "\45\uffff\1\13\25\uffff\1\14\31\uffff\1\15\10\uffff\1\16",
+            "\1\1\1\2\55\uffff\2\3\45\uffff\1\4\14\uffff\1\5\1\6\72\uffff\1\7\56\uffff\1\10\42\uffff\1\11\3\uffff\1\17\26\uffff\1\12\45\uffff\1\13\25\uffff\1\14\31\uffff\1\15\10\uffff\1\16",
             "",
             "",
             "",
