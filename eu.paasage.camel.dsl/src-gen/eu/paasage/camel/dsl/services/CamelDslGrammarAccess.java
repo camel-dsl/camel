@@ -9877,37 +9877,42 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cMetricMetricCrossReference_5_1_0 = (CrossReference)cMetricAssignment_5_1.eContents().get(0);
 		private final RuleCall cMetricMetricFqnParserRuleCall_5_1_0_1 = (RuleCall)cMetricMetricCrossReference_5_1_0.eContents().get(1);
 		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cPropertyKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Assignment cPropertyAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final CrossReference cPropertyPropertyCrossReference_6_1_0 = (CrossReference)cPropertyAssignment_6_1.eContents().get(0);
-		private final RuleCall cPropertyPropertyFqnParserRuleCall_6_1_0_1 = (RuleCall)cPropertyPropertyCrossReference_6_1_0.eContents().get(1);
+		private final Keyword cMetricContextKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Assignment cMetricContextAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
+		private final CrossReference cMetricContextMetricContextCrossReference_6_1_0 = (CrossReference)cMetricContextAssignment_6_1.eContents().get(0);
+		private final RuleCall cMetricContextMetricContextFqnParserRuleCall_6_1_0_1 = (RuleCall)cMetricContextMetricContextCrossReference_6_1_0.eContents().get(1);
 		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Keyword cApplicationKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Assignment cApplicationAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final CrossReference cApplicationApplicationCrossReference_7_1_0 = (CrossReference)cApplicationAssignment_7_1.eContents().get(0);
-		private final RuleCall cApplicationApplicationFqnParserRuleCall_7_1_0_1 = (RuleCall)cApplicationApplicationCrossReference_7_1_0.eContents().get(1);
+		private final Keyword cPropertyKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
+		private final Assignment cPropertyAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
+		private final CrossReference cPropertyPropertyCrossReference_7_1_0 = (CrossReference)cPropertyAssignment_7_1.eContents().get(0);
+		private final RuleCall cPropertyPropertyFqnParserRuleCall_7_1_0_1 = (RuleCall)cPropertyPropertyCrossReference_7_1_0.eContents().get(1);
 		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
-		private final Keyword cComponentKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
-		private final Assignment cComponentAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
-		private final CrossReference cComponentComponentCrossReference_8_1_0 = (CrossReference)cComponentAssignment_8_1.eContents().get(0);
-		private final RuleCall cComponentComponentFqnParserRuleCall_8_1_0_1 = (RuleCall)cComponentComponentCrossReference_8_1_0.eContents().get(1);
+		private final Keyword cApplicationKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
+		private final Assignment cApplicationAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
+		private final CrossReference cApplicationApplicationCrossReference_8_1_0 = (CrossReference)cApplicationAssignment_8_1.eContents().get(0);
+		private final RuleCall cApplicationApplicationFqnParserRuleCall_8_1_0_1 = (RuleCall)cApplicationApplicationCrossReference_8_1_0.eContents().get(1);
 		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
-		private final Keyword cPriorityKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
-		private final Assignment cPriorityAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
-		private final RuleCall cPriorityEDoubleParserRuleCall_9_1_0 = (RuleCall)cPriorityAssignment_9_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Keyword cComponentKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
+		private final Assignment cComponentAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
+		private final CrossReference cComponentComponentCrossReference_9_1_0 = (CrossReference)cComponentAssignment_9_1.eContents().get(0);
+		private final RuleCall cComponentComponentFqnParserRuleCall_9_1_0_1 = (RuleCall)cComponentComponentCrossReference_9_1_0.eContents().get(1);
+		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
+		private final Keyword cPriorityKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
+		private final Assignment cPriorityAssignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
+		private final RuleCall cPriorityEDoubleParserRuleCall_10_1_0 = (RuleCall)cPriorityAssignment_10_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
 		//OptimisationRequirement returns requirement::OptimisationRequirement:
 		//	"optimisation requirement " name=ID "{" "function: " optimisationFunction=OptimisationFunctionType ("metric: "
-		//	metric=[metric::Metric|Fqn])? ("property: " property=[metric::Property|Fqn])? ("application: "
-		//	application=[camel::Application|Fqn])? ("component: " component=[deployment::Component|Fqn])? ("priority: "
-		//	priority=EDouble)? "}";
+		//	metric=[metric::Metric|Fqn])? ("metric context: " metricContext=[metric::MetricContext|Fqn])? ("property: "
+		//	property=[metric::Property|Fqn])? ("application: " application=[camel::Application|Fqn])? ("component: "
+		//	component=[deployment::Component|Fqn])? ("priority: " priority=EDouble)? "}";
 		@Override public ParserRule getRule() { return rule; }
 
 		//"optimisation requirement " name=ID "{" "function: " optimisationFunction=OptimisationFunctionType ("metric: "
-		//metric=[metric::Metric|Fqn])? ("property: " property=[metric::Property|Fqn])? ("application: "
-		//application=[camel::Application|Fqn])? ("component: " component=[deployment::Component|Fqn])? ("priority: "
-		//priority=EDouble)? "}"
+		//metric=[metric::Metric|Fqn])? ("metric context: " metricContext=[metric::MetricContext|Fqn])? ("property: "
+		//property=[metric::Property|Fqn])? ("application: " application=[camel::Application|Fqn])? ("component: "
+		//component=[deployment::Component|Fqn])? ("priority: " priority=EDouble)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//"optimisation requirement "
@@ -9946,65 +9951,80 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getMetricMetricFqnParserRuleCall_5_1_0_1() { return cMetricMetricFqnParserRuleCall_5_1_0_1; }
 
-		//("property: " property=[metric::Property|Fqn])?
+		//("metric context: " metricContext=[metric::MetricContext|Fqn])?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//"property: "
-		public Keyword getPropertyKeyword_6_0() { return cPropertyKeyword_6_0; }
+		//"metric context: "
+		public Keyword getMetricContextKeyword_6_0() { return cMetricContextKeyword_6_0; }
 
-		//property=[metric::Property|Fqn]
-		public Assignment getPropertyAssignment_6_1() { return cPropertyAssignment_6_1; }
+		//metricContext=[metric::MetricContext|Fqn]
+		public Assignment getMetricContextAssignment_6_1() { return cMetricContextAssignment_6_1; }
 
-		//[metric::Property|Fqn]
-		public CrossReference getPropertyPropertyCrossReference_6_1_0() { return cPropertyPropertyCrossReference_6_1_0; }
+		//[metric::MetricContext|Fqn]
+		public CrossReference getMetricContextMetricContextCrossReference_6_1_0() { return cMetricContextMetricContextCrossReference_6_1_0; }
 
 		//Fqn
-		public RuleCall getPropertyPropertyFqnParserRuleCall_6_1_0_1() { return cPropertyPropertyFqnParserRuleCall_6_1_0_1; }
+		public RuleCall getMetricContextMetricContextFqnParserRuleCall_6_1_0_1() { return cMetricContextMetricContextFqnParserRuleCall_6_1_0_1; }
 
-		//("application: " application=[camel::Application|Fqn])?
+		//("property: " property=[metric::Property|Fqn])?
 		public Group getGroup_7() { return cGroup_7; }
 
-		//"application: "
-		public Keyword getApplicationKeyword_7_0() { return cApplicationKeyword_7_0; }
+		//"property: "
+		public Keyword getPropertyKeyword_7_0() { return cPropertyKeyword_7_0; }
 
-		//application=[camel::Application|Fqn]
-		public Assignment getApplicationAssignment_7_1() { return cApplicationAssignment_7_1; }
+		//property=[metric::Property|Fqn]
+		public Assignment getPropertyAssignment_7_1() { return cPropertyAssignment_7_1; }
 
-		//[camel::Application|Fqn]
-		public CrossReference getApplicationApplicationCrossReference_7_1_0() { return cApplicationApplicationCrossReference_7_1_0; }
+		//[metric::Property|Fqn]
+		public CrossReference getPropertyPropertyCrossReference_7_1_0() { return cPropertyPropertyCrossReference_7_1_0; }
 
 		//Fqn
-		public RuleCall getApplicationApplicationFqnParserRuleCall_7_1_0_1() { return cApplicationApplicationFqnParserRuleCall_7_1_0_1; }
+		public RuleCall getPropertyPropertyFqnParserRuleCall_7_1_0_1() { return cPropertyPropertyFqnParserRuleCall_7_1_0_1; }
 
-		//("component: " component=[deployment::Component|Fqn])?
+		//("application: " application=[camel::Application|Fqn])?
 		public Group getGroup_8() { return cGroup_8; }
 
-		//"component: "
-		public Keyword getComponentKeyword_8_0() { return cComponentKeyword_8_0; }
+		//"application: "
+		public Keyword getApplicationKeyword_8_0() { return cApplicationKeyword_8_0; }
 
-		//component=[deployment::Component|Fqn]
-		public Assignment getComponentAssignment_8_1() { return cComponentAssignment_8_1; }
+		//application=[camel::Application|Fqn]
+		public Assignment getApplicationAssignment_8_1() { return cApplicationAssignment_8_1; }
 
-		//[deployment::Component|Fqn]
-		public CrossReference getComponentComponentCrossReference_8_1_0() { return cComponentComponentCrossReference_8_1_0; }
+		//[camel::Application|Fqn]
+		public CrossReference getApplicationApplicationCrossReference_8_1_0() { return cApplicationApplicationCrossReference_8_1_0; }
 
 		//Fqn
-		public RuleCall getComponentComponentFqnParserRuleCall_8_1_0_1() { return cComponentComponentFqnParserRuleCall_8_1_0_1; }
+		public RuleCall getApplicationApplicationFqnParserRuleCall_8_1_0_1() { return cApplicationApplicationFqnParserRuleCall_8_1_0_1; }
 
-		//("priority: " priority=EDouble)?
+		//("component: " component=[deployment::Component|Fqn])?
 		public Group getGroup_9() { return cGroup_9; }
 
+		//"component: "
+		public Keyword getComponentKeyword_9_0() { return cComponentKeyword_9_0; }
+
+		//component=[deployment::Component|Fqn]
+		public Assignment getComponentAssignment_9_1() { return cComponentAssignment_9_1; }
+
+		//[deployment::Component|Fqn]
+		public CrossReference getComponentComponentCrossReference_9_1_0() { return cComponentComponentCrossReference_9_1_0; }
+
+		//Fqn
+		public RuleCall getComponentComponentFqnParserRuleCall_9_1_0_1() { return cComponentComponentFqnParserRuleCall_9_1_0_1; }
+
+		//("priority: " priority=EDouble)?
+		public Group getGroup_10() { return cGroup_10; }
+
 		//"priority: "
-		public Keyword getPriorityKeyword_9_0() { return cPriorityKeyword_9_0; }
+		public Keyword getPriorityKeyword_10_0() { return cPriorityKeyword_10_0; }
 
 		//priority=EDouble
-		public Assignment getPriorityAssignment_9_1() { return cPriorityAssignment_9_1; }
+		public Assignment getPriorityAssignment_10_1() { return cPriorityAssignment_10_1; }
 
 		//EDouble
-		public RuleCall getPriorityEDoubleParserRuleCall_9_1_0() { return cPriorityEDoubleParserRuleCall_9_1_0; }
+		public RuleCall getPriorityEDoubleParserRuleCall_10_1_0() { return cPriorityEDoubleParserRuleCall_10_1_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
+		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
 	}
 
 	public class OSRequirementElements extends AbstractParserRuleElementFinder {
@@ -18206,9 +18226,9 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 
 	//OptimisationRequirement returns requirement::OptimisationRequirement:
 	//	"optimisation requirement " name=ID "{" "function: " optimisationFunction=OptimisationFunctionType ("metric: "
-	//	metric=[metric::Metric|Fqn])? ("property: " property=[metric::Property|Fqn])? ("application: "
-	//	application=[camel::Application|Fqn])? ("component: " component=[deployment::Component|Fqn])? ("priority: "
-	//	priority=EDouble)? "}";
+	//	metric=[metric::Metric|Fqn])? ("metric context: " metricContext=[metric::MetricContext|Fqn])? ("property: "
+	//	property=[metric::Property|Fqn])? ("application: " application=[camel::Application|Fqn])? ("component: "
+	//	component=[deployment::Component|Fqn])? ("priority: " priority=EDouble)? "}";
 	public OptimisationRequirementElements getOptimisationRequirementAccess() {
 		return pOptimisationRequirement;
 	}

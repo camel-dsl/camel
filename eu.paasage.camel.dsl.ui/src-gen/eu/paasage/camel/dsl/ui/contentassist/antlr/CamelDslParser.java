@@ -388,6 +388,7 @@ public class CamelDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOptimisationRequirementAccess().getGroup_7(), "rule__OptimisationRequirement__Group_7__0");
 					put(grammarAccess.getOptimisationRequirementAccess().getGroup_8(), "rule__OptimisationRequirement__Group_8__0");
 					put(grammarAccess.getOptimisationRequirementAccess().getGroup_9(), "rule__OptimisationRequirement__Group_9__0");
+					put(grammarAccess.getOptimisationRequirementAccess().getGroup_10(), "rule__OptimisationRequirement__Group_10__0");
 					put(grammarAccess.getOSRequirementAccess().getGroup(), "rule__OSRequirement__Group__0");
 					put(grammarAccess.getImageRequirementAccess().getGroup(), "rule__ImageRequirement__Group__0");
 					put(grammarAccess.getDoubleAccess().getGroup(), "rule__Double__Group__0");
@@ -1043,10 +1044,11 @@ public class CamelDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOptimisationRequirementAccess().getNameAssignment_1(), "rule__OptimisationRequirement__NameAssignment_1");
 					put(grammarAccess.getOptimisationRequirementAccess().getOptimisationFunctionAssignment_4(), "rule__OptimisationRequirement__OptimisationFunctionAssignment_4");
 					put(grammarAccess.getOptimisationRequirementAccess().getMetricAssignment_5_1(), "rule__OptimisationRequirement__MetricAssignment_5_1");
-					put(grammarAccess.getOptimisationRequirementAccess().getPropertyAssignment_6_1(), "rule__OptimisationRequirement__PropertyAssignment_6_1");
-					put(grammarAccess.getOptimisationRequirementAccess().getApplicationAssignment_7_1(), "rule__OptimisationRequirement__ApplicationAssignment_7_1");
-					put(grammarAccess.getOptimisationRequirementAccess().getComponentAssignment_8_1(), "rule__OptimisationRequirement__ComponentAssignment_8_1");
-					put(grammarAccess.getOptimisationRequirementAccess().getPriorityAssignment_9_1(), "rule__OptimisationRequirement__PriorityAssignment_9_1");
+					put(grammarAccess.getOptimisationRequirementAccess().getMetricContextAssignment_6_1(), "rule__OptimisationRequirement__MetricContextAssignment_6_1");
+					put(grammarAccess.getOptimisationRequirementAccess().getPropertyAssignment_7_1(), "rule__OptimisationRequirement__PropertyAssignment_7_1");
+					put(grammarAccess.getOptimisationRequirementAccess().getApplicationAssignment_8_1(), "rule__OptimisationRequirement__ApplicationAssignment_8_1");
+					put(grammarAccess.getOptimisationRequirementAccess().getComponentAssignment_9_1(), "rule__OptimisationRequirement__ComponentAssignment_9_1");
+					put(grammarAccess.getOptimisationRequirementAccess().getPriorityAssignment_10_1(), "rule__OptimisationRequirement__PriorityAssignment_10_1");
 					put(grammarAccess.getOSRequirementAccess().getNameAssignment_1(), "rule__OSRequirement__NameAssignment_1");
 					put(grammarAccess.getOSRequirementAccess().getOsAssignment_4(), "rule__OSRequirement__OsAssignment_4");
 					put(grammarAccess.getOSRequirementAccess().getIs64osAssignment_5(), "rule__OSRequirement__Is64osAssignment_5");

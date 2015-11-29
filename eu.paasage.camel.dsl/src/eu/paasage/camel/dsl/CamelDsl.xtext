@@ -907,6 +907,7 @@ OptimisationRequirement returns requirement::OptimisationRequirement:
     'optimisation requirement ' name = ID '{'
         'function: ' optimisationFunction = OptimisationFunctionType
         ('metric: ' metric = [metric::Metric | Fqn])?
+        ('metric context: ' metricContext = [metric::MetricContext | Fqn])?
         ('property: ' property = [metric::Property | Fqn])?
         ('application: ' application = [camel::Application | Fqn])?
         ('component: ' component = [deployment::Component | Fqn])?

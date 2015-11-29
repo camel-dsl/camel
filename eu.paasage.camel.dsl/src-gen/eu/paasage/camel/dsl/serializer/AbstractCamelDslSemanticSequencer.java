@@ -1786,6 +1786,7 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         name=ID 
 	 *         optimisationFunction=OptimisationFunctionType 
 	 *         metric=[Metric|Fqn]? 
+	 *         metricContext=[MetricContext|Fqn]? 
 	 *         property=[Property|Fqn]? 
 	 *         application=[Application|Fqn]? 
 	 *         component=[Component|Fqn]? 

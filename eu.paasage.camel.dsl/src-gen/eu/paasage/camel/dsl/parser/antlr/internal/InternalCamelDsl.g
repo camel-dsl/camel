@@ -13848,9 +13848,9 @@ ruleOptimisationRequirement returns [EObject current=null]
 	    }
 
 )
-))?(	otherlv_7='property: ' 
+))?(	otherlv_7='metric context: ' 
     {
-    	newLeafNode(otherlv_7, grammarAccess.getOptimisationRequirementAccess().getPropertyKeyword_6_0());
+    	newLeafNode(otherlv_7, grammarAccess.getOptimisationRequirementAccess().getMetricContextKeyword_6_0());
     }
 (
 (
@@ -13860,16 +13860,16 @@ ruleOptimisationRequirement returns [EObject current=null]
 	        }
         }
 		{ 
-	        newCompositeNode(grammarAccess.getOptimisationRequirementAccess().getPropertyPropertyCrossReference_6_1_0()); 
+	        newCompositeNode(grammarAccess.getOptimisationRequirementAccess().getMetricContextMetricContextCrossReference_6_1_0()); 
 	    }
 		ruleFqn		{ 
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))?(	otherlv_9='application: ' 
+))?(	otherlv_9='property: ' 
     {
-    	newLeafNode(otherlv_9, grammarAccess.getOptimisationRequirementAccess().getApplicationKeyword_7_0());
+    	newLeafNode(otherlv_9, grammarAccess.getOptimisationRequirementAccess().getPropertyKeyword_7_0());
     }
 (
 (
@@ -13879,16 +13879,16 @@ ruleOptimisationRequirement returns [EObject current=null]
 	        }
         }
 		{ 
-	        newCompositeNode(grammarAccess.getOptimisationRequirementAccess().getApplicationApplicationCrossReference_7_1_0()); 
+	        newCompositeNode(grammarAccess.getOptimisationRequirementAccess().getPropertyPropertyCrossReference_7_1_0()); 
 	    }
 		ruleFqn		{ 
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))?(	otherlv_11='component: ' 
+))?(	otherlv_11='application: ' 
     {
-    	newLeafNode(otherlv_11, grammarAccess.getOptimisationRequirementAccess().getComponentKeyword_8_0());
+    	newLeafNode(otherlv_11, grammarAccess.getOptimisationRequirementAccess().getApplicationKeyword_8_0());
     }
 (
 (
@@ -13898,38 +13898,57 @@ ruleOptimisationRequirement returns [EObject current=null]
 	        }
         }
 		{ 
-	        newCompositeNode(grammarAccess.getOptimisationRequirementAccess().getComponentComponentCrossReference_8_1_0()); 
+	        newCompositeNode(grammarAccess.getOptimisationRequirementAccess().getApplicationApplicationCrossReference_8_1_0()); 
 	    }
 		ruleFqn		{ 
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))?(	otherlv_13='priority: ' 
+))?(	otherlv_13='component: ' 
     {
-    	newLeafNode(otherlv_13, grammarAccess.getOptimisationRequirementAccess().getPriorityKeyword_9_0());
+    	newLeafNode(otherlv_13, grammarAccess.getOptimisationRequirementAccess().getComponentKeyword_9_0());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getOptimisationRequirementRule());
+	        }
+        }
+		{ 
+	        newCompositeNode(grammarAccess.getOptimisationRequirementAccess().getComponentComponentCrossReference_9_1_0()); 
+	    }
+		ruleFqn		{ 
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))?(	otherlv_15='priority: ' 
+    {
+    	newLeafNode(otherlv_15, grammarAccess.getOptimisationRequirementAccess().getPriorityKeyword_10_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getOptimisationRequirementAccess().getPriorityEDoubleParserRuleCall_9_1_0()); 
+	        newCompositeNode(grammarAccess.getOptimisationRequirementAccess().getPriorityEDoubleParserRuleCall_10_1_0()); 
 	    }
-		lv_priority_14_0=ruleEDouble		{
+		lv_priority_16_0=ruleEDouble		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getOptimisationRequirementRule());
 	        }
        		set(
        			$current, 
        			"priority",
-        		lv_priority_14_0, 
+        		lv_priority_16_0, 
         		"EDouble");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))?	otherlv_15='}' 
+))?	otherlv_17='}' 
     {
-    	newLeafNode(otherlv_15, grammarAccess.getOptimisationRequirementAccess().getRightCurlyBracketKeyword_10());
+    	newLeafNode(otherlv_17, grammarAccess.getOptimisationRequirementAccess().getRightCurlyBracketKeyword_11());
     }
 )
 ;
