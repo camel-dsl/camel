@@ -22,11 +22,11 @@ import org.eclipse.emf.ecore.EOperation;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.type.impl.RangeUnionImpl#getRanges <em>Ranges</em>}</li>
  *   <li>{@link eu.paasage.camel.type.impl.RangeUnionImpl#getPrimitiveType <em>Primitive Type</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

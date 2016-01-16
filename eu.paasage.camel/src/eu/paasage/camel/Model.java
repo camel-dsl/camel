@@ -13,11 +13,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.Model#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.Model#getImportURI <em>Import URI</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.CamelPackage#getModel()
  * @model abstract="true"

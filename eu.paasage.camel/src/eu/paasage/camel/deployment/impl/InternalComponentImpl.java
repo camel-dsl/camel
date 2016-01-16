@@ -22,12 +22,12 @@ import org.eclipse.emf.ecore.EOperation;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.deployment.impl.InternalComponentImpl#getCompositeInternalComponents <em>Composite Internal Components</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.impl.InternalComponentImpl#getRequiredCommunications <em>Required Communications</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.impl.InternalComponentImpl#getRequiredHost <em>Required Host</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

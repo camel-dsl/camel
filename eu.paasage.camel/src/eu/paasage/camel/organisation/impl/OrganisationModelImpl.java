@@ -28,7 +28,6 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.impl.OrganisationModelImpl#getOrganisation <em>Organisation</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.impl.OrganisationModelImpl#getProvider <em>Provider</em>}</li>
@@ -42,6 +41,7 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link eu.paasage.camel.organisation.impl.OrganisationModelImpl#getSecurityLevel <em>Security Level</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.impl.OrganisationModelImpl#getResourceFilters <em>Resource Filters</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

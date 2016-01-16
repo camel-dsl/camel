@@ -10,10 +10,10 @@ package eu.paasage.camel.metric;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.RawMetricContext#getSensor <em>Sensor</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.metric.MetricPackage#getRawMetricContext()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='raw_metric_context_correct_metric_type'"

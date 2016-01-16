@@ -13,7 +13,6 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.OrganisationModel#getOrganisation <em>Organisation</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.OrganisationModel#getProvider <em>Provider</em>}</li>
@@ -27,6 +26,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link eu.paasage.camel.organisation.OrganisationModel#getSecurityLevel <em>Security Level</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.OrganisationModel#getResourceFilters <em>Resource Filters</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.organisation.OrganisationPackage#getOrganisationModel()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='org_model_provider_or_organisation_supplied'"

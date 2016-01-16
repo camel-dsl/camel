@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.scalability.impl.VerticalScalingActionImpl#getMemoryUpdate <em>Memory Update</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.impl.VerticalScalingActionImpl#getCPUUpdate <em>CPU Update</em>}</li>
@@ -22,6 +21,7 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link eu.paasage.camel.scalability.impl.VerticalScalingActionImpl#getIoUpdate <em>Io Update</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.impl.VerticalScalingActionImpl#getNetworkUpdate <em>Network Update</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

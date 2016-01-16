@@ -10,11 +10,11 @@ package eu.paasage.camel.requirement;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.requirement.OSRequirement#getOs <em>Os</em>}</li>
  *   <li>{@link eu.paasage.camel.requirement.OSRequirement#isIs64os <em>Is64os</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.requirement.RequirementPackage#getOSRequirement()
  * @model

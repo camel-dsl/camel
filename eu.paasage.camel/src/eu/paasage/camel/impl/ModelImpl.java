@@ -17,11 +17,11 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.impl.ModelImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.impl.ModelImpl#getImportURI <em>Import URI</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

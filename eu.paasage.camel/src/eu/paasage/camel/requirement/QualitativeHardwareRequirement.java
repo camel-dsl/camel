@@ -10,11 +10,11 @@ package eu.paasage.camel.requirement;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.requirement.QualitativeHardwareRequirement#getMinBenchmark <em>Min Benchmark</em>}</li>
  *   <li>{@link eu.paasage.camel.requirement.QualitativeHardwareRequirement#getMaxBenchmark <em>Max Benchmark</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.requirement.RequirementPackage#getQualitativeHardwareRequirement()
  * @model

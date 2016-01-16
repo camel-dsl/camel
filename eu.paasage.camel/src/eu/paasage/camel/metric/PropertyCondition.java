@@ -12,12 +12,12 @@ import eu.paasage.camel.unit.TimeIntervalUnit;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.PropertyCondition#getPropertyContext <em>Property Context</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.PropertyCondition#getUnit <em>Unit</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.PropertyCondition#getTimeUnit <em>Time Unit</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.metric.MetricPackage#getPropertyCondition()
  * @model

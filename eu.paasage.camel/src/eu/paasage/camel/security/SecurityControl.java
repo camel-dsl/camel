@@ -13,7 +13,6 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.security.SecurityControl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.security.SecurityControl#getDomain <em>Domain</em>}</li>
@@ -23,6 +22,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link eu.paasage.camel.security.SecurityControl#getRawSecurityMetrics <em>Raw Security Metrics</em>}</li>
  *   <li>{@link eu.paasage.camel.security.SecurityControl#getCompositeSecurityMetrics <em>Composite Security Metrics</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.security.SecurityPackage#getSecurityControl()
  * @model

@@ -11,11 +11,11 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.Action#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.Action#getType <em>Type</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.CamelPackage#getAction()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='correct_action_type'"

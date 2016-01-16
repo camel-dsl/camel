@@ -10,10 +10,10 @@ package eu.paasage.camel.deployment;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.deployment.VM#getVmRequirementSet <em>Vm Requirement Set</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.deployment.DeploymentPackage#getVM()
  * @model

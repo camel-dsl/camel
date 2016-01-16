@@ -19,7 +19,6 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.impl.CloudProviderImpl#isPublic <em>Public</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.impl.CloudProviderImpl#isSaaS <em>Saa S</em>}</li>
@@ -28,6 +27,7 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link eu.paasage.camel.organisation.impl.CloudProviderImpl#getProviderModel <em>Provider Model</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.impl.CloudProviderImpl#getSecurityCapability <em>Security Capability</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

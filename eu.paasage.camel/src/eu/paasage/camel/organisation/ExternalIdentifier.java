@@ -11,11 +11,11 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.ExternalIdentifier#getIdentifier <em>Identifier</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.ExternalIdentifier#getDescription <em>Description</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.organisation.OrganisationPackage#getExternalIdentifier()
  * @model

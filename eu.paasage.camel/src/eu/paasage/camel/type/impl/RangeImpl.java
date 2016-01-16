@@ -22,12 +22,12 @@ import org.eclipse.emf.ecore.EOperation;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.type.impl.RangeImpl#getLowerLimit <em>Lower Limit</em>}</li>
  *   <li>{@link eu.paasage.camel.type.impl.RangeImpl#getUpperLimit <em>Upper Limit</em>}</li>
  *   <li>{@link eu.paasage.camel.type.impl.RangeImpl#getPrimitiveType <em>Primitive Type</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

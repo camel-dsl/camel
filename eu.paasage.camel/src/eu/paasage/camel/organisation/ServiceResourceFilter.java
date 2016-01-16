@@ -10,11 +10,11 @@ package eu.paasage.camel.organisation;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.ServiceResourceFilter#getServiceURL <em>Service URL</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.ServiceResourceFilter#isEveryService <em>Every Service</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.organisation.OrganisationPackage#getServiceResourceFilter()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='service_resource_filter_validity'"

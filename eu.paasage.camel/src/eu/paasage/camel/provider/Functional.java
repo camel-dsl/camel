@@ -10,12 +10,12 @@ package eu.paasage.camel.provider;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.provider.Functional#getType <em>Type</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.Functional#getOrder <em>Order</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.Functional#getValue <em>Value</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.provider.ProviderPackage#getFunctional()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='correct_values_for_functional'"

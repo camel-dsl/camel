@@ -11,11 +11,11 @@ import eu.paasage.camel.deployment.InternalComponent;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.scalability.HorizontalScalingAction#getCount <em>Count</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.HorizontalScalingAction#getInternalComponent <em>Internal Component</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.scalability.ScalabilityPackage#getHorizontalScalingAction()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='horizontal_scale_action_correct_count horizontal_scale_action_correct_type'"

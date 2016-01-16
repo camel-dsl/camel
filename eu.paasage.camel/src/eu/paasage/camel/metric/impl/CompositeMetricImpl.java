@@ -23,10 +23,10 @@ import org.eclipse.emf.ecore.EOperation;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.impl.CompositeMetricImpl#getFormula <em>Formula</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -10,13 +10,13 @@ package eu.paasage.camel.provider;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.provider.Requires#getScopeFrom <em>Scope From</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.Requires#getScopeTo <em>Scope To</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.Requires#getCardFrom <em>Card From</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.Requires#getCardTo <em>Card To</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.provider.ProviderPackage#getRequires()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='requires_cardFrom_to_conformance'"

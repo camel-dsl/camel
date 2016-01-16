@@ -20,7 +20,6 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.impl.ConditionContextImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.impl.ConditionContextImpl#getComponent <em>Component</em>}</li>
@@ -30,6 +29,7 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  *   <li>{@link eu.paasage.camel.metric.impl.ConditionContextImpl#getMaxQuantity <em>Max Quantity</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.impl.ConditionContextImpl#isIsRelative <em>Is Relative</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

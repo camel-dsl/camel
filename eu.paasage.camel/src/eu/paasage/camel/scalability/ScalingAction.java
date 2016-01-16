@@ -13,10 +13,10 @@ import eu.paasage.camel.deployment.VM;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.scalability.ScalingAction#getVm <em>Vm</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.scalability.ScalabilityPackage#getScalingAction()
  * @model abstract="true"

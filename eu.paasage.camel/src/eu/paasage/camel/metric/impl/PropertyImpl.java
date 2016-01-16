@@ -19,7 +19,6 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.impl.PropertyImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.impl.PropertyImpl#getDescription <em>Description</em>}</li>
@@ -27,6 +26,7 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  *   <li>{@link eu.paasage.camel.metric.impl.PropertyImpl#getSubProperties <em>Sub Properties</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.impl.PropertyImpl#getSensors <em>Sensors</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

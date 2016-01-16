@@ -15,7 +15,6 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.execution.ActionRealisation#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.ActionRealisation#getAction <em>Action</em>}</li>
@@ -23,6 +22,7 @@ import org.eclipse.emf.cdo.CDOObject;
  *   <li>{@link eu.paasage.camel.execution.ActionRealisation#getEndTime <em>End Time</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.ActionRealisation#getLowLevelActions <em>Low Level Actions</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.execution.ExecutionPackage#getActionRealisation()
  * @model

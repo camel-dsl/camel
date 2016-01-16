@@ -10,12 +10,12 @@ package eu.paasage.camel.scalability;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.scalability.UnaryEventPattern#getEvent <em>Event</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.UnaryEventPattern#getOccurrenceNum <em>Occurrence Num</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.UnaryEventPattern#getOperator <em>Operator</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.scalability.ScalabilityPackage#getUnaryEventPattern()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='unary_event_pattern_correct_values_per_operator'"

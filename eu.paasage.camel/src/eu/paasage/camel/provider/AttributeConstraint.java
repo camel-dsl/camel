@@ -13,7 +13,6 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.provider.AttributeConstraint#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.AttributeConstraint#getFrom <em>From</em>}</li>
@@ -21,6 +20,7 @@ import org.eclipse.emf.cdo.CDOObject;
  *   <li>{@link eu.paasage.camel.provider.AttributeConstraint#getFromValue <em>From Value</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.AttributeConstraint#getToValue <em>To Value</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.provider.ProviderPackage#getAttributeConstraint()
  * @model annotation="Ecore attributeConstraintValidation='atLeastOneDefinied'"

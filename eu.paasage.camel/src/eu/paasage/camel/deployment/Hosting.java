@@ -10,13 +10,13 @@ package eu.paasage.camel.deployment;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.deployment.Hosting#getProvidedHost <em>Provided Host</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.Hosting#getRequiredHost <em>Required Host</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.Hosting#getProvidedHostConfiguration <em>Provided Host Configuration</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.Hosting#getRequiredHostConfiguration <em>Required Host Configuration</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.deployment.DeploymentPackage#getHosting()
  * @model

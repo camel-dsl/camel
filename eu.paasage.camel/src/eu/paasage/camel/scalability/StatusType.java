@@ -144,8 +144,6 @@ public enum StatusType implements Enumerator {
 	 * Returns the '<em><b>Status Type</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param literal the literal.
-	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static StatusType get(String literal) {
@@ -162,8 +160,6 @@ public enum StatusType implements Enumerator {
 	 * Returns the '<em><b>Status Type</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param name the name.
-	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static StatusType getByName(String name) {
@@ -180,8 +176,6 @@ public enum StatusType implements Enumerator {
 	 * Returns the '<em><b>Status Type</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the integer value.
-	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static StatusType get(int value) {

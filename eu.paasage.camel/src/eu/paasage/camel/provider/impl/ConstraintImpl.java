@@ -19,13 +19,13 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.provider.impl.ConstraintImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.impl.ConstraintImpl#getFrom <em>From</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.impl.ConstraintImpl#getTo <em>To</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.impl.ConstraintImpl#getAttributeConstraints <em>Attribute Constraints</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

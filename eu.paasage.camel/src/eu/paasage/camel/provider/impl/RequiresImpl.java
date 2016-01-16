@@ -15,13 +15,13 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.provider.impl.RequiresImpl#getScopeFrom <em>Scope From</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.impl.RequiresImpl#getScopeTo <em>Scope To</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.impl.RequiresImpl#getCardFrom <em>Card From</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.impl.RequiresImpl#getCardTo <em>Card To</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

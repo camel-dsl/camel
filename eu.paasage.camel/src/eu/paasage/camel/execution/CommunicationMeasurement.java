@@ -11,11 +11,11 @@ import eu.paasage.camel.deployment.VMInstance;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.execution.CommunicationMeasurement#getSourceVMInstance <em>Source VM Instance</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.CommunicationMeasurement#getDestinationVMInstance <em>Destination VM Instance</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.execution.ExecutionPackage#getCommunicationMeasurement()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='resource_coupling_measurement_diff_vm_instances'"

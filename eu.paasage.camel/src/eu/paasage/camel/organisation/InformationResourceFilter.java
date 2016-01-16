@@ -10,11 +10,11 @@ package eu.paasage.camel.organisation;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.InformationResourceFilter#getInformationResourcePath <em>Information Resource Path</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.InformationResourceFilter#isEveryInformationResource <em>Every Information Resource</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.organisation.OrganisationPackage#getInformationResourceFilter()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='information_resource_filter_validity'"

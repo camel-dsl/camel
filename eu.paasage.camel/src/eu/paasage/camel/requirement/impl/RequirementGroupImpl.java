@@ -22,12 +22,12 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.requirement.impl.RequirementGroupImpl#getRequirements <em>Requirements</em>}</li>
  *   <li>{@link eu.paasage.camel.requirement.impl.RequirementGroupImpl#getApplication <em>Application</em>}</li>
  *   <li>{@link eu.paasage.camel.requirement.impl.RequirementGroupImpl#getRequirementOperator <em>Requirement Operator</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

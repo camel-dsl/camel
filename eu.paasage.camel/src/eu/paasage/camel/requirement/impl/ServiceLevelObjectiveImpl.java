@@ -15,10 +15,10 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.requirement.impl.ServiceLevelObjectiveImpl#getCustomServiceLevel <em>Custom Service Level</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

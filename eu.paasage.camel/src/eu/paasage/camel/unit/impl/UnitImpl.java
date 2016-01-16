@@ -22,11 +22,11 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.unit.impl.UnitImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.unit.impl.UnitImpl#getUnit <em>Unit</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

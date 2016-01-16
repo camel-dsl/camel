@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.deployment.impl.CommunicationImpl#getType <em>Type</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.impl.CommunicationImpl#getProvidedCommunication <em>Provided Communication</em>}</li>
@@ -25,6 +24,7 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link eu.paasage.camel.deployment.impl.CommunicationImpl#getProvidedPortConfiguration <em>Provided Port Configuration</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.impl.CommunicationImpl#getRequiredPortConfiguration <em>Required Port Configuration</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

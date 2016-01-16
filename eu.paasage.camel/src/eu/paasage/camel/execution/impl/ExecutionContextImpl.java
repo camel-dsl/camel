@@ -25,7 +25,6 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.execution.impl.ExecutionContextImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.impl.ExecutionContextImpl#getApplication <em>Application</em>}</li>
@@ -36,6 +35,7 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  *   <li>{@link eu.paasage.camel.execution.impl.ExecutionContextImpl#getDeploymentModel <em>Deployment Model</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.impl.ExecutionContextImpl#getRequirementGroup <em>Requirement Group</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

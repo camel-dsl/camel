@@ -11,10 +11,10 @@ import eu.paasage.camel.deployment.VMInstance;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.execution.VMMeasurement#getVmInstance <em>Vm Instance</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.execution.ExecutionPackage#getVMMeasurement()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='resource_measurement_ec_deployment_model_vm_instance resource_measurement_metric_vm_instance'"

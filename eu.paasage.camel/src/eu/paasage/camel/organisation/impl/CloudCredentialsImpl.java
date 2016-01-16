@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.impl.CloudCredentialsImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.impl.CloudCredentialsImpl#getCloudProvider <em>Cloud Provider</em>}</li>
@@ -24,6 +23,7 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link eu.paasage.camel.organisation.impl.CloudCredentialsImpl#getUsername <em>Username</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.impl.CloudCredentialsImpl#getPassword <em>Password</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

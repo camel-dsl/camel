@@ -22,7 +22,6 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.impl.UserImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.impl.UserImpl#getEmail <em>Email</em>}</li>
@@ -35,6 +34,7 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link eu.paasage.camel.organisation.impl.UserImpl#getDeploymentModels <em>Deployment Models</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.impl.UserImpl#getPaasageCredentials <em>Paasage Credentials</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

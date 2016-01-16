@@ -24,7 +24,6 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.impl.RoleAssignmentImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.impl.RoleAssignmentImpl#getUser <em>User</em>}</li>
@@ -34,6 +33,7 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  *   <li>{@link eu.paasage.camel.organisation.impl.RoleAssignmentImpl#getEndTime <em>End Time</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.impl.RoleAssignmentImpl#getAssignmentTime <em>Assignment Time</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -694,22 +694,6 @@ public class CamelPackageImpl extends EPackageImpl implements CamelPackage {
 	}
 
 	/**
-	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot</b>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void createPivotAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";	
-		addAnnotation
-		  (actionEClass, 
-		   source, 
-		   new String[] {
-			 "correct_action_type", "Tuple {\n\tmessage : String = \'Action: \' + self.toString() + \' has a wrong type (\' + self.type.toString() +\n\t\t\t\t\t\'). Any kind of scaling action should be take one of the four possible action type values, while in the opposite case should map to a CREATION_EVENT\',\n\tstatus : Boolean = if\n\t\t\t\t\t\t(self.oclIsKindOf(camel::scalability::ScalingAction))\n\t\t\t\t\tthen (self.type = ActionType::SCALE_IN or self.type = ActionType::SCALE_OUT or self.type = ActionType::SCALE_UP or\n\t\t\t\t\t\tself.type = ActionType::SCALE_DOWN)\n\t\t\t\t\telse not (self.type = ActionType::SCALE_IN or self.type = ActionType::SCALE_OUT or self.type =\n\t\t\t\t\t\tActionType::SCALE_UP or self.type = ActionType::SCALE_DOWN)\n\t\t\t\t\tendif\n}.status"
-		   });
-	}
-
-	/**
 	 * Initializes the annotations for <b>http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName</b>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -740,6 +724,22 @@ public class CamelPackageImpl extends EPackageImpl implements CamelPackage {
 			 "body", "UserGroup",
 			 "unique", "false",
 			 "upper", "*"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createPivotAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";	
+		addAnnotation
+		  (actionEClass, 
+		   source, 
+		   new String[] {
+			 "correct_action_type", "Tuple {\n\tmessage : String = \'Action: \' + self.toString() + \' has a wrong type (\' + self.type.toString() +\n\t\t\t\t\t\'). Any kind of scaling action should be take one of the four possible action type values, while in the opposite case should map to a CREATION_EVENT\',\n\tstatus : Boolean = if\n\t\t\t\t\t\t(self.oclIsKindOf(camel::scalability::ScalingAction))\n\t\t\t\t\tthen (self.type = ActionType::SCALE_IN or self.type = ActionType::SCALE_OUT or self.type = ActionType::SCALE_UP or\n\t\t\t\t\t\tself.type = ActionType::SCALE_DOWN)\n\t\t\t\t\telse not (self.type = ActionType::SCALE_IN or self.type = ActionType::SCALE_OUT or self.type =\n\t\t\t\t\t\tActionType::SCALE_UP or self.type = ActionType::SCALE_DOWN)\n\t\t\t\t\tendif\n}.status"
 		   });
 	}
 

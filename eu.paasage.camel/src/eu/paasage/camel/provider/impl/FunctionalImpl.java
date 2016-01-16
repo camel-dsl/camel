@@ -14,12 +14,12 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.provider.impl.FunctionalImpl#getType <em>Type</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.impl.FunctionalImpl#getOrder <em>Order</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.impl.FunctionalImpl#getValue <em>Value</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

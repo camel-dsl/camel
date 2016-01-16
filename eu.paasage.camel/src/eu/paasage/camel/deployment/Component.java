@@ -11,12 +11,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.deployment.Component#getProvidedCommunications <em>Provided Communications</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.Component#getProvidedHosts <em>Provided Hosts</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.Component#getConfigurations <em>Configurations</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.deployment.DeploymentPackage#getComponent()
  * @model abstract="true"

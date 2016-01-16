@@ -15,7 +15,6 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.ConditionContext#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.ConditionContext#getComponent <em>Component</em>}</li>
@@ -25,6 +24,7 @@ import org.eclipse.emf.cdo.CDOObject;
  *   <li>{@link eu.paasage.camel.metric.ConditionContext#getMaxQuantity <em>Max Quantity</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.ConditionContext#isIsRelative <em>Is Relative</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.metric.MetricPackage#getConditionContext()
  * @model abstract="true"

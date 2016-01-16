@@ -11,10 +11,10 @@ import eu.paasage.camel.metric.Property;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.security.SecurityProperty#getDomain <em>Domain</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.security.SecurityPackage#getSecurityProperty()
  * @model

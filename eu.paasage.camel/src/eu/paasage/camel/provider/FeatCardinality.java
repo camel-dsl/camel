@@ -10,10 +10,10 @@ package eu.paasage.camel.provider;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.provider.FeatCardinality#getValue <em>Value</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.provider.ProviderPackage#getFeatCardinality()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='correct_feat_cardinality'"

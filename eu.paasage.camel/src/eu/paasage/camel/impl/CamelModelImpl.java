@@ -39,7 +39,6 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.impl.CamelModelImpl#getActions <em>Actions</em>}</li>
  *   <li>{@link eu.paasage.camel.impl.CamelModelImpl#getApplications <em>Applications</em>}</li>
@@ -55,6 +54,7 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link eu.paasage.camel.impl.CamelModelImpl#getTypeModels <em>Type Models</em>}</li>
  *   <li>{@link eu.paasage.camel.impl.CamelModelImpl#getUnitModels <em>Unit Models</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

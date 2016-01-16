@@ -11,13 +11,13 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.location.CloudLocation#isIsAssignable <em>Is Assignable</em>}</li>
  *   <li>{@link eu.paasage.camel.location.CloudLocation#getSubLocations <em>Sub Locations</em>}</li>
  *   <li>{@link eu.paasage.camel.location.CloudLocation#getParent <em>Parent</em>}</li>
  *   <li>{@link eu.paasage.camel.location.CloudLocation#getGeographicalRegion <em>Geographical Region</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.location.LocationPackage#getCloudLocation()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='cloud_location_same_as_parent'"

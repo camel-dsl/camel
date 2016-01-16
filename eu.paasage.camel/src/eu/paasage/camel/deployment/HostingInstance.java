@@ -10,12 +10,12 @@ package eu.paasage.camel.deployment;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.deployment.HostingInstance#getType <em>Type</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.HostingInstance#getProvidedHostInstance <em>Provided Host Instance</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.HostingInstance#getRequiredHostInstance <em>Required Host Instance</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.deployment.DeploymentPackage#getHostingInstance()
  * @model

@@ -10,10 +10,10 @@ package eu.paasage.camel.type;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.type.StringValueType#getPrimitiveType <em>Primitive Type</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.type.TypePackage#getStringValueType()
  * @model

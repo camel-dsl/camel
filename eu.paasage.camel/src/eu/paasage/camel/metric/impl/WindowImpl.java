@@ -19,7 +19,6 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.impl.WindowImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.impl.WindowImpl#getUnit <em>Unit</em>}</li>
@@ -28,6 +27,7 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  *   <li>{@link eu.paasage.camel.metric.impl.WindowImpl#getMeasurementSize <em>Measurement Size</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.impl.WindowImpl#getTimeSize <em>Time Size</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

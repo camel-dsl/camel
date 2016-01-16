@@ -21,7 +21,6 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.security.impl.SecurityControlImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.security.impl.SecurityControlImpl#getDomain <em>Domain</em>}</li>
@@ -31,6 +30,7 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  *   <li>{@link eu.paasage.camel.security.impl.SecurityControlImpl#getRawSecurityMetrics <em>Raw Security Metrics</em>}</li>
  *   <li>{@link eu.paasage.camel.security.impl.SecurityControlImpl#getCompositeSecurityMetrics <em>Composite Security Metrics</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

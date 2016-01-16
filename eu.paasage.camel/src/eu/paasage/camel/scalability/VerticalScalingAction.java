@@ -10,7 +10,6 @@ package eu.paasage.camel.scalability;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.scalability.VerticalScalingAction#getMemoryUpdate <em>Memory Update</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.VerticalScalingAction#getCPUUpdate <em>CPU Update</em>}</li>
@@ -19,6 +18,7 @@ package eu.paasage.camel.scalability;
  *   <li>{@link eu.paasage.camel.scalability.VerticalScalingAction#getIoUpdate <em>Io Update</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.VerticalScalingAction#getNetworkUpdate <em>Network Update</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.scalability.ScalabilityPackage#getVerticalScalingAction()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='vertical_scale_action_correct_input vertical_scale_action_correct_type'"

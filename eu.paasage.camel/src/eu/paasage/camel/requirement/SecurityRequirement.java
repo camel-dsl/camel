@@ -17,12 +17,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.requirement.SecurityRequirement#getSecurityControls <em>Security Controls</em>}</li>
  *   <li>{@link eu.paasage.camel.requirement.SecurityRequirement#getApplication <em>Application</em>}</li>
  *   <li>{@link eu.paasage.camel.requirement.SecurityRequirement#getComponent <em>Component</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.requirement.RequirementPackage#getSecurityRequirement()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='security_req_component_in_app'"

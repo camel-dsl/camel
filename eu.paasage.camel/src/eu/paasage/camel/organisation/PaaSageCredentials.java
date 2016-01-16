@@ -10,10 +10,10 @@ package eu.paasage.camel.organisation;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.PaaSageCredentials#getPassword <em>Password</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.organisation.OrganisationPackage#getPaaSageCredentials()
  * @model

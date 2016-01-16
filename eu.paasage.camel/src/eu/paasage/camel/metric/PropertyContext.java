@@ -10,10 +10,10 @@ package eu.paasage.camel.metric;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.PropertyContext#getProperty <em>Property</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.metric.MetricPackage#getPropertyContext()
  * @model

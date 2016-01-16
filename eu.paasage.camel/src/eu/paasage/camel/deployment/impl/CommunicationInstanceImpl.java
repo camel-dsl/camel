@@ -16,12 +16,12 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.deployment.impl.CommunicationInstanceImpl#getType <em>Type</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.impl.CommunicationInstanceImpl#getProvidedCommunicationInstance <em>Provided Communication Instance</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.impl.CommunicationInstanceImpl#getRequiredCommunicationInstance <em>Required Communication Instance</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

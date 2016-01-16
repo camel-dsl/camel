@@ -15,11 +15,11 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.impl.ExternalIdentifierImpl#getIdentifier <em>Identifier</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.impl.ExternalIdentifierImpl#getDescription <em>Description</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

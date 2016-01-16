@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.scalability.impl.BinaryEventPatternImpl#getLeftEvent <em>Left Event</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.impl.BinaryEventPatternImpl#getRightEvent <em>Right Event</em>}</li>
@@ -23,6 +22,7 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link eu.paasage.camel.scalability.impl.BinaryEventPatternImpl#getUpperOccurrenceBound <em>Upper Occurrence Bound</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.impl.BinaryEventPatternImpl#getOperator <em>Operator</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -15,7 +15,6 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.execution.SLOAssessment#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.SLOAssessment#getSlo <em>Slo</em>}</li>
@@ -24,6 +23,7 @@ import org.eclipse.emf.cdo.CDOObject;
  *   <li>{@link eu.paasage.camel.execution.SLOAssessment#getMeasurement <em>Measurement</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.SLOAssessment#getAssessmentTime <em>Assessment Time</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.execution.ExecutionPackage#getSLOAssessment()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='slo_assessment_same_metric slo_assessment_slo_in_reqs_for_execution_context slo_assessment_same_exec_context'"

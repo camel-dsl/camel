@@ -23,12 +23,12 @@ import org.eclipse.emf.ecore.EOperation;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.type.impl.ListImpl#getValues <em>Values</em>}</li>
  *   <li>{@link eu.paasage.camel.type.impl.ListImpl#getPrimitiveType <em>Primitive Type</em>}</li>
  *   <li>{@link eu.paasage.camel.type.impl.ListImpl#getType <em>Type</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

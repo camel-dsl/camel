@@ -18,13 +18,13 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.location.impl.CloudLocationImpl#isIsAssignable <em>Is Assignable</em>}</li>
  *   <li>{@link eu.paasage.camel.location.impl.CloudLocationImpl#getSubLocations <em>Sub Locations</em>}</li>
  *   <li>{@link eu.paasage.camel.location.impl.CloudLocationImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link eu.paasage.camel.location.impl.CloudLocationImpl#getGeographicalRegion <em>Geographical Region</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -13,7 +13,6 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.scalability.Timer#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.Timer#getType <em>Type</em>}</li>
@@ -21,6 +20,7 @@ import org.eclipse.emf.cdo.CDOObject;
  *   <li>{@link eu.paasage.camel.scalability.Timer#getMaxOccurrenceNum <em>Max Occurrence Num</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.Timer#getUnit <em>Unit</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.scalability.ScalabilityPackage#getTimer()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='timer_correct_values'"

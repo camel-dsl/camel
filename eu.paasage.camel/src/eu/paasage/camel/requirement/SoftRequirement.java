@@ -10,10 +10,10 @@ package eu.paasage.camel.requirement;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.requirement.SoftRequirement#getPriority <em>Priority</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.requirement.RequirementPackage#getSoftRequirement()
  * @model abstract="true"

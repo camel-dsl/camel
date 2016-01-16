@@ -16,10 +16,10 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.security.impl.SecurityPropertyImpl#getDomain <em>Domain</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

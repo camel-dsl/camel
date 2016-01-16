@@ -10,12 +10,12 @@ package eu.paasage.camel.metric;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.MetricContext#getMetric <em>Metric</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.MetricContext#getWindow <em>Window</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.MetricContext#getSchedule <em>Schedule</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.metric.MetricPackage#getMetricContext()
  * @model abstract="true"

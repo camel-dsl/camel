@@ -11,7 +11,6 @@ import eu.paasage.camel.deployment.VM;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.requirement.VerticalScaleRequirement#getMinCPU <em>Min CPU</em>}</li>
  *   <li>{@link eu.paasage.camel.requirement.VerticalScaleRequirement#getMaxCPU <em>Max CPU</em>}</li>
@@ -23,6 +22,7 @@ import eu.paasage.camel.deployment.VM;
  *   <li>{@link eu.paasage.camel.requirement.VerticalScaleRequirement#getMaxStorage <em>Max Storage</em>}</li>
  *   <li>{@link eu.paasage.camel.requirement.VerticalScaleRequirement#getVm <em>Vm</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.requirement.RequirementPackage#getVerticalScaleRequirement()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='vert_scale_requirement_correct_param_vals vert_scale_requirement_activ_one_alt'"

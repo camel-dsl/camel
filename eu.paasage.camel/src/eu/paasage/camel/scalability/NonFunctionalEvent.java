@@ -11,11 +11,11 @@ import eu.paasage.camel.metric.MetricCondition;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.scalability.NonFunctionalEvent#getMetricCondition <em>Metric Condition</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.NonFunctionalEvent#isIsViolation <em>Is Violation</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.scalability.ScalabilityPackage#getNonFunctionalEvent()
  * @model

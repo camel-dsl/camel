@@ -15,7 +15,6 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.User#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.User#getEmail <em>Email</em>}</li>
@@ -28,6 +27,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link eu.paasage.camel.organisation.User#getDeploymentModels <em>Deployment Models</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.User#getPaasageCredentials <em>Paasage Credentials</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.organisation.OrganisationPackage#getUser()
  * @model

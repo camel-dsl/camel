@@ -15,10 +15,10 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.location.impl.LocationImpl#getId <em>Id</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

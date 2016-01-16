@@ -24,7 +24,6 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.execution.impl.ExecutionModelImpl#getActionRealisations <em>Action Realisations</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.impl.ExecutionModelImpl#getEventInstances <em>Event Instances</em>}</li>
@@ -33,6 +32,7 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link eu.paasage.camel.execution.impl.ExecutionModelImpl#getSloAssessessments <em>Slo Assessessments</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.impl.ExecutionModelImpl#getRuleTriggers <em>Rule Triggers</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

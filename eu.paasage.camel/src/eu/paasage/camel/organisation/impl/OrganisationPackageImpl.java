@@ -1497,8 +1497,8 @@ public class OrganisationPackageImpl extends EPackageImpl implements Organisatio
 		  (dataCenterEClass, 
 		   source, 
 		   new String[] {
-			 "unique_datacenter_per_provider", "Tuple {\n\tmessage : String = \'There exist data centers of cloud provider: \' + oclContainer().oclAsType(OrganisationModel).provider.name +\n\t\t\t\t\t\' which have the same name or the same code name\',\n\tstatus : Boolean = DataCenter.allInstances()\n\t\t\t\t\t->forAll(p1, p2 | p1 <> p2 and p1.oclContainer().oclAsType(OrganisationModel).provider = p2.oclContainer().oclAsType(OrganisationModel).provider implies p1.name <> p2.name and p1.codeName <>\n\t\t\t\t\t\tp2.codeName)\n}.status",
-			 "no_datacenter_same_location_same_provider", "Tuple {\n\tmessage : String = \'There exist data centers of cloud provider\' +\n\t\t\t\t\toclContainer().oclAsType(OrganisationModel).provider.name + \' which are on the same fine-grained location\',\n\tstatus : Boolean = DataCenter.allInstances()\n\t\t\t\t\t->forAll(p1, p2 | p1 <> p2 and p1.name <> p2.name and p1.oclContainer().oclAsType(OrganisationModel).provider = p2.oclContainer().oclAsType(OrganisationModel).provider implies p1.location <>\n\t\t\t\t\t\tp2.location)\n}.status"
+			 "unique_datacenter_per_provider", "Tuple {\n\tmessage : String = \'There exist data centers of cloud provider that have the same name or the same code name\',\n\tstatus : Boolean = DataCenter.allInstances()\n\t\t\t\t\t->forAll(p1, p2 | p1 <> p2 and p1.oclContainer().oclAsType(OrganisationModel).provider = p2.oclContainer().oclAsType(OrganisationModel).provider implies p1.name <> p2.name and p1.codeName <>\n\t\t\t\t\t\tp2.codeName)\n}.status",
+			 "no_datacenter_same_location_same_provider", "Tuple {\n\tmessage : String = \'There exist data centers of cloud provider which are on the same fine-grained location\',\n\tstatus : Boolean = DataCenter.allInstances()\n\t\t\t\t\t->forAll(p1, p2 | p1 <> p2 and p1.name <> p2.name and p1.oclContainer().oclAsType(OrganisationModel).provider = p2.oclContainer().oclAsType(OrganisationModel).provider implies p1.location <>\n\t\t\t\t\t\tp2.location)\n}.status"
 		   });	
 		addAnnotation
 		  (permissionEClass, 

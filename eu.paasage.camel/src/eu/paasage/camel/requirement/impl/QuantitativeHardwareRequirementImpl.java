@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.requirement.impl.QuantitativeHardwareRequirementImpl#getMinCPU <em>Min CPU</em>}</li>
  *   <li>{@link eu.paasage.camel.requirement.impl.QuantitativeHardwareRequirementImpl#getMaxCPU <em>Max CPU</em>}</li>
@@ -24,6 +23,7 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link eu.paasage.camel.requirement.impl.QuantitativeHardwareRequirementImpl#getMinStorage <em>Min Storage</em>}</li>
  *   <li>{@link eu.paasage.camel.requirement.impl.QuantitativeHardwareRequirementImpl#getMaxStorage <em>Max Storage</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

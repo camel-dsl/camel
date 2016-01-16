@@ -33,7 +33,6 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.CamelModel#getActions <em>Actions</em>}</li>
  *   <li>{@link eu.paasage.camel.CamelModel#getApplications <em>Applications</em>}</li>
@@ -49,6 +48,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link eu.paasage.camel.CamelModel#getTypeModels <em>Type Models</em>}</li>
  *   <li>{@link eu.paasage.camel.CamelModel#getUnitModels <em>Unit Models</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.CamelPackage#getCamelModel()
  * @model

@@ -18,13 +18,13 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.impl.ConditionImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.impl.ConditionImpl#getComparisonOperator <em>Comparison Operator</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.impl.ConditionImpl#getThreshold <em>Threshold</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.impl.ConditionImpl#getValidity <em>Validity</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

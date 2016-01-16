@@ -11,10 +11,10 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.type.ValueType#getName <em>Name</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.type.TypePackage#getValueType()
  * @model abstract="true"

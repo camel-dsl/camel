@@ -22,10 +22,10 @@ import org.eclipse.emf.ecore.EOperation;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.scalability.impl.EventPatternImpl#getTimer <em>Timer</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

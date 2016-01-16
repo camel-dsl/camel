@@ -28,7 +28,6 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.security.impl.SecurityModelImpl#getSecurityControls <em>Security Controls</em>}</li>
  *   <li>{@link eu.paasage.camel.security.impl.SecurityModelImpl#getSecurityRequirements <em>Security Requirements</em>}</li>
@@ -41,6 +40,7 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link eu.paasage.camel.security.impl.SecurityModelImpl#getSecurityCapabilities <em>Security Capabilities</em>}</li>
  *   <li>{@link eu.paasage.camel.security.impl.SecurityModelImpl#getSecuritySLOs <em>Security SL Os</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -10,12 +10,12 @@ package eu.paasage.camel.deployment;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.deployment.CommunicationInstance#getType <em>Type</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.CommunicationInstance#getProvidedCommunicationInstance <em>Provided Communication Instance</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.CommunicationInstance#getRequiredCommunicationInstance <em>Required Communication Instance</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.deployment.DeploymentPackage#getCommunicationInstance()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='communication_instance_correct_port_instances'"

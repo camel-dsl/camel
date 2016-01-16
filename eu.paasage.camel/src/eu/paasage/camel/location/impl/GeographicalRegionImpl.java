@@ -15,12 +15,12 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.location.impl.GeographicalRegionImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.location.impl.GeographicalRegionImpl#getParentRegions <em>Parent Regions</em>}</li>
  *   <li>{@link eu.paasage.camel.location.impl.GeographicalRegionImpl#getAlternativeNames <em>Alternative Names</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

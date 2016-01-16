@@ -17,7 +17,6 @@ import eu.paasage.camel.metric.Property;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.requirement.OptimisationRequirement#getOptimisationFunction <em>Optimisation Function</em>}</li>
  *   <li>{@link eu.paasage.camel.requirement.OptimisationRequirement#getMetric <em>Metric</em>}</li>
@@ -26,6 +25,7 @@ import eu.paasage.camel.metric.Property;
  *   <li>{@link eu.paasage.camel.requirement.OptimisationRequirement#getComponent <em>Component</em>}</li>
  *   <li>{@link eu.paasage.camel.requirement.OptimisationRequirement#getMetricContext <em>Metric Context</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.requirement.RequirementPackage#getOptimisationRequirement()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='optimization_requirement_metric_or_prop'"

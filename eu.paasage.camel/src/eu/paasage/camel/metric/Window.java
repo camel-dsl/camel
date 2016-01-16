@@ -13,7 +13,6 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.Window#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.Window#getUnit <em>Unit</em>}</li>
@@ -22,6 +21,7 @@ import org.eclipse.emf.cdo.CDOObject;
  *   <li>{@link eu.paasage.camel.metric.Window#getMeasurementSize <em>Measurement Size</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.Window#getTimeSize <em>Time Size</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.metric.MetricPackage#getWindow()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='window_positive_params window_right_params_exist'"

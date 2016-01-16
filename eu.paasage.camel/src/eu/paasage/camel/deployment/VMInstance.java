@@ -13,12 +13,12 @@ import eu.paasage.camel.type.SingleValue;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.deployment.VMInstance#getVmType <em>Vm Type</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.VMInstance#getVmTypeValue <em>Vm Type Value</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.VMInstance#getIp <em>Ip</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.deployment.DeploymentPackage#getVMInstance()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='correct_type_for_vm_instance correct_vm_type_value_in_vm_instance'"

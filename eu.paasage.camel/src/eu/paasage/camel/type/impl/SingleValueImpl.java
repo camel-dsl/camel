@@ -20,6 +20,8 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Single Value</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

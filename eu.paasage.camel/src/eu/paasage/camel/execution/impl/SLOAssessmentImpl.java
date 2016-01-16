@@ -21,7 +21,6 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.execution.impl.SLOAssessmentImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.impl.SLOAssessmentImpl#getSlo <em>Slo</em>}</li>
@@ -30,6 +29,7 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  *   <li>{@link eu.paasage.camel.execution.impl.SLOAssessmentImpl#getMeasurement <em>Measurement</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.impl.SLOAssessmentImpl#getAssessmentTime <em>Assessment Time</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

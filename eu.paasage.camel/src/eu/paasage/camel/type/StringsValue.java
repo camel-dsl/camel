@@ -10,10 +10,10 @@ package eu.paasage.camel.type;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.type.StringsValue#getValue <em>Value</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.type.TypePackage#getStringsValue()
  * @model

@@ -13,16 +13,16 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.DataCenter#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.DataCenter#getCodeName <em>Code Name</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.DataCenter#getLocation <em>Location</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.organisation.OrganisationPackage#getDataCenter()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='unique_datacenter_per_provider no_datacenter_same_location_same_provider'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot unique_datacenter_per_provider='Tuple {\n\tmessage : String = \'There exist data centers of cloud provider: \' + oclContainer().oclAsType(OrganisationModel).provider.name +\n\t\t\t\t\t\' which have the same name or the same code name\',\n\tstatus : Boolean = DataCenter.allInstances()\n\t\t\t\t\t->forAll(p1, p2 | p1 <> p2 and p1.oclContainer().oclAsType(OrganisationModel).provider = p2.oclContainer().oclAsType(OrganisationModel).provider implies p1.name <> p2.name and p1.codeName <>\n\t\t\t\t\t\tp2.codeName)\n}.status' no_datacenter_same_location_same_provider='Tuple {\n\tmessage : String = \'There exist data centers of cloud provider\' +\n\t\t\t\t\toclContainer().oclAsType(OrganisationModel).provider.name + \' which are on the same fine-grained location\',\n\tstatus : Boolean = DataCenter.allInstances()\n\t\t\t\t\t->forAll(p1, p2 | p1 <> p2 and p1.name <> p2.name and p1.oclContainer().oclAsType(OrganisationModel).provider = p2.oclContainer().oclAsType(OrganisationModel).provider implies p1.location <>\n\t\t\t\t\t\tp2.location)\n}.status'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot unique_datacenter_per_provider='Tuple {\n\tmessage : String = \'There exist data centers of cloud provider that have the same name or the same code name\',\n\tstatus : Boolean = DataCenter.allInstances()\n\t\t\t\t\t->forAll(p1, p2 | p1 <> p2 and p1.oclContainer().oclAsType(OrganisationModel).provider = p2.oclContainer().oclAsType(OrganisationModel).provider implies p1.name <> p2.name and p1.codeName <>\n\t\t\t\t\t\tp2.codeName)\n}.status' no_datacenter_same_location_same_provider='Tuple {\n\tmessage : String = \'There exist data centers of cloud provider which are on the same fine-grained location\',\n\tstatus : Boolean = DataCenter.allInstances()\n\t\t\t\t\t->forAll(p1, p2 | p1 <> p2 and p1.name <> p2.name and p1.oclContainer().oclAsType(OrganisationModel).provider = p2.oclContainer().oclAsType(OrganisationModel).provider implies p1.location <>\n\t\t\t\t\t\tp2.location)\n}.status'"
  * @extends CDOObject
  * @generated
  */

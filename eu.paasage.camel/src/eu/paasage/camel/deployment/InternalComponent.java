@@ -11,12 +11,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.deployment.InternalComponent#getCompositeInternalComponents <em>Composite Internal Components</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.InternalComponent#getRequiredCommunications <em>Required Communications</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.InternalComponent#getRequiredHost <em>Required Host</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.deployment.DeploymentPackage#getInternalComponent()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='no_recursion_in_parts_of_internal_component'"

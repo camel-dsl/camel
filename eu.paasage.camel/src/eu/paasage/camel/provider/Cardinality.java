@@ -11,11 +11,11 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.provider.Cardinality#getCardinalityMin <em>Cardinality Min</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.Cardinality#getCardinalityMax <em>Cardinality Max</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.provider.ProviderPackage#getCardinality()
  * @model abstract="true"

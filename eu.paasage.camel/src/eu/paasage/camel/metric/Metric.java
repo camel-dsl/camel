@@ -15,7 +15,6 @@ import eu.paasage.camel.unit.Unit;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.Metric#getDescription <em>Description</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.Metric#getValueType <em>Value Type</em>}</li>
@@ -25,6 +24,7 @@ import eu.paasage.camel.unit.Unit;
  *   <li>{@link eu.paasage.camel.metric.Metric#getProperty <em>Property</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.Metric#isIsVariable <em>Is Variable</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.metric.MetricPackage#getMetric()
  * @model abstract="true"

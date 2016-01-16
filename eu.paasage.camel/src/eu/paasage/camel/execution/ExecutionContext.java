@@ -21,7 +21,6 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.execution.ExecutionContext#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.ExecutionContext#getApplication <em>Application</em>}</li>
@@ -32,6 +31,7 @@ import org.eclipse.emf.cdo.CDOObject;
  *   <li>{@link eu.paasage.camel.execution.ExecutionContext#getDeploymentModel <em>Deployment Model</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.ExecutionContext#getRequirementGroup <em>Requirement Group</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.execution.ExecutionPackage#getExecutionContext()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='execution_context_total_cost execution_context_unit_cost'"

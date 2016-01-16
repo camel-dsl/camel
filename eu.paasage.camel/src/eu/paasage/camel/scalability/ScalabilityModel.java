@@ -15,7 +15,6 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.scalability.ScalabilityModel#getRules <em>Rules</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.ScalabilityModel#getEvents <em>Events</em>}</li>
@@ -25,6 +24,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link eu.paasage.camel.scalability.ScalabilityModel#getTimers <em>Timers</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.ScalabilityModel#getScaleRequirements <em>Scale Requirements</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.scalability.ScalabilityPackage#getScalabilityModel()
  * @model

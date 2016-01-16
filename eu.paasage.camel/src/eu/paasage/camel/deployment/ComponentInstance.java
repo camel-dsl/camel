@@ -13,7 +13,6 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.deployment.ComponentInstance#getType <em>Type</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.ComponentInstance#getProvidedCommunicationInstances <em>Provided Communication Instances</em>}</li>
@@ -21,6 +20,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link eu.paasage.camel.deployment.ComponentInstance#getInstantiatedOn <em>Instantiated On</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.ComponentInstance#getDestroyedOn <em>Destroyed On</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.deployment.DeploymentPackage#getComponentInstance()
  * @model abstract="true"

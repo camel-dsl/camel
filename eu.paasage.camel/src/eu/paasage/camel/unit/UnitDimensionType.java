@@ -248,8 +248,6 @@ public enum UnitDimensionType implements Enumerator {
 	 * Returns the '<em><b>Dimension Type</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param literal the literal.
-	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static UnitDimensionType get(String literal) {
@@ -266,8 +264,6 @@ public enum UnitDimensionType implements Enumerator {
 	 * Returns the '<em><b>Dimension Type</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param name the name.
-	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static UnitDimensionType getByName(String name) {
@@ -284,8 +280,6 @@ public enum UnitDimensionType implements Enumerator {
 	 * Returns the '<em><b>Dimension Type</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the integer value.
-	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static UnitDimensionType get(int value) {

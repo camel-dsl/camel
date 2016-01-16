@@ -170,8 +170,6 @@ public enum BinaryPatternOperatorType implements Enumerator {
 	 * Returns the '<em><b>Binary Pattern Operator Type</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param literal the literal.
-	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static BinaryPatternOperatorType get(String literal) {
@@ -188,8 +186,6 @@ public enum BinaryPatternOperatorType implements Enumerator {
 	 * Returns the '<em><b>Binary Pattern Operator Type</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param name the name.
-	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static BinaryPatternOperatorType getByName(String name) {
@@ -206,8 +202,6 @@ public enum BinaryPatternOperatorType implements Enumerator {
 	 * Returns the '<em><b>Binary Pattern Operator Type</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the integer value.
-	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static BinaryPatternOperatorType get(int value) {

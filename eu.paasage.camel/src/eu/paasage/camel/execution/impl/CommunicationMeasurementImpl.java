@@ -15,11 +15,11 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.execution.impl.CommunicationMeasurementImpl#getSourceVMInstance <em>Source VM Instance</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.impl.CommunicationMeasurementImpl#getDestinationVMInstance <em>Destination VM Instance</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -13,11 +13,11 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.MetricFormulaParameter#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.MetricFormulaParameter#getValue <em>Value</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.metric.MetricPackage#getMetricFormulaParameter()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='value_attribute_set_for_non_metric_formula_parameters'"

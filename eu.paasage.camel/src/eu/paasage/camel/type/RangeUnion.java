@@ -11,11 +11,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.type.RangeUnion#getRanges <em>Ranges</em>}</li>
  *   <li>{@link eu.paasage.camel.type.RangeUnion#getPrimitiveType <em>Primitive Type</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.type.TypePackage#getRangeUnion()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='same_primitive_types_in_union_ranges correct_range_union_sequence'"

@@ -13,12 +13,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.location.LocationModel#getCloudLocations <em>Cloud Locations</em>}</li>
  *   <li>{@link eu.paasage.camel.location.LocationModel#getCountries <em>Countries</em>}</li>
  *   <li>{@link eu.paasage.camel.location.LocationModel#getRegions <em>Regions</em>}</li>
  * </ul>
+ * </p>
  *
  * @see eu.paasage.camel.location.LocationPackage#getLocationModel()
  * @model
