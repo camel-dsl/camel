@@ -75,6 +75,7 @@
 'POUNDS'=99
 'PRECEDES'=82
 'PaaS'=37
+'Public'=477
 'REDUCE'=59
 'REMOTE'=17
 'REPEAT'=86
@@ -323,7 +324,6 @@
 'provider: '=139
 'providers: '=360
 'public SSH key: '=297
-'public'=477
 'push'=476
 'qualitative hardware: '=135
 'qualitative'=369

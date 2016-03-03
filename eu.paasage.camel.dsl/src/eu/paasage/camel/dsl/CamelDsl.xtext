@@ -624,7 +624,7 @@ CloudProvider returns organisation::CloudProvider:
         ('www: ' www = EString)?
         ('postal address: ' postalAddress = EString)?
         'email: ' email = EString
-        (public ?= 'public')?
+        (public ?= 'Public')?
         (SaaS ?= 'SaaS')?
         (PaaS ?= 'PaaS')?
         (IaaS ?= 'IaaS')?
