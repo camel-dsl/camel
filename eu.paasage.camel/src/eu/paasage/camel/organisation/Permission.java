@@ -15,6 +15,7 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.Permission#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.Permission#getRole <em>Role</em>}</li>
@@ -23,7 +24,6 @@ import org.eclipse.emf.cdo.CDOObject;
  *   <li>{@link eu.paasage.camel.organisation.Permission#getResourceFilter <em>Resource Filter</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.Permission#getAction <em>Action</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.organisation.OrganisationPackage#getPermission()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='permission_valid_actions'"

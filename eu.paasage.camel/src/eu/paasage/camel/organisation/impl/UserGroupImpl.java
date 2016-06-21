@@ -18,11 +18,11 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.impl.UserGroupImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.impl.UserGroupImpl#getUsers <em>Users</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

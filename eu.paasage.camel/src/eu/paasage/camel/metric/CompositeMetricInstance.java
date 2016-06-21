@@ -11,10 +11,10 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.CompositeMetricInstance#getComposingMetricInstances <em>Composing Metric Instances</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.metric.MetricPackage#getCompositeMetricInstance()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='composite_metric_instance_to_components component_instances_metric_map_formula_templates component_metrics_refer_to_same_level_or_lower'"

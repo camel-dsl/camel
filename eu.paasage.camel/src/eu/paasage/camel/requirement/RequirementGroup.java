@@ -13,12 +13,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.requirement.RequirementGroup#getRequirements <em>Requirements</em>}</li>
  *   <li>{@link eu.paasage.camel.requirement.RequirementGroup#getApplication <em>Application</em>}</li>
  *   <li>{@link eu.paasage.camel.requirement.RequirementGroup#getRequirementOperator <em>Requirement Operator</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.requirement.RequirementPackage#getRequirementGroup()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='applications_in_sub_groups_in_group requirement_group_no_conflict_reqs requirements_in_group_refer_to_group_applications'"

@@ -28,6 +28,7 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.scalability.impl.EventInstanceImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.impl.EventInstanceImpl#getStatus <em>Status</em>}</li>
@@ -35,7 +36,6 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  *   <li>{@link eu.paasage.camel.scalability.impl.EventInstanceImpl#getEvent <em>Event</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.impl.EventInstanceImpl#getMetricInstance <em>Metric Instance</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

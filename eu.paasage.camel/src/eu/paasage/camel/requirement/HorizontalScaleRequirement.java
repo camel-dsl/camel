@@ -11,12 +11,12 @@ import eu.paasage.camel.deployment.InternalComponent;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.requirement.HorizontalScaleRequirement#getMinInstances <em>Min Instances</em>}</li>
  *   <li>{@link eu.paasage.camel.requirement.HorizontalScaleRequirement#getMaxInstances <em>Max Instances</em>}</li>
  *   <li>{@link eu.paasage.camel.requirement.HorizontalScaleRequirement#getComponent <em>Component</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.requirement.RequirementPackage#getHorizontalScaleRequirement()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='horiz_scale_requirement_min_max_enforcement'"

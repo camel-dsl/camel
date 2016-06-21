@@ -13,12 +13,12 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.DataCenter#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.DataCenter#getCodeName <em>Code Name</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.DataCenter#getLocation <em>Location</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.organisation.OrganisationPackage#getDataCenter()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='unique_datacenter_per_provider no_datacenter_same_location_same_provider'"

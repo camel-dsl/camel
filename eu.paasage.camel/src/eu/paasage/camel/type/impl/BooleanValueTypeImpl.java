@@ -14,10 +14,10 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.type.impl.BooleanValueTypeImpl#getPrimitiveType <em>Primitive Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

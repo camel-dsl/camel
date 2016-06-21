@@ -20,12 +20,12 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.security.impl.SecurityCapabilityImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.security.impl.SecurityCapabilityImpl#getSecurityControls <em>Security Controls</em>}</li>
  *   <li>{@link eu.paasage.camel.security.impl.SecurityCapabilityImpl#getDataCenter <em>Data Center</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

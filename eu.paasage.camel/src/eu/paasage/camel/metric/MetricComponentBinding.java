@@ -12,11 +12,11 @@ import eu.paasage.camel.deployment.VMInstance;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.MetricComponentBinding#getVmInstance <em>Vm Instance</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.MetricComponentBinding#getComponentInstance <em>Component Instance</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.metric.MetricPackage#getMetricComponentBinding()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='vm_and_sw_comp_connected_in_component_binding'"

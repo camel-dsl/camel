@@ -10,10 +10,10 @@ package eu.paasage.camel.metric;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.MetricCondition#getMetricContext <em>Metric Context</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.metric.MetricPackage#getMetricCondition()
  * @model

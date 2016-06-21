@@ -156,6 +156,7 @@
           upperBound="-1" eType="#//deployment/RequiredCommunication" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="requiredHost" eType="#//deployment/RequiredHost"
           containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="VM" eSuperTypes="#//deployment/Component">
       <eStructuralFeatures xsi:type="ecore:EReference" name="vmRequirementSet" eType="#//deployment/VMRequirementSet"/>

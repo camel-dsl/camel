@@ -24,6 +24,7 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.execution.impl.RuleTriggerImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.impl.RuleTriggerImpl#getScalabilityRule <em>Scalability Rule</em>}</li>
@@ -32,7 +33,6 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  *   <li>{@link eu.paasage.camel.execution.impl.RuleTriggerImpl#getTrigerringTime <em>Trigerring Time</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.impl.RuleTriggerImpl#getExecutionContext <em>Execution Context</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

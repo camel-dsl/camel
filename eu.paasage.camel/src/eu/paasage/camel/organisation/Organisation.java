@@ -10,13 +10,13 @@ package eu.paasage.camel.organisation;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.Organisation#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.Organisation#getWww <em>Www</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.Organisation#getPostalAddress <em>Postal Address</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.Organisation#getEmail <em>Email</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.organisation.OrganisationPackage#getOrganisation()
  * @model

@@ -21,6 +21,7 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.deployment.impl.VMRequirementSetImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.impl.VMRequirementSetImpl#getLocationRequirement <em>Location Requirement</em>}</li>
@@ -29,7 +30,6 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  *   <li>{@link eu.paasage.camel.deployment.impl.VMRequirementSetImpl#getQuantitativeHardwareRequirement <em>Quantitative Hardware Requirement</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.impl.VMRequirementSetImpl#getOsOrImageRequirement <em>Os Or Image Requirement</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

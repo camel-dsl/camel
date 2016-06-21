@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.deployment.impl.DeploymentModelImpl#getInternalComponents <em>Internal Components</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.impl.DeploymentModelImpl#getInternalComponentInstances <em>Internal Component Instances</em>}</li>
@@ -38,7 +39,6 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link eu.paasage.camel.deployment.impl.DeploymentModelImpl#getVmRequirementSets <em>Vm Requirement Sets</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.impl.DeploymentModelImpl#getGlobalVMRequirementSet <em>Global VM Requirement Set</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

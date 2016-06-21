@@ -13,11 +13,11 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.type.impl.EnumerateValueImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.type.impl.EnumerateValueImpl#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

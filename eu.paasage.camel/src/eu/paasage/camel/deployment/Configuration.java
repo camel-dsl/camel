@@ -10,6 +10,7 @@ package eu.paasage.camel.deployment;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.deployment.Configuration#getDownloadCommand <em>Download Command</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.Configuration#getUploadCommand <em>Upload Command</em>}</li>
@@ -18,7 +19,6 @@ package eu.paasage.camel.deployment;
  *   <li>{@link eu.paasage.camel.deployment.Configuration#getStartCommand <em>Start Command</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.Configuration#getStopCommand <em>Stop Command</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.deployment.DeploymentPackage#getConfiguration()
  * @model

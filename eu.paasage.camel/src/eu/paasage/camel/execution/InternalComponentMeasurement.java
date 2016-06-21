@@ -11,10 +11,10 @@ import eu.paasage.camel.deployment.InternalComponentInstance;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.execution.InternalComponentMeasurement#getInternalComponentInstance <em>Internal Component Instance</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.execution.ExecutionPackage#getInternalComponentMeasurement()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='internal_component_measurement_metric_refer_to_same_component internal_component_measurement_included_in_execution_context'"

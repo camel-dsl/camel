@@ -25,13 +25,13 @@ import org.eclipse.emf.ecore.EOperation;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.impl.MetricFormulaImpl#getFunction <em>Function</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.impl.MetricFormulaImpl#getFunctionArity <em>Function Arity</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.impl.MetricFormulaImpl#getFunctionPattern <em>Function Pattern</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.impl.MetricFormulaImpl#getParameters <em>Parameters</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

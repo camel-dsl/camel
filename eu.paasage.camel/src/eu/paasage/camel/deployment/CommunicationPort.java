@@ -10,10 +10,10 @@ package eu.paasage.camel.deployment;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.deployment.CommunicationPort#getPortNumber <em>Port Number</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.deployment.DeploymentPackage#getCommunicationPort()
  * @model abstract="true"

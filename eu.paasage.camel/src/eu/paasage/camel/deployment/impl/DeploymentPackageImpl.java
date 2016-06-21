@@ -582,6 +582,15 @@ public class DeploymentPackageImpl extends EPackageImpl implements DeploymentPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getInternalComponent_Version() {
+		return (EAttribute)internalComponentEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getInternalComponent__Contains__InternalComponent_InternalComponent() {
 		return internalComponentEClass.getEOperations().get(0);
 	}
@@ -1232,6 +1241,7 @@ public class DeploymentPackageImpl extends EPackageImpl implements DeploymentPac
 		createEReference(internalComponentEClass, INTERNAL_COMPONENT__COMPOSITE_INTERNAL_COMPONENTS);
 		createEReference(internalComponentEClass, INTERNAL_COMPONENT__REQUIRED_COMMUNICATIONS);
 		createEReference(internalComponentEClass, INTERNAL_COMPONENT__REQUIRED_HOST);
+		createEAttribute(internalComponentEClass, INTERNAL_COMPONENT__VERSION);
 		createEOperation(internalComponentEClass, INTERNAL_COMPONENT___CONTAINS__INTERNALCOMPONENT_INTERNALCOMPONENT);
 
 		vmEClass = createEClass(VM);
@@ -1409,6 +1419,7 @@ public class DeploymentPackageImpl extends EPackageImpl implements DeploymentPac
 		initEReference(getInternalComponent_CompositeInternalComponents(), this.getInternalComponent(), null, "compositeInternalComponents", null, 0, -1, InternalComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInternalComponent_RequiredCommunications(), this.getRequiredCommunication(), null, "requiredCommunications", null, 0, -1, InternalComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInternalComponent_RequiredHost(), this.getRequiredHost(), null, "requiredHost", null, 0, 1, InternalComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getInternalComponent_Version(), ecorePackage.getEString(), "version", null, 0, 1, InternalComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getInternalComponent__Contains__InternalComponent_InternalComponent(), ecorePackage.getEBoolean(), "contains", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getInternalComponent(), "ic", 1, 1, IS_UNIQUE, IS_ORDERED);

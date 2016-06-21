@@ -19,6 +19,7 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.execution.Measurement#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.Measurement#getExecutionContext <em>Execution Context</em>}</li>
@@ -29,7 +30,6 @@ import org.eclipse.emf.cdo.CDOObject;
  *   <li>{@link eu.paasage.camel.execution.Measurement#getSlo <em>Slo</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.Measurement#getEventInstance <em>Event Instance</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.execution.ExecutionPackage#getMeasurement()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='measurement_slo_refer_to_correct_metric measurement_event_instance_same_metric correct_measurement_value measurement_metric_refers_to_correct_execution_context'"

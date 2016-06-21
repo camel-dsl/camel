@@ -13,13 +13,13 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.provider.Constraint#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.Constraint#getFrom <em>From</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.Constraint#getTo <em>To</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.Constraint#getAttributeConstraints <em>Attribute Constraints</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.provider.ProviderPackage#getConstraint()
  * @model abstract="true"

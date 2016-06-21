@@ -17,11 +17,11 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.deployment.impl.InternalComponentInstanceImpl#getRequiredCommunicationInstances <em>Required Communication Instances</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.impl.InternalComponentInstanceImpl#getRequiredHostInstance <em>Required Host Instance</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

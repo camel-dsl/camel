@@ -13,11 +13,11 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.impl.InformationResourceFilterImpl#getInformationResourcePath <em>Information Resource Path</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.impl.InformationResourceFilterImpl#isEveryInformationResource <em>Every Information Resource</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

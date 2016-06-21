@@ -21,6 +21,7 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.impl.ApplicationImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.impl.ApplicationImpl#getVersion <em>Version</em>}</li>
@@ -28,7 +29,6 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  *   <li>{@link eu.paasage.camel.impl.ApplicationImpl#getOwner <em>Owner</em>}</li>
  *   <li>{@link eu.paasage.camel.impl.ApplicationImpl#getDeploymentModels <em>Deployment Models</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

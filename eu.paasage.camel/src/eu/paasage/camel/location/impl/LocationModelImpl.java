@@ -20,12 +20,12 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.location.impl.LocationModelImpl#getCloudLocations <em>Cloud Locations</em>}</li>
  *   <li>{@link eu.paasage.camel.location.impl.LocationModelImpl#getCountries <em>Countries</em>}</li>
  *   <li>{@link eu.paasage.camel.location.impl.LocationModelImpl#getRegions <em>Regions</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

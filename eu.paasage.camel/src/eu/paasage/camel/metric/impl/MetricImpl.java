@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.impl.MetricImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.impl.MetricImpl#getValueType <em>Value Type</em>}</li>
@@ -33,7 +34,6 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link eu.paasage.camel.metric.impl.MetricImpl#getProperty <em>Property</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.impl.MetricImpl#isIsVariable <em>Is Variable</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

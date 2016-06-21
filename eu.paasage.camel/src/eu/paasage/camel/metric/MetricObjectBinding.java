@@ -13,11 +13,11 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.MetricObjectBinding#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.MetricObjectBinding#getExecutionContext <em>Execution Context</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.metric.MetricPackage#getMetricObjectBinding()
  * @model abstract="true"

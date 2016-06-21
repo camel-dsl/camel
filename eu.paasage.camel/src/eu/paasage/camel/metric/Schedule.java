@@ -15,6 +15,7 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.Schedule#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.Schedule#getStart <em>Start</em>}</li>
@@ -24,7 +25,6 @@ import org.eclipse.emf.cdo.CDOObject;
  *   <li>{@link eu.paasage.camel.metric.Schedule#getRepetitions <em>Repetitions</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.Schedule#getInterval <em>Interval</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.metric.MetricPackage#getSchedule()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='schedule_correct_values'"

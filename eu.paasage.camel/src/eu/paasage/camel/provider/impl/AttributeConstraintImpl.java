@@ -18,6 +18,7 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.provider.impl.AttributeConstraintImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.impl.AttributeConstraintImpl#getFrom <em>From</em>}</li>
@@ -25,7 +26,6 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  *   <li>{@link eu.paasage.camel.provider.impl.AttributeConstraintImpl#getFromValue <em>From Value</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.impl.AttributeConstraintImpl#getToValue <em>To Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

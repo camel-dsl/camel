@@ -24,6 +24,7 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.impl.ScheduleImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.impl.ScheduleImpl#getStart <em>Start</em>}</li>
@@ -33,7 +34,6 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  *   <li>{@link eu.paasage.camel.metric.impl.ScheduleImpl#getRepetitions <em>Repetitions</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.impl.ScheduleImpl#getInterval <em>Interval</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

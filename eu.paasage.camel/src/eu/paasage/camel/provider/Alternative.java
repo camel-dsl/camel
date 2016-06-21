@@ -11,11 +11,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.provider.Alternative#getGroupCardinality <em>Group Cardinality</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.Alternative#getVariants <em>Variants</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.provider.ProviderPackage#getAlternative()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='alternative_variants_diff_from_sub_features'"

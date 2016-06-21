@@ -19,6 +19,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.scalability.ScalabilityRule#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.ScalabilityRule#getEvent <em>Event</em>}</li>
@@ -26,7 +27,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link eu.paasage.camel.scalability.ScalabilityRule#getEntity <em>Entity</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.ScalabilityRule#getScaleRequirements <em>Scale Requirements</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.scalability.ScalabilityPackage#getScalabilityRule()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='scal_rule_horiz_req_count scal_rule_vert_req_correct_vals scal_rule_no_conficting_reqs'"

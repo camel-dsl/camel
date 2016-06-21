@@ -17,6 +17,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.Application#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.Application#getVersion <em>Version</em>}</li>
@@ -24,7 +25,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link eu.paasage.camel.Application#getOwner <em>Owner</em>}</li>
  *   <li>{@link eu.paasage.camel.Application#getDeploymentModels <em>Deployment Models</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.CamelPackage#getApplication()
  * @model

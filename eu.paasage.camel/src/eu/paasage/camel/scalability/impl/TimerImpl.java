@@ -18,6 +18,7 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.scalability.impl.TimerImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.impl.TimerImpl#getType <em>Type</em>}</li>
@@ -25,7 +26,6 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  *   <li>{@link eu.paasage.camel.scalability.impl.TimerImpl#getMaxOccurrenceNum <em>Max Occurrence Num</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.impl.TimerImpl#getUnit <em>Unit</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

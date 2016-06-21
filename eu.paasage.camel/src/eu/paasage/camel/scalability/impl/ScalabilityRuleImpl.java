@@ -24,6 +24,7 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.scalability.impl.ScalabilityRuleImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.impl.ScalabilityRuleImpl#getEvent <em>Event</em>}</li>
@@ -31,7 +32,6 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  *   <li>{@link eu.paasage.camel.scalability.impl.ScalabilityRuleImpl#getEntity <em>Entity</em>}</li>
  *   <li>{@link eu.paasage.camel.scalability.impl.ScalabilityRuleImpl#getScaleRequirements <em>Scale Requirements</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

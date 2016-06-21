@@ -372,13 +372,22 @@ public interface DeploymentPackage extends EPackage {
 	int INTERNAL_COMPONENT__REQUIRED_HOST = COMPONENT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERNAL_COMPONENT__VERSION = COMPONENT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Internal Component</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNAL_COMPONENT_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 3;
+	int INTERNAL_COMPONENT_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Contains</em>' operation.
@@ -2000,6 +2009,17 @@ public interface DeploymentPackage extends EPackage {
 	EReference getInternalComponent_RequiredHost();
 
 	/**
+	 * Returns the meta object for the attribute '{@link eu.paasage.camel.deployment.InternalComponent#getVersion <em>Version</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Version</em>'.
+	 * @see eu.paasage.camel.deployment.InternalComponent#getVersion()
+	 * @see #getInternalComponent()
+	 * @generated
+	 */
+	EAttribute getInternalComponent_Version();
+
+	/**
 	 * Returns the meta object for the '{@link eu.paasage.camel.deployment.InternalComponent#contains(eu.paasage.camel.deployment.InternalComponent, eu.paasage.camel.deployment.InternalComponent) <em>Contains</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2909,6 +2929,14 @@ public interface DeploymentPackage extends EPackage {
 		 * @generated
 		 */
 		EReference INTERNAL_COMPONENT__REQUIRED_HOST = eINSTANCE.getInternalComponent_RequiredHost();
+
+		/**
+		 * The meta object literal for the '<em><b>Version</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INTERNAL_COMPONENT__VERSION = eINSTANCE.getInternalComponent_Version();
 
 		/**
 		 * The meta object literal for the '<em><b>Contains</b></em>' operation.

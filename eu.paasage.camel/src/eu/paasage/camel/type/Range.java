@@ -10,12 +10,12 @@ package eu.paasage.camel.type;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.type.Range#getLowerLimit <em>Lower Limit</em>}</li>
  *   <li>{@link eu.paasage.camel.type.Range#getUpperLimit <em>Upper Limit</em>}</li>
  *   <li>{@link eu.paasage.camel.type.Range#getPrimitiveType <em>Primitive Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.type.TypePackage#getRange()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='correct_range_type enforce_correct_range_type range_low_less_than_upper range_infs_at_appropriate_pos'"

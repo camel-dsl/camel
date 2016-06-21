@@ -11,10 +11,10 @@ import eu.paasage.camel.metric.Condition;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.requirement.ServiceLevelObjective#getCustomServiceLevel <em>Custom Service Level</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.requirement.RequirementPackage#getServiceLevelObjective()
  * @model

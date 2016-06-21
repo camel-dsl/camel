@@ -25,6 +25,7 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.impl.PermissionImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.impl.PermissionImpl#getRole <em>Role</em>}</li>
@@ -33,7 +34,6 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  *   <li>{@link eu.paasage.camel.organisation.impl.PermissionImpl#getResourceFilter <em>Resource Filter</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.impl.PermissionImpl#getAction <em>Action</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -101,6 +101,7 @@ InternalComponent returns deployment::InternalComponent:
             providedHosts += ProvidedHost |
             requiredHost = RequiredHost |
             configurations += Configuration
+            ('version: ' version=EString)?
         )*
     '}'
 ;

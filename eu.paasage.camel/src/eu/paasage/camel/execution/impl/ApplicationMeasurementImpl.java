@@ -15,10 +15,10 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.execution.impl.ApplicationMeasurementImpl#getApplication <em>Application</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -24,6 +24,7 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.execution.impl.MeasurementImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.impl.MeasurementImpl#getExecutionContext <em>Execution Context</em>}</li>
@@ -34,7 +35,6 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  *   <li>{@link eu.paasage.camel.execution.impl.MeasurementImpl#getSlo <em>Slo</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.impl.MeasurementImpl#getEventInstance <em>Event Instance</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

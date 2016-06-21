@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.execution.ExecutionModel#getActionRealisations <em>Action Realisations</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.ExecutionModel#getEventInstances <em>Event Instances</em>}</li>
@@ -23,7 +24,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link eu.paasage.camel.execution.ExecutionModel#getSloAssessessments <em>Slo Assessessments</em>}</li>
  *   <li>{@link eu.paasage.camel.execution.ExecutionModel#getRuleTriggers <em>Rule Triggers</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.execution.ExecutionPackage#getExecutionModel()
  * @model

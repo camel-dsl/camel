@@ -15,12 +15,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.security.SecurityCapability#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.security.SecurityCapability#getSecurityControls <em>Security Controls</em>}</li>
  *   <li>{@link eu.paasage.camel.security.SecurityCapability#getDataCenter <em>Data Center</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.security.SecurityPackage#getSecurityCapability()
  * @model

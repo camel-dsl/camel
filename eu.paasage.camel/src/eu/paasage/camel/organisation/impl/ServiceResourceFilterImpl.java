@@ -13,11 +13,11 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.impl.ServiceResourceFilterImpl#getServiceURL <em>Service URL</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.impl.ServiceResourceFilterImpl#isEveryService <em>Every Service</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

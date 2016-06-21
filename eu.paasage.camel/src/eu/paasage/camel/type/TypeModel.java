@@ -13,11 +13,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.type.TypeModel#getDataTypes <em>Data Types</em>}</li>
  *   <li>{@link eu.paasage.camel.type.TypeModel#getValues <em>Values</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.type.TypePackage#getTypeModel()
  * @model

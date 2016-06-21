@@ -27,13 +27,13 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.provider.impl.AttributeImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.impl.AttributeImpl#getValue <em>Value</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.impl.AttributeImpl#getValueType <em>Value Type</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.impl.AttributeImpl#getUnitType <em>Unit Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

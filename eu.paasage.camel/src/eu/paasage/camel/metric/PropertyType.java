@@ -92,6 +92,8 @@ public enum PropertyType implements Enumerator {
 	 * Returns the '<em><b>Property Type</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static PropertyType get(String literal) {
@@ -108,6 +110,8 @@ public enum PropertyType implements Enumerator {
 	 * Returns the '<em><b>Property Type</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static PropertyType getByName(String name) {
@@ -124,6 +128,8 @@ public enum PropertyType implements Enumerator {
 	 * Returns the '<em><b>Property Type</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static PropertyType get(int value) {

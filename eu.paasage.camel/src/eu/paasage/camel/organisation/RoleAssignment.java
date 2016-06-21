@@ -13,6 +13,7 @@ import org.eclipse.emf.cdo.CDOObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.organisation.RoleAssignment#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.RoleAssignment#getUser <em>User</em>}</li>
@@ -22,7 +23,6 @@ import org.eclipse.emf.cdo.CDOObject;
  *   <li>{@link eu.paasage.camel.organisation.RoleAssignment#getEndTime <em>End Time</em>}</li>
  *   <li>{@link eu.paasage.camel.organisation.RoleAssignment#getAssignmentTime <em>Assignment Time</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.organisation.OrganisationPackage#getRoleAssignment()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='role_assignment_at_least_user_or_group same_role_concurrent_assignments'"

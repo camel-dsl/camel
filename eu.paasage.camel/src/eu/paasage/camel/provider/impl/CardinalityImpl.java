@@ -15,11 +15,11 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.provider.impl.CardinalityImpl#getCardinalityMin <em>Cardinality Min</em>}</li>
  *   <li>{@link eu.paasage.camel.provider.impl.CardinalityImpl#getCardinalityMax <em>Cardinality Max</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

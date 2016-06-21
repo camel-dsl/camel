@@ -24,6 +24,7 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.metric.impl.MetricInstanceImpl#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.impl.MetricInstanceImpl#getMetric <em>Metric</em>}</li>
@@ -32,7 +33,6 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
  *   <li>{@link eu.paasage.camel.metric.impl.MetricInstanceImpl#getObjectBinding <em>Object Binding</em>}</li>
  *   <li>{@link eu.paasage.camel.metric.impl.MetricInstanceImpl#getMetricContext <em>Metric Context</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

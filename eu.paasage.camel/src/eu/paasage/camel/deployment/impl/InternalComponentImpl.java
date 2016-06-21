@@ -22,12 +22,13 @@ import org.eclipse.emf.ecore.EOperation;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.deployment.impl.InternalComponentImpl#getCompositeInternalComponents <em>Composite Internal Components</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.impl.InternalComponentImpl#getRequiredCommunications <em>Required Communications</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.impl.InternalComponentImpl#getRequiredHost <em>Required Host</em>}</li>
+ *   <li>{@link eu.paasage.camel.deployment.impl.InternalComponentImpl#getVersion <em>Version</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -87,6 +88,24 @@ public class InternalComponentImpl extends ComponentImpl implements InternalComp
 	 */
 	public void setRequiredHost(RequiredHost newRequiredHost) {
 		eSet(DeploymentPackage.Literals.INTERNAL_COMPONENT__REQUIRED_HOST, newRequiredHost);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getVersion() {
+		return (String)eGet(DeploymentPackage.Literals.INTERNAL_COMPONENT__VERSION, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setVersion(String newVersion) {
+		eSet(DeploymentPackage.Literals.INTERNAL_COMPONENT__VERSION, newVersion);
 	}
 
 	/**

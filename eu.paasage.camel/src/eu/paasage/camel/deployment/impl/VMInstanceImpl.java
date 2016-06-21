@@ -21,12 +21,12 @@ import org.eclipse.emf.ecore.EClass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.deployment.impl.VMInstanceImpl#getVmType <em>Vm Type</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.impl.VMInstanceImpl#getVmTypeValue <em>Vm Type Value</em>}</li>
  *   <li>{@link eu.paasage.camel.deployment.impl.VMInstanceImpl#getIp <em>Ip</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

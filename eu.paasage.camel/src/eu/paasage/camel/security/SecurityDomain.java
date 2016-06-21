@@ -13,12 +13,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link eu.paasage.camel.security.SecurityDomain#getId <em>Id</em>}</li>
  *   <li>{@link eu.paasage.camel.security.SecurityDomain#getName <em>Name</em>}</li>
  *   <li>{@link eu.paasage.camel.security.SecurityDomain#getSubDomain <em>Sub Domain</em>}</li>
  * </ul>
- * </p>
  *
  * @see eu.paasage.camel.security.SecurityPackage#getSecurityDomain()
  * @model

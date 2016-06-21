@@ -3213,10 +3213,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__141;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:140:8: ( 'provided communication ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:140:10: 'provided communication '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:140:8: ( 'version: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:140:10: 'version: '
             {
-            match("provided communication "); 
+            match("version: "); 
 
 
             }
@@ -3234,10 +3234,11 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__142;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:141:8: ( ',' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:141:10: ','
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:141:8: ( 'provided communication ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:141:10: 'provided communication '
             {
-            match(','); 
+            match("provided communication "); 
+
 
             }
 
@@ -3254,11 +3255,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__143;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:142:8: ( 'port: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:142:10: 'port: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:142:8: ( ',' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:142:10: ','
             {
-            match("port: "); 
-
+            match(','); 
 
             }
 
@@ -3275,10 +3275,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__144;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:143:8: ( 'required communication ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:143:10: 'required communication '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:143:8: ( 'port: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:143:10: 'port: '
             {
-            match("required communication "); 
+            match("port: "); 
 
 
             }
@@ -3296,10 +3296,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__145;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:144:8: ( 'provided host ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:144:10: 'provided host '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:144:8: ( 'required communication ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:144:10: 'required communication '
             {
-            match("provided host "); 
+            match("required communication "); 
 
 
             }
@@ -3317,10 +3317,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__146;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:145:8: ( 'required host ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:145:10: 'required host '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:145:8: ( 'provided host ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:145:10: 'provided host '
             {
-            match("required host "); 
+            match("provided host "); 
 
 
             }
@@ -3338,10 +3338,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__147;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:146:8: ( 'communication ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:146:10: 'communication '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:146:8: ( 'required host ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:146:10: 'required host '
             {
-            match("communication "); 
+            match("required host "); 
 
 
             }
@@ -3359,10 +3359,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__148;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:147:8: ( 'from ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:147:10: 'from '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:147:8: ( 'communication ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:147:10: 'communication '
             {
-            match("from "); 
+            match("communication "); 
 
 
             }
@@ -3380,10 +3380,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__149;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:148:8: ( 'to ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:148:10: 'to '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:148:8: ( 'from ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:148:10: 'from '
             {
-            match("to "); 
+            match("from "); 
 
 
             }
@@ -3401,10 +3401,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__150;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:149:8: ( 'type: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:149:10: 'type: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:149:8: ( 'to ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:149:10: 'to '
             {
-            match("type: "); 
+            match("to "); 
 
 
             }
@@ -3422,10 +3422,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__151;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:150:8: ( 'provided port ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:150:10: 'provided port '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:150:8: ( 'type: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:150:10: 'type: '
             {
-            match("provided port "); 
+            match("type: "); 
 
 
             }
@@ -3443,10 +3443,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__152;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:151:8: ( 'required port ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:151:10: 'required port '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:151:8: ( 'provided port ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:151:10: 'provided port '
             {
-            match("required port "); 
+            match("provided port "); 
 
 
             }
@@ -3464,10 +3464,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__153;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:152:8: ( 'hosting ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:152:10: 'hosting '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:152:8: ( 'required port ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:152:10: 'required port '
             {
-            match("hosting "); 
+            match("required port "); 
 
 
             }
@@ -3485,10 +3485,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__154;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:153:8: ( 'vm instance ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:153:10: 'vm instance '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:153:8: ( 'hosting ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:153:10: 'hosting '
             {
-            match("vm instance "); 
+            match("hosting "); 
 
 
             }
@@ -3506,10 +3506,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__155;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:154:8: ( 'typed ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:154:10: 'typed '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:154:8: ( 'vm instance ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:154:10: 'vm instance '
             {
-            match("typed "); 
+            match("vm instance "); 
 
 
             }
@@ -3527,10 +3527,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__156;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:155:8: ( 'ip: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:155:10: 'ip: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:155:8: ( 'typed ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:155:10: 'typed '
             {
-            match("ip: "); 
+            match("typed "); 
 
 
             }
@@ -3548,10 +3548,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__157;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:156:8: ( 'vm type:' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:156:10: 'vm type:'
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:156:8: ( 'ip: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:156:10: 'ip: '
             {
-            match("vm type:"); 
+            match("ip: "); 
 
 
             }
@@ -3569,10 +3569,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__158;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:157:8: ( 'vm type value:' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:157:10: 'vm type value:'
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:157:8: ( 'vm type:' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:157:10: 'vm type:'
             {
-            match("vm type value:"); 
+            match("vm type:"); 
 
 
             }
@@ -3590,10 +3590,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__159;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:158:8: ( 'internal component instance ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:158:10: 'internal component instance '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:158:8: ( 'vm type value:' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:158:10: 'vm type value:'
             {
-            match("internal component instance "); 
+            match("vm type value:"); 
 
 
             }
@@ -3611,10 +3611,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__160;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:159:8: ( 'provided communication instance ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:159:10: 'provided communication instance '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:159:8: ( 'internal component instance ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:159:10: 'internal component instance '
             {
-            match("provided communication instance "); 
+            match("internal component instance "); 
 
 
             }
@@ -3632,10 +3632,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__161;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:160:8: ( 'required communication instance ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:160:10: 'required communication instance '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:160:8: ( 'provided communication instance ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:160:10: 'provided communication instance '
             {
-            match("required communication instance "); 
+            match("provided communication instance "); 
 
 
             }
@@ -3653,10 +3653,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__162;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:161:8: ( 'provided host instance ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:161:10: 'provided host instance '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:161:8: ( 'required communication instance ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:161:10: 'required communication instance '
             {
-            match("provided host instance "); 
+            match("required communication instance "); 
 
 
             }
@@ -3674,10 +3674,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__163;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:162:8: ( 'required host instance ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:162:10: 'required host instance '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:162:8: ( 'provided host instance ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:162:10: 'provided host instance '
             {
-            match("required host instance "); 
+            match("provided host instance "); 
 
 
             }
@@ -3695,10 +3695,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__164;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:163:8: ( 'connect ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:163:10: 'connect '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:163:8: ( 'required host instance ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:163:10: 'required host instance '
             {
-            match("connect "); 
+            match("required host instance "); 
 
 
             }
@@ -3716,10 +3716,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__165;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:164:8: ( 'named ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:164:10: 'named '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:164:8: ( 'connect ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:164:10: 'connect '
             {
-            match("named "); 
+            match("connect "); 
 
 
             }
@@ -3737,10 +3737,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__166;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:165:8: ( 'host ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:165:10: 'host '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:165:8: ( 'named ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:165:10: 'named '
             {
-            match("host "); 
+            match("named "); 
 
 
             }
@@ -3758,10 +3758,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__167;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:166:8: ( 'on ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:166:10: 'on '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:166:8: ( 'host ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:166:10: 'host '
             {
-            match("on "); 
+            match("host "); 
 
 
             }
@@ -3779,10 +3779,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__168;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:167:8: ( 'execution model ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:167:10: 'execution model '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:167:8: ( 'on ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:167:10: 'on '
             {
-            match("execution model "); 
+            match("on "); 
 
 
             }
@@ -3800,10 +3800,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__169;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:168:8: ( 'importURI ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:168:10: 'importURI '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:168:8: ( 'execution model ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:168:10: 'execution model '
             {
-            match("importURI "); 
+            match("execution model "); 
 
 
             }
@@ -3821,10 +3821,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__170;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:169:8: ( 'action realisation ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:169:10: 'action realisation '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:169:8: ( 'importURI ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:169:10: 'importURI '
             {
-            match("action realisation "); 
+            match("importURI "); 
 
 
             }
@@ -3842,10 +3842,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__171;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:170:8: ( 'action: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:170:10: 'action: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:170:8: ( 'action realisation ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:170:10: 'action realisation '
             {
-            match("action: "); 
+            match("action realisation "); 
 
 
             }
@@ -3863,10 +3863,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__172;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:171:8: ( 'low level actions: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:171:10: 'low level actions: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:171:8: ( 'action: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:171:10: 'action: '
             {
-            match("low level actions: "); 
+            match("action: "); 
 
 
             }
@@ -3884,10 +3884,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__173;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:172:8: ( 'start time: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:172:10: 'start time: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:172:8: ( 'low level actions: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:172:10: 'low level actions: '
             {
-            match("start time: "); 
+            match("low level actions: "); 
 
 
             }
@@ -3905,10 +3905,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__174;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:173:8: ( 'end time: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:173:10: 'end time: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:173:8: ( 'start time: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:173:10: 'start time: '
             {
-            match("end time: "); 
+            match("start time: "); 
 
 
             }
@@ -3926,10 +3926,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__175;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:174:8: ( 'execution context ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:174:10: 'execution context '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:174:8: ( 'end time: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:174:10: 'end time: '
             {
-            match("execution context "); 
+            match("end time: "); 
 
 
             }
@@ -3947,10 +3947,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__176;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:175:8: ( 'application: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:175:10: 'application: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:175:8: ( 'execution context ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:175:10: 'execution context '
             {
-            match("application: "); 
+            match("execution context "); 
 
 
             }
@@ -3968,10 +3968,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__177;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:176:8: ( 'deployment model: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:176:10: 'deployment model: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:176:8: ( 'application: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:176:10: 'application: '
             {
-            match("deployment model: "); 
+            match("application: "); 
 
 
             }
@@ -3989,10 +3989,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__178;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:177:8: ( 'requirement group: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:177:10: 'requirement group: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:177:8: ( 'deployment model: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:177:10: 'deployment model: '
             {
-            match("requirement group: "); 
+            match("deployment model: "); 
 
 
             }
@@ -4010,10 +4010,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__179;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:178:8: ( 'total cost: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:178:10: 'total cost: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:178:8: ( 'requirement group: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:178:10: 'requirement group: '
             {
-            match("total cost: "); 
+            match("requirement group: "); 
 
 
             }
@@ -4031,10 +4031,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__180;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:179:8: ( 'cost unit: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:179:10: 'cost unit: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:179:8: ( 'total cost: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:179:10: 'total cost: '
             {
-            match("cost unit: "); 
+            match("total cost: "); 
 
 
             }
@@ -4052,10 +4052,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__181;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:180:8: ( 'application measurement ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:180:10: 'application measurement '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:180:8: ( 'cost unit: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:180:10: 'cost unit: '
             {
-            match("application measurement "); 
+            match("cost unit: "); 
 
 
             }
@@ -4073,10 +4073,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__182;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:181:8: ( 'value: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:181:10: 'value: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:181:8: ( 'application measurement ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:181:10: 'application measurement '
             {
-            match("value: "); 
+            match("application measurement "); 
 
 
             }
@@ -4094,10 +4094,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__183;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:182:8: ( 'measurement time: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:182:10: 'measurement time: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:182:8: ( 'value: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:182:10: 'value: '
             {
-            match("measurement time: "); 
+            match("value: "); 
 
 
             }
@@ -4115,10 +4115,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__184;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:183:8: ( 'execution context: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:183:10: 'execution context: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:183:8: ( 'measurement time: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:183:10: 'measurement time: '
             {
-            match("execution context: "); 
+            match("measurement time: "); 
 
 
             }
@@ -4136,10 +4136,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__185;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:184:8: ( 'metric instance: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:184:10: 'metric instance: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:184:8: ( 'execution context: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:184:10: 'execution context: '
             {
-            match("metric instance: "); 
+            match("execution context: "); 
 
 
             }
@@ -4157,10 +4157,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__186;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:185:8: ( 'raw data: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:185:10: 'raw data: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:185:8: ( 'metric instance: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:185:10: 'metric instance: '
             {
-            match("raw data: "); 
+            match("metric instance: "); 
 
 
             }
@@ -4178,10 +4178,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__187;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:186:8: ( 'event instance: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:186:10: 'event instance: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:186:8: ( 'raw data: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:186:10: 'raw data: '
             {
-            match("event instance: "); 
+            match("raw data: "); 
 
 
             }
@@ -4199,10 +4199,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__188;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:187:8: ( 'slo: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:187:10: 'slo: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:187:8: ( 'event instance: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:187:10: 'event instance: '
             {
-            match("slo: "); 
+            match("event instance: "); 
 
 
             }
@@ -4220,10 +4220,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__189;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:188:8: ( 'internal component measurement ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:188:10: 'internal component measurement '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:188:8: ( 'slo: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:188:10: 'slo: '
             {
-            match("internal component measurement "); 
+            match("slo: "); 
 
 
             }
@@ -4241,10 +4241,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__190;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:189:8: ( 'internal component instance: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:189:10: 'internal component instance: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:189:8: ( 'internal component measurement ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:189:10: 'internal component measurement '
             {
-            match("internal component instance: "); 
+            match("internal component measurement "); 
 
 
             }
@@ -4262,10 +4262,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__191;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:190:8: ( 'resource coupling measurement' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:190:10: 'resource coupling measurement'
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:190:8: ( 'internal component instance: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:190:10: 'internal component instance: '
             {
-            match("resource coupling measurement"); 
+            match("internal component instance: "); 
 
 
             }
@@ -4283,10 +4283,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__192;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:191:8: ( 'source vm instance: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:191:10: 'source vm instance: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:191:8: ( 'resource coupling measurement' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:191:10: 'resource coupling measurement'
             {
-            match("source vm instance: "); 
+            match("resource coupling measurement"); 
 
 
             }
@@ -4304,10 +4304,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__193;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:192:8: ( 'destination vm instance: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:192:10: 'destination vm instance: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:192:8: ( 'source vm instance: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:192:10: 'source vm instance: '
             {
-            match("destination vm instance: "); 
+            match("source vm instance: "); 
 
 
             }
@@ -4325,10 +4325,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__194;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:193:8: ( 'vm measurement ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:193:10: 'vm measurement '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:193:8: ( 'destination vm instance: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:193:10: 'destination vm instance: '
             {
-            match("vm measurement "); 
+            match("destination vm instance: "); 
 
 
             }
@@ -4346,10 +4346,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__195;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:194:8: ( 'vm instance: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:194:10: 'vm instance: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:194:8: ( 'vm measurement ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:194:10: 'vm measurement '
             {
-            match("vm instance: "); 
+            match("vm measurement "); 
 
 
             }
@@ -4367,10 +4367,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__196;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:195:8: ( 'assessment ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:195:10: 'assessment '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:195:8: ( 'vm instance: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:195:10: 'vm instance: '
             {
-            match("assessment "); 
+            match("vm instance: "); 
 
 
             }
@@ -4388,10 +4388,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__197;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:196:8: ( 'measurement: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:196:10: 'measurement: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:196:8: ( 'assessment ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:196:10: 'assessment '
             {
-            match("measurement: "); 
+            match("assessment "); 
 
 
             }
@@ -4409,10 +4409,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__198;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:197:8: ( 'assessment time: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:197:10: 'assessment time: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:197:8: ( 'measurement: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:197:10: 'measurement: '
             {
-            match("assessment time: "); 
+            match("measurement: "); 
 
 
             }
@@ -4430,10 +4430,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__199;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:198:8: ( 'rule trigger ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:198:10: 'rule trigger '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:198:8: ( 'assessment time: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:198:10: 'assessment time: '
             {
-            match("rule trigger "); 
+            match("assessment time: "); 
 
 
             }
@@ -4451,10 +4451,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__200;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:199:8: ( 'rule: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:199:10: 'rule: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:199:8: ( 'rule trigger ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:199:10: 'rule trigger '
             {
-            match("rule: "); 
+            match("rule trigger "); 
 
 
             }
@@ -4472,10 +4472,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__201;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:200:8: ( 'triggering time: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:200:10: 'triggering time: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:200:8: ( 'rule: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:200:10: 'rule: '
             {
-            match("triggering time: "); 
+            match("rule: "); 
 
 
             }
@@ -4493,10 +4493,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__202;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:201:8: ( 'action realisations: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:201:10: 'action realisations: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:201:8: ( 'triggering time: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:201:10: 'triggering time: '
             {
-            match("action realisations: "); 
+            match("triggering time: "); 
 
 
             }
@@ -4514,10 +4514,11 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__203;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:202:8: ( '(' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:202:10: '('
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:202:8: ( 'action realisations: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:202:10: 'action realisations: '
             {
-            match('('); 
+            match("action realisations: "); 
+
 
             }
 
@@ -4534,10 +4535,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__204;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:203:8: ( ')' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:203:10: ')'
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:203:8: ( '(' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:203:10: '('
             {
-            match(')'); 
+            match('('); 
 
             }
 
@@ -4554,11 +4555,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__205;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:204:8: ( 'event instances: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:204:10: 'event instances: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:204:8: ( ')' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:204:10: ')'
             {
-            match("event instances: "); 
-
+            match(')'); 
 
             }
 
@@ -4575,10 +4575,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__206;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:205:8: ( 'location model ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:205:10: 'location model '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:205:8: ( 'event instances: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:205:10: 'event instances: '
             {
-            match("location model "); 
+            match("event instances: "); 
 
 
             }
@@ -4596,10 +4596,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__207;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:206:8: ( 'cloud location ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:206:10: 'cloud location '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:206:8: ( 'location model ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:206:10: 'location model '
             {
-            match("cloud location "); 
+            match("location model "); 
 
 
             }
@@ -4617,10 +4617,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__208;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:207:8: ( 'parent: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:207:10: 'parent: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:207:8: ( 'cloud location ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:207:10: 'cloud location '
             {
-            match("parent: "); 
+            match("cloud location "); 
 
 
             }
@@ -4638,10 +4638,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__209;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:208:8: ( 'geographical region: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:208:10: 'geographical region: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:208:8: ( 'parent: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:208:10: 'parent: '
             {
-            match("geographical region: "); 
+            match("parent: "); 
 
 
             }
@@ -4659,10 +4659,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__210;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:209:8: ( 'sub-locations ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:209:10: 'sub-locations '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:209:8: ( 'geographical region: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:209:10: 'geographical region: '
             {
-            match("sub-locations "); 
+            match("geographical region: "); 
 
 
             }
@@ -4680,10 +4680,11 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__211;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:210:8: ( '[' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:210:10: '['
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:210:8: ( 'sub-locations ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:210:10: 'sub-locations '
             {
-            match('['); 
+            match("sub-locations "); 
+
 
             }
 
@@ -4700,10 +4701,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__212;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:211:8: ( ']' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:211:10: ']'
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:211:8: ( '[' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:211:10: '['
             {
-            match(']'); 
+            match('['); 
 
             }
 
@@ -4720,11 +4721,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__213;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:212:8: ( 'country ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:212:10: 'country '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:212:8: ( ']' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:212:10: ']'
             {
-            match("country "); 
-
+            match(']'); 
 
             }
 
@@ -4741,10 +4741,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__214;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:213:8: ( 'name: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:213:10: 'name: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:213:8: ( 'country ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:213:10: 'country '
             {
-            match("name: "); 
+            match("country "); 
 
 
             }
@@ -4762,10 +4762,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__215;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:214:8: ( 'alternative names ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:214:10: 'alternative names '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:214:8: ( 'name: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:214:10: 'name: '
             {
-            match("alternative names "); 
+            match("name: "); 
 
 
             }
@@ -4783,10 +4783,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__216;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:215:8: ( 'parent regions ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:215:10: 'parent regions '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:215:8: ( 'alternative names ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:215:10: 'alternative names '
             {
-            match("parent regions "); 
+            match("alternative names "); 
 
 
             }
@@ -4804,10 +4804,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__217;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:216:8: ( 'region ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:216:10: 'region '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:216:8: ( 'parent regions ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:216:10: 'parent regions '
             {
-            match("region "); 
+            match("parent regions "); 
 
 
             }
@@ -4825,10 +4825,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__218;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:217:8: ( 'metric model ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:217:10: 'metric model '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:217:8: ( 'region ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:217:10: 'region '
             {
-            match("metric model "); 
+            match("region "); 
 
 
             }
@@ -4846,10 +4846,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__219;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:218:8: ( 'importURI' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:218:10: 'importURI'
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:218:8: ( 'metric model ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:218:10: 'metric model '
             {
-            match("importURI"); 
+            match("metric model "); 
 
 
             }
@@ -4867,10 +4867,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__220;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:219:8: ( 'composite metric instance ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:219:10: 'composite metric instance '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:219:8: ( 'importURI' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:219:10: 'importURI'
             {
-            match("composite metric instance "); 
+            match("importURI"); 
 
 
             }
@@ -4888,10 +4888,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__221;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:220:8: ( 'metric: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:220:10: 'metric: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:220:8: ( 'composite metric instance ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:220:10: 'composite metric instance '
             {
-            match("metric: "); 
+            match("composite metric instance "); 
 
 
             }
@@ -4909,10 +4909,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__222;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:221:8: ( 'binding: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:221:10: 'binding: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:221:8: ( 'metric: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:221:10: 'metric: '
             {
-            match("binding: "); 
+            match("metric: "); 
 
 
             }
@@ -4930,10 +4930,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__223;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:222:8: ( 'composing metric instances ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:222:10: 'composing metric instances '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:222:8: ( 'binding: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:222:10: 'binding: '
             {
-            match("composing metric instances "); 
+            match("binding: "); 
 
 
             }
@@ -4951,10 +4951,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__224;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:223:8: ( 'schedule: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:223:10: 'schedule: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:223:8: ( 'composing metric instances ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:223:10: 'composing metric instances '
             {
-            match("schedule: "); 
+            match("composing metric instances "); 
 
 
             }
@@ -4972,10 +4972,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__225;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:224:8: ( 'window: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:224:10: 'window: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:224:8: ( 'schedule: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:224:10: 'schedule: '
             {
-            match("window: "); 
+            match("schedule: "); 
 
 
             }
@@ -4993,10 +4993,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__226;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:225:8: ( 'context: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:225:10: 'context: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:225:8: ( 'window: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:225:10: 'window: '
             {
-            match("context: "); 
+            match("window: "); 
 
 
             }
@@ -5014,10 +5014,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__227;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:226:8: ( 'raw metric instance ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:226:10: 'raw metric instance '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:226:8: ( 'context: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:226:10: 'context: '
             {
-            match("raw metric instance "); 
+            match("context: "); 
 
 
             }
@@ -5035,10 +5035,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__228;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:227:8: ( 'sensor: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:227:10: 'sensor: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:227:8: ( 'raw metric instance ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:227:10: 'raw metric instance '
             {
-            match("sensor: "); 
+            match("raw metric instance "); 
 
 
             }
@@ -5056,10 +5056,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__229;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:228:8: ( 'window ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:228:10: 'window '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:228:8: ( 'sensor: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:228:10: 'sensor: '
             {
-            match("window "); 
+            match("sensor: "); 
 
 
             }
@@ -5077,10 +5077,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__230;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:229:8: ( 'window type: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:229:10: 'window type: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:229:8: ( 'window ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:229:10: 'window '
             {
-            match("window type: "); 
+            match("window "); 
 
 
             }
@@ -5098,10 +5098,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__231;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:230:8: ( 'size type: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:230:10: 'size type: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:230:8: ( 'window type: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:230:10: 'window type: '
             {
-            match("size type: "); 
+            match("window type: "); 
 
 
             }
@@ -5119,10 +5119,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__232;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:231:8: ( 'measurement size: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:231:10: 'measurement size: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:231:8: ( 'size type: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:231:10: 'size type: '
             {
-            match("measurement size: "); 
+            match("size type: "); 
 
 
             }
@@ -5140,10 +5140,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__233;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:232:8: ( 'time size: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:232:10: 'time size: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:232:8: ( 'measurement size: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:232:10: 'measurement size: '
             {
-            match("time size: "); 
+            match("measurement size: "); 
 
 
             }
@@ -5161,10 +5161,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__234;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:233:8: ( 'unit: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:233:10: 'unit: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:233:8: ( 'time size: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:233:10: 'time size: '
             {
-            match("unit: "); 
+            match("time size: "); 
 
 
             }
@@ -5182,10 +5182,11 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__235;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:234:8: ( '-' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:234:10: '-'
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:234:8: ( 'unit: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:234:10: 'unit: '
             {
-            match('-'); 
+            match("unit: "); 
+
 
             }
 
@@ -5202,11 +5203,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__236;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:235:8: ( 'schedule ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:235:10: 'schedule '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:235:8: ( '-' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:235:10: '-'
             {
-            match("schedule "); 
-
+            match('-'); 
 
             }
 
@@ -5223,10 +5223,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__237;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:236:8: ( 'interval: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:236:10: 'interval: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:236:8: ( 'schedule ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:236:10: 'schedule '
             {
-            match("interval: "); 
+            match("schedule "); 
 
 
             }
@@ -5244,10 +5244,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__238;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:237:8: ( 'end: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:237:10: 'end: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:237:8: ( 'interval: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:237:10: 'interval: '
             {
-            match("end: "); 
+            match("interval: "); 
 
 
             }
@@ -5265,10 +5265,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__239;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:238:8: ( 'repetitions: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:238:10: 'repetitions: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:238:8: ( 'end: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:238:10: 'end: '
             {
-            match("repetitions: "); 
+            match("end: "); 
 
 
             }
@@ -5286,10 +5286,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__240;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:239:8: ( 'component binding ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:239:10: 'component binding '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:239:8: ( 'repetitions: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:239:10: 'repetitions: '
             {
-            match("component binding "); 
+            match("repetitions: "); 
 
 
             }
@@ -5307,10 +5307,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__241;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:240:8: ( 'component instance: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:240:10: 'component instance: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:240:8: ( 'component binding ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:240:10: 'component binding '
             {
-            match("component instance: "); 
+            match("component binding "); 
 
 
             }
@@ -5328,10 +5328,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__242;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:241:8: ( 'vm binding ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:241:10: 'vm binding '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:241:8: ( 'component instance: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:241:10: 'component instance: '
             {
-            match("vm binding "); 
+            match("component instance: "); 
 
 
             }
@@ -5349,10 +5349,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__243;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:242:8: ( 'application binding ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:242:10: 'application binding '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:242:8: ( 'vm binding ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:242:10: 'vm binding '
             {
-            match("application binding "); 
+            match("vm binding "); 
 
 
             }
@@ -5370,10 +5370,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__244;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:243:8: ( 'metric condition ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:243:10: 'metric condition '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:243:8: ( 'application binding ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:243:10: 'application binding '
             {
-            match("metric condition "); 
+            match("application binding "); 
 
 
             }
@@ -5391,10 +5391,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__245;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:244:8: ( 'threshold: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:244:10: 'threshold: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:244:8: ( 'metric condition ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:244:10: 'metric condition '
             {
-            match("threshold: "); 
+            match("metric condition "); 
 
 
             }
@@ -5412,10 +5412,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__246;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:245:8: ( 'comparison operator: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:245:10: 'comparison operator: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:245:8: ( 'threshold: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:245:10: 'threshold: '
             {
-            match("comparison operator: "); 
+            match("threshold: "); 
 
 
             }
@@ -5433,10 +5433,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__247;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:246:8: ( 'validity: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:246:10: 'validity: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:246:8: ( 'comparison operator: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:246:10: 'comparison operator: '
             {
-            match("validity: "); 
+            match("comparison operator: "); 
 
 
             }
@@ -5454,10 +5454,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__248;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:247:8: ( 'property condition ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:247:10: 'property condition '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:247:8: ( 'validity: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:247:10: 'validity: '
             {
-            match("property condition "); 
+            match("validity: "); 
 
 
             }
@@ -5475,10 +5475,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__249;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:248:8: ( 'property context: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:248:10: 'property context: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:248:8: ( 'property condition ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:248:10: 'property condition '
             {
-            match("property context: "); 
+            match("property condition "); 
 
 
             }
@@ -5496,10 +5496,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__250;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:249:8: ( 'time unit: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:249:10: 'time unit: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:249:8: ( 'property context: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:249:10: 'property context: '
             {
-            match("time unit: "); 
+            match("property context: "); 
 
 
             }
@@ -5517,10 +5517,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__251;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:250:8: ( 'composite metric context ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:250:10: 'composite metric context '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:250:8: ( 'time unit: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:250:10: 'time unit: '
             {
-            match("composite metric context "); 
+            match("time unit: "); 
 
 
             }
@@ -5538,10 +5538,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__252;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:251:8: ( 'component: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:251:10: 'component: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:251:8: ( 'composite metric context ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:251:10: 'composite metric context '
             {
-            match("component: "); 
+            match("composite metric context "); 
 
 
             }
@@ -5559,10 +5559,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__253;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:252:8: ( 'composing metric contexts ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:252:10: 'composing metric contexts '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:252:8: ( 'component: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:252:10: 'component: '
             {
-            match("composing metric contexts "); 
+            match("component: "); 
 
 
             }
@@ -5580,10 +5580,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__254;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:253:8: ( 'quantifier: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:253:10: 'quantifier: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:253:8: ( 'composing metric contexts ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:253:10: 'composing metric contexts '
             {
-            match("quantifier: "); 
+            match("composing metric contexts "); 
 
 
             }
@@ -5601,10 +5601,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__255;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:254:8: ( 'quantity: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:254:10: 'quantity: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:254:8: ( 'quantifier: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:254:10: 'quantifier: '
             {
-            match("quantity: "); 
+            match("quantifier: "); 
 
 
             }
@@ -5622,10 +5622,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__256;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:255:8: ( '..' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:255:10: '..'
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:255:8: ( 'quantity: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:255:10: 'quantity: '
             {
-            match(".."); 
+            match("quantity: "); 
 
 
             }
@@ -5643,10 +5643,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__257;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:256:8: ( 'raw metric context ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:256:10: 'raw metric context '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:256:8: ( '..' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:256:10: '..'
             {
-            match("raw metric context "); 
+            match(".."); 
 
 
             }
@@ -5664,10 +5664,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__258;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:257:8: ( 'property context ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:257:10: 'property context '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:257:8: ( 'raw metric context ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:257:10: 'raw metric context '
             {
-            match("property context "); 
+            match("raw metric context "); 
 
 
             }
@@ -5685,10 +5685,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__259;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:258:8: ( 'property: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:258:10: 'property: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:258:8: ( 'property context ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:258:10: 'property context '
             {
-            match("property: "); 
+            match("property context "); 
 
 
             }
@@ -5706,10 +5706,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__260;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:259:8: ( 'composite metric ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:259:10: 'composite metric '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:259:8: ( 'property: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:259:10: 'property: '
             {
-            match("composite metric "); 
+            match("property: "); 
 
 
             }
@@ -5727,10 +5727,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__261;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:260:8: ( 'description: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:260:10: 'description: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:260:8: ( 'composite metric ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:260:10: 'composite metric '
             {
-            match("description: "); 
+            match("composite metric "); 
 
 
             }
@@ -5748,10 +5748,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__262;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:261:8: ( 'value direction: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:261:10: 'value direction: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:261:8: ( 'description: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:261:10: 'description: '
             {
-            match("value direction: "); 
+            match("description: "); 
 
 
             }
@@ -5769,10 +5769,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__263;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:262:8: ( 'layer: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:262:10: 'layer: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:262:8: ( 'value direction: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:262:10: 'value direction: '
             {
-            match("layer: "); 
+            match("value direction: "); 
 
 
             }
@@ -5790,10 +5790,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__264;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:263:8: ( 'value type: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:263:10: 'value type: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:263:8: ( 'layer: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:263:10: 'layer: '
             {
-            match("value type: "); 
+            match("layer: "); 
 
 
             }
@@ -5811,10 +5811,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__265;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:264:8: ( 'raw metric ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:264:10: 'raw metric '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:264:8: ( 'value type: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:264:10: 'value type: '
             {
-            match("raw metric "); 
+            match("value type: "); 
 
 
             }
@@ -5832,10 +5832,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__266;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:265:8: ( 'parameter ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:265:10: 'parameter '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:265:8: ( 'raw metric ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:265:10: 'raw metric '
             {
-            match("parameter "); 
+            match("raw metric "); 
 
 
             }
@@ -5853,10 +5853,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__267;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:266:8: ( 'metric formula ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:266:10: 'metric formula '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:266:8: ( 'parameter ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:266:10: 'parameter '
             {
-            match("metric formula "); 
+            match("parameter "); 
 
 
             }
@@ -5874,10 +5874,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__268;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:267:8: ( 'function arity: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:267:10: 'function arity: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:267:8: ( 'metric formula ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:267:10: 'metric formula '
             {
-            match("function arity: "); 
+            match("metric formula "); 
 
 
             }
@@ -5895,10 +5895,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__269;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:268:8: ( 'function pattern: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:268:10: 'function pattern: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:268:8: ( 'function arity: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:268:10: 'function arity: '
             {
-            match("function pattern: "); 
+            match("function arity: "); 
 
 
             }
@@ -5916,10 +5916,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__270;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:269:8: ( 'property ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:269:10: 'property '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:269:8: ( 'function pattern: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:269:10: 'function pattern: '
             {
-            match("property "); 
+            match("function pattern: "); 
 
 
             }
@@ -5937,10 +5937,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__271;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:270:8: ( 'sub-properties ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:270:10: 'sub-properties '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:270:8: ( 'property ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:270:10: 'property '
             {
-            match("sub-properties "); 
+            match("property "); 
 
 
             }
@@ -5958,10 +5958,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__272;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:271:8: ( 'sensors ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:271:10: 'sensors '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:271:8: ( 'sub-properties ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:271:10: 'sub-properties '
             {
-            match("sensors "); 
+            match("sub-properties "); 
 
 
             }
@@ -5979,10 +5979,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__273;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:272:8: ( 'sensor ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:272:10: 'sensor '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:272:8: ( 'sensors ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:272:10: 'sensors '
             {
-            match("sensor "); 
+            match("sensors "); 
 
 
             }
@@ -6000,10 +6000,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__274;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:273:8: ( 'configuration: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:273:10: 'configuration: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:273:8: ( 'sensor ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:273:10: 'sensor '
             {
-            match("configuration: "); 
+            match("sensor "); 
 
 
             }
@@ -6021,10 +6021,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__275;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:274:8: ( 'organisation model ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:274:10: 'organisation model '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:274:8: ( 'configuration: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:274:10: 'configuration: '
             {
-            match("organisation model "); 
+            match("configuration: "); 
 
 
             }
@@ -6042,10 +6042,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__276;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:275:8: ( 'security level: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:275:10: 'security level: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:275:8: ( 'organisation model ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:275:10: 'organisation model '
             {
-            match("security level: "); 
+            match("organisation model "); 
 
 
             }
@@ -6063,10 +6063,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__277;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:276:8: ( 'data centre ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:276:10: 'data centre '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:276:8: ( 'security level: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:276:10: 'security level: '
             {
-            match("data centre "); 
+            match("security level: "); 
 
 
             }
@@ -6084,10 +6084,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__278;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:277:8: ( 'code name: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:277:10: 'code name: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:277:8: ( 'data centre ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:277:10: 'data centre '
             {
-            match("code name: "); 
+            match("data centre "); 
 
 
             }
@@ -6105,10 +6105,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__279;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:278:8: ( 'entity' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:278:10: 'entity'
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:278:8: ( 'code name: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:278:10: 'code name: '
             {
-            match("entity"); 
+            match("code name: "); 
 
 
             }
@@ -6126,10 +6126,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__280;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:279:8: ( 'organisation ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:279:10: 'organisation '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:279:8: ( 'entity' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:279:10: 'entity'
             {
-            match("organisation "); 
+            match("entity"); 
 
 
             }
@@ -6147,10 +6147,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__281;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:280:8: ( 'email: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:280:10: 'email: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:280:8: ( 'organisation ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:280:10: 'organisation '
             {
-            match("email: "); 
+            match("organisation "); 
 
 
             }
@@ -6168,10 +6168,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__282;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:281:8: ( 'www: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:281:10: 'www: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:281:8: ( 'email: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:281:10: 'email: '
             {
-            match("www: "); 
+            match("email: "); 
 
 
             }
@@ -6189,10 +6189,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__283;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:282:8: ( 'postal address: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:282:10: 'postal address: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:282:8: ( 'www: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:282:10: 'www: '
             {
-            match("postal address: "); 
+            match("www: "); 
 
 
             }
@@ -6210,10 +6210,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__284;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:283:8: ( 'provider ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:283:10: 'provider '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:283:8: ( 'postal address: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:283:10: 'postal address: '
             {
-            match("provider "); 
+            match("postal address: "); 
 
 
             }
@@ -6231,10 +6231,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__285;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:284:8: ( 'security capability ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:284:10: 'security capability '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:284:8: ( 'provider ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:284:10: 'provider '
             {
-            match("security capability "); 
+            match("provider "); 
 
 
             }
@@ -6252,10 +6252,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__286;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:285:8: ( 'provider model: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:285:10: 'provider model: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:285:8: ( 'security capability ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:285:10: 'security capability '
             {
-            match("provider model: "); 
+            match("security capability "); 
 
 
             }
@@ -6273,10 +6273,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__287;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:286:8: ( 'user ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:286:10: 'user '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:286:8: ( 'provider model: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:286:10: 'provider model: '
             {
-            match("user "); 
+            match("provider model: "); 
 
 
             }
@@ -6294,10 +6294,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__288;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:287:8: ( 'first name: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:287:10: 'first name: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:287:8: ( 'user ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:287:10: 'user '
             {
-            match("first name: "); 
+            match("user "); 
 
 
             }
@@ -6315,10 +6315,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__289;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:288:8: ( 'last name: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:288:10: 'last name: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:288:8: ( 'first name: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:288:10: 'first name: '
             {
-            match("last name: "); 
+            match("first name: "); 
 
 
             }
@@ -6336,10 +6336,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__290;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:289:8: ( 'cloud credentials ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:289:10: 'cloud credentials '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:289:8: ( 'last name: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:289:10: 'last name: '
             {
-            match("cloud credentials "); 
+            match("last name: "); 
 
 
             }
@@ -6357,10 +6357,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__291;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:290:8: ( 'external identifiers ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:290:10: 'external identifiers '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:290:8: ( 'cloud credentials ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:290:10: 'cloud credentials '
             {
-            match("external identifiers "); 
+            match("cloud credentials "); 
 
 
             }
@@ -6378,10 +6378,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__292;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:291:8: ( 'requirement models ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:291:10: 'requirement models '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:291:8: ( 'external identifiers ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:291:10: 'external identifiers '
             {
-            match("requirement models "); 
+            match("external identifiers "); 
 
 
             }
@@ -6399,10 +6399,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__293;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:292:8: ( 'deployment models ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:292:10: 'deployment models '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:292:8: ( 'requirement models ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:292:10: 'requirement models '
             {
-            match("deployment models "); 
+            match("requirement models "); 
 
 
             }
@@ -6420,10 +6420,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__294;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:293:8: ( 'external id ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:293:10: 'external id '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:293:8: ( 'deployment models ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:293:10: 'deployment models '
             {
-            match("external id "); 
+            match("deployment models "); 
 
 
             }
@@ -6441,10 +6441,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__295;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:294:8: ( 'cloud provider: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:294:10: 'cloud provider: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:294:8: ( 'external id ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:294:10: 'external id '
             {
-            match("cloud provider: "); 
+            match("external id "); 
 
 
             }
@@ -6462,10 +6462,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__296;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:295:8: ( 'security group: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:295:10: 'security group: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:295:8: ( 'cloud provider: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:295:10: 'cloud provider: '
             {
-            match("security group: "); 
+            match("cloud provider: "); 
 
 
             }
@@ -6483,10 +6483,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__297;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:296:8: ( 'public SSH key: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:296:10: 'public SSH key: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:296:8: ( 'security group: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:296:10: 'security group: '
             {
-            match("public SSH key: "); 
+            match("security group: "); 
 
 
             }
@@ -6504,10 +6504,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__298;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:297:8: ( 'private SSH key: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:297:10: 'private SSH key: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:297:8: ( 'public SSH key: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:297:10: 'public SSH key: '
             {
-            match("private SSH key: "); 
+            match("public SSH key: "); 
 
 
             }
@@ -6525,10 +6525,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__299;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:298:8: ( 'username: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:298:10: 'username: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:298:8: ( 'private SSH key: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:298:10: 'private SSH key: '
             {
-            match("username: "); 
+            match("private SSH key: "); 
 
 
             }
@@ -6546,10 +6546,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__300;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:299:8: ( 'password: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:299:10: 'password: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:299:8: ( 'username: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:299:10: 'username: '
             {
-            match("password: "); 
+            match("username: "); 
 
 
             }
@@ -6567,10 +6567,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__301;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:300:8: ( 'paasage credentials ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:300:10: 'paasage credentials '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:300:8: ( 'password: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:300:10: 'password: '
             {
-            match("paasage credentials "); 
+            match("password: "); 
 
 
             }
@@ -6588,10 +6588,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__302;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:301:8: ( 'user group ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:301:10: 'user group '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:301:8: ( 'paasage credentials ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:301:10: 'paasage credentials '
             {
-            match("user group "); 
+            match("paasage credentials "); 
 
 
             }
@@ -6609,10 +6609,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__303;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:302:8: ( 'users ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:302:10: 'users '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:302:8: ( 'user group ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:302:10: 'user group '
             {
-            match("users "); 
+            match("user group "); 
 
 
             }
@@ -6630,10 +6630,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__304;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:303:8: ( 'role assignment ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:303:10: 'role assignment '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:303:8: ( 'users ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:303:10: 'users '
             {
-            match("role assignment "); 
+            match("users "); 
 
 
             }
@@ -6651,10 +6651,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__305;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:304:8: ( 'assigned on: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:304:10: 'assigned on: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:304:8: ( 'role assignment ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:304:10: 'role assignment '
             {
-            match("assigned on: "); 
+            match("role assignment "); 
 
 
             }
@@ -6672,10 +6672,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__306;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:305:8: ( 'role: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:305:10: 'role: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:305:8: ( 'assigned on: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:305:10: 'assigned on: '
             {
-            match("role: "); 
+            match("assigned on: "); 
 
 
             }
@@ -6693,10 +6693,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__307;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:306:8: ( 'user: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:306:10: 'user: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:306:8: ( 'role: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:306:10: 'role: '
             {
-            match("user: "); 
+            match("role: "); 
 
 
             }
@@ -6714,10 +6714,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__308;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:307:8: ( 'user group: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:307:10: 'user group: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:307:8: ( 'user: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:307:10: 'user: '
             {
-            match("user group: "); 
+            match("user: "); 
 
 
             }
@@ -6735,10 +6735,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__309;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:308:8: ( 'role ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:308:10: 'role '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:308:8: ( 'user group: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:308:10: 'user group: '
             {
-            match("role "); 
+            match("user group: "); 
 
 
             }
@@ -6756,10 +6756,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__310;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:309:8: ( 'permission ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:309:10: 'permission '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:309:8: ( 'role ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:309:10: 'role '
             {
-            match("permission "); 
+            match("role "); 
 
 
             }
@@ -6777,10 +6777,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__311;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:310:8: ( 'resource filter: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:310:10: 'resource filter: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:310:8: ( 'permission ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:310:10: 'permission '
             {
-            match("resource filter: "); 
+            match("permission "); 
 
 
             }
@@ -6798,10 +6798,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__312;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:311:8: ( 'information resource filter ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:311:10: 'information resource filter '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:311:8: ( 'resource filter: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:311:10: 'resource filter: '
             {
-            match("information resource filter "); 
+            match("resource filter: "); 
 
 
             }
@@ -6819,10 +6819,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__313;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:312:8: ( 'pattern: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:312:10: 'pattern: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:312:8: ( 'information resource filter ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:312:10: 'information resource filter '
             {
-            match("pattern: "); 
+            match("information resource filter "); 
 
 
             }
@@ -6840,10 +6840,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__314;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:313:8: ( 'information resource path: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:313:10: 'information resource path: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:313:8: ( 'pattern: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:313:10: 'pattern: '
             {
-            match("information resource path: "); 
+            match("pattern: "); 
 
 
             }
@@ -6861,10 +6861,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__315;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:314:8: ( 'service resource filter ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:314:10: 'service resource filter '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:314:8: ( 'information resource path: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:314:10: 'information resource path: '
             {
-            match("service resource filter "); 
+            match("information resource path: "); 
 
 
             }
@@ -6882,10 +6882,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__316;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:315:8: ( 'service url: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:315:10: 'service url: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:315:8: ( 'service resource filter ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:315:10: 'service resource filter '
             {
-            match("service url: "); 
+            match("service resource filter "); 
 
 
             }
@@ -6903,10 +6903,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__317;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:316:8: ( 'provider model ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:316:10: 'provider model '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:316:8: ( 'service url: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:316:10: 'service url: '
             {
-            match("provider model "); 
+            match("service url: "); 
 
 
             }
@@ -6924,10 +6924,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__318;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:317:8: ( 'root ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:317:10: 'root '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:317:8: ( 'provider model ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:317:10: 'provider model '
             {
-            match("root "); 
+            match("provider model "); 
 
 
             }
@@ -6945,10 +6945,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__319;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:318:8: ( 'constraints ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:318:10: 'constraints '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:318:8: ( 'root ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:318:10: 'root '
             {
-            match("constraints "); 
+            match("root "); 
 
 
             }
@@ -6966,10 +6966,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__320;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:319:8: ( 'feature ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:319:10: 'feature '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:319:8: ( 'constraints ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:319:10: 'constraints '
             {
-            match("feature "); 
+            match("constraints "); 
 
 
             }
@@ -6987,10 +6987,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__321;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:320:8: ( 'attributes ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:320:10: 'attributes '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:320:8: ( 'feature ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:320:10: 'feature '
             {
-            match("attributes "); 
+            match("feature "); 
 
 
             }
@@ -7008,10 +7008,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__322;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:321:8: ( 'sub-features ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:321:10: 'sub-features '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:321:8: ( 'attributes ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:321:10: 'attributes '
             {
-            match("sub-features "); 
+            match("attributes "); 
 
 
             }
@@ -7029,10 +7029,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__323;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:322:8: ( 'clones ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:322:10: 'clones '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:322:8: ( 'sub-features ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:322:10: 'sub-features '
             {
-            match("clones "); 
+            match("sub-features "); 
 
 
             }
@@ -7050,10 +7050,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__324;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:323:8: ( 'attribute constraint ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:323:10: 'attribute constraint '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:323:8: ( 'clones ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:323:10: 'clones '
             {
-            match("attribute constraint "); 
+            match("clones "); 
 
 
             }
@@ -7071,10 +7071,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__325;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:324:8: ( 'from: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:324:10: 'from: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:324:8: ( 'attribute constraint ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:324:10: 'attribute constraint '
             {
-            match("from: "); 
+            match("attribute constraint "); 
 
 
             }
@@ -7092,10 +7092,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__326;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:325:8: ( 'to: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:325:10: 'to: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:325:8: ( 'from: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:325:10: 'from: '
             {
-            match("to: "); 
+            match("from: "); 
 
 
             }
@@ -7113,10 +7113,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__327;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:326:8: ( 'from value: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:326:10: 'from value: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:326:8: ( 'to: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:326:10: 'to: '
             {
-            match("from value: "); 
+            match("to: "); 
 
 
             }
@@ -7134,10 +7134,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__328;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:327:8: ( 'to value: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:327:10: 'to value: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:327:8: ( 'from value: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:327:10: 'from value: '
             {
-            match("to value: "); 
+            match("from value: "); 
 
 
             }
@@ -7155,10 +7155,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__329;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:328:8: ( 'excludes ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:328:10: 'excludes '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:328:8: ( 'to value: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:328:10: 'to value: '
             {
-            match("excludes "); 
+            match("to value: "); 
 
 
             }
@@ -7176,10 +7176,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__330;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:329:8: ( 'attribute constraints ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:329:10: 'attribute constraints '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:329:8: ( 'excludes ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:329:10: 'excludes '
             {
-            match("attribute constraints "); 
+            match("excludes "); 
 
 
             }
@@ -7197,10 +7197,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__331;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:330:8: ( 'implies ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:330:10: 'implies '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:330:8: ( 'attribute constraints ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:330:10: 'attribute constraints '
             {
-            match("implies "); 
+            match("attribute constraints "); 
 
 
             }
@@ -7218,10 +7218,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__332;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:331:8: ( 'requires ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:331:10: 'requires '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:331:8: ( 'implies ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:331:10: 'implies '
             {
-            match("requires "); 
+            match("implies "); 
 
 
             }
@@ -7239,10 +7239,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__333;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:332:8: ( 'scope from: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:332:10: 'scope from: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:332:8: ( 'requires ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:332:10: 'requires '
             {
-            match("scope from: "); 
+            match("requires "); 
 
 
             }
@@ -7260,10 +7260,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__334;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:333:8: ( 'scope to: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:333:10: 'scope to: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:333:8: ( 'scope from: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:333:10: 'scope from: '
             {
-            match("scope to: "); 
+            match("scope from: "); 
 
 
             }
@@ -7281,10 +7281,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__335;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:334:8: ( 'card from: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:334:10: 'card from: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:334:8: ( 'scope to: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:334:10: 'scope to: '
             {
-            match("card from: "); 
+            match("scope to: "); 
 
 
             }
@@ -7302,10 +7302,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__336;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:335:8: ( 'card to: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:335:10: 'card to: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:335:8: ( 'card from: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:335:10: 'card from: '
             {
-            match("card to: "); 
+            match("card from: "); 
 
 
             }
@@ -7323,10 +7323,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__337;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:336:8: ( 'functional ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:336:10: 'functional '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:336:8: ( 'card to: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:336:10: 'card to: '
             {
-            match("functional "); 
+            match("card to: "); 
 
 
             }
@@ -7344,10 +7344,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__338;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:337:8: ( 'order: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:337:10: 'order: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:337:8: ( 'functional ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:337:10: 'functional '
             {
-            match("order: "); 
+            match("functional "); 
 
 
             }
@@ -7365,10 +7365,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__339;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:338:8: ( 'attribute ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:338:10: 'attribute '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:338:8: ( 'order: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:338:10: 'order: '
             {
-            match("attribute "); 
+            match("order: "); 
 
 
             }
@@ -7386,10 +7386,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__340;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:339:8: ( 'unit type: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:339:10: 'unit type: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:339:8: ( 'attribute ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:339:10: 'attribute '
             {
-            match("unit type: "); 
+            match("attribute "); 
 
 
             }
@@ -7407,10 +7407,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__341;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:340:8: ( 'feature cardinality' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:340:10: 'feature cardinality'
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:340:8: ( 'unit type: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:340:10: 'unit type: '
             {
-            match("feature cardinality"); 
+            match("unit type: "); 
 
 
             }
@@ -7428,10 +7428,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__342;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:341:8: ( 'cardinality: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:341:10: 'cardinality: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:341:8: ( 'feature cardinality' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:341:10: 'feature cardinality'
             {
-            match("cardinality: "); 
+            match("feature cardinality"); 
 
 
             }
@@ -7449,10 +7449,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__343;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:342:8: ( 'instance' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:342:10: 'instance'
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:342:8: ( 'cardinality: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:342:10: 'cardinality: '
             {
-            match("instance"); 
+            match("cardinality: "); 
 
 
             }
@@ -7470,10 +7470,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__344;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:343:8: ( 'feature: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:343:10: 'feature: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:343:8: ( 'instance' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:343:10: 'instance'
             {
-            match("feature: "); 
+            match("instance"); 
 
 
             }
@@ -7491,10 +7491,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__345;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:344:8: ( 'product' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:344:10: 'product'
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:344:8: ( 'feature: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:344:10: 'feature: '
             {
-            match("product"); 
+            match("feature: "); 
 
 
             }
@@ -7512,10 +7512,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__346;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:345:8: ( 'clone ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:345:10: 'clone '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:345:8: ( 'product' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:345:10: 'product'
             {
-            match("clone "); 
+            match("product"); 
 
 
             }
@@ -7533,10 +7533,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__347;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:346:8: ( 'sub-clones ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:346:10: 'sub-clones '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:346:8: ( 'clone ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:346:10: 'clone '
             {
-            match("sub-clones "); 
+            match("clone "); 
 
 
             }
@@ -7554,10 +7554,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__348;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:347:8: ( 'alternative' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:347:10: 'alternative'
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:347:8: ( 'sub-clones ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:347:10: 'sub-clones '
             {
-            match("alternative"); 
+            match("sub-clones "); 
 
 
             }
@@ -7575,10 +7575,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__349;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:348:8: ( 'variants ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:348:10: 'variants '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:348:8: ( 'alternative' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:348:10: 'alternative'
             {
-            match("variants "); 
+            match("alternative"); 
 
 
             }
@@ -7596,10 +7596,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__350;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:349:8: ( 'exclusive ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:349:10: 'exclusive '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:349:8: ( 'variants ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:349:10: 'variants '
             {
-            match("exclusive "); 
+            match("variants "); 
 
 
             }
@@ -7617,10 +7617,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__351;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:350:8: ( 'group cardinality' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:350:10: 'group cardinality'
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:350:8: ( 'exclusive ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:350:10: 'exclusive '
             {
-            match("group cardinality"); 
+            match("exclusive "); 
 
 
             }
@@ -7638,10 +7638,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__352;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:351:8: ( 'requirement model ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:351:10: 'requirement model '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:351:8: ( 'group cardinality' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:351:10: 'group cardinality'
             {
-            match("requirement model "); 
+            match("group cardinality"); 
 
 
             }
@@ -7659,10 +7659,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__353;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:352:8: ( 'group ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:352:10: 'group '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:352:8: ( 'requirement model ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:352:10: 'requirement model '
             {
-            match("group "); 
+            match("requirement model "); 
 
 
             }
@@ -7680,10 +7680,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__354;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:353:8: ( 'operator: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:353:10: 'operator: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:353:8: ( 'group ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:353:10: 'group '
             {
-            match("operator: "); 
+            match("group "); 
 
 
             }
@@ -7701,10 +7701,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__355;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:354:8: ( 'requirements ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:354:10: 'requirements '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:354:8: ( 'operator: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:354:10: 'operator: '
             {
-            match("requirements "); 
+            match("operator: "); 
 
 
             }
@@ -7722,10 +7722,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__356;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:355:8: ( 'application ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:355:10: 'application '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:355:8: ( 'requirements ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:355:10: 'requirements '
             {
-            match("application "); 
+            match("requirements "); 
 
 
             }
@@ -7743,10 +7743,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__357;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:356:8: ( 'slo ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:356:10: 'slo '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:356:8: ( 'application ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:356:10: 'application '
             {
-            match("slo "); 
+            match("application "); 
 
 
             }
@@ -7764,10 +7764,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__358;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:357:8: ( 'service level: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:357:10: 'service level: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:357:8: ( 'slo ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:357:10: 'slo '
             {
-            match("service level: "); 
+            match("slo "); 
 
 
             }
@@ -7785,10 +7785,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__359;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:358:8: ( 'provider requirement ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:358:10: 'provider requirement '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:358:8: ( 'service level: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:358:10: 'service level: '
             {
-            match("provider requirement "); 
+            match("service level: "); 
 
 
             }
@@ -7806,10 +7806,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__360;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:359:8: ( 'providers: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:359:10: 'providers: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:359:8: ( 'provider requirement ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:359:10: 'provider requirement '
             {
-            match("providers: "); 
+            match("provider requirement "); 
 
 
             }
@@ -7827,10 +7827,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__361;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:360:8: ( 'optimisation requirement ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:360:10: 'optimisation requirement '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:360:8: ( 'providers: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:360:10: 'providers: '
             {
-            match("optimisation requirement "); 
+            match("providers: "); 
 
 
             }
@@ -7848,10 +7848,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__362;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:361:8: ( 'function: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:361:10: 'function: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:361:8: ( 'optimisation requirement ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:361:10: 'optimisation requirement '
             {
-            match("function: "); 
+            match("optimisation requirement "); 
 
 
             }
@@ -7869,10 +7869,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__363;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:362:8: ( 'metric context: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:362:10: 'metric context: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:362:8: ( 'function: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:362:10: 'function: '
             {
-            match("metric context: "); 
+            match("function: "); 
 
 
             }
@@ -7890,10 +7890,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__364;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:363:8: ( 'priority: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:363:10: 'priority: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:363:8: ( 'metric context: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:363:10: 'metric context: '
             {
-            match("priority: "); 
+            match("metric context: "); 
 
 
             }
@@ -7911,10 +7911,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__365;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:364:8: ( 'os ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:364:10: 'os '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:364:8: ( 'priority: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:364:10: 'priority: '
             {
-            match("os "); 
+            match("priority: "); 
 
 
             }
@@ -7932,10 +7932,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__366;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:365:8: ( 'image ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:365:10: 'image '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:365:8: ( 'os ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:365:10: 'os '
             {
-            match("image "); 
+            match("os "); 
 
 
             }
@@ -7953,10 +7953,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__367;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:366:8: ( 'imageID: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:366:10: 'imageID: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:366:8: ( 'image ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:366:10: 'image '
             {
-            match("imageID: "); 
+            match("image "); 
 
 
             }
@@ -7974,10 +7974,11 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__368;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:367:8: ( '.' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:367:10: '.'
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:367:8: ( 'imageID: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:367:10: 'imageID: '
             {
-            match('.'); 
+            match("imageID: "); 
+
 
             }
 
@@ -7994,11 +7995,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__369;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:368:8: ( 'qualitative' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:368:10: 'qualitative'
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:368:8: ( '.' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:368:10: '.'
             {
-            match("qualitative"); 
-
+            match('.'); 
 
             }
 
@@ -8015,10 +8015,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__370;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:369:8: ( 'hardware ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:369:10: 'hardware '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:369:8: ( 'qualitative' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:369:10: 'qualitative'
             {
-            match("hardware "); 
+            match("qualitative"); 
 
 
             }
@@ -8036,10 +8036,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__371;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:370:8: ( 'benchmark: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:370:10: 'benchmark: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:370:8: ( 'hardware ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:370:10: 'hardware '
             {
-            match("benchmark: "); 
+            match("hardware "); 
 
 
             }
@@ -8057,10 +8057,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__372;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:371:8: ( 'quantitative hardware ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:371:10: 'quantitative hardware '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:371:8: ( 'benchmark: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:371:10: 'benchmark: '
             {
-            match("quantitative hardware "); 
+            match("benchmark: "); 
 
 
             }
@@ -8078,10 +8078,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__373;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:372:8: ( 'core: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:372:10: 'core: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:372:8: ( 'quantitative hardware ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:372:10: 'quantitative hardware '
             {
-            match("core: "); 
+            match("quantitative hardware "); 
 
 
             }
@@ -8099,10 +8099,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__374;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:373:8: ( 'ram: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:373:10: 'ram: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:373:8: ( 'core: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:373:10: 'core: '
             {
-            match("ram: "); 
+            match("core: "); 
 
 
             }
@@ -8120,10 +8120,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__375;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:374:8: ( 'storage: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:374:10: 'storage: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:374:8: ( 'ram: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:374:10: 'ram: '
             {
-            match("storage: "); 
+            match("ram: "); 
 
 
             }
@@ -8141,10 +8141,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__376;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:375:8: ( 'cpu: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:375:10: 'cpu: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:375:8: ( 'storage: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:375:10: 'storage: '
             {
-            match("cpu: "); 
+            match("storage: "); 
 
 
             }
@@ -8162,10 +8162,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__377;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:376:8: ( 'location requirement ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:376:10: 'location requirement '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:376:8: ( 'cpu: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:376:10: 'cpu: '
             {
-            match("location requirement "); 
+            match("cpu: "); 
 
 
             }
@@ -8183,10 +8183,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__378;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:377:8: ( 'locations ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:377:10: 'locations '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:377:8: ( 'location requirement ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:377:10: 'location requirement '
             {
-            match("locations "); 
+            match("location requirement "); 
 
 
             }
@@ -8204,10 +8204,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__379;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:378:8: ( 'scalability model ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:378:10: 'scalability model '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:378:8: ( 'locations ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:378:10: 'locations '
             {
-            match("scalability model "); 
+            match("locations "); 
 
 
             }
@@ -8225,10 +8225,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__380;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:379:8: ( 'event instance' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:379:10: 'event instance'
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:379:8: ( 'scalability model ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:379:10: 'scalability model '
             {
-            match("event instance"); 
+            match("scalability model "); 
 
 
             }
@@ -8246,10 +8246,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__381;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:380:8: ( 'event: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:380:10: 'event: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:380:8: ( 'event instance' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:380:10: 'event instance'
             {
-            match("event: "); 
+            match("event instance"); 
 
 
             }
@@ -8267,10 +8267,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__382;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:381:8: ( 'status: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:381:10: 'status: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:381:8: ( 'event: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:381:10: 'event: '
             {
-            match("status: "); 
+            match("event: "); 
 
 
             }
@@ -8288,10 +8288,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__383;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:382:8: ( 'horizontal scale requirement ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:382:10: 'horizontal scale requirement '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:382:8: ( 'status: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:382:10: 'status: '
             {
-            match("horizontal scale requirement "); 
+            match("status: "); 
 
 
             }
@@ -8309,10 +8309,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__384;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:383:8: ( 'instances: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:383:10: 'instances: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:383:8: ( 'horizontal scale requirement ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:383:10: 'horizontal scale requirement '
             {
-            match("instances: "); 
+            match("horizontal scale requirement "); 
 
 
             }
@@ -8330,10 +8330,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__385;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:384:8: ( 'vertical scale requirement ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:384:10: 'vertical scale requirement '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:384:8: ( 'instances: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:384:10: 'instances: '
             {
-            match("vertical scale requirement "); 
+            match("instances: "); 
 
 
             }
@@ -8351,10 +8351,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__386;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:385:8: ( 'vm: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:385:10: 'vm: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:385:8: ( 'vertical scale requirement ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:385:10: 'vertical scale requirement '
             {
-            match("vm: "); 
+            match("vertical scale requirement "); 
 
 
             }
@@ -8372,10 +8372,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__387;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:386:8: ( 'scalability rule ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:386:10: 'scalability rule '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:386:8: ( 'vm: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:386:10: 'vm: '
             {
-            match("scalability rule "); 
+            match("vm: "); 
 
 
             }
@@ -8393,10 +8393,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__388;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:387:8: ( 'actions ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:387:10: 'actions '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:387:8: ( 'scalability rule ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:387:10: 'scalability rule '
             {
-            match("actions "); 
+            match("scalability rule "); 
 
 
             }
@@ -8414,10 +8414,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__389;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:388:8: ( 'entities ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:388:10: 'entities '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:388:8: ( 'actions ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:388:10: 'actions '
             {
-            match("entities "); 
+            match("actions "); 
 
 
             }
@@ -8435,10 +8435,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__390;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:389:8: ( 'scale requirements ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:389:10: 'scale requirements '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:389:8: ( 'entities ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:389:10: 'entities '
             {
-            match("scale requirements "); 
+            match("entities "); 
 
 
             }
@@ -8456,10 +8456,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__391;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:390:8: ( 'horizontal scaling action ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:390:10: 'horizontal scaling action '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:390:8: ( 'scale requirements ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:390:10: 'scale requirements '
             {
-            match("horizontal scaling action "); 
+            match("scale requirements "); 
 
 
             }
@@ -8477,10 +8477,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__392;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:391:8: ( 'internal component: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:391:10: 'internal component: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:391:8: ( 'horizontal scaling action ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:391:10: 'horizontal scaling action '
             {
-            match("internal component: "); 
+            match("horizontal scaling action "); 
 
 
             }
@@ -8498,10 +8498,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__393;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:392:8: ( 'count: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:392:10: 'count: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:392:8: ( 'internal component: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:392:10: 'internal component: '
             {
-            match("count: "); 
+            match("internal component: "); 
 
 
             }
@@ -8519,10 +8519,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__394;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:393:8: ( 'vertical scaling action ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:393:10: 'vertical scaling action '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:393:8: ( 'count: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:393:10: 'count: '
             {
-            match("vertical scaling action "); 
+            match("count: "); 
 
 
             }
@@ -8540,10 +8540,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__395;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:394:8: ( 'core update: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:394:10: 'core update: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:394:8: ( 'vertical scaling action ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:394:10: 'vertical scaling action '
             {
-            match("core update: "); 
+            match("vertical scaling action "); 
 
 
             }
@@ -8561,10 +8561,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__396;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:395:8: ( 'CPU update: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:395:10: 'CPU update: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:395:8: ( 'core update: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:395:10: 'core update: '
             {
-            match("CPU update: "); 
+            match("core update: "); 
 
 
             }
@@ -8582,10 +8582,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__397;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:396:8: ( 'memory update: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:396:10: 'memory update: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:396:8: ( 'CPU update: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:396:10: 'CPU update: '
             {
-            match("memory update: "); 
+            match("CPU update: "); 
 
 
             }
@@ -8603,10 +8603,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__398;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:397:8: ( 'storage update: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:397:10: 'storage update: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:397:8: ( 'memory update: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:397:10: 'memory update: '
             {
-            match("storage update: "); 
+            match("memory update: "); 
 
 
             }
@@ -8624,10 +8624,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__399;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:398:8: ( 'io update: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:398:10: 'io update: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:398:8: ( 'storage update: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:398:10: 'storage update: '
             {
-            match("io update: "); 
+            match("storage update: "); 
 
 
             }
@@ -8645,10 +8645,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__400;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:399:8: ( 'network update: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:399:10: 'network update: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:399:8: ( 'io update: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:399:10: 'io update: '
             {
-            match("network update: "); 
+            match("io update: "); 
 
 
             }
@@ -8666,10 +8666,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__401;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:400:8: ( 'functional event ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:400:10: 'functional event '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:400:8: ( 'network update: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:400:10: 'network update: '
             {
-            match("functional event "); 
+            match("network update: "); 
 
 
             }
@@ -8687,10 +8687,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__402;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:401:8: ( 'functional type: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:401:10: 'functional type: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:401:8: ( 'functional event ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:401:10: 'functional event '
             {
-            match("functional type: "); 
+            match("functional event "); 
 
 
             }
@@ -8708,10 +8708,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__403;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:402:8: ( 'non-functional event ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:402:10: 'non-functional event '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:402:8: ( 'functional type: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:402:10: 'functional type: '
             {
-            match("non-functional event "); 
+            match("functional type: "); 
 
 
             }
@@ -8729,10 +8729,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__404;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:403:8: ( 'metric condition: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:403:10: 'metric condition: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:403:8: ( 'non-functional event ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:403:10: 'non-functional event '
             {
-            match("metric condition: "); 
+            match("non-functional event "); 
 
 
             }
@@ -8750,10 +8750,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__405;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:404:8: ( 'binary event pattern ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:404:10: 'binary event pattern '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:404:8: ( 'metric condition: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:404:10: 'metric condition: '
             {
-            match("binary event pattern "); 
+            match("metric condition: "); 
 
 
             }
@@ -8771,10 +8771,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__406;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:405:8: ( 'left event: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:405:10: 'left event: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:405:8: ( 'binary event pattern ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:405:10: 'binary event pattern '
             {
-            match("left event: "); 
+            match("binary event pattern "); 
 
 
             }
@@ -8792,10 +8792,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__407;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:406:8: ( 'right event: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:406:10: 'right event: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:406:8: ( 'left event: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:406:10: 'left event: '
             {
-            match("right event: "); 
+            match("left event: "); 
 
 
             }
@@ -8813,10 +8813,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__408;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:407:8: ( 'timer: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:407:10: 'timer: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:407:8: ( 'right event: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:407:10: 'right event: '
             {
-            match("timer: "); 
+            match("right event: "); 
 
 
             }
@@ -8834,10 +8834,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__409;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:408:8: ( 'lower occurrence bound: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:408:10: 'lower occurrence bound: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:408:8: ( 'timer: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:408:10: 'timer: '
             {
-            match("lower occurrence bound: "); 
+            match("timer: "); 
 
 
             }
@@ -8855,10 +8855,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__410;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:409:8: ( 'upper occurrence bound: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:409:10: 'upper occurrence bound: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:409:8: ( 'lower occurrence bound: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:409:10: 'lower occurrence bound: '
             {
-            match("upper occurrence bound: "); 
+            match("lower occurrence bound: "); 
 
 
             }
@@ -8876,10 +8876,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__411;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:410:8: ( 'unary event pattern ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:410:10: 'unary event pattern '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:410:8: ( 'upper occurrence bound: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:410:10: 'upper occurrence bound: '
             {
-            match("unary event pattern "); 
+            match("upper occurrence bound: "); 
 
 
             }
@@ -8897,10 +8897,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__412;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:411:8: ( 'occurrence num: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:411:10: 'occurrence num: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:411:8: ( 'unary event pattern ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:411:10: 'unary event pattern '
             {
-            match("occurrence num: "); 
+            match("unary event pattern "); 
 
 
             }
@@ -8918,10 +8918,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__413;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:412:8: ( 'timer ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:412:10: 'timer '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:412:8: ( 'occurrence num: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:412:10: 'occurrence num: '
             {
-            match("timer "); 
+            match("occurrence num: "); 
 
 
             }
@@ -8939,10 +8939,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__414;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:413:8: ( 'time value: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:413:10: 'time value: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:413:8: ( 'timer ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:413:10: 'timer '
             {
-            match("time value: "); 
+            match("timer "); 
 
 
             }
@@ -8960,10 +8960,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__415;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:414:8: ( 'max occurrence num: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:414:10: 'max occurrence num: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:414:8: ( 'time value: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:414:10: 'time value: '
             {
-            match("max occurrence num: "); 
+            match("time value: "); 
 
 
             }
@@ -8981,10 +8981,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__416;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:415:8: ( 'security model ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:415:10: 'security model '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:415:8: ( 'max occurrence num: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:415:10: 'max occurrence num: '
             {
-            match("security model "); 
+            match("max occurrence num: "); 
 
 
             }
@@ -9002,10 +9002,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__417;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:416:8: ( 'raw security metric ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:416:10: 'raw security metric '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:416:8: ( 'security model ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:416:10: 'security model '
             {
-            match("raw security metric "); 
+            match("security model "); 
 
 
             }
@@ -9023,10 +9023,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__418;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:417:8: ( 'composite security metric ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:417:10: 'composite security metric '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:417:8: ( 'raw security metric ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:417:10: 'raw security metric '
             {
-            match("composite security metric "); 
+            match("raw security metric "); 
 
 
             }
@@ -9044,10 +9044,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__419;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:418:8: ( 'raw security metric instance ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:418:10: 'raw security metric instance '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:418:8: ( 'composite security metric ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:418:10: 'composite security metric '
             {
-            match("raw security metric instance "); 
+            match("composite security metric "); 
 
 
             }
@@ -9065,10 +9065,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__420;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:419:8: ( 'object binding: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:419:10: 'object binding: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:419:8: ( 'raw security metric instance ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:419:10: 'raw security metric instance '
             {
-            match("object binding: "); 
+            match("raw security metric instance "); 
 
 
             }
@@ -9086,10 +9086,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__421;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:420:8: ( 'composite security metric instance' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:420:10: 'composite security metric instance'
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:420:8: ( 'object binding: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:420:10: 'object binding: '
             {
-            match("composite security metric instance"); 
+            match("object binding: "); 
 
 
             }
@@ -9107,10 +9107,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__422;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:421:8: ( 'security slo ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:421:10: 'security slo '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:421:8: ( 'composite security metric instance' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:421:10: 'composite security metric instance'
             {
-            match("security slo "); 
+            match("composite security metric instance"); 
 
 
             }
@@ -9128,10 +9128,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__423;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:422:8: ( 'custom service level: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:422:10: 'custom service level: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:422:8: ( 'security slo ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:422:10: 'security slo '
             {
-            match("custom service level: "); 
+            match("security slo "); 
 
 
             }
@@ -9149,10 +9149,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__424;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:423:8: ( 'domain ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:423:10: 'domain '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:423:8: ( 'custom service level: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:423:10: 'custom service level: '
             {
-            match("domain "); 
+            match("custom service level: "); 
 
 
             }
@@ -9170,10 +9170,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__425;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:424:8: ( 'sub-domains ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:424:10: 'sub-domains '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:424:8: ( 'domain ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:424:10: 'domain '
             {
-            match("sub-domains "); 
+            match("domain "); 
 
 
             }
@@ -9191,10 +9191,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__426;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:425:8: ( 'domain: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:425:10: 'domain: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:425:8: ( 'sub-domains ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:425:10: 'sub-domains '
             {
-            match("domain: "); 
+            match("sub-domains "); 
 
 
             }
@@ -9212,10 +9212,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__427;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:426:8: ( 'certifiable' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:426:10: 'certifiable'
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:426:8: ( 'domain: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:426:10: 'domain: '
             {
-            match("certifiable"); 
+            match("domain: "); 
 
 
             }
@@ -9233,10 +9233,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__428;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:427:8: ( 'sensors: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:427:10: 'sensors: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:427:8: ( 'certifiable' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:427:10: 'certifiable'
             {
-            match("sensors: "); 
+            match("certifiable"); 
 
 
             }
@@ -9254,10 +9254,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__429;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:428:8: ( 'security requirement ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:428:10: 'security requirement '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:428:8: ( 'sensors: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:428:10: 'sensors: '
             {
-            match("security requirement "); 
+            match("sensors: "); 
 
 
             }
@@ -9275,10 +9275,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__430;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:429:8: ( 'controls ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:429:10: 'controls '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:429:8: ( 'security requirement ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:429:10: 'security requirement '
             {
-            match("controls "); 
+            match("security requirement "); 
 
 
             }
@@ -9296,10 +9296,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__431;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:430:8: ( 'data center: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:430:10: 'data center: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:430:8: ( 'controls ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:430:10: 'controls '
             {
-            match("data center: "); 
+            match("controls "); 
 
 
             }
@@ -9317,10 +9317,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__432;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:431:8: ( 'security control ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:431:10: 'security control '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:431:8: ( 'data center: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:431:10: 'data center: '
             {
-            match("security control "); 
+            match("data center: "); 
 
 
             }
@@ -9338,10 +9338,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__433;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:432:8: ( 'specification: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:432:10: 'specification: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:432:8: ( 'security control ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:432:10: 'security control '
             {
-            match("specification: "); 
+            match("security control "); 
 
 
             }
@@ -9359,10 +9359,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__434;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:433:8: ( 'sub-domain: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:433:10: 'sub-domain: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:433:8: ( 'specification: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:433:10: 'specification: '
             {
-            match("sub-domain: "); 
+            match("specification: "); 
 
 
             }
@@ -9380,10 +9380,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__435;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:434:8: ( 'security properties ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:434:10: 'security properties '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:434:8: ( 'sub-domain: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:434:10: 'sub-domain: '
             {
-            match("security properties "); 
+            match("sub-domain: "); 
 
 
             }
@@ -9401,10 +9401,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__436;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:435:8: ( 'raw security metrics ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:435:10: 'raw security metrics '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:435:8: ( 'security properties ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:435:10: 'security properties '
             {
-            match("raw security metrics "); 
+            match("security properties "); 
 
 
             }
@@ -9422,10 +9422,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__437;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:436:8: ( 'composite security metrics ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:436:10: 'composite security metrics '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:436:8: ( 'raw security metrics ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:436:10: 'raw security metrics '
             {
-            match("composite security metrics "); 
+            match("raw security metrics "); 
 
 
             }
@@ -9443,10 +9443,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__438;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:437:8: ( 'type model ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:437:10: 'type model '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:437:8: ( 'composite security metrics ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:437:10: 'composite security metrics '
             {
-            match("type model "); 
+            match("composite security metrics "); 
 
 
             }
@@ -9464,10 +9464,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__439;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:438:8: ( 'boolean value type ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:438:10: 'boolean value type '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:438:8: ( 'type model ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:438:10: 'type model '
             {
-            match("boolean value type "); 
+            match("type model "); 
 
 
             }
@@ -9485,10 +9485,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__440;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:439:8: ( 'primitive type: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:439:10: 'primitive type: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:439:8: ( 'boolean value type ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:439:10: 'boolean value type '
             {
-            match("primitive type: "); 
+            match("boolean value type "); 
 
 
             }
@@ -9506,10 +9506,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__441;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:440:8: ( 'enumeration ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:440:10: 'enumeration '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:440:8: ( 'primitive type: ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:440:10: 'primitive type: '
             {
-            match("enumeration "); 
+            match("primitive type: "); 
 
 
             }
@@ -9527,10 +9527,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__442;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:441:8: ( 'values ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:441:10: 'values '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:441:8: ( 'enumeration ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:441:10: 'enumeration '
             {
-            match("values "); 
+            match("enumeration "); 
 
 
             }
@@ -9548,10 +9548,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__443;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:442:8: ( 'list ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:442:10: 'list '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:442:8: ( 'values ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:442:10: 'values '
             {
-            match("list "); 
+            match("values "); 
 
 
             }
@@ -9569,10 +9569,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__444;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:443:8: ( 'range ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:443:10: 'range '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:443:8: ( 'list ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:443:10: 'list '
             {
-            match("range "); 
+            match("list "); 
 
 
             }
@@ -9590,10 +9590,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__445;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:444:8: ( 'lower limit ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:444:10: 'lower limit '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:444:8: ( 'range ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:444:10: 'range '
             {
-            match("lower limit "); 
+            match("range "); 
 
 
             }
@@ -9611,10 +9611,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__446;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:445:8: ( 'upper limit ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:445:10: 'upper limit '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:445:8: ( 'lower limit ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:445:10: 'lower limit '
             {
-            match("upper limit "); 
+            match("lower limit "); 
 
 
             }
@@ -9632,10 +9632,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__447;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:446:8: ( 'range union ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:446:10: 'range union '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:446:8: ( 'upper limit ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:446:10: 'upper limit '
             {
-            match("range union "); 
+            match("upper limit "); 
 
 
             }
@@ -9653,10 +9653,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__448;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:447:8: ( 'ranges ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:447:10: 'ranges '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:447:8: ( 'range union ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:447:10: 'range union '
             {
-            match("ranges "); 
+            match("range union "); 
 
 
             }
@@ -9674,10 +9674,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__449;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:448:8: ( 'string value type ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:448:10: 'string value type '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:448:8: ( 'ranges ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:448:10: 'ranges '
             {
-            match("string value type "); 
+            match("ranges "); 
 
 
             }
@@ -9695,10 +9695,11 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__450;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:449:8: ( ':' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:449:10: ':'
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:449:8: ( 'string value type ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:449:10: 'string value type '
             {
-            match(':'); 
+            match("string value type "); 
+
 
             }
 
@@ -9715,11 +9716,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__451;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:450:8: ( 'int value ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:450:10: 'int value '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:450:8: ( ':' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:450:10: ':'
             {
-            match("int value "); 
-
+            match(':'); 
 
             }
 
@@ -9736,10 +9736,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__452;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:451:8: ( 'float value ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:451:10: 'float value '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:451:8: ( 'int value ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:451:10: 'int value '
             {
-            match("float value "); 
+            match("int value "); 
 
 
             }
@@ -9757,10 +9757,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__453;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:452:8: ( 'double value ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:452:10: 'double value '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:452:8: ( 'float value ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:452:10: 'float value '
             {
-            match("double value "); 
+            match("float value "); 
 
 
             }
@@ -9778,10 +9778,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__454;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:453:8: ( 'negative infinity' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:453:10: 'negative infinity'
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:453:8: ( 'double value ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:453:10: 'double value '
             {
-            match("negative infinity"); 
+            match("double value "); 
 
 
             }
@@ -9799,10 +9799,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__455;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:454:8: ( 'positive infinity' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:454:10: 'positive infinity'
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:454:8: ( 'negative infinity' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:454:10: 'negative infinity'
             {
-            match("positive infinity"); 
+            match("negative infinity"); 
 
 
             }
@@ -9820,10 +9820,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__456;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:455:8: ( 'value to increase ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:455:10: 'value to increase '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:455:8: ( 'positive infinity' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:455:10: 'positive infinity'
             {
-            match("value to increase "); 
+            match("positive infinity"); 
 
 
             }
@@ -9841,10 +9841,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__457;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:456:8: ( 'boolean value ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:456:10: 'boolean value '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:456:8: ( 'value to increase ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:456:10: 'value to increase '
             {
-            match("boolean value "); 
+            match("value to increase "); 
 
 
             }
@@ -9862,10 +9862,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__458;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:457:8: ( 'string value ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:457:10: 'string value '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:457:8: ( 'boolean value ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:457:10: 'boolean value '
             {
-            match("string value "); 
+            match("boolean value "); 
 
 
             }
@@ -9883,10 +9883,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__459;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:458:8: ( 'unit model ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:458:10: 'unit model '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:458:8: ( 'string value ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:458:10: 'string value '
             {
-            match("unit model "); 
+            match("string value "); 
 
 
             }
@@ -9904,10 +9904,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__460;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:459:8: ( 'time interval unit ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:459:10: 'time interval unit '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:459:8: ( 'unit model ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:459:10: 'unit model '
             {
-            match("time interval unit "); 
+            match("unit model "); 
 
 
             }
@@ -9925,10 +9925,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__461;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:460:8: ( 'monetary unit ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:460:10: 'monetary unit '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:460:8: ( 'time interval unit ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:460:10: 'time interval unit '
             {
-            match("monetary unit "); 
+            match("time interval unit "); 
 
 
             }
@@ -9946,10 +9946,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__462;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:461:8: ( 'core unit ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:461:10: 'core unit '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:461:8: ( 'monetary unit ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:461:10: 'monetary unit '
             {
-            match("core unit "); 
+            match("monetary unit "); 
 
 
             }
@@ -9967,10 +9967,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__463;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:462:8: ( 'dimensionless ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:462:10: 'dimensionless '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:462:8: ( 'core unit ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:462:10: 'core unit '
             {
-            match("dimensionless "); 
+            match("core unit "); 
 
 
             }
@@ -9988,10 +9988,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__464;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:463:8: ( 'request unit ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:463:10: 'request unit '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:463:8: ( 'dimensionless ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:463:10: 'dimensionless '
             {
-            match("request unit "); 
+            match("dimensionless "); 
 
 
             }
@@ -10009,10 +10009,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__465;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:464:8: ( 'storage unit ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:464:10: 'storage unit '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:464:8: ( 'request unit ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:464:10: 'request unit '
             {
-            match("storage unit "); 
+            match("request unit "); 
 
 
             }
@@ -10030,10 +10030,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__466;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:465:8: ( 'throughput unit ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:465:10: 'throughput unit '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:465:8: ( 'storage unit ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:465:10: 'storage unit '
             {
-            match("throughput unit "); 
+            match("storage unit "); 
 
 
             }
@@ -10051,10 +10051,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__467;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:466:8: ( 'transaction unit ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:466:10: 'transaction unit '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:466:8: ( 'throughput unit ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:466:10: 'throughput unit '
             {
-            match("transaction unit "); 
+            match("throughput unit "); 
 
 
             }
@@ -10072,10 +10072,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__468;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:467:8: ( 'action ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:467:10: 'action '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:467:8: ( 'transaction unit ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:467:10: 'transaction unit '
             {
-            match("action "); 
+            match("transaction unit "); 
 
 
             }
@@ -10093,10 +10093,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = T__469;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:468:8: ( 'version: ' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:468:10: 'version: '
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:468:8: ( 'action ' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:468:10: 'action '
             {
-            match("version: "); 
+            match("action "); 
 
 
             }
@@ -10366,8 +10366,8 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = RULE_MYDATE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82930:13: ( '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '-' '0' .. '9' '0' .. '9' '-' '0' .. '9' '0' .. '9' ( 'T' '0' .. '9' '0' .. '9' ':' '0' .. '9' '0' .. '9' ':' '0' .. '9' '0' .. '9' ( '.' '0' .. '9' '0' .. '9' '0' .. '9' )? ( '+' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' )? )? )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82930:15: '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '-' '0' .. '9' '0' .. '9' '-' '0' .. '9' '0' .. '9' ( 'T' '0' .. '9' '0' .. '9' ':' '0' .. '9' '0' .. '9' ':' '0' .. '9' '0' .. '9' ( '.' '0' .. '9' '0' .. '9' '0' .. '9' )? ( '+' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' )? )?
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83069:13: ( '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '-' '0' .. '9' '0' .. '9' '-' '0' .. '9' '0' .. '9' ( 'T' '0' .. '9' '0' .. '9' ':' '0' .. '9' '0' .. '9' ':' '0' .. '9' '0' .. '9' ( '.' '0' .. '9' '0' .. '9' '0' .. '9' )? ( '+' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' )? )? )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83069:15: '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '-' '0' .. '9' '0' .. '9' '-' '0' .. '9' '0' .. '9' ( 'T' '0' .. '9' '0' .. '9' ':' '0' .. '9' '0' .. '9' ':' '0' .. '9' '0' .. '9' ( '.' '0' .. '9' '0' .. '9' '0' .. '9' )? ( '+' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' )? )?
             {
             matchRange('0','9'); 
             matchRange('0','9'); 
@@ -10379,7 +10379,7 @@ public class InternalCamelDslLexer extends Lexer {
             match('-'); 
             matchRange('0','9'); 
             matchRange('0','9'); 
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82930:95: ( 'T' '0' .. '9' '0' .. '9' ':' '0' .. '9' '0' .. '9' ':' '0' .. '9' '0' .. '9' ( '.' '0' .. '9' '0' .. '9' '0' .. '9' )? ( '+' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' )? )?
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83069:95: ( 'T' '0' .. '9' '0' .. '9' ':' '0' .. '9' '0' .. '9' ':' '0' .. '9' '0' .. '9' ( '.' '0' .. '9' '0' .. '9' '0' .. '9' )? ( '+' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' )? )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -10388,7 +10388,7 @@ public class InternalCamelDslLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82930:96: 'T' '0' .. '9' '0' .. '9' ':' '0' .. '9' '0' .. '9' ':' '0' .. '9' '0' .. '9' ( '.' '0' .. '9' '0' .. '9' '0' .. '9' )? ( '+' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' )?
+                    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83069:96: 'T' '0' .. '9' '0' .. '9' ':' '0' .. '9' '0' .. '9' ':' '0' .. '9' '0' .. '9' ( '.' '0' .. '9' '0' .. '9' '0' .. '9' )? ( '+' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' )?
                     {
                     match('T'); 
                     matchRange('0','9'); 
@@ -10399,7 +10399,7 @@ public class InternalCamelDslLexer extends Lexer {
                     match(':'); 
                     matchRange('0','9'); 
                     matchRange('0','9'); 
-                    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82930:162: ( '.' '0' .. '9' '0' .. '9' '0' .. '9' )?
+                    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83069:162: ( '.' '0' .. '9' '0' .. '9' '0' .. '9' )?
                     int alt1=2;
                     int LA1_0 = input.LA(1);
 
@@ -10408,7 +10408,7 @@ public class InternalCamelDslLexer extends Lexer {
                     }
                     switch (alt1) {
                         case 1 :
-                            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82930:163: '.' '0' .. '9' '0' .. '9' '0' .. '9'
+                            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83069:163: '.' '0' .. '9' '0' .. '9' '0' .. '9'
                             {
                             match('.'); 
                             matchRange('0','9'); 
@@ -10420,7 +10420,7 @@ public class InternalCamelDslLexer extends Lexer {
 
                     }
 
-                    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82930:196: ( '+' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' )?
+                    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83069:196: ( '+' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' )?
                     int alt2=2;
                     int LA2_0 = input.LA(1);
 
@@ -10429,7 +10429,7 @@ public class InternalCamelDslLexer extends Lexer {
                     }
                     switch (alt2) {
                         case 1 :
-                            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82930:197: '+' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9'
+                            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83069:197: '+' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9'
                             {
                             match('+'); 
                             matchRange('0','9'); 
@@ -10464,10 +10464,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82932:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82932:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83071:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83071:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82932:11: ( '^' )?
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83071:11: ( '^' )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -10476,7 +10476,7 @@ public class InternalCamelDslLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82932:11: '^'
+                    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83071:11: '^'
                     {
                     match('^'); 
 
@@ -10494,7 +10494,7 @@ public class InternalCamelDslLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82932:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83071:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop5:
             do {
                 int alt5=2;
@@ -10543,10 +10543,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82934:10: ( ( '0' .. '9' )+ )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82934:12: ( '0' .. '9' )+
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83073:10: ( ( '0' .. '9' )+ )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83073:12: ( '0' .. '9' )+
             {
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82934:12: ( '0' .. '9' )+
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83073:12: ( '0' .. '9' )+
             int cnt6=0;
             loop6:
             do {
@@ -10560,7 +10560,7 @@ public class InternalCamelDslLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82934:13: '0' .. '9'
+            	    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83073:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -10592,10 +10592,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82936:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82936:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83075:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83075:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82936:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83075:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -10613,10 +10613,10 @@ public class InternalCamelDslLexer extends Lexer {
             }
             switch (alt9) {
                 case 1 :
-                    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82936:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83075:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82936:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83075:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop7:
                     do {
                         int alt7=3;
@@ -10632,7 +10632,7 @@ public class InternalCamelDslLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82936:21: '\\\\' .
+                    	    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83075:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -10640,7 +10640,7 @@ public class InternalCamelDslLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82936:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83075:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -10665,10 +10665,10 @@ public class InternalCamelDslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82936:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83075:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82936:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83075:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop8:
                     do {
                         int alt8=3;
@@ -10684,7 +10684,7 @@ public class InternalCamelDslLexer extends Lexer {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82936:54: '\\\\' .
+                    	    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83075:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -10692,7 +10692,7 @@ public class InternalCamelDslLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82936:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83075:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -10735,12 +10735,12 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82938:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82938:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83077:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83077:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82938:24: ( options {greedy=false; } : . )*
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83077:24: ( options {greedy=false; } : . )*
             loop10:
             do {
                 int alt10=2;
@@ -10765,7 +10765,7 @@ public class InternalCamelDslLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82938:52: .
+            	    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83077:52: .
             	    {
             	    matchAny(); 
 
@@ -10795,12 +10795,12 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82940:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82940:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83079:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83079:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82940:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83079:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop11:
             do {
                 int alt11=2;
@@ -10813,7 +10813,7 @@ public class InternalCamelDslLexer extends Lexer {
 
                 switch (alt11) {
             	case 1 :
-            	    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82940:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83079:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -10833,7 +10833,7 @@ public class InternalCamelDslLexer extends Lexer {
                 }
             } while (true);
 
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82940:40: ( ( '\\r' )? '\\n' )?
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83079:40: ( ( '\\r' )? '\\n' )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -10842,9 +10842,9 @@ public class InternalCamelDslLexer extends Lexer {
             }
             switch (alt13) {
                 case 1 :
-                    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82940:41: ( '\\r' )? '\\n'
+                    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83079:41: ( '\\r' )? '\\n'
                     {
-                    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82940:41: ( '\\r' )?
+                    // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83079:41: ( '\\r' )?
                     int alt12=2;
                     int LA12_0 = input.LA(1);
 
@@ -10853,7 +10853,7 @@ public class InternalCamelDslLexer extends Lexer {
                     }
                     switch (alt12) {
                         case 1 :
-                            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82940:41: '\\r'
+                            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83079:41: '\\r'
                             {
                             match('\r'); 
 
@@ -10885,10 +10885,10 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82942:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82942:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83081:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83081:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82942:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83081:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt14=0;
             loop14:
             do {
@@ -10942,8 +10942,8 @@ public class InternalCamelDslLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82944:16: ( . )
-            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:82944:18: .
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83083:16: ( . )
+            // ../eu.paasage.camel.dsl.ui/src-gen/eu/paasage/camel/dsl/ui/contentassist/antlr/internal/InternalCamelDsl.g:83083:18: .
             {
             matchAny(); 
 
@@ -14351,54 +14351,54 @@ public class InternalCamelDslLexer extends Lexer {
         "\4\106\1\uffff\1\106\1\uffff\1\106\1\uffff\7\106\1\u04f9\6\106\2"+
         "\uffff\1\u0503\1\106\3\uffff\6\106\1\u050c\7\106\1\uffff\1\106\1"+
         "\u0518\1\uffff\2\106\3\uffff\13\106\3\uffff\1\106\1\uffff\4\106"+
-        "\2\uffff\11\106\1\u053b\1\106\6\uffff\1\106\5\uffff\10\106\2\uffff"+
-        "\3\106\1\uffff\4\106\1\uffff\22\106\1\uffff\21\106\1\uffff\2\106"+
-        "\3\uffff\1\106\1\uffff\6\106\1\u0588\1\106\4\uffff\1\u058a\1\106"+
-        "\1\u058c\2\106\2\uffff\1\106\1\u0590\1\106\2\uffff\3\106\1\uffff"+
-        "\4\106\2\uffff\1\106\1\u059b\2\106\1\u059e\1\106\2\uffff\1\106\1"+
-        "\uffff\2\106\1\uffff\1\106\3\uffff\1\106\2\uffff\2\106\1\u05ac\1"+
-        "\uffff\7\106\1\uffff\3\106\1\uffff\2\106\5\uffff\2\106\3\uffff\2"+
-        "\106\1\uffff\5\106\4\uffff\1\u05cb\1\106\1\uffff\15\106\7\uffff"+
-        "\1\106\1\uffff\11\106\1\uffff\1\106\6\uffff\1\106\5\uffff\10\106"+
-        "\2\uffff\7\106\1\uffff\2\106\1\u0600\3\106\1\uffff\1\106\2\uffff"+
-        "\4\106\1\uffff\7\106\1\uffff\2\106\1\uffff\1\u0613\5\106\1\u061c"+
-        "\1\uffff\6\106\1\uffff\1\106\1\u0626\1\u0627\4\106\1\uffff\1\106"+
-        "\1\uffff\1\106\1\uffff\3\106\1\uffff\10\106\1\u0639\1\u063a\1\uffff"+
-        "\2\106\1\uffff\1\u063d\2\uffff\1\106\5\uffff\3\106\3\uffff\11\106"+
-        "\1\uffff\2\106\1\u0655\2\uffff\1\u0658\1\106\4\uffff\7\106\2\uffff"+
-        "\5\106\2\uffff\7\106\1\uffff\2\106\3\uffff\1\u0673\3\106\1\u0677"+
-        "\1\106\1\uffff\1\106\5\uffff\2\106\1\u067e\1\106\1\uffff\1\u0680"+
-        "\15\106\2\uffff\5\106\2\uffff\1\106\1\uffff\2\106\1\uffff\1\106"+
-        "\1\uffff\1\106\3\uffff\4\106\1\uffff\1\106\3\uffff\1\106\2\uffff"+
-        "\1\106\1\uffff\1\106\1\uffff\2\106\2\uffff\3\106\1\u06af\4\106\1"+
-        "\u06b4\1\106\1\u06b6\6\106\2\uffff\2\106\12\uffff\2\106\1\uffff"+
-        "\2\106\1\uffff\4\106\3\uffff\1\106\4\uffff\1\106\1\uffff\1\u06de"+
-        "\1\uffff\4\106\2\uffff\1\106\1\u06e6\1\u06e7\3\106\1\uffff\7\106"+
-        "\1\u06f4\1\106\3\uffff\1\106\1\uffff\1\106\10\uffff\1\u06fc\2\uffff"+
-        "\3\106\1\uffff\2\106\1\uffff\2\106\1\uffff\1\u0708\1\106\1\uffff"+
-        "\1\u070e\2\uffff\1\106\1\uffff\1\106\1\uffff\2\106\2\uffff\1\106"+
-        "\1\uffff\2\106\1\uffff\1\106\2\uffff\1\106\3\uffff\1\106\1\uffff"+
-        "\2\106\1\u0720\2\106\1\uffff\1\106\1\u0724\1\106\1\u0726\1\uffff"+
-        "\1\106\1\uffff\1\106\1\u0729\2\106\1\u072c\1\u072d\1\u072e\1\u072f"+
-        "\13\uffff\2\106\1\uffff\2\106\1\u073a\2\106\1\u073e\1\106\5\uffff"+
-        "\1\106\2\uffff\1\106\2\uffff\4\106\2\uffff\1\u074c\2\uffff\2\106"+
-        "\1\uffff\2\106\4\uffff\2\106\4\uffff\2\106\7\uffff\6\106\13\uffff"+
-        "\2\106\3\uffff\1\106\1\uffff\1\u076f\3\uffff\1\106\1\uffff\2\106"+
-        "\1\uffff\1\u0777\1\u0778\1\106\1\uffff\1\106\1\uffff\2\106\1\uffff"+
-        "\1\u077d\1\106\11\uffff\2\106\1\uffff\1\106\1\u0786\1\uffff\1\u0788"+
-        "\3\uffff\1\106\2\uffff\1\106\1\u0791\1\uffff\1\106\2\uffff\1\106"+
-        "\1\uffff\2\106\1\uffff\4\106\6\uffff\1\u07a1\1\uffff\2\106\4\uffff"+
-        "\1\u07a9\1\106\1\uffff\2\106\21\uffff\1\u07b5\1\106\2\uffff\1\u07b7"+
-        "\1\106\1\u07b9\1\u07bb\1\uffff\1\106\2\uffff\1\106\2\uffff\1\u07c4"+
-        "\6\uffff\1\106\12\uffff\1\106\4\uffff\1\106\1\uffff\1\106\6\uffff"+
-        "\1\106\5\uffff\3\106\11\uffff\1\106\1\uffff\1\106\1\uffff\1\106"+
-        "\1\uffff\1\106\1\u07ec\2\uffff\1\106\17\uffff\1\106\1\uffff\2\106"+
-        "\10\uffff\1\u0803\11\uffff\1\u080d\4\106\7\uffff\1\u0817\23\uffff"+
-        "\1\u0825\2\uffff\1\u0829\4\uffff\4\106\31\uffff\3\106\1\u0844\22"+
-        "\uffff\1\106\1\u085b\1\106\13\uffff\1\u0865\12\uffff\1\106\1\uffff"+
-        "\1\106\20\uffff\1\u087a\1\106\6\uffff\1\u0883\5\uffff\1\106\2\uffff"+
-        "\1\u088c\10\uffff\1\106\12\uffff\1\106\10\uffff\1\u08a0\1\u08a2"+
-        "\2\uffff\1\u08a6\11\uffff\1\u08ad\7\uffff";
+        "\2\uffff\11\106\1\u053b\1\106\6\uffff\1\106\3\uffff\2\106\2\uffff"+
+        "\6\106\2\uffff\3\106\1\uffff\4\106\1\uffff\22\106\1\uffff\21\106"+
+        "\1\uffff\2\106\3\uffff\1\106\1\uffff\6\106\1\u0588\1\106\4\uffff"+
+        "\1\u058a\1\106\1\u058c\2\106\2\uffff\1\106\1\u0590\1\106\2\uffff"+
+        "\3\106\1\uffff\4\106\2\uffff\1\106\1\u059b\2\106\1\u059e\1\106\2"+
+        "\uffff\1\106\1\uffff\2\106\1\uffff\1\106\3\uffff\1\106\2\uffff\2"+
+        "\106\1\u05ac\1\uffff\7\106\1\uffff\3\106\1\uffff\2\106\5\uffff\2"+
+        "\106\3\uffff\2\106\1\uffff\5\106\4\uffff\1\u05cb\1\106\1\uffff\15"+
+        "\106\7\uffff\1\106\1\uffff\11\106\1\uffff\1\106\6\uffff\1\106\2"+
+        "\uffff\2\106\3\uffff\6\106\2\uffff\7\106\1\uffff\2\106\1\u0600\3"+
+        "\106\1\uffff\1\106\2\uffff\4\106\1\uffff\7\106\1\uffff\2\106\1\uffff"+
+        "\1\u0613\5\106\1\u061c\1\uffff\6\106\1\uffff\1\106\1\u0626\1\u0627"+
+        "\4\106\1\uffff\1\106\1\uffff\1\106\1\uffff\3\106\1\uffff\10\106"+
+        "\1\u0639\1\u063a\1\uffff\2\106\1\uffff\1\u063d\2\uffff\1\106\5\uffff"+
+        "\3\106\3\uffff\11\106\1\uffff\2\106\1\u0655\2\uffff\1\u0658\1\106"+
+        "\4\uffff\7\106\2\uffff\5\106\2\uffff\7\106\1\uffff\2\106\3\uffff"+
+        "\1\u0673\3\106\1\u0677\1\106\1\uffff\1\106\4\uffff\1\106\2\uffff"+
+        "\2\106\1\u067f\1\u0680\15\106\2\uffff\5\106\2\uffff\1\106\1\uffff"+
+        "\2\106\1\uffff\1\106\1\uffff\1\106\3\uffff\4\106\1\uffff\1\106\3"+
+        "\uffff\1\106\2\uffff\1\106\1\uffff\1\106\1\uffff\2\106\2\uffff\3"+
+        "\106\1\u06af\4\106\1\u06b4\1\106\1\u06b6\6\106\2\uffff\2\106\12"+
+        "\uffff\2\106\1\uffff\2\106\1\uffff\4\106\3\uffff\1\106\4\uffff\1"+
+        "\106\1\uffff\1\u06de\1\uffff\4\106\2\uffff\1\106\1\u06e6\1\u06e7"+
+        "\3\106\1\uffff\7\106\1\u06f4\1\106\3\uffff\1\106\1\uffff\1\106\10"+
+        "\uffff\1\u06fc\2\uffff\3\106\1\uffff\2\106\1\uffff\2\106\1\uffff"+
+        "\1\u0708\1\106\1\uffff\1\u070e\2\uffff\1\106\1\uffff\1\106\1\uffff"+
+        "\2\106\2\uffff\1\106\1\uffff\2\106\1\uffff\1\106\2\uffff\1\106\3"+
+        "\uffff\1\106\1\uffff\2\106\1\u0720\2\106\1\uffff\1\106\1\u0724\1"+
+        "\106\1\u0726\1\uffff\1\106\1\uffff\1\106\1\u0729\2\106\1\u072c\1"+
+        "\u072d\1\u072e\1\u072f\13\uffff\2\106\1\uffff\2\106\1\u073a\2\106"+
+        "\1\u073e\1\106\5\uffff\1\106\2\uffff\1\106\2\uffff\4\106\2\uffff"+
+        "\1\u074c\2\uffff\2\106\1\uffff\2\106\4\uffff\2\106\4\uffff\2\106"+
+        "\7\uffff\6\106\13\uffff\2\106\3\uffff\1\106\1\uffff\1\u076f\3\uffff"+
+        "\1\106\1\uffff\2\106\1\uffff\1\u0777\1\u0778\1\106\1\uffff\1\106"+
+        "\1\uffff\2\106\1\uffff\1\u077d\1\106\11\uffff\2\106\1\uffff\1\106"+
+        "\1\u0786\1\uffff\1\u0788\3\uffff\1\106\2\uffff\1\106\1\u0791\1\uffff"+
+        "\1\106\2\uffff\1\106\1\uffff\2\106\1\uffff\4\106\6\uffff\1\u07a1"+
+        "\1\uffff\2\106\4\uffff\1\u07a9\1\106\1\uffff\2\106\21\uffff\1\u07b5"+
+        "\1\106\2\uffff\1\u07b7\1\106\1\u07b9\1\u07bb\1\uffff\1\106\2\uffff"+
+        "\1\106\2\uffff\1\u07c4\6\uffff\1\106\12\uffff\1\106\4\uffff\1\106"+
+        "\1\uffff\1\106\6\uffff\1\106\5\uffff\3\106\11\uffff\1\106\1\uffff"+
+        "\1\106\1\uffff\1\106\1\uffff\1\106\1\u07ec\2\uffff\1\106\17\uffff"+
+        "\1\106\1\uffff\2\106\10\uffff\1\u0803\11\uffff\1\u080d\4\106\7\uffff"+
+        "\1\u0817\23\uffff\1\u0825\2\uffff\1\u0829\4\uffff\4\106\31\uffff"+
+        "\3\106\1\u0844\22\uffff\1\106\1\u085b\1\106\13\uffff\1\u0865\12"+
+        "\uffff\1\106\1\uffff\1\106\20\uffff\1\u087a\1\106\6\uffff\1\u0883"+
+        "\5\uffff\1\106\2\uffff\1\u088c\10\uffff\1\106\12\uffff\1\106\10"+
+        "\uffff\1\u08a0\1\u08a2\2\uffff\1\u08a6\11\uffff\1\u08ad\7\uffff";
     static final String DFA15_eofS =
         "\u08b1\uffff";
     static final String DFA15_minS =
@@ -14417,7 +14417,7 @@ public class InternalCamelDslLexer extends Lexer {
         "\1\144\1\164\1\160\1\163\1\154\1\164\1\147\1\155\2\154\1\147\1\154"+
         "\1\141\2\156\1\155\1\160\1\155\1\164\1\60\2\122\1\124\2\105\1\114"+
         "\1\107\1\155\1\144\1\157\1\165\1\163\1\162\2\uffff\1\141\1\143\1"+
-        "\72\1\40\3\157\1\154\1\141\1\145\1\40\1\154\1\162\1\157\1\143\1"+
+        "\72\1\40\3\157\1\154\1\141\1\145\1\40\1\162\1\154\1\157\1\143\1"+
         "\163\1\146\1\163\1\141\2\40\1\144\1\145\1\143\1\152\1\156\1\151"+
         "\1\162\1\141\1\142\1\162\1\uffff\2\162\1\155\1\147\1\156\4\uffff"+
         "\2\156\1\157\1\156\1\167\4\uffff\2\60\4\uffff\1\145\1\147\1\156"+
@@ -14435,7 +14435,7 @@ public class InternalCamelDslLexer extends Lexer {
         "\1\154\1\143\1\156\1\141\1\142\1\141\1\uffff\1\60\1\116\1\110\1"+
         "\116\1\113\1\117\1\101\1\145\1\144\1\146\1\155\1\164\1\156\2\145"+
         "\1\156\1\72\2\164\1\154\1\147\1\164\1\40\1\157\1\154\2\uffff\1\142"+
-        "\1\147\1\165\1\157\1\145\1\164\2\162\1\142\1\uffff\2\151\1\163\1"+
+        "\1\147\1\165\1\157\1\145\1\164\2\162\1\142\1\uffff\1\163\2\151\1"+
         "\154\1\141\1\40\1\145\3\164\1\154\3\uffff\1\141\1\145\1\162\1\151"+
         "\1\165\2\145\1\144\1\155\1\164\1\151\1\141\2\163\1\164\1\154\1\150"+
         "\1\155\1\164\1\151\1\144\1\145\1\167\1\141\1\55\1\141\1\143\1\154"+
@@ -14455,20 +14455,20 @@ public class InternalCamelDslLexer extends Lexer {
         "\1\151\1\154\1\40\1\uffff\2\111\1\60\1\123\2\102\1\154\1\40\1\151"+
         "\2\145\1\164\1\165\1\141\1\40\1\164\2\40\1\144\1\145\1\uffff\1\157"+
         "\1\151\1\162\1\151\1\145\1\141\1\162\1\uffff\1\162\1\165\1\141\1"+
-        "\162\1\160\1\141\1\162\1\40\1\171\1\40\1\156\1\171\3\uffff\1\145"+
-        "\1\144\1\141\2\151\1\141\1\164\1\uffff\2\162\3\40\1\151\1\164\1"+
-        "\156\1\162\1\141\1\155\1\162\1\143\1\162\1\151\1\145\1\165\1\141"+
-        "\1\162\1\151\1\72\1\141\1\164\1\156\1\155\1\167\1\141\1\145\1\151"+
-        "\1\60\1\151\1\40\1\172\1\167\1\72\1\157\1\164\1\uffff\1\151\1\162"+
-        "\1\150\1\145\1\157\1\uffff\1\55\1\uffff\1\145\1\141\1\40\1\uffff"+
-        "\1\40\1\uffff\1\151\1\40\1\150\1\147\1\60\1\166\1\uffff\1\151\1"+
-        "\40\1\162\1\40\2\60\1\40\1\60\1\164\1\156\1\144\1\151\1\162\1\40"+
-        "\1\72\1\60\2\105\1\124\1\123\1\101\1\60\1\137\1\60\1\124\1\116\1"+
-        "\105\2\uffff\1\40\1\123\1\147\1\104\1\122\1\uffff\1\116\1\115\1"+
-        "\131\1\60\1\105\1\123\1\117\1\uffff\1\123\1\117\1\60\1\uffff\1\101"+
-        "\1\115\1\131\1\141\1\60\2\uffff\1\116\1\104\1\123\1\143\1\uffff"+
-        "\1\126\1\160\1\101\1\145\1\122\1\uffff\2\60\1\103\2\60\1\uffff\1"+
-        "\60\1\164\1\162\1\151\1\143\1\40\1\163\1\uffff\2\147\1\145\4\uffff"+
+        "\162\1\160\1\141\1\162\1\40\1\171\1\40\1\156\1\171\3\uffff\2\151"+
+        "\1\145\1\144\2\141\1\164\1\uffff\2\162\3\40\1\151\1\164\1\156\1"+
+        "\162\1\141\1\155\1\162\1\143\1\162\1\151\1\145\1\165\1\141\1\162"+
+        "\1\151\1\72\1\141\1\164\1\156\1\155\1\167\1\141\1\145\1\151\1\60"+
+        "\1\151\1\40\1\172\1\167\1\72\1\157\1\164\1\uffff\1\151\1\162\1\150"+
+        "\1\145\1\157\1\uffff\1\55\1\uffff\1\145\1\141\1\40\1\uffff\1\40"+
+        "\1\uffff\1\151\1\40\1\150\1\147\1\60\1\166\1\uffff\1\151\1\40\1"+
+        "\162\1\40\2\60\1\40\1\60\1\164\1\156\1\144\1\151\1\162\1\40\1\72"+
+        "\1\60\2\105\1\124\1\123\1\101\1\60\1\137\1\60\1\124\1\116\1\105"+
+        "\2\uffff\1\40\1\123\1\147\1\104\1\122\1\uffff\1\116\1\115\1\131"+
+        "\1\60\1\105\1\123\1\117\1\uffff\1\123\1\117\1\60\1\uffff\1\101\1"+
+        "\115\1\131\1\141\1\60\2\uffff\1\116\1\104\1\123\1\143\1\uffff\1"+
+        "\126\1\160\1\101\1\145\1\122\1\uffff\2\60\1\103\2\60\1\uffff\1\60"+
+        "\1\164\1\162\1\151\1\143\1\40\1\163\1\uffff\2\147\1\145\4\uffff"+
         "\1\157\1\165\1\40\1\142\1\40\1\uffff\1\146\1\156\1\143\1\163\2\156"+
         "\1\142\1\145\1\162\1\163\1\162\1\156\2\151\1\uffff\2\145\1\40\2"+
         "\uffff\1\141\2\uffff\1\40\1\160\1\162\1\143\1\171\1\164\1\141\1"+
@@ -14476,8 +14476,8 @@ public class InternalCamelDslLexer extends Lexer {
         "\1\60\2\131\1\40\1\146\1\156\1\147\1\143\1\170\1\157\1\162\2\156"+
         "\1\162\1\uffff\1\72\2\uffff\1\165\2\40\1\155\1\146\1\164\1\145\1"+
         "\40\1\154\1\156\1\155\1\144\1\154\1\141\1\40\1\144\1\40\1\uffff"+
-        "\1\155\1\40\1\147\1\141\1\40\1\uffff\1\163\1\160\1\40\1\151\1\142"+
-        "\1\143\1\157\1\164\1\151\1\40\1\72\3\uffff\1\164\2\151\1\72\1\164"+
+        "\1\155\1\40\1\147\1\141\1\40\1\uffff\1\163\1\160\1\157\1\143\1\40"+
+        "\1\151\1\142\1\164\1\151\1\40\1\72\3\uffff\1\164\2\151\1\72\1\164"+
         "\1\151\1\162\1\164\1\72\1\144\1\162\1\143\1\164\1\151\1\164\1\uffff"+
         "\1\154\1\151\1\164\1\145\1\157\1\147\1\162\1\143\1\uffff\1\163\1"+
         "\156\1\uffff\1\157\1\141\1\40\1\uffff\1\162\1\151\1\156\1\171\1"+
@@ -14495,7 +14495,7 @@ public class InternalCamelDslLexer extends Lexer {
         "\2\151\1\145\1\151\1\171\1\uffff\1\156\1\143\1\40\1\uffff\1\40\1"+
         "\151\1\40\1\163\2\uffff\1\104\1\154\1\143\3\141\1\145\1\40\1\160"+
         "\1\143\1\72\1\154\3\uffff\1\162\1\uffff\1\155\1\uffff\1\164\1\145"+
-        "\1\uffff\1\144\1\40\2\164\1\154\1\141\1\156\1\145\1\157\1\154\1"+
+        "\1\156\1\141\1\uffff\1\144\1\40\2\164\1\154\1\145\1\157\1\154\1"+
         "\uffff\1\141\1\146\1\163\1\uffff\1\157\1\163\1\145\1\40\1\uffff"+
         "\1\145\2\164\1\145\1\164\1\151\1\40\1\166\1\40\1\164\1\162\1\145"+
         "\1\156\1\40\1\163\1\147\1\156\1\162\1\uffff\1\153\1\166\1\147\1"+
@@ -14511,12 +14511,12 @@ public class InternalCamelDslLexer extends Lexer {
         "\1\157\1\145\2\164\1\144\3\uffff\1\156\1\60\1\115\1\uffff\2\105"+
         "\1\154\1\162\1\40\1\72\1\163\1\151\1\143\2\156\1\163\1\40\7\uffff"+
         "\1\141\1\uffff\1\122\1\40\2\72\1\145\2\154\1\164\1\144\1\uffff\1"+
-        "\150\5\uffff\1\157\1\145\1\141\1\40\1\uffff\1\157\1\uffff\1\171"+
-        "\1\163\1\145\1\154\1\72\1\144\1\157\1\156\2\uffff\1\164\1\141\1"+
-        "\151\1\141\1\162\1\141\1\156\1\uffff\1\144\1\171\1\60\1\40\1\171"+
-        "\1\166\1\uffff\1\145\2\uffff\1\145\1\144\1\40\1\72\1\uffff\1\151"+
-        "\1\40\1\164\1\145\1\40\1\145\1\72\1\uffff\1\162\1\40\1\uffff\1\164"+
-        "\1\156\1\151\1\144\1\165\1\40\1\143\1\uffff\1\156\2\40\1\145\1\40"+
+        "\150\5\uffff\1\157\1\145\1\141\1\40\1\72\1\154\1\uffff\1\157\1\uffff"+
+        "\1\171\1\163\1\145\1\144\1\157\1\156\2\uffff\1\164\1\141\1\151\1"+
+        "\141\1\162\1\141\1\156\1\uffff\1\144\1\171\1\60\1\40\1\171\1\166"+
+        "\1\uffff\1\145\2\uffff\1\145\1\144\1\40\1\72\1\uffff\1\151\1\40"+
+        "\1\164\1\145\1\40\1\145\1\72\1\uffff\1\162\1\40\1\uffff\1\164\1"+
+        "\156\1\151\1\144\1\165\1\40\1\143\1\uffff\1\156\2\40\1\145\1\40"+
         "\1\151\1\163\1\116\2\60\1\124\1\114\1\124\1\145\1\uffff\1\126\1"+
         "\uffff\1\160\1\uffff\1\105\1\114\1\123\1\uffff\1\117\1\131\1\111"+
         "\1\103\1\171\1\122\1\114\1\107\2\60\1\uffff\1\126\1\160\1\uffff"+
@@ -14526,45 +14526,45 @@ public class InternalCamelDslLexer extends Lexer {
         "\171\1\40\2\156\2\151\1\72\1\164\1\uffff\1\101\2\123\1\151\1\141"+
         "\2\uffff\1\40\1\156\1\141\1\145\1\147\1\164\1\157\1\uffff\1\142"+
         "\1\111\3\uffff\1\60\1\40\1\72\1\151\1\60\1\151\1\165\1\72\1\156"+
-        "\4\uffff\1\72\1\40\1\60\1\40\1\uffff\1\60\1\156\1\40\1\151\1\164"+
-        "\1\72\1\145\1\164\1\72\1\164\1\143\3\40\2\uffff\1\72\1\145\1\40"+
-        "\1\162\1\72\2\uffff\1\157\1\uffff\1\141\1\40\1\uffff\1\40\1\uffff"+
-        "\1\153\1\166\2\uffff\1\147\1\157\1\72\1\164\1\141\1\154\3\uffff"+
-        "\1\40\1\151\1\uffff\1\40\1\uffff\1\157\1\164\1\124\1\120\2\uffff"+
-        "\1\105\1\101\1\103\1\60\1\105\1\145\1\116\1\105\1\60\1\116\1\60"+
-        "\1\117\1\110\1\160\1\137\2\105\2\uffff\1\105\1\145\1\uffff\1\143"+
-        "\3\uffff\1\156\1\154\1\156\2\uffff\2\164\1\141\1\157\1\164\1\uffff"+
-        "\1\145\1\166\1\40\1\156\1\143\1\uffff\1\143\1\156\1\uffff\1\143"+
-        "\1\151\1\uffff\2\156\1\60\1\uffff\1\154\1\164\2\157\1\uffff\1\145"+
-        "\1\130\2\60\2\164\1\72\1\uffff\2\164\3\40\1\156\1\154\1\40\1\72"+
-        "\1\uffff\1\143\1\uffff\1\157\1\uffff\1\143\1\160\1\uffff\1\143\3"+
-        "\uffff\1\163\1\uffff\1\60\1\uffff\1\155\1\40\1\166\1\151\1\uffff"+
-        "\1\162\1\151\1\uffff\1\151\1\145\1\uffff\1\155\1\72\2\143\2\uffff"+
-        "\1\40\1\uffff\1\40\1\uffff\1\156\1\154\2\uffff\1\72\1\141\1\40\1"+
-        "\156\1\uffff\1\40\2\uffff\1\40\1\143\1\144\1\uffff\1\156\1\141\1"+
-        "\111\1\105\1\60\1\131\1\110\1\uffff\1\116\1\60\1\124\1\60\1\uffff"+
-        "\1\104\1\uffff\1\116\1\60\1\145\1\123\4\60\1\uffff\1\141\7\uffff"+
-        "\1\165\1\72\1\171\1\151\1\154\1\156\1\40\1\60\1\145\1\40\1\143\1"+
-        "\164\2\157\3\uffff\1\163\1\40\2\164\1\144\1\uffff\1\145\1\40\2\156"+
-        "\2\uffff\1\60\2\uffff\1\171\1\151\1\uffff\1\163\1\151\2\155\1\142"+
-        "\1\uffff\1\40\1\145\3\uffff\1\157\1\156\1\141\1\40\1\145\1\143\4"+
-        "\uffff\1\145\1\166\1\72\2\157\1\40\1\157\3\uffff\2\157\1\uffff\1"+
-        "\157\3\uffff\2\40\1\uffff\1\154\1\uffff\1\40\1\uffff\1\145\1\uffff"+
-        "\1\157\2\40\1\156\1\114\1\122\1\uffff\2\60\1\124\1\uffff\1\123\1"+
-        "\uffff\2\123\1\uffff\1\60\1\105\6\uffff\1\145\2\uffff\1\40\1\157"+
-        "\1\151\1\40\1\164\1\uffff\1\40\1\uffff\1\157\1\uffff\1\40\1\155"+
-        "\1\163\1\72\1\143\1\171\1\40\1\151\1\uffff\1\163\1\155\1\40\1\72"+
-        "\1\uffff\1\72\1\157\1\40\1\157\3\145\3\uffff\1\60\1\155\1\40\1\154"+
-        "\2\uffff\1\40\1\141\1\40\1\145\1\uffff\2\156\1\uffff\1\144\1\155"+
-        "\1\163\1\156\1\uffff\1\163\1\165\4\uffff\1\156\3\uffff\1\143\1\60"+
-        "\1\137\2\uffff\1\60\1\137\2\60\1\uffff\1\103\1\40\1\155\1\156\1"+
-        "\163\1\uffff\1\142\4\uffff\1\156\1\147\1\40\1\155\1\164\4\uffff"+
-        "\1\40\1\163\1\uffff\1\164\1\163\1\157\3\uffff\1\156\1\uffff\1\156"+
-        "\1\164\1\143\1\164\1\uffff\1\160\1\162\1\40\2\uffff\1\154\2\uffff"+
-        "\3\40\1\145\1\155\1\164\1\144\1\143\1\145\1\164\1\145\1\uffff\1"+
-        "\123\1\uffff\1\117\1\uffff\1\120\1\uffff\1\117\1\164\2\uffff\1\72"+
-        "\1\141\3\uffff\1\163\2\uffff\1\157\1\uffff\1\165\1\40\1\155\2\uffff"+
-        "\1\151\1\40\1\144\2\40\1\162\1\165\1\162\1\157\1\145\1\uffff\1\145"+
+        "\3\uffff\1\40\2\uffff\1\72\1\40\2\60\1\156\1\40\1\151\1\164\1\72"+
+        "\1\145\1\164\1\72\1\164\1\143\3\40\2\uffff\1\72\1\145\1\40\1\162"+
+        "\1\72\2\uffff\1\157\1\uffff\1\141\1\40\1\uffff\1\40\1\uffff\1\153"+
+        "\1\166\2\uffff\1\147\1\157\1\72\1\164\1\141\1\154\3\uffff\1\40\1"+
+        "\151\1\uffff\1\40\1\uffff\1\157\1\164\1\124\1\120\2\uffff\1\105"+
+        "\1\101\1\103\1\60\1\105\1\145\1\116\1\105\1\60\1\116\1\60\1\117"+
+        "\1\110\1\160\1\137\2\105\2\uffff\1\105\1\145\1\uffff\1\143\3\uffff"+
+        "\1\156\1\154\1\156\2\uffff\2\164\1\141\1\157\1\164\1\uffff\1\145"+
+        "\1\166\1\40\1\156\1\143\1\uffff\1\143\1\156\1\uffff\1\143\1\151"+
+        "\1\uffff\2\156\1\60\1\uffff\1\154\1\164\2\157\1\uffff\1\145\1\130"+
+        "\2\60\2\164\1\72\1\uffff\2\164\3\40\1\156\1\154\1\40\1\72\1\uffff"+
+        "\1\143\1\uffff\1\157\1\uffff\1\143\1\160\1\uffff\1\143\1\163\4\uffff"+
+        "\1\60\1\uffff\1\155\1\40\1\166\1\151\1\uffff\1\162\1\151\1\uffff"+
+        "\1\151\1\145\1\uffff\1\155\1\72\2\143\2\uffff\1\40\1\uffff\1\40"+
+        "\1\uffff\1\156\1\154\2\uffff\1\72\1\141\1\40\1\156\1\uffff\1\40"+
+        "\2\uffff\1\40\1\143\1\144\1\uffff\1\156\1\141\1\111\1\105\1\60\1"+
+        "\131\1\110\1\uffff\1\116\1\60\1\124\1\60\1\uffff\1\104\1\uffff\1"+
+        "\116\1\60\1\145\1\123\4\60\1\uffff\1\141\7\uffff\1\165\1\72\1\171"+
+        "\1\151\1\154\1\156\1\40\1\60\1\145\1\40\1\143\1\164\2\157\3\uffff"+
+        "\1\163\1\40\2\164\1\144\1\uffff\1\145\1\40\2\156\2\uffff\1\60\2"+
+        "\uffff\1\171\1\151\1\uffff\1\163\1\151\2\155\1\142\1\uffff\1\40"+
+        "\1\145\3\uffff\1\157\1\156\1\141\1\40\1\145\1\143\4\uffff\1\145"+
+        "\1\166\1\72\2\157\1\40\1\157\3\uffff\2\157\1\uffff\1\157\3\uffff"+
+        "\2\40\1\uffff\1\154\1\uffff\1\40\1\uffff\1\145\1\uffff\1\157\2\40"+
+        "\1\156\1\114\1\122\1\uffff\2\60\1\124\1\uffff\1\123\1\uffff\2\123"+
+        "\1\uffff\1\60\1\105\6\uffff\1\145\2\uffff\1\40\1\157\1\151\1\40"+
+        "\1\164\1\uffff\1\40\1\uffff\1\157\1\uffff\1\40\1\155\1\163\1\72"+
+        "\1\143\1\171\1\40\1\151\1\uffff\1\163\1\155\1\40\1\72\1\uffff\1"+
+        "\72\1\157\1\40\1\157\3\145\3\uffff\1\60\1\155\1\40\1\154\2\uffff"+
+        "\1\40\1\141\1\40\1\145\1\uffff\2\156\1\uffff\1\144\1\155\1\163\1"+
+        "\156\1\uffff\1\163\1\165\4\uffff\1\156\3\uffff\1\143\1\60\1\137"+
+        "\2\uffff\1\60\1\137\2\60\1\uffff\1\103\1\40\1\155\1\156\1\163\1"+
+        "\uffff\1\142\4\uffff\1\156\1\147\1\40\1\155\1\164\4\uffff\1\40\1"+
+        "\163\1\uffff\1\164\1\163\1\157\3\uffff\1\156\1\uffff\1\156\1\164"+
+        "\1\143\1\164\1\uffff\1\160\1\162\1\40\2\uffff\1\154\2\uffff\3\40"+
+        "\1\145\1\155\1\164\1\144\1\143\1\145\1\164\1\145\1\uffff\1\123\1"+
+        "\uffff\1\117\1\uffff\1\120\1\uffff\1\117\1\164\2\uffff\1\72\1\141"+
+        "\3\uffff\1\163\2\uffff\1\157\1\uffff\1\165\1\40\1\155\2\uffff\1"+
+        "\151\1\40\1\144\2\40\1\162\1\165\1\162\1\157\1\145\1\uffff\1\145"+
         "\1\150\1\155\1\uffff\1\154\1\165\1\40\1\uffff\1\145\1\141\1\40\1"+
         "\145\1\72\1\105\1\116\1\105\1\116\3\uffff\2\164\1\144\1\156\1\151"+
         "\1\145\1\157\1\uffff\1\145\3\uffff\1\151\1\162\1\151\1\156\1\163"+
@@ -14617,7 +14617,7 @@ public class InternalCamelDslLexer extends Lexer {
         "\1\141\1\142\1\141\1\uffff\1\172\1\116\1\110\1\116\1\113\1\117\1"+
         "\101\1\145\1\144\1\164\1\160\1\164\1\156\2\145\1\165\1\72\2\164"+
         "\1\157\1\147\1\164\1\145\1\157\1\154\2\uffff\1\142\1\147\1\165\1"+
-        "\157\1\145\1\164\2\162\1\164\1\uffff\1\165\1\151\1\164\1\154\1\141"+
+        "\157\1\145\1\164\2\162\1\164\1\uffff\1\164\1\165\1\151\1\154\1\141"+
         "\2\145\3\164\1\156\3\uffff\1\141\1\145\1\162\1\151\1\165\2\145\2"+
         "\166\2\164\1\145\2\163\1\164\1\154\1\150\1\155\1\164\1\151\1\144"+
         "\1\145\1\167\1\141\1\55\1\144\1\143\1\154\1\144\1\72\1\uffff\1\71"+
@@ -14638,229 +14638,229 @@ public class InternalCamelDslLexer extends Lexer {
         "\1\162\1\164\1\165\1\157\1\40\1\164\1\40\1\72\1\144\1\145\1\uffff"+
         "\1\157\1\151\1\162\1\151\1\145\1\141\1\162\1\uffff\1\162\1\165\1"+
         "\141\1\162\1\160\1\141\1\162\1\72\1\171\1\163\1\156\1\171\3\uffff"+
-        "\1\145\1\144\1\141\2\151\1\141\1\164\1\uffff\2\162\3\40\1\151\1"+
-        "\164\1\156\1\162\1\141\1\155\1\162\1\143\1\162\1\151\1\145\1\165"+
-        "\1\141\1\162\1\151\1\72\1\141\1\164\1\156\1\155\1\167\1\141\1\145"+
-        "\1\151\1\172\2\151\1\172\1\167\1\144\1\157\1\164\1\uffff\1\151\1"+
-        "\162\1\150\1\145\1\157\1\uffff\1\55\1\uffff\1\145\1\141\1\40\1\uffff"+
-        "\1\40\1\uffff\1\166\1\72\1\150\1\147\1\172\1\166\1\uffff\1\151\1"+
-        "\40\1\162\1\40\2\172\1\40\1\172\1\164\1\156\1\163\1\171\1\162\2"+
-        "\72\1\172\2\105\1\124\1\123\1\101\1\172\1\137\1\172\1\124\1\116"+
-        "\1\105\2\uffff\1\40\1\123\1\147\1\104\1\122\1\uffff\1\116\1\115"+
-        "\1\131\1\172\1\105\1\123\1\117\1\uffff\1\123\1\117\1\172\1\uffff"+
-        "\1\101\1\115\1\131\1\141\1\172\2\uffff\1\116\1\104\1\123\1\143\1"+
-        "\uffff\1\126\1\160\1\101\1\145\1\122\1\uffff\2\172\1\103\2\172\1"+
-        "\uffff\1\172\1\164\1\162\1\151\1\143\1\72\1\163\1\uffff\2\147\1"+
-        "\145\4\uffff\1\157\1\165\1\40\1\142\1\40\1\uffff\1\146\1\156\1\143"+
-        "\1\163\2\156\1\142\1\145\1\162\1\163\1\162\1\156\2\151\1\uffff\2"+
-        "\145\1\163\2\uffff\1\141\2\uffff\1\40\1\160\1\162\1\143\1\171\1"+
-        "\164\1\141\1\145\1\163\1\171\1\156\1\151\1\157\1\156\1\145\1\143"+
-        "\2\116\1\uffff\1\172\2\131\1\40\1\164\1\156\1\147\1\143\1\170\1"+
-        "\157\1\162\1\156\1\163\1\162\1\uffff\1\162\2\uffff\1\165\1\40\1"+
-        "\163\1\155\1\146\1\164\1\145\1\111\1\156\1\166\1\155\1\144\1\154"+
-        "\1\141\1\40\1\144\1\40\1\uffff\1\164\1\40\1\147\1\141\1\40\1\uffff"+
-        "\1\163\1\160\1\163\1\151\1\156\1\143\1\157\1\164\1\151\1\40\1\72"+
-        "\3\uffff\1\164\2\151\1\72\1\164\1\151\1\162\1\164\1\72\1\144\1\162"+
-        "\1\143\1\164\1\151\1\164\1\uffff\1\154\1\151\1\164\1\145\1\157\1"+
-        "\147\1\162\1\143\1\uffff\1\163\1\156\1\uffff\1\157\1\141\1\40\1"+
-        "\uffff\1\162\1\151\1\156\1\171\1\155\1\141\1\167\1\uffff\1\162\1"+
-        "\143\10\uffff\1\157\1\150\3\uffff\1\157\1\uffff\1\145\5\uffff\1"+
-        "\151\1\141\1\145\1\151\1\172\1\145\1\141\1\151\3\uffff\3\172\1\124"+
-        "\1\103\1\122\1\uffff\1\115\1\uffff\1\171\1\107\1\137\1\125\1\123"+
-        "\1\124\1\123\1\105\2\172\1\124\1\uffff\1\123\1\105\2\172\1\116\1"+
-        "\uffff\1\103\1\101\1\172\1\156\1\120\1\uffff\1\124\1\105\2\172\1"+
-        "\101\1\145\2\124\1\123\2\uffff\1\101\3\uffff\1\172\1\163\1\164\1"+
-        "\145\2\uffff\1\72\1\145\2\40\1\155\1\154\1\164\1\151\1\uffff\1\151"+
-        "\1\163\1\141\1\155\1\145\1\141\1\165\1\172\1\145\1\164\1\143\1\40"+
-        "\1\164\1\166\1\164\1\143\1\165\1\40\3\uffff\1\154\1\145\1\72\1\40"+
-        "\1\157\1\162\1\172\1\151\1\155\1\141\1\160\1\141\1\72\1\40\1\145"+
-        "\1\107\1\172\1\uffff\2\124\3\uffff\1\141\1\165\2\164\1\154\1\141"+
-        "\2\151\1\145\1\151\1\171\1\uffff\2\160\1\40\1\uffff\1\40\1\151\1"+
-        "\125\1\163\2\uffff\1\104\1\154\1\143\3\141\1\145\1\40\1\160\1\143"+
-        "\1\72\1\157\3\uffff\1\162\1\uffff\1\155\1\uffff\1\164\1\145\1\uffff"+
-        "\1\164\1\40\2\164\1\154\1\141\1\156\1\151\2\157\1\uffff\1\141\1"+
-        "\164\1\163\1\uffff\1\157\1\163\1\145\1\40\1\uffff\1\145\2\164\1"+
-        "\145\1\164\1\151\1\40\1\166\1\72\1\164\1\162\1\145\1\156\1\40\1"+
-        "\163\1\147\1\156\1\162\1\uffff\1\153\1\166\1\147\1\40\1\141\1\156"+
-        "\1\72\1\151\1\164\1\154\1\160\1\156\1\72\1\157\1\154\1\163\1\166"+
-        "\1\uffff\1\163\1\164\1\156\2\uffff\1\125\1\uffff\1\123\1\124\1\101"+
-        "\1\105\1\101\1\160\1\172\1\105\4\uffff\1\172\1\171\1\172\1\115\1"+
-        "\102\2\uffff\1\105\1\172\1\103\2\uffff\1\114\2\124\1\uffff\1\124"+
-        "\1\105\1\111\1\123\2\uffff\1\114\1\172\1\111\1\171\1\172\1\114\2"+
-        "\uffff\1\72\1\uffff\1\171\1\40\1\uffff\1\72\1\166\1\uffff\1\141"+
-        "\1\145\2\uffff\1\154\1\143\1\162\1\uffff\1\40\1\164\1\145\1\144"+
-        "\1\142\2\164\1\uffff\1\163\1\40\1\145\1\uffff\1\151\1\145\1\162"+
-        "\1\165\3\uffff\1\171\2\155\2\uffff\1\162\1\171\1\uffff\1\157\1\145"+
-        "\2\164\1\144\3\uffff\1\156\1\172\1\115\1\uffff\2\105\1\154\1\162"+
-        "\1\40\1\72\1\163\1\151\1\143\1\164\1\156\1\163\1\40\7\uffff\1\141"+
-        "\1\uffff\1\122\1\40\2\72\1\145\2\154\1\164\1\144\1\uffff\1\150\5"+
-        "\uffff\1\157\1\145\1\141\1\72\1\uffff\1\171\1\uffff\1\171\1\163"+
-        "\1\145\1\154\1\72\1\144\1\157\1\156\2\uffff\1\164\1\171\1\151\1"+
-        "\141\1\162\1\141\1\156\1\uffff\1\162\1\171\1\172\1\40\1\171\1\166"+
-        "\1\uffff\1\145\2\uffff\1\145\1\144\1\40\1\72\1\uffff\1\151\1\40"+
-        "\1\164\1\145\1\40\1\145\1\72\1\uffff\1\162\1\40\1\uffff\1\164\1"+
-        "\156\1\151\1\144\1\165\1\141\1\143\1\uffff\1\156\2\40\1\145\1\40"+
-        "\1\151\1\163\1\116\2\172\1\124\1\114\1\124\1\145\1\uffff\1\126\1"+
-        "\uffff\1\160\1\uffff\1\105\1\114\1\123\1\uffff\1\117\1\131\1\111"+
-        "\1\103\1\171\1\122\1\114\1\107\2\172\1\uffff\1\126\1\160\1\uffff"+
-        "\1\172\2\uffff\1\40\1\165\1\uffff\1\165\1\141\1\151\1\72\1\151\1"+
-        "\141\1\145\2\uffff\1\151\1\156\1\40\1\154\1\151\2\145\2\40\1\uffff"+
-        "\1\40\1\157\1\172\1\151\1\162\1\172\1\145\2\uffff\1\157\1\uffff"+
-        "\1\171\1\40\2\156\2\151\1\72\1\164\1\uffff\1\101\2\123\1\151\1\145"+
-        "\2\uffff\1\40\1\156\1\141\1\145\1\147\1\164\1\157\1\uffff\1\142"+
-        "\1\111\3\uffff\1\172\1\40\1\72\1\151\1\172\1\151\1\165\1\72\1\156"+
-        "\4\uffff\1\72\1\40\1\172\1\40\1\uffff\1\172\1\156\1\163\1\151\1"+
-        "\164\1\72\1\145\1\164\1\72\1\164\1\143\1\163\1\40\1\72\2\uffff\1"+
-        "\72\1\145\1\40\1\162\1\72\2\uffff\1\157\1\uffff\1\141\1\40\1\uffff"+
-        "\1\40\1\uffff\1\153\1\166\2\uffff\1\147\1\157\1\72\1\164\1\160\1"+
-        "\154\3\uffff\1\40\1\151\1\uffff\1\40\1\uffff\1\157\1\164\1\124\1"+
-        "\120\2\uffff\1\105\1\101\1\103\1\172\1\105\1\145\1\116\1\105\1\172"+
-        "\1\116\1\172\1\117\1\110\1\160\1\137\2\105\2\uffff\1\105\1\145\1"+
-        "\uffff\1\163\3\uffff\1\160\1\154\1\156\2\uffff\2\164\1\141\1\157"+
-        "\1\164\1\uffff\1\145\1\166\1\163\1\156\1\160\1\uffff\1\146\1\156"+
-        "\1\uffff\1\143\1\151\1\uffff\2\156\1\172\1\uffff\1\154\1\164\2\157"+
-        "\1\uffff\1\162\1\130\2\172\2\164\1\72\1\uffff\2\164\2\40\1\72\1"+
-        "\156\1\154\1\172\1\72\1\uffff\1\143\1\uffff\1\157\1\uffff\1\143"+
-        "\1\160\1\uffff\1\143\3\uffff\1\163\1\uffff\1\172\1\uffff\1\162\1"+
-        "\40\1\166\1\151\1\uffff\1\162\1\151\1\uffff\1\151\1\145\1\uffff"+
-        "\1\162\1\72\1\160\1\143\2\uffff\1\40\1\uffff\1\40\1\uffff\1\156"+
-        "\1\154\2\uffff\1\72\1\141\1\40\1\156\1\uffff\1\40\2\uffff\1\40\1"+
-        "\155\1\144\1\uffff\1\156\1\141\1\111\1\105\1\172\1\131\1\110\1\uffff"+
-        "\1\116\1\172\1\124\1\172\1\uffff\1\104\1\uffff\1\116\1\172\1\145"+
-        "\1\123\4\172\1\uffff\1\157\7\uffff\1\165\1\163\1\171\1\151\1\154"+
-        "\1\156\1\40\1\172\1\145\1\40\1\143\1\164\2\157\3\uffff\1\163\1\40"+
-        "\3\164\1\uffff\1\145\1\40\2\156\2\uffff\1\172\2\uffff\1\171\1\151"+
-        "\1\uffff\1\163\1\151\1\163\1\155\1\151\1\uffff\1\40\1\145\3\uffff"+
-        "\1\157\1\156\1\141\1\72\1\145\1\143\4\uffff\1\145\1\166\1\72\2\157"+
-        "\1\40\1\157\3\uffff\2\157\1\uffff\1\157\3\uffff\2\40\1\uffff\1\154"+
-        "\1\uffff\1\40\1\uffff\1\164\1\uffff\1\157\1\145\1\40\1\156\1\114"+
-        "\1\122\1\uffff\2\172\1\124\1\uffff\1\123\1\uffff\2\123\1\uffff\1"+
-        "\172\1\105\6\uffff\1\145\2\uffff\1\40\1\157\1\151\1\72\1\164\1\uffff"+
-        "\1\172\1\uffff\1\157\1\uffff\1\163\1\155\1\163\1\72\1\151\1\171"+
-        "\1\72\1\151\1\uffff\1\163\1\155\1\40\1\72\1\uffff\1\72\1\157\1\40"+
-        "\1\157\3\145\3\uffff\1\172\1\155\1\40\1\154\2\uffff\1\72\1\141\1"+
-        "\172\1\145\1\uffff\2\156\1\uffff\1\144\1\155\1\163\1\156\1\uffff"+
-        "\1\163\1\165\4\uffff\1\156\3\uffff\1\143\1\172\1\137\2\uffff\1\172"+
-        "\1\137\2\172\1\uffff\1\103\1\40\1\162\1\156\1\163\1\uffff\1\155"+
-        "\4\uffff\1\156\1\163\1\40\1\155\1\164\4\uffff\1\40\1\164\1\uffff"+
-        "\1\164\1\163\1\157\3\uffff\1\156\1\uffff\1\156\1\164\1\143\1\164"+
-        "\1\uffff\1\160\1\162\1\40\2\uffff\1\154\2\uffff\3\40\1\145\1\155"+
-        "\2\164\1\143\1\145\1\164\1\145\1\uffff\1\123\1\uffff\1\117\1\uffff"+
-        "\1\120\1\uffff\1\117\1\164\2\uffff\1\72\1\141\3\uffff\1\163\2\uffff"+
-        "\1\157\1\uffff\1\165\1\40\1\155\2\uffff\1\151\1\40\1\144\1\72\1"+
-        "\40\1\162\1\165\1\162\1\157\1\145\1\uffff\1\151\1\150\1\155\1\uffff"+
-        "\1\154\1\165\1\40\1\uffff\1\145\1\141\1\40\1\145\1\163\1\105\1\116"+
-        "\1\105\1\116\3\uffff\2\164\1\144\1\156\1\151\1\145\1\157\1\uffff"+
-        "\1\145\3\uffff\1\151\1\162\1\151\1\156\1\163\2\uffff\1\141\2\uffff"+
-        "\1\72\1\156\1\151\1\170\1\154\1\164\1\170\3\uffff\1\103\1\114\1"+
-        "\122\1\104\1\151\1\162\1\145\1\151\2\uffff\1\164\1\156\1\154\1\143"+
-        "\1\151\1\143\1\145\1\157\1\162\2\uffff\1\151\2\uffff\1\164\1\151"+
-        "\2\uffff\1\164\1\117\1\131\1\137\1\172\1\157\1\141\1\154\1\143\1"+
-        "\162\1\72\1\163\1\40\1\164\1\40\1\156\1\165\1\144\1\143\1\72\2\uffff"+
-        "\1\72\1\116\1\172\1\123\1\uffff\1\156\1\151\1\163\1\141\1\151\5"+
-        "\uffff\1\151\1\171\1\151\1\164\1\162\1\167\1\141\4\uffff\1\104\1"+
-        "\uffff\1\105\1\163\1\156\2\uffff\1\164\1\143\3\uffff\1\40\2\uffff"+
-        "\1\72\1\143\1\141\1\164\1\172\1\103\2\uffff\1\164\1\151\1\163\2"+
-        "\155\1\uffff\1\145\1\162\1\151\1\uffff\1\117\1\163\1\157\1\151\1"+
-        "\uffff\1\145\1\156\2\uffff\1\40\1\145\1\157\1\116\2\uffff\1\156"+
-        "\2\uffff\1\164\1\163\1\160\1\72\1\156\1\104\1\40\1\162\1\164\4\uffff"+
-        "\1\40\1\172\2\151\1\141\1\151\3\uffff\1\143\1\156\2\uffff\1\163"+
-        "\1\143\1\151\1\uffff\1\145\2\uffff\1\72\2\uffff";
+        "\2\151\1\145\1\144\2\141\1\164\1\uffff\2\162\3\40\1\151\1\164\1"+
+        "\156\1\162\1\141\1\155\1\162\1\143\1\162\1\151\1\145\1\165\1\141"+
+        "\1\162\1\151\1\72\1\141\1\164\1\156\1\155\1\167\1\141\1\145\1\151"+
+        "\1\172\2\151\1\172\1\167\1\144\1\157\1\164\1\uffff\1\151\1\162\1"+
+        "\150\1\145\1\157\1\uffff\1\55\1\uffff\1\145\1\141\1\40\1\uffff\1"+
+        "\40\1\uffff\1\166\1\72\1\150\1\147\1\172\1\166\1\uffff\1\151\1\40"+
+        "\1\162\1\40\2\172\1\40\1\172\1\164\1\156\1\163\1\171\1\162\2\72"+
+        "\1\172\2\105\1\124\1\123\1\101\1\172\1\137\1\172\1\124\1\116\1\105"+
+        "\2\uffff\1\40\1\123\1\147\1\104\1\122\1\uffff\1\116\1\115\1\131"+
+        "\1\172\1\105\1\123\1\117\1\uffff\1\123\1\117\1\172\1\uffff\1\101"+
+        "\1\115\1\131\1\141\1\172\2\uffff\1\116\1\104\1\123\1\143\1\uffff"+
+        "\1\126\1\160\1\101\1\145\1\122\1\uffff\2\172\1\103\2\172\1\uffff"+
+        "\1\172\1\164\1\162\1\151\1\143\1\72\1\163\1\uffff\2\147\1\145\4"+
+        "\uffff\1\157\1\165\1\40\1\142\1\40\1\uffff\1\146\1\156\1\143\1\163"+
+        "\2\156\1\142\1\145\1\162\1\163\1\162\1\156\2\151\1\uffff\2\145\1"+
+        "\163\2\uffff\1\141\2\uffff\1\40\1\160\1\162\1\143\1\171\1\164\1"+
+        "\141\1\145\1\163\1\171\1\156\1\151\1\157\1\156\1\145\1\143\2\116"+
+        "\1\uffff\1\172\2\131\1\40\1\164\1\156\1\147\1\143\1\170\1\157\1"+
+        "\162\1\156\1\163\1\162\1\uffff\1\162\2\uffff\1\165\1\40\1\163\1"+
+        "\155\1\146\1\164\1\145\1\111\1\156\1\166\1\155\1\144\1\154\1\141"+
+        "\1\40\1\144\1\40\1\uffff\1\164\1\40\1\147\1\141\1\40\1\uffff\1\163"+
+        "\1\160\1\157\1\143\1\163\1\151\1\156\1\164\1\151\1\40\1\72\3\uffff"+
+        "\1\164\2\151\1\72\1\164\1\151\1\162\1\164\1\72\1\144\1\162\1\143"+
+        "\1\164\1\151\1\164\1\uffff\1\154\1\151\1\164\1\145\1\157\1\147\1"+
+        "\162\1\143\1\uffff\1\163\1\156\1\uffff\1\157\1\141\1\40\1\uffff"+
+        "\1\162\1\151\1\156\1\171\1\155\1\141\1\167\1\uffff\1\162\1\143\10"+
+        "\uffff\1\157\1\150\3\uffff\1\157\1\uffff\1\145\5\uffff\1\151\1\141"+
+        "\1\145\1\151\1\172\1\145\1\141\1\151\3\uffff\3\172\1\124\1\103\1"+
+        "\122\1\uffff\1\115\1\uffff\1\171\1\107\1\137\1\125\1\123\1\124\1"+
+        "\123\1\105\2\172\1\124\1\uffff\1\123\1\105\2\172\1\116\1\uffff\1"+
+        "\103\1\101\1\172\1\156\1\120\1\uffff\1\124\1\105\2\172\1\101\1\145"+
+        "\2\124\1\123\2\uffff\1\101\3\uffff\1\172\1\163\1\164\1\145\2\uffff"+
+        "\1\72\1\145\2\40\1\155\1\154\1\164\1\151\1\uffff\1\151\1\163\1\141"+
+        "\1\155\1\145\1\141\1\165\1\172\1\145\1\164\1\143\1\40\1\164\1\166"+
+        "\1\164\1\143\1\165\1\40\3\uffff\1\154\1\145\1\72\1\40\1\157\1\162"+
+        "\1\172\1\151\1\155\1\141\1\160\1\141\1\72\1\40\1\145\1\107\1\172"+
+        "\1\uffff\2\124\3\uffff\1\141\1\165\2\164\1\154\1\141\2\151\1\145"+
+        "\1\151\1\171\1\uffff\2\160\1\40\1\uffff\1\40\1\151\1\125\1\163\2"+
+        "\uffff\1\104\1\154\1\143\3\141\1\145\1\40\1\160\1\143\1\72\1\157"+
+        "\3\uffff\1\162\1\uffff\1\155\1\uffff\1\164\1\145\1\156\1\141\1\uffff"+
+        "\1\164\1\40\2\164\1\154\1\151\2\157\1\uffff\1\141\1\164\1\163\1"+
+        "\uffff\1\157\1\163\1\145\1\40\1\uffff\1\145\2\164\1\145\1\164\1"+
+        "\151\1\40\1\166\1\72\1\164\1\162\1\145\1\156\1\40\1\163\1\147\1"+
+        "\156\1\162\1\uffff\1\153\1\166\1\147\1\40\1\141\1\156\1\72\1\151"+
+        "\1\164\1\154\1\160\1\156\1\72\1\157\1\154\1\163\1\166\1\uffff\1"+
+        "\163\1\164\1\156\2\uffff\1\125\1\uffff\1\123\1\124\1\101\1\105\1"+
+        "\101\1\160\1\172\1\105\4\uffff\1\172\1\171\1\172\1\115\1\102\2\uffff"+
+        "\1\105\1\172\1\103\2\uffff\1\114\2\124\1\uffff\1\124\1\105\1\111"+
+        "\1\123\2\uffff\1\114\1\172\1\111\1\171\1\172\1\114\2\uffff\1\72"+
+        "\1\uffff\1\171\1\40\1\uffff\1\72\1\166\1\uffff\1\141\1\145\2\uffff"+
+        "\1\154\1\143\1\162\1\uffff\1\40\1\164\1\145\1\144\1\142\2\164\1"+
+        "\uffff\1\163\1\40\1\145\1\uffff\1\151\1\145\1\162\1\165\3\uffff"+
+        "\1\171\2\155\2\uffff\1\162\1\171\1\uffff\1\157\1\145\2\164\1\144"+
+        "\3\uffff\1\156\1\172\1\115\1\uffff\2\105\1\154\1\162\1\40\1\72\1"+
+        "\163\1\151\1\143\1\164\1\156\1\163\1\40\7\uffff\1\141\1\uffff\1"+
+        "\122\1\40\2\72\1\145\2\154\1\164\1\144\1\uffff\1\150\5\uffff\1\157"+
+        "\1\145\1\141\2\72\1\154\1\uffff\1\171\1\uffff\1\171\1\163\1\145"+
+        "\1\144\1\157\1\156\2\uffff\1\164\1\171\1\151\1\141\1\162\1\141\1"+
+        "\156\1\uffff\1\162\1\171\1\172\1\40\1\171\1\166\1\uffff\1\145\2"+
+        "\uffff\1\145\1\144\1\40\1\72\1\uffff\1\151\1\40\1\164\1\145\1\40"+
+        "\1\145\1\72\1\uffff\1\162\1\40\1\uffff\1\164\1\156\1\151\1\144\1"+
+        "\165\1\141\1\143\1\uffff\1\156\2\40\1\145\1\40\1\151\1\163\1\116"+
+        "\2\172\1\124\1\114\1\124\1\145\1\uffff\1\126\1\uffff\1\160\1\uffff"+
+        "\1\105\1\114\1\123\1\uffff\1\117\1\131\1\111\1\103\1\171\1\122\1"+
+        "\114\1\107\2\172\1\uffff\1\126\1\160\1\uffff\1\172\2\uffff\1\40"+
+        "\1\165\1\uffff\1\165\1\141\1\151\1\72\1\151\1\141\1\145\2\uffff"+
+        "\1\151\1\156\1\40\1\154\1\151\2\145\2\40\1\uffff\1\40\1\157\1\172"+
+        "\1\151\1\162\1\172\1\145\2\uffff\1\157\1\uffff\1\171\1\40\2\156"+
+        "\2\151\1\72\1\164\1\uffff\1\101\2\123\1\151\1\145\2\uffff\1\40\1"+
+        "\156\1\141\1\145\1\147\1\164\1\157\1\uffff\1\142\1\111\3\uffff\1"+
+        "\172\1\40\1\72\1\151\1\172\1\151\1\165\1\72\1\156\3\uffff\1\40\2"+
+        "\uffff\1\72\1\40\2\172\1\156\1\163\1\151\1\164\1\72\1\145\1\164"+
+        "\1\72\1\164\1\143\1\163\1\40\1\72\2\uffff\1\72\1\145\1\40\1\162"+
+        "\1\72\2\uffff\1\157\1\uffff\1\141\1\40\1\uffff\1\40\1\uffff\1\153"+
+        "\1\166\2\uffff\1\147\1\157\1\72\1\164\1\160\1\154\3\uffff\1\40\1"+
+        "\151\1\uffff\1\40\1\uffff\1\157\1\164\1\124\1\120\2\uffff\1\105"+
+        "\1\101\1\103\1\172\1\105\1\145\1\116\1\105\1\172\1\116\1\172\1\117"+
+        "\1\110\1\160\1\137\2\105\2\uffff\1\105\1\145\1\uffff\1\163\3\uffff"+
+        "\1\160\1\154\1\156\2\uffff\2\164\1\141\1\157\1\164\1\uffff\1\145"+
+        "\1\166\1\163\1\156\1\160\1\uffff\1\146\1\156\1\uffff\1\143\1\151"+
+        "\1\uffff\2\156\1\172\1\uffff\1\154\1\164\2\157\1\uffff\1\162\1\130"+
+        "\2\172\2\164\1\72\1\uffff\2\164\2\40\1\72\1\156\1\154\1\172\1\72"+
+        "\1\uffff\1\143\1\uffff\1\157\1\uffff\1\143\1\160\1\uffff\1\143\1"+
+        "\163\4\uffff\1\172\1\uffff\1\162\1\40\1\166\1\151\1\uffff\1\162"+
+        "\1\151\1\uffff\1\151\1\145\1\uffff\1\162\1\72\1\160\1\143\2\uffff"+
+        "\1\40\1\uffff\1\40\1\uffff\1\156\1\154\2\uffff\1\72\1\141\1\40\1"+
+        "\156\1\uffff\1\40\2\uffff\1\40\1\155\1\144\1\uffff\1\156\1\141\1"+
+        "\111\1\105\1\172\1\131\1\110\1\uffff\1\116\1\172\1\124\1\172\1\uffff"+
+        "\1\104\1\uffff\1\116\1\172\1\145\1\123\4\172\1\uffff\1\157\7\uffff"+
+        "\1\165\1\163\1\171\1\151\1\154\1\156\1\40\1\172\1\145\1\40\1\143"+
+        "\1\164\2\157\3\uffff\1\163\1\40\3\164\1\uffff\1\145\1\40\2\156\2"+
+        "\uffff\1\172\2\uffff\1\171\1\151\1\uffff\1\163\1\151\1\163\1\155"+
+        "\1\151\1\uffff\1\40\1\145\3\uffff\1\157\1\156\1\141\1\72\1\145\1"+
+        "\143\4\uffff\1\145\1\166\1\72\2\157\1\40\1\157\3\uffff\2\157\1\uffff"+
+        "\1\157\3\uffff\2\40\1\uffff\1\154\1\uffff\1\40\1\uffff\1\164\1\uffff"+
+        "\1\157\1\145\1\40\1\156\1\114\1\122\1\uffff\2\172\1\124\1\uffff"+
+        "\1\123\1\uffff\2\123\1\uffff\1\172\1\105\6\uffff\1\145\2\uffff\1"+
+        "\40\1\157\1\151\1\72\1\164\1\uffff\1\172\1\uffff\1\157\1\uffff\1"+
+        "\163\1\155\1\163\1\72\1\151\1\171\1\72\1\151\1\uffff\1\163\1\155"+
+        "\1\40\1\72\1\uffff\1\72\1\157\1\40\1\157\3\145\3\uffff\1\172\1\155"+
+        "\1\40\1\154\2\uffff\1\72\1\141\1\172\1\145\1\uffff\2\156\1\uffff"+
+        "\1\144\1\155\1\163\1\156\1\uffff\1\163\1\165\4\uffff\1\156\3\uffff"+
+        "\1\143\1\172\1\137\2\uffff\1\172\1\137\2\172\1\uffff\1\103\1\40"+
+        "\1\162\1\156\1\163\1\uffff\1\155\4\uffff\1\156\1\163\1\40\1\155"+
+        "\1\164\4\uffff\1\40\1\164\1\uffff\1\164\1\163\1\157\3\uffff\1\156"+
+        "\1\uffff\1\156\1\164\1\143\1\164\1\uffff\1\160\1\162\1\40\2\uffff"+
+        "\1\154\2\uffff\3\40\1\145\1\155\2\164\1\143\1\145\1\164\1\145\1"+
+        "\uffff\1\123\1\uffff\1\117\1\uffff\1\120\1\uffff\1\117\1\164\2\uffff"+
+        "\1\72\1\141\3\uffff\1\163\2\uffff\1\157\1\uffff\1\165\1\40\1\155"+
+        "\2\uffff\1\151\1\40\1\144\1\72\1\40\1\162\1\165\1\162\1\157\1\145"+
+        "\1\uffff\1\151\1\150\1\155\1\uffff\1\154\1\165\1\40\1\uffff\1\145"+
+        "\1\141\1\40\1\145\1\163\1\105\1\116\1\105\1\116\3\uffff\2\164\1"+
+        "\144\1\156\1\151\1\145\1\157\1\uffff\1\145\3\uffff\1\151\1\162\1"+
+        "\151\1\156\1\163\2\uffff\1\141\2\uffff\1\72\1\156\1\151\1\170\1"+
+        "\154\1\164\1\170\3\uffff\1\103\1\114\1\122\1\104\1\151\1\162\1\145"+
+        "\1\151\2\uffff\1\164\1\156\1\154\1\143\1\151\1\143\1\145\1\157\1"+
+        "\162\2\uffff\1\151\2\uffff\1\164\1\151\2\uffff\1\164\1\117\1\131"+
+        "\1\137\1\172\1\157\1\141\1\154\1\143\1\162\1\72\1\163\1\40\1\164"+
+        "\1\40\1\156\1\165\1\144\1\143\1\72\2\uffff\1\72\1\116\1\172\1\123"+
+        "\1\uffff\1\156\1\151\1\163\1\141\1\151\5\uffff\1\151\1\171\1\151"+
+        "\1\164\1\162\1\167\1\141\4\uffff\1\104\1\uffff\1\105\1\163\1\156"+
+        "\2\uffff\1\164\1\143\3\uffff\1\40\2\uffff\1\72\1\143\1\141\1\164"+
+        "\1\172\1\103\2\uffff\1\164\1\151\1\163\2\155\1\uffff\1\145\1\162"+
+        "\1\151\1\uffff\1\117\1\163\1\157\1\151\1\uffff\1\145\1\156\2\uffff"+
+        "\1\40\1\145\1\157\1\116\2\uffff\1\156\2\uffff\1\164\1\163\1\160"+
+        "\1\72\1\156\1\104\1\40\1\162\1\164\4\uffff\1\40\1\172\2\151\1\141"+
+        "\1\151\3\uffff\1\143\1\156\2\uffff\1\163\1\143\1\151\1\uffff\1\145"+
+        "\2\uffff\1\72\2\uffff";
     static final String DFA15_acceptS =
-        "\42\uffff\1\155\1\156\10\uffff\1\u0083\2\uffff\1\u00c0\1\u00c1"+
-        "\1\u00c8\1\u00c9\2\uffff\1\u00e0\1\uffff\1\u01b7\3\uffff\1\u01d8"+
+        "\42\uffff\1\155\1\156\10\uffff\1\u0084\2\uffff\1\u00c1\1\u00c2"+
+        "\1\u00c9\1\u00ca\2\uffff\1\u00e1\1\uffff\1\u01b8\3\uffff\1\u01d8"+
         "\3\uffff\1\u01dd\1\u01de\5\uffff\1\u01d8\11\uffff\1\3\4\uffff\1"+
         "\4\34\uffff\1\22\1\21\1\24\1\26\1\23\1\25\1\u01dd\77\uffff\1\155"+
-        "\1\156\37\uffff\1\u0083\5\uffff\1\u00c0\1\u00c1\1\u00c8\1\u00c9"+
-        "\5\uffff\1\u00e0\1\u00f5\1\u0165\1\u01b7\2\uffff\1\u01d9\1\u01da"+
-        "\1\u01db\1\u01dc\5\uffff\1\u013b\u0086\uffff\1\76\31\uffff\1\u0091"+
-        "\1\u0184\11\uffff\1\u0177\13\uffff\1\176\1\u0162\1\u009c\36\uffff"+
-        "\1\u01d4\4\uffff\1\u013d\1\u008a\22\uffff\1\u00a3\1\u00e3\5\uffff"+
+        "\1\156\37\uffff\1\u0084\5\uffff\1\u00c1\1\u00c2\1\u00c9\1\u00ca"+
+        "\5\uffff\1\u00e1\1\u00f6\1\u0166\1\u01b8\2\uffff\1\u01d9\1\u01da"+
+        "\1\u01db\1\u01dc\5\uffff\1\u013c\u0086\uffff\1\76\31\uffff\1\u0092"+
+        "\1\u0185\11\uffff\1\u0178\13\uffff\1\176\1\u0163\1\u009d\36\uffff"+
+        "\1\u01d4\4\uffff\1\u013e\1\u008b\22\uffff\1\u00a4\1\u00e4\5\uffff"+
         "\1\65\4\uffff\1\7\1\75\1\27\11\uffff\1\35\1\uffff\1\44\10\uffff"+
-        "\1\46\4\uffff\1\47\1\57\4\uffff\1\34\14\uffff\1\41\7\uffff\1\u0181"+
-        "\2\uffff\1\112\13\uffff\1\u00b1\1\u015a\7\uffff\1\71\5\uffff\1\u01d3"+
-        "\10\uffff\1\u016b\11\uffff\1\u0194\13\uffff\1\77\24\uffff\1\u016d"+
-        "\7\uffff\1\u01b8\14\uffff\1\u00b7\1\u00e7\1\171\7\uffff\1\u00a1"+
-        "\45\uffff\1\u0188\5\uffff\1\u010f\1\uffff\1\1\3\uffff\1\u008b\1"+
-        "\uffff\1\u01ab\6\uffff\1\u013a\33\uffff\1\30\1\31\5\uffff\1\43\7"+
+        "\1\46\4\uffff\1\47\1\57\4\uffff\1\34\14\uffff\1\41\7\uffff\1\u0182"+
+        "\2\uffff\1\112\13\uffff\1\u00b2\1\u015b\7\uffff\1\71\5\uffff\1\u01d3"+
+        "\10\uffff\1\u016c\11\uffff\1\u0195\13\uffff\1\77\24\uffff\1\u016e"+
+        "\7\uffff\1\u01b9\14\uffff\1\u00b8\1\u00e8\1\171\7\uffff\1\u00a2"+
+        "\45\uffff\1\u0189\5\uffff\1\u0110\1\uffff\1\1\3\uffff\1\u008c\1"+
+        "\uffff\1\u01ac\6\uffff\1\u013b\33\uffff\1\30\1\31\5\uffff\1\43\7"+
         "\uffff\1\52\3\uffff\1\64\5\uffff\1\32\1\36\4\uffff\1\33\5\uffff"+
-        "\1\135\5\uffff\1\67\7\uffff\1\170\3\uffff\1\u00c7\1\u0104\1\u0137"+
-        "\1\u0150\5\uffff\1\u00dc\16\uffff\1\u00af\3\uffff\1\u00bc\1\u00bd"+
-        "\1\uffff\1\u0127\1\u0133\22\uffff\1\114\16\uffff\1\u00a9\1\uffff"+
-        "\1\u010b\1\u016a\21\uffff\1\u00df\5\uffff\1\u0128\13\uffff\1\u0116"+
-        "\1\u018b\1\u01b0\17\uffff\1\u0084\10\uffff\1\u01d1\2\uffff\1\u009b"+
-        "\3\uffff\1\u00cb\7\uffff\1\u01d7\2\uffff\1\u00a8\1\u0090\1\u00de"+
-        "\1\u00ef\1\u0193\1\u01c1\1\u018d\1\u0192\2\uffff\1\2\1\u013c\1\u0089"+
-        "\1\uffff\1\u0115\1\uffff\1\u01b9\1\63\1\111\1\147\1\126\10\uffff"+
-        "\1\u0172\1\u010e\1\5\6\uffff\1\10\1\uffff\1\103\13\uffff\1\37\5"+
+        "\1\135\5\uffff\1\67\7\uffff\1\170\3\uffff\1\u00c8\1\u0105\1\u0138"+
+        "\1\u0151\5\uffff\1\u00dd\16\uffff\1\u00b0\3\uffff\1\u00bd\1\u00be"+
+        "\1\uffff\1\u0128\1\u0134\22\uffff\1\114\16\uffff\1\u00aa\1\uffff"+
+        "\1\u010c\1\u016b\21\uffff\1\u00e0\5\uffff\1\u0129\13\uffff\1\u0117"+
+        "\1\u018c\1\u01b1\17\uffff\1\u0085\10\uffff\1\u01d1\2\uffff\1\u009c"+
+        "\3\uffff\1\u00cc\7\uffff\1\u01d7\2\uffff\1\u00a9\1\u0091\1\u00df"+
+        "\1\u00f0\1\u0194\1\u01c2\1\u018e\1\u0193\2\uffff\1\2\1\u013d\1\u008a"+
+        "\1\uffff\1\u0116\1\uffff\1\u01ba\1\63\1\111\1\147\1\126\10\uffff"+
+        "\1\u0173\1\u010f\1\5\6\uffff\1\10\1\uffff\1\103\13\uffff\1\37\5"+
         "\uffff\1\40\5\uffff\1\122\11\uffff\1\45\1\146\1\uffff\1\54\1\56"+
-        "\1\134\4\uffff\1\167\1\u00a2\10\uffff\1\u017b\22\uffff\1\u0125\1"+
-        "\u012a\1\u018c\21\uffff\1\136\2\uffff\1\154\1\u0144\1\u0145\13\uffff"+
-        "\1\u017e\3\uffff\1\u014f\4\uffff\1\177\1\u0163\14\uffff\1\u0149"+
-        "\1\u01c0\1\u0190\1\uffff\1\u0114\1\uffff\1\u0124\2\uffff\1\u00ab"+
-        "\12\uffff\1\u00fc\3\uffff\1\u0147\4\uffff\1\u01cb\22\uffff\1\u009a"+
-        "\21\uffff\1\u010c\3\uffff\1\6\1\60\1\uffff\1\113\10\uffff\1\150"+
+        "\1\134\4\uffff\1\167\1\u00a3\10\uffff\1\u017c\22\uffff\1\u0126\1"+
+        "\u012b\1\u018d\21\uffff\1\136\2\uffff\1\154\1\u0145\1\u0146\13\uffff"+
+        "\1\u017f\3\uffff\1\u0150\4\uffff\1\177\1\u0164\14\uffff\1\u014a"+
+        "\1\u01c1\1\u0191\1\uffff\1\u0115\1\uffff\1\u0125\4\uffff\1\u00ac"+
+        "\10\uffff\1\u00fd\3\uffff\1\u0148\4\uffff\1\u01cb\22\uffff\1\u009b"+
+        "\21\uffff\1\u010d\3\uffff\1\6\1\60\1\uffff\1\113\10\uffff\1\150"+
         "\1\151\1\152\1\153\5\uffff\1\53\1\66\3\uffff\1\42\1\137\3\uffff"+
-        "\1\55\4\uffff\1\130\1\u01d2\6\uffff\1\70\1\u00d9\1\uffff\1\u0106"+
-        "\2\uffff\1\u0173\2\uffff\1\u00b5\2\uffff\1\u0142\1\u0143\3\uffff"+
-        "\1\u00a0\7\uffff\1\72\3\uffff\1\u00ce\4\uffff\1\u01b4\1\u01b1\1"+
-        "\u01b5\3\uffff\1\u00d2\1\u0182\2\uffff\1\74\5\uffff\1\u019d\1\u019f"+
-        "\1\u01ba\3\uffff\1\104\15\uffff\1\u0180\1\u01c3\1\u00c4\1\u0117"+
-        "\1\u011c\1\u0138\1\u019c\1\uffff\1\157\11\uffff\1\161\1\uffff\1"+
-        "\u0154\1\u0156\1\164\1\u018f\1\u01b3\4\uffff\1\u00fb\1\uffff\1\u01af"+
-        "\10\uffff\1\u018e\1\u01b2\7\uffff\1\u0199\6\uffff\1\u0110\1\uffff"+
-        "\1\u00c5\1\u00cd\4\uffff\1\u011e\7\uffff\1\u018a\2\uffff\1\u00d6"+
-        "\7\uffff\1\u014d\16\uffff\1\11\1\uffff\1\102\1\uffff\1\132\3\uffff"+
-        "\1\133\12\uffff\1\115\2\uffff\1\127\1\uffff\1\u0105\1\u01a1\2\uffff"+
-        "\1\u016c\7\uffff\1\u01c9\1\u0179\11\uffff\1\u01c5\7\uffff\1\u00ae"+
-        "\1\u00cf\1\uffff\1\u0100\10\uffff\1\101\5\uffff\1\u0099\1\u00d7"+
-        "\7\uffff\1\u00ca\2\uffff\1\u0140\1\u0164\1\165\11\uffff\1\u0092"+
-        "\1\u0093\1\u00fd\1\u01bd\4\uffff\1\u01ca\16\uffff\1\u014e\1\u011f"+
-        "\5\uffff\1\u0122\1\u012e\1\uffff\1\u008e\2\uffff\1\u0185\1\uffff"+
-        "\1\u00d3\2\uffff\1\u00db\1\u00da\6\uffff\1\u015f\1\u014a\1\u0135"+
-        "\2\uffff\1\u013e\1\uffff\1\u017a\4\uffff\1\140\1\61\21\uffff\1\107"+
-        "\1\106\2\uffff\1\100\1\uffff\1\u0130\1\u0131\1\u015b\3\uffff\1\u00d5"+
-        "\1\u00e1\5\uffff\1\u0126\5\uffff\1\u0141\2\uffff\1\u01cf\2\uffff"+
-        "\1\73\3\uffff\1\u01c2\4\uffff\1\163\7\uffff\1\u01a3\11\uffff\1\u014c"+
-        "\1\uffff\1\u00e2\1\uffff\1\u01d6\2\uffff\1\u0120\1\uffff\1\u00ec"+
-        "\1\u0152\1\u01d0\1\uffff\1\u01cd\1\uffff\1\173\4\uffff\1\u00f4\2"+
-        "\uffff\1\u0157\2\uffff\1\u0080\4\uffff\1\u00f8\1\u0161\1\uffff\1"+
-        "\u01bc\1\uffff\1\u0121\2\uffff\1\u0167\1\u01bb\4\uffff\1\u00ea\1"+
-        "\uffff\1\u0101\1\u0102\3\uffff\1\u0153\7\uffff\1\120\4\uffff\1\125"+
-        "\1\uffff\1\13\10\uffff\1\u0109\1\uffff\1\u011d\1\u0195\1\u019b\1"+
-        "\u01a2\1\u01a8\1\u0183\1\u01c6\16\uffff\1\u008d\1\u00b4\1\u012c"+
-        "\5\uffff\1\u01cc\4\uffff\1\u010a\1\u01a4\1\uffff\1\123\1\124\2\uffff"+
-        "\1\166\5\uffff\1\u00f1\2\uffff\1\u009e\1\u00d0\1\u0175\6\uffff\1"+
-        "\u01d5\1\u00c3\1\u016e\1\u016f\7\uffff\1\u015c\1\u0111\1\u015d\2"+
-        "\uffff\1\u008c\1\uffff\1\u0103\1\u01ad\1\u00ff\2\uffff\1\u0168\1"+
-        "\uffff\1\u00be\1\uffff\1\u01c7\1\uffff\1\u009d\6\uffff\1\16\3\uffff"+
-        "\1\116\1\uffff\1\62\2\uffff\1\15\2\uffff\1\50\1\145\1\51\1\121\1"+
-        "\u0112\1\u01a5\1\uffff\1\u019e\1\u01a7\5\uffff\1\u01ce\1\uffff\1"+
-        "\u0136\1\uffff\1\u0148\10\uffff\1\u0160\4\uffff\1\105\7\uffff\1"+
-        "\u00e5\1\u00e6\1\u00eb\4\uffff\1\u0123\1\u0129\4\uffff\1\u00f3\2"+
-        "\uffff\1\u0191\4\uffff\1\u012b\2\uffff\1\u01c8\1\u0186\1\u0187\1"+
-        "\u0146\1\uffff\1\u0118\1\u011b\1\u01ae\3\uffff\1\17\1\14\4\uffff"+
-        "\1\117\5\uffff\1\u00a5\1\uffff\1\u00bb\1\u00b9\1\u00cc\1\u0151\5"+
-        "\uffff\1\u00e4\1\u00d8\1\u00f6\1\u00fe\2\uffff\1\u00ba\3\uffff\1"+
-        "\u00b6\1\u00fa\1\u014b\1\uffff\1\u0134\4\uffff\1\u01a0\3\uffff\1"+
-        "\u008f\1\u00b8\1\uffff\1\174\1\u0166\13\uffff\1\110\1\uffff\1\20"+
-        "\1\uffff\1\131\1\uffff\1\142\2\uffff\1\u0170\1\u0178\2\uffff\1\u00aa"+
-        "\1\u00e8\1\u0159\1\uffff\1\172\1\u00a7\1\uffff\1\u0158\3\uffff\1"+
-        "\u00ac\1\u00dd\12\uffff\1\u00c6\3\uffff\1\u015e\3\uffff\1\u00ed"+
-        "\11\uffff\1\u01b6\1\u01bf\1\u01a6\7\uffff\1\u01c4\1\uffff\1\162"+
-        "\1\u0107\1\u0088\5\uffff\1\u0176\1\u017f\1\uffff\1\u0108\1\u010d"+
-        "\7\uffff\1\u00b0\1\u00c2\1\u0171\10\uffff\1\u0098\1\u0087\11\uffff"+
-        "\1\u0113\1\u0132\1\uffff\1\u0097\1\u0086\2\uffff\1\u01ac\1\u01be"+
-        "\24\uffff\1\u0174\1\u017c\4\uffff\1\144\5\uffff\1\u00e9\1\u0189"+
-        "\1\160\1\u00a6\1\u011a\7\uffff\1\u00ee\1\u00f7\1\u00a4\1\u00ad\1"+
-        "\uffff\1\12\3\uffff\1\u0119\1\u0155\2\uffff\1\u00d1\1\u00f0\1\u00f9"+
-        "\1\uffff\1\u00d4\1\u00f2\6\uffff\1\u009f\1\u00bf\5\uffff\1\u017d"+
-        "\3\uffff\1\141\4\uffff\1\u01a9\2\uffff\1\u00b2\1\u0081\4\uffff\1"+
-        "\u0139\1\u013f\1\uffff\1\u0198\1\u0196\11\uffff\1\u012d\1\u012f"+
-        "\1\175\1\u0169\6\uffff\1\143\1\u0096\1\u0085\2\uffff\1\u0095\1\u0082"+
-        "\3\uffff\1\u01aa\1\uffff\1\u019a\1\u0197\1\uffff\1\u0094\1\u00b3";
+        "\1\55\4\uffff\1\130\1\u01d2\6\uffff\1\70\1\u00da\1\uffff\1\u0107"+
+        "\2\uffff\1\u0174\2\uffff\1\u00b6\2\uffff\1\u0143\1\u0144\3\uffff"+
+        "\1\u00a1\7\uffff\1\72\3\uffff\1\u00cf\4\uffff\1\u01b5\1\u01b2\1"+
+        "\u01b6\3\uffff\1\u00d3\1\u0183\2\uffff\1\74\5\uffff\1\u019e\1\u01a0"+
+        "\1\u01bb\3\uffff\1\104\15\uffff\1\u0181\1\u01c4\1\u00c5\1\u0118"+
+        "\1\u011d\1\u0139\1\u019d\1\uffff\1\157\11\uffff\1\161\1\uffff\1"+
+        "\u0155\1\u0157\1\164\1\u0190\1\u01b4\6\uffff\1\u00fc\1\uffff\1\u01b0"+
+        "\6\uffff\1\u018f\1\u01b3\7\uffff\1\u019a\6\uffff\1\u0111\1\uffff"+
+        "\1\u00c6\1\u00ce\4\uffff\1\u011f\7\uffff\1\u018b\2\uffff\1\u00d7"+
+        "\7\uffff\1\u014e\16\uffff\1\11\1\uffff\1\102\1\uffff\1\132\3\uffff"+
+        "\1\133\12\uffff\1\115\2\uffff\1\127\1\uffff\1\u0106\1\u01a2\2\uffff"+
+        "\1\u016d\7\uffff\1\u01ca\1\u017a\11\uffff\1\u01c6\7\uffff\1\u00af"+
+        "\1\u00d0\1\uffff\1\u0101\10\uffff\1\101\5\uffff\1\u009a\1\u00d8"+
+        "\7\uffff\1\u00cb\2\uffff\1\u0141\1\u0165\1\165\11\uffff\1\u0093"+
+        "\1\u0094\1\u0082\1\uffff\1\u00fe\1\u01be\21\uffff\1\u014f\1\u0120"+
+        "\5\uffff\1\u0123\1\u012f\1\uffff\1\u008f\2\uffff\1\u0186\1\uffff"+
+        "\1\u00d4\2\uffff\1\u00dc\1\u00db\6\uffff\1\u0160\1\u014b\1\u0136"+
+        "\2\uffff\1\u013f\1\uffff\1\u017b\4\uffff\1\140\1\61\21\uffff\1\107"+
+        "\1\106\2\uffff\1\100\1\uffff\1\u0131\1\u0132\1\u015c\3\uffff\1\u00d6"+
+        "\1\u00e2\5\uffff\1\u0127\5\uffff\1\u0142\2\uffff\1\u01cf\2\uffff"+
+        "\1\73\3\uffff\1\u01c3\4\uffff\1\163\7\uffff\1\u01a4\11\uffff\1\u014d"+
+        "\1\uffff\1\u00e3\1\uffff\1\u01d6\2\uffff\1\u0121\2\uffff\1\u00ed"+
+        "\1\u0153\1\u01d0\1\u01cd\1\uffff\1\173\4\uffff\1\u00f5\2\uffff\1"+
+        "\u0158\2\uffff\1\u0080\4\uffff\1\u00f9\1\u0162\1\uffff\1\u01bd\1"+
+        "\uffff\1\u0122\2\uffff\1\u0168\1\u01bc\4\uffff\1\u00eb\1\uffff\1"+
+        "\u0102\1\u0103\3\uffff\1\u0154\7\uffff\1\120\4\uffff\1\125\1\uffff"+
+        "\1\13\10\uffff\1\u010a\1\uffff\1\u011e\1\u0196\1\u019c\1\u01a3\1"+
+        "\u01a9\1\u0184\1\u01c7\16\uffff\1\u008e\1\u00b5\1\u012d\5\uffff"+
+        "\1\u01cc\4\uffff\1\u010b\1\u01a5\1\uffff\1\123\1\124\2\uffff\1\166"+
+        "\5\uffff\1\u00f2\2\uffff\1\u009f\1\u00d1\1\u0176\6\uffff\1\u01d5"+
+        "\1\u00c4\1\u016f\1\u0170\7\uffff\1\u015d\1\u0112\1\u015e\2\uffff"+
+        "\1\u008d\1\uffff\1\u0104\1\u01ae\1\u0100\2\uffff\1\u0169\1\uffff"+
+        "\1\u00bf\1\uffff\1\u01c8\1\uffff\1\u009e\6\uffff\1\16\3\uffff\1"+
+        "\116\1\uffff\1\62\2\uffff\1\15\2\uffff\1\50\1\145\1\51\1\121\1\u0113"+
+        "\1\u01a6\1\uffff\1\u019f\1\u01a8\5\uffff\1\u01ce\1\uffff\1\u0137"+
+        "\1\uffff\1\u0149\10\uffff\1\u0161\4\uffff\1\105\7\uffff\1\u00e6"+
+        "\1\u00e7\1\u00ec\4\uffff\1\u0124\1\u012a\4\uffff\1\u00f4\2\uffff"+
+        "\1\u0192\4\uffff\1\u012c\2\uffff\1\u01c9\1\u0187\1\u0188\1\u0147"+
+        "\1\uffff\1\u0119\1\u011c\1\u01af\3\uffff\1\17\1\14\4\uffff\1\117"+
+        "\5\uffff\1\u00a6\1\uffff\1\u00bc\1\u00ba\1\u00cd\1\u0152\5\uffff"+
+        "\1\u00e5\1\u00d9\1\u00f7\1\u00ff\2\uffff\1\u00bb\3\uffff\1\u00b7"+
+        "\1\u00fb\1\u014c\1\uffff\1\u0135\4\uffff\1\u01a1\3\uffff\1\u0090"+
+        "\1\u00b9\1\uffff\1\174\1\u0167\13\uffff\1\110\1\uffff\1\20\1\uffff"+
+        "\1\131\1\uffff\1\142\2\uffff\1\u0171\1\u0179\2\uffff\1\u00ab\1\u00e9"+
+        "\1\u015a\1\uffff\1\172\1\u00a8\1\uffff\1\u0159\3\uffff\1\u00ad\1"+
+        "\u00de\12\uffff\1\u00c7\3\uffff\1\u015f\3\uffff\1\u00ee\11\uffff"+
+        "\1\u01b7\1\u01c0\1\u01a7\7\uffff\1\u01c5\1\uffff\1\162\1\u0108\1"+
+        "\u0089\5\uffff\1\u0177\1\u0180\1\uffff\1\u0109\1\u010e\7\uffff\1"+
+        "\u00b1\1\u00c3\1\u0172\10\uffff\1\u0099\1\u0088\11\uffff\1\u0114"+
+        "\1\u0133\1\uffff\1\u0098\1\u0087\2\uffff\1\u01ad\1\u01bf\24\uffff"+
+        "\1\u0175\1\u017d\4\uffff\1\144\5\uffff\1\u00ea\1\u018a\1\160\1\u00a7"+
+        "\1\u011b\7\uffff\1\u00ef\1\u00f8\1\u00a5\1\u00ae\1\uffff\1\12\3"+
+        "\uffff\1\u011a\1\u0156\2\uffff\1\u00d2\1\u00f1\1\u00fa\1\uffff\1"+
+        "\u00d5\1\u00f3\6\uffff\1\u00a0\1\u00c0\5\uffff\1\u017e\3\uffff\1"+
+        "\141\4\uffff\1\u01aa\2\uffff\1\u00b3\1\u0081\4\uffff\1\u013a\1\u0140"+
+        "\1\uffff\1\u0199\1\u0197\11\uffff\1\u012e\1\u0130\1\175\1\u016a"+
+        "\6\uffff\1\143\1\u0097\1\u0086\2\uffff\1\u0096\1\u0083\3\uffff\1"+
+        "\u01ab\1\uffff\1\u019b\1\u0198\1\uffff\1\u0095\1\u00b4";
     static final String DFA15_specialS =
-        "\1\0\73\uffff\1\1\1\2\u0873\uffff}>";
+        "\1\2\73\uffff\1\0\1\1\u0873\uffff}>";
     static final String[] DFA15_transitionS = {
             "\11\100\2\77\2\100\1\77\22\100\1\17\1\100\1\74\4\100\1\75\1"+
             "\57\1\60\2\100\1\54\1\65\1\66\1\76\6\71\1\70\3\71\1\67\1\100"+
@@ -14918,7 +14918,7 @@ public class InternalCamelDslLexer extends Lexer {
             "\1\u00ba\1\u00bb\1\u00bd\1\u00bc",
             "\1\u00bf\6\uffff\1\u00be\5\uffff\1\u00c0",
             "\1\u00c2\1\uffff\1\u00c1\2\uffff\1\u00c3",
-            "\1\u00c5\3\uffff\1\u00c6\3\uffff\1\u00c7\3\uffff\1\u00c4",
+            "\1\u00c6\3\uffff\1\u00c5\3\uffff\1\u00c7\3\uffff\1\u00c4",
             "\1\u00c9\3\uffff\1\u00ca\3\uffff\1\u00cb\5\uffff\1\u00c8",
             "\1\u00cc",
             "\1\u00d2\1\u00d1\12\uffff\1\u00ce\1\uffff\1\u00d0\1\uffff"+
@@ -15080,8 +15080,8 @@ public class InternalCamelDslLexer extends Lexer {
             "\1\u01a0\7\uffff\1\u019f",
             "\1\u01a1",
             "\1\u01a2\31\uffff\1\u01a3",
-            "\1\u01a4\5\uffff\1\u01a5",
-            "\1\u01a6",
+            "\1\u01a4",
+            "\1\u01a5\5\uffff\1\u01a6",
             "\1\u01a7",
             "\1\u01a8\23\uffff\1\u01a9",
             "\1\u01ab\5\uffff\1\u01aa",
@@ -15304,9 +15304,9 @@ public class InternalCamelDslLexer extends Lexer {
             "\1\u0290",
             "\1\u0294\6\uffff\1\u0291\3\uffff\1\u0293\6\uffff\1\u0292",
             "",
-            "\1\u0297\13\uffff\1\u0296",
-            "\1\u0298",
-            "\1\u029a\1\u0299",
+            "\1\u0296\1\u0297",
+            "\1\u0299\13\uffff\1\u0298",
+            "\1\u029a",
             "\1\u029b",
             "\1\u029c",
             "\1\u029d\104\uffff\1\u029e",
@@ -15792,11 +15792,11 @@ public class InternalCamelDslLexer extends Lexer {
             "",
             "\1\u0475",
             "\1\u0476",
-            "\1\u0478\31\uffff\1\u0477\70\uffff\1\u0479",
-            "\1\u047a",
-            "\1\u047c\13\uffff\1\u047b",
-            "\1\u047d",
-            "\1\u047e",
+            "\1\u0477",
+            "\1\u0478",
+            "\1\u047a\31\uffff\1\u0479\70\uffff\1\u047b",
+            "\1\u047c",
+            "\1\u047e\13\uffff\1\u047d",
             "\1\u047f",
             "\1\u0480",
             "\1\u0481",
@@ -16028,10 +16028,10 @@ public class InternalCamelDslLexer extends Lexer {
             "",
             "\1\u0541",
             "\1\u0542",
+            "\1\u0543",
+            "\1\u0544",
             "",
-            "\1\u0543\17\uffff\1\u0544",
-            "\1\u0545",
-            "\1\u0546",
+            "\1\u0545\17\uffff\1\u0546",
             "\1\u0547",
             "\1\u0548",
             "\1\u0549",
@@ -16232,11 +16232,11 @@ public class InternalCamelDslLexer extends Lexer {
             "\1\u05e7",
             "\1\u05e8",
             "\1\u05ea\31\uffff\1\u05e9",
+            "\1\u05eb",
+            "\1\u05ec",
             "",
-            "\1\u05ec\11\uffff\1\u05eb",
+            "\1\u05ee\11\uffff\1\u05ed",
             "",
-            "\1\u05ed",
-            "\1\u05ee",
             "\1\u05ef",
             "\1\u05f0",
             "\1\u05f1",
@@ -16402,12 +16402,12 @@ public class InternalCamelDslLexer extends Lexer {
             "",
             "",
             "",
-            "",
             "\1\u067c",
-            "\1\u067d",
-            "\12\106\7\uffff\32\106\4\uffff\1\106\1\uffff\32\106",
-            "\1\u067f",
             "",
+            "",
+            "\1\u067d",
+            "\1\u067e",
+            "\12\106\7\uffff\32\106\4\uffff\1\106\1\uffff\32\106",
             "\12\106\7\uffff\32\106\4\uffff\1\106\1\uffff\32\106",
             "\1\u0681",
             "\1\u0683\31\uffff\1\u0682\70\uffff\1\u0684",
@@ -16548,10 +16548,10 @@ public class InternalCamelDslLexer extends Lexer {
             "\1\u06f9",
             "",
             "\1\u06fa",
-            "",
-            "",
-            "",
             "\1\u06fb",
+            "",
+            "",
+            "",
             "",
             "\12\106\7\uffff\32\106\4\uffff\1\106\1\uffff\32\106",
             "",
@@ -17154,6 +17154,26 @@ public class InternalCamelDslLexer extends Lexer {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
+                        int LA15_60 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA15_60>='\u0000' && LA15_60<='\uFFFF')) ) {s = 239;}
+
+                        else s = 64;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA15_61 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA15_61>='\u0000' && LA15_61<='\uFFFF')) ) {s = 239;}
+
+                        else s = 64;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
                         int LA15_0 = input.LA(1);
 
                         s = -1;
@@ -17284,26 +17304,6 @@ public class InternalCamelDslLexer extends Lexer {
                         else if ( ((LA15_0>='\t' && LA15_0<='\n')||LA15_0=='\r') ) {s = 63;}
 
                         else if ( ((LA15_0>='\u0000' && LA15_0<='\b')||(LA15_0>='\u000B' && LA15_0<='\f')||(LA15_0>='\u000E' && LA15_0<='\u001F')||LA15_0=='!'||(LA15_0>='#' && LA15_0<='&')||(LA15_0>='*' && LA15_0<='+')||LA15_0==';'||LA15_0=='='||(LA15_0>='?' && LA15_0<='@')||LA15_0=='\\'||LA15_0=='`'||LA15_0=='|'||(LA15_0>='~' && LA15_0<='\uFFFF')) ) {s = 64;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA15_60 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA15_60>='\u0000' && LA15_60<='\uFFFF')) ) {s = 239;}
-
-                        else s = 64;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA15_61 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA15_61>='\u0000' && LA15_61<='\uFFFF')) ) {s = 239;}
-
-                        else s = 64;
 
                         if ( s>=0 ) return s;
                         break;
