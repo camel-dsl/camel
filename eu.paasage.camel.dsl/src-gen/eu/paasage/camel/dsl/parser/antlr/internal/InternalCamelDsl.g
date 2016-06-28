@@ -95,7 +95,7 @@ ruleCamelModel returns [EObject current=null]
        			$current, 
        			"importURI",
         		lv_importURI_1_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -118,7 +118,7 @@ ruleCamelModel returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_3_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -139,7 +139,7 @@ ruleCamelModel returns [EObject current=null]
        			$current, 
        			"deploymentModels",
         		lv_deploymentModels_5_0, 
-        		"DeploymentModel");
+        		"eu.paasage.camel.dsl.CamelDsl.DeploymentModel");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -158,7 +158,7 @@ ruleCamelModel returns [EObject current=null]
        			$current, 
        			"executionModels",
         		lv_executionModels_6_0, 
-        		"ExecutionModel");
+        		"eu.paasage.camel.dsl.CamelDsl.ExecutionModel");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -177,7 +177,7 @@ ruleCamelModel returns [EObject current=null]
        			$current, 
        			"locationModels",
         		lv_locationModels_7_0, 
-        		"LocationModel");
+        		"eu.paasage.camel.dsl.CamelDsl.LocationModel");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -196,7 +196,7 @@ ruleCamelModel returns [EObject current=null]
        			$current, 
        			"metricModels",
         		lv_metricModels_8_0, 
-        		"MetricModel");
+        		"eu.paasage.camel.dsl.CamelDsl.MetricModel");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -215,7 +215,7 @@ ruleCamelModel returns [EObject current=null]
        			$current, 
        			"organisationModels",
         		lv_organisationModels_9_0, 
-        		"OrganisationModel");
+        		"eu.paasage.camel.dsl.CamelDsl.OrganisationModel");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -234,7 +234,7 @@ ruleCamelModel returns [EObject current=null]
        			$current, 
        			"providerModels",
         		lv_providerModels_10_0, 
-        		"ProviderModel");
+        		"eu.paasage.camel.dsl.CamelDsl.ProviderModel");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -253,7 +253,7 @@ ruleCamelModel returns [EObject current=null]
        			$current, 
        			"requirementModels",
         		lv_requirementModels_11_0, 
-        		"RequirementModel");
+        		"eu.paasage.camel.dsl.CamelDsl.RequirementModel");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -272,7 +272,7 @@ ruleCamelModel returns [EObject current=null]
        			$current, 
        			"scalabilityModels",
         		lv_scalabilityModels_12_0, 
-        		"ScalabilityModel");
+        		"eu.paasage.camel.dsl.CamelDsl.ScalabilityModel");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -291,7 +291,7 @@ ruleCamelModel returns [EObject current=null]
        			$current, 
        			"securityModels",
         		lv_securityModels_13_0, 
-        		"SecurityModel");
+        		"eu.paasage.camel.dsl.CamelDsl.SecurityModel");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -310,7 +310,7 @@ ruleCamelModel returns [EObject current=null]
        			$current, 
        			"typeModels",
         		lv_typeModels_14_0, 
-        		"TypeModel");
+        		"eu.paasage.camel.dsl.CamelDsl.TypeModel");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -329,7 +329,7 @@ ruleCamelModel returns [EObject current=null]
        			$current, 
        			"unitModels",
         		lv_unitModels_15_0, 
-        		"UnitModel");
+        		"eu.paasage.camel.dsl.CamelDsl.UnitModel");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -348,7 +348,7 @@ ruleCamelModel returns [EObject current=null]
        			$current, 
        			"actions",
         		lv_actions_16_0, 
-        		"Action");
+        		"eu.paasage.camel.dsl.CamelDsl.Action");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -367,7 +367,7 @@ ruleCamelModel returns [EObject current=null]
        			$current, 
        			"applications",
         		lv_applications_17_0, 
-        		"Application");
+        		"eu.paasage.camel.dsl.CamelDsl.Application");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -415,7 +415,7 @@ ruleDeploymentModel returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -436,7 +436,7 @@ ruleDeploymentModel returns [EObject current=null]
        			$current, 
        			"vms",
         		lv_vms_3_0, 
-        		"VM");
+        		"eu.paasage.camel.dsl.CamelDsl.VM");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -455,7 +455,7 @@ ruleDeploymentModel returns [EObject current=null]
        			$current, 
        			"internalComponents",
         		lv_internalComponents_4_0, 
-        		"InternalComponent");
+        		"eu.paasage.camel.dsl.CamelDsl.InternalComponent");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -474,7 +474,7 @@ ruleDeploymentModel returns [EObject current=null]
        			$current, 
        			"vmRequirementSets",
         		lv_vmRequirementSets_5_0, 
-        		"VMRequirementSet");
+        		"eu.paasage.camel.dsl.CamelDsl.VMRequirementSet");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -492,7 +492,7 @@ ruleDeploymentModel returns [EObject current=null]
        			$current, 
        			"hostings",
         		lv_hostings_6_0, 
-        		"Hosting");
+        		"eu.paasage.camel.dsl.CamelDsl.Hosting");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -510,7 +510,7 @@ ruleDeploymentModel returns [EObject current=null]
        			$current, 
        			"communications",
         		lv_communications_7_0, 
-        		"Communication");
+        		"eu.paasage.camel.dsl.CamelDsl.Communication");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -528,7 +528,7 @@ ruleDeploymentModel returns [EObject current=null]
        			$current, 
        			"vmInstances",
         		lv_vmInstances_8_0, 
-        		"VMInstance");
+        		"eu.paasage.camel.dsl.CamelDsl.VMInstance");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -547,7 +547,7 @@ ruleDeploymentModel returns [EObject current=null]
        			$current, 
        			"internalComponentInstances",
         		lv_internalComponentInstances_9_0, 
-        		"InternalComponentInstance");
+        		"eu.paasage.camel.dsl.CamelDsl.InternalComponentInstance");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -565,7 +565,7 @@ ruleDeploymentModel returns [EObject current=null]
        			$current, 
        			"communicationInstances",
         		lv_communicationInstances_10_0, 
-        		"CommunicationInstance");
+        		"eu.paasage.camel.dsl.CamelDsl.CommunicationInstance");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -583,7 +583,7 @@ ruleDeploymentModel returns [EObject current=null]
        			$current, 
        			"hostingInstances",
         		lv_hostingInstances_11_0, 
-        		"HostingInstance");
+        		"eu.paasage.camel.dsl.CamelDsl.HostingInstance");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -650,7 +650,7 @@ ruleConfiguration returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -675,7 +675,7 @@ ruleConfiguration returns [EObject current=null]
        			$current, 
        			"downloadCommand",
         		lv_downloadCommand_4_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -698,7 +698,7 @@ ruleConfiguration returns [EObject current=null]
        			$current, 
        			"uploadCommand",
         		lv_uploadCommand_6_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -721,7 +721,7 @@ ruleConfiguration returns [EObject current=null]
        			$current, 
        			"installCommand",
         		lv_installCommand_8_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -744,7 +744,7 @@ ruleConfiguration returns [EObject current=null]
        			$current, 
        			"configureCommand",
         		lv_configureCommand_10_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -767,7 +767,7 @@ ruleConfiguration returns [EObject current=null]
        			$current, 
        			"startCommand",
         		lv_startCommand_12_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -790,7 +790,7 @@ ruleConfiguration returns [EObject current=null]
        			$current, 
        			"stopCommand",
         		lv_stopCommand_14_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -838,7 +838,7 @@ ruleVM returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -876,7 +876,7 @@ ruleVM returns [EObject current=null]
        			$current, 
        			"providedHosts",
         		lv_providedHosts_5_0, 
-        		"ProvidedHost");
+        		"eu.paasage.camel.dsl.CamelDsl.ProvidedHost");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -895,7 +895,7 @@ ruleVM returns [EObject current=null]
        			$current, 
        			"configurations",
         		lv_configurations_6_0, 
-        		"Configuration");
+        		"eu.paasage.camel.dsl.CamelDsl.Configuration");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -943,7 +943,7 @@ ruleVMRequirementSet returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -1112,7 +1112,7 @@ ruleInternalComponent returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -1133,7 +1133,7 @@ ruleInternalComponent returns [EObject current=null]
        			$current, 
        			"providedCommunications",
         		lv_providedCommunications_3_0, 
-        		"ProvidedCommunication");
+        		"eu.paasage.camel.dsl.CamelDsl.ProvidedCommunication");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1152,7 +1152,7 @@ ruleInternalComponent returns [EObject current=null]
        			$current, 
        			"requiredCommunications",
         		lv_requiredCommunications_4_0, 
-        		"RequiredCommunication");
+        		"eu.paasage.camel.dsl.CamelDsl.RequiredCommunication");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1171,7 +1171,7 @@ ruleInternalComponent returns [EObject current=null]
        			$current, 
        			"providedHosts",
         		lv_providedHosts_5_0, 
-        		"ProvidedHost");
+        		"eu.paasage.camel.dsl.CamelDsl.ProvidedHost");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1190,7 +1190,7 @@ ruleInternalComponent returns [EObject current=null]
        			$current, 
        			"requiredHost",
         		lv_requiredHost_6_0, 
-        		"RequiredHost");
+        		"eu.paasage.camel.dsl.CamelDsl.RequiredHost");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1209,7 +1209,7 @@ ruleInternalComponent returns [EObject current=null]
        			$current, 
        			"configurations",
         		lv_configurations_7_0, 
-        		"Configuration");
+        		"eu.paasage.camel.dsl.CamelDsl.Configuration");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1231,7 +1231,7 @@ ruleInternalComponent returns [EObject current=null]
        			$current, 
        			"version",
         		lv_version_9_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1279,7 +1279,7 @@ ruleProvidedCommunication returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -1305,7 +1305,7 @@ ruleProvidedCommunication returns [EObject current=null]
        			$current, 
        			"portNumber",
         		lv_portNumber_4_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -1356,7 +1356,7 @@ ruleRequiredCommunication returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -1382,7 +1382,7 @@ ruleRequiredCommunication returns [EObject current=null]
        			$current, 
        			"portNumber",
         		lv_portNumber_4_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -1449,7 +1449,7 @@ ruleProvidedHost returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -1492,7 +1492,7 @@ ruleRequiredHost returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -1535,7 +1535,7 @@ ruleCommunication returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -1560,7 +1560,7 @@ ruleCommunication returns [EObject current=null]
        			$current, 
        			"type",
         		lv_type_4_0, 
-        		"CommunicationType");
+        		"eu.paasage.camel.dsl.CamelDsl.CommunicationType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1620,7 +1620,7 @@ ruleCommunication returns [EObject current=null]
        			$current, 
        			"providedPortConfiguration",
         		lv_providedPortConfiguration_10_0, 
-        		"Configuration");
+        		"eu.paasage.camel.dsl.CamelDsl.Configuration");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1642,7 +1642,7 @@ ruleCommunication returns [EObject current=null]
        			$current, 
        			"requiredPortConfiguration",
         		lv_requiredPortConfiguration_12_0, 
-        		"Configuration");
+        		"eu.paasage.camel.dsl.CamelDsl.Configuration");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1690,7 +1690,7 @@ ruleHosting returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -1779,7 +1779,7 @@ ruleVMInstance returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -1823,7 +1823,7 @@ ruleVMInstance returns [EObject current=null]
        			$current, 
        			"ip",
         		lv_ip_6_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1879,7 +1879,7 @@ ruleVMInstance returns [EObject current=null]
        			$current, 
        			"providedHostInstances",
         		lv_providedHostInstances_11_0, 
-        		"ProvidedHostInstance");
+        		"eu.paasage.camel.dsl.CamelDsl.ProvidedHostInstance");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1927,7 +1927,7 @@ ruleInternalComponentInstance returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -1967,7 +1967,7 @@ ruleInternalComponentInstance returns [EObject current=null]
        			$current, 
        			"providedCommunicationInstances",
         		lv_providedCommunicationInstances_5_0, 
-        		"ProvidedCommunicationInstance");
+        		"eu.paasage.camel.dsl.CamelDsl.ProvidedCommunicationInstance");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1986,7 +1986,7 @@ ruleInternalComponentInstance returns [EObject current=null]
        			$current, 
        			"requiredCommunicationInstances",
         		lv_requiredCommunicationInstances_6_0, 
-        		"RequiredCommunicationInstance");
+        		"eu.paasage.camel.dsl.CamelDsl.RequiredCommunicationInstance");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2005,7 +2005,7 @@ ruleInternalComponentInstance returns [EObject current=null]
        			$current, 
        			"providedHostInstances",
         		lv_providedHostInstances_7_0, 
-        		"ProvidedHostInstance");
+        		"eu.paasage.camel.dsl.CamelDsl.ProvidedHostInstance");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2024,7 +2024,7 @@ ruleInternalComponentInstance returns [EObject current=null]
        			$current, 
        			"requiredHostInstance",
         		lv_requiredHostInstance_8_0, 
-        		"RequiredHostInstance");
+        		"eu.paasage.camel.dsl.CamelDsl.RequiredHostInstance");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2072,7 +2072,7 @@ ruleProvidedCommunicationInstance returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -2134,7 +2134,7 @@ ruleRequiredCommunicationInstance returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -2196,7 +2196,7 @@ ruleProvidedHostInstance returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -2258,7 +2258,7 @@ ruleRequiredHostInstance returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -2377,7 +2377,7 @@ ruleCommunicationInstance returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_7_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -2477,7 +2477,7 @@ ruleHostingInstance returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_7_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -2529,7 +2529,7 @@ ruleExecutionModel returns [EObject current=null]
        			$current, 
        			"importURI",
         		lv_importURI_3_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2551,7 +2551,7 @@ ruleExecutionModel returns [EObject current=null]
        			$current, 
        			"importURI",
         		lv_importURI_5_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2578,7 +2578,7 @@ ruleExecutionModel returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_8_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -2599,7 +2599,7 @@ ruleExecutionModel returns [EObject current=null]
        			$current, 
        			"actionRealisations",
         		lv_actionRealisations_10_0, 
-        		"ActionRealisation");
+        		"eu.paasage.camel.dsl.CamelDsl.ActionRealisation");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2618,7 +2618,7 @@ ruleExecutionModel returns [EObject current=null]
        			$current, 
        			"eventInstances",
         		lv_eventInstances_11_0, 
-        		"EventInstance");
+        		"eu.paasage.camel.dsl.CamelDsl.EventInstance");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2637,7 +2637,7 @@ ruleExecutionModel returns [EObject current=null]
        			$current, 
        			"executionContexts",
         		lv_executionContexts_12_0, 
-        		"ExecutionContext");
+        		"eu.paasage.camel.dsl.CamelDsl.ExecutionContext");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2656,7 +2656,7 @@ ruleExecutionModel returns [EObject current=null]
        			$current, 
        			"measurements",
         		lv_measurements_13_0, 
-        		"Measurement");
+        		"eu.paasage.camel.dsl.CamelDsl.Measurement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2675,7 +2675,7 @@ ruleExecutionModel returns [EObject current=null]
        			$current, 
        			"sloAssessessments",
         		lv_sloAssessessments_14_0, 
-        		"SLOAssessment");
+        		"eu.paasage.camel.dsl.CamelDsl.SLOAssessment");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2694,7 +2694,7 @@ ruleExecutionModel returns [EObject current=null]
        			$current, 
        			"ruleTriggers",
         		lv_ruleTriggers_15_0, 
-        		"RuleTrigger");
+        		"eu.paasage.camel.dsl.CamelDsl.RuleTrigger");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2742,7 +2742,7 @@ ruleActionRealisation returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -2786,7 +2786,7 @@ ruleActionRealisation returns [EObject current=null]
        			$current, 
        			"lowLevelActions",
         		lv_lowLevelActions_6_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2808,7 +2808,7 @@ ruleActionRealisation returns [EObject current=null]
        			$current, 
        			"startTime",
         		lv_startTime_8_0, 
-        		"EDate");
+        		"eu.paasage.camel.dsl.CamelDsl.EDate");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2830,7 +2830,7 @@ ruleActionRealisation returns [EObject current=null]
        			$current, 
        			"endTime",
         		lv_endTime_10_0, 
-        		"EDate");
+        		"eu.paasage.camel.dsl.CamelDsl.EDate");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2878,7 +2878,7 @@ ruleExecutionContext returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -2903,7 +2903,7 @@ ruleExecutionContext returns [EObject current=null]
        			$current, 
        			"startTime",
         		lv_startTime_4_0, 
-        		"EDate");
+        		"eu.paasage.camel.dsl.CamelDsl.EDate");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2925,7 +2925,7 @@ ruleExecutionContext returns [EObject current=null]
        			$current, 
        			"endTime",
         		lv_endTime_6_0, 
-        		"EDate");
+        		"eu.paasage.camel.dsl.CamelDsl.EDate");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2947,7 +2947,7 @@ ruleExecutionContext returns [EObject current=null]
        			$current, 
        			"totalCost",
         		lv_totalCost_8_0, 
-        		"EDouble");
+        		"eu.paasage.camel.dsl.CamelDsl.EDouble");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -3131,7 +3131,7 @@ ruleApplicationMeasurement returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -3175,7 +3175,7 @@ ruleApplicationMeasurement returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_6_0, 
-        		"EDouble");
+        		"eu.paasage.camel.dsl.CamelDsl.EDouble");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -3197,7 +3197,7 @@ ruleApplicationMeasurement returns [EObject current=null]
        			$current, 
        			"rawData",
         		lv_rawData_8_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -3238,7 +3238,7 @@ ruleApplicationMeasurement returns [EObject current=null]
        			$current, 
        			"measurementTime",
         		lv_measurementTime_12_0, 
-        		"EDate");
+        		"eu.paasage.camel.dsl.CamelDsl.EDate");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -3343,7 +3343,7 @@ ruleInternalComponentMeasurement returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -3387,7 +3387,7 @@ ruleInternalComponentMeasurement returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_6_0, 
-        		"EDouble");
+        		"eu.paasage.camel.dsl.CamelDsl.EDouble");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -3409,7 +3409,7 @@ ruleInternalComponentMeasurement returns [EObject current=null]
        			$current, 
        			"rawData",
         		lv_rawData_8_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -3450,7 +3450,7 @@ ruleInternalComponentMeasurement returns [EObject current=null]
        			$current, 
        			"measurementTime",
         		lv_measurementTime_12_0, 
-        		"EDate");
+        		"eu.paasage.camel.dsl.CamelDsl.EDate");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -3555,7 +3555,7 @@ ruleCommunicationMeasurement returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -3618,7 +3618,7 @@ ruleCommunicationMeasurement returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_8_0, 
-        		"EDouble");
+        		"eu.paasage.camel.dsl.CamelDsl.EDouble");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -3640,7 +3640,7 @@ ruleCommunicationMeasurement returns [EObject current=null]
        			$current, 
        			"rawData",
         		lv_rawData_10_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -3681,7 +3681,7 @@ ruleCommunicationMeasurement returns [EObject current=null]
        			$current, 
        			"measurementTime",
         		lv_measurementTime_14_0, 
-        		"EDate");
+        		"eu.paasage.camel.dsl.CamelDsl.EDate");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -3786,7 +3786,7 @@ ruleVMMeasurement returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -3830,7 +3830,7 @@ ruleVMMeasurement returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_6_0, 
-        		"EDouble");
+        		"eu.paasage.camel.dsl.CamelDsl.EDouble");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -3852,7 +3852,7 @@ ruleVMMeasurement returns [EObject current=null]
        			$current, 
        			"rawData",
         		lv_rawData_8_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -3893,7 +3893,7 @@ ruleVMMeasurement returns [EObject current=null]
        			$current, 
        			"measurementTime",
         		lv_measurementTime_12_0, 
-        		"EDate");
+        		"eu.paasage.camel.dsl.CamelDsl.EDate");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -3998,7 +3998,7 @@ ruleSLOAssessment returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -4061,7 +4061,7 @@ ruleSLOAssessment returns [EObject current=null]
        			$current, 
        			"assessmentTime",
         		lv_assessmentTime_8_0, 
-        		"EDate");
+        		"eu.paasage.camel.dsl.CamelDsl.EDate");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4143,7 +4143,7 @@ ruleRuleTrigger returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -4187,7 +4187,7 @@ ruleRuleTrigger returns [EObject current=null]
        			$current, 
        			"trigerringTime",
         		lv_trigerringTime_6_0, 
-        		"EDate");
+        		"eu.paasage.camel.dsl.CamelDsl.EDate");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4352,7 +4352,7 @@ ruleLocationModel returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_2_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -4373,7 +4373,7 @@ ruleLocationModel returns [EObject current=null]
        			$current, 
        			"regions",
         		lv_regions_4_0, 
-        		"GeographicalRegion");
+        		"eu.paasage.camel.dsl.CamelDsl.GeographicalRegion");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4392,7 +4392,7 @@ ruleLocationModel returns [EObject current=null]
        			$current, 
        			"countries",
         		lv_countries_5_0, 
-        		"Country");
+        		"eu.paasage.camel.dsl.CamelDsl.Country");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4411,7 +4411,7 @@ ruleLocationModel returns [EObject current=null]
        			$current, 
        			"cloudLocations",
         		lv_cloudLocations_6_0, 
-        		"CloudLocation");
+        		"eu.paasage.camel.dsl.CamelDsl.CloudLocation");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4459,7 +4459,7 @@ ruleCloudLocation returns [EObject current=null]
        			$current, 
        			"id",
         		lv_id_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -4541,7 +4541,7 @@ ruleCloudLocation returns [EObject current=null]
        			$current, 
        			"subLocations",
         		lv_subLocations_10_0, 
-        		"CloudLocation");
+        		"eu.paasage.camel.dsl.CamelDsl.CloudLocation");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4563,7 +4563,7 @@ ruleCloudLocation returns [EObject current=null]
        			$current, 
        			"subLocations",
         		lv_subLocations_12_0, 
-        		"CloudLocation");
+        		"eu.paasage.camel.dsl.CamelDsl.CloudLocation");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4615,7 +4615,7 @@ ruleCountry returns [EObject current=null]
        			$current, 
        			"id",
         		lv_id_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -4640,7 +4640,7 @@ ruleCountry returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_4_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4666,7 +4666,7 @@ ruleCountry returns [EObject current=null]
        			$current, 
        			"alternativeNames",
         		lv_alternativeNames_7_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4688,7 +4688,7 @@ ruleCountry returns [EObject current=null]
        			$current, 
        			"alternativeNames",
         		lv_alternativeNames_9_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4786,7 +4786,7 @@ ruleGeographicalRegion returns [EObject current=null]
        			$current, 
        			"id",
         		lv_id_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -4811,7 +4811,7 @@ ruleGeographicalRegion returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_4_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4837,7 +4837,7 @@ ruleGeographicalRegion returns [EObject current=null]
        			$current, 
        			"alternativeNames",
         		lv_alternativeNames_7_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4859,7 +4859,7 @@ ruleGeographicalRegion returns [EObject current=null]
        			$current, 
        			"alternativeNames",
         		lv_alternativeNames_9_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4966,7 +4966,7 @@ ruleMetricModel returns [EObject current=null]
        			$current, 
        			"importURI",
         		lv_importURI_3_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4988,7 +4988,7 @@ ruleMetricModel returns [EObject current=null]
        			$current, 
        			"importURI",
         		lv_importURI_5_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -5015,7 +5015,7 @@ ruleMetricModel returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_8_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -5036,7 +5036,7 @@ ruleMetricModel returns [EObject current=null]
        			$current, 
        			"contexts",
         		lv_contexts_10_0, 
-        		"ConditionContext");
+        		"eu.paasage.camel.dsl.CamelDsl.ConditionContext");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -5055,7 +5055,7 @@ ruleMetricModel returns [EObject current=null]
        			$current, 
        			"metrics",
         		lv_metrics_11_0, 
-        		"Metric");
+        		"eu.paasage.camel.dsl.CamelDsl.Metric");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -5074,7 +5074,7 @@ ruleMetricModel returns [EObject current=null]
        			$current, 
        			"metricInstances",
         		lv_metricInstances_12_0, 
-        		"MetricInstance");
+        		"eu.paasage.camel.dsl.CamelDsl.MetricInstance");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -5093,7 +5093,7 @@ ruleMetricModel returns [EObject current=null]
        			$current, 
        			"conditions",
         		lv_conditions_13_0, 
-        		"Condition");
+        		"eu.paasage.camel.dsl.CamelDsl.Condition");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -5112,7 +5112,7 @@ ruleMetricModel returns [EObject current=null]
        			$current, 
        			"properties",
         		lv_properties_14_0, 
-        		"Property");
+        		"eu.paasage.camel.dsl.CamelDsl.Property");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -5131,7 +5131,7 @@ ruleMetricModel returns [EObject current=null]
        			$current, 
        			"bindings",
         		lv_bindings_15_0, 
-        		"MetricObjectBinding");
+        		"eu.paasage.camel.dsl.CamelDsl.MetricObjectBinding");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -5150,7 +5150,7 @@ ruleMetricModel returns [EObject current=null]
        			$current, 
        			"windows",
         		lv_windows_16_0, 
-        		"Window");
+        		"eu.paasage.camel.dsl.CamelDsl.Window");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -5169,7 +5169,7 @@ ruleMetricModel returns [EObject current=null]
        			$current, 
        			"schedules",
         		lv_schedules_17_0, 
-        		"Schedule");
+        		"eu.paasage.camel.dsl.CamelDsl.Schedule");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -5188,7 +5188,7 @@ ruleMetricModel returns [EObject current=null]
        			$current, 
        			"parameters",
         		lv_parameters_18_0, 
-        		"FormulaParameter");
+        		"eu.paasage.camel.dsl.CamelDsl.FormulaParameter");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -5207,7 +5207,7 @@ ruleMetricModel returns [EObject current=null]
        			$current, 
        			"sensors",
         		lv_sensors_19_0, 
-        		"Sensor");
+        		"eu.paasage.camel.dsl.CamelDsl.Sensor");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -5295,7 +5295,7 @@ ruleCompositeMetricInstance returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -5487,7 +5487,7 @@ ruleRawMetricInstance returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -5652,7 +5652,7 @@ ruleWindow returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -5677,7 +5677,7 @@ ruleWindow returns [EObject current=null]
        			$current, 
        			"windowType",
         		lv_windowType_4_0, 
-        		"WindowType");
+        		"eu.paasage.camel.dsl.CamelDsl.WindowType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -5699,7 +5699,7 @@ ruleWindow returns [EObject current=null]
        			$current, 
        			"sizeType",
         		lv_sizeType_6_0, 
-        		"WindowSizeType");
+        		"eu.paasage.camel.dsl.CamelDsl.WindowSizeType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -5721,7 +5721,7 @@ ruleWindow returns [EObject current=null]
        			$current, 
        			"measurementSize",
         		lv_measurementSize_8_0, 
-        		"ELong");
+        		"eu.paasage.camel.dsl.CamelDsl.ELong");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -5743,7 +5743,7 @@ ruleWindow returns [EObject current=null]
        			$current, 
        			"timeSize",
         		lv_timeSize_10_0, 
-        		"ELong");
+        		"eu.paasage.camel.dsl.CamelDsl.ELong");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -5844,7 +5844,7 @@ ruleSchedule returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -5869,7 +5869,7 @@ ruleSchedule returns [EObject current=null]
        			$current, 
        			"type",
         		lv_type_4_0, 
-        		"ScheduleType");
+        		"eu.paasage.camel.dsl.CamelDsl.ScheduleType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -5891,7 +5891,7 @@ ruleSchedule returns [EObject current=null]
        			$current, 
        			"interval",
         		lv_interval_6_0, 
-        		"ELong");
+        		"eu.paasage.camel.dsl.CamelDsl.ELong");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -5932,7 +5932,7 @@ ruleSchedule returns [EObject current=null]
        			$current, 
        			"start",
         		lv_start_10_0, 
-        		"EDate");
+        		"eu.paasage.camel.dsl.CamelDsl.EDate");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -5954,7 +5954,7 @@ ruleSchedule returns [EObject current=null]
        			$current, 
        			"end",
         		lv_end_12_0, 
-        		"EDate");
+        		"eu.paasage.camel.dsl.CamelDsl.EDate");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -5976,7 +5976,7 @@ ruleSchedule returns [EObject current=null]
        			$current, 
        			"repetitions",
         		lv_repetitions_14_0, 
-        		"EInt");
+        		"eu.paasage.camel.dsl.CamelDsl.EInt");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -6024,7 +6024,7 @@ ruleMetricComponentBinding returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -6132,7 +6132,7 @@ ruleMetricVMBinding returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -6221,7 +6221,7 @@ ruleMetricApplicationBinding returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -6381,7 +6381,7 @@ ruleMetricCondition returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -6425,7 +6425,7 @@ ruleMetricCondition returns [EObject current=null]
        			$current, 
        			"threshold",
         		lv_threshold_6_0, 
-        		"EDouble");
+        		"eu.paasage.camel.dsl.CamelDsl.EDouble");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -6447,7 +6447,7 @@ ruleMetricCondition returns [EObject current=null]
        			$current, 
        			"comparisonOperator",
         		lv_comparisonOperator_8_0, 
-        		"ComparisonOperatorType");
+        		"eu.paasage.camel.dsl.CamelDsl.ComparisonOperatorType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -6469,7 +6469,7 @@ ruleMetricCondition returns [EObject current=null]
        			$current, 
        			"validity",
         		lv_validity_10_0, 
-        		"EDate");
+        		"eu.paasage.camel.dsl.CamelDsl.EDate");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -6517,7 +6517,7 @@ rulePropertyCondition returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -6561,7 +6561,7 @@ rulePropertyCondition returns [EObject current=null]
        			$current, 
        			"threshold",
         		lv_threshold_6_0, 
-        		"EDouble");
+        		"eu.paasage.camel.dsl.CamelDsl.EDouble");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -6583,7 +6583,7 @@ rulePropertyCondition returns [EObject current=null]
        			$current, 
        			"comparisonOperator",
         		lv_comparisonOperator_8_0, 
-        		"ComparisonOperatorType");
+        		"eu.paasage.camel.dsl.CamelDsl.ComparisonOperatorType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -6643,7 +6643,7 @@ rulePropertyCondition returns [EObject current=null]
        			$current, 
        			"validity",
         		lv_validity_14_0, 
-        		"EDate");
+        		"eu.paasage.camel.dsl.CamelDsl.EDate");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -6741,7 +6741,7 @@ ruleCompositeMetricContext returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -6907,7 +6907,7 @@ ruleCompositeMetricContext returns [EObject current=null]
        			$current, 
        			"quantifier",
         		lv_quantifier_20_0, 
-        		"QuantifierType");
+        		"eu.paasage.camel.dsl.CamelDsl.QuantifierType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -6944,7 +6944,7 @@ ruleCompositeMetricContext returns [EObject current=null]
        			$current, 
        			"minQuantity",
         		lv_minQuantity_23_0, 
-        		"EDouble");
+        		"eu.paasage.camel.dsl.CamelDsl.EDouble");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -6966,7 +6966,7 @@ ruleCompositeMetricContext returns [EObject current=null]
        			$current, 
        			"maxQuantity",
         		lv_maxQuantity_25_0, 
-        		"EDouble");
+        		"eu.paasage.camel.dsl.CamelDsl.EDouble");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -7014,7 +7014,7 @@ ruleRawMetricContext returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -7153,7 +7153,7 @@ ruleRawMetricContext returns [EObject current=null]
        			$current, 
        			"quantifier",
         		lv_quantifier_16_0, 
-        		"QuantifierType");
+        		"eu.paasage.camel.dsl.CamelDsl.QuantifierType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -7190,7 +7190,7 @@ ruleRawMetricContext returns [EObject current=null]
        			$current, 
        			"minQuantity",
         		lv_minQuantity_19_0, 
-        		"EDouble");
+        		"eu.paasage.camel.dsl.CamelDsl.EDouble");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -7212,7 +7212,7 @@ ruleRawMetricContext returns [EObject current=null]
        			$current, 
        			"maxQuantity",
         		lv_maxQuantity_21_0, 
-        		"EDouble");
+        		"eu.paasage.camel.dsl.CamelDsl.EDouble");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -7260,7 +7260,7 @@ rulePropertyContext returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -7342,7 +7342,7 @@ rulePropertyContext returns [EObject current=null]
        			$current, 
        			"quantifier",
         		lv_quantifier_10_0, 
-        		"QuantifierType");
+        		"eu.paasage.camel.dsl.CamelDsl.QuantifierType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -7379,7 +7379,7 @@ rulePropertyContext returns [EObject current=null]
        			$current, 
        			"minQuantity",
         		lv_minQuantity_13_0, 
-        		"EDouble");
+        		"eu.paasage.camel.dsl.CamelDsl.EDouble");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -7401,7 +7401,7 @@ rulePropertyContext returns [EObject current=null]
        			$current, 
        			"maxQuantity",
         		lv_maxQuantity_15_0, 
-        		"EDouble");
+        		"eu.paasage.camel.dsl.CamelDsl.EDouble");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -7449,7 +7449,7 @@ ruleCompositeMetric returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -7474,7 +7474,7 @@ ruleCompositeMetric returns [EObject current=null]
        			$current, 
        			"description",
         		lv_description_4_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -7496,7 +7496,7 @@ ruleCompositeMetric returns [EObject current=null]
        			$current, 
        			"valueDirection",
         		lv_valueDirection_6_0, 
-        		"EShort");
+        		"eu.paasage.camel.dsl.CamelDsl.EShort");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -7518,7 +7518,7 @@ ruleCompositeMetric returns [EObject current=null]
        			$current, 
        			"layer",
         		lv_layer_8_0, 
-        		"LayerType");
+        		"eu.paasage.camel.dsl.CamelDsl.LayerType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -7593,7 +7593,7 @@ ruleCompositeMetric returns [EObject current=null]
        			$current, 
        			"formula",
         		lv_formula_15_0, 
-        		"MetricFormula");
+        		"eu.paasage.camel.dsl.CamelDsl.MetricFormula");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -7641,7 +7641,7 @@ ruleRawMetric returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -7666,7 +7666,7 @@ ruleRawMetric returns [EObject current=null]
        			$current, 
        			"description",
         		lv_description_4_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -7688,7 +7688,7 @@ ruleRawMetric returns [EObject current=null]
        			$current, 
        			"valueDirection",
         		lv_valueDirection_6_0, 
-        		"EShort");
+        		"eu.paasage.camel.dsl.CamelDsl.EShort");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -7710,7 +7710,7 @@ ruleRawMetric returns [EObject current=null]
        			$current, 
        			"layer",
         		lv_layer_8_0, 
-        		"LayerType");
+        		"eu.paasage.camel.dsl.CamelDsl.LayerType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -7918,7 +7918,7 @@ ruleMetricFormulaParameter_Impl returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_2_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -7984,7 +7984,7 @@ ruleMetricFormula returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -8009,7 +8009,7 @@ ruleMetricFormula returns [EObject current=null]
        			$current, 
        			"functionArity",
         		lv_functionArity_4_0, 
-        		"MetricFunctionArityType");
+        		"eu.paasage.camel.dsl.CamelDsl.MetricFunctionArityType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -8031,7 +8031,7 @@ ruleMetricFormula returns [EObject current=null]
        			$current, 
        			"functionPattern",
         		lv_functionPattern_6_0, 
-        		"FunctionPatternType");
+        		"eu.paasage.camel.dsl.CamelDsl.FunctionPatternType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -8049,7 +8049,7 @@ ruleMetricFormula returns [EObject current=null]
        			$current, 
        			"function",
         		lv_function_7_0, 
-        		"MetricFunctionType");
+        		"eu.paasage.camel.dsl.CamelDsl.MetricFunctionType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -8139,7 +8139,7 @@ ruleProperty returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -8164,7 +8164,7 @@ ruleProperty returns [EObject current=null]
        			$current, 
        			"description",
         		lv_description_4_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -8186,7 +8186,7 @@ ruleProperty returns [EObject current=null]
        			$current, 
        			"type",
         		lv_type_6_0, 
-        		"PropertyType");
+        		"eu.paasage.camel.dsl.CamelDsl.PropertyType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -8326,7 +8326,7 @@ ruleSensor returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -8351,7 +8351,7 @@ ruleSensor returns [EObject current=null]
        			$current, 
        			"configuration",
         		lv_configuration_4_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -8420,7 +8420,7 @@ ruleOrganisationModel returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_2_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -8441,7 +8441,7 @@ ruleOrganisationModel returns [EObject current=null]
        			$current, 
        			"organisation",
         		lv_organisation_4_0, 
-        		"Organisation_Impl");
+        		"eu.paasage.camel.dsl.CamelDsl.Organisation_Impl");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -8459,7 +8459,7 @@ ruleOrganisationModel returns [EObject current=null]
        			$current, 
        			"provider",
         		lv_provider_5_0, 
-        		"CloudProvider");
+        		"eu.paasage.camel.dsl.CamelDsl.CloudProvider");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -8477,7 +8477,7 @@ ruleOrganisationModel returns [EObject current=null]
        			$current, 
        			"externalIdentifiers",
         		lv_externalIdentifiers_6_0, 
-        		"ExternalIdentifier");
+        		"eu.paasage.camel.dsl.CamelDsl.ExternalIdentifier");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -8496,7 +8496,7 @@ ruleOrganisationModel returns [EObject current=null]
        			$current, 
        			"users",
         		lv_users_7_0, 
-        		"User");
+        		"eu.paasage.camel.dsl.CamelDsl.User");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -8515,7 +8515,7 @@ ruleOrganisationModel returns [EObject current=null]
        			$current, 
        			"userGroups",
         		lv_userGroups_8_0, 
-        		"UserGroup");
+        		"eu.paasage.camel.dsl.CamelDsl.UserGroup");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -8534,7 +8534,7 @@ ruleOrganisationModel returns [EObject current=null]
        			$current, 
        			"dataCentres",
         		lv_dataCentres_9_0, 
-        		"DataCenter");
+        		"eu.paasage.camel.dsl.CamelDsl.DataCenter");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -8553,7 +8553,7 @@ ruleOrganisationModel returns [EObject current=null]
        			$current, 
        			"roles",
         		lv_roles_10_0, 
-        		"Role");
+        		"eu.paasage.camel.dsl.CamelDsl.Role");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -8572,7 +8572,7 @@ ruleOrganisationModel returns [EObject current=null]
        			$current, 
        			"roleAssigments",
         		lv_roleAssigments_11_0, 
-        		"RoleAssignment");
+        		"eu.paasage.camel.dsl.CamelDsl.RoleAssignment");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -8591,7 +8591,7 @@ ruleOrganisationModel returns [EObject current=null]
        			$current, 
        			"permissions",
         		lv_permissions_12_0, 
-        		"Permission");
+        		"eu.paasage.camel.dsl.CamelDsl.Permission");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -8610,7 +8610,7 @@ ruleOrganisationModel returns [EObject current=null]
        			$current, 
        			"resourceFilters",
         		lv_resourceFilters_13_0, 
-        		"ResourceFilter");
+        		"eu.paasage.camel.dsl.CamelDsl.ResourceFilter");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -8632,7 +8632,7 @@ ruleOrganisationModel returns [EObject current=null]
        			$current, 
        			"securityLevel",
         		lv_securityLevel_15_0, 
-        		"SecurityLevel");
+        		"eu.paasage.camel.dsl.CamelDsl.SecurityLevel");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -8684,7 +8684,7 @@ ruleDataCenter returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -8709,7 +8709,7 @@ ruleDataCenter returns [EObject current=null]
        			$current, 
        			"codeName",
         		lv_codeName_4_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -8807,7 +8807,7 @@ ruleOrganisation_Impl returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -8832,7 +8832,7 @@ ruleOrganisation_Impl returns [EObject current=null]
        			$current, 
        			"www",
         		lv_www_4_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -8854,7 +8854,7 @@ ruleOrganisation_Impl returns [EObject current=null]
        			$current, 
        			"postalAddress",
         		lv_postalAddress_6_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -8876,7 +8876,7 @@ ruleOrganisation_Impl returns [EObject current=null]
        			$current, 
        			"email",
         		lv_email_8_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -8924,7 +8924,7 @@ ruleCloudProvider returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -8949,7 +8949,7 @@ ruleCloudProvider returns [EObject current=null]
        			$current, 
        			"www",
         		lv_www_4_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -8971,7 +8971,7 @@ ruleCloudProvider returns [EObject current=null]
        			$current, 
        			"postalAddress",
         		lv_postalAddress_6_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -8993,7 +8993,7 @@ ruleCloudProvider returns [EObject current=null]
        			$current, 
        			"email",
         		lv_email_8_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -9166,7 +9166,7 @@ ruleUser returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -9191,7 +9191,7 @@ ruleUser returns [EObject current=null]
        			$current, 
        			"firstName",
         		lv_firstName_4_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -9213,7 +9213,7 @@ ruleUser returns [EObject current=null]
        			$current, 
        			"lastName",
         		lv_lastName_6_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -9235,7 +9235,7 @@ ruleUser returns [EObject current=null]
        			$current, 
        			"email",
         		lv_email_8_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -9257,7 +9257,7 @@ ruleUser returns [EObject current=null]
        			$current, 
        			"www",
         		lv_www_10_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -9275,7 +9275,7 @@ ruleUser returns [EObject current=null]
        			$current, 
        			"paasageCredentials",
         		lv_paasageCredentials_11_0, 
-        		"PaaSageCredentials");
+        		"eu.paasage.camel.dsl.CamelDsl.PaaSageCredentials");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -9301,7 +9301,7 @@ ruleUser returns [EObject current=null]
        			$current, 
        			"cloudCredentials",
         		lv_cloudCredentials_14_0, 
-        		"CloudCredentials");
+        		"eu.paasage.camel.dsl.CamelDsl.CloudCredentials");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -9323,7 +9323,7 @@ ruleUser returns [EObject current=null]
        			$current, 
        			"cloudCredentials",
         		lv_cloudCredentials_16_0, 
-        		"CloudCredentials");
+        		"eu.paasage.camel.dsl.CamelDsl.CloudCredentials");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -9353,7 +9353,7 @@ ruleUser returns [EObject current=null]
        			$current, 
        			"externalIdentifiers",
         		lv_externalIdentifiers_20_0, 
-        		"ExternalIdentifier");
+        		"eu.paasage.camel.dsl.CamelDsl.ExternalIdentifier");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -9375,7 +9375,7 @@ ruleUser returns [EObject current=null]
        			$current, 
        			"externalIdentifiers",
         		lv_externalIdentifiers_22_0, 
-        		"ExternalIdentifier");
+        		"eu.paasage.camel.dsl.CamelDsl.ExternalIdentifier");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -9519,7 +9519,7 @@ ruleExternalIdentifier returns [EObject current=null]
        			$current, 
        			"identifier",
         		lv_identifier_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -9544,7 +9544,7 @@ ruleExternalIdentifier returns [EObject current=null]
        			$current, 
        			"description",
         		lv_description_4_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -9588,7 +9588,7 @@ ruleCloudCredentials returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_0_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -9613,7 +9613,7 @@ ruleCloudCredentials returns [EObject current=null]
        			$current, 
        			"securityGroup",
         		lv_securityGroup_3_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -9635,7 +9635,7 @@ ruleCloudCredentials returns [EObject current=null]
        			$current, 
        			"publicSSHKey",
         		lv_publicSSHKey_5_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -9657,7 +9657,7 @@ ruleCloudCredentials returns [EObject current=null]
        			$current, 
        			"privateSSHKey",
         		lv_privateSSHKey_7_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -9679,7 +9679,7 @@ ruleCloudCredentials returns [EObject current=null]
        			$current, 
        			"username",
         		lv_username_9_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -9701,7 +9701,7 @@ ruleCloudCredentials returns [EObject current=null]
        			$current, 
        			"password",
         		lv_password_11_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -9767,7 +9767,7 @@ rulePaaSageCredentials returns [EObject current=null]
        			$current, 
        			"password",
         		lv_password_1_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -9839,7 +9839,7 @@ ruleUserGroup returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -9936,7 +9936,7 @@ ruleRoleAssignment returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -9961,7 +9961,7 @@ ruleRoleAssignment returns [EObject current=null]
        			$current, 
        			"startTime",
         		lv_startTime_4_0, 
-        		"EDate");
+        		"eu.paasage.camel.dsl.CamelDsl.EDate");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -9983,7 +9983,7 @@ ruleRoleAssignment returns [EObject current=null]
        			$current, 
        			"endTime",
         		lv_endTime_6_0, 
-        		"EDate");
+        		"eu.paasage.camel.dsl.CamelDsl.EDate");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -10005,7 +10005,7 @@ ruleRoleAssignment returns [EObject current=null]
        			$current, 
        			"assignmentTime",
         		lv_assignmentTime_8_0, 
-        		"EDate");
+        		"eu.paasage.camel.dsl.CamelDsl.EDate");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -10110,7 +10110,7 @@ ruleRole returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -10153,7 +10153,7 @@ rulePermission returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -10178,7 +10178,7 @@ rulePermission returns [EObject current=null]
        			$current, 
        			"startTime",
         		lv_startTime_4_0, 
-        		"EDate");
+        		"eu.paasage.camel.dsl.CamelDsl.EDate");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -10200,7 +10200,7 @@ rulePermission returns [EObject current=null]
        			$current, 
        			"endTime",
         		lv_endTime_6_0, 
-        		"EDate");
+        		"eu.paasage.camel.dsl.CamelDsl.EDate");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -10260,7 +10260,7 @@ rulePermission returns [EObject current=null]
        			$current, 
        			"action",
         		lv_action_12_0, 
-        		"ActionType");
+        		"eu.paasage.camel.dsl.CamelDsl.ActionType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -10348,7 +10348,7 @@ ruleInformationResourceFilter returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -10373,7 +10373,7 @@ ruleInformationResourceFilter returns [EObject current=null]
        			$current, 
        			"resourcePattern",
         		lv_resourcePattern_4_0, 
-        		"ResourcePattern");
+        		"eu.paasage.camel.dsl.CamelDsl.ResourcePattern");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -10395,7 +10395,7 @@ ruleInformationResourceFilter returns [EObject current=null]
        			$current, 
        			"informationResourcePath",
         		lv_informationResourcePath_6_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -10458,7 +10458,7 @@ ruleServiceResourceFilter returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -10483,7 +10483,7 @@ ruleServiceResourceFilter returns [EObject current=null]
        			$current, 
        			"resourcePattern",
         		lv_resourcePattern_4_0, 
-        		"ResourcePattern");
+        		"eu.paasage.camel.dsl.CamelDsl.ResourcePattern");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -10505,7 +10505,7 @@ ruleServiceResourceFilter returns [EObject current=null]
        			$current, 
        			"serviceURL",
         		lv_serviceURL_6_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -10568,7 +10568,7 @@ ruleProviderModel returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -10597,7 +10597,7 @@ ruleProviderModel returns [EObject current=null]
        			$current, 
        			"constraints",
         		lv_constraints_5_0, 
-        		"Constraint");
+        		"eu.paasage.camel.dsl.CamelDsl.Constraint");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -10615,7 +10615,7 @@ ruleProviderModel returns [EObject current=null]
        			$current, 
        			"constraints",
         		lv_constraints_6_0, 
-        		"Constraint");
+        		"eu.paasage.camel.dsl.CamelDsl.Constraint");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -10641,7 +10641,7 @@ ruleProviderModel returns [EObject current=null]
        			$current, 
        			"rootFeature",
         		lv_rootFeature_9_0, 
-        		"Feature");
+        		"eu.paasage.camel.dsl.CamelDsl.Feature");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -10999,7 +10999,7 @@ ruleFeature_Impl returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -11028,7 +11028,7 @@ ruleFeature_Impl returns [EObject current=null]
        			$current, 
        			"attributes",
         		lv_attributes_5_0, 
-        		"Attribute");
+        		"eu.paasage.camel.dsl.CamelDsl.Attribute");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -11046,7 +11046,7 @@ ruleFeature_Impl returns [EObject current=null]
        			$current, 
        			"attributes",
         		lv_attributes_6_0, 
-        		"Attribute");
+        		"eu.paasage.camel.dsl.CamelDsl.Attribute");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -11076,7 +11076,7 @@ ruleFeature_Impl returns [EObject current=null]
        			$current, 
        			"subFeatures",
         		lv_subFeatures_10_0, 
-        		"Feature");
+        		"eu.paasage.camel.dsl.CamelDsl.Feature");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -11094,7 +11094,7 @@ ruleFeature_Impl returns [EObject current=null]
        			$current, 
        			"subFeatures",
         		lv_subFeatures_11_0, 
-        		"Feature");
+        		"eu.paasage.camel.dsl.CamelDsl.Feature");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -11116,7 +11116,7 @@ ruleFeature_Impl returns [EObject current=null]
        			$current, 
        			"featureCardinality",
         		lv_featureCardinality_13_0, 
-        		"FeatCardinality");
+        		"eu.paasage.camel.dsl.CamelDsl.FeatCardinality");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -11142,7 +11142,7 @@ ruleFeature_Impl returns [EObject current=null]
        			$current, 
        			"clones",
         		lv_clones_16_0, 
-        		"Clone");
+        		"eu.paasage.camel.dsl.CamelDsl.Clone");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -11164,7 +11164,7 @@ ruleFeature_Impl returns [EObject current=null]
        			$current, 
        			"clones",
         		lv_clones_18_0, 
-        		"Clone");
+        		"eu.paasage.camel.dsl.CamelDsl.Clone");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -11297,7 +11297,7 @@ ruleAttributeConstraint returns [EObject current=null]
        			$current, 
        			"fromValue",
         		lv_fromValue_7_0, 
-        		"Value");
+        		"eu.paasage.camel.dsl.CamelDsl.Value");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -11319,7 +11319,7 @@ ruleAttributeConstraint returns [EObject current=null]
        			$current, 
        			"toValue",
         		lv_toValue_9_0, 
-        		"Value");
+        		"eu.paasage.camel.dsl.CamelDsl.Value");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -11367,7 +11367,7 @@ ruleExcludes returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -11434,7 +11434,7 @@ ruleExcludes returns [EObject current=null]
        			$current, 
        			"attributeConstraints",
         		lv_attributeConstraints_9_0, 
-        		"AttributeConstraint");
+        		"eu.paasage.camel.dsl.CamelDsl.AttributeConstraint");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -11452,7 +11452,7 @@ ruleExcludes returns [EObject current=null]
        			$current, 
        			"attributeConstraints",
         		lv_attributeConstraints_10_0, 
-        		"AttributeConstraint");
+        		"eu.paasage.camel.dsl.CamelDsl.AttributeConstraint");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -11504,7 +11504,7 @@ ruleImplies returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -11571,7 +11571,7 @@ ruleImplies returns [EObject current=null]
        			$current, 
        			"attributeConstraints",
         		lv_attributeConstraints_9_0, 
-        		"AttributeConstraint");
+        		"eu.paasage.camel.dsl.CamelDsl.AttributeConstraint");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -11589,7 +11589,7 @@ ruleImplies returns [EObject current=null]
        			$current, 
        			"attributeConstraints",
         		lv_attributeConstraints_10_0, 
-        		"AttributeConstraint");
+        		"eu.paasage.camel.dsl.CamelDsl.AttributeConstraint");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -11641,7 +11641,7 @@ ruleRequires_Impl returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -11708,7 +11708,7 @@ ruleRequires_Impl returns [EObject current=null]
        			$current, 
        			"attributeConstraints",
         		lv_attributeConstraints_9_0, 
-        		"AttributeConstraint");
+        		"eu.paasage.camel.dsl.CamelDsl.AttributeConstraint");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -11726,7 +11726,7 @@ ruleRequires_Impl returns [EObject current=null]
        			$current, 
        			"attributeConstraints",
         		lv_attributeConstraints_10_0, 
-        		"AttributeConstraint");
+        		"eu.paasage.camel.dsl.CamelDsl.AttributeConstraint");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -11752,7 +11752,7 @@ ruleRequires_Impl returns [EObject current=null]
        			$current, 
        			"scopeFrom",
         		lv_scopeFrom_13_0, 
-        		"Scope");
+        		"eu.paasage.camel.dsl.CamelDsl.Scope");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -11774,7 +11774,7 @@ ruleRequires_Impl returns [EObject current=null]
        			$current, 
        			"scopeTo",
         		lv_scopeTo_15_0, 
-        		"Scope");
+        		"eu.paasage.camel.dsl.CamelDsl.Scope");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -11796,7 +11796,7 @@ ruleRequires_Impl returns [EObject current=null]
        			$current, 
        			"cardFrom",
         		lv_cardFrom_17_0, 
-        		"FeatCardinality");
+        		"eu.paasage.camel.dsl.CamelDsl.FeatCardinality");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -11818,7 +11818,7 @@ ruleRequires_Impl returns [EObject current=null]
        			$current, 
        			"cardTo",
         		lv_cardTo_19_0, 
-        		"FeatCardinality");
+        		"eu.paasage.camel.dsl.CamelDsl.FeatCardinality");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -11866,7 +11866,7 @@ ruleFunctional returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -11891,7 +11891,7 @@ ruleFunctional returns [EObject current=null]
        			$current, 
        			"type",
         		lv_type_4_0, 
-        		"Operator");
+        		"eu.paasage.camel.dsl.CamelDsl.Operator");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -11913,7 +11913,7 @@ ruleFunctional returns [EObject current=null]
        			$current, 
        			"order",
         		lv_order_6_0, 
-        		"EInt");
+        		"eu.paasage.camel.dsl.CamelDsl.EInt");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -11935,7 +11935,7 @@ ruleFunctional returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_8_0, 
-        		"EInt");
+        		"eu.paasage.camel.dsl.CamelDsl.EInt");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -11999,7 +11999,7 @@ ruleFunctional returns [EObject current=null]
        			$current, 
        			"attributeConstraints",
         		lv_attributeConstraints_15_0, 
-        		"AttributeConstraint");
+        		"eu.paasage.camel.dsl.CamelDsl.AttributeConstraint");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -12017,7 +12017,7 @@ ruleFunctional returns [EObject current=null]
        			$current, 
        			"attributeConstraints",
         		lv_attributeConstraints_16_0, 
-        		"AttributeConstraint");
+        		"eu.paasage.camel.dsl.CamelDsl.AttributeConstraint");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -12043,7 +12043,7 @@ ruleFunctional returns [EObject current=null]
        			$current, 
        			"scopeFrom",
         		lv_scopeFrom_19_0, 
-        		"Scope");
+        		"eu.paasage.camel.dsl.CamelDsl.Scope");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -12065,7 +12065,7 @@ ruleFunctional returns [EObject current=null]
        			$current, 
        			"scopeTo",
         		lv_scopeTo_21_0, 
-        		"Scope");
+        		"eu.paasage.camel.dsl.CamelDsl.Scope");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -12087,7 +12087,7 @@ ruleFunctional returns [EObject current=null]
        			$current, 
        			"cardFrom",
         		lv_cardFrom_23_0, 
-        		"FeatCardinality");
+        		"eu.paasage.camel.dsl.CamelDsl.FeatCardinality");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -12109,7 +12109,7 @@ ruleFunctional returns [EObject current=null]
        			$current, 
        			"cardTo",
         		lv_cardTo_25_0, 
-        		"FeatCardinality");
+        		"eu.paasage.camel.dsl.CamelDsl.FeatCardinality");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -12163,7 +12163,7 @@ ruleAttribute returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_2_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -12188,7 +12188,7 @@ ruleAttribute returns [EObject current=null]
        			$current, 
        			"unitType",
         		lv_unitType_5_0, 
-        		"UnitType");
+        		"eu.paasage.camel.dsl.CamelDsl.UnitType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -12210,7 +12210,7 @@ ruleAttribute returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_7_0, 
-        		"Value");
+        		"eu.paasage.camel.dsl.CamelDsl.Value");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -12284,7 +12284,7 @@ ruleFeatCardinality returns [EObject current=null]
        			$current, 
        			"cardinalityMin",
         		lv_cardinalityMin_3_0, 
-        		"EInt");
+        		"eu.paasage.camel.dsl.CamelDsl.EInt");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -12306,7 +12306,7 @@ ruleFeatCardinality returns [EObject current=null]
        			$current, 
        			"cardinalityMax",
         		lv_cardinalityMax_5_0, 
-        		"EInt");
+        		"eu.paasage.camel.dsl.CamelDsl.EInt");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -12328,7 +12328,7 @@ ruleFeatCardinality returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_7_0, 
-        		"EInt");
+        		"eu.paasage.camel.dsl.CamelDsl.EInt");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -12465,7 +12465,7 @@ ruleClone returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_2_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -12562,7 +12562,7 @@ ruleAlternative_Impl returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -12591,7 +12591,7 @@ ruleAlternative_Impl returns [EObject current=null]
        			$current, 
        			"attributes",
         		lv_attributes_5_0, 
-        		"Attribute");
+        		"eu.paasage.camel.dsl.CamelDsl.Attribute");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -12609,7 +12609,7 @@ ruleAlternative_Impl returns [EObject current=null]
        			$current, 
        			"attributes",
         		lv_attributes_6_0, 
-        		"Attribute");
+        		"eu.paasage.camel.dsl.CamelDsl.Attribute");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -12639,7 +12639,7 @@ ruleAlternative_Impl returns [EObject current=null]
        			$current, 
        			"subFeatures",
         		lv_subFeatures_10_0, 
-        		"Feature");
+        		"eu.paasage.camel.dsl.CamelDsl.Feature");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -12657,7 +12657,7 @@ ruleAlternative_Impl returns [EObject current=null]
        			$current, 
        			"subFeatures",
         		lv_subFeatures_11_0, 
-        		"Feature");
+        		"eu.paasage.camel.dsl.CamelDsl.Feature");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -12679,7 +12679,7 @@ ruleAlternative_Impl returns [EObject current=null]
        			$current, 
        			"featureCardinality",
         		lv_featureCardinality_13_0, 
-        		"FeatCardinality");
+        		"eu.paasage.camel.dsl.CamelDsl.FeatCardinality");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -12705,7 +12705,7 @@ ruleAlternative_Impl returns [EObject current=null]
        			$current, 
        			"clones",
         		lv_clones_16_0, 
-        		"Clone");
+        		"eu.paasage.camel.dsl.CamelDsl.Clone");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -12727,7 +12727,7 @@ ruleAlternative_Impl returns [EObject current=null]
        			$current, 
        			"clones",
         		lv_clones_18_0, 
-        		"Clone");
+        		"eu.paasage.camel.dsl.CamelDsl.Clone");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -12749,7 +12749,7 @@ ruleAlternative_Impl returns [EObject current=null]
        			$current, 
        			"groupCardinality",
         		lv_groupCardinality_20_0, 
-        		"GroupCardinality");
+        		"eu.paasage.camel.dsl.CamelDsl.GroupCardinality");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -12775,7 +12775,7 @@ ruleAlternative_Impl returns [EObject current=null]
        			$current, 
        			"variants",
         		lv_variants_23_0, 
-        		"Feature");
+        		"eu.paasage.camel.dsl.CamelDsl.Feature");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -12797,7 +12797,7 @@ ruleAlternative_Impl returns [EObject current=null]
        			$current, 
        			"variants",
         		lv_variants_25_0, 
-        		"Feature");
+        		"eu.paasage.camel.dsl.CamelDsl.Feature");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -12849,7 +12849,7 @@ ruleExclusive returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -12878,7 +12878,7 @@ ruleExclusive returns [EObject current=null]
        			$current, 
        			"attributes",
         		lv_attributes_5_0, 
-        		"Attribute");
+        		"eu.paasage.camel.dsl.CamelDsl.Attribute");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -12896,7 +12896,7 @@ ruleExclusive returns [EObject current=null]
        			$current, 
        			"attributes",
         		lv_attributes_6_0, 
-        		"Attribute");
+        		"eu.paasage.camel.dsl.CamelDsl.Attribute");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -12926,7 +12926,7 @@ ruleExclusive returns [EObject current=null]
        			$current, 
        			"subFeatures",
         		lv_subFeatures_10_0, 
-        		"Feature");
+        		"eu.paasage.camel.dsl.CamelDsl.Feature");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -12944,7 +12944,7 @@ ruleExclusive returns [EObject current=null]
        			$current, 
        			"subFeatures",
         		lv_subFeatures_11_0, 
-        		"Feature");
+        		"eu.paasage.camel.dsl.CamelDsl.Feature");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -12966,7 +12966,7 @@ ruleExclusive returns [EObject current=null]
        			$current, 
        			"featureCardinality",
         		lv_featureCardinality_13_0, 
-        		"FeatCardinality");
+        		"eu.paasage.camel.dsl.CamelDsl.FeatCardinality");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -12992,7 +12992,7 @@ ruleExclusive returns [EObject current=null]
        			$current, 
        			"clones",
         		lv_clones_16_0, 
-        		"Clone");
+        		"eu.paasage.camel.dsl.CamelDsl.Clone");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -13014,7 +13014,7 @@ ruleExclusive returns [EObject current=null]
        			$current, 
        			"clones",
         		lv_clones_18_0, 
-        		"Clone");
+        		"eu.paasage.camel.dsl.CamelDsl.Clone");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -13036,7 +13036,7 @@ ruleExclusive returns [EObject current=null]
        			$current, 
        			"groupCardinality",
         		lv_groupCardinality_20_0, 
-        		"GroupCardinality");
+        		"eu.paasage.camel.dsl.CamelDsl.GroupCardinality");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -13062,7 +13062,7 @@ ruleExclusive returns [EObject current=null]
        			$current, 
        			"variants",
         		lv_variants_23_0, 
-        		"Feature");
+        		"eu.paasage.camel.dsl.CamelDsl.Feature");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -13080,7 +13080,7 @@ ruleExclusive returns [EObject current=null]
        			$current, 
        			"variants",
         		lv_variants_24_0, 
-        		"Feature");
+        		"eu.paasage.camel.dsl.CamelDsl.Feature");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -13139,7 +13139,7 @@ ruleGroupCardinality returns [EObject current=null]
        			$current, 
        			"cardinalityMin",
         		lv_cardinalityMin_3_0, 
-        		"EInt");
+        		"eu.paasage.camel.dsl.CamelDsl.EInt");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -13161,7 +13161,7 @@ ruleGroupCardinality returns [EObject current=null]
        			$current, 
        			"cardinalityMax",
         		lv_cardinalityMax_5_0, 
-        		"EInt");
+        		"eu.paasage.camel.dsl.CamelDsl.EInt");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -13209,7 +13209,7 @@ ruleRequirementModel returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -13230,7 +13230,7 @@ ruleRequirementModel returns [EObject current=null]
        			$current, 
        			"requirements",
         		lv_requirements_3_0, 
-        		"LocationRequirement");
+        		"eu.paasage.camel.dsl.CamelDsl.LocationRequirement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -13249,7 +13249,7 @@ ruleRequirementModel returns [EObject current=null]
        			$current, 
        			"requirements",
         		lv_requirements_4_0, 
-        		"QuantitativeHardwareRequirement");
+        		"eu.paasage.camel.dsl.CamelDsl.QuantitativeHardwareRequirement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -13268,7 +13268,7 @@ ruleRequirementModel returns [EObject current=null]
        			$current, 
        			"requirements",
         		lv_requirements_5_0, 
-        		"QualitativeHardwareRequirement");
+        		"eu.paasage.camel.dsl.CamelDsl.QualitativeHardwareRequirement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -13287,7 +13287,7 @@ ruleRequirementModel returns [EObject current=null]
        			$current, 
        			"requirements",
         		lv_requirements_6_0, 
-        		"ImageRequirement");
+        		"eu.paasage.camel.dsl.CamelDsl.ImageRequirement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -13306,7 +13306,7 @@ ruleRequirementModel returns [EObject current=null]
        			$current, 
        			"requirements",
         		lv_requirements_7_0, 
-        		"OSRequirement");
+        		"eu.paasage.camel.dsl.CamelDsl.OSRequirement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -13325,7 +13325,7 @@ ruleRequirementModel returns [EObject current=null]
        			$current, 
        			"requirements",
         		lv_requirements_8_0, 
-        		"HorizontalScaleRequirement");
+        		"eu.paasage.camel.dsl.CamelDsl.HorizontalScaleRequirement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -13344,7 +13344,7 @@ ruleRequirementModel returns [EObject current=null]
        			$current, 
        			"requirements",
         		lv_requirements_9_0, 
-        		"VerticalScaleRequirement");
+        		"eu.paasage.camel.dsl.CamelDsl.VerticalScaleRequirement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -13363,7 +13363,7 @@ ruleRequirementModel returns [EObject current=null]
        			$current, 
        			"requirements",
         		lv_requirements_10_0, 
-        		"SecurityRequirement");
+        		"eu.paasage.camel.dsl.CamelDsl.SecurityRequirement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -13382,7 +13382,7 @@ ruleRequirementModel returns [EObject current=null]
        			$current, 
        			"requirements",
         		lv_requirements_11_0, 
-        		"ServiceLevelObjective");
+        		"eu.paasage.camel.dsl.CamelDsl.ServiceLevelObjective");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -13401,7 +13401,7 @@ ruleRequirementModel returns [EObject current=null]
        			$current, 
        			"requirements",
         		lv_requirements_12_0, 
-        		"OptimisationRequirement");
+        		"eu.paasage.camel.dsl.CamelDsl.OptimisationRequirement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -13420,7 +13420,7 @@ ruleRequirementModel returns [EObject current=null]
        			$current, 
        			"requirements",
         		lv_requirements_13_0, 
-        		"ProviderRequirement");
+        		"eu.paasage.camel.dsl.CamelDsl.ProviderRequirement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -13439,7 +13439,7 @@ ruleRequirementModel returns [EObject current=null]
        			$current, 
        			"requirements",
         		lv_requirements_14_0, 
-        		"RequirementGroup");
+        		"eu.paasage.camel.dsl.CamelDsl.RequirementGroup");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -13487,7 +13487,7 @@ ruleRequirementGroup returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -13512,7 +13512,7 @@ ruleRequirementGroup returns [EObject current=null]
        			$current, 
        			"requirementOperator",
         		lv_requirementOperator_4_0, 
-        		"RequirementOperatorType");
+        		"eu.paasage.camel.dsl.CamelDsl.RequirementOperatorType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -13654,7 +13654,7 @@ ruleServiceLevelObjective returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -13724,7 +13724,7 @@ ruleProviderRequirement returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -13821,7 +13821,7 @@ ruleOptimisationRequirement returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -13846,7 +13846,7 @@ ruleOptimisationRequirement returns [EObject current=null]
        			$current, 
        			"optimisationFunction",
         		lv_optimisationFunction_4_0, 
-        		"OptimisationFunctionType");
+        		"eu.paasage.camel.dsl.CamelDsl.OptimisationFunctionType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -13963,7 +13963,7 @@ ruleOptimisationRequirement returns [EObject current=null]
        			$current, 
        			"priority",
         		lv_priority_16_0, 
-        		"EDouble");
+        		"eu.paasage.camel.dsl.CamelDsl.EDouble");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -14011,7 +14011,7 @@ ruleOSRequirement returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -14036,7 +14036,7 @@ ruleOSRequirement returns [EObject current=null]
        			$current, 
        			"os",
         		lv_os_4_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -14099,7 +14099,7 @@ ruleImageRequirement returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -14124,7 +14124,7 @@ ruleImageRequirement returns [EObject current=null]
        			$current, 
        			"imageId",
         		lv_imageId_4_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -14223,7 +14223,7 @@ ruleQualitativeHardwareRequirement returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_2_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -14248,7 +14248,7 @@ ruleQualitativeHardwareRequirement returns [EObject current=null]
        			$current, 
        			"minBenchmark",
         		lv_minBenchmark_5_0, 
-        		"Double");
+        		"eu.paasage.camel.dsl.CamelDsl.Double");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -14270,7 +14270,7 @@ ruleQualitativeHardwareRequirement returns [EObject current=null]
        			$current, 
        			"maxBenchmark",
         		lv_maxBenchmark_7_0, 
-        		"Double");
+        		"eu.paasage.camel.dsl.CamelDsl.Double");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -14318,7 +14318,7 @@ ruleQuantitativeHardwareRequirement returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -14344,7 +14344,7 @@ ruleQuantitativeHardwareRequirement returns [EObject current=null]
        			$current, 
        			"minCores",
         		lv_minCores_4_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -14366,7 +14366,7 @@ ruleQuantitativeHardwareRequirement returns [EObject current=null]
        			$current, 
        			"maxCores",
         		lv_maxCores_6_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -14388,7 +14388,7 @@ ruleQuantitativeHardwareRequirement returns [EObject current=null]
        			$current, 
        			"minRAM",
         		lv_minRAM_8_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -14410,7 +14410,7 @@ ruleQuantitativeHardwareRequirement returns [EObject current=null]
        			$current, 
        			"maxRAM",
         		lv_maxRAM_10_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -14432,7 +14432,7 @@ ruleQuantitativeHardwareRequirement returns [EObject current=null]
        			$current, 
        			"minStorage",
         		lv_minStorage_12_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -14454,7 +14454,7 @@ ruleQuantitativeHardwareRequirement returns [EObject current=null]
        			$current, 
        			"maxStorage",
         		lv_maxStorage_14_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -14475,7 +14475,7 @@ ruleQuantitativeHardwareRequirement returns [EObject current=null]
        			$current, 
        			"minCPU",
         		lv_minCPU_16_0, 
-        		"Double");
+        		"eu.paasage.camel.dsl.CamelDsl.Double");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -14497,7 +14497,7 @@ ruleQuantitativeHardwareRequirement returns [EObject current=null]
        			$current, 
        			"maxCPU",
         		lv_maxCPU_18_0, 
-        		"Double");
+        		"eu.paasage.camel.dsl.CamelDsl.Double");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -14545,7 +14545,7 @@ ruleLocationRequirement returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -14651,7 +14651,7 @@ ruleScalabilityModel returns [EObject current=null]
        			$current, 
        			"importURI",
         		lv_importURI_3_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -14673,7 +14673,7 @@ ruleScalabilityModel returns [EObject current=null]
        			$current, 
        			"importURI",
         		lv_importURI_5_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -14700,7 +14700,7 @@ ruleScalabilityModel returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_8_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -14721,7 +14721,7 @@ ruleScalabilityModel returns [EObject current=null]
        			$current, 
        			"rules",
         		lv_rules_10_0, 
-        		"ScalabilityRule");
+        		"eu.paasage.camel.dsl.CamelDsl.ScalabilityRule");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -14740,7 +14740,7 @@ ruleScalabilityModel returns [EObject current=null]
        			$current, 
        			"events",
         		lv_events_11_0, 
-        		"Event");
+        		"eu.paasage.camel.dsl.CamelDsl.Event");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -14759,7 +14759,7 @@ ruleScalabilityModel returns [EObject current=null]
        			$current, 
        			"eventInstances",
         		lv_eventInstances_12_0, 
-        		"EventInstance");
+        		"eu.paasage.camel.dsl.CamelDsl.EventInstance");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -14778,7 +14778,7 @@ ruleScalabilityModel returns [EObject current=null]
        			$current, 
        			"actions",
         		lv_actions_13_0, 
-        		"ScalingAction");
+        		"eu.paasage.camel.dsl.CamelDsl.ScalingAction");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -14797,7 +14797,7 @@ ruleScalabilityModel returns [EObject current=null]
        			$current, 
        			"timers",
         		lv_timers_14_0, 
-        		"Timer");
+        		"eu.paasage.camel.dsl.CamelDsl.Timer");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -14816,7 +14816,7 @@ ruleScalabilityModel returns [EObject current=null]
        			$current, 
        			"scaleRequirements",
         		lv_scaleRequirements_15_0, 
-        		"ScaleRequirement");
+        		"eu.paasage.camel.dsl.CamelDsl.ScaleRequirement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -14864,7 +14864,7 @@ ruleEventInstance returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -14908,7 +14908,7 @@ ruleEventInstance returns [EObject current=null]
        			$current, 
        			"status",
         		lv_status_6_0, 
-        		"StatusType");
+        		"eu.paasage.camel.dsl.CamelDsl.StatusType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -14930,7 +14930,7 @@ ruleEventInstance returns [EObject current=null]
        			$current, 
        			"layer",
         		lv_layer_8_0, 
-        		"LayerType");
+        		"eu.paasage.camel.dsl.CamelDsl.LayerType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -15037,7 +15037,7 @@ ruleHorizontalScaleRequirement returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -15081,7 +15081,7 @@ ruleHorizontalScaleRequirement returns [EObject current=null]
        			$current, 
        			"minInstances",
         		lv_minInstances_6_0, 
-        		"EInt");
+        		"eu.paasage.camel.dsl.CamelDsl.EInt");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -15103,7 +15103,7 @@ ruleHorizontalScaleRequirement returns [EObject current=null]
        			$current, 
        			"maxInstances",
         		lv_maxInstances_8_0, 
-        		"EInt");
+        		"eu.paasage.camel.dsl.CamelDsl.EInt");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -15151,7 +15151,7 @@ ruleVerticalScaleRequirement returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -15196,7 +15196,7 @@ ruleVerticalScaleRequirement returns [EObject current=null]
        			$current, 
        			"minCores",
         		lv_minCores_6_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -15218,7 +15218,7 @@ ruleVerticalScaleRequirement returns [EObject current=null]
        			$current, 
        			"maxCores",
         		lv_maxCores_8_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -15240,7 +15240,7 @@ ruleVerticalScaleRequirement returns [EObject current=null]
        			$current, 
        			"minRAM",
         		lv_minRAM_10_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -15262,7 +15262,7 @@ ruleVerticalScaleRequirement returns [EObject current=null]
        			$current, 
        			"maxRAM",
         		lv_maxRAM_12_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -15284,7 +15284,7 @@ ruleVerticalScaleRequirement returns [EObject current=null]
        			$current, 
        			"minStorage",
         		lv_minStorage_14_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -15306,7 +15306,7 @@ ruleVerticalScaleRequirement returns [EObject current=null]
        			$current, 
        			"maxStorage",
         		lv_maxStorage_16_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -15327,7 +15327,7 @@ ruleVerticalScaleRequirement returns [EObject current=null]
        			$current, 
        			"minCPU",
         		lv_minCPU_18_0, 
-        		"Double");
+        		"eu.paasage.camel.dsl.CamelDsl.Double");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -15349,7 +15349,7 @@ ruleVerticalScaleRequirement returns [EObject current=null]
        			$current, 
        			"maxCPU",
         		lv_maxCPU_20_0, 
-        		"Double");
+        		"eu.paasage.camel.dsl.CamelDsl.Double");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -15397,7 +15397,7 @@ ruleScalabilityRule returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -15645,7 +15645,7 @@ ruleHorizontalScalingAction returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -15670,7 +15670,7 @@ ruleHorizontalScalingAction returns [EObject current=null]
        			$current, 
        			"type",
         		lv_type_4_0, 
-        		"ActionType");
+        		"eu.paasage.camel.dsl.CamelDsl.ActionType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -15730,7 +15730,7 @@ ruleHorizontalScalingAction returns [EObject current=null]
        			$current, 
        			"count",
         		lv_count_10_0, 
-        		"EInt");
+        		"eu.paasage.camel.dsl.CamelDsl.EInt");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -15778,7 +15778,7 @@ ruleVerticalScalingAction returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -15803,7 +15803,7 @@ ruleVerticalScalingAction returns [EObject current=null]
        			$current, 
        			"type",
         		lv_type_4_0, 
-        		"ActionType");
+        		"eu.paasage.camel.dsl.CamelDsl.ActionType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -15844,7 +15844,7 @@ ruleVerticalScalingAction returns [EObject current=null]
        			$current, 
        			"coreUpdate",
         		lv_coreUpdate_8_0, 
-        		"EInt");
+        		"eu.paasage.camel.dsl.CamelDsl.EInt");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -15866,7 +15866,7 @@ ruleVerticalScalingAction returns [EObject current=null]
        			$current, 
        			"CPUUpdate",
         		lv_CPUUpdate_10_0, 
-        		"EDouble");
+        		"eu.paasage.camel.dsl.CamelDsl.EDouble");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -15888,7 +15888,7 @@ ruleVerticalScalingAction returns [EObject current=null]
        			$current, 
        			"memoryUpdate",
         		lv_memoryUpdate_12_0, 
-        		"EInt");
+        		"eu.paasage.camel.dsl.CamelDsl.EInt");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -15910,7 +15910,7 @@ ruleVerticalScalingAction returns [EObject current=null]
        			$current, 
        			"storageUpdate",
         		lv_storageUpdate_14_0, 
-        		"EInt");
+        		"eu.paasage.camel.dsl.CamelDsl.EInt");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -15932,7 +15932,7 @@ ruleVerticalScalingAction returns [EObject current=null]
        			$current, 
        			"ioUpdate",
         		lv_ioUpdate_16_0, 
-        		"EInt");
+        		"eu.paasage.camel.dsl.CamelDsl.EInt");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -15954,7 +15954,7 @@ ruleVerticalScalingAction returns [EObject current=null]
        			$current, 
        			"networkUpdate",
         		lv_networkUpdate_18_0, 
-        		"EInt");
+        		"eu.paasage.camel.dsl.CamelDsl.EInt");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -16066,7 +16066,7 @@ ruleFunctionalEvent returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -16091,7 +16091,7 @@ ruleFunctionalEvent returns [EObject current=null]
        			$current, 
        			"functionalType",
         		lv_functionalType_4_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -16139,7 +16139,7 @@ ruleNonFunctionalEvent returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -16224,7 +16224,7 @@ ruleBinaryEventPattern returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -16306,7 +16306,7 @@ ruleBinaryEventPattern returns [EObject current=null]
        			$current, 
        			"operator",
         		lv_operator_10_0, 
-        		"BinaryPatternOperatorType");
+        		"eu.paasage.camel.dsl.CamelDsl.BinaryPatternOperatorType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -16328,7 +16328,7 @@ ruleBinaryEventPattern returns [EObject current=null]
        			$current, 
        			"lowerOccurrenceBound",
         		lv_lowerOccurrenceBound_12_0, 
-        		"EInt");
+        		"eu.paasage.camel.dsl.CamelDsl.EInt");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -16350,7 +16350,7 @@ ruleBinaryEventPattern returns [EObject current=null]
        			$current, 
        			"upperOccurrenceBound",
         		lv_upperOccurrenceBound_14_0, 
-        		"EInt");
+        		"eu.paasage.camel.dsl.CamelDsl.EInt");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -16398,7 +16398,7 @@ ruleUnaryEventPattern returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -16442,7 +16442,7 @@ ruleUnaryEventPattern returns [EObject current=null]
        			$current, 
        			"operator",
         		lv_operator_6_0, 
-        		"UnaryPatternOperatorType");
+        		"eu.paasage.camel.dsl.CamelDsl.UnaryPatternOperatorType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -16483,7 +16483,7 @@ ruleUnaryEventPattern returns [EObject current=null]
        			$current, 
        			"occurrenceNum",
         		lv_occurrenceNum_10_0, 
-        		"EInt");
+        		"eu.paasage.camel.dsl.CamelDsl.EInt");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -16531,7 +16531,7 @@ ruleTimer returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -16556,7 +16556,7 @@ ruleTimer returns [EObject current=null]
        			$current, 
        			"type",
         		lv_type_4_0, 
-        		"TimerType");
+        		"eu.paasage.camel.dsl.CamelDsl.TimerType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -16578,7 +16578,7 @@ ruleTimer returns [EObject current=null]
        			$current, 
        			"timeValue",
         		lv_timeValue_6_0, 
-        		"EInt");
+        		"eu.paasage.camel.dsl.CamelDsl.EInt");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -16619,7 +16619,7 @@ ruleTimer returns [EObject current=null]
        			$current, 
        			"maxOccurrenceNum",
         		lv_maxOccurrenceNum_10_0, 
-        		"EInt");
+        		"eu.paasage.camel.dsl.CamelDsl.EInt");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -16676,7 +16676,7 @@ ruleSecurityModel returns [EObject current=null]
        			$current, 
        			"importURI",
         		lv_importURI_3_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -16698,7 +16698,7 @@ ruleSecurityModel returns [EObject current=null]
        			$current, 
        			"importURI",
         		lv_importURI_5_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -16725,7 +16725,7 @@ ruleSecurityModel returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_8_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -16746,7 +16746,7 @@ ruleSecurityModel returns [EObject current=null]
        			$current, 
        			"securityControls",
         		lv_securityControls_10_0, 
-        		"SecurityControl");
+        		"eu.paasage.camel.dsl.CamelDsl.SecurityControl");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -16765,7 +16765,7 @@ ruleSecurityModel returns [EObject current=null]
        			$current, 
        			"securityProperties",
         		lv_securityProperties_11_0, 
-        		"SecurityProperty");
+        		"eu.paasage.camel.dsl.CamelDsl.SecurityProperty");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -16784,7 +16784,7 @@ ruleSecurityModel returns [EObject current=null]
        			$current, 
        			"rawSecurityMetrics",
         		lv_rawSecurityMetrics_12_0, 
-        		"RawSecurityMetric");
+        		"eu.paasage.camel.dsl.CamelDsl.RawSecurityMetric");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -16803,7 +16803,7 @@ ruleSecurityModel returns [EObject current=null]
        			$current, 
        			"compositeSecurityMetrics",
         		lv_compositeSecurityMetrics_13_0, 
-        		"CompositeSecurityMetric");
+        		"eu.paasage.camel.dsl.CamelDsl.CompositeSecurityMetric");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -16822,7 +16822,7 @@ ruleSecurityModel returns [EObject current=null]
        			$current, 
        			"rawSecurityMetricInstances",
         		lv_rawSecurityMetricInstances_14_0, 
-        		"RawSecurityMetricInstance");
+        		"eu.paasage.camel.dsl.CamelDsl.RawSecurityMetricInstance");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -16841,7 +16841,7 @@ ruleSecurityModel returns [EObject current=null]
        			$current, 
        			"compositeSecurityMetricInstances",
         		lv_compositeSecurityMetricInstances_15_0, 
-        		"CompositeSecurityMetricInstance");
+        		"eu.paasage.camel.dsl.CamelDsl.CompositeSecurityMetricInstance");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -16860,7 +16860,7 @@ ruleSecurityModel returns [EObject current=null]
        			$current, 
        			"securityDomains",
         		lv_securityDomains_16_0, 
-        		"SecurityDomain");
+        		"eu.paasage.camel.dsl.CamelDsl.SecurityDomain");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -16879,7 +16879,7 @@ ruleSecurityModel returns [EObject current=null]
        			$current, 
        			"securityCapabilities",
         		lv_securityCapabilities_17_0, 
-        		"SecurityCapability");
+        		"eu.paasage.camel.dsl.CamelDsl.SecurityCapability");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -16898,7 +16898,7 @@ ruleSecurityModel returns [EObject current=null]
        			$current, 
        			"securitySLOs",
         		lv_securitySLOs_18_0, 
-        		"SecuritySLO");
+        		"eu.paasage.camel.dsl.CamelDsl.SecuritySLO");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -16946,7 +16946,7 @@ ruleRawSecurityMetric returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -16971,7 +16971,7 @@ ruleRawSecurityMetric returns [EObject current=null]
        			$current, 
        			"description",
         		lv_description_4_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -17012,7 +17012,7 @@ ruleRawSecurityMetric returns [EObject current=null]
        			$current, 
        			"valueDirection",
         		lv_valueDirection_8_0, 
-        		"EShort");
+        		"eu.paasage.camel.dsl.CamelDsl.EShort");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -17034,7 +17034,7 @@ ruleRawSecurityMetric returns [EObject current=null]
        			$current, 
        			"layer",
         		lv_layer_10_0, 
-        		"LayerType");
+        		"eu.paasage.camel.dsl.CamelDsl.LayerType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -17139,7 +17139,7 @@ ruleCompositeSecurityMetric returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -17164,7 +17164,7 @@ ruleCompositeSecurityMetric returns [EObject current=null]
        			$current, 
        			"description",
         		lv_description_4_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -17205,7 +17205,7 @@ ruleCompositeSecurityMetric returns [EObject current=null]
        			$current, 
        			"valueDirection",
         		lv_valueDirection_8_0, 
-        		"EShort");
+        		"eu.paasage.camel.dsl.CamelDsl.EShort");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -17227,7 +17227,7 @@ ruleCompositeSecurityMetric returns [EObject current=null]
        			$current, 
        			"layer",
         		lv_layer_10_0, 
-        		"LayerType");
+        		"eu.paasage.camel.dsl.CamelDsl.LayerType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -17302,7 +17302,7 @@ ruleCompositeSecurityMetric returns [EObject current=null]
        			$current, 
        			"formula",
         		lv_formula_17_0, 
-        		"MetricFormula");
+        		"eu.paasage.camel.dsl.CamelDsl.MetricFormula");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -17350,7 +17350,7 @@ ruleRawSecurityMetricInstance returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -17515,7 +17515,7 @@ ruleCompositeSecurityMetricInstance returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -17707,7 +17707,7 @@ ruleSecuritySLO returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -17817,7 +17817,7 @@ ruleSecurityDomain returns [EObject current=null]
        			$current, 
        			"id",
         		lv_id_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -17842,7 +17842,7 @@ ruleSecurityDomain returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_4_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -17936,7 +17936,7 @@ ruleSecurityProperty_Impl returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -17961,7 +17961,7 @@ ruleSecurityProperty_Impl returns [EObject current=null]
        			$current, 
        			"description",
         		lv_description_4_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -17983,7 +17983,7 @@ ruleSecurityProperty_Impl returns [EObject current=null]
        			$current, 
        			"type",
         		lv_type_6_0, 
-        		"PropertyType");
+        		"eu.paasage.camel.dsl.CamelDsl.PropertyType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -18142,7 +18142,7 @@ ruleCertifiable returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -18167,7 +18167,7 @@ ruleCertifiable returns [EObject current=null]
        			$current, 
        			"description",
         		lv_description_4_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -18189,7 +18189,7 @@ ruleCertifiable returns [EObject current=null]
        			$current, 
        			"type",
         		lv_type_6_0, 
-        		"PropertyType");
+        		"eu.paasage.camel.dsl.CamelDsl.PropertyType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -18302,7 +18302,7 @@ ruleSecurityRequirement returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -18437,7 +18437,7 @@ ruleSecurityCapability returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -18553,7 +18553,7 @@ ruleSecurityControl returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -18578,7 +18578,7 @@ ruleSecurityControl returns [EObject current=null]
        			$current, 
        			"specification",
         		lv_specification_4_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -18811,7 +18811,7 @@ ruleTypeModel returns [EObject current=null]
        			$current, 
        			"importURI",
         		lv_importURI_3_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -18833,7 +18833,7 @@ ruleTypeModel returns [EObject current=null]
        			$current, 
        			"importURI",
         		lv_importURI_5_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -18860,7 +18860,7 @@ ruleTypeModel returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_8_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -18881,7 +18881,7 @@ ruleTypeModel returns [EObject current=null]
        			$current, 
        			"dataTypes",
         		lv_dataTypes_10_0, 
-        		"ValueType");
+        		"eu.paasage.camel.dsl.CamelDsl.ValueType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -18900,7 +18900,7 @@ ruleTypeModel returns [EObject current=null]
        			$current, 
        			"values",
         		lv_values_11_0, 
-        		"Value");
+        		"eu.paasage.camel.dsl.CamelDsl.Value");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -19058,7 +19058,7 @@ ruleBoolValueType returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -19083,7 +19083,7 @@ ruleBoolValueType returns [EObject current=null]
        			$current, 
        			"primitiveType",
         		lv_primitiveType_4_0, 
-        		"TypeEnum");
+        		"eu.paasage.camel.dsl.CamelDsl.TypeEnum");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -19131,7 +19131,7 @@ ruleEnumeration returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -19160,7 +19160,7 @@ ruleEnumeration returns [EObject current=null]
        			$current, 
        			"values",
         		lv_values_5_0, 
-        		"EnumerateValue");
+        		"eu.paasage.camel.dsl.CamelDsl.EnumerateValue");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -19182,7 +19182,7 @@ ruleEnumeration returns [EObject current=null]
        			$current, 
        			"values",
         		lv_values_7_0, 
-        		"EnumerateValue");
+        		"eu.paasage.camel.dsl.CamelDsl.EnumerateValue");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -19234,7 +19234,7 @@ ruleList returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -19259,7 +19259,7 @@ ruleList returns [EObject current=null]
        			$current, 
        			"primitiveType",
         		lv_primitiveType_4_0, 
-        		"TypeEnum");
+        		"eu.paasage.camel.dsl.CamelDsl.TypeEnum");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -19304,7 +19304,7 @@ ruleList returns [EObject current=null]
        			$current, 
        			"values",
         		lv_values_9_0, 
-        		"Value");
+        		"eu.paasage.camel.dsl.CamelDsl.Value");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -19326,7 +19326,7 @@ ruleList returns [EObject current=null]
        			$current, 
        			"values",
         		lv_values_11_0, 
-        		"Value");
+        		"eu.paasage.camel.dsl.CamelDsl.Value");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -19378,7 +19378,7 @@ ruleRange returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -19403,7 +19403,7 @@ ruleRange returns [EObject current=null]
        			$current, 
        			"primitiveType",
         		lv_primitiveType_4_0, 
-        		"TypeEnum");
+        		"eu.paasage.camel.dsl.CamelDsl.TypeEnum");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -19425,7 +19425,7 @@ ruleRange returns [EObject current=null]
        			$current, 
        			"lowerLimit",
         		lv_lowerLimit_6_0, 
-        		"Limit");
+        		"eu.paasage.camel.dsl.CamelDsl.Limit");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -19447,7 +19447,7 @@ ruleRange returns [EObject current=null]
        			$current, 
        			"upperLimit",
         		lv_upperLimit_8_0, 
-        		"Limit");
+        		"eu.paasage.camel.dsl.CamelDsl.Limit");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -19495,7 +19495,7 @@ ruleRangeUnion returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -19520,7 +19520,7 @@ ruleRangeUnion returns [EObject current=null]
        			$current, 
        			"primitiveType",
         		lv_primitiveType_4_0, 
-        		"TypeEnum");
+        		"eu.paasage.camel.dsl.CamelDsl.TypeEnum");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -19546,7 +19546,7 @@ ruleRangeUnion returns [EObject current=null]
        			$current, 
        			"ranges",
         		lv_ranges_7_0, 
-        		"Range");
+        		"eu.paasage.camel.dsl.CamelDsl.Range");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -19568,7 +19568,7 @@ ruleRangeUnion returns [EObject current=null]
        			$current, 
        			"ranges",
         		lv_ranges_9_0, 
-        		"Range");
+        		"eu.paasage.camel.dsl.CamelDsl.Range");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -19620,7 +19620,7 @@ ruleStringsValueType returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -19645,7 +19645,7 @@ ruleStringsValueType returns [EObject current=null]
        			$current, 
        			"primitiveType",
         		lv_primitiveType_4_0, 
-        		"TypeEnum");
+        		"eu.paasage.camel.dsl.CamelDsl.TypeEnum");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -19688,7 +19688,7 @@ ruleEnumerateValue returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_0_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -19710,7 +19710,7 @@ ruleEnumerateValue returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_2_0, 
-        		"EInt");
+        		"eu.paasage.camel.dsl.CamelDsl.EInt");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -19787,7 +19787,7 @@ ruleLimit returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_1_0, 
-        		"NumericValue");
+        		"eu.paasage.camel.dsl.CamelDsl.NumericValue");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -19917,7 +19917,7 @@ ruleIntegerValue returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_1_0, 
-        		"EInt");
+        		"eu.paasage.camel.dsl.CamelDsl.EInt");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -19960,7 +19960,7 @@ ruleFloatsValue returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_1_0, 
-        		"EFloat");
+        		"eu.paasage.camel.dsl.CamelDsl.EFloat");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -20003,7 +20003,7 @@ ruleDoublePrecisionValue returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_1_0, 
-        		"EDouble");
+        		"eu.paasage.camel.dsl.CamelDsl.EDouble");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -20108,7 +20108,7 @@ ruleValueToIncrease returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_1_0, 
-        		"NumericValue");
+        		"eu.paasage.camel.dsl.CamelDsl.NumericValue");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -20297,7 +20297,7 @@ ruleBoolValue returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_1_0, 
-        		"EBoolean");
+        		"eu.paasage.camel.dsl.CamelDsl.EBoolean");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -20340,7 +20340,7 @@ ruleStringsValue returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_1_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -20384,7 +20384,7 @@ ruleUnitModel returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -20405,7 +20405,7 @@ ruleUnitModel returns [EObject current=null]
        			$current, 
        			"units",
         		lv_units_3_0, 
-        		"Unit");
+        		"eu.paasage.camel.dsl.CamelDsl.Unit");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -20557,7 +20557,7 @@ ruleTimeIntervalUnit returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_2_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -20578,7 +20578,7 @@ ruleTimeIntervalUnit returns [EObject current=null]
        			$current, 
        			"unit",
         		lv_unit_4_0, 
-        		"UnitType");
+        		"eu.paasage.camel.dsl.CamelDsl.UnitType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -20630,7 +20630,7 @@ ruleMonetaryUnit returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_2_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -20651,7 +20651,7 @@ ruleMonetaryUnit returns [EObject current=null]
        			$current, 
        			"unit",
         		lv_unit_4_0, 
-        		"UnitType");
+        		"eu.paasage.camel.dsl.CamelDsl.UnitType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -20703,7 +20703,7 @@ ruleCoreUnit returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_2_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -20724,7 +20724,7 @@ ruleCoreUnit returns [EObject current=null]
        			$current, 
        			"unit",
         		lv_unit_4_0, 
-        		"UnitType");
+        		"eu.paasage.camel.dsl.CamelDsl.UnitType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -20776,7 +20776,7 @@ ruleDimensionless returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_2_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -20797,7 +20797,7 @@ ruleDimensionless returns [EObject current=null]
        			$current, 
        			"unit",
         		lv_unit_4_0, 
-        		"UnitType");
+        		"eu.paasage.camel.dsl.CamelDsl.UnitType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -20849,7 +20849,7 @@ ruleRequestUnit returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_2_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -20870,7 +20870,7 @@ ruleRequestUnit returns [EObject current=null]
        			$current, 
        			"unit",
         		lv_unit_4_0, 
-        		"UnitType");
+        		"eu.paasage.camel.dsl.CamelDsl.UnitType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -20922,7 +20922,7 @@ ruleStorageUnit returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_2_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -20943,7 +20943,7 @@ ruleStorageUnit returns [EObject current=null]
        			$current, 
        			"unit",
         		lv_unit_4_0, 
-        		"UnitType");
+        		"eu.paasage.camel.dsl.CamelDsl.UnitType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -20995,7 +20995,7 @@ ruleThroughputUnit returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_2_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -21016,7 +21016,7 @@ ruleThroughputUnit returns [EObject current=null]
        			$current, 
        			"unit",
         		lv_unit_4_0, 
-        		"UnitType");
+        		"eu.paasage.camel.dsl.CamelDsl.UnitType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -21068,7 +21068,7 @@ ruleTransactionUnit returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_2_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -21089,7 +21089,7 @@ ruleTransactionUnit returns [EObject current=null]
        			$current, 
        			"unit",
         		lv_unit_4_0, 
-        		"UnitType");
+        		"eu.paasage.camel.dsl.CamelDsl.UnitType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -21137,7 +21137,7 @@ ruleAction returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -21162,7 +21162,7 @@ ruleAction returns [EObject current=null]
        			$current, 
        			"type",
         		lv_type_4_0, 
-        		"ActionType");
+        		"eu.paasage.camel.dsl.CamelDsl.ActionType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -21210,7 +21210,7 @@ ruleApplication returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -21235,7 +21235,7 @@ ruleApplication returns [EObject current=null]
        			$current, 
        			"version",
         		lv_version_4_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -21257,7 +21257,7 @@ ruleApplication returns [EObject current=null]
        			$current, 
        			"description",
         		lv_description_6_0, 
-        		"EString");
+        		"eu.paasage.camel.dsl.CamelDsl.EString");
 	        afterParserOrEnumRuleCall();
 	    }
 

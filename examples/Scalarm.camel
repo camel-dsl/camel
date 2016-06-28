@@ -635,7 +635,7 @@ organisation model GWDGOrganisation {
 		www: 'www.gwdg.de'
 		postal address: 'GWDG, Am Faßberg 11, 37077 Göttingen, Germany'
 		email: 'gwdg@gwdg.de'
-		public
+		Public
 		IaaS
 		provider model: ScalarmModel.GWDGProvider
 	}

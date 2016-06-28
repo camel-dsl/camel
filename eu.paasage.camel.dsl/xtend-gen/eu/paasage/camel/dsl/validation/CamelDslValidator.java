@@ -16,7 +16,6 @@ import eu.paasage.camel.provider.Feature;
 import eu.paasage.camel.provider.ProviderModel;
 import eu.paasage.camel.provider.ProviderPackage;
 import eu.paasage.camel.type.SingleValue;
-import eu.paasage.camel.type.ValueType;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -84,17 +83,7 @@ public class CamelDslValidator extends AbstractCamelDslValidator {
   
   @Check
   public void checkRootFeature(final ProviderModel model) {
-    boolean _and = false;
-    String _name = model.getName();
-    boolean _notEquals = (!Objects.equal(_name, null));
-    if (!_notEquals) {
-      _and = false;
-    } else {
-      Feature _rootFeature = model.getRootFeature();
-      boolean _equals = Objects.equal(_rootFeature, null);
-      _and = _equals;
-    }
-    if (_and) {
+    if (((!Objects.equal(model.getName(), null)) && Objects.equal(model.getRootFeature(), null))) {
       this.error("You have to define the root feature of the provider model", 
         ProviderPackage.Literals.PROVIDER_MODEL__ROOT_FEATURE, CamelDslValidator.INVALID_FEATURE);
       return;
@@ -113,19 +102,9 @@ public class CamelDslValidator extends AbstractCamelDslValidator {
   
   @Check
   public void checkFeatureCardinality(final Feature feature) {
-    boolean _and = false;
-    String _name = feature.getName();
-    boolean _notEquals = (!Objects.equal(_name, null));
-    if (!_notEquals) {
-      _and = false;
-    } else {
-      FeatCardinality _featureCardinality = feature.getFeatureCardinality();
-      boolean _equals = Objects.equal(_featureCardinality, null);
-      _and = _equals;
-    }
-    if (_and) {
-      String _name_1 = feature.getName();
-      String _plus = ("You have to specify the cardinality of the feature " + _name_1);
+    if (((!Objects.equal(feature.getName(), null)) && Objects.equal(feature.getFeatureCardinality(), null))) {
+      String _name = feature.getName();
+      String _plus = ("You have to specify the cardinality of the feature " + _name);
       this.error(_plus, 
         ProviderPackage.Literals.FEATURE__FEATURE_CARDINALITY, CamelDslValidator.INVALID_CARDINALITY);
       return;
@@ -134,25 +113,15 @@ public class CamelDslValidator extends AbstractCamelDslValidator {
   
   @Check
   public void checkFeatureCardinalityMinMax(final Feature feature) {
-    boolean _and = false;
-    String _name = feature.getName();
-    boolean _notEquals = (!Objects.equal(_name, null));
-    if (!_notEquals) {
-      _and = false;
-    } else {
+    if (((!Objects.equal(feature.getName(), null)) && (!Objects.equal(feature.getFeatureCardinality(), null)))) {
       FeatCardinality _featureCardinality = feature.getFeatureCardinality();
-      boolean _notEquals_1 = (!Objects.equal(_featureCardinality, null));
-      _and = _notEquals_1;
-    }
-    if (_and) {
+      int _cardinalityMin = _featureCardinality.getCardinalityMin();
       FeatCardinality _featureCardinality_1 = feature.getFeatureCardinality();
-      int _cardinalityMin = _featureCardinality_1.getCardinalityMin();
-      FeatCardinality _featureCardinality_2 = feature.getFeatureCardinality();
-      int _cardinalityMax = _featureCardinality_2.getCardinalityMax();
+      int _cardinalityMax = _featureCardinality_1.getCardinalityMax();
       boolean _greaterThan = (_cardinalityMin > _cardinalityMax);
       if (_greaterThan) {
-        String _name_1 = feature.getName();
-        String _plus = ("cardinalityMin should be lower or equals to cardinalityMax in feature " + _name_1);
+        String _name = feature.getName();
+        String _plus = ("cardinalityMin should be lower or equals to cardinalityMax in feature " + _name);
         this.error(_plus, 
           ProviderPackage.Literals.FEATURE__FEATURE_CARDINALITY, CamelDslValidator.INVALID_CARDINALITY);
         return;
@@ -173,27 +142,9 @@ public class CamelDslValidator extends AbstractCamelDslValidator {
   
   @Check
   public void checkAttributeValue(final Attribute attribute) {
-    boolean _and = false;
-    String _name = attribute.getName();
-    boolean _notEquals = (!Objects.equal(_name, null));
-    if (!_notEquals) {
-      _and = false;
-    } else {
-      boolean _and_1 = false;
-      SingleValue _value = attribute.getValue();
-      boolean _equals = Objects.equal(_value, null);
-      if (!_equals) {
-        _and_1 = false;
-      } else {
-        ValueType _valueType = attribute.getValueType();
-        boolean _equals_1 = Objects.equal(_valueType, null);
-        _and_1 = _equals_1;
-      }
-      _and = _and_1;
-    }
-    if (_and) {
-      String _name_1 = attribute.getName();
-      String _plus = ("You have to specify the value or the value type of the " + _name_1);
+    if (((!Objects.equal(attribute.getName(), null)) && (Objects.equal(attribute.getValue(), null) && Objects.equal(attribute.getValueType(), null)))) {
+      String _name = attribute.getName();
+      String _plus = ("You have to specify the value or the value type of the " + _name);
       String _plus_1 = (_plus + " attribute ");
       this.error(_plus_1, 
         ProviderPackage.Literals.ATTRIBUTE__VALUE, CamelDslValidator.INVALID_VALUE);

@@ -59,25 +59,25 @@ public abstract class AbstractCamelDslSyntacticSequencer extends AbstractSyntact
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if(match_Excludes___AttributeConstraintsKeyword_7_0_LeftCurlyBracketKeyword_7_1_RightCurlyBracketKeyword_7_3__q.equals(syntax))
+			if (match_Excludes___AttributeConstraintsKeyword_7_0_LeftCurlyBracketKeyword_7_1_RightCurlyBracketKeyword_7_3__q.equals(syntax))
 				emit_Excludes___AttributeConstraintsKeyword_7_0_LeftCurlyBracketKeyword_7_1_RightCurlyBracketKeyword_7_3__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Feature_Impl___AttributesKeyword_3_0_LeftCurlyBracketKeyword_3_1_RightCurlyBracketKeyword_3_3__q.equals(syntax))
+			else if (match_Feature_Impl___AttributesKeyword_3_0_LeftCurlyBracketKeyword_3_1_RightCurlyBracketKeyword_3_3__q.equals(syntax))
 				emit_Feature_Impl___AttributesKeyword_3_0_LeftCurlyBracketKeyword_3_1_RightCurlyBracketKeyword_3_3__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Feature_Impl___SubFeaturesKeyword_4_0_LeftCurlyBracketKeyword_4_1_RightCurlyBracketKeyword_4_3__q.equals(syntax))
+			else if (match_Feature_Impl___SubFeaturesKeyword_4_0_LeftCurlyBracketKeyword_4_1_RightCurlyBracketKeyword_4_3__q.equals(syntax))
 				emit_Feature_Impl___SubFeaturesKeyword_4_0_LeftCurlyBracketKeyword_4_1_RightCurlyBracketKeyword_4_3__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_LocationRequirement_LocationRequirementKeyword_0_p.equals(syntax))
+			else if (match_LocationRequirement_LocationRequirementKeyword_0_p.equals(syntax))
 				emit_LocationRequirement_LocationRequirementKeyword_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_LocationRequirement___LocationsKeyword_3_0_LeftSquareBracketKeyword_3_1_RightSquareBracketKeyword_3_3__q.equals(syntax))
+			else if (match_LocationRequirement___LocationsKeyword_3_0_LeftSquareBracketKeyword_3_1_RightSquareBracketKeyword_3_3__q.equals(syntax))
 				emit_LocationRequirement___LocationsKeyword_3_0_LeftSquareBracketKeyword_3_1_RightSquareBracketKeyword_3_3__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_ProvidedCommunication_CommaKeyword_2_1_1_q.equals(syntax))
+			else if (match_ProvidedCommunication_CommaKeyword_2_1_1_q.equals(syntax))
 				emit_ProvidedCommunication_CommaKeyword_2_1_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_ProvidedCommunication___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q.equals(syntax))
+			else if (match_ProvidedCommunication___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q.equals(syntax))
 				emit_ProvidedCommunication___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_ProviderModel___ConstraintsKeyword_3_0_LeftCurlyBracketKeyword_3_1_RightCurlyBracketKeyword_3_3__q.equals(syntax))
+			else if (match_ProviderModel___ConstraintsKeyword_3_0_LeftCurlyBracketKeyword_3_1_RightCurlyBracketKeyword_3_3__q.equals(syntax))
 				emit_ProviderModel___ConstraintsKeyword_3_0_LeftCurlyBracketKeyword_3_1_RightCurlyBracketKeyword_3_3__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_RequiredCommunication_CommaKeyword_2_1_1_q.equals(syntax))
+			else if (match_RequiredCommunication_CommaKeyword_2_1_1_q.equals(syntax))
 				emit_RequiredCommunication_CommaKeyword_2_1_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_RequiredCommunication___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q.equals(syntax))
+			else if (match_RequiredCommunication___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q.equals(syntax))
 				emit_RequiredCommunication___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}

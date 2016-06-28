@@ -11,7 +11,7 @@ organisation model FlexiantOrganisation {
 		www: 'www.flexiant.com'
 		postal address: 'Flexiant Limited, Geddes House, Kirkton North, Livingston, EH54 6GU, UK'
 		email: 'contact@flexiant.com'
-		public
+		Public
 		IaaS
 		provider model: FlexiantModel.FlexiantProvider
 	}
@@ -194,7 +194,7 @@ provider model FlexiantProvider {
 				value type: FlexiantModel.FlexiantType.StringValueType
 			}
 			attribute ServiceModel {
-				value: string value 'IaaS' 
+				value: string value 'IaaS'
 				value type: FlexiantModel.FlexiantType.StringValueType
 			}
 			attribute Availability {

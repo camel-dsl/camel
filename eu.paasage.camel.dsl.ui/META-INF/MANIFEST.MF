@@ -21,5 +21,6 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: eu.paasage.camel.dsl.ui.quickfix,
  eu.paasage.camel.dsl.ui.contentassist,
  eu.paasage.camel.dsl.ui.internal,
- eu.paasage.camel.dsl.ui.contentassist.antlr
+ eu.paasage.camel.dsl.ui.contentassist.antlr,
+ eu.paasage.camel.dsl.ui.contentassist.antlr.internal
 Bundle-Activator: eu.paasage.camel.dsl.ui.internal.CamelDslActivator

@@ -4,8 +4,6 @@
 package eu.paasage.camel.dsl.serializer;
 
 import com.google.inject.Inject;
-import com.google.inject.Provider;
-import eu.paasage.camel.Action;
 import eu.paasage.camel.Application;
 import eu.paasage.camel.CamelModel;
 import eu.paasage.camel.CamelPackage;
@@ -162,16 +160,15 @@ import eu.paasage.camel.unit.TimeIntervalUnit;
 import eu.paasage.camel.unit.TransactionUnit;
 import eu.paasage.camel.unit.UnitModel;
 import eu.paasage.camel.unit.UnitPackage;
+import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.xtext.Action;
+import org.eclipse.xtext.Parameter;
+import org.eclipse.xtext.ParserRule;
+import org.eclipse.xtext.serializer.ISerializationContext;
 import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
-import org.eclipse.xtext.serializer.diagnostic.ISemanticSequencerDiagnosticProvider;
-import org.eclipse.xtext.serializer.diagnostic.ISerializationDiagnostic.Acceptor;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
-import org.eclipse.xtext.serializer.sequencer.GenericSequencer;
-import org.eclipse.xtext.serializer.sequencer.ISemanticNodeProvider.INodesForEObjectProvider;
-import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
-import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 
 @SuppressWarnings("all")
@@ -181,10 +178,15 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	private CamelDslGrammarAccess grammarAccess;
 	
 	@Override
-	public void createSequence(EObject context, EObject semanticObject) {
-		if(semanticObject.eClass().getEPackage() == CamelPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+	public void sequence(ISerializationContext context, EObject semanticObject) {
+		EPackage epackage = semanticObject.eClass().getEPackage();
+		ParserRule rule = context.getParserRule();
+		Action action = context.getAssignedAction();
+		Set<Parameter> parameters = context.getEnabledBooleanParameters();
+		if (epackage == CamelPackage.eINSTANCE)
+			switch (semanticObject.eClass().getClassifierID()) {
 			case CamelPackage.ACTION:
-				sequence_Action(context, (Action) semanticObject); 
+				sequence_Action(context, (eu.paasage.camel.Action) semanticObject); 
 				return; 
 			case CamelPackage.APPLICATION:
 				sequence_Application(context, (Application) semanticObject); 
@@ -193,7 +195,8 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 				sequence_CamelModel(context, (CamelModel) semanticObject); 
 				return; 
 			}
-		else if(semanticObject.eClass().getEPackage() == DeploymentPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+		else if (epackage == DeploymentPackage.eINSTANCE)
+			switch (semanticObject.eClass().getClassifierID()) {
 			case DeploymentPackage.COMMUNICATION:
 				sequence_Communication(context, (Communication) semanticObject); 
 				return; 
@@ -252,7 +255,8 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 				sequence_VMRequirementSet(context, (VMRequirementSet) semanticObject); 
 				return; 
 			}
-		else if(semanticObject.eClass().getEPackage() == ExecutionPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+		else if (epackage == ExecutionPackage.eINSTANCE)
+			switch (semanticObject.eClass().getClassifierID()) {
 			case ExecutionPackage.ACTION_REALISATION:
 				sequence_ActionRealisation(context, (ActionRealisation) semanticObject); 
 				return; 
@@ -281,7 +285,8 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 				sequence_VMMeasurement(context, (VMMeasurement) semanticObject); 
 				return; 
 			}
-		else if(semanticObject.eClass().getEPackage() == LocationPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+		else if (epackage == LocationPackage.eINSTANCE)
+			switch (semanticObject.eClass().getClassifierID()) {
 			case LocationPackage.CLOUD_LOCATION:
 				sequence_CloudLocation(context, (CloudLocation) semanticObject); 
 				return; 
@@ -295,7 +300,8 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 				sequence_LocationModel(context, (LocationModel) semanticObject); 
 				return; 
 			}
-		else if(semanticObject.eClass().getEPackage() == MetricPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+		else if (epackage == MetricPackage.eINSTANCE)
+			switch (semanticObject.eClass().getClassifierID()) {
 			case MetricPackage.COMPOSITE_METRIC:
 				sequence_CompositeMetric(context, (CompositeMetric) semanticObject); 
 				return; 
@@ -354,7 +360,8 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 				sequence_Window(context, (Window) semanticObject); 
 				return; 
 			}
-		else if(semanticObject.eClass().getEPackage() == OrganisationPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+		else if (epackage == OrganisationPackage.eINSTANCE)
+			switch (semanticObject.eClass().getClassifierID()) {
 			case OrganisationPackage.CLOUD_CREDENTIALS:
 				sequence_CloudCredentials(context, (CloudCredentials) semanticObject); 
 				return; 
@@ -401,7 +408,8 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 				sequence_UserGroup(context, (UserGroup) semanticObject); 
 				return; 
 			}
-		else if(semanticObject.eClass().getEPackage() == ProviderPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+		else if (epackage == ProviderPackage.eINSTANCE)
+			switch (semanticObject.eClass().getClassifierID()) {
 			case ProviderPackage.ALTERNATIVE:
 				sequence_Alternative_Impl(context, (Alternative) semanticObject); 
 				return; 
@@ -448,7 +456,8 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 				sequence_Requires_Impl(context, (Requires) semanticObject); 
 				return; 
 			}
-		else if(semanticObject.eClass().getEPackage() == RequirementPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+		else if (epackage == RequirementPackage.eINSTANCE)
+			switch (semanticObject.eClass().getClassifierID()) {
 			case RequirementPackage.HORIZONTAL_SCALE_REQUIREMENT:
 				sequence_HorizontalScaleRequirement(context, (HorizontalScaleRequirement) semanticObject); 
 				return; 
@@ -489,7 +498,8 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 				sequence_VerticalScaleRequirement(context, (VerticalScaleRequirement) semanticObject); 
 				return; 
 			}
-		else if(semanticObject.eClass().getEPackage() == ScalabilityPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+		else if (epackage == ScalabilityPackage.eINSTANCE)
+			switch (semanticObject.eClass().getClassifierID()) {
 			case ScalabilityPackage.BINARY_EVENT_PATTERN:
 				sequence_BinaryEventPattern(context, (BinaryEventPattern) semanticObject); 
 				return; 
@@ -521,7 +531,8 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 				sequence_VerticalScalingAction(context, (VerticalScalingAction) semanticObject); 
 				return; 
 			}
-		else if(semanticObject.eClass().getEPackage() == SecurityPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+		else if (epackage == SecurityPackage.eINSTANCE)
+			switch (semanticObject.eClass().getClassifierID()) {
 			case SecurityPackage.CERTIFIABLE:
 				sequence_Certifiable(context, (Certifiable) semanticObject); 
 				return; 
@@ -556,7 +567,8 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 				sequence_SecuritySLO(context, (SecuritySLO) semanticObject); 
 				return; 
 			}
-		else if(semanticObject.eClass().getEPackage() == TypePackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+		else if (epackage == TypePackage.eINSTANCE)
+			switch (semanticObject.eClass().getClassifierID()) {
 			case TypePackage.BOOL_VALUE:
 				sequence_BoolValue(context, (BoolValue) semanticObject); 
 				return; 
@@ -609,7 +621,8 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 				sequence_ValueToIncrease(context, (ValueToIncrease) semanticObject); 
 				return; 
 			}
-		else if(semanticObject.eClass().getEPackage() == UnitPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+		else if (epackage == UnitPackage.eINSTANCE)
+			switch (semanticObject.eClass().getClassifierID()) {
 			case UnitPackage.CORE_UNIT:
 				sequence_CoreUnit(context, (CoreUnit) semanticObject); 
 				return; 
@@ -638,31 +651,37 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 				sequence_UnitModel(context, (UnitModel) semanticObject); 
 				return; 
 			}
-		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
+		if (errorAcceptor != null)
+			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
 	
 	/**
+	 * Contexts:
+	 *     ActionRealisation returns ActionRealisation
+	 *
 	 * Constraint:
 	 *     (name=ID action=[Action|Fqn] lowLevelActions=EString? startTime=EDate? endTime=EDate?)
 	 */
-	protected void sequence_ActionRealisation(EObject context, ActionRealisation semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_ActionRealisation(ISerializationContext context, ActionRealisation semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Action returns Action
+	 *
 	 * Constraint:
 	 *     (name=ID type=ActionType)
 	 */
-	protected void sequence_Action(EObject context, Action semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, CamelPackage.Literals.ACTION__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, CamelPackage.Literals.ACTION__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, CamelPackage.Literals.ACTION__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, CamelPackage.Literals.ACTION__TYPE));
+	protected void sequence_Action(ISerializationContext context, eu.paasage.camel.Action semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, CamelPackage.Literals.ACTION__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, CamelPackage.Literals.ACTION__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, CamelPackage.Literals.ACTION__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, CamelPackage.Literals.ACTION__TYPE));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getActionAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getActionAccess().getTypeActionTypeEnumRuleCall_4_0(), semanticObject.getType());
 		feeder.finish();
@@ -670,6 +689,10 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     Feature returns Alternative
+	 *     Alternative_Impl returns Alternative
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -682,12 +705,16 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         variants+=Feature*
 	 *     )
 	 */
-	protected void sequence_Alternative_Impl(EObject context, Alternative semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_Alternative_Impl(ISerializationContext context, Alternative semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Measurement returns ApplicationMeasurement
+	 *     ApplicationMeasurement returns ApplicationMeasurement
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -701,12 +728,15 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         slo=[ServiceLevelObjective|Fqn]?
 	 *     )
 	 */
-	protected void sequence_ApplicationMeasurement(EObject context, ApplicationMeasurement semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_ApplicationMeasurement(ISerializationContext context, ApplicationMeasurement semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Application returns Application
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -716,30 +746,56 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         (deploymentModels+=[DeploymentModel|Fqn] deploymentModels+=[DeploymentModel|Fqn]*)?
 	 *     )
 	 */
-	protected void sequence_Application(EObject context, Application semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_Application(ISerializationContext context, Application semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     AttributeConstraint returns AttributeConstraint
+	 *
 	 * Constraint:
 	 *     (from=[Attribute|Fqn] to=[Attribute|Fqn] fromValue=Value toValue=Value)
 	 */
-	protected void sequence_AttributeConstraint(EObject context, AttributeConstraint semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_AttributeConstraint(ISerializationContext context, AttributeConstraint semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, ProviderPackage.Literals.ATTRIBUTE_CONSTRAINT__FROM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, ProviderPackage.Literals.ATTRIBUTE_CONSTRAINT__FROM));
+			if (transientValues.isValueTransient((EObject) semanticObject, ProviderPackage.Literals.ATTRIBUTE_CONSTRAINT__TO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, ProviderPackage.Literals.ATTRIBUTE_CONSTRAINT__TO));
+			if (transientValues.isValueTransient((EObject) semanticObject, ProviderPackage.Literals.ATTRIBUTE_CONSTRAINT__FROM_VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, ProviderPackage.Literals.ATTRIBUTE_CONSTRAINT__FROM_VALUE));
+			if (transientValues.isValueTransient((EObject) semanticObject, ProviderPackage.Literals.ATTRIBUTE_CONSTRAINT__TO_VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, ProviderPackage.Literals.ATTRIBUTE_CONSTRAINT__TO_VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
+		feeder.accept(grammarAccess.getAttributeConstraintAccess().getFromAttributeFqnParserRuleCall_3_0_1(), semanticObject.getFrom());
+		feeder.accept(grammarAccess.getAttributeConstraintAccess().getToAttributeFqnParserRuleCall_5_0_1(), semanticObject.getTo());
+		feeder.accept(grammarAccess.getAttributeConstraintAccess().getFromValueValueParserRuleCall_7_0(), semanticObject.getFromValue());
+		feeder.accept(grammarAccess.getAttributeConstraintAccess().getToValueValueParserRuleCall_9_0(), semanticObject.getToValue());
+		feeder.finish();
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Attribute returns Attribute
+	 *
 	 * Constraint:
 	 *     (name=ID unitType=UnitType? value=Value? valueType=[ValueType|Fqn]?)
 	 */
-	protected void sequence_Attribute(EObject context, Attribute semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_Attribute(ISerializationContext context, Attribute semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     EventPattern returns BinaryEventPattern
+	 *     Event returns BinaryEventPattern
+	 *     BinaryEventPattern returns BinaryEventPattern
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -751,24 +807,27 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         upperOccurrenceBound=EInt?
 	 *     )
 	 */
-	protected void sequence_BinaryEventPattern(EObject context, BinaryEventPattern semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_BinaryEventPattern(ISerializationContext context, BinaryEventPattern semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     ValueType returns BooleanValueType
+	 *     BoolValueType returns BooleanValueType
+	 *
 	 * Constraint:
 	 *     (name=ID primitiveType=TypeEnum)
 	 */
-	protected void sequence_BoolValueType(EObject context, BooleanValueType semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, TypePackage.Literals.VALUE_TYPE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, TypePackage.Literals.VALUE_TYPE__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, TypePackage.Literals.BOOLEAN_VALUE_TYPE__PRIMITIVE_TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, TypePackage.Literals.BOOLEAN_VALUE_TYPE__PRIMITIVE_TYPE));
+	protected void sequence_BoolValueType(ISerializationContext context, BooleanValueType semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, TypePackage.Literals.VALUE_TYPE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, TypePackage.Literals.VALUE_TYPE__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, TypePackage.Literals.BOOLEAN_VALUE_TYPE__PRIMITIVE_TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, TypePackage.Literals.BOOLEAN_VALUE_TYPE__PRIMITIVE_TYPE));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getBoolValueTypeAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getBoolValueTypeAccess().getPrimitiveTypeTypeEnumEnumRuleCall_4_0(), semanticObject.getPrimitiveType());
 		feeder.finish();
@@ -776,22 +835,28 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     Value returns BoolValue
+	 *     BoolValue returns BoolValue
+	 *
 	 * Constraint:
 	 *     value=EBoolean
 	 */
-	protected void sequence_BoolValue(EObject context, BoolValue semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, TypePackage.Literals.BOOL_VALUE__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, TypePackage.Literals.BOOL_VALUE__VALUE));
+	protected void sequence_BoolValue(ISerializationContext context, BoolValue semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, TypePackage.Literals.BOOL_VALUE__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, TypePackage.Literals.BOOL_VALUE__VALUE));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getBoolValueAccess().getValueEBooleanParserRuleCall_1_0(), semanticObject.isValue());
 		feeder.finish();
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     CamelModel returns CamelModel
+	 *
 	 * Constraint:
 	 *     (
 	 *         importURI+=EString* 
@@ -813,30 +878,40 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         )*
 	 *     )
 	 */
-	protected void sequence_CamelModel(EObject context, CamelModel semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_CamelModel(ISerializationContext context, CamelModel semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     SecurityProperty returns Certifiable
+	 *     Certifiable returns Certifiable
+	 *
 	 * Constraint:
 	 *     (name=ID description=EString? type=PropertyType (sensors+=[Sensor|Fqn] sensors+=[Sensor|Fqn]*)? domain=[SecurityDomain|Fqn])
 	 */
-	protected void sequence_Certifiable(EObject context, Certifiable semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_Certifiable(ISerializationContext context, Certifiable semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Clone returns Clone
+	 *
 	 * Constraint:
 	 *     (name=ID (subClones+=[Clone|Fqn] subClones+=[Clone|Fqn]*)?)
 	 */
-	protected void sequence_Clone(EObject context, Clone semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_Clone(ISerializationContext context, Clone semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     CloudCredentials returns CloudCredentials
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -848,12 +923,15 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         cloudProvider=[CloudProvider|Fqn]
 	 *     )
 	 */
-	protected void sequence_CloudCredentials(EObject context, CloudCredentials semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_CloudCredentials(ISerializationContext context, CloudCredentials semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     CloudLocation returns CloudLocation
+	 *
 	 * Constraint:
 	 *     (
 	 *         id=ID 
@@ -863,12 +941,17 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         (subLocations+=CloudLocation subLocations+=CloudLocation*)?
 	 *     )
 	 */
-	protected void sequence_CloudLocation(EObject context, CloudLocation semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_CloudLocation(ISerializationContext context, CloudLocation semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Entity returns CloudProvider
+	 *     Organisation returns CloudProvider
+	 *     CloudProvider returns CloudProvider
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -883,12 +966,15 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         providerModel=[ProviderModel|Fqn]?
 	 *     )
 	 */
-	protected void sequence_CloudProvider(EObject context, CloudProvider semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_CloudProvider(ISerializationContext context, CloudProvider semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     CommunicationInstance returns CommunicationInstance
+	 *
 	 * Constraint:
 	 *     (
 	 *         requiredCommunicationInstance=[RequiredCommunicationInstance|Fqn] 
@@ -897,12 +983,16 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         name=ID?
 	 *     )
 	 */
-	protected void sequence_CommunicationInstance(EObject context, CommunicationInstance semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_CommunicationInstance(ISerializationContext context, CommunicationInstance semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Measurement returns CommunicationMeasurement
+	 *     CommunicationMeasurement returns CommunicationMeasurement
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -917,12 +1007,15 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         slo=[ServiceLevelObjective|Fqn]?
 	 *     )
 	 */
-	protected void sequence_CommunicationMeasurement(EObject context, CommunicationMeasurement semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_CommunicationMeasurement(ISerializationContext context, CommunicationMeasurement semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Communication returns Communication
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -933,12 +1026,16 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         requiredPortConfiguration=Configuration?
 	 *     )
 	 */
-	protected void sequence_Communication(EObject context, Communication semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_Communication(ISerializationContext context, Communication semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     ConditionContext returns CompositeMetricContext
+	 *     CompositeMetricContext returns CompositeMetricContext
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -953,12 +1050,16 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         (minQuantity=EDouble maxQuantity=EDouble)?
 	 *     )
 	 */
-	protected void sequence_CompositeMetricContext(EObject context, CompositeMetricContext semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_CompositeMetricContext(ISerializationContext context, CompositeMetricContext semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     MetricInstance returns CompositeMetricInstance
+	 *     CompositeMetricInstance returns CompositeMetricInstance
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -971,12 +1072,17 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         metricContext=[MetricContext|Fqn]?
 	 *     )
 	 */
-	protected void sequence_CompositeMetricInstance(EObject context, CompositeMetricInstance semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_CompositeMetricInstance(ISerializationContext context, CompositeMetricInstance semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     CompositeMetric returns CompositeMetric
+	 *     Metric returns CompositeMetric
+	 *     MetricFormulaParameter returns CompositeMetric
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -989,12 +1095,15 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         formula=MetricFormula
 	 *     )
 	 */
-	protected void sequence_CompositeMetric(EObject context, CompositeMetric semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_CompositeMetric(ISerializationContext context, CompositeMetric semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     CompositeSecurityMetricInstance returns CompositeSecurityMetricInstance
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -1007,12 +1116,15 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         metricContext=[MetricContext|Fqn]?
 	 *     )
 	 */
-	protected void sequence_CompositeSecurityMetricInstance(EObject context, CompositeSecurityMetricInstance semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_CompositeSecurityMetricInstance(ISerializationContext context, CompositeSecurityMetricInstance semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     CompositeSecurityMetric returns CompositeSecurityMetric
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -1026,12 +1138,15 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         formula=MetricFormula
 	 *     )
 	 */
-	protected void sequence_CompositeSecurityMetric(EObject context, CompositeSecurityMetric semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_CompositeSecurityMetric(ISerializationContext context, CompositeSecurityMetric semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Configuration returns Configuration
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -1045,24 +1160,27 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         )*
 	 *     )
 	 */
-	protected void sequence_Configuration(EObject context, Configuration semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_Configuration(ISerializationContext context, Configuration semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Unit returns CoreUnit
+	 *     CoreUnit returns CoreUnit
+	 *
 	 * Constraint:
 	 *     (name=ID unit=UnitType)
 	 */
-	protected void sequence_CoreUnit(EObject context, CoreUnit semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, UnitPackage.Literals.UNIT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, UnitPackage.Literals.UNIT__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, UnitPackage.Literals.UNIT__UNIT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, UnitPackage.Literals.UNIT__UNIT));
+	protected void sequence_CoreUnit(ISerializationContext context, CoreUnit semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, UnitPackage.Literals.UNIT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, UnitPackage.Literals.UNIT__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, UnitPackage.Literals.UNIT__UNIT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, UnitPackage.Literals.UNIT__UNIT));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getCoreUnitAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getCoreUnitAccess().getUnitUnitTypeEnumRuleCall_4_0(), semanticObject.getUnit());
 		feeder.finish();
@@ -1070,6 +1188,9 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     Country returns Country
+	 *
 	 * Constraint:
 	 *     (
 	 *         id=ID 
@@ -1078,26 +1199,28 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         (parentRegions+=[GeographicalRegion|Fqn] parentRegions+=[GeographicalRegion|Fqn]*)?
 	 *     )
 	 */
-	protected void sequence_Country(EObject context, Country semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_Country(ISerializationContext context, Country semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     DataCenter returns DataCenter
+	 *
 	 * Constraint:
 	 *     (name=ID codeName=EString location=[Location|Fqn])
 	 */
-	protected void sequence_DataCenter(EObject context, DataCenter semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, OrganisationPackage.Literals.DATA_CENTER__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, OrganisationPackage.Literals.DATA_CENTER__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, OrganisationPackage.Literals.DATA_CENTER__CODE_NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, OrganisationPackage.Literals.DATA_CENTER__CODE_NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, OrganisationPackage.Literals.DATA_CENTER__LOCATION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, OrganisationPackage.Literals.DATA_CENTER__LOCATION));
+	protected void sequence_DataCenter(ISerializationContext context, DataCenter semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, OrganisationPackage.Literals.DATA_CENTER__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, OrganisationPackage.Literals.DATA_CENTER__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, OrganisationPackage.Literals.DATA_CENTER__CODE_NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, OrganisationPackage.Literals.DATA_CENTER__CODE_NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, OrganisationPackage.Literals.DATA_CENTER__LOCATION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, OrganisationPackage.Literals.DATA_CENTER__LOCATION));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getDataCenterAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getDataCenterAccess().getCodeNameEStringParserRuleCall_4_0(), semanticObject.getCodeName());
 		feeder.accept(grammarAccess.getDataCenterAccess().getLocationLocationFqnParserRuleCall_6_0_1(), semanticObject.getLocation());
@@ -1106,36 +1229,43 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     DeploymentModel returns DeploymentModel
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
 	 *         (vms+=VM | internalComponents+=InternalComponent | vmRequirementSets+=VMRequirementSet)* 
 	 *         hostings+=Hosting* 
 	 *         communications+=Communication* 
-	 *         (vmInstances+=VMInstance | internalComponentInstances+=InternalComponentInstance)* 
+	 *         vmInstances+=VMInstance? 
+	 *         (internalComponentInstances+=InternalComponentInstance? vmInstances+=VMInstance?)* 
 	 *         communicationInstances+=CommunicationInstance* 
 	 *         hostingInstances+=HostingInstance* 
 	 *         globalVMRequirementSet=[VMRequirementSet|Fqn]?
 	 *     )
 	 */
-	protected void sequence_DeploymentModel(EObject context, DeploymentModel semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_DeploymentModel(ISerializationContext context, DeploymentModel semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Unit returns Dimensionless
+	 *     Dimensionless returns Dimensionless
+	 *
 	 * Constraint:
 	 *     (name=ID unit=UnitType)
 	 */
-	protected void sequence_Dimensionless(EObject context, Dimensionless semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, UnitPackage.Literals.UNIT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, UnitPackage.Literals.UNIT__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, UnitPackage.Literals.UNIT__UNIT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, UnitPackage.Literals.UNIT__UNIT));
+	protected void sequence_Dimensionless(ISerializationContext context, Dimensionless semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, UnitPackage.Literals.UNIT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, UnitPackage.Literals.UNIT__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, UnitPackage.Literals.UNIT__UNIT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, UnitPackage.Literals.UNIT__UNIT));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getDimensionlessAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getDimensionlessAccess().getUnitUnitTypeEnumRuleCall_4_0(), semanticObject.getUnit());
 		feeder.finish();
@@ -1143,43 +1273,54 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     NumericValue returns DoublePrecisionValue
+	 *     Value returns DoublePrecisionValue
+	 *     DoublePrecisionValue returns DoublePrecisionValue
+	 *
 	 * Constraint:
 	 *     value=EDouble
 	 */
-	protected void sequence_DoublePrecisionValue(EObject context, DoublePrecisionValue semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, TypePackage.Literals.DOUBLE_PRECISION_VALUE__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, TypePackage.Literals.DOUBLE_PRECISION_VALUE__VALUE));
+	protected void sequence_DoublePrecisionValue(ISerializationContext context, DoublePrecisionValue semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, TypePackage.Literals.DOUBLE_PRECISION_VALUE__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, TypePackage.Literals.DOUBLE_PRECISION_VALUE__VALUE));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getDoublePrecisionValueAccess().getValueEDoubleParserRuleCall_1_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Entity returns Entity
+	 *     Entity_Impl returns Entity
+	 *
 	 * Constraint:
 	 *     {Entity}
 	 */
-	protected void sequence_Entity_Impl(EObject context, Entity semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_Entity_Impl(ISerializationContext context, Entity semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Value returns EnumerateValue
+	 *     EnumerateValue returns EnumerateValue
+	 *
 	 * Constraint:
 	 *     (name=EString value=EInt)
 	 */
-	protected void sequence_EnumerateValue(EObject context, EnumerateValue semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, TypePackage.Literals.ENUMERATE_VALUE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, TypePackage.Literals.ENUMERATE_VALUE__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, TypePackage.Literals.ENUMERATE_VALUE__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, TypePackage.Literals.ENUMERATE_VALUE__VALUE));
+	protected void sequence_EnumerateValue(ISerializationContext context, EnumerateValue semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, TypePackage.Literals.ENUMERATE_VALUE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, TypePackage.Literals.ENUMERATE_VALUE__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, TypePackage.Literals.ENUMERATE_VALUE__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, TypePackage.Literals.ENUMERATE_VALUE__VALUE));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getEnumerateValueAccess().getNameEStringParserRuleCall_0_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getEnumerateValueAccess().getValueEIntParserRuleCall_2_0(), semanticObject.getValue());
 		feeder.finish();
@@ -1187,33 +1328,48 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     ValueType returns Enumeration
+	 *     Enumeration returns Enumeration
+	 *
 	 * Constraint:
 	 *     (name=ID values+=EnumerateValue values+=EnumerateValue*)
 	 */
-	protected void sequence_Enumeration(EObject context, Enumeration semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_Enumeration(ISerializationContext context, Enumeration semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     EventInstance returns EventInstance
+	 *
 	 * Constraint:
 	 *     (name=ID event=[SimpleEvent|Fqn] status=StatusType layer=LayerType? metricInstance=[MetricInstance|Fqn]?)
 	 */
-	protected void sequence_EventInstance(EObject context, EventInstance semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_EventInstance(ISerializationContext context, EventInstance semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Constraint returns Excludes
+	 *     Excludes returns Excludes
+	 *
 	 * Constraint:
 	 *     (name=ID from=[Feature|Fqn] to=[Feature|Fqn] (attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint*)?)
 	 */
-	protected void sequence_Excludes(EObject context, Excludes semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_Excludes(ISerializationContext context, Excludes semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Feature returns Exclusive
+	 *     Exclusive returns Exclusive
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -1226,12 +1382,15 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         variants+=Feature*
 	 *     )
 	 */
-	protected void sequence_Exclusive(EObject context, Exclusive semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_Exclusive(ISerializationContext context, Exclusive semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     ExecutionContext returns ExecutionContext
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -1244,12 +1403,15 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         requirementGroup=[RequirementGroup|Fqn]
 	 *     )
 	 */
-	protected void sequence_ExecutionContext(EObject context, ExecutionContext semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_ExecutionContext(ISerializationContext context, ExecutionContext semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     ExecutionModel returns ExecutionModel
+	 *
 	 * Constraint:
 	 *     (
 	 *         (importURI+=EString importURI+=EString*)? 
@@ -1264,30 +1426,40 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         )*
 	 *     )
 	 */
-	protected void sequence_ExecutionModel(EObject context, ExecutionModel semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_ExecutionModel(ISerializationContext context, ExecutionModel semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     ExternalIdentifier returns ExternalIdentifier
+	 *
 	 * Constraint:
 	 *     (identifier=ID description=EString?)
 	 */
-	protected void sequence_ExternalIdentifier(EObject context, ExternalIdentifier semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_ExternalIdentifier(ISerializationContext context, ExternalIdentifier semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     FeatCardinality returns FeatCardinality
+	 *
 	 * Constraint:
 	 *     (cardinalityMin=EInt cardinalityMax=EInt value=EInt?)
 	 */
-	protected void sequence_FeatCardinality(EObject context, FeatCardinality semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_FeatCardinality(ISerializationContext context, FeatCardinality semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Feature returns Feature
+	 *     Feature_Impl returns Feature
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -1297,40 +1469,48 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         (clones+=Clone clones+=Clone*)?
 	 *     )
 	 */
-	protected void sequence_Feature_Impl(EObject context, Feature semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_Feature_Impl(ISerializationContext context, Feature semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     NumericValue returns FloatsValue
+	 *     Value returns FloatsValue
+	 *     FloatsValue returns FloatsValue
+	 *
 	 * Constraint:
 	 *     value=EFloat
 	 */
-	protected void sequence_FloatsValue(EObject context, FloatsValue semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, TypePackage.Literals.FLOATS_VALUE__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, TypePackage.Literals.FLOATS_VALUE__VALUE));
+	protected void sequence_FloatsValue(ISerializationContext context, FloatsValue semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, TypePackage.Literals.FLOATS_VALUE__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, TypePackage.Literals.FLOATS_VALUE__VALUE));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getFloatsValueAccess().getValueEFloatParserRuleCall_1_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Event returns FunctionalEvent
+	 *     SimpleEvent returns FunctionalEvent
+	 *     FunctionalEvent returns FunctionalEvent
+	 *
 	 * Constraint:
 	 *     (name=ID functionalType=EString)
 	 */
-	protected void sequence_FunctionalEvent(EObject context, FunctionalEvent semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, ScalabilityPackage.Literals.EVENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, ScalabilityPackage.Literals.EVENT__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, ScalabilityPackage.Literals.FUNCTIONAL_EVENT__FUNCTIONAL_TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, ScalabilityPackage.Literals.FUNCTIONAL_EVENT__FUNCTIONAL_TYPE));
+	protected void sequence_FunctionalEvent(ISerializationContext context, FunctionalEvent semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, ScalabilityPackage.Literals.EVENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, ScalabilityPackage.Literals.EVENT__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, ScalabilityPackage.Literals.FUNCTIONAL_EVENT__FUNCTIONAL_TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, ScalabilityPackage.Literals.FUNCTIONAL_EVENT__FUNCTIONAL_TYPE));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getFunctionalEventAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getFunctionalEventAccess().getFunctionalTypeEStringParserRuleCall_4_0(), semanticObject.getFunctionalType());
 		feeder.finish();
@@ -1338,6 +1518,10 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     Constraint returns Functional
+	 *     Functional returns Functional
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -1353,12 +1537,15 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         cardTo=FeatCardinality?
 	 *     )
 	 */
-	protected void sequence_Functional(EObject context, Functional semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_Functional(ISerializationContext context, Functional semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     GeographicalRegion returns GeographicalRegion
+	 *
 	 * Constraint:
 	 *     (
 	 *         id=ID 
@@ -1367,24 +1554,26 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         (parentRegions+=[GeographicalRegion|Fqn] parentRegions+=[GeographicalRegion|Fqn]*)?
 	 *     )
 	 */
-	protected void sequence_GeographicalRegion(EObject context, GeographicalRegion semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_GeographicalRegion(ISerializationContext context, GeographicalRegion semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     GroupCardinality returns GroupCardinality
+	 *
 	 * Constraint:
 	 *     (cardinalityMin=EInt cardinalityMax=EInt)
 	 */
-	protected void sequence_GroupCardinality(EObject context, GroupCardinality semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, ProviderPackage.Literals.CARDINALITY__CARDINALITY_MIN) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, ProviderPackage.Literals.CARDINALITY__CARDINALITY_MIN));
-			if(transientValues.isValueTransient((EObject)semanticObject, ProviderPackage.Literals.CARDINALITY__CARDINALITY_MAX) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, ProviderPackage.Literals.CARDINALITY__CARDINALITY_MAX));
+	protected void sequence_GroupCardinality(ISerializationContext context, GroupCardinality semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, ProviderPackage.Literals.CARDINALITY__CARDINALITY_MIN) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, ProviderPackage.Literals.CARDINALITY__CARDINALITY_MIN));
+			if (transientValues.isValueTransient((EObject) semanticObject, ProviderPackage.Literals.CARDINALITY__CARDINALITY_MAX) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, ProviderPackage.Literals.CARDINALITY__CARDINALITY_MAX));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getGroupCardinalityAccess().getCardinalityMinEIntParserRuleCall_3_0(), semanticObject.getCardinalityMin());
 		feeder.accept(grammarAccess.getGroupCardinalityAccess().getCardinalityMaxEIntParserRuleCall_5_0(), semanticObject.getCardinalityMax());
 		feeder.finish();
@@ -1392,22 +1581,26 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     Requirement returns HorizontalScaleRequirement
+	 *     ScaleRequirement returns HorizontalScaleRequirement
+	 *     HorizontalScaleRequirement returns HorizontalScaleRequirement
+	 *
 	 * Constraint:
 	 *     (name=ID component=[InternalComponent|Fqn] minInstances=EInt maxInstances=EInt)
 	 */
-	protected void sequence_HorizontalScaleRequirement(EObject context, HorizontalScaleRequirement semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, RequirementPackage.Literals.REQUIREMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, RequirementPackage.Literals.REQUIREMENT__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, RequirementPackage.Literals.HORIZONTAL_SCALE_REQUIREMENT__MIN_INSTANCES) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, RequirementPackage.Literals.HORIZONTAL_SCALE_REQUIREMENT__MIN_INSTANCES));
-			if(transientValues.isValueTransient((EObject)semanticObject, RequirementPackage.Literals.HORIZONTAL_SCALE_REQUIREMENT__MAX_INSTANCES) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, RequirementPackage.Literals.HORIZONTAL_SCALE_REQUIREMENT__MAX_INSTANCES));
-			if(transientValues.isValueTransient((EObject)semanticObject, RequirementPackage.Literals.HORIZONTAL_SCALE_REQUIREMENT__COMPONENT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, RequirementPackage.Literals.HORIZONTAL_SCALE_REQUIREMENT__COMPONENT));
+	protected void sequence_HorizontalScaleRequirement(ISerializationContext context, HorizontalScaleRequirement semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, RequirementPackage.Literals.REQUIREMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, RequirementPackage.Literals.REQUIREMENT__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, RequirementPackage.Literals.HORIZONTAL_SCALE_REQUIREMENT__COMPONENT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, RequirementPackage.Literals.HORIZONTAL_SCALE_REQUIREMENT__COMPONENT));
+			if (transientValues.isValueTransient((EObject) semanticObject, RequirementPackage.Literals.HORIZONTAL_SCALE_REQUIREMENT__MIN_INSTANCES) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, RequirementPackage.Literals.HORIZONTAL_SCALE_REQUIREMENT__MIN_INSTANCES));
+			if (transientValues.isValueTransient((EObject) semanticObject, RequirementPackage.Literals.HORIZONTAL_SCALE_REQUIREMENT__MAX_INSTANCES) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, RequirementPackage.Literals.HORIZONTAL_SCALE_REQUIREMENT__MAX_INSTANCES));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getHorizontalScaleRequirementAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getHorizontalScaleRequirementAccess().getComponentInternalComponentFqnParserRuleCall_4_0_1(), semanticObject.getComponent());
 		feeder.accept(grammarAccess.getHorizontalScaleRequirementAccess().getMinInstancesEIntParserRuleCall_6_0(), semanticObject.getMinInstances());
@@ -1417,45 +1610,69 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     ScalingAction returns HorizontalScalingAction
+	 *     HorizontalScalingAction returns HorizontalScalingAction
+	 *
 	 * Constraint:
 	 *     (name=ID type=ActionType vm=[VM|Fqn] internalComponent=[InternalComponent|Fqn] count=EInt?)
 	 */
-	protected void sequence_HorizontalScalingAction(EObject context, HorizontalScalingAction semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_HorizontalScalingAction(ISerializationContext context, HorizontalScalingAction semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     HostingInstance returns HostingInstance
+	 *
 	 * Constraint:
 	 *     (requiredHostInstance=[RequiredHostInstance|Fqn] providedHostInstance=[ProvidedHostInstance|Fqn] type=[Hosting|Fqn] name=ID?)
 	 */
-	protected void sequence_HostingInstance(EObject context, HostingInstance semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_HostingInstance(ISerializationContext context, HostingInstance semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Hosting returns Hosting
+	 *
 	 * Constraint:
 	 *     (name=ID requiredHost=[RequiredHost|Fqn] providedHost=[ProvidedHost|Fqn])
 	 */
-	protected void sequence_Hosting(EObject context, Hosting semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_Hosting(ISerializationContext context, Hosting semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, DeploymentPackage.Literals.DEPLOYMENT_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, DeploymentPackage.Literals.DEPLOYMENT_ELEMENT__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, DeploymentPackage.Literals.HOSTING__REQUIRED_HOST) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, DeploymentPackage.Literals.HOSTING__REQUIRED_HOST));
+			if (transientValues.isValueTransient((EObject) semanticObject, DeploymentPackage.Literals.HOSTING__PROVIDED_HOST) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, DeploymentPackage.Literals.HOSTING__PROVIDED_HOST));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
+		feeder.accept(grammarAccess.getHostingAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getHostingAccess().getRequiredHostRequiredHostFqnParserRuleCall_4_0_1(), semanticObject.getRequiredHost());
+		feeder.accept(grammarAccess.getHostingAccess().getProvidedHostProvidedHostFqnParserRuleCall_6_0_1(), semanticObject.getProvidedHost());
+		feeder.finish();
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     ImageRequirement returns ImageRequirement
+	 *
 	 * Constraint:
 	 *     (name=ID imageId=EString)
 	 */
-	protected void sequence_ImageRequirement(EObject context, ImageRequirement semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, RequirementPackage.Literals.REQUIREMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, RequirementPackage.Literals.REQUIREMENT__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, RequirementPackage.Literals.IMAGE_REQUIREMENT__IMAGE_ID) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, RequirementPackage.Literals.IMAGE_REQUIREMENT__IMAGE_ID));
+	protected void sequence_ImageRequirement(ISerializationContext context, ImageRequirement semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, RequirementPackage.Literals.REQUIREMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, RequirementPackage.Literals.REQUIREMENT__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, RequirementPackage.Literals.IMAGE_REQUIREMENT__IMAGE_ID) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, RequirementPackage.Literals.IMAGE_REQUIREMENT__IMAGE_ID));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getImageRequirementAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getImageRequirementAccess().getImageIdEStringParserRuleCall_4_0(), semanticObject.getImageId());
 		feeder.finish();
@@ -1463,56 +1680,74 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     Constraint returns Implies
+	 *     Implies returns Implies
+	 *
 	 * Constraint:
 	 *     (name=ID from=[Feature|Fqn] to=[Feature|Fqn] (attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint*)?)
 	 */
-	protected void sequence_Implies(EObject context, Implies semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_Implies(ISerializationContext context, Implies semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     ResourceFilter returns InformationResourceFilter
+	 *     InformationResourceFilter returns InformationResourceFilter
+	 *
 	 * Constraint:
 	 *     (name=ID resourcePattern=ResourcePattern informationResourcePath=EString? everyInformationResource?='all')
 	 */
-	protected void sequence_InformationResourceFilter(EObject context, InformationResourceFilter semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_InformationResourceFilter(ISerializationContext context, InformationResourceFilter semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Scope returns Instance
+	 *     Instance returns Instance
+	 *
 	 * Constraint:
 	 *     feature=[Feature|Fqn]
 	 */
-	protected void sequence_Instance(EObject context, Instance semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, ProviderPackage.Literals.INSTANCE__FEATURE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, ProviderPackage.Literals.INSTANCE__FEATURE));
+	protected void sequence_Instance(ISerializationContext context, Instance semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, ProviderPackage.Literals.INSTANCE__FEATURE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, ProviderPackage.Literals.INSTANCE__FEATURE));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getInstanceAccess().getFeatureFeatureFqnParserRuleCall_3_0_1(), semanticObject.getFeature());
 		feeder.finish();
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     NumericValue returns IntegerValue
+	 *     Value returns IntegerValue
+	 *     IntegerValue returns IntegerValue
+	 *
 	 * Constraint:
 	 *     value=EInt
 	 */
-	protected void sequence_IntegerValue(EObject context, IntegerValue semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, TypePackage.Literals.INTEGER_VALUE__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, TypePackage.Literals.INTEGER_VALUE__VALUE));
+	protected void sequence_IntegerValue(ISerializationContext context, IntegerValue semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, TypePackage.Literals.INTEGER_VALUE__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, TypePackage.Literals.INTEGER_VALUE__VALUE));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getIntegerValueAccess().getValueEIntParserRuleCall_1_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     InternalComponentInstance returns InternalComponentInstance
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -1525,12 +1760,16 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         )*
 	 *     )
 	 */
-	protected void sequence_InternalComponentInstance(EObject context, InternalComponentInstance semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_InternalComponentInstance(ISerializationContext context, InternalComponentInstance semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Measurement returns InternalComponentMeasurement
+	 *     InternalComponentMeasurement returns InternalComponentMeasurement
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -1544,78 +1783,100 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         slo=[ServiceLevelObjective|Fqn]?
 	 *     )
 	 */
-	protected void sequence_InternalComponentMeasurement(EObject context, InternalComponentMeasurement semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_InternalComponentMeasurement(ISerializationContext context, InternalComponentMeasurement semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     InternalComponent returns InternalComponent
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
 	 *         (
-	 *             providedCommunications+=ProvidedCommunication | 
-	 *             requiredCommunications+=RequiredCommunication | 
-	 *             providedHosts+=ProvidedHost | 
-	 *             requiredHost=RequiredHost | 
-	 *             (configurations+=Configuration version=EString?)
-	 *         )*
+	 *             (
+	 *                 providedCommunications+=ProvidedCommunication | 
+	 *                 requiredCommunications+=RequiredCommunication | 
+	 *                 providedHosts+=ProvidedHost | 
+	 *                 requiredHost=RequiredHost
+	 *             )? 
+	 *             (configurations+=Configuration version=EString?)?
+	 *         )+
 	 *     )
 	 */
-	protected void sequence_InternalComponent(EObject context, InternalComponent semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_InternalComponent(ISerializationContext context, InternalComponent semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Limit returns Limit
+	 *
 	 * Constraint:
 	 *     (value=NumericValue included?='included'?)
 	 */
-	protected void sequence_Limit(EObject context, Limit semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_Limit(ISerializationContext context, Limit semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     ValueType returns List
+	 *     List returns List
+	 *
 	 * Constraint:
 	 *     (name=ID primitiveType=TypeEnum? type=[ValueType|Fqn]? values+=Value values+=Value*)
 	 */
-	protected void sequence_List(EObject context, List semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_List(ISerializationContext context, List semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     LocationModel returns LocationModel
+	 *
 	 * Constraint:
 	 *     (name=ID (regions+=GeographicalRegion | countries+=Country | cloudLocations+=CloudLocation)*)
 	 */
-	protected void sequence_LocationModel(EObject context, LocationModel semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_LocationModel(ISerializationContext context, LocationModel semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Requirement returns LocationRequirement
+	 *     LocationRequirement returns LocationRequirement
+	 *
 	 * Constraint:
 	 *     (name=ID (locations+=[Location|Fqn] locations+=[Location|Fqn]*)?)
 	 */
-	protected void sequence_LocationRequirement(EObject context, LocationRequirement semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_LocationRequirement(ISerializationContext context, LocationRequirement semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     MetricApplicationBinding returns MetricApplicationBinding
+	 *     MetricObjectBinding returns MetricApplicationBinding
+	 *
 	 * Constraint:
 	 *     (name=ID executionContext=[ExecutionContext|Fqn])
 	 */
-	protected void sequence_MetricApplicationBinding(EObject context, MetricApplicationBinding semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, MetricPackage.Literals.METRIC_OBJECT_BINDING__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, MetricPackage.Literals.METRIC_OBJECT_BINDING__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, MetricPackage.Literals.METRIC_OBJECT_BINDING__EXECUTION_CONTEXT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, MetricPackage.Literals.METRIC_OBJECT_BINDING__EXECUTION_CONTEXT));
+	protected void sequence_MetricApplicationBinding(ISerializationContext context, MetricApplicationBinding semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, MetricPackage.Literals.METRIC_OBJECT_BINDING__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, MetricPackage.Literals.METRIC_OBJECT_BINDING__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, MetricPackage.Literals.METRIC_OBJECT_BINDING__EXECUTION_CONTEXT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, MetricPackage.Literals.METRIC_OBJECT_BINDING__EXECUTION_CONTEXT));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getMetricApplicationBindingAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getMetricApplicationBindingAccess().getExecutionContextExecutionContextFqnParserRuleCall_4_0_1(), semanticObject.getExecutionContext());
 		feeder.finish();
@@ -1623,36 +1884,48 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     MetricComponentBinding returns MetricComponentBinding
+	 *     MetricObjectBinding returns MetricComponentBinding
+	 *
 	 * Constraint:
 	 *     (name=ID executionContext=[ExecutionContext|Fqn] componentInstance=[ComponentInstance|Fqn] vmInstance=[VMInstance|Fqn]?)
 	 */
-	protected void sequence_MetricComponentBinding(EObject context, MetricComponentBinding semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_MetricComponentBinding(ISerializationContext context, MetricComponentBinding semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Condition returns MetricCondition
+	 *     MetricCondition returns MetricCondition
+	 *
 	 * Constraint:
 	 *     (name=ID metricContext=[MetricContext|Fqn] threshold=EDouble comparisonOperator=ComparisonOperatorType validity=EDate?)
 	 */
-	protected void sequence_MetricCondition(EObject context, MetricCondition semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_MetricCondition(ISerializationContext context, MetricCondition semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     MetricFormulaParameter returns MetricFormulaParameter
+	 *     FormulaParameter returns MetricFormulaParameter
+	 *     MetricFormulaParameter_Impl returns MetricFormulaParameter
+	 *
 	 * Constraint:
 	 *     (name=ID value=[SingleValue|Fqn])
 	 */
-	protected void sequence_MetricFormulaParameter_Impl(EObject context, MetricFormulaParameter semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, MetricPackage.Literals.METRIC_FORMULA_PARAMETER__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, MetricPackage.Literals.METRIC_FORMULA_PARAMETER__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, MetricPackage.Literals.METRIC_FORMULA_PARAMETER__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, MetricPackage.Literals.METRIC_FORMULA_PARAMETER__VALUE));
+	protected void sequence_MetricFormulaParameter_Impl(ISerializationContext context, MetricFormulaParameter semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, MetricPackage.Literals.METRIC_FORMULA_PARAMETER__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, MetricPackage.Literals.METRIC_FORMULA_PARAMETER__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, MetricPackage.Literals.METRIC_FORMULA_PARAMETER__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, MetricPackage.Literals.METRIC_FORMULA_PARAMETER__VALUE));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getMetricFormulaParameter_ImplAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getMetricFormulaParameter_ImplAccess().getValueSingleValueFqnParserRuleCall_4_0_1(), semanticObject.getValue());
 		feeder.finish();
@@ -1660,6 +1933,11 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     MetricFormulaParameter returns MetricFormula
+	 *     FormulaParameter returns MetricFormula
+	 *     MetricFormula returns MetricFormula
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -1670,12 +1948,15 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         parameters+=[MetricFormulaParameter|Fqn]*
 	 *     )
 	 */
-	protected void sequence_MetricFormula(EObject context, MetricFormula semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_MetricFormula(ISerializationContext context, MetricFormula semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     MetricModel returns MetricModel
+	 *
 	 * Constraint:
 	 *     (
 	 *         (importURI+=EString importURI+=EString*)? 
@@ -1694,26 +1975,29 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         )*
 	 *     )
 	 */
-	protected void sequence_MetricModel(EObject context, MetricModel semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_MetricModel(ISerializationContext context, MetricModel semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     MetricVMBinding returns MetricVMBinding
+	 *     MetricObjectBinding returns MetricVMBinding
+	 *
 	 * Constraint:
 	 *     (name=ID executionContext=[ExecutionContext|Fqn] vmInstance=[VMInstance|Fqn])
 	 */
-	protected void sequence_MetricVMBinding(EObject context, MetricVMBinding semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, MetricPackage.Literals.METRIC_OBJECT_BINDING__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, MetricPackage.Literals.METRIC_OBJECT_BINDING__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, MetricPackage.Literals.METRIC_OBJECT_BINDING__EXECUTION_CONTEXT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, MetricPackage.Literals.METRIC_OBJECT_BINDING__EXECUTION_CONTEXT));
-			if(transientValues.isValueTransient((EObject)semanticObject, MetricPackage.Literals.METRIC_VM_BINDING__VM_INSTANCE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, MetricPackage.Literals.METRIC_VM_BINDING__VM_INSTANCE));
+	protected void sequence_MetricVMBinding(ISerializationContext context, MetricVMBinding semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, MetricPackage.Literals.METRIC_OBJECT_BINDING__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, MetricPackage.Literals.METRIC_OBJECT_BINDING__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, MetricPackage.Literals.METRIC_OBJECT_BINDING__EXECUTION_CONTEXT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, MetricPackage.Literals.METRIC_OBJECT_BINDING__EXECUTION_CONTEXT));
+			if (transientValues.isValueTransient((EObject) semanticObject, MetricPackage.Literals.METRIC_VM_BINDING__VM_INSTANCE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, MetricPackage.Literals.METRIC_VM_BINDING__VM_INSTANCE));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getMetricVMBindingAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getMetricVMBindingAccess().getExecutionContextExecutionContextFqnParserRuleCall_4_0_1(), semanticObject.getExecutionContext());
 		feeder.accept(grammarAccess.getMetricVMBindingAccess().getVmInstanceVMInstanceFqnParserRuleCall_6_0_1(), semanticObject.getVmInstance());
@@ -1722,18 +2006,21 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     Unit returns MonetaryUnit
+	 *     MonetaryUnit returns MonetaryUnit
+	 *
 	 * Constraint:
 	 *     (name=ID unit=UnitType)
 	 */
-	protected void sequence_MonetaryUnit(EObject context, MonetaryUnit semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, UnitPackage.Literals.UNIT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, UnitPackage.Literals.UNIT__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, UnitPackage.Literals.UNIT__UNIT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, UnitPackage.Literals.UNIT__UNIT));
+	protected void sequence_MonetaryUnit(ISerializationContext context, MonetaryUnit semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, UnitPackage.Literals.UNIT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, UnitPackage.Literals.UNIT__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, UnitPackage.Literals.UNIT__UNIT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, UnitPackage.Literals.UNIT__UNIT));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getMonetaryUnitAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getMonetaryUnitAccess().getUnitUnitTypeEnumRuleCall_4_0(), semanticObject.getUnit());
 		feeder.finish();
@@ -1741,29 +2028,38 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     NumericValue returns NegativeInf
+	 *     Value returns NegativeInf
+	 *     NegativeInf returns NegativeInf
+	 *
 	 * Constraint:
 	 *     {NegativeInf}
 	 */
-	protected void sequence_NegativeInf(EObject context, NegativeInf semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_NegativeInf(ISerializationContext context, NegativeInf semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Event returns NonFunctionalEvent
+	 *     SimpleEvent returns NonFunctionalEvent
+	 *     NonFunctionalEvent returns NonFunctionalEvent
+	 *
 	 * Constraint:
 	 *     (name=ID metricCondition=[MetricCondition|Fqn] isViolation?='violation')
 	 */
-	protected void sequence_NonFunctionalEvent(EObject context, NonFunctionalEvent semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, ScalabilityPackage.Literals.EVENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, ScalabilityPackage.Literals.EVENT__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, ScalabilityPackage.Literals.NON_FUNCTIONAL_EVENT__METRIC_CONDITION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, ScalabilityPackage.Literals.NON_FUNCTIONAL_EVENT__METRIC_CONDITION));
-			if(transientValues.isValueTransient((EObject)semanticObject, ScalabilityPackage.Literals.NON_FUNCTIONAL_EVENT__IS_VIOLATION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, ScalabilityPackage.Literals.NON_FUNCTIONAL_EVENT__IS_VIOLATION));
+	protected void sequence_NonFunctionalEvent(ISerializationContext context, NonFunctionalEvent semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, ScalabilityPackage.Literals.EVENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, ScalabilityPackage.Literals.EVENT__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, ScalabilityPackage.Literals.NON_FUNCTIONAL_EVENT__METRIC_CONDITION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, ScalabilityPackage.Literals.NON_FUNCTIONAL_EVENT__METRIC_CONDITION));
+			if (transientValues.isValueTransient((EObject) semanticObject, ScalabilityPackage.Literals.NON_FUNCTIONAL_EVENT__IS_VIOLATION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, ScalabilityPackage.Literals.NON_FUNCTIONAL_EVENT__IS_VIOLATION));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getNonFunctionalEventAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getNonFunctionalEventAccess().getMetricConditionMetricConditionFqnParserRuleCall_4_0_1(), semanticObject.getMetricCondition());
 		feeder.accept(grammarAccess.getNonFunctionalEventAccess().getIsViolationViolationKeyword_5_0(), semanticObject.isIsViolation());
@@ -1772,15 +2068,22 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     OSRequirement returns OSRequirement
+	 *
 	 * Constraint:
 	 *     (name=ID os=EString is64os?='64os'?)
 	 */
-	protected void sequence_OSRequirement(EObject context, OSRequirement semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_OSRequirement(ISerializationContext context, OSRequirement semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Requirement returns OptimisationRequirement
+	 *     OptimisationRequirement returns OptimisationRequirement
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -1793,12 +2096,15 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         priority=EDouble?
 	 *     )
 	 */
-	protected void sequence_OptimisationRequirement(EObject context, OptimisationRequirement semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_OptimisationRequirement(ISerializationContext context, OptimisationRequirement semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     OrganisationModel returns OrganisationModel
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -1817,37 +2123,47 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         securityLevel=SecurityLevel
 	 *     )
 	 */
-	protected void sequence_OrganisationModel(EObject context, OrganisationModel semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_OrganisationModel(ISerializationContext context, OrganisationModel semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Entity returns Organisation
+	 *     Organisation returns Organisation
+	 *     Organisation_Impl returns Organisation
+	 *
 	 * Constraint:
 	 *     (name=ID www=EString? postalAddress=EString? email=EString)
 	 */
-	protected void sequence_Organisation_Impl(EObject context, Organisation semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_Organisation_Impl(ISerializationContext context, Organisation semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     PaaSageCredentials returns PaaSageCredentials
+	 *
 	 * Constraint:
 	 *     password=EString
 	 */
-	protected void sequence_PaaSageCredentials(EObject context, PaaSageCredentials semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, OrganisationPackage.Literals.PAA_SAGE_CREDENTIALS__PASSWORD) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, OrganisationPackage.Literals.PAA_SAGE_CREDENTIALS__PASSWORD));
+	protected void sequence_PaaSageCredentials(ISerializationContext context, PaaSageCredentials semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, OrganisationPackage.Literals.PAA_SAGE_CREDENTIALS__PASSWORD) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, OrganisationPackage.Literals.PAA_SAGE_CREDENTIALS__PASSWORD));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getPaaSageCredentialsAccess().getPasswordEStringParserRuleCall_1_0(), semanticObject.getPassword());
 		feeder.finish();
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Permission returns Permission
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -1858,30 +2174,43 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         action=ActionType
 	 *     )
 	 */
-	protected void sequence_Permission(EObject context, Permission semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_Permission(ISerializationContext context, Permission semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     NumericValue returns PositiveInf
+	 *     Value returns PositiveInf
+	 *     PositiveInf returns PositiveInf
+	 *
 	 * Constraint:
 	 *     {PositiveInf}
 	 */
-	protected void sequence_PositiveInf(EObject context, PositiveInf semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_PositiveInf(ISerializationContext context, PositiveInf semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Scope returns Product
+	 *     Product returns Product
+	 *
 	 * Constraint:
 	 *     {Product}
 	 */
-	protected void sequence_Product(EObject context, Product semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_Product(ISerializationContext context, Product semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Condition returns PropertyCondition
+	 *     PropertyCondition returns PropertyCondition
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -1893,12 +2222,16 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         validity=EDate?
 	 *     )
 	 */
-	protected void sequence_PropertyCondition(EObject context, PropertyCondition semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_PropertyCondition(ISerializationContext context, PropertyCondition semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     ConditionContext returns PropertyContext
+	 *     PropertyContext returns PropertyContext
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -1910,12 +2243,15 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         (minQuantity=EDouble maxQuantity=EDouble)?
 	 *     )
 	 */
-	protected void sequence_PropertyContext(EObject context, PropertyContext semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_PropertyContext(ISerializationContext context, PropertyContext semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Property returns Property
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -1925,24 +2261,26 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         (sensors+=[Sensor|Fqn] sensors+=[Sensor|Fqn]*)?
 	 *     )
 	 */
-	protected void sequence_Property(EObject context, Property semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_Property(ISerializationContext context, Property semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     ProvidedCommunicationInstance returns ProvidedCommunicationInstance
+	 *
 	 * Constraint:
 	 *     (name=ID type=[CommunicationPort|Fqn])
 	 */
-	protected void sequence_ProvidedCommunicationInstance(EObject context, ProvidedCommunicationInstance semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, DeploymentPackage.Literals.DEPLOYMENT_ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, DeploymentPackage.Literals.DEPLOYMENT_ELEMENT__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, DeploymentPackage.Literals.COMMUNICATION_PORT_INSTANCE__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, DeploymentPackage.Literals.COMMUNICATION_PORT_INSTANCE__TYPE));
+	protected void sequence_ProvidedCommunicationInstance(ISerializationContext context, ProvidedCommunicationInstance semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, DeploymentPackage.Literals.DEPLOYMENT_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, DeploymentPackage.Literals.DEPLOYMENT_ELEMENT__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, DeploymentPackage.Literals.COMMUNICATION_PORT_INSTANCE__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, DeploymentPackage.Literals.COMMUNICATION_PORT_INSTANCE__TYPE));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getProvidedCommunicationInstanceAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getProvidedCommunicationInstanceAccess().getTypeCommunicationPortFqnParserRuleCall_3_0_1(), semanticObject.getType());
 		feeder.finish();
@@ -1950,27 +2288,32 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     ProvidedCommunication returns ProvidedCommunication
+	 *
 	 * Constraint:
 	 *     (name=ID portNumber=INT*)
 	 */
-	protected void sequence_ProvidedCommunication(EObject context, ProvidedCommunication semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_ProvidedCommunication(ISerializationContext context, ProvidedCommunication semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     ProvidedHostInstance returns ProvidedHostInstance
+	 *
 	 * Constraint:
 	 *     (name=ID type=[HostingPort|Fqn])
 	 */
-	protected void sequence_ProvidedHostInstance(EObject context, ProvidedHostInstance semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, DeploymentPackage.Literals.DEPLOYMENT_ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, DeploymentPackage.Literals.DEPLOYMENT_ELEMENT__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, DeploymentPackage.Literals.HOSTING_PORT_INSTANCE__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, DeploymentPackage.Literals.HOSTING_PORT_INSTANCE__TYPE));
+	protected void sequence_ProvidedHostInstance(ISerializationContext context, ProvidedHostInstance semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, DeploymentPackage.Literals.DEPLOYMENT_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, DeploymentPackage.Literals.DEPLOYMENT_ELEMENT__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, DeploymentPackage.Literals.HOSTING_PORT_INSTANCE__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, DeploymentPackage.Literals.HOSTING_PORT_INSTANCE__TYPE));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getProvidedHostInstanceAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getProvidedHostInstanceAccess().getTypeHostingPortFqnParserRuleCall_3_0_1(), semanticObject.getType());
 		feeder.finish();
@@ -1978,83 +2321,104 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     ProvidedHost returns ProvidedHost
+	 *
 	 * Constraint:
 	 *     name=ID
 	 */
-	protected void sequence_ProvidedHost(EObject context, ProvidedHost semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, DeploymentPackage.Literals.DEPLOYMENT_ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, DeploymentPackage.Literals.DEPLOYMENT_ELEMENT__NAME));
+	protected void sequence_ProvidedHost(ISerializationContext context, ProvidedHost semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, DeploymentPackage.Literals.DEPLOYMENT_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, DeploymentPackage.Literals.DEPLOYMENT_ELEMENT__NAME));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getProvidedHostAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     ProviderModel returns ProviderModel
+	 *
 	 * Constraint:
 	 *     (name=ID (constraints+=Constraint constraints+=Constraint*)? rootFeature=Feature)
 	 */
-	protected void sequence_ProviderModel(EObject context, ProviderModel semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_ProviderModel(ISerializationContext context, ProviderModel semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     ProviderRequirement returns ProviderRequirement
+	 *
 	 * Constraint:
 	 *     (name=ID providers+=[CloudProvider|Fqn] providers+=[CloudProvider|Fqn]*)
 	 */
-	protected void sequence_ProviderRequirement(EObject context, ProviderRequirement semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_ProviderRequirement(ISerializationContext context, ProviderRequirement semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     QualitativeHardwareRequirement returns QualitativeHardwareRequirement
+	 *
 	 * Constraint:
 	 *     (name=ID minBenchmark=Double maxBenchmark=Double?)
 	 */
-	protected void sequence_QualitativeHardwareRequirement(EObject context, QualitativeHardwareRequirement semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_QualitativeHardwareRequirement(ISerializationContext context, QualitativeHardwareRequirement semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     QuantitativeHardwareRequirement returns QuantitativeHardwareRequirement
+	 *
 	 * Constraint:
 	 *     (name=ID (minCores=INT maxCores=INT?)? (minRAM=INT maxRAM=INT?)? (minStorage=INT maxStorage=INT?)? (minCPU=Double maxCPU=Double?)?)
 	 */
-	protected void sequence_QuantitativeHardwareRequirement(EObject context, QuantitativeHardwareRequirement semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_QuantitativeHardwareRequirement(ISerializationContext context, QuantitativeHardwareRequirement semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     ValueType returns RangeUnion
+	 *     RangeUnion returns RangeUnion
+	 *
 	 * Constraint:
 	 *     (name=ID primitiveType=TypeEnum ranges+=Range ranges+=Range*)
 	 */
-	protected void sequence_RangeUnion(EObject context, RangeUnion semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_RangeUnion(ISerializationContext context, RangeUnion semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     ValueType returns Range
+	 *     Range returns Range
+	 *
 	 * Constraint:
 	 *     (name=ID primitiveType=TypeEnum lowerLimit=Limit upperLimit=Limit)
 	 */
-	protected void sequence_Range(EObject context, Range semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, TypePackage.Literals.VALUE_TYPE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, TypePackage.Literals.VALUE_TYPE__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, TypePackage.Literals.RANGE__LOWER_LIMIT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, TypePackage.Literals.RANGE__LOWER_LIMIT));
-			if(transientValues.isValueTransient((EObject)semanticObject, TypePackage.Literals.RANGE__UPPER_LIMIT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, TypePackage.Literals.RANGE__UPPER_LIMIT));
-			if(transientValues.isValueTransient((EObject)semanticObject, TypePackage.Literals.RANGE__PRIMITIVE_TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, TypePackage.Literals.RANGE__PRIMITIVE_TYPE));
+	protected void sequence_Range(ISerializationContext context, Range semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, TypePackage.Literals.VALUE_TYPE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, TypePackage.Literals.VALUE_TYPE__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, TypePackage.Literals.RANGE__PRIMITIVE_TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, TypePackage.Literals.RANGE__PRIMITIVE_TYPE));
+			if (transientValues.isValueTransient((EObject) semanticObject, TypePackage.Literals.RANGE__LOWER_LIMIT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, TypePackage.Literals.RANGE__LOWER_LIMIT));
+			if (transientValues.isValueTransient((EObject) semanticObject, TypePackage.Literals.RANGE__UPPER_LIMIT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, TypePackage.Literals.RANGE__UPPER_LIMIT));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getRangeAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getRangeAccess().getPrimitiveTypeTypeEnumEnumRuleCall_4_0(), semanticObject.getPrimitiveType());
 		feeder.accept(grammarAccess.getRangeAccess().getLowerLimitLimitParserRuleCall_6_0(), semanticObject.getLowerLimit());
@@ -2064,6 +2428,10 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     ConditionContext returns RawMetricContext
+	 *     RawMetricContext returns RawMetricContext
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -2078,12 +2446,16 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         (minQuantity=EDouble maxQuantity=EDouble)?
 	 *     )
 	 */
-	protected void sequence_RawMetricContext(EObject context, RawMetricContext semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_RawMetricContext(ISerializationContext context, RawMetricContext semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     MetricInstance returns RawMetricInstance
+	 *     RawMetricInstance returns RawMetricInstance
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -2095,12 +2467,17 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         metricContext=[MetricContext|Fqn]?
 	 *     )
 	 */
-	protected void sequence_RawMetricInstance(EObject context, RawMetricInstance semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_RawMetricInstance(ISerializationContext context, RawMetricInstance semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     RawMetric returns RawMetric
+	 *     Metric returns RawMetric
+	 *     MetricFormulaParameter returns RawMetric
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -2113,12 +2490,15 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         isVariable?='variable'?
 	 *     )
 	 */
-	protected void sequence_RawMetric(EObject context, RawMetric semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_RawMetric(ISerializationContext context, RawMetric semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     RawSecurityMetricInstance returns RawSecurityMetricInstance
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -2130,12 +2510,15 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         metricContext=[MetricContext|Fqn]?
 	 *     )
 	 */
-	protected void sequence_RawSecurityMetricInstance(EObject context, RawSecurityMetricInstance semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_RawSecurityMetricInstance(ISerializationContext context, RawSecurityMetricInstance semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     RawSecurityMetric returns RawSecurityMetric
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -2148,24 +2531,27 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         unit=[Unit|Fqn]
 	 *     )
 	 */
-	protected void sequence_RawSecurityMetric(EObject context, RawSecurityMetric semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_RawSecurityMetric(ISerializationContext context, RawSecurityMetric semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Unit returns RequestUnit
+	 *     RequestUnit returns RequestUnit
+	 *
 	 * Constraint:
 	 *     (name=ID unit=UnitType)
 	 */
-	protected void sequence_RequestUnit(EObject context, RequestUnit semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, UnitPackage.Literals.UNIT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, UnitPackage.Literals.UNIT__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, UnitPackage.Literals.UNIT__UNIT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, UnitPackage.Literals.UNIT__UNIT));
+	protected void sequence_RequestUnit(ISerializationContext context, RequestUnit semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, UnitPackage.Literals.UNIT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, UnitPackage.Literals.UNIT__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, UnitPackage.Literals.UNIT__UNIT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, UnitPackage.Literals.UNIT__UNIT));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getRequestUnitAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getRequestUnitAccess().getUnitUnitTypeEnumRuleCall_4_0(), semanticObject.getUnit());
 		feeder.finish();
@@ -2173,18 +2559,20 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     RequiredCommunicationInstance returns RequiredCommunicationInstance
+	 *
 	 * Constraint:
 	 *     (name=ID type=[CommunicationPort|Fqn])
 	 */
-	protected void sequence_RequiredCommunicationInstance(EObject context, RequiredCommunicationInstance semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, DeploymentPackage.Literals.DEPLOYMENT_ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, DeploymentPackage.Literals.DEPLOYMENT_ELEMENT__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, DeploymentPackage.Literals.COMMUNICATION_PORT_INSTANCE__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, DeploymentPackage.Literals.COMMUNICATION_PORT_INSTANCE__TYPE));
+	protected void sequence_RequiredCommunicationInstance(ISerializationContext context, RequiredCommunicationInstance semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, DeploymentPackage.Literals.DEPLOYMENT_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, DeploymentPackage.Literals.DEPLOYMENT_ELEMENT__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, DeploymentPackage.Literals.COMMUNICATION_PORT_INSTANCE__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, DeploymentPackage.Literals.COMMUNICATION_PORT_INSTANCE__TYPE));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getRequiredCommunicationInstanceAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getRequiredCommunicationInstanceAccess().getTypeCommunicationPortFqnParserRuleCall_3_0_1(), semanticObject.getType());
 		feeder.finish();
@@ -2192,27 +2580,32 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     RequiredCommunication returns RequiredCommunication
+	 *
 	 * Constraint:
 	 *     (name=ID (portNumber=INT | isMandatory?='mandatory')*)
 	 */
-	protected void sequence_RequiredCommunication(EObject context, RequiredCommunication semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_RequiredCommunication(ISerializationContext context, RequiredCommunication semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     RequiredHostInstance returns RequiredHostInstance
+	 *
 	 * Constraint:
 	 *     (name=ID type=[HostingPort|Fqn])
 	 */
-	protected void sequence_RequiredHostInstance(EObject context, RequiredHostInstance semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, DeploymentPackage.Literals.DEPLOYMENT_ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, DeploymentPackage.Literals.DEPLOYMENT_ELEMENT__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, DeploymentPackage.Literals.HOSTING_PORT_INSTANCE__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, DeploymentPackage.Literals.HOSTING_PORT_INSTANCE__TYPE));
+	protected void sequence_RequiredHostInstance(ISerializationContext context, RequiredHostInstance semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, DeploymentPackage.Literals.DEPLOYMENT_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, DeploymentPackage.Literals.DEPLOYMENT_ELEMENT__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, DeploymentPackage.Literals.HOSTING_PORT_INSTANCE__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, DeploymentPackage.Literals.HOSTING_PORT_INSTANCE__TYPE));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getRequiredHostInstanceAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getRequiredHostInstanceAccess().getTypeHostingPortFqnParserRuleCall_3_0_1(), semanticObject.getType());
 		feeder.finish();
@@ -2220,22 +2613,28 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     RequiredHost returns RequiredHost
+	 *
 	 * Constraint:
 	 *     name=ID
 	 */
-	protected void sequence_RequiredHost(EObject context, RequiredHost semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, DeploymentPackage.Literals.DEPLOYMENT_ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, DeploymentPackage.Literals.DEPLOYMENT_ELEMENT__NAME));
+	protected void sequence_RequiredHost(ISerializationContext context, RequiredHost semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, DeploymentPackage.Literals.DEPLOYMENT_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, DeploymentPackage.Literals.DEPLOYMENT_ELEMENT__NAME));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getRequiredHostAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     RequirementGroup returns RequirementGroup
+	 *     Requirement returns RequirementGroup
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -2245,12 +2644,15 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         (application+=[Application|Fqn] application+=[Application|Fqn]*)?
 	 *     )
 	 */
-	protected void sequence_RequirementGroup(EObject context, RequirementGroup semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_RequirementGroup(ISerializationContext context, RequirementGroup semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     RequirementModel returns RequirementModel
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -2270,12 +2672,16 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         )*
 	 *     )
 	 */
-	protected void sequence_RequirementModel(EObject context, RequirementModel semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_RequirementModel(ISerializationContext context, RequirementModel semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Constraint returns Requires
+	 *     Requires_Impl returns Requires
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -2288,12 +2694,15 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         cardTo=FeatCardinality?
 	 *     )
 	 */
-	protected void sequence_Requires_Impl(EObject context, Requires semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_Requires_Impl(ISerializationContext context, Requires semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     RoleAssignment returns RoleAssignment
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -2305,28 +2714,33 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         userGroup=[UserGroup|Fqn]?
 	 *     )
 	 */
-	protected void sequence_RoleAssignment(EObject context, RoleAssignment semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_RoleAssignment(ISerializationContext context, RoleAssignment semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Role returns Role
+	 *
 	 * Constraint:
 	 *     name=ID
 	 */
-	protected void sequence_Role(EObject context, Role semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, OrganisationPackage.Literals.ROLE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, OrganisationPackage.Literals.ROLE__NAME));
+	protected void sequence_Role(ISerializationContext context, Role semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, OrganisationPackage.Literals.ROLE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, OrganisationPackage.Literals.ROLE__NAME));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getRoleAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     RuleTrigger returns RuleTrigger
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -2339,12 +2753,15 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         eventInstances+=[EventInstance|Fqn]*
 	 *     )
 	 */
-	protected void sequence_RuleTrigger(EObject context, RuleTrigger semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_RuleTrigger(ISerializationContext context, RuleTrigger semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     SLOAssessment returns SLOAssessment
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -2355,23 +2772,22 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         assessment?='violated'
 	 *     )
 	 */
-	protected void sequence_SLOAssessment(EObject context, SLOAssessment semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, ExecutionPackage.Literals.SLO_ASSESSMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, ExecutionPackage.Literals.SLO_ASSESSMENT__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, ExecutionPackage.Literals.SLO_ASSESSMENT__SLO) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, ExecutionPackage.Literals.SLO_ASSESSMENT__SLO));
-			if(transientValues.isValueTransient((EObject)semanticObject, ExecutionPackage.Literals.SLO_ASSESSMENT__ASSESSMENT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, ExecutionPackage.Literals.SLO_ASSESSMENT__ASSESSMENT));
-			if(transientValues.isValueTransient((EObject)semanticObject, ExecutionPackage.Literals.SLO_ASSESSMENT__EXECUTION_CONTEXT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, ExecutionPackage.Literals.SLO_ASSESSMENT__EXECUTION_CONTEXT));
-			if(transientValues.isValueTransient((EObject)semanticObject, ExecutionPackage.Literals.SLO_ASSESSMENT__MEASUREMENT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, ExecutionPackage.Literals.SLO_ASSESSMENT__MEASUREMENT));
-			if(transientValues.isValueTransient((EObject)semanticObject, ExecutionPackage.Literals.SLO_ASSESSMENT__ASSESSMENT_TIME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, ExecutionPackage.Literals.SLO_ASSESSMENT__ASSESSMENT_TIME));
+	protected void sequence_SLOAssessment(ISerializationContext context, SLOAssessment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, ExecutionPackage.Literals.SLO_ASSESSMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, ExecutionPackage.Literals.SLO_ASSESSMENT__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, ExecutionPackage.Literals.SLO_ASSESSMENT__MEASUREMENT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, ExecutionPackage.Literals.SLO_ASSESSMENT__MEASUREMENT));
+			if (transientValues.isValueTransient((EObject) semanticObject, ExecutionPackage.Literals.SLO_ASSESSMENT__EXECUTION_CONTEXT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, ExecutionPackage.Literals.SLO_ASSESSMENT__EXECUTION_CONTEXT));
+			if (transientValues.isValueTransient((EObject) semanticObject, ExecutionPackage.Literals.SLO_ASSESSMENT__ASSESSMENT_TIME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, ExecutionPackage.Literals.SLO_ASSESSMENT__ASSESSMENT_TIME));
+			if (transientValues.isValueTransient((EObject) semanticObject, ExecutionPackage.Literals.SLO_ASSESSMENT__SLO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, ExecutionPackage.Literals.SLO_ASSESSMENT__SLO));
+			if (transientValues.isValueTransient((EObject) semanticObject, ExecutionPackage.Literals.SLO_ASSESSMENT__ASSESSMENT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, ExecutionPackage.Literals.SLO_ASSESSMENT__ASSESSMENT));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getSLOAssessmentAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getSLOAssessmentAccess().getMeasurementMeasurementFqnParserRuleCall_4_0_1(), semanticObject.getMeasurement());
 		feeder.accept(grammarAccess.getSLOAssessmentAccess().getExecutionContextExecutionContextFqnParserRuleCall_6_0_1(), semanticObject.getExecutionContext());
@@ -2383,6 +2799,9 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     ScalabilityModel returns ScalabilityModel
+	 *
 	 * Constraint:
 	 *     (
 	 *         (importURI+=EString importURI+=EString*)? 
@@ -2397,12 +2816,15 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         )*
 	 *     )
 	 */
-	protected void sequence_ScalabilityModel(EObject context, ScalabilityModel semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_ScalabilityModel(ISerializationContext context, ScalabilityModel semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     ScalabilityRule returns ScalabilityRule
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -2413,12 +2835,15 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         (scaleRequirements+=[ScaleRequirement|Fqn] scaleRequirements+=[ScaleRequirement|Fqn]*)?
 	 *     )
 	 */
-	protected void sequence_ScalabilityRule(EObject context, ScalabilityRule semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_ScalabilityRule(ISerializationContext context, ScalabilityRule semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Schedule returns Schedule
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -2430,21 +2855,27 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         repetitions=EInt?
 	 *     )
 	 */
-	protected void sequence_Schedule(EObject context, Schedule semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_Schedule(ISerializationContext context, Schedule semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     SecurityCapability returns SecurityCapability
+	 *
 	 * Constraint:
 	 *     (name=ID securityControls+=[SecurityControl|Fqn] securityControls+=[SecurityControl|Fqn]* dataCenter=[DataCenter|Fqn]?)
 	 */
-	protected void sequence_SecurityCapability(EObject context, SecurityCapability semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_SecurityCapability(ISerializationContext context, SecurityCapability semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     SecurityControl returns SecurityControl
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -2456,21 +2887,27 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         (compositeSecurityMetrics+=[CompositeSecurityMetric|Fqn] compositeSecurityMetrics+=[CompositeSecurityMetric|Fqn]*)?
 	 *     )
 	 */
-	protected void sequence_SecurityControl(EObject context, SecurityControl semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_SecurityControl(ISerializationContext context, SecurityControl semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     SecurityDomain returns SecurityDomain
+	 *
 	 * Constraint:
 	 *     (id=ID name=EString (subDomain+=[SecurityDomain|Fqn] subDomain+=[SecurityDomain|Fqn]*)?)
 	 */
-	protected void sequence_SecurityDomain(EObject context, SecurityDomain semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_SecurityDomain(ISerializationContext context, SecurityDomain semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     SecurityModel returns SecurityModel
+	 *
 	 * Constraint:
 	 *     (
 	 *         (importURI+=EString importURI+=EString*)? 
@@ -2488,12 +2925,16 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         )*
 	 *     )
 	 */
-	protected void sequence_SecurityModel(EObject context, SecurityModel semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_SecurityModel(ISerializationContext context, SecurityModel semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     SecurityProperty returns SecurityProperty
+	 *     SecurityProperty_Impl returns SecurityProperty
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -2504,12 +2945,16 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         domain=[SecurityDomain|Fqn]
 	 *     )
 	 */
-	protected void sequence_SecurityProperty_Impl(EObject context, SecurityProperty semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_SecurityProperty_Impl(ISerializationContext context, SecurityProperty semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Requirement returns SecurityRequirement
+	 *     SecurityRequirement returns SecurityRequirement
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -2519,24 +2964,26 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         component=[InternalComponent|Fqn]?
 	 *     )
 	 */
-	protected void sequence_SecurityRequirement(EObject context, SecurityRequirement semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_SecurityRequirement(ISerializationContext context, SecurityRequirement semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     SecuritySLO returns SecuritySLO
+	 *
 	 * Constraint:
 	 *     (name=ID customServiceLevel=[Condition|Fqn])
 	 */
-	protected void sequence_SecuritySLO(EObject context, SecuritySLO semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, RequirementPackage.Literals.REQUIREMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, RequirementPackage.Literals.REQUIREMENT__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, RequirementPackage.Literals.SERVICE_LEVEL_OBJECTIVE__CUSTOM_SERVICE_LEVEL) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, RequirementPackage.Literals.SERVICE_LEVEL_OBJECTIVE__CUSTOM_SERVICE_LEVEL));
+	protected void sequence_SecuritySLO(ISerializationContext context, SecuritySLO semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, RequirementPackage.Literals.REQUIREMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, RequirementPackage.Literals.REQUIREMENT__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, RequirementPackage.Literals.SERVICE_LEVEL_OBJECTIVE__CUSTOM_SERVICE_LEVEL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, RequirementPackage.Literals.SERVICE_LEVEL_OBJECTIVE__CUSTOM_SERVICE_LEVEL));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getSecuritySLOAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getSecuritySLOAccess().getCustomServiceLevelConditionFqnParserRuleCall_4_0_1(), semanticObject.getCustomServiceLevel());
 		feeder.finish();
@@ -2544,27 +2991,33 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     Sensor returns Sensor
+	 *
 	 * Constraint:
 	 *     (name=ID configuration=EString? isPush?='push'?)
 	 */
-	protected void sequence_Sensor(EObject context, Sensor semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_Sensor(ISerializationContext context, Sensor semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Requirement returns ServiceLevelObjective
+	 *     ServiceLevelObjective returns ServiceLevelObjective
+	 *
 	 * Constraint:
 	 *     (name=ID customServiceLevel=[Condition|Fqn])
 	 */
-	protected void sequence_ServiceLevelObjective(EObject context, ServiceLevelObjective semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, RequirementPackage.Literals.REQUIREMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, RequirementPackage.Literals.REQUIREMENT__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, RequirementPackage.Literals.SERVICE_LEVEL_OBJECTIVE__CUSTOM_SERVICE_LEVEL) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, RequirementPackage.Literals.SERVICE_LEVEL_OBJECTIVE__CUSTOM_SERVICE_LEVEL));
+	protected void sequence_ServiceLevelObjective(ISerializationContext context, ServiceLevelObjective semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, RequirementPackage.Literals.REQUIREMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, RequirementPackage.Literals.REQUIREMENT__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, RequirementPackage.Literals.SERVICE_LEVEL_OBJECTIVE__CUSTOM_SERVICE_LEVEL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, RequirementPackage.Literals.SERVICE_LEVEL_OBJECTIVE__CUSTOM_SERVICE_LEVEL));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getServiceLevelObjectiveAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getServiceLevelObjectiveAccess().getCustomServiceLevelConditionFqnParserRuleCall_4_0_1(), semanticObject.getCustomServiceLevel());
 		feeder.finish();
@@ -2572,27 +3025,34 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     ResourceFilter returns ServiceResourceFilter
+	 *     ServiceResourceFilter returns ServiceResourceFilter
+	 *
 	 * Constraint:
 	 *     (name=ID resourcePattern=ResourcePattern serviceURL=EString? everyService?='all')
 	 */
-	protected void sequence_ServiceResourceFilter(EObject context, ServiceResourceFilter semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_ServiceResourceFilter(ISerializationContext context, ServiceResourceFilter semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Unit returns StorageUnit
+	 *     StorageUnit returns StorageUnit
+	 *
 	 * Constraint:
 	 *     (name=ID unit=UnitType)
 	 */
-	protected void sequence_StorageUnit(EObject context, StorageUnit semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, UnitPackage.Literals.UNIT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, UnitPackage.Literals.UNIT__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, UnitPackage.Literals.UNIT__UNIT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, UnitPackage.Literals.UNIT__UNIT));
+	protected void sequence_StorageUnit(ISerializationContext context, StorageUnit semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, UnitPackage.Literals.UNIT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, UnitPackage.Literals.UNIT__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, UnitPackage.Literals.UNIT__UNIT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, UnitPackage.Literals.UNIT__UNIT));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getStorageUnitAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getStorageUnitAccess().getUnitUnitTypeEnumRuleCall_4_0(), semanticObject.getUnit());
 		feeder.finish();
@@ -2600,18 +3060,21 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     ValueType returns StringValueType
+	 *     StringsValueType returns StringValueType
+	 *
 	 * Constraint:
 	 *     (name=ID primitiveType=TypeEnum)
 	 */
-	protected void sequence_StringsValueType(EObject context, StringValueType semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, TypePackage.Literals.VALUE_TYPE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, TypePackage.Literals.VALUE_TYPE__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, TypePackage.Literals.STRING_VALUE_TYPE__PRIMITIVE_TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, TypePackage.Literals.STRING_VALUE_TYPE__PRIMITIVE_TYPE));
+	protected void sequence_StringsValueType(ISerializationContext context, StringValueType semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, TypePackage.Literals.VALUE_TYPE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, TypePackage.Literals.VALUE_TYPE__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, TypePackage.Literals.STRING_VALUE_TYPE__PRIMITIVE_TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, TypePackage.Literals.STRING_VALUE_TYPE__PRIMITIVE_TYPE));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getStringsValueTypeAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getStringsValueTypeAccess().getPrimitiveTypeTypeEnumEnumRuleCall_4_0(), semanticObject.getPrimitiveType());
 		feeder.finish();
@@ -2619,34 +3082,40 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     Value returns StringsValue
+	 *     StringsValue returns StringsValue
+	 *
 	 * Constraint:
 	 *     value=EString
 	 */
-	protected void sequence_StringsValue(EObject context, StringsValue semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, TypePackage.Literals.STRINGS_VALUE__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, TypePackage.Literals.STRINGS_VALUE__VALUE));
+	protected void sequence_StringsValue(ISerializationContext context, StringsValue semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, TypePackage.Literals.STRINGS_VALUE__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, TypePackage.Literals.STRINGS_VALUE__VALUE));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getStringsValueAccess().getValueEStringParserRuleCall_1_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Unit returns ThroughputUnit
+	 *     ThroughputUnit returns ThroughputUnit
+	 *
 	 * Constraint:
 	 *     (name=ID unit=UnitType)
 	 */
-	protected void sequence_ThroughputUnit(EObject context, ThroughputUnit semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, UnitPackage.Literals.UNIT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, UnitPackage.Literals.UNIT__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, UnitPackage.Literals.UNIT__UNIT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, UnitPackage.Literals.UNIT__UNIT));
+	protected void sequence_ThroughputUnit(ISerializationContext context, ThroughputUnit semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, UnitPackage.Literals.UNIT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, UnitPackage.Literals.UNIT__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, UnitPackage.Literals.UNIT__UNIT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, UnitPackage.Literals.UNIT__UNIT));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getThroughputUnitAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getThroughputUnitAccess().getUnitUnitTypeEnumRuleCall_4_0(), semanticObject.getUnit());
 		feeder.finish();
@@ -2654,18 +3123,21 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     Unit returns TimeIntervalUnit
+	 *     TimeIntervalUnit returns TimeIntervalUnit
+	 *
 	 * Constraint:
 	 *     (name=ID unit=UnitType)
 	 */
-	protected void sequence_TimeIntervalUnit(EObject context, TimeIntervalUnit semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, UnitPackage.Literals.UNIT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, UnitPackage.Literals.UNIT__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, UnitPackage.Literals.UNIT__UNIT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, UnitPackage.Literals.UNIT__UNIT));
+	protected void sequence_TimeIntervalUnit(ISerializationContext context, TimeIntervalUnit semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, UnitPackage.Literals.UNIT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, UnitPackage.Literals.UNIT__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, UnitPackage.Literals.UNIT__UNIT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, UnitPackage.Literals.UNIT__UNIT));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getTimeIntervalUnitAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getTimeIntervalUnitAccess().getUnitUnitTypeEnumRuleCall_4_0(), semanticObject.getUnit());
 		feeder.finish();
@@ -2673,27 +3145,33 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     Timer returns Timer
+	 *
 	 * Constraint:
 	 *     (name=ID type=TimerType timeValue=EInt unit=[TimeIntervalUnit|Fqn] maxOccurrenceNum=EInt?)
 	 */
-	protected void sequence_Timer(EObject context, Timer semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_Timer(ISerializationContext context, Timer semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Unit returns TransactionUnit
+	 *     TransactionUnit returns TransactionUnit
+	 *
 	 * Constraint:
 	 *     (name=ID unit=UnitType)
 	 */
-	protected void sequence_TransactionUnit(EObject context, TransactionUnit semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, UnitPackage.Literals.UNIT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, UnitPackage.Literals.UNIT__NAME));
-			if(transientValues.isValueTransient((EObject)semanticObject, UnitPackage.Literals.UNIT__UNIT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, UnitPackage.Literals.UNIT__UNIT));
+	protected void sequence_TransactionUnit(ISerializationContext context, TransactionUnit semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, UnitPackage.Literals.UNIT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, UnitPackage.Literals.UNIT__NAME));
+			if (transientValues.isValueTransient((EObject) semanticObject, UnitPackage.Literals.UNIT__UNIT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, UnitPackage.Literals.UNIT__UNIT));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getTransactionUnitAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getTransactionUnitAccess().getUnitUnitTypeEnumRuleCall_4_0(), semanticObject.getUnit());
 		feeder.finish();
@@ -2701,42 +3179,60 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	
 	
 	/**
+	 * Contexts:
+	 *     TypeModel returns TypeModel
+	 *
 	 * Constraint:
 	 *     ((importURI+=EString importURI+=EString*)? name=ID (dataTypes+=ValueType | values+=Value)*)
 	 */
-	protected void sequence_TypeModel(EObject context, TypeModel semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_TypeModel(ISerializationContext context, TypeModel semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     EventPattern returns UnaryEventPattern
+	 *     Event returns UnaryEventPattern
+	 *     UnaryEventPattern returns UnaryEventPattern
+	 *
 	 * Constraint:
 	 *     (name=ID event=[Event|Fqn] operator=UnaryPatternOperatorType timer=[Timer|Fqn]? occurrenceNum=EInt?)
 	 */
-	protected void sequence_UnaryEventPattern(EObject context, UnaryEventPattern semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_UnaryEventPattern(ISerializationContext context, UnaryEventPattern semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     UnitModel returns UnitModel
+	 *
 	 * Constraint:
 	 *     (name=ID units+=Unit*)
 	 */
-	protected void sequence_UnitModel(EObject context, UnitModel semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_UnitModel(ISerializationContext context, UnitModel semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     UserGroup returns UserGroup
+	 *
 	 * Constraint:
 	 *     (name=ID users+=[User|Fqn] users+=[User|Fqn]*)
 	 */
-	protected void sequence_UserGroup(EObject context, UserGroup semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_UserGroup(ISerializationContext context, UserGroup semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Entity returns User
+	 *     User returns User
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -2751,12 +3247,15 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         (deploymentModels+=[DeploymentModel|Fqn] deploymentModels+=[DeploymentModel|Fqn]*)?
 	 *     )
 	 */
-	protected void sequence_User(EObject context, User semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_User(ISerializationContext context, User semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     VMInstance returns VMInstance
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -2767,12 +3266,16 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         providedHostInstances+=ProvidedHostInstance*
 	 *     )
 	 */
-	protected void sequence_VMInstance(EObject context, VMInstance semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_VMInstance(ISerializationContext context, VMInstance semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Measurement returns VMMeasurement
+	 *     VMMeasurement returns VMMeasurement
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -2786,55 +3289,72 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         slo=[ServiceLevelObjective|Fqn]?
 	 *     )
 	 */
-	protected void sequence_VMMeasurement(EObject context, VMMeasurement semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_VMMeasurement(ISerializationContext context, VMMeasurement semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     VMRequirementSet returns VMRequirementSet
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
 	 *         (
-	 *             locationRequirement=[LocationRequirement|Fqn] | 
-	 *             qualitativeHardwareRequirement=[QualitativeHardwareRequirement|Fqn] | 
-	 *             quantitativeHardwareRequirement=[QuantitativeHardwareRequirement|Fqn] | 
-	 *             osOrImageRequirement=[OSRequirement|Fqn] | 
-	 *             (osOrImageRequirement=[ImageRequirement|Fqn] providerRequirement=[ProviderRequirement|Fqn])
-	 *         )*
+	 *             (
+	 *                 locationRequirement=[LocationRequirement|Fqn] | 
+	 *                 qualitativeHardwareRequirement=[QualitativeHardwareRequirement|Fqn] | 
+	 *                 quantitativeHardwareRequirement=[QuantitativeHardwareRequirement|Fqn] | 
+	 *                 osOrImageRequirement=[OSRequirement|Fqn]
+	 *             )? 
+	 *             (osOrImageRequirement=[ImageRequirement|Fqn] providerRequirement=[ProviderRequirement|Fqn])?
+	 *         )+
 	 *     )
 	 */
-	protected void sequence_VMRequirementSet(EObject context, VMRequirementSet semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_VMRequirementSet(ISerializationContext context, VMRequirementSet semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     VM returns VM
+	 *
 	 * Constraint:
 	 *     (name=ID vmRequirementSet=[VMRequirementSet|ID]? (providedHosts+=ProvidedHost | configurations+=Configuration)*)
 	 */
-	protected void sequence_VM(EObject context, VM semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_VM(ISerializationContext context, VM semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     NumericValue returns ValueToIncrease
+	 *     Value returns ValueToIncrease
+	 *     ValueToIncrease returns ValueToIncrease
+	 *
 	 * Constraint:
 	 *     value=NumericValue
 	 */
-	protected void sequence_ValueToIncrease(EObject context, ValueToIncrease semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient((EObject)semanticObject, TypePackage.Literals.VALUE_TO_INCREASE__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject)semanticObject, TypePackage.Literals.VALUE_TO_INCREASE__VALUE));
+	protected void sequence_ValueToIncrease(ISerializationContext context, ValueToIncrease semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient((EObject) semanticObject, TypePackage.Literals.VALUE_TO_INCREASE__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing((EObject) semanticObject, TypePackage.Literals.VALUE_TO_INCREASE__VALUE));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider((EObject)semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder((EObject)semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getValueToIncreaseAccess().getValueNumericValueParserRuleCall_1_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Requirement returns VerticalScaleRequirement
+	 *     ScaleRequirement returns VerticalScaleRequirement
+	 *     VerticalScaleRequirement returns VerticalScaleRequirement
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -2845,12 +3365,16 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         (minCPU=Double maxCPU=Double?)?
 	 *     )
 	 */
-	protected void sequence_VerticalScaleRequirement(EObject context, VerticalScaleRequirement semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_VerticalScaleRequirement(ISerializationContext context, VerticalScaleRequirement semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     ScalingAction returns VerticalScalingAction
+	 *     VerticalScalingAction returns VerticalScalingAction
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -2864,12 +3388,15 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         networkUpdate=EInt?
 	 *     )
 	 */
-	protected void sequence_VerticalScalingAction(EObject context, VerticalScalingAction semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_VerticalScalingAction(ISerializationContext context, VerticalScalingAction semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Window returns Window
+	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -2880,7 +3407,9 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         unit=[TimeIntervalUnit|Fqn]?
 	 *     )
 	 */
-	protected void sequence_Window(EObject context, Window semanticObject) {
-		genericSequencer.createSequence(context, (EObject)semanticObject);
+	protected void sequence_Window(ISerializationContext context, Window semanticObject) {
+		genericSequencer.createSequence(context, (EObject) semanticObject);
 	}
+	
+	
 }

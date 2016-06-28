@@ -16,7 +16,7 @@ organisation model AmazonEC2Organisation {
 	provider AmazonEC2 {
 		www: 'aws.amazon.com/ec2‎'
 		email: 'info@amazon.com'
-		public
+		Public
 		IaaS
 		provider model: AmazonEC2Model.AmazonEC2Provider
 	}

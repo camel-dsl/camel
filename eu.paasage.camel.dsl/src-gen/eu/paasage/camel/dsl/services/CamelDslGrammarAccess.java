@@ -19,7 +19,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
 	public class CamelModelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CamelModel");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.CamelModel");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
 		private final Keyword cImportKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
@@ -58,25 +58,27 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cApplicationsApplicationParserRuleCall_4_12_0 = (RuleCall)cApplicationsAssignment_4_12.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//CamelModel returns camel::CamelModel:
-		//	("import " importURI+=EString)* "camel model " name=ID "{" (deploymentModels+=DeploymentModel |
-		//	executionModels+=ExecutionModel | locationModels+=LocationModel | metricModels+=MetricModel |
-		//	organisationModels+=OrganisationModel | providerModels+=ProviderModel | requirementModels+=RequirementModel |
-		//	scalabilityModels+=ScalabilityModel | securityModels+=SecurityModel | typeModels+=TypeModel | unitModels+=UnitModel |
-		//	actions+=Action | applications+=Application)* "}";
+		//CamelModel camel::CamelModel:
+		//	('import ' importURI+=EString)*
+		//	'camel model ' name=ID '{' (deploymentModels+=DeploymentModel | executionModels+=ExecutionModel |
+		//	locationModels+=LocationModel | metricModels+=MetricModel | organisationModels+=OrganisationModel |
+		//	providerModels+=ProviderModel | requirementModels+=RequirementModel | scalabilityModels+=ScalabilityModel |
+		//	securityModels+=SecurityModel | typeModels+=TypeModel | unitModels+=UnitModel | actions+=Action |
+		//	applications+=Application)*
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//("import " importURI+=EString)* "camel model " name=ID "{" (deploymentModels+=DeploymentModel |
+		//('import ' importURI+=EString)* 'camel model ' name=ID '{' (deploymentModels+=DeploymentModel |
 		//executionModels+=ExecutionModel | locationModels+=LocationModel | metricModels+=MetricModel |
 		//organisationModels+=OrganisationModel | providerModels+=ProviderModel | requirementModels+=RequirementModel |
 		//scalabilityModels+=ScalabilityModel | securityModels+=SecurityModel | typeModels+=TypeModel | unitModels+=UnitModel |
-		//actions+=Action | applications+=Application)* "}"
+		//actions+=Action | applications+=Application)* '}'
 		public Group getGroup() { return cGroup; }
 
-		//("import " importURI+=EString)*
+		//('import ' importURI+=EString)*
 		public Group getGroup_0() { return cGroup_0; }
 
-		//"import "
+		//'import '
 		public Keyword getImportKeyword_0_0() { return cImportKeyword_0_0; }
 
 		//importURI+=EString
@@ -85,7 +87,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getImportURIEStringParserRuleCall_0_1_0() { return cImportURIEStringParserRuleCall_0_1_0; }
 
-		//"camel model "
+		//'camel model '
 		public Keyword getCamelModelKeyword_1() { return cCamelModelKeyword_1; }
 
 		//name=ID
@@ -94,7 +96,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
 		//(deploymentModels+=DeploymentModel | executionModels+=ExecutionModel | locationModels+=LocationModel |
@@ -181,12 +183,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Application
 		public RuleCall getApplicationsApplicationParserRuleCall_4_12_0() { return cApplicationsApplicationParserRuleCall_4_12_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class DeploymentModelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DeploymentModel");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.DeploymentModel");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cDeploymentModelKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -219,20 +221,23 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cGlobalVMRequirementSetVMRequirementSetFqnParserRuleCall_9_1_0_1 = (RuleCall)cGlobalVMRequirementSetVMRequirementSetCrossReference_9_1_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
-		/// * Deployment model * / DeploymentModel returns deployment::DeploymentModel:
-		//	"deployment model " name=ID "{" (vms+=VM | internalComponents+=InternalComponent |
-		//	vmRequirementSets+=VMRequirementSet)* hostings+=Hosting* communications+=Communication* (vmInstances+=VMInstance |
-		//	internalComponentInstances+=InternalComponentInstance)* communicationInstances+=CommunicationInstance*
-		//	hostingInstances+=HostingInstance* ("global " globalVMRequirementSet=[deployment::VMRequirementSet|Fqn])? "}";
+		/// * Deployment model * / DeploymentModel deployment::DeploymentModel:
+		//	'deployment model ' name=ID '{' (vms+=VM | internalComponents+=InternalComponent |
+		//	vmRequirementSets+=VMRequirementSet)*
+		//	hostings+=Hosting*
+		//	communications+=Communication* (vmInstances+=VMInstance | internalComponentInstances+=InternalComponentInstance)*
+		//	communicationInstances+=CommunicationInstance*
+		//	hostingInstances+=HostingInstance* ('global ' globalVMRequirementSet=[deployment::VMRequirementSet|Fqn])?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"deployment model " name=ID "{" (vms+=VM | internalComponents+=InternalComponent | vmRequirementSets+=VMRequirementSet)*
+		//'deployment model ' name=ID '{' (vms+=VM | internalComponents+=InternalComponent | vmRequirementSets+=VMRequirementSet)*
 		//hostings+=Hosting* communications+=Communication* (vmInstances+=VMInstance |
 		//internalComponentInstances+=InternalComponentInstance)* communicationInstances+=CommunicationInstance*
-		//hostingInstances+=HostingInstance* ("global " globalVMRequirementSet=[deployment::VMRequirementSet|Fqn])? "}"
+		//hostingInstances+=HostingInstance* ('global ' globalVMRequirementSet=[deployment::VMRequirementSet|Fqn])? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"deployment model "
+		//'deployment model '
 		public Keyword getDeploymentModelKeyword_0() { return cDeploymentModelKeyword_0; }
 
 		//name=ID
@@ -241,7 +246,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
 		//(vms+=VM | internalComponents+=InternalComponent | vmRequirementSets+=VMRequirementSet)*
@@ -304,10 +309,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//HostingInstance
 		public RuleCall getHostingInstancesHostingInstanceParserRuleCall_8_0() { return cHostingInstancesHostingInstanceParserRuleCall_8_0; }
 
-		//("global " globalVMRequirementSet=[deployment::VMRequirementSet|Fqn])?
+		//('global ' globalVMRequirementSet=[deployment::VMRequirementSet|Fqn])?
 		public Group getGroup_9() { return cGroup_9; }
 
-		//"global "
+		//'global '
 		public Keyword getGlobalKeyword_9_0() { return cGlobalKeyword_9_0; }
 
 		//globalVMRequirementSet=[deployment::VMRequirementSet|Fqn]
@@ -319,12 +324,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getGlobalVMRequirementSetVMRequirementSetFqnParserRuleCall_9_1_0_1() { return cGlobalVMRequirementSetVMRequirementSetFqnParserRuleCall_9_1_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
 	}
 
 	public class ConfigurationElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Configuration");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Configuration");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cConfigurationKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -357,18 +362,22 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cStopCommandEStringParserRuleCall_3_5_1_0 = (RuleCall)cStopCommandAssignment_3_5_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//Configuration returns deployment::Configuration:
-		//	"configuration " name=ID "{" ("download: " downloadCommand=EString | "upload: " uploadCommand=EString | "install: "
-		//	installCommand=EString | "configure: " configureCommand=EString | "start: " startCommand=EString | "stop: "
-		//	stopCommand=EString)* "}";
+		//Configuration deployment::Configuration:
+		//	'configuration ' name=ID '{' ('download: ' downloadCommand=EString |
+		//	'upload: ' uploadCommand=EString |
+		//	'install: ' installCommand=EString |
+		//	'configure: ' configureCommand=EString |
+		//	'start: ' startCommand=EString |
+		//	'stop: ' stopCommand=EString)*
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"configuration " name=ID "{" ("download: " downloadCommand=EString | "upload: " uploadCommand=EString | "install: "
-		//installCommand=EString | "configure: " configureCommand=EString | "start: " startCommand=EString | "stop: "
-		//stopCommand=EString)* "}"
+		//'configuration ' name=ID '{' ('download: ' downloadCommand=EString | 'upload: ' uploadCommand=EString | 'install: '
+		//installCommand=EString | 'configure: ' configureCommand=EString | 'start: ' startCommand=EString | 'stop: '
+		//stopCommand=EString)* '}'
 		public Group getGroup() { return cGroup; }
 
-		//"configuration "
+		//'configuration '
 		public Keyword getConfigurationKeyword_0() { return cConfigurationKeyword_0; }
 
 		//name=ID
@@ -377,17 +386,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("download: " downloadCommand=EString | "upload: " uploadCommand=EString | "install: " installCommand=EString |
-		//"configure: " configureCommand=EString | "start: " startCommand=EString | "stop: " stopCommand=EString)*
+		//('download: ' downloadCommand=EString | 'upload: ' uploadCommand=EString | 'install: ' installCommand=EString |
+		//'configure: ' configureCommand=EString | 'start: ' startCommand=EString | 'stop: ' stopCommand=EString)*
 		public Alternatives getAlternatives_3() { return cAlternatives_3; }
 
-		//"download: " downloadCommand=EString
+		//'download: ' downloadCommand=EString
 		public Group getGroup_3_0() { return cGroup_3_0; }
 
-		//"download: "
+		//'download: '
 		public Keyword getDownloadKeyword_3_0_0() { return cDownloadKeyword_3_0_0; }
 
 		//downloadCommand=EString
@@ -396,10 +405,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getDownloadCommandEStringParserRuleCall_3_0_1_0() { return cDownloadCommandEStringParserRuleCall_3_0_1_0; }
 
-		//"upload: " uploadCommand=EString
+		//'upload: ' uploadCommand=EString
 		public Group getGroup_3_1() { return cGroup_3_1; }
 
-		//"upload: "
+		//'upload: '
 		public Keyword getUploadKeyword_3_1_0() { return cUploadKeyword_3_1_0; }
 
 		//uploadCommand=EString
@@ -408,10 +417,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getUploadCommandEStringParserRuleCall_3_1_1_0() { return cUploadCommandEStringParserRuleCall_3_1_1_0; }
 
-		//"install: " installCommand=EString
+		//'install: ' installCommand=EString
 		public Group getGroup_3_2() { return cGroup_3_2; }
 
-		//"install: "
+		//'install: '
 		public Keyword getInstallKeyword_3_2_0() { return cInstallKeyword_3_2_0; }
 
 		//installCommand=EString
@@ -420,10 +429,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getInstallCommandEStringParserRuleCall_3_2_1_0() { return cInstallCommandEStringParserRuleCall_3_2_1_0; }
 
-		//"configure: " configureCommand=EString
+		//'configure: ' configureCommand=EString
 		public Group getGroup_3_3() { return cGroup_3_3; }
 
-		//"configure: "
+		//'configure: '
 		public Keyword getConfigureKeyword_3_3_0() { return cConfigureKeyword_3_3_0; }
 
 		//configureCommand=EString
@@ -432,10 +441,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getConfigureCommandEStringParserRuleCall_3_3_1_0() { return cConfigureCommandEStringParserRuleCall_3_3_1_0; }
 
-		//"start: " startCommand=EString
+		//'start: ' startCommand=EString
 		public Group getGroup_3_4() { return cGroup_3_4; }
 
-		//"start: "
+		//'start: '
 		public Keyword getStartKeyword_3_4_0() { return cStartKeyword_3_4_0; }
 
 		//startCommand=EString
@@ -444,10 +453,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getStartCommandEStringParserRuleCall_3_4_1_0() { return cStartCommandEStringParserRuleCall_3_4_1_0; }
 
-		//"stop: " stopCommand=EString
+		//'stop: ' stopCommand=EString
 		public Group getGroup_3_5() { return cGroup_3_5; }
 
-		//"stop: "
+		//'stop: '
 		public Keyword getStopKeyword_3_5_0() { return cStopKeyword_3_5_0; }
 
 		//stopCommand=EString
@@ -456,12 +465,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getStopCommandEStringParserRuleCall_3_5_1_0() { return cStopCommandEStringParserRuleCall_3_5_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 
 	public class VMElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "VM");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.VM");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cVmKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -479,16 +488,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cConfigurationsConfigurationParserRuleCall_4_1_0 = (RuleCall)cConfigurationsAssignment_4_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//VM returns deployment::VM:
-		//	"vm " name=ID "{" ("requirement set " vmRequirementSet=[deployment::VMRequirementSet])? //            providedCommunications += ProvidedCommunication |
-		//	(providedHosts+=ProvidedHost | configurations+=Configuration)* "}";
+		//VM deployment::VM:
+		//	'vm ' name=ID '{' ('requirement set ' vmRequirementSet=[deployment::VMRequirementSet])? (providedHosts+=ProvidedHost |
+		//	configurations+=Configuration)*
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"vm " name=ID "{" ("requirement set " vmRequirementSet=[deployment::VMRequirementSet])? //            providedCommunications += ProvidedCommunication |
-		//(providedHosts+=ProvidedHost | configurations+=Configuration)* "}"
+		//'vm ' name=ID '{' ('requirement set ' vmRequirementSet=[deployment::VMRequirementSet])? (providedHosts+=ProvidedHost |
+		//configurations+=Configuration)* '}'
 		public Group getGroup() { return cGroup; }
 
-		//"vm "
+		//'vm '
 		public Keyword getVmKeyword_0() { return cVmKeyword_0; }
 
 		//name=ID
@@ -497,13 +507,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("requirement set " vmRequirementSet=[deployment::VMRequirementSet])?
+		//('requirement set ' vmRequirementSet=[deployment::VMRequirementSet])?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"requirement set "
+		//'requirement set '
 		public Keyword getRequirementSetKeyword_3_0() { return cRequirementSetKeyword_3_0; }
 
 		//vmRequirementSet=[deployment::VMRequirementSet]
@@ -515,7 +525,6 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getVmRequirementSetVMRequirementSetIDTerminalRuleCall_3_1_0_1() { return cVmRequirementSetVMRequirementSetIDTerminalRuleCall_3_1_0_1; }
 
-		////            providedCommunications += ProvidedCommunication |
 		//(providedHosts+=ProvidedHost | configurations+=Configuration)*
 		public Alternatives getAlternatives_4() { return cAlternatives_4; }
 
@@ -532,12 +541,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Configuration
 		public RuleCall getConfigurationsConfigurationParserRuleCall_4_1_0() { return cConfigurationsConfigurationParserRuleCall_4_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class VMRequirementSetElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "VMRequirementSet");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.VMRequirementSet");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRequirementSetKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -575,24 +584,25 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cProviderRequirementProviderRequirementFqnParserRuleCall_3_4_3_0_1 = (RuleCall)cProviderRequirementProviderRequirementCrossReference_3_4_3_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//VMRequirementSet returns deployment::VMRequirementSet:
-		//	"requirement set " name=ID "{" ("location: " locationRequirement=[requirement::LocationRequirement|Fqn] |
-		//	"qualitative hardware: " qualitativeHardwareRequirement=[requirement::QualitativeHardwareRequirement|Fqn] |
-		//	"quantitative hardware: " quantitativeHardwareRequirement=[requirement::QuantitativeHardwareRequirement|Fqn] | "os: "
-		//	osOrImageRequirement=[requirement::OSRequirement|Fqn] | "image: "
-		//	osOrImageRequirement=[requirement::ImageRequirement|Fqn] "provider: "
-		//	providerRequirement=[requirement::ProviderRequirement|Fqn])* "}";
+		//VMRequirementSet deployment::VMRequirementSet:
+		//	'requirement set ' name=ID '{' ('location: ' locationRequirement=[requirement::LocationRequirement|Fqn] |
+		//	'qualitative hardware: ' qualitativeHardwareRequirement=[requirement::QualitativeHardwareRequirement|Fqn] |
+		//	'quantitative hardware: ' quantitativeHardwareRequirement=[requirement::QuantitativeHardwareRequirement|Fqn] |
+		//	'os: ' osOrImageRequirement=[requirement::OSRequirement|Fqn] |
+		//	'image: ' osOrImageRequirement=[requirement::ImageRequirement|Fqn]
+		//	'provider: ' providerRequirement=[requirement::ProviderRequirement|Fqn])*
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"requirement set " name=ID "{" ("location: " locationRequirement=[requirement::LocationRequirement|Fqn] |
-		//"qualitative hardware: " qualitativeHardwareRequirement=[requirement::QualitativeHardwareRequirement|Fqn] |
-		//"quantitative hardware: " quantitativeHardwareRequirement=[requirement::QuantitativeHardwareRequirement|Fqn] | "os: "
-		//osOrImageRequirement=[requirement::OSRequirement|Fqn] | "image: "
-		//osOrImageRequirement=[requirement::ImageRequirement|Fqn] "provider: "
-		//providerRequirement=[requirement::ProviderRequirement|Fqn])* "}"
+		//'requirement set ' name=ID '{' ('location: ' locationRequirement=[requirement::LocationRequirement|Fqn] |
+		//'qualitative hardware: ' qualitativeHardwareRequirement=[requirement::QualitativeHardwareRequirement|Fqn] |
+		//'quantitative hardware: ' quantitativeHardwareRequirement=[requirement::QuantitativeHardwareRequirement|Fqn] | 'os: '
+		//osOrImageRequirement=[requirement::OSRequirement|Fqn] | 'image: '
+		//osOrImageRequirement=[requirement::ImageRequirement|Fqn] 'provider: '
+		//providerRequirement=[requirement::ProviderRequirement|Fqn])* '}'
 		public Group getGroup() { return cGroup; }
 
-		//"requirement set "
+		//'requirement set '
 		public Keyword getRequirementSetKeyword_0() { return cRequirementSetKeyword_0; }
 
 		//name=ID
@@ -601,21 +611,21 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("location: " locationRequirement=[requirement::LocationRequirement|Fqn] | "qualitative hardware: "
-		//qualitativeHardwareRequirement=[requirement::QualitativeHardwareRequirement|Fqn] | "quantitative hardware: "
-		//quantitativeHardwareRequirement=[requirement::QuantitativeHardwareRequirement|Fqn] | "os: "
-		//osOrImageRequirement=[requirement::OSRequirement|Fqn] | "image: "
-		//osOrImageRequirement=[requirement::ImageRequirement|Fqn] "provider: "
+		//('location: ' locationRequirement=[requirement::LocationRequirement|Fqn] | 'qualitative hardware: '
+		//qualitativeHardwareRequirement=[requirement::QualitativeHardwareRequirement|Fqn] | 'quantitative hardware: '
+		//quantitativeHardwareRequirement=[requirement::QuantitativeHardwareRequirement|Fqn] | 'os: '
+		//osOrImageRequirement=[requirement::OSRequirement|Fqn] | 'image: '
+		//osOrImageRequirement=[requirement::ImageRequirement|Fqn] 'provider: '
 		//providerRequirement=[requirement::ProviderRequirement|Fqn])*
 		public Alternatives getAlternatives_3() { return cAlternatives_3; }
 
-		//"location: " locationRequirement=[requirement::LocationRequirement|Fqn]
+		//'location: ' locationRequirement=[requirement::LocationRequirement|Fqn]
 		public Group getGroup_3_0() { return cGroup_3_0; }
 
-		//"location: "
+		//'location: '
 		public Keyword getLocationKeyword_3_0_0() { return cLocationKeyword_3_0_0; }
 
 		//locationRequirement=[requirement::LocationRequirement|Fqn]
@@ -627,10 +637,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getLocationRequirementLocationRequirementFqnParserRuleCall_3_0_1_0_1() { return cLocationRequirementLocationRequirementFqnParserRuleCall_3_0_1_0_1; }
 
-		//"qualitative hardware: " qualitativeHardwareRequirement=[requirement::QualitativeHardwareRequirement|Fqn]
+		//'qualitative hardware: ' qualitativeHardwareRequirement=[requirement::QualitativeHardwareRequirement|Fqn]
 		public Group getGroup_3_1() { return cGroup_3_1; }
 
-		//"qualitative hardware: "
+		//'qualitative hardware: '
 		public Keyword getQualitativeHardwareKeyword_3_1_0() { return cQualitativeHardwareKeyword_3_1_0; }
 
 		//qualitativeHardwareRequirement=[requirement::QualitativeHardwareRequirement|Fqn]
@@ -642,10 +652,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getQualitativeHardwareRequirementQualitativeHardwareRequirementFqnParserRuleCall_3_1_1_0_1() { return cQualitativeHardwareRequirementQualitativeHardwareRequirementFqnParserRuleCall_3_1_1_0_1; }
 
-		//"quantitative hardware: " quantitativeHardwareRequirement=[requirement::QuantitativeHardwareRequirement|Fqn]
+		//'quantitative hardware: ' quantitativeHardwareRequirement=[requirement::QuantitativeHardwareRequirement|Fqn]
 		public Group getGroup_3_2() { return cGroup_3_2; }
 
-		//"quantitative hardware: "
+		//'quantitative hardware: '
 		public Keyword getQuantitativeHardwareKeyword_3_2_0() { return cQuantitativeHardwareKeyword_3_2_0; }
 
 		//quantitativeHardwareRequirement=[requirement::QuantitativeHardwareRequirement|Fqn]
@@ -657,10 +667,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getQuantitativeHardwareRequirementQuantitativeHardwareRequirementFqnParserRuleCall_3_2_1_0_1() { return cQuantitativeHardwareRequirementQuantitativeHardwareRequirementFqnParserRuleCall_3_2_1_0_1; }
 
-		//"os: " osOrImageRequirement=[requirement::OSRequirement|Fqn]
+		//'os: ' osOrImageRequirement=[requirement::OSRequirement|Fqn]
 		public Group getGroup_3_3() { return cGroup_3_3; }
 
-		//"os: "
+		//'os: '
 		public Keyword getOsKeyword_3_3_0() { return cOsKeyword_3_3_0; }
 
 		//osOrImageRequirement=[requirement::OSRequirement|Fqn]
@@ -672,11 +682,11 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getOsOrImageRequirementOSRequirementFqnParserRuleCall_3_3_1_0_1() { return cOsOrImageRequirementOSRequirementFqnParserRuleCall_3_3_1_0_1; }
 
-		//"image: " osOrImageRequirement=[requirement::ImageRequirement|Fqn] "provider: "
+		//'image: ' osOrImageRequirement=[requirement::ImageRequirement|Fqn] 'provider: '
 		//providerRequirement=[requirement::ProviderRequirement|Fqn]
 		public Group getGroup_3_4() { return cGroup_3_4; }
 
-		//"image: "
+		//'image: '
 		public Keyword getImageKeyword_3_4_0() { return cImageKeyword_3_4_0; }
 
 		//osOrImageRequirement=[requirement::ImageRequirement|Fqn]
@@ -688,7 +698,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getOsOrImageRequirementImageRequirementFqnParserRuleCall_3_4_1_0_1() { return cOsOrImageRequirementImageRequirementFqnParserRuleCall_3_4_1_0_1; }
 
-		//"provider: "
+		//'provider: '
 		public Keyword getProviderKeyword_3_4_2() { return cProviderKeyword_3_4_2; }
 
 		//providerRequirement=[requirement::ProviderRequirement|Fqn]
@@ -700,12 +710,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getProviderRequirementProviderRequirementFqnParserRuleCall_3_4_3_0_1() { return cProviderRequirementProviderRequirementFqnParserRuleCall_3_4_3_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 
 	public class InternalComponentElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "InternalComponent");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.InternalComponent");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cInternalComponentKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -729,18 +739,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cVersionEStringParserRuleCall_3_4_1_1_0 = (RuleCall)cVersionAssignment_3_4_1_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//InternalComponent returns deployment::InternalComponent:
-		//	"internal component " name=ID "{" (providedCommunications+=ProvidedCommunication |
+		//InternalComponent deployment::InternalComponent:
+		//	'internal component ' name=ID '{' (providedCommunications+=ProvidedCommunication |
 		//	requiredCommunications+=RequiredCommunication | providedHosts+=ProvidedHost | requiredHost=RequiredHost |
-		//	configurations+=Configuration ("version: " version=EString)?)* "}";
+		//	configurations+=Configuration ('version: ' version=EString)?)*
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"internal component " name=ID "{" (providedCommunications+=ProvidedCommunication |
+		//'internal component ' name=ID '{' (providedCommunications+=ProvidedCommunication |
 		//requiredCommunications+=RequiredCommunication | providedHosts+=ProvidedHost | requiredHost=RequiredHost |
-		//configurations+=Configuration ("version: " version=EString)?)* "}"
+		//configurations+=Configuration ('version: ' version=EString)?)* '}'
 		public Group getGroup() { return cGroup; }
 
-		//"internal component "
+		//'internal component '
 		public Keyword getInternalComponentKeyword_0() { return cInternalComponentKeyword_0; }
 
 		//name=ID
@@ -749,11 +760,11 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
 		//(providedCommunications+=ProvidedCommunication | requiredCommunications+=RequiredCommunication |
-		//providedHosts+=ProvidedHost | requiredHost=RequiredHost | configurations+=Configuration ("version: "
+		//providedHosts+=ProvidedHost | requiredHost=RequiredHost | configurations+=Configuration ('version: '
 		//version=EString)?)*
 		public Alternatives getAlternatives_3() { return cAlternatives_3; }
 
@@ -781,7 +792,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//RequiredHost
 		public RuleCall getRequiredHostRequiredHostParserRuleCall_3_3_0() { return cRequiredHostRequiredHostParserRuleCall_3_3_0; }
 
-		//configurations+=Configuration ("version: " version=EString)?
+		//configurations+=Configuration ('version: ' version=EString)?
 		public Group getGroup_3_4() { return cGroup_3_4; }
 
 		//configurations+=Configuration
@@ -790,10 +801,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Configuration
 		public RuleCall getConfigurationsConfigurationParserRuleCall_3_4_0_0() { return cConfigurationsConfigurationParserRuleCall_3_4_0_0; }
 
-		//("version: " version=EString)?
+		//('version: ' version=EString)?
 		public Group getGroup_3_4_1() { return cGroup_3_4_1; }
 
-		//"version: "
+		//'version: '
 		public Keyword getVersionKeyword_3_4_1_0() { return cVersionKeyword_3_4_1_0; }
 
 		//version=EString
@@ -802,12 +813,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getVersionEStringParserRuleCall_3_4_1_1_0() { return cVersionEStringParserRuleCall_3_4_1_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 
 	public class ProvidedCommunicationElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ProvidedCommunication");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ProvidedCommunication");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cProvidedCommunicationKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -822,14 +833,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCommaKeyword_2_1_1 = (Keyword)cGroup_2_1.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
 		
-		//ProvidedCommunication returns deployment::ProvidedCommunication:
-		//	"provided communication " name=ID ("{" (("port: " portNumber=INT) ","?)* "}")?;
+		//ProvidedCommunication deployment::ProvidedCommunication:
+		//	'provided communication ' name=ID ('{' (('port: ' portNumber=INT) ','?)*
+		//	'}')?
 		@Override public ParserRule getRule() { return rule; }
 
-		//"provided communication " name=ID ("{" (("port: " portNumber=INT) ","?)* "}")?
+		//'provided communication ' name=ID ('{' (('port: ' portNumber=INT) ','?)* '}')?
 		public Group getGroup() { return cGroup; }
 
-		//"provided communication "
+		//'provided communication '
 		public Keyword getProvidedCommunicationKeyword_0() { return cProvidedCommunicationKeyword_0; }
 
 		//name=ID
@@ -838,19 +850,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//("{" (("port: " portNumber=INT) ","?)* "}")?
+		//('{' (('port: ' portNumber=INT) ','?)* '}')?
 		public Group getGroup_2() { return cGroup_2; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2_0() { return cLeftCurlyBracketKeyword_2_0; }
 
-		//(("port: " portNumber=INT) ","?)*
+		//(('port: ' portNumber=INT) ','?)*
 		public Group getGroup_2_1() { return cGroup_2_1; }
 
-		//"port: " portNumber=INT
+		//('port: ' portNumber=INT)
 		public Group getGroup_2_1_0() { return cGroup_2_1_0; }
 
-		//"port: "
+		//'port: '
 		public Keyword getPortKeyword_2_1_0_0() { return cPortKeyword_2_1_0_0; }
 
 		//portNumber=INT
@@ -859,15 +871,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getPortNumberINTTerminalRuleCall_2_1_0_1_0() { return cPortNumberINTTerminalRuleCall_2_1_0_1_0; }
 
-		//","?
+		//','?
 		public Keyword getCommaKeyword_2_1_1() { return cCommaKeyword_2_1_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_2_2() { return cRightCurlyBracketKeyword_2_2; }
 	}
 
 	public class RequiredCommunicationElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RequiredCommunication");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.RequiredCommunication");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRequiredCommunicationKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -885,14 +897,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCommaKeyword_2_1_1 = (Keyword)cGroup_2_1.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
 		
-		//RequiredCommunication returns deployment::RequiredCommunication:
-		//	"required communication " name=ID ("{" (("port: " portNumber=INT | isMandatory?="mandatory") ","?)* "}")?;
+		//RequiredCommunication deployment::RequiredCommunication:
+		//	'required communication ' name=ID ('{' (('port: ' portNumber=INT | isMandatory?='mandatory') ','?)*
+		//	'}')?
 		@Override public ParserRule getRule() { return rule; }
 
-		//"required communication " name=ID ("{" (("port: " portNumber=INT | isMandatory?="mandatory") ","?)* "}")?
+		//'required communication ' name=ID ('{' (('port: ' portNumber=INT | isMandatory?='mandatory') ','?)* '}')?
 		public Group getGroup() { return cGroup; }
 
-		//"required communication "
+		//'required communication '
 		public Keyword getRequiredCommunicationKeyword_0() { return cRequiredCommunicationKeyword_0; }
 
 		//name=ID
@@ -901,22 +914,22 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//("{" (("port: " portNumber=INT | isMandatory?="mandatory") ","?)* "}")?
+		//('{' (('port: ' portNumber=INT | isMandatory?='mandatory') ','?)* '}')?
 		public Group getGroup_2() { return cGroup_2; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2_0() { return cLeftCurlyBracketKeyword_2_0; }
 
-		//(("port: " portNumber=INT | isMandatory?="mandatory") ","?)*
+		//(('port: ' portNumber=INT | isMandatory?='mandatory') ','?)*
 		public Group getGroup_2_1() { return cGroup_2_1; }
 
-		//"port: " portNumber=INT | isMandatory?="mandatory"
+		//('port: ' portNumber=INT | isMandatory?='mandatory')
 		public Alternatives getAlternatives_2_1_0() { return cAlternatives_2_1_0; }
 
-		//"port: " portNumber=INT
+		//'port: ' portNumber=INT
 		public Group getGroup_2_1_0_0() { return cGroup_2_1_0_0; }
 
-		//"port: "
+		//'port: '
 		public Keyword getPortKeyword_2_1_0_0_0() { return cPortKeyword_2_1_0_0_0; }
 
 		//portNumber=INT
@@ -925,34 +938,34 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getPortNumberINTTerminalRuleCall_2_1_0_0_1_0() { return cPortNumberINTTerminalRuleCall_2_1_0_0_1_0; }
 
-		//isMandatory?="mandatory"
+		//isMandatory?='mandatory'
 		public Assignment getIsMandatoryAssignment_2_1_0_1() { return cIsMandatoryAssignment_2_1_0_1; }
 
-		//"mandatory"
+		//'mandatory'
 		public Keyword getIsMandatoryMandatoryKeyword_2_1_0_1_0() { return cIsMandatoryMandatoryKeyword_2_1_0_1_0; }
 
-		//","?
+		//','?
 		public Keyword getCommaKeyword_2_1_1() { return cCommaKeyword_2_1_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_2_2() { return cRightCurlyBracketKeyword_2_2; }
 	}
 
 	public class ProvidedHostElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ProvidedHost");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ProvidedHost");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cProvidedHostKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		
-		//ProvidedHost returns deployment::ProvidedHost:
-		//	"provided host " name=ID;
+		//ProvidedHost deployment::ProvidedHost:
+		//	'provided host ' name=ID
 		@Override public ParserRule getRule() { return rule; }
 
-		//"provided host " name=ID
+		//'provided host ' name=ID
 		public Group getGroup() { return cGroup; }
 
-		//"provided host "
+		//'provided host '
 		public Keyword getProvidedHostKeyword_0() { return cProvidedHostKeyword_0; }
 
 		//name=ID
@@ -963,20 +976,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class RequiredHostElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RequiredHost");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.RequiredHost");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRequiredHostKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		
-		//RequiredHost returns deployment::RequiredHost:
-		//	"required host " name=ID;
+		//RequiredHost deployment::RequiredHost:
+		//	'required host ' name=ID
 		@Override public ParserRule getRule() { return rule; }
 
-		//"required host " name=ID
+		//'required host ' name=ID
 		public Group getGroup() { return cGroup; }
 
-		//"required host "
+		//'required host '
 		public Keyword getRequiredHostKeyword_0() { return cRequiredHostKeyword_0; }
 
 		//name=ID
@@ -987,7 +1000,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class CommunicationElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Communication");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Communication");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cCommunicationKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -1015,20 +1028,21 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRequiredPortConfigurationConfigurationParserRuleCall_9_1_0 = (RuleCall)cRequiredPortConfigurationAssignment_9_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
-		//Communication returns deployment::Communication:
-		//	"communication " name=ID "{" ("type: " type=CommunicationType)? "from "
-		//	requiredCommunication=[deployment::RequiredCommunication|Fqn] "to "
-		//	providedCommunication=[deployment::ProvidedCommunication|Fqn] ("provided port "
-		//	providedPortConfiguration=Configuration)? ("required port " requiredPortConfiguration=Configuration)? "}";
+		//Communication deployment::Communication:
+		//	'communication ' name=ID '{' ('type: ' type=CommunicationType)?
+		//	'from ' requiredCommunication=[deployment::RequiredCommunication|Fqn]
+		//	'to ' providedCommunication=[deployment::ProvidedCommunication|Fqn] ('provided port '
+		//	providedPortConfiguration=Configuration)? ('required port ' requiredPortConfiguration=Configuration)?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"communication " name=ID "{" ("type: " type=CommunicationType)? "from "
-		//requiredCommunication=[deployment::RequiredCommunication|Fqn] "to "
-		//providedCommunication=[deployment::ProvidedCommunication|Fqn] ("provided port "
-		//providedPortConfiguration=Configuration)? ("required port " requiredPortConfiguration=Configuration)? "}"
+		//'communication ' name=ID '{' ('type: ' type=CommunicationType)? 'from '
+		//requiredCommunication=[deployment::RequiredCommunication|Fqn] 'to '
+		//providedCommunication=[deployment::ProvidedCommunication|Fqn] ('provided port '
+		//providedPortConfiguration=Configuration)? ('required port ' requiredPortConfiguration=Configuration)? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"communication "
+		//'communication '
 		public Keyword getCommunicationKeyword_0() { return cCommunicationKeyword_0; }
 
 		//name=ID
@@ -1037,13 +1051,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("type: " type=CommunicationType)?
+		//('type: ' type=CommunicationType)?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"type: "
+		//'type: '
 		public Keyword getTypeKeyword_3_0() { return cTypeKeyword_3_0; }
 
 		//type=CommunicationType
@@ -1052,7 +1066,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//CommunicationType
 		public RuleCall getTypeCommunicationTypeEnumRuleCall_3_1_0() { return cTypeCommunicationTypeEnumRuleCall_3_1_0; }
 
-		//"from "
+		//'from '
 		public Keyword getFromKeyword_4() { return cFromKeyword_4; }
 
 		//requiredCommunication=[deployment::RequiredCommunication|Fqn]
@@ -1064,7 +1078,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getRequiredCommunicationRequiredCommunicationFqnParserRuleCall_5_0_1() { return cRequiredCommunicationRequiredCommunicationFqnParserRuleCall_5_0_1; }
 
-		//"to "
+		//'to '
 		public Keyword getToKeyword_6() { return cToKeyword_6; }
 
 		//providedCommunication=[deployment::ProvidedCommunication|Fqn]
@@ -1076,10 +1090,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getProvidedCommunicationProvidedCommunicationFqnParserRuleCall_7_0_1() { return cProvidedCommunicationProvidedCommunicationFqnParserRuleCall_7_0_1; }
 
-		//("provided port " providedPortConfiguration=Configuration)?
+		//('provided port ' providedPortConfiguration=Configuration)?
 		public Group getGroup_8() { return cGroup_8; }
 
-		//"provided port "
+		//'provided port '
 		public Keyword getProvidedPortKeyword_8_0() { return cProvidedPortKeyword_8_0; }
 
 		//providedPortConfiguration=Configuration
@@ -1088,10 +1102,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Configuration
 		public RuleCall getProvidedPortConfigurationConfigurationParserRuleCall_8_1_0() { return cProvidedPortConfigurationConfigurationParserRuleCall_8_1_0; }
 
-		//("required port " requiredPortConfiguration=Configuration)?
+		//('required port ' requiredPortConfiguration=Configuration)?
 		public Group getGroup_9() { return cGroup_9; }
 
-		//"required port "
+		//'required port '
 		public Keyword getRequiredPortKeyword_9_0() { return cRequiredPortKeyword_9_0; }
 
 		//requiredPortConfiguration=Configuration
@@ -1100,12 +1114,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Configuration
 		public RuleCall getRequiredPortConfigurationConfigurationParserRuleCall_9_1_0() { return cRequiredPortConfigurationConfigurationParserRuleCall_9_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
 	}
 
 	public class HostingElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Hosting");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Hosting");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cHostingKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -1121,16 +1135,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cProvidedHostProvidedHostFqnParserRuleCall_6_0_1 = (RuleCall)cProvidedHostProvidedHostCrossReference_6_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
-		//Hosting returns deployment::Hosting:
-		//	"hosting " name=ID "{" "from " requiredHost=[deployment::RequiredHost|Fqn] "to "
-		//	providedHost=[deployment::ProvidedHost|Fqn] "}";
+		//Hosting deployment::Hosting:
+		//	'hosting ' name=ID '{'
+		//	'from ' requiredHost=[deployment::RequiredHost|Fqn]
+		//	'to ' providedHost=[deployment::ProvidedHost|Fqn]
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"hosting " name=ID "{" "from " requiredHost=[deployment::RequiredHost|Fqn] "to "
-		//providedHost=[deployment::ProvidedHost|Fqn] "}"
+		//'hosting ' name=ID '{' 'from ' requiredHost=[deployment::RequiredHost|Fqn] 'to '
+		//providedHost=[deployment::ProvidedHost|Fqn] '}'
 		public Group getGroup() { return cGroup; }
 
-		//"hosting "
+		//'hosting '
 		public Keyword getHostingKeyword_0() { return cHostingKeyword_0; }
 
 		//name=ID
@@ -1139,10 +1155,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"from "
+		//'from '
 		public Keyword getFromKeyword_3() { return cFromKeyword_3; }
 
 		//requiredHost=[deployment::RequiredHost|Fqn]
@@ -1154,7 +1170,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getRequiredHostRequiredHostFqnParserRuleCall_4_0_1() { return cRequiredHostRequiredHostFqnParserRuleCall_4_0_1; }
 
-		//"to "
+		//'to '
 		public Keyword getToKeyword_5() { return cToKeyword_5; }
 
 		//providedHost=[deployment::ProvidedHost|Fqn]
@@ -1166,12 +1182,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getProvidedHostProvidedHostFqnParserRuleCall_6_0_1() { return cProvidedHostProvidedHostFqnParserRuleCall_6_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class VMInstanceElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "VMInstance");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.VMInstance");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cVmInstanceKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -1199,18 +1215,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cProvidedHostInstancesProvidedHostInstanceParserRuleCall_8_0 = (RuleCall)cProvidedHostInstancesAssignment_8.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
-		//VMInstance returns deployment::VMInstance:
-		//	"vm instance " name=ID "typed " type=[deployment::VM|Fqn] "{" ("ip: " ip=EString)? ("vm type:"
-		//	vmType=[provider::Attribute|Fqn])? ("vm type value:" vmTypeValue=[type::SingleValue|Fqn])?
-		//	providedHostInstances+=ProvidedHostInstance* "}";
+		//VMInstance deployment::VMInstance:
+		//	'vm instance ' name=ID 'typed ' type=[deployment::VM|Fqn] '{' ('ip: ' ip=EString)? ('vm type:'
+		//	vmType=[provider::Attribute|Fqn])? ('vm type value:' vmTypeValue=[type::SingleValue|Fqn])?
+		//	providedHostInstances+=ProvidedHostInstance*
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"vm instance " name=ID "typed " type=[deployment::VM|Fqn] "{" ("ip: " ip=EString)? ("vm type:"
-		//vmType=[provider::Attribute|Fqn])? ("vm type value:" vmTypeValue=[type::SingleValue|Fqn])?
-		//providedHostInstances+=ProvidedHostInstance* "}"
+		//'vm instance ' name=ID 'typed ' type=[deployment::VM|Fqn] '{' ('ip: ' ip=EString)? ('vm type:'
+		//vmType=[provider::Attribute|Fqn])? ('vm type value:' vmTypeValue=[type::SingleValue|Fqn])?
+		//providedHostInstances+=ProvidedHostInstance* '}'
 		public Group getGroup() { return cGroup; }
 
-		//"vm instance "
+		//'vm instance '
 		public Keyword getVmInstanceKeyword_0() { return cVmInstanceKeyword_0; }
 
 		//name=ID
@@ -1219,7 +1236,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"typed "
+		//'typed '
 		public Keyword getTypedKeyword_2() { return cTypedKeyword_2; }
 
 		//type=[deployment::VM|Fqn]
@@ -1231,13 +1248,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getTypeVMFqnParserRuleCall_3_0_1() { return cTypeVMFqnParserRuleCall_3_0_1; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 
-		//("ip: " ip=EString)?
+		//('ip: ' ip=EString)?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"ip: "
+		//'ip: '
 		public Keyword getIpKeyword_5_0() { return cIpKeyword_5_0; }
 
 		//ip=EString
@@ -1246,10 +1263,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getIpEStringParserRuleCall_5_1_0() { return cIpEStringParserRuleCall_5_1_0; }
 
-		//("vm type:" vmType=[provider::Attribute|Fqn])?
+		//('vm type:' vmType=[provider::Attribute|Fqn])?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//"vm type:"
+		//'vm type:'
 		public Keyword getVmTypeKeyword_6_0() { return cVmTypeKeyword_6_0; }
 
 		//vmType=[provider::Attribute|Fqn]
@@ -1261,10 +1278,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getVmTypeAttributeFqnParserRuleCall_6_1_0_1() { return cVmTypeAttributeFqnParserRuleCall_6_1_0_1; }
 
-		//("vm type value:" vmTypeValue=[type::SingleValue|Fqn])?
+		//('vm type value:' vmTypeValue=[type::SingleValue|Fqn])?
 		public Group getGroup_7() { return cGroup_7; }
 
-		//"vm type value:"
+		//'vm type value:'
 		public Keyword getVmTypeValueKeyword_7_0() { return cVmTypeValueKeyword_7_0; }
 
 		//vmTypeValue=[type::SingleValue|Fqn]
@@ -1282,12 +1299,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ProvidedHostInstance
 		public RuleCall getProvidedHostInstancesProvidedHostInstanceParserRuleCall_8_0() { return cProvidedHostInstancesProvidedHostInstanceParserRuleCall_8_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
 	}
 
 	public class InternalComponentInstanceElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "InternalComponentInstance");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.InternalComponentInstance");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cInternalComponentInstanceKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -1308,20 +1325,21 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRequiredHostInstanceRequiredHostInstanceParserRuleCall_5_3_0 = (RuleCall)cRequiredHostInstanceAssignment_5_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
-		//InternalComponentInstance returns deployment::InternalComponentInstance:
-		//	"internal component instance " name=ID "typed " type=[deployment::InternalComponent|Fqn] "{"
+		//InternalComponentInstance deployment::InternalComponentInstance:
+		//	'internal component instance ' name=ID 'typed ' type=[deployment::InternalComponent|Fqn] '{'
 		//	(providedCommunicationInstances+=ProvidedCommunicationInstance |
 		//	requiredCommunicationInstances+=RequiredCommunicationInstance | providedHostInstances+=ProvidedHostInstance |
-		//	requiredHostInstance=RequiredHostInstance)* "}";
+		//	requiredHostInstance=RequiredHostInstance)*
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"internal component instance " name=ID "typed " type=[deployment::InternalComponent|Fqn] "{"
+		//'internal component instance ' name=ID 'typed ' type=[deployment::InternalComponent|Fqn] '{'
 		//(providedCommunicationInstances+=ProvidedCommunicationInstance |
 		//requiredCommunicationInstances+=RequiredCommunicationInstance | providedHostInstances+=ProvidedHostInstance |
-		//requiredHostInstance=RequiredHostInstance)* "}"
+		//requiredHostInstance=RequiredHostInstance)* '}'
 		public Group getGroup() { return cGroup; }
 
-		//"internal component instance "
+		//'internal component instance '
 		public Keyword getInternalComponentInstanceKeyword_0() { return cInternalComponentInstanceKeyword_0; }
 
 		//name=ID
@@ -1330,7 +1348,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"typed "
+		//'typed '
 		public Keyword getTypedKeyword_2() { return cTypedKeyword_2; }
 
 		//type=[deployment::InternalComponent|Fqn]
@@ -1342,7 +1360,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getTypeInternalComponentFqnParserRuleCall_3_0_1() { return cTypeInternalComponentFqnParserRuleCall_3_0_1; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 
 		//(providedCommunicationInstances+=ProvidedCommunicationInstance |
@@ -1374,12 +1392,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//RequiredHostInstance
 		public RuleCall getRequiredHostInstanceRequiredHostInstanceParserRuleCall_5_3_0() { return cRequiredHostInstanceRequiredHostInstanceParserRuleCall_5_3_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class ProvidedCommunicationInstanceElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ProvidedCommunicationInstance");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ProvidedCommunicationInstance");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cProvidedCommunicationInstanceKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -1389,14 +1407,14 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cTypeCommunicationPortCrossReference_3_0 = (CrossReference)cTypeAssignment_3.eContents().get(0);
 		private final RuleCall cTypeCommunicationPortFqnParserRuleCall_3_0_1 = (RuleCall)cTypeCommunicationPortCrossReference_3_0.eContents().get(1);
 		
-		//ProvidedCommunicationInstance returns deployment::ProvidedCommunicationInstance:
-		//	"provided communication instance " name=ID "typed " type=[deployment::CommunicationPort|Fqn];
+		//ProvidedCommunicationInstance deployment::ProvidedCommunicationInstance:
+		//	'provided communication instance ' name=ID 'typed ' type=[deployment::CommunicationPort|Fqn]
 		@Override public ParserRule getRule() { return rule; }
 
-		//"provided communication instance " name=ID "typed " type=[deployment::CommunicationPort|Fqn]
+		//'provided communication instance ' name=ID 'typed ' type=[deployment::CommunicationPort|Fqn]
 		public Group getGroup() { return cGroup; }
 
-		//"provided communication instance "
+		//'provided communication instance '
 		public Keyword getProvidedCommunicationInstanceKeyword_0() { return cProvidedCommunicationInstanceKeyword_0; }
 
 		//name=ID
@@ -1405,7 +1423,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"typed "
+		//'typed '
 		public Keyword getTypedKeyword_2() { return cTypedKeyword_2; }
 
 		//type=[deployment::CommunicationPort|Fqn]
@@ -1419,7 +1437,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class RequiredCommunicationInstanceElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RequiredCommunicationInstance");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.RequiredCommunicationInstance");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRequiredCommunicationInstanceKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -1429,14 +1447,14 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cTypeCommunicationPortCrossReference_3_0 = (CrossReference)cTypeAssignment_3.eContents().get(0);
 		private final RuleCall cTypeCommunicationPortFqnParserRuleCall_3_0_1 = (RuleCall)cTypeCommunicationPortCrossReference_3_0.eContents().get(1);
 		
-		//RequiredCommunicationInstance returns deployment::RequiredCommunicationInstance:
-		//	"required communication instance " name=ID "typed " type=[deployment::CommunicationPort|Fqn];
+		//RequiredCommunicationInstance deployment::RequiredCommunicationInstance:
+		//	'required communication instance ' name=ID 'typed ' type=[deployment::CommunicationPort|Fqn]
 		@Override public ParserRule getRule() { return rule; }
 
-		//"required communication instance " name=ID "typed " type=[deployment::CommunicationPort|Fqn]
+		//'required communication instance ' name=ID 'typed ' type=[deployment::CommunicationPort|Fqn]
 		public Group getGroup() { return cGroup; }
 
-		//"required communication instance "
+		//'required communication instance '
 		public Keyword getRequiredCommunicationInstanceKeyword_0() { return cRequiredCommunicationInstanceKeyword_0; }
 
 		//name=ID
@@ -1445,7 +1463,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"typed "
+		//'typed '
 		public Keyword getTypedKeyword_2() { return cTypedKeyword_2; }
 
 		//type=[deployment::CommunicationPort|Fqn]
@@ -1459,7 +1477,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class ProvidedHostInstanceElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ProvidedHostInstance");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ProvidedHostInstance");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cProvidedHostInstanceKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -1469,14 +1487,14 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cTypeHostingPortCrossReference_3_0 = (CrossReference)cTypeAssignment_3.eContents().get(0);
 		private final RuleCall cTypeHostingPortFqnParserRuleCall_3_0_1 = (RuleCall)cTypeHostingPortCrossReference_3_0.eContents().get(1);
 		
-		//ProvidedHostInstance returns deployment::ProvidedHostInstance:
-		//	"provided host instance " name=ID "typed " type=[deployment::HostingPort|Fqn];
+		//ProvidedHostInstance deployment::ProvidedHostInstance:
+		//	'provided host instance ' name=ID 'typed ' type=[deployment::HostingPort|Fqn]
 		@Override public ParserRule getRule() { return rule; }
 
-		//"provided host instance " name=ID "typed " type=[deployment::HostingPort|Fqn]
+		//'provided host instance ' name=ID 'typed ' type=[deployment::HostingPort|Fqn]
 		public Group getGroup() { return cGroup; }
 
-		//"provided host instance "
+		//'provided host instance '
 		public Keyword getProvidedHostInstanceKeyword_0() { return cProvidedHostInstanceKeyword_0; }
 
 		//name=ID
@@ -1485,7 +1503,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"typed "
+		//'typed '
 		public Keyword getTypedKeyword_2() { return cTypedKeyword_2; }
 
 		//type=[deployment::HostingPort|Fqn]
@@ -1499,7 +1517,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class RequiredHostInstanceElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RequiredHostInstance");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.RequiredHostInstance");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRequiredHostInstanceKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -1509,14 +1527,14 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cTypeHostingPortCrossReference_3_0 = (CrossReference)cTypeAssignment_3.eContents().get(0);
 		private final RuleCall cTypeHostingPortFqnParserRuleCall_3_0_1 = (RuleCall)cTypeHostingPortCrossReference_3_0.eContents().get(1);
 		
-		//RequiredHostInstance returns deployment::RequiredHostInstance:
-		//	"required host instance " name=ID "typed " type=[deployment::HostingPort|Fqn];
+		//RequiredHostInstance deployment::RequiredHostInstance:
+		//	'required host instance ' name=ID 'typed ' type=[deployment::HostingPort|Fqn]
 		@Override public ParserRule getRule() { return rule; }
 
-		//"required host instance " name=ID "typed " type=[deployment::HostingPort|Fqn]
+		//'required host instance ' name=ID 'typed ' type=[deployment::HostingPort|Fqn]
 		public Group getGroup() { return cGroup; }
 
-		//"required host instance "
+		//'required host instance '
 		public Keyword getRequiredHostInstanceKeyword_0() { return cRequiredHostInstanceKeyword_0; }
 
 		//name=ID
@@ -1525,7 +1543,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"typed "
+		//'typed '
 		public Keyword getTypedKeyword_2() { return cTypedKeyword_2; }
 
 		//type=[deployment::HostingPort|Fqn]
@@ -1539,7 +1557,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class CommunicationInstanceElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CommunicationInstance");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.CommunicationInstance");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cConnectKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cRequiredCommunicationInstanceAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -1558,18 +1576,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_6_1_0 = (RuleCall)cNameAssignment_6_1.eContents().get(0);
 		
-		//CommunicationInstance returns deployment::CommunicationInstance:
-		//	"connect " requiredCommunicationInstance=[deployment::RequiredCommunicationInstance|Fqn] "to "
-		//	providedCommunicationInstance=[deployment::ProvidedCommunicationInstance|Fqn] "typed "
-		//	type=[deployment::Communication|Fqn] ("named " name=ID)?;
+		//CommunicationInstance deployment::CommunicationInstance:
+		//	'connect ' requiredCommunicationInstance=[deployment::RequiredCommunicationInstance|Fqn] 'to '
+		//	providedCommunicationInstance=[deployment::ProvidedCommunicationInstance|Fqn] 'typed '
+		//	type=[deployment::Communication|Fqn] ('named ' name=ID)?
 		@Override public ParserRule getRule() { return rule; }
 
-		//"connect " requiredCommunicationInstance=[deployment::RequiredCommunicationInstance|Fqn] "to "
-		//providedCommunicationInstance=[deployment::ProvidedCommunicationInstance|Fqn] "typed "
-		//type=[deployment::Communication|Fqn] ("named " name=ID)?
+		//'connect ' requiredCommunicationInstance=[deployment::RequiredCommunicationInstance|Fqn] 'to '
+		//providedCommunicationInstance=[deployment::ProvidedCommunicationInstance|Fqn] 'typed '
+		//type=[deployment::Communication|Fqn] ('named ' name=ID)?
 		public Group getGroup() { return cGroup; }
 
-		//"connect "
+		//'connect '
 		public Keyword getConnectKeyword_0() { return cConnectKeyword_0; }
 
 		//requiredCommunicationInstance=[deployment::RequiredCommunicationInstance|Fqn]
@@ -1581,7 +1599,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getRequiredCommunicationInstanceRequiredCommunicationInstanceFqnParserRuleCall_1_0_1() { return cRequiredCommunicationInstanceRequiredCommunicationInstanceFqnParserRuleCall_1_0_1; }
 
-		//"to "
+		//'to '
 		public Keyword getToKeyword_2() { return cToKeyword_2; }
 
 		//providedCommunicationInstance=[deployment::ProvidedCommunicationInstance|Fqn]
@@ -1593,7 +1611,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getProvidedCommunicationInstanceProvidedCommunicationInstanceFqnParserRuleCall_3_0_1() { return cProvidedCommunicationInstanceProvidedCommunicationInstanceFqnParserRuleCall_3_0_1; }
 
-		//"typed "
+		//'typed '
 		public Keyword getTypedKeyword_4() { return cTypedKeyword_4; }
 
 		//type=[deployment::Communication|Fqn]
@@ -1605,10 +1623,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getTypeCommunicationFqnParserRuleCall_5_0_1() { return cTypeCommunicationFqnParserRuleCall_5_0_1; }
 
-		//("named " name=ID)?
+		//('named ' name=ID)?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//"named "
+		//'named '
 		public Keyword getNamedKeyword_6_0() { return cNamedKeyword_6_0; }
 
 		//name=ID
@@ -1619,7 +1637,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class HostingInstanceElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "HostingInstance");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.HostingInstance");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cHostKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cRequiredHostInstanceAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -1638,18 +1656,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_6_1_0 = (RuleCall)cNameAssignment_6_1.eContents().get(0);
 		
-		//HostingInstance returns deployment::HostingInstance:
-		//	"host " requiredHostInstance=[deployment::RequiredHostInstance|Fqn] "on "
-		//	providedHostInstance=[deployment::ProvidedHostInstance|Fqn] "typed " type=[deployment::Hosting|Fqn] ("named "
-		//	name=ID)?;
+		//HostingInstance deployment::HostingInstance:
+		//	'host ' requiredHostInstance=[deployment::RequiredHostInstance|Fqn] 'on '
+		//	providedHostInstance=[deployment::ProvidedHostInstance|Fqn] 'typed ' type=[deployment::Hosting|Fqn] ('named '
+		//	name=ID)?
 		@Override public ParserRule getRule() { return rule; }
 
-		//"host " requiredHostInstance=[deployment::RequiredHostInstance|Fqn] "on "
-		//providedHostInstance=[deployment::ProvidedHostInstance|Fqn] "typed " type=[deployment::Hosting|Fqn] ("named "
-		//name=ID)?
+		//'host ' requiredHostInstance=[deployment::RequiredHostInstance|Fqn] 'on '
+		//providedHostInstance=[deployment::ProvidedHostInstance|Fqn] 'typed ' type=[deployment::Hosting|Fqn] ('named ' name=ID)?
 		public Group getGroup() { return cGroup; }
 
-		//"host "
+		//'host '
 		public Keyword getHostKeyword_0() { return cHostKeyword_0; }
 
 		//requiredHostInstance=[deployment::RequiredHostInstance|Fqn]
@@ -1661,7 +1678,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getRequiredHostInstanceRequiredHostInstanceFqnParserRuleCall_1_0_1() { return cRequiredHostInstanceRequiredHostInstanceFqnParserRuleCall_1_0_1; }
 
-		//"on "
+		//'on '
 		public Keyword getOnKeyword_2() { return cOnKeyword_2; }
 
 		//providedHostInstance=[deployment::ProvidedHostInstance|Fqn]
@@ -1673,7 +1690,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getProvidedHostInstanceProvidedHostInstanceFqnParserRuleCall_3_0_1() { return cProvidedHostInstanceProvidedHostInstanceFqnParserRuleCall_3_0_1; }
 
-		//"typed "
+		//'typed '
 		public Keyword getTypedKeyword_4() { return cTypedKeyword_4; }
 
 		//type=[deployment::Hosting|Fqn]
@@ -1685,10 +1702,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getTypeHostingFqnParserRuleCall_5_0_1() { return cTypeHostingFqnParserRuleCall_5_0_1; }
 
-		//("named " name=ID)?
+		//('named ' name=ID)?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//"named "
+		//'named '
 		public Keyword getNamedKeyword_6_0() { return cNamedKeyword_6_0; }
 
 		//name=ID
@@ -1699,7 +1716,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class ExecutionModelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ExecutionModel");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ExecutionModel");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cExecutionModelAction_0 = (Action)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
@@ -1731,29 +1748,30 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRuleTriggersRuleTriggerParserRuleCall_5_5_0 = (RuleCall)cRuleTriggersAssignment_5_5.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
-		/// * Execution model * / ExecutionModel returns execution::ExecutionModel:
-		//	{execution::ExecutionModel} ("importURI " "{" importURI+=EString ("," importURI+=EString)* "}")? "execution model "
-		//	name=ID "{" (actionRealisations+=ActionRealisation | eventInstances+=EventInstance |
+		/// * Execution model * / ExecutionModel execution::ExecutionModel:
+		//	{execution::ExecutionModel} ('importURI ' '{' importURI+=EString (',' importURI+=EString)* '}')?
+		//	'execution model ' name=ID '{' (actionRealisations+=ActionRealisation | eventInstances+=EventInstance |
 		//	executionContexts+=ExecutionContext | measurements+=Measurement | sloAssessessments+=SLOAssessment |
-		//	ruleTriggers+=RuleTrigger)* "}";
+		//	ruleTriggers+=RuleTrigger)*
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//{execution::ExecutionModel} ("importURI " "{" importURI+=EString ("," importURI+=EString)* "}")? "execution model "
-		//name=ID "{" (actionRealisations+=ActionRealisation | eventInstances+=EventInstance |
+		//{execution::ExecutionModel} ('importURI ' '{' importURI+=EString (',' importURI+=EString)* '}')? 'execution model '
+		//name=ID '{' (actionRealisations+=ActionRealisation | eventInstances+=EventInstance |
 		//executionContexts+=ExecutionContext | measurements+=Measurement | sloAssessessments+=SLOAssessment |
-		//ruleTriggers+=RuleTrigger)* "}"
+		//ruleTriggers+=RuleTrigger)* '}'
 		public Group getGroup() { return cGroup; }
 
 		//{execution::ExecutionModel}
 		public Action getExecutionModelAction_0() { return cExecutionModelAction_0; }
 
-		//("importURI " "{" importURI+=EString ("," importURI+=EString)* "}")?
+		//('importURI ' '{' importURI+=EString (',' importURI+=EString)* '}')?
 		public Group getGroup_1() { return cGroup_1; }
 
-		//"importURI "
+		//'importURI '
 		public Keyword getImportURIKeyword_1_0() { return cImportURIKeyword_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1_1() { return cLeftCurlyBracketKeyword_1_1; }
 
 		//importURI+=EString
@@ -1762,10 +1780,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getImportURIEStringParserRuleCall_1_2_0() { return cImportURIEStringParserRuleCall_1_2_0; }
 
-		//("," importURI+=EString)*
+		//(',' importURI+=EString)*
 		public Group getGroup_1_3() { return cGroup_1_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_1_3_0() { return cCommaKeyword_1_3_0; }
 
 		//importURI+=EString
@@ -1774,10 +1792,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getImportURIEStringParserRuleCall_1_3_1_0() { return cImportURIEStringParserRuleCall_1_3_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_1_4() { return cRightCurlyBracketKeyword_1_4; }
 
-		//"execution model "
+		//'execution model '
 		public Keyword getExecutionModelKeyword_2() { return cExecutionModelKeyword_2; }
 
 		//name=ID
@@ -1786,7 +1804,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_3_0() { return cNameIDTerminalRuleCall_3_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 
 		//(actionRealisations+=ActionRealisation | eventInstances+=EventInstance | executionContexts+=ExecutionContext |
@@ -1829,12 +1847,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//RuleTrigger
 		public RuleCall getRuleTriggersRuleTriggerParserRuleCall_5_5_0() { return cRuleTriggersRuleTriggerParserRuleCall_5_5_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class ActionRealisationElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ActionRealisation");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ActionRealisation");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cActionRealisationKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -1858,16 +1876,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cEndTimeEDateParserRuleCall_7_1_0 = (RuleCall)cEndTimeAssignment_7_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
-		//ActionRealisation returns execution::ActionRealisation:
-		//	"action realisation " name=ID "{" "action: " action=[camel::Action|Fqn] ("low level actions: "
-		//	lowLevelActions=EString)? ("start time: " startTime=EDate)? ("end time: " endTime=EDate)? "}";
+		//ActionRealisation execution::ActionRealisation:
+		//	'action realisation ' name=ID '{'
+		//	'action: ' action=[camel::Action|Fqn] ('low level actions: ' lowLevelActions=EString)? ('start time: '
+		//	startTime=EDate)? ('end time: ' endTime=EDate)?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"action realisation " name=ID "{" "action: " action=[camel::Action|Fqn] ("low level actions: " lowLevelActions=EString)?
-		//("start time: " startTime=EDate)? ("end time: " endTime=EDate)? "}"
+		//'action realisation ' name=ID '{' 'action: ' action=[camel::Action|Fqn] ('low level actions: ' lowLevelActions=EString)?
+		//('start time: ' startTime=EDate)? ('end time: ' endTime=EDate)? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"action realisation "
+		//'action realisation '
 		public Keyword getActionRealisationKeyword_0() { return cActionRealisationKeyword_0; }
 
 		//name=ID
@@ -1876,10 +1896,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"action: "
+		//'action: '
 		public Keyword getActionKeyword_3() { return cActionKeyword_3; }
 
 		//action=[camel::Action|Fqn]
@@ -1891,10 +1911,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getActionActionFqnParserRuleCall_4_0_1() { return cActionActionFqnParserRuleCall_4_0_1; }
 
-		//("low level actions: " lowLevelActions=EString)?
+		//('low level actions: ' lowLevelActions=EString)?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"low level actions: "
+		//'low level actions: '
 		public Keyword getLowLevelActionsKeyword_5_0() { return cLowLevelActionsKeyword_5_0; }
 
 		//lowLevelActions=EString
@@ -1903,10 +1923,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getLowLevelActionsEStringParserRuleCall_5_1_0() { return cLowLevelActionsEStringParserRuleCall_5_1_0; }
 
-		//("start time: " startTime=EDate)?
+		//('start time: ' startTime=EDate)?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//"start time: "
+		//'start time: '
 		public Keyword getStartTimeKeyword_6_0() { return cStartTimeKeyword_6_0; }
 
 		//startTime=EDate
@@ -1915,10 +1935,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDate
 		public RuleCall getStartTimeEDateParserRuleCall_6_1_0() { return cStartTimeEDateParserRuleCall_6_1_0; }
 
-		//("end time: " endTime=EDate)?
+		//('end time: ' endTime=EDate)?
 		public Group getGroup_7() { return cGroup_7; }
 
-		//"end time: "
+		//'end time: '
 		public Keyword getEndTimeKeyword_7_0() { return cEndTimeKeyword_7_0; }
 
 		//endTime=EDate
@@ -1927,12 +1947,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDate
 		public RuleCall getEndTimeEDateParserRuleCall_7_1_0() { return cEndTimeEDateParserRuleCall_7_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 	}
 
 	public class ExecutionContextElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ExecutionContext");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ExecutionContext");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cExecutionContextKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -1969,20 +1989,22 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRequirementGroupRequirementGroupFqnParserRuleCall_12_0_1 = (RuleCall)cRequirementGroupRequirementGroupCrossReference_12_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		
-		//ExecutionContext returns execution::ExecutionContext:
-		//	"execution context " name=ID "{" ("start time: " startTime=EDate)? ("end time: " endTime=EDate)? ("total cost: "
-		//	totalCost=EDouble)? "application: " application=[camel::Application|Fqn] ("cost unit: "
-		//	costUnit=[unit::MonetaryUnit|Fqn])? "deployment model: " deploymentModel=[deployment::DeploymentModel|Fqn]
-		//	"requirement group: " requirementGroup=[requirement::RequirementGroup|Fqn] "}";
+		//ExecutionContext execution::ExecutionContext:
+		//	'execution context ' name=ID '{' ('start time: ' startTime=EDate)? ('end time: ' endTime=EDate)? ('total cost: '
+		//	totalCost=EDouble)?
+		//	'application: ' application=[camel::Application|Fqn] ('cost unit: ' costUnit=[unit::MonetaryUnit|Fqn])?
+		//	'deployment model: ' deploymentModel=[deployment::DeploymentModel|Fqn]
+		//	'requirement group: ' requirementGroup=[requirement::RequirementGroup|Fqn]
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"execution context " name=ID "{" ("start time: " startTime=EDate)? ("end time: " endTime=EDate)? ("total cost: "
-		//totalCost=EDouble)? "application: " application=[camel::Application|Fqn] ("cost unit: "
-		//costUnit=[unit::MonetaryUnit|Fqn])? "deployment model: " deploymentModel=[deployment::DeploymentModel|Fqn]
-		//"requirement group: " requirementGroup=[requirement::RequirementGroup|Fqn] "}"
+		//'execution context ' name=ID '{' ('start time: ' startTime=EDate)? ('end time: ' endTime=EDate)? ('total cost: '
+		//totalCost=EDouble)? 'application: ' application=[camel::Application|Fqn] ('cost unit: '
+		//costUnit=[unit::MonetaryUnit|Fqn])? 'deployment model: ' deploymentModel=[deployment::DeploymentModel|Fqn]
+		//'requirement group: ' requirementGroup=[requirement::RequirementGroup|Fqn] '}'
 		public Group getGroup() { return cGroup; }
 
-		//"execution context "
+		//'execution context '
 		public Keyword getExecutionContextKeyword_0() { return cExecutionContextKeyword_0; }
 
 		//name=ID
@@ -1991,13 +2013,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("start time: " startTime=EDate)?
+		//('start time: ' startTime=EDate)?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"start time: "
+		//'start time: '
 		public Keyword getStartTimeKeyword_3_0() { return cStartTimeKeyword_3_0; }
 
 		//startTime=EDate
@@ -2006,10 +2028,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDate
 		public RuleCall getStartTimeEDateParserRuleCall_3_1_0() { return cStartTimeEDateParserRuleCall_3_1_0; }
 
-		//("end time: " endTime=EDate)?
+		//('end time: ' endTime=EDate)?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//"end time: "
+		//'end time: '
 		public Keyword getEndTimeKeyword_4_0() { return cEndTimeKeyword_4_0; }
 
 		//endTime=EDate
@@ -2018,10 +2040,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDate
 		public RuleCall getEndTimeEDateParserRuleCall_4_1_0() { return cEndTimeEDateParserRuleCall_4_1_0; }
 
-		//("total cost: " totalCost=EDouble)?
+		//('total cost: ' totalCost=EDouble)?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"total cost: "
+		//'total cost: '
 		public Keyword getTotalCostKeyword_5_0() { return cTotalCostKeyword_5_0; }
 
 		//totalCost=EDouble
@@ -2030,7 +2052,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDouble
 		public RuleCall getTotalCostEDoubleParserRuleCall_5_1_0() { return cTotalCostEDoubleParserRuleCall_5_1_0; }
 
-		//"application: "
+		//'application: '
 		public Keyword getApplicationKeyword_6() { return cApplicationKeyword_6; }
 
 		//application=[camel::Application|Fqn]
@@ -2042,10 +2064,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getApplicationApplicationFqnParserRuleCall_7_0_1() { return cApplicationApplicationFqnParserRuleCall_7_0_1; }
 
-		//("cost unit: " costUnit=[unit::MonetaryUnit|Fqn])?
+		//('cost unit: ' costUnit=[unit::MonetaryUnit|Fqn])?
 		public Group getGroup_8() { return cGroup_8; }
 
-		//"cost unit: "
+		//'cost unit: '
 		public Keyword getCostUnitKeyword_8_0() { return cCostUnitKeyword_8_0; }
 
 		//costUnit=[unit::MonetaryUnit|Fqn]
@@ -2057,7 +2079,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getCostUnitMonetaryUnitFqnParserRuleCall_8_1_0_1() { return cCostUnitMonetaryUnitFqnParserRuleCall_8_1_0_1; }
 
-		//"deployment model: "
+		//'deployment model: '
 		public Keyword getDeploymentModelKeyword_9() { return cDeploymentModelKeyword_9; }
 
 		//deploymentModel=[deployment::DeploymentModel|Fqn]
@@ -2069,7 +2091,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getDeploymentModelDeploymentModelFqnParserRuleCall_10_0_1() { return cDeploymentModelDeploymentModelFqnParserRuleCall_10_0_1; }
 
-		//"requirement group: "
+		//'requirement group: '
 		public Keyword getRequirementGroupKeyword_11() { return cRequirementGroupKeyword_11; }
 
 		//requirementGroup=[requirement::RequirementGroup|Fqn]
@@ -2081,20 +2103,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getRequirementGroupRequirementGroupFqnParserRuleCall_12_0_1() { return cRequirementGroupRequirementGroupFqnParserRuleCall_12_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_13() { return cRightCurlyBracketKeyword_13; }
 	}
 
 	public class MeasurementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Measurement");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Measurement");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cApplicationMeasurementParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cInternalComponentMeasurementParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cVMMeasurementParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cCommunicationMeasurementParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
-		//Measurement returns execution::Measurement:
-		//	ApplicationMeasurement | InternalComponentMeasurement | VMMeasurement | CommunicationMeasurement;
+		//Measurement execution::Measurement:
+		//	ApplicationMeasurement | InternalComponentMeasurement | VMMeasurement | CommunicationMeasurement
 		@Override public ParserRule getRule() { return rule; }
 
 		//ApplicationMeasurement | InternalComponentMeasurement | VMMeasurement | CommunicationMeasurement
@@ -2114,7 +2136,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class ApplicationMeasurementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ApplicationMeasurement");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ApplicationMeasurement");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cApplicationMeasurementKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -2154,22 +2176,26 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cSloServiceLevelObjectiveFqnParserRuleCall_15_1_0_1 = (RuleCall)cSloServiceLevelObjectiveCrossReference_15_1_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_16 = (Keyword)cGroup.eContents().get(16);
 		
-		//ApplicationMeasurement returns execution::ApplicationMeasurement:
-		//	"application measurement " name=ID "{" "application: " application=[camel::Application|Fqn] "value: " value=EDouble
-		//	("raw data: " rawData=EString)? ("event instance: " eventInstance=[scalability::EventInstance|Fqn])?
-		//	"measurement time: " measurementTime=EDate "execution context: " executionContext=[execution::ExecutionContext|Fqn]
-		//	"metric instance: " metricInstance=[metric::MetricInstance|Fqn] ("slo: "
-		//	slo=[requirement::ServiceLevelObjective|Fqn])? "}";
+		//ApplicationMeasurement execution::ApplicationMeasurement:
+		//	'application measurement ' name=ID '{'
+		//	'application: ' application=[camel::Application|Fqn]
+		//	'value: ' value=EDouble ('raw data: ' rawData=EString)? ('event instance: '
+		//	eventInstance=[scalability::EventInstance|Fqn])?
+		//	'measurement time: ' measurementTime=EDate
+		//	'execution context: ' executionContext=[execution::ExecutionContext|Fqn]
+		//	'metric instance: ' metricInstance=[metric::MetricInstance|Fqn] ('slo: '
+		//	slo=[requirement::ServiceLevelObjective|Fqn])?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"application measurement " name=ID "{" "application: " application=[camel::Application|Fqn] "value: " value=EDouble
-		//("raw data: " rawData=EString)? ("event instance: " eventInstance=[scalability::EventInstance|Fqn])?
-		//"measurement time: " measurementTime=EDate "execution context: " executionContext=[execution::ExecutionContext|Fqn]
-		//"metric instance: " metricInstance=[metric::MetricInstance|Fqn] ("slo: "
-		//slo=[requirement::ServiceLevelObjective|Fqn])? "}"
+		//'application measurement ' name=ID '{' 'application: ' application=[camel::Application|Fqn] 'value: ' value=EDouble
+		//('raw data: ' rawData=EString)? ('event instance: ' eventInstance=[scalability::EventInstance|Fqn])?
+		//'measurement time: ' measurementTime=EDate 'execution context: ' executionContext=[execution::ExecutionContext|Fqn]
+		//'metric instance: ' metricInstance=[metric::MetricInstance|Fqn] ('slo: ' slo=[requirement::ServiceLevelObjective|Fqn])?
+		//'}'
 		public Group getGroup() { return cGroup; }
 
-		//"application measurement "
+		//'application measurement '
 		public Keyword getApplicationMeasurementKeyword_0() { return cApplicationMeasurementKeyword_0; }
 
 		//name=ID
@@ -2178,10 +2204,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"application: "
+		//'application: '
 		public Keyword getApplicationKeyword_3() { return cApplicationKeyword_3; }
 
 		//application=[camel::Application|Fqn]
@@ -2193,7 +2219,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getApplicationApplicationFqnParserRuleCall_4_0_1() { return cApplicationApplicationFqnParserRuleCall_4_0_1; }
 
-		//"value: "
+		//'value: '
 		public Keyword getValueKeyword_5() { return cValueKeyword_5; }
 
 		//value=EDouble
@@ -2202,10 +2228,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDouble
 		public RuleCall getValueEDoubleParserRuleCall_6_0() { return cValueEDoubleParserRuleCall_6_0; }
 
-		//("raw data: " rawData=EString)?
+		//('raw data: ' rawData=EString)?
 		public Group getGroup_7() { return cGroup_7; }
 
-		//"raw data: "
+		//'raw data: '
 		public Keyword getRawDataKeyword_7_0() { return cRawDataKeyword_7_0; }
 
 		//rawData=EString
@@ -2214,10 +2240,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getRawDataEStringParserRuleCall_7_1_0() { return cRawDataEStringParserRuleCall_7_1_0; }
 
-		//("event instance: " eventInstance=[scalability::EventInstance|Fqn])?
+		//('event instance: ' eventInstance=[scalability::EventInstance|Fqn])?
 		public Group getGroup_8() { return cGroup_8; }
 
-		//"event instance: "
+		//'event instance: '
 		public Keyword getEventInstanceKeyword_8_0() { return cEventInstanceKeyword_8_0; }
 
 		//eventInstance=[scalability::EventInstance|Fqn]
@@ -2229,7 +2255,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getEventInstanceEventInstanceFqnParserRuleCall_8_1_0_1() { return cEventInstanceEventInstanceFqnParserRuleCall_8_1_0_1; }
 
-		//"measurement time: "
+		//'measurement time: '
 		public Keyword getMeasurementTimeKeyword_9() { return cMeasurementTimeKeyword_9; }
 
 		//measurementTime=EDate
@@ -2238,7 +2264,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDate
 		public RuleCall getMeasurementTimeEDateParserRuleCall_10_0() { return cMeasurementTimeEDateParserRuleCall_10_0; }
 
-		//"execution context: "
+		//'execution context: '
 		public Keyword getExecutionContextKeyword_11() { return cExecutionContextKeyword_11; }
 
 		//executionContext=[execution::ExecutionContext|Fqn]
@@ -2250,7 +2276,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getExecutionContextExecutionContextFqnParserRuleCall_12_0_1() { return cExecutionContextExecutionContextFqnParserRuleCall_12_0_1; }
 
-		//"metric instance: "
+		//'metric instance: '
 		public Keyword getMetricInstanceKeyword_13() { return cMetricInstanceKeyword_13; }
 
 		//metricInstance=[metric::MetricInstance|Fqn]
@@ -2262,10 +2288,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getMetricInstanceMetricInstanceFqnParserRuleCall_14_0_1() { return cMetricInstanceMetricInstanceFqnParserRuleCall_14_0_1; }
 
-		//("slo: " slo=[requirement::ServiceLevelObjective|Fqn])?
+		//('slo: ' slo=[requirement::ServiceLevelObjective|Fqn])?
 		public Group getGroup_15() { return cGroup_15; }
 
-		//"slo: "
+		//'slo: '
 		public Keyword getSloKeyword_15_0() { return cSloKeyword_15_0; }
 
 		//slo=[requirement::ServiceLevelObjective|Fqn]
@@ -2277,12 +2303,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSloServiceLevelObjectiveFqnParserRuleCall_15_1_0_1() { return cSloServiceLevelObjectiveFqnParserRuleCall_15_1_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_16() { return cRightCurlyBracketKeyword_16; }
 	}
 
 	public class InternalComponentMeasurementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "InternalComponentMeasurement");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.InternalComponentMeasurement");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cInternalComponentMeasurementKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -2322,22 +2348,26 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cSloServiceLevelObjectiveFqnParserRuleCall_15_1_0_1 = (RuleCall)cSloServiceLevelObjectiveCrossReference_15_1_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_16 = (Keyword)cGroup.eContents().get(16);
 		
-		//InternalComponentMeasurement returns execution::InternalComponentMeasurement:
-		//	"internal component measurement " name=ID "{" "internal component instance: "
-		//	internalComponentInstance=[deployment::InternalComponentInstance|Fqn] "value: " value=EDouble ("raw data: "
-		//	rawData=EString)? ("event instance: " eventInstance=[scalability::EventInstance|Fqn])? "measurement time: "
-		//	measurementTime=EDate "execution context: " executionContext=[execution::ExecutionContext|Fqn] "metric instance: "
-		//	metricInstance=[metric::MetricInstance|Fqn] ("slo: " slo=[requirement::ServiceLevelObjective|Fqn])? "}";
+		//InternalComponentMeasurement execution::InternalComponentMeasurement:
+		//	'internal component measurement ' name=ID '{'
+		//	'internal component instance: ' internalComponentInstance=[deployment::InternalComponentInstance|Fqn]
+		//	'value: ' value=EDouble ('raw data: ' rawData=EString)? ('event instance: '
+		//	eventInstance=[scalability::EventInstance|Fqn])?
+		//	'measurement time: ' measurementTime=EDate
+		//	'execution context: ' executionContext=[execution::ExecutionContext|Fqn]
+		//	'metric instance: ' metricInstance=[metric::MetricInstance|Fqn] ('slo: '
+		//	slo=[requirement::ServiceLevelObjective|Fqn])?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"internal component measurement " name=ID "{" "internal component instance: "
-		//internalComponentInstance=[deployment::InternalComponentInstance|Fqn] "value: " value=EDouble ("raw data: "
-		//rawData=EString)? ("event instance: " eventInstance=[scalability::EventInstance|Fqn])? "measurement time: "
-		//measurementTime=EDate "execution context: " executionContext=[execution::ExecutionContext|Fqn] "metric instance: "
-		//metricInstance=[metric::MetricInstance|Fqn] ("slo: " slo=[requirement::ServiceLevelObjective|Fqn])? "}"
+		//'internal component measurement ' name=ID '{' 'internal component instance: '
+		//internalComponentInstance=[deployment::InternalComponentInstance|Fqn] 'value: ' value=EDouble ('raw data: '
+		//rawData=EString)? ('event instance: ' eventInstance=[scalability::EventInstance|Fqn])? 'measurement time: '
+		//measurementTime=EDate 'execution context: ' executionContext=[execution::ExecutionContext|Fqn] 'metric instance: '
+		//metricInstance=[metric::MetricInstance|Fqn] ('slo: ' slo=[requirement::ServiceLevelObjective|Fqn])? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"internal component measurement "
+		//'internal component measurement '
 		public Keyword getInternalComponentMeasurementKeyword_0() { return cInternalComponentMeasurementKeyword_0; }
 
 		//name=ID
@@ -2346,10 +2376,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"internal component instance: "
+		//'internal component instance: '
 		public Keyword getInternalComponentInstanceKeyword_3() { return cInternalComponentInstanceKeyword_3; }
 
 		//internalComponentInstance=[deployment::InternalComponentInstance|Fqn]
@@ -2361,7 +2391,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getInternalComponentInstanceInternalComponentInstanceFqnParserRuleCall_4_0_1() { return cInternalComponentInstanceInternalComponentInstanceFqnParserRuleCall_4_0_1; }
 
-		//"value: "
+		//'value: '
 		public Keyword getValueKeyword_5() { return cValueKeyword_5; }
 
 		//value=EDouble
@@ -2370,10 +2400,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDouble
 		public RuleCall getValueEDoubleParserRuleCall_6_0() { return cValueEDoubleParserRuleCall_6_0; }
 
-		//("raw data: " rawData=EString)?
+		//('raw data: ' rawData=EString)?
 		public Group getGroup_7() { return cGroup_7; }
 
-		//"raw data: "
+		//'raw data: '
 		public Keyword getRawDataKeyword_7_0() { return cRawDataKeyword_7_0; }
 
 		//rawData=EString
@@ -2382,10 +2412,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getRawDataEStringParserRuleCall_7_1_0() { return cRawDataEStringParserRuleCall_7_1_0; }
 
-		//("event instance: " eventInstance=[scalability::EventInstance|Fqn])?
+		//('event instance: ' eventInstance=[scalability::EventInstance|Fqn])?
 		public Group getGroup_8() { return cGroup_8; }
 
-		//"event instance: "
+		//'event instance: '
 		public Keyword getEventInstanceKeyword_8_0() { return cEventInstanceKeyword_8_0; }
 
 		//eventInstance=[scalability::EventInstance|Fqn]
@@ -2397,7 +2427,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getEventInstanceEventInstanceFqnParserRuleCall_8_1_0_1() { return cEventInstanceEventInstanceFqnParserRuleCall_8_1_0_1; }
 
-		//"measurement time: "
+		//'measurement time: '
 		public Keyword getMeasurementTimeKeyword_9() { return cMeasurementTimeKeyword_9; }
 
 		//measurementTime=EDate
@@ -2406,7 +2436,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDate
 		public RuleCall getMeasurementTimeEDateParserRuleCall_10_0() { return cMeasurementTimeEDateParserRuleCall_10_0; }
 
-		//"execution context: "
+		//'execution context: '
 		public Keyword getExecutionContextKeyword_11() { return cExecutionContextKeyword_11; }
 
 		//executionContext=[execution::ExecutionContext|Fqn]
@@ -2418,7 +2448,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getExecutionContextExecutionContextFqnParserRuleCall_12_0_1() { return cExecutionContextExecutionContextFqnParserRuleCall_12_0_1; }
 
-		//"metric instance: "
+		//'metric instance: '
 		public Keyword getMetricInstanceKeyword_13() { return cMetricInstanceKeyword_13; }
 
 		//metricInstance=[metric::MetricInstance|Fqn]
@@ -2430,10 +2460,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getMetricInstanceMetricInstanceFqnParserRuleCall_14_0_1() { return cMetricInstanceMetricInstanceFqnParserRuleCall_14_0_1; }
 
-		//("slo: " slo=[requirement::ServiceLevelObjective|Fqn])?
+		//('slo: ' slo=[requirement::ServiceLevelObjective|Fqn])?
 		public Group getGroup_15() { return cGroup_15; }
 
-		//"slo: "
+		//'slo: '
 		public Keyword getSloKeyword_15_0() { return cSloKeyword_15_0; }
 
 		//slo=[requirement::ServiceLevelObjective|Fqn]
@@ -2445,12 +2475,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSloServiceLevelObjectiveFqnParserRuleCall_15_1_0_1() { return cSloServiceLevelObjectiveFqnParserRuleCall_15_1_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_16() { return cRightCurlyBracketKeyword_16; }
 	}
 
 	public class CommunicationMeasurementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CommunicationMeasurement");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.CommunicationMeasurement");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cResourceCouplingMeasurementKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -2494,22 +2524,27 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cSloServiceLevelObjectiveFqnParserRuleCall_17_1_0_1 = (RuleCall)cSloServiceLevelObjectiveCrossReference_17_1_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_18 = (Keyword)cGroup.eContents().get(18);
 		
-		//CommunicationMeasurement returns execution::CommunicationMeasurement:
-		//	"resource coupling measurement" name=ID "{" "source vm instance: " sourceVMInstance=[deployment::VMInstance|Fqn]
-		//	"destination vm instance: " destinationVMInstance=[deployment::VMInstance|Fqn] "value: " value=EDouble ("raw data: "
-		//	rawData=EString)? ("event instance: " eventInstance=[scalability::EventInstance|Fqn])? "measurement time: "
-		//	measurementTime=EDate "execution context: " executionContext=[execution::ExecutionContext|Fqn] "metric instance: "
-		//	metricInstance=[metric::MetricInstance|Fqn] ("slo: " slo=[requirement::ServiceLevelObjective|Fqn])? "}";
+		//CommunicationMeasurement execution::CommunicationMeasurement:
+		//	'resource coupling measurement' name=ID '{'
+		//	'source vm instance: ' sourceVMInstance=[deployment::VMInstance|Fqn]
+		//	'destination vm instance: ' destinationVMInstance=[deployment::VMInstance|Fqn]
+		//	'value: ' value=EDouble ('raw data: ' rawData=EString)? ('event instance: '
+		//	eventInstance=[scalability::EventInstance|Fqn])?
+		//	'measurement time: ' measurementTime=EDate
+		//	'execution context: ' executionContext=[execution::ExecutionContext|Fqn]
+		//	'metric instance: ' metricInstance=[metric::MetricInstance|Fqn] ('slo: '
+		//	slo=[requirement::ServiceLevelObjective|Fqn])?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"resource coupling measurement" name=ID "{" "source vm instance: " sourceVMInstance=[deployment::VMInstance|Fqn]
-		//"destination vm instance: " destinationVMInstance=[deployment::VMInstance|Fqn] "value: " value=EDouble ("raw data: "
-		//rawData=EString)? ("event instance: " eventInstance=[scalability::EventInstance|Fqn])? "measurement time: "
-		//measurementTime=EDate "execution context: " executionContext=[execution::ExecutionContext|Fqn] "metric instance: "
-		//metricInstance=[metric::MetricInstance|Fqn] ("slo: " slo=[requirement::ServiceLevelObjective|Fqn])? "}"
+		//'resource coupling measurement' name=ID '{' 'source vm instance: ' sourceVMInstance=[deployment::VMInstance|Fqn]
+		//'destination vm instance: ' destinationVMInstance=[deployment::VMInstance|Fqn] 'value: ' value=EDouble ('raw data: '
+		//rawData=EString)? ('event instance: ' eventInstance=[scalability::EventInstance|Fqn])? 'measurement time: '
+		//measurementTime=EDate 'execution context: ' executionContext=[execution::ExecutionContext|Fqn] 'metric instance: '
+		//metricInstance=[metric::MetricInstance|Fqn] ('slo: ' slo=[requirement::ServiceLevelObjective|Fqn])? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"resource coupling measurement"
+		//'resource coupling measurement'
 		public Keyword getResourceCouplingMeasurementKeyword_0() { return cResourceCouplingMeasurementKeyword_0; }
 
 		//name=ID
@@ -2518,10 +2553,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"source vm instance: "
+		//'source vm instance: '
 		public Keyword getSourceVmInstanceKeyword_3() { return cSourceVmInstanceKeyword_3; }
 
 		//sourceVMInstance=[deployment::VMInstance|Fqn]
@@ -2533,7 +2568,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSourceVMInstanceVMInstanceFqnParserRuleCall_4_0_1() { return cSourceVMInstanceVMInstanceFqnParserRuleCall_4_0_1; }
 
-		//"destination vm instance: "
+		//'destination vm instance: '
 		public Keyword getDestinationVmInstanceKeyword_5() { return cDestinationVmInstanceKeyword_5; }
 
 		//destinationVMInstance=[deployment::VMInstance|Fqn]
@@ -2545,7 +2580,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getDestinationVMInstanceVMInstanceFqnParserRuleCall_6_0_1() { return cDestinationVMInstanceVMInstanceFqnParserRuleCall_6_0_1; }
 
-		//"value: "
+		//'value: '
 		public Keyword getValueKeyword_7() { return cValueKeyword_7; }
 
 		//value=EDouble
@@ -2554,10 +2589,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDouble
 		public RuleCall getValueEDoubleParserRuleCall_8_0() { return cValueEDoubleParserRuleCall_8_0; }
 
-		//("raw data: " rawData=EString)?
+		//('raw data: ' rawData=EString)?
 		public Group getGroup_9() { return cGroup_9; }
 
-		//"raw data: "
+		//'raw data: '
 		public Keyword getRawDataKeyword_9_0() { return cRawDataKeyword_9_0; }
 
 		//rawData=EString
@@ -2566,10 +2601,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getRawDataEStringParserRuleCall_9_1_0() { return cRawDataEStringParserRuleCall_9_1_0; }
 
-		//("event instance: " eventInstance=[scalability::EventInstance|Fqn])?
+		//('event instance: ' eventInstance=[scalability::EventInstance|Fqn])?
 		public Group getGroup_10() { return cGroup_10; }
 
-		//"event instance: "
+		//'event instance: '
 		public Keyword getEventInstanceKeyword_10_0() { return cEventInstanceKeyword_10_0; }
 
 		//eventInstance=[scalability::EventInstance|Fqn]
@@ -2581,7 +2616,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getEventInstanceEventInstanceFqnParserRuleCall_10_1_0_1() { return cEventInstanceEventInstanceFqnParserRuleCall_10_1_0_1; }
 
-		//"measurement time: "
+		//'measurement time: '
 		public Keyword getMeasurementTimeKeyword_11() { return cMeasurementTimeKeyword_11; }
 
 		//measurementTime=EDate
@@ -2590,7 +2625,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDate
 		public RuleCall getMeasurementTimeEDateParserRuleCall_12_0() { return cMeasurementTimeEDateParserRuleCall_12_0; }
 
-		//"execution context: "
+		//'execution context: '
 		public Keyword getExecutionContextKeyword_13() { return cExecutionContextKeyword_13; }
 
 		//executionContext=[execution::ExecutionContext|Fqn]
@@ -2602,7 +2637,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getExecutionContextExecutionContextFqnParserRuleCall_14_0_1() { return cExecutionContextExecutionContextFqnParserRuleCall_14_0_1; }
 
-		//"metric instance: "
+		//'metric instance: '
 		public Keyword getMetricInstanceKeyword_15() { return cMetricInstanceKeyword_15; }
 
 		//metricInstance=[metric::MetricInstance|Fqn]
@@ -2614,10 +2649,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getMetricInstanceMetricInstanceFqnParserRuleCall_16_0_1() { return cMetricInstanceMetricInstanceFqnParserRuleCall_16_0_1; }
 
-		//("slo: " slo=[requirement::ServiceLevelObjective|Fqn])?
+		//('slo: ' slo=[requirement::ServiceLevelObjective|Fqn])?
 		public Group getGroup_17() { return cGroup_17; }
 
-		//"slo: "
+		//'slo: '
 		public Keyword getSloKeyword_17_0() { return cSloKeyword_17_0; }
 
 		//slo=[requirement::ServiceLevelObjective|Fqn]
@@ -2629,12 +2664,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSloServiceLevelObjectiveFqnParserRuleCall_17_1_0_1() { return cSloServiceLevelObjectiveFqnParserRuleCall_17_1_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_18() { return cRightCurlyBracketKeyword_18; }
 	}
 
 	public class VMMeasurementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "VMMeasurement");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.VMMeasurement");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cVmMeasurementKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -2674,22 +2709,26 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cSloServiceLevelObjectiveFqnParserRuleCall_15_1_0_1 = (RuleCall)cSloServiceLevelObjectiveCrossReference_15_1_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_16 = (Keyword)cGroup.eContents().get(16);
 		
-		//VMMeasurement returns execution::VMMeasurement:
-		//	"vm measurement " name=ID "{" "vm instance: " vmInstance=[deployment::VMInstance|Fqn] "value: " value=EDouble
-		//	("raw data: " rawData=EString)? ("event instance: " eventInstance=[scalability::EventInstance|Fqn])?
-		//	"measurement time: " measurementTime=EDate "execution context: " executionContext=[execution::ExecutionContext|Fqn]
-		//	"metric instance: " metricInstance=[metric::MetricInstance|Fqn] ("slo: "
-		//	slo=[requirement::ServiceLevelObjective|Fqn])? "}";
+		//VMMeasurement execution::VMMeasurement:
+		//	'vm measurement ' name=ID '{'
+		//	'vm instance: ' vmInstance=[deployment::VMInstance|Fqn]
+		//	'value: ' value=EDouble ('raw data: ' rawData=EString)? ('event instance: '
+		//	eventInstance=[scalability::EventInstance|Fqn])?
+		//	'measurement time: ' measurementTime=EDate
+		//	'execution context: ' executionContext=[execution::ExecutionContext|Fqn]
+		//	'metric instance: ' metricInstance=[metric::MetricInstance|Fqn] ('slo: '
+		//	slo=[requirement::ServiceLevelObjective|Fqn])?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"vm measurement " name=ID "{" "vm instance: " vmInstance=[deployment::VMInstance|Fqn] "value: " value=EDouble
-		//("raw data: " rawData=EString)? ("event instance: " eventInstance=[scalability::EventInstance|Fqn])?
-		//"measurement time: " measurementTime=EDate "execution context: " executionContext=[execution::ExecutionContext|Fqn]
-		//"metric instance: " metricInstance=[metric::MetricInstance|Fqn] ("slo: "
-		//slo=[requirement::ServiceLevelObjective|Fqn])? "}"
+		//'vm measurement ' name=ID '{' 'vm instance: ' vmInstance=[deployment::VMInstance|Fqn] 'value: ' value=EDouble
+		//('raw data: ' rawData=EString)? ('event instance: ' eventInstance=[scalability::EventInstance|Fqn])?
+		//'measurement time: ' measurementTime=EDate 'execution context: ' executionContext=[execution::ExecutionContext|Fqn]
+		//'metric instance: ' metricInstance=[metric::MetricInstance|Fqn] ('slo: ' slo=[requirement::ServiceLevelObjective|Fqn])?
+		//'}'
 		public Group getGroup() { return cGroup; }
 
-		//"vm measurement "
+		//'vm measurement '
 		public Keyword getVmMeasurementKeyword_0() { return cVmMeasurementKeyword_0; }
 
 		//name=ID
@@ -2698,10 +2737,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"vm instance: "
+		//'vm instance: '
 		public Keyword getVmInstanceKeyword_3() { return cVmInstanceKeyword_3; }
 
 		//vmInstance=[deployment::VMInstance|Fqn]
@@ -2713,7 +2752,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getVmInstanceVMInstanceFqnParserRuleCall_4_0_1() { return cVmInstanceVMInstanceFqnParserRuleCall_4_0_1; }
 
-		//"value: "
+		//'value: '
 		public Keyword getValueKeyword_5() { return cValueKeyword_5; }
 
 		//value=EDouble
@@ -2722,10 +2761,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDouble
 		public RuleCall getValueEDoubleParserRuleCall_6_0() { return cValueEDoubleParserRuleCall_6_0; }
 
-		//("raw data: " rawData=EString)?
+		//('raw data: ' rawData=EString)?
 		public Group getGroup_7() { return cGroup_7; }
 
-		//"raw data: "
+		//'raw data: '
 		public Keyword getRawDataKeyword_7_0() { return cRawDataKeyword_7_0; }
 
 		//rawData=EString
@@ -2734,10 +2773,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getRawDataEStringParserRuleCall_7_1_0() { return cRawDataEStringParserRuleCall_7_1_0; }
 
-		//("event instance: " eventInstance=[scalability::EventInstance|Fqn])?
+		//('event instance: ' eventInstance=[scalability::EventInstance|Fqn])?
 		public Group getGroup_8() { return cGroup_8; }
 
-		//"event instance: "
+		//'event instance: '
 		public Keyword getEventInstanceKeyword_8_0() { return cEventInstanceKeyword_8_0; }
 
 		//eventInstance=[scalability::EventInstance|Fqn]
@@ -2749,7 +2788,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getEventInstanceEventInstanceFqnParserRuleCall_8_1_0_1() { return cEventInstanceEventInstanceFqnParserRuleCall_8_1_0_1; }
 
-		//"measurement time: "
+		//'measurement time: '
 		public Keyword getMeasurementTimeKeyword_9() { return cMeasurementTimeKeyword_9; }
 
 		//measurementTime=EDate
@@ -2758,7 +2797,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDate
 		public RuleCall getMeasurementTimeEDateParserRuleCall_10_0() { return cMeasurementTimeEDateParserRuleCall_10_0; }
 
-		//"execution context: "
+		//'execution context: '
 		public Keyword getExecutionContextKeyword_11() { return cExecutionContextKeyword_11; }
 
 		//executionContext=[execution::ExecutionContext|Fqn]
@@ -2770,7 +2809,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getExecutionContextExecutionContextFqnParserRuleCall_12_0_1() { return cExecutionContextExecutionContextFqnParserRuleCall_12_0_1; }
 
-		//"metric instance: "
+		//'metric instance: '
 		public Keyword getMetricInstanceKeyword_13() { return cMetricInstanceKeyword_13; }
 
 		//metricInstance=[metric::MetricInstance|Fqn]
@@ -2782,10 +2821,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getMetricInstanceMetricInstanceFqnParserRuleCall_14_0_1() { return cMetricInstanceMetricInstanceFqnParserRuleCall_14_0_1; }
 
-		//("slo: " slo=[requirement::ServiceLevelObjective|Fqn])?
+		//('slo: ' slo=[requirement::ServiceLevelObjective|Fqn])?
 		public Group getGroup_15() { return cGroup_15; }
 
-		//"slo: "
+		//'slo: '
 		public Keyword getSloKeyword_15_0() { return cSloKeyword_15_0; }
 
 		//slo=[requirement::ServiceLevelObjective|Fqn]
@@ -2797,12 +2836,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSloServiceLevelObjectiveFqnParserRuleCall_15_1_0_1() { return cSloServiceLevelObjectiveFqnParserRuleCall_15_1_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_16() { return cRightCurlyBracketKeyword_16; }
 	}
 
 	public class SLOAssessmentElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SLOAssessment");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.SLOAssessment");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cAssessmentKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -2827,18 +2866,21 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cAssessmentViolatedKeyword_11_0 = (Keyword)cAssessmentAssignment_11.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		
-		//SLOAssessment returns execution::SLOAssessment:
-		//	"assessment " name=ID "{" "measurement: " measurement=[execution::Measurement|Fqn] "execution context: "
-		//	executionContext=[execution::ExecutionContext|Fqn] "assessment time: " assessmentTime=EDate "slo: "
-		//	slo=[requirement::ServiceLevelObjective|Fqn] assessment?="violated" "}";
+		//SLOAssessment execution::SLOAssessment:
+		//	'assessment ' name=ID '{'
+		//	'measurement: ' measurement=[execution::Measurement|Fqn]
+		//	'execution context: ' executionContext=[execution::ExecutionContext|Fqn]
+		//	'assessment time: ' assessmentTime=EDate
+		//	'slo: ' slo=[requirement::ServiceLevelObjective|Fqn] assessment?='violated'
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"assessment " name=ID "{" "measurement: " measurement=[execution::Measurement|Fqn] "execution context: "
-		//executionContext=[execution::ExecutionContext|Fqn] "assessment time: " assessmentTime=EDate "slo: "
-		//slo=[requirement::ServiceLevelObjective|Fqn] assessment?="violated" "}"
+		//'assessment ' name=ID '{' 'measurement: ' measurement=[execution::Measurement|Fqn] 'execution context: '
+		//executionContext=[execution::ExecutionContext|Fqn] 'assessment time: ' assessmentTime=EDate 'slo: '
+		//slo=[requirement::ServiceLevelObjective|Fqn] assessment?='violated' '}'
 		public Group getGroup() { return cGroup; }
 
-		//"assessment "
+		//'assessment '
 		public Keyword getAssessmentKeyword_0() { return cAssessmentKeyword_0; }
 
 		//name=ID
@@ -2847,10 +2889,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"measurement: "
+		//'measurement: '
 		public Keyword getMeasurementKeyword_3() { return cMeasurementKeyword_3; }
 
 		//measurement=[execution::Measurement|Fqn]
@@ -2862,7 +2904,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getMeasurementMeasurementFqnParserRuleCall_4_0_1() { return cMeasurementMeasurementFqnParserRuleCall_4_0_1; }
 
-		//"execution context: "
+		//'execution context: '
 		public Keyword getExecutionContextKeyword_5() { return cExecutionContextKeyword_5; }
 
 		//executionContext=[execution::ExecutionContext|Fqn]
@@ -2874,7 +2916,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getExecutionContextExecutionContextFqnParserRuleCall_6_0_1() { return cExecutionContextExecutionContextFqnParserRuleCall_6_0_1; }
 
-		//"assessment time: "
+		//'assessment time: '
 		public Keyword getAssessmentTimeKeyword_7() { return cAssessmentTimeKeyword_7; }
 
 		//assessmentTime=EDate
@@ -2883,7 +2925,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDate
 		public RuleCall getAssessmentTimeEDateParserRuleCall_8_0() { return cAssessmentTimeEDateParserRuleCall_8_0; }
 
-		//"slo: "
+		//'slo: '
 		public Keyword getSloKeyword_9() { return cSloKeyword_9; }
 
 		//slo=[requirement::ServiceLevelObjective|Fqn]
@@ -2895,18 +2937,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSloServiceLevelObjectiveFqnParserRuleCall_10_0_1() { return cSloServiceLevelObjectiveFqnParserRuleCall_10_0_1; }
 
-		//assessment?="violated"
+		//assessment?='violated'
 		public Assignment getAssessmentAssignment_11() { return cAssessmentAssignment_11; }
 
-		//"violated"
+		//'violated'
 		public Keyword getAssessmentViolatedKeyword_11_0() { return cAssessmentViolatedKeyword_11_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
 	}
 
 	public class RuleTriggerElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RuleTrigger");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.RuleTrigger");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRuleTriggerKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -2947,22 +2989,26 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_18 = (Keyword)cGroup.eContents().get(18);
 		private final Keyword cRightCurlyBracketKeyword_19 = (Keyword)cGroup.eContents().get(19);
 		
-		//RuleTrigger returns execution::RuleTrigger:
-		//	"rule trigger " name=ID "{" "rule: " scalabilityRule=[scalability::ScalabilityRule|Fqn] "triggering time: "
-		//	trigerringTime=EDate "action realisations: " "(" actionRealisations+=[execution::ActionRealisation|Fqn] (","
-		//	actionRealisations+=[execution::ActionRealisation|Fqn])* ")" "execution context: "
-		//	executionContext=[execution::ExecutionContext|Fqn] "event instances: " "("
-		//	eventInstances+=[scalability::EventInstance|Fqn] ("," eventInstances+=[scalability::EventInstance|Fqn])* ")" "}";
+		//RuleTrigger execution::RuleTrigger:
+		//	'rule trigger ' name=ID '{'
+		//	'rule: ' scalabilityRule=[scalability::ScalabilityRule|Fqn]
+		//	'triggering time: ' trigerringTime=EDate
+		//	'action realisations: ' '(' actionRealisations+=[execution::ActionRealisation|Fqn] (','
+		//	actionRealisations+=[execution::ActionRealisation|Fqn])* ')'
+		//	'execution context: ' executionContext=[execution::ExecutionContext|Fqn]
+		//	'event instances: ' '(' eventInstances+=[scalability::EventInstance|Fqn] (','
+		//	eventInstances+=[scalability::EventInstance|Fqn])* ')'
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"rule trigger " name=ID "{" "rule: " scalabilityRule=[scalability::ScalabilityRule|Fqn] "triggering time: "
-		//trigerringTime=EDate "action realisations: " "(" actionRealisations+=[execution::ActionRealisation|Fqn] (","
-		//actionRealisations+=[execution::ActionRealisation|Fqn])* ")" "execution context: "
-		//executionContext=[execution::ExecutionContext|Fqn] "event instances: " "("
-		//eventInstances+=[scalability::EventInstance|Fqn] ("," eventInstances+=[scalability::EventInstance|Fqn])* ")" "}"
+		//'rule trigger ' name=ID '{' 'rule: ' scalabilityRule=[scalability::ScalabilityRule|Fqn] 'triggering time: '
+		//trigerringTime=EDate 'action realisations: ' '(' actionRealisations+=[execution::ActionRealisation|Fqn] (','
+		//actionRealisations+=[execution::ActionRealisation|Fqn])* ')' 'execution context: '
+		//executionContext=[execution::ExecutionContext|Fqn] 'event instances: ' '('
+		//eventInstances+=[scalability::EventInstance|Fqn] (',' eventInstances+=[scalability::EventInstance|Fqn])* ')' '}'
 		public Group getGroup() { return cGroup; }
 
-		//"rule trigger "
+		//'rule trigger '
 		public Keyword getRuleTriggerKeyword_0() { return cRuleTriggerKeyword_0; }
 
 		//name=ID
@@ -2971,10 +3017,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"rule: "
+		//'rule: '
 		public Keyword getRuleKeyword_3() { return cRuleKeyword_3; }
 
 		//scalabilityRule=[scalability::ScalabilityRule|Fqn]
@@ -2986,7 +3032,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getScalabilityRuleScalabilityRuleFqnParserRuleCall_4_0_1() { return cScalabilityRuleScalabilityRuleFqnParserRuleCall_4_0_1; }
 
-		//"triggering time: "
+		//'triggering time: '
 		public Keyword getTriggeringTimeKeyword_5() { return cTriggeringTimeKeyword_5; }
 
 		//trigerringTime=EDate
@@ -2995,10 +3041,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDate
 		public RuleCall getTrigerringTimeEDateParserRuleCall_6_0() { return cTrigerringTimeEDateParserRuleCall_6_0; }
 
-		//"action realisations: "
+		//'action realisations: '
 		public Keyword getActionRealisationsKeyword_7() { return cActionRealisationsKeyword_7; }
 
-		//"("
+		//'('
 		public Keyword getLeftParenthesisKeyword_8() { return cLeftParenthesisKeyword_8; }
 
 		//actionRealisations+=[execution::ActionRealisation|Fqn]
@@ -3010,10 +3056,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getActionRealisationsActionRealisationFqnParserRuleCall_9_0_1() { return cActionRealisationsActionRealisationFqnParserRuleCall_9_0_1; }
 
-		//("," actionRealisations+=[execution::ActionRealisation|Fqn])*
+		//(',' actionRealisations+=[execution::ActionRealisation|Fqn])*
 		public Group getGroup_10() { return cGroup_10; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_10_0() { return cCommaKeyword_10_0; }
 
 		//actionRealisations+=[execution::ActionRealisation|Fqn]
@@ -3025,10 +3071,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getActionRealisationsActionRealisationFqnParserRuleCall_10_1_0_1() { return cActionRealisationsActionRealisationFqnParserRuleCall_10_1_0_1; }
 
-		//")"
+		//')'
 		public Keyword getRightParenthesisKeyword_11() { return cRightParenthesisKeyword_11; }
 
-		//"execution context: "
+		//'execution context: '
 		public Keyword getExecutionContextKeyword_12() { return cExecutionContextKeyword_12; }
 
 		//executionContext=[execution::ExecutionContext|Fqn]
@@ -3040,10 +3086,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getExecutionContextExecutionContextFqnParserRuleCall_13_0_1() { return cExecutionContextExecutionContextFqnParserRuleCall_13_0_1; }
 
-		//"event instances: "
+		//'event instances: '
 		public Keyword getEventInstancesKeyword_14() { return cEventInstancesKeyword_14; }
 
-		//"("
+		//'('
 		public Keyword getLeftParenthesisKeyword_15() { return cLeftParenthesisKeyword_15; }
 
 		//eventInstances+=[scalability::EventInstance|Fqn]
@@ -3055,10 +3101,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getEventInstancesEventInstanceFqnParserRuleCall_16_0_1() { return cEventInstancesEventInstanceFqnParserRuleCall_16_0_1; }
 
-		//("," eventInstances+=[scalability::EventInstance|Fqn])*
+		//(',' eventInstances+=[scalability::EventInstance|Fqn])*
 		public Group getGroup_17() { return cGroup_17; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_17_0() { return cCommaKeyword_17_0; }
 
 		//eventInstances+=[scalability::EventInstance|Fqn]
@@ -3070,15 +3116,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getEventInstancesEventInstanceFqnParserRuleCall_17_1_0_1() { return cEventInstancesEventInstanceFqnParserRuleCall_17_1_0_1; }
 
-		//")"
+		//')'
 		public Keyword getRightParenthesisKeyword_18() { return cRightParenthesisKeyword_18; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_19() { return cRightCurlyBracketKeyword_19; }
 	}
 
 	public class LocationModelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LocationModel");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.LocationModel");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cLocationModelAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cLocationModelKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -3094,19 +3140,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCloudLocationsCloudLocationParserRuleCall_4_2_0 = (RuleCall)cCloudLocationsAssignment_4_2.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		/// * Location model * / LocationModel returns location::LocationModel:
-		//	{location::LocationModel} "location model " name=ID "{" (regions+=GeographicalRegion | countries+=Country |
-		//	cloudLocations+=CloudLocation)* "}";
+		/// * Location model * / LocationModel location::LocationModel:
+		//	{location::LocationModel}
+		//	'location model ' name=ID '{' (regions+=GeographicalRegion | countries+=Country | cloudLocations+=CloudLocation)*
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//{location::LocationModel} "location model " name=ID "{" (regions+=GeographicalRegion | countries+=Country |
-		//cloudLocations+=CloudLocation)* "}"
+		//{location::LocationModel} 'location model ' name=ID '{' (regions+=GeographicalRegion | countries+=Country |
+		//cloudLocations+=CloudLocation)* '}'
 		public Group getGroup() { return cGroup; }
 
 		//{location::LocationModel}
 		public Action getLocationModelAction_0() { return cLocationModelAction_0; }
 
-		//"location model "
+		//'location model '
 		public Keyword getLocationModelKeyword_1() { return cLocationModelKeyword_1; }
 
 		//name=ID
@@ -3115,7 +3162,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
 		//(regions+=GeographicalRegion | countries+=Country | cloudLocations+=CloudLocation)*
@@ -3139,12 +3186,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//CloudLocation
 		public RuleCall getCloudLocationsCloudLocationParserRuleCall_4_2_0() { return cCloudLocationsCloudLocationParserRuleCall_4_2_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class CloudLocationElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CloudLocation");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.CloudLocation");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cCloudLocationKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cIdAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -3174,18 +3221,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightSquareBracketKeyword_6_4 = (Keyword)cGroup_6.eContents().get(4);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
-		//CloudLocation returns location::CloudLocation:
-		//	"cloud location " id=ID "{" isAssignable?="assignable"? ("parent: " parent=[location::CloudLocation|Fqn])?
-		//	("geographical region: " geographicalRegion=[location::GeographicalRegion|Fqn])? ("sub-locations " "["
-		//	subLocations+=CloudLocation ("," subLocations+=CloudLocation)* "]")? "}";
+		//CloudLocation location::CloudLocation:
+		//	'cloud location ' id=ID '{'
+		//	isAssignable?='assignable'? ('parent: ' parent=[location::CloudLocation|Fqn])? ('geographical region: '
+		//	geographicalRegion=[location::GeographicalRegion|Fqn])? ('sub-locations ' '[' subLocations+=CloudLocation (','
+		//	subLocations+=CloudLocation)* ']')?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"cloud location " id=ID "{" isAssignable?="assignable"? ("parent: " parent=[location::CloudLocation|Fqn])?
-		//("geographical region: " geographicalRegion=[location::GeographicalRegion|Fqn])? ("sub-locations " "["
-		//subLocations+=CloudLocation ("," subLocations+=CloudLocation)* "]")? "}"
+		//'cloud location ' id=ID '{' isAssignable?='assignable'? ('parent: ' parent=[location::CloudLocation|Fqn])?
+		//('geographical region: ' geographicalRegion=[location::GeographicalRegion|Fqn])? ('sub-locations ' '['
+		//subLocations+=CloudLocation (',' subLocations+=CloudLocation)* ']')? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"cloud location "
+		//'cloud location '
 		public Keyword getCloudLocationKeyword_0() { return cCloudLocationKeyword_0; }
 
 		//id=ID
@@ -3194,19 +3243,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getIdIDTerminalRuleCall_1_0() { return cIdIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//isAssignable?="assignable"?
+		//isAssignable?='assignable'?
 		public Assignment getIsAssignableAssignment_3() { return cIsAssignableAssignment_3; }
 
-		//"assignable"
+		//'assignable'
 		public Keyword getIsAssignableAssignableKeyword_3_0() { return cIsAssignableAssignableKeyword_3_0; }
 
-		//("parent: " parent=[location::CloudLocation|Fqn])?
+		//('parent: ' parent=[location::CloudLocation|Fqn])?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//"parent: "
+		//'parent: '
 		public Keyword getParentKeyword_4_0() { return cParentKeyword_4_0; }
 
 		//parent=[location::CloudLocation|Fqn]
@@ -3218,10 +3267,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getParentCloudLocationFqnParserRuleCall_4_1_0_1() { return cParentCloudLocationFqnParserRuleCall_4_1_0_1; }
 
-		//("geographical region: " geographicalRegion=[location::GeographicalRegion|Fqn])?
+		//('geographical region: ' geographicalRegion=[location::GeographicalRegion|Fqn])?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"geographical region: "
+		//'geographical region: '
 		public Keyword getGeographicalRegionKeyword_5_0() { return cGeographicalRegionKeyword_5_0; }
 
 		//geographicalRegion=[location::GeographicalRegion|Fqn]
@@ -3233,13 +3282,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getGeographicalRegionGeographicalRegionFqnParserRuleCall_5_1_0_1() { return cGeographicalRegionGeographicalRegionFqnParserRuleCall_5_1_0_1; }
 
-		//("sub-locations " "[" subLocations+=CloudLocation ("," subLocations+=CloudLocation)* "]")?
+		//('sub-locations ' '[' subLocations+=CloudLocation (',' subLocations+=CloudLocation)* ']')?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//"sub-locations "
+		//'sub-locations '
 		public Keyword getSubLocationsKeyword_6_0() { return cSubLocationsKeyword_6_0; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_6_1() { return cLeftSquareBracketKeyword_6_1; }
 
 		//subLocations+=CloudLocation
@@ -3248,10 +3297,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//CloudLocation
 		public RuleCall getSubLocationsCloudLocationParserRuleCall_6_2_0() { return cSubLocationsCloudLocationParserRuleCall_6_2_0; }
 
-		//("," subLocations+=CloudLocation)*
+		//(',' subLocations+=CloudLocation)*
 		public Group getGroup_6_3() { return cGroup_6_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_6_3_0() { return cCommaKeyword_6_3_0; }
 
 		//subLocations+=CloudLocation
@@ -3260,15 +3309,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//CloudLocation
 		public RuleCall getSubLocationsCloudLocationParserRuleCall_6_3_1_0() { return cSubLocationsCloudLocationParserRuleCall_6_3_1_0; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_6_4() { return cRightSquareBracketKeyword_6_4; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class CountryElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Country");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Country");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cCountryKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cIdAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -3301,18 +3350,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightSquareBracketKeyword_6_4 = (Keyword)cGroup_6.eContents().get(4);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
-		//Country returns location::Country:
-		//	"country " id=ID "{" "name: " name=EString ("alternative names " "[" alternativeNames+=EString (","
-		//	alternativeNames+=EString)* "]")? ("parent regions " "[" parentRegions+=[location::GeographicalRegion|Fqn] (","
-		//	parentRegions+=[location::GeographicalRegion|Fqn])* "]")? "}";
+		//Country location::Country:
+		//	'country ' id=ID '{'
+		//	'name: ' name=EString ('alternative names ' '[' alternativeNames+=EString (',' alternativeNames+=EString)* ']')?
+		//	('parent regions ' '[' parentRegions+=[location::GeographicalRegion|Fqn] (','
+		//	parentRegions+=[location::GeographicalRegion|Fqn])* ']')?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"country " id=ID "{" "name: " name=EString ("alternative names " "[" alternativeNames+=EString (","
-		//alternativeNames+=EString)* "]")? ("parent regions " "[" parentRegions+=[location::GeographicalRegion|Fqn] (","
-		//parentRegions+=[location::GeographicalRegion|Fqn])* "]")? "}"
+		//'country ' id=ID '{' 'name: ' name=EString ('alternative names ' '[' alternativeNames+=EString (','
+		//alternativeNames+=EString)* ']')? ('parent regions ' '[' parentRegions+=[location::GeographicalRegion|Fqn] (','
+		//parentRegions+=[location::GeographicalRegion|Fqn])* ']')? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"country "
+		//'country '
 		public Keyword getCountryKeyword_0() { return cCountryKeyword_0; }
 
 		//id=ID
@@ -3321,10 +3372,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getIdIDTerminalRuleCall_1_0() { return cIdIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"name: "
+		//'name: '
 		public Keyword getNameKeyword_3() { return cNameKeyword_3; }
 
 		//name=EString
@@ -3333,13 +3384,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getNameEStringParserRuleCall_4_0() { return cNameEStringParserRuleCall_4_0; }
 
-		//("alternative names " "[" alternativeNames+=EString ("," alternativeNames+=EString)* "]")?
+		//('alternative names ' '[' alternativeNames+=EString (',' alternativeNames+=EString)* ']')?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"alternative names "
+		//'alternative names '
 		public Keyword getAlternativeNamesKeyword_5_0() { return cAlternativeNamesKeyword_5_0; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_5_1() { return cLeftSquareBracketKeyword_5_1; }
 
 		//alternativeNames+=EString
@@ -3348,10 +3399,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getAlternativeNamesEStringParserRuleCall_5_2_0() { return cAlternativeNamesEStringParserRuleCall_5_2_0; }
 
-		//("," alternativeNames+=EString)*
+		//(',' alternativeNames+=EString)*
 		public Group getGroup_5_3() { return cGroup_5_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_5_3_0() { return cCommaKeyword_5_3_0; }
 
 		//alternativeNames+=EString
@@ -3360,17 +3411,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getAlternativeNamesEStringParserRuleCall_5_3_1_0() { return cAlternativeNamesEStringParserRuleCall_5_3_1_0; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_5_4() { return cRightSquareBracketKeyword_5_4; }
 
-		//("parent regions " "[" parentRegions+=[location::GeographicalRegion|Fqn] (","
-		//parentRegions+=[location::GeographicalRegion|Fqn])* "]")?
+		//('parent regions ' '[' parentRegions+=[location::GeographicalRegion|Fqn] (','
+		//parentRegions+=[location::GeographicalRegion|Fqn])* ']')?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//"parent regions "
+		//'parent regions '
 		public Keyword getParentRegionsKeyword_6_0() { return cParentRegionsKeyword_6_0; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_6_1() { return cLeftSquareBracketKeyword_6_1; }
 
 		//parentRegions+=[location::GeographicalRegion|Fqn]
@@ -3382,10 +3433,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getParentRegionsGeographicalRegionFqnParserRuleCall_6_2_0_1() { return cParentRegionsGeographicalRegionFqnParserRuleCall_6_2_0_1; }
 
-		//("," parentRegions+=[location::GeographicalRegion|Fqn])*
+		//(',' parentRegions+=[location::GeographicalRegion|Fqn])*
 		public Group getGroup_6_3() { return cGroup_6_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_6_3_0() { return cCommaKeyword_6_3_0; }
 
 		//parentRegions+=[location::GeographicalRegion|Fqn]
@@ -3397,15 +3448,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getParentRegionsGeographicalRegionFqnParserRuleCall_6_3_1_0_1() { return cParentRegionsGeographicalRegionFqnParserRuleCall_6_3_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_6_4() { return cRightSquareBracketKeyword_6_4; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class GeographicalRegionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "GeographicalRegion");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.GeographicalRegion");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRegionKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cIdAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -3438,18 +3489,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightSquareBracketKeyword_6_4 = (Keyword)cGroup_6.eContents().get(4);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
-		//GeographicalRegion returns location::GeographicalRegion:
-		//	"region " id=ID "{" "name: " name=EString ("alternative names " "[" alternativeNames+=EString (","
-		//	alternativeNames+=EString)* "]")? ("parent regions " "[" parentRegions+=[location::GeographicalRegion|Fqn] (","
-		//	parentRegions+=[location::GeographicalRegion|Fqn])* "]")? "}";
+		//GeographicalRegion location::GeographicalRegion:
+		//	'region ' id=ID '{'
+		//	'name: ' name=EString ('alternative names ' '[' alternativeNames+=EString (',' alternativeNames+=EString)* ']')?
+		//	('parent regions ' '[' parentRegions+=[location::GeographicalRegion|Fqn] (','
+		//	parentRegions+=[location::GeographicalRegion|Fqn])* ']')?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"region " id=ID "{" "name: " name=EString ("alternative names " "[" alternativeNames+=EString (","
-		//alternativeNames+=EString)* "]")? ("parent regions " "[" parentRegions+=[location::GeographicalRegion|Fqn] (","
-		//parentRegions+=[location::GeographicalRegion|Fqn])* "]")? "}"
+		//'region ' id=ID '{' 'name: ' name=EString ('alternative names ' '[' alternativeNames+=EString (','
+		//alternativeNames+=EString)* ']')? ('parent regions ' '[' parentRegions+=[location::GeographicalRegion|Fqn] (','
+		//parentRegions+=[location::GeographicalRegion|Fqn])* ']')? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"region "
+		//'region '
 		public Keyword getRegionKeyword_0() { return cRegionKeyword_0; }
 
 		//id=ID
@@ -3458,10 +3511,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getIdIDTerminalRuleCall_1_0() { return cIdIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"name: "
+		//'name: '
 		public Keyword getNameKeyword_3() { return cNameKeyword_3; }
 
 		//name=EString
@@ -3470,13 +3523,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getNameEStringParserRuleCall_4_0() { return cNameEStringParserRuleCall_4_0; }
 
-		//("alternative names " "[" alternativeNames+=EString ("," alternativeNames+=EString)* "]")?
+		//('alternative names ' '[' alternativeNames+=EString (',' alternativeNames+=EString)* ']')?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"alternative names "
+		//'alternative names '
 		public Keyword getAlternativeNamesKeyword_5_0() { return cAlternativeNamesKeyword_5_0; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_5_1() { return cLeftSquareBracketKeyword_5_1; }
 
 		//alternativeNames+=EString
@@ -3485,10 +3538,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getAlternativeNamesEStringParserRuleCall_5_2_0() { return cAlternativeNamesEStringParserRuleCall_5_2_0; }
 
-		//("," alternativeNames+=EString)*
+		//(',' alternativeNames+=EString)*
 		public Group getGroup_5_3() { return cGroup_5_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_5_3_0() { return cCommaKeyword_5_3_0; }
 
 		//alternativeNames+=EString
@@ -3497,17 +3550,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getAlternativeNamesEStringParserRuleCall_5_3_1_0() { return cAlternativeNamesEStringParserRuleCall_5_3_1_0; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_5_4() { return cRightSquareBracketKeyword_5_4; }
 
-		//("parent regions " "[" parentRegions+=[location::GeographicalRegion|Fqn] (","
-		//parentRegions+=[location::GeographicalRegion|Fqn])* "]")?
+		//('parent regions ' '[' parentRegions+=[location::GeographicalRegion|Fqn] (','
+		//parentRegions+=[location::GeographicalRegion|Fqn])* ']')?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//"parent regions "
+		//'parent regions '
 		public Keyword getParentRegionsKeyword_6_0() { return cParentRegionsKeyword_6_0; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_6_1() { return cLeftSquareBracketKeyword_6_1; }
 
 		//parentRegions+=[location::GeographicalRegion|Fqn]
@@ -3519,10 +3572,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getParentRegionsGeographicalRegionFqnParserRuleCall_6_2_0_1() { return cParentRegionsGeographicalRegionFqnParserRuleCall_6_2_0_1; }
 
-		//("," parentRegions+=[location::GeographicalRegion|Fqn])*
+		//(',' parentRegions+=[location::GeographicalRegion|Fqn])*
 		public Group getGroup_6_3() { return cGroup_6_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_6_3_0() { return cCommaKeyword_6_3_0; }
 
 		//parentRegions+=[location::GeographicalRegion|Fqn]
@@ -3534,15 +3587,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getParentRegionsGeographicalRegionFqnParserRuleCall_6_3_1_0_1() { return cParentRegionsGeographicalRegionFqnParserRuleCall_6_3_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_6_4() { return cRightSquareBracketKeyword_6_4; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class MetricModelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MetricModel");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.MetricModel");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cMetricModelAction_0 = (Action)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
@@ -3582,29 +3635,30 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cSensorsSensorParserRuleCall_5_9_0 = (RuleCall)cSensorsAssignment_5_9.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
-		/// * Metric model * / MetricModel returns metric::MetricModel:
-		//	{metric::MetricModel} ("importURI" "{" importURI+=EString ("," importURI+=EString)* "}")? "metric model " name=ID "{"
-		//	(contexts+=ConditionContext | metrics+=Metric | metricInstances+=MetricInstance | conditions+=Condition |
-		//	properties+=Property | bindings+=MetricObjectBinding | windows+=Window | schedules+=Schedule |
-		//	parameters+=FormulaParameter | sensors+=Sensor)* "}";
+		/// * Metric model * / MetricModel metric::MetricModel:
+		//	{metric::MetricModel} ('importURI' '{' importURI+=EString (',' importURI+=EString)* '}')?
+		//	'metric model ' name=ID '{' (contexts+=ConditionContext | metrics+=Metric | metricInstances+=MetricInstance |
+		//	conditions+=Condition | properties+=Property | bindings+=MetricObjectBinding | windows+=Window | schedules+=Schedule |
+		//	parameters+=FormulaParameter | sensors+=Sensor)*
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//{metric::MetricModel} ("importURI" "{" importURI+=EString ("," importURI+=EString)* "}")? "metric model " name=ID "{"
+		//{metric::MetricModel} ('importURI' '{' importURI+=EString (',' importURI+=EString)* '}')? 'metric model ' name=ID '{'
 		//(contexts+=ConditionContext | metrics+=Metric | metricInstances+=MetricInstance | conditions+=Condition |
 		//properties+=Property | bindings+=MetricObjectBinding | windows+=Window | schedules+=Schedule |
-		//parameters+=FormulaParameter | sensors+=Sensor)* "}"
+		//parameters+=FormulaParameter | sensors+=Sensor)* '}'
 		public Group getGroup() { return cGroup; }
 
 		//{metric::MetricModel}
 		public Action getMetricModelAction_0() { return cMetricModelAction_0; }
 
-		//("importURI" "{" importURI+=EString ("," importURI+=EString)* "}")?
+		//('importURI' '{' importURI+=EString (',' importURI+=EString)* '}')?
 		public Group getGroup_1() { return cGroup_1; }
 
-		//"importURI"
+		//'importURI'
 		public Keyword getImportURIKeyword_1_0() { return cImportURIKeyword_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1_1() { return cLeftCurlyBracketKeyword_1_1; }
 
 		//importURI+=EString
@@ -3613,10 +3667,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getImportURIEStringParserRuleCall_1_2_0() { return cImportURIEStringParserRuleCall_1_2_0; }
 
-		//("," importURI+=EString)*
+		//(',' importURI+=EString)*
 		public Group getGroup_1_3() { return cGroup_1_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_1_3_0() { return cCommaKeyword_1_3_0; }
 
 		//importURI+=EString
@@ -3625,10 +3679,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getImportURIEStringParserRuleCall_1_3_1_0() { return cImportURIEStringParserRuleCall_1_3_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_1_4() { return cRightCurlyBracketKeyword_1_4; }
 
-		//"metric model "
+		//'metric model '
 		public Keyword getMetricModelKeyword_2() { return cMetricModelKeyword_2; }
 
 		//name=ID
@@ -3637,7 +3691,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_3_0() { return cNameIDTerminalRuleCall_3_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 
 		//(contexts+=ConditionContext | metrics+=Metric | metricInstances+=MetricInstance | conditions+=Condition |
@@ -3705,18 +3759,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Sensor
 		public RuleCall getSensorsSensorParserRuleCall_5_9_0() { return cSensorsSensorParserRuleCall_5_9_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class MetricInstanceElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MetricInstance");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.MetricInstance");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cCompositeMetricInstanceParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cRawMetricInstanceParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//MetricInstance returns metric::MetricInstance:
-		//	CompositeMetricInstance | RawMetricInstance;
+		//MetricInstance metric::MetricInstance:
+		//	CompositeMetricInstance | RawMetricInstance
 		@Override public ParserRule getRule() { return rule; }
 
 		//CompositeMetricInstance | RawMetricInstance
@@ -3730,7 +3784,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class CompositeMetricInstanceElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CompositeMetricInstance");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.CompositeMetricInstance");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cCompositeMetricInstanceKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -3772,22 +3826,24 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cMetricContextMetricContextFqnParserRuleCall_14_1_0_1 = (RuleCall)cMetricContextMetricContextCrossReference_14_1_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		
-		//CompositeMetricInstance returns metric::CompositeMetricInstance:
-		//	"composite metric instance " name=ID "{" "metric: " metric=[metric::Metric|Fqn] "binding: "
-		//	objectBinding=[metric::MetricObjectBinding|Fqn] "composing metric instances " "["
-		//	composingMetricInstances+=[metric::MetricInstance|Fqn] ("," composingMetricInstances+=[metric::MetricInstance|Fqn])*
-		//	"]" ("schedule: " schedule=[metric::Schedule|Fqn])? ("window: " window=[metric::Window|Fqn])? ("context: "
-		//	metricContext=[metric::MetricContext|Fqn])? "}";
+		//CompositeMetricInstance metric::CompositeMetricInstance:
+		//	'composite metric instance ' name=ID '{'
+		//	'metric: ' metric=[metric::Metric|Fqn]
+		//	'binding: ' objectBinding=[metric::MetricObjectBinding|Fqn]
+		//	'composing metric instances ' '[' composingMetricInstances+=[metric::MetricInstance|Fqn] (','
+		//	composingMetricInstances+=[metric::MetricInstance|Fqn])* ']' ('schedule: ' schedule=[metric::Schedule|Fqn])?
+		//	('window: ' window=[metric::Window|Fqn])? ('context: ' metricContext=[metric::MetricContext|Fqn])?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"composite metric instance " name=ID "{" "metric: " metric=[metric::Metric|Fqn] "binding: "
-		//objectBinding=[metric::MetricObjectBinding|Fqn] "composing metric instances " "["
-		//composingMetricInstances+=[metric::MetricInstance|Fqn] ("," composingMetricInstances+=[metric::MetricInstance|Fqn])*
-		//"]" ("schedule: " schedule=[metric::Schedule|Fqn])? ("window: " window=[metric::Window|Fqn])? ("context: "
-		//metricContext=[metric::MetricContext|Fqn])? "}"
+		//'composite metric instance ' name=ID '{' 'metric: ' metric=[metric::Metric|Fqn] 'binding: '
+		//objectBinding=[metric::MetricObjectBinding|Fqn] 'composing metric instances ' '['
+		//composingMetricInstances+=[metric::MetricInstance|Fqn] (',' composingMetricInstances+=[metric::MetricInstance|Fqn])*
+		//']' ('schedule: ' schedule=[metric::Schedule|Fqn])? ('window: ' window=[metric::Window|Fqn])? ('context: '
+		//metricContext=[metric::MetricContext|Fqn])? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"composite metric instance "
+		//'composite metric instance '
 		public Keyword getCompositeMetricInstanceKeyword_0() { return cCompositeMetricInstanceKeyword_0; }
 
 		//name=ID
@@ -3796,10 +3852,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"metric: "
+		//'metric: '
 		public Keyword getMetricKeyword_3() { return cMetricKeyword_3; }
 
 		//metric=[metric::Metric|Fqn]
@@ -3811,7 +3867,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getMetricMetricFqnParserRuleCall_4_0_1() { return cMetricMetricFqnParserRuleCall_4_0_1; }
 
-		//"binding: "
+		//'binding: '
 		public Keyword getBindingKeyword_5() { return cBindingKeyword_5; }
 
 		//objectBinding=[metric::MetricObjectBinding|Fqn]
@@ -3823,10 +3879,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getObjectBindingMetricObjectBindingFqnParserRuleCall_6_0_1() { return cObjectBindingMetricObjectBindingFqnParserRuleCall_6_0_1; }
 
-		//"composing metric instances "
+		//'composing metric instances '
 		public Keyword getComposingMetricInstancesKeyword_7() { return cComposingMetricInstancesKeyword_7; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_8() { return cLeftSquareBracketKeyword_8; }
 
 		//composingMetricInstances+=[metric::MetricInstance|Fqn]
@@ -3838,10 +3894,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getComposingMetricInstancesMetricInstanceFqnParserRuleCall_9_0_1() { return cComposingMetricInstancesMetricInstanceFqnParserRuleCall_9_0_1; }
 
-		//("," composingMetricInstances+=[metric::MetricInstance|Fqn])*
+		//(',' composingMetricInstances+=[metric::MetricInstance|Fqn])*
 		public Group getGroup_10() { return cGroup_10; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_10_0() { return cCommaKeyword_10_0; }
 
 		//composingMetricInstances+=[metric::MetricInstance|Fqn]
@@ -3853,13 +3909,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getComposingMetricInstancesMetricInstanceFqnParserRuleCall_10_1_0_1() { return cComposingMetricInstancesMetricInstanceFqnParserRuleCall_10_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_11() { return cRightSquareBracketKeyword_11; }
 
-		//("schedule: " schedule=[metric::Schedule|Fqn])?
+		//('schedule: ' schedule=[metric::Schedule|Fqn])?
 		public Group getGroup_12() { return cGroup_12; }
 
-		//"schedule: "
+		//'schedule: '
 		public Keyword getScheduleKeyword_12_0() { return cScheduleKeyword_12_0; }
 
 		//schedule=[metric::Schedule|Fqn]
@@ -3871,10 +3927,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getScheduleScheduleFqnParserRuleCall_12_1_0_1() { return cScheduleScheduleFqnParserRuleCall_12_1_0_1; }
 
-		//("window: " window=[metric::Window|Fqn])?
+		//('window: ' window=[metric::Window|Fqn])?
 		public Group getGroup_13() { return cGroup_13; }
 
-		//"window: "
+		//'window: '
 		public Keyword getWindowKeyword_13_0() { return cWindowKeyword_13_0; }
 
 		//window=[metric::Window|Fqn]
@@ -3886,10 +3942,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getWindowWindowFqnParserRuleCall_13_1_0_1() { return cWindowWindowFqnParserRuleCall_13_1_0_1; }
 
-		//("context: " metricContext=[metric::MetricContext|Fqn])?
+		//('context: ' metricContext=[metric::MetricContext|Fqn])?
 		public Group getGroup_14() { return cGroup_14; }
 
-		//"context: "
+		//'context: '
 		public Keyword getContextKeyword_14_0() { return cContextKeyword_14_0; }
 
 		//metricContext=[metric::MetricContext|Fqn]
@@ -3901,12 +3957,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getMetricContextMetricContextFqnParserRuleCall_14_1_0_1() { return cMetricContextMetricContextFqnParserRuleCall_14_1_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_15() { return cRightCurlyBracketKeyword_15; }
 	}
 
 	public class RawMetricInstanceElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RawMetricInstance");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.RawMetricInstance");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRawMetricInstanceKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -3941,18 +3997,21 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cMetricContextMetricContextFqnParserRuleCall_11_1_0_1 = (RuleCall)cMetricContextMetricContextCrossReference_11_1_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		
-		//RawMetricInstance returns metric::RawMetricInstance:
-		//	"raw metric instance " name=ID "{" "metric: " metric=[metric::Metric|Fqn] "sensor: " sensor=[metric::Sensor|Fqn]
-		//	"binding: " objectBinding=[metric::MetricObjectBinding|Fqn] ("schedule: " schedule=[metric::Schedule|Fqn])?
-		//	("window: " window=[metric::Window|Fqn])? ("context: " metricContext=[metric::MetricContext|Fqn])? "}";
+		//RawMetricInstance metric::RawMetricInstance:
+		//	'raw metric instance ' name=ID '{'
+		//	'metric: ' metric=[metric::Metric|Fqn]
+		//	'sensor: ' sensor=[metric::Sensor|Fqn]
+		//	'binding: ' objectBinding=[metric::MetricObjectBinding|Fqn] ('schedule: ' schedule=[metric::Schedule|Fqn])?
+		//	('window: ' window=[metric::Window|Fqn])? ('context: ' metricContext=[metric::MetricContext|Fqn])?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"raw metric instance " name=ID "{" "metric: " metric=[metric::Metric|Fqn] "sensor: " sensor=[metric::Sensor|Fqn]
-		//"binding: " objectBinding=[metric::MetricObjectBinding|Fqn] ("schedule: " schedule=[metric::Schedule|Fqn])?
-		//("window: " window=[metric::Window|Fqn])? ("context: " metricContext=[metric::MetricContext|Fqn])? "}"
+		//'raw metric instance ' name=ID '{' 'metric: ' metric=[metric::Metric|Fqn] 'sensor: ' sensor=[metric::Sensor|Fqn]
+		//'binding: ' objectBinding=[metric::MetricObjectBinding|Fqn] ('schedule: ' schedule=[metric::Schedule|Fqn])? ('window: '
+		//window=[metric::Window|Fqn])? ('context: ' metricContext=[metric::MetricContext|Fqn])? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"raw metric instance "
+		//'raw metric instance '
 		public Keyword getRawMetricInstanceKeyword_0() { return cRawMetricInstanceKeyword_0; }
 
 		//name=ID
@@ -3961,10 +4020,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"metric: "
+		//'metric: '
 		public Keyword getMetricKeyword_3() { return cMetricKeyword_3; }
 
 		//metric=[metric::Metric|Fqn]
@@ -3976,7 +4035,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getMetricMetricFqnParserRuleCall_4_0_1() { return cMetricMetricFqnParserRuleCall_4_0_1; }
 
-		//"sensor: "
+		//'sensor: '
 		public Keyword getSensorKeyword_5() { return cSensorKeyword_5; }
 
 		//sensor=[metric::Sensor|Fqn]
@@ -3988,7 +4047,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSensorSensorFqnParserRuleCall_6_0_1() { return cSensorSensorFqnParserRuleCall_6_0_1; }
 
-		//"binding: "
+		//'binding: '
 		public Keyword getBindingKeyword_7() { return cBindingKeyword_7; }
 
 		//objectBinding=[metric::MetricObjectBinding|Fqn]
@@ -4000,10 +4059,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getObjectBindingMetricObjectBindingFqnParserRuleCall_8_0_1() { return cObjectBindingMetricObjectBindingFqnParserRuleCall_8_0_1; }
 
-		//("schedule: " schedule=[metric::Schedule|Fqn])?
+		//('schedule: ' schedule=[metric::Schedule|Fqn])?
 		public Group getGroup_9() { return cGroup_9; }
 
-		//"schedule: "
+		//'schedule: '
 		public Keyword getScheduleKeyword_9_0() { return cScheduleKeyword_9_0; }
 
 		//schedule=[metric::Schedule|Fqn]
@@ -4015,10 +4074,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getScheduleScheduleFqnParserRuleCall_9_1_0_1() { return cScheduleScheduleFqnParserRuleCall_9_1_0_1; }
 
-		//("window: " window=[metric::Window|Fqn])?
+		//('window: ' window=[metric::Window|Fqn])?
 		public Group getGroup_10() { return cGroup_10; }
 
-		//"window: "
+		//'window: '
 		public Keyword getWindowKeyword_10_0() { return cWindowKeyword_10_0; }
 
 		//window=[metric::Window|Fqn]
@@ -4030,10 +4089,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getWindowWindowFqnParserRuleCall_10_1_0_1() { return cWindowWindowFqnParserRuleCall_10_1_0_1; }
 
-		//("context: " metricContext=[metric::MetricContext|Fqn])?
+		//('context: ' metricContext=[metric::MetricContext|Fqn])?
 		public Group getGroup_11() { return cGroup_11; }
 
-		//"context: "
+		//'context: '
 		public Keyword getContextKeyword_11_0() { return cContextKeyword_11_0; }
 
 		//metricContext=[metric::MetricContext|Fqn]
@@ -4045,12 +4104,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getMetricContextMetricContextFqnParserRuleCall_11_1_0_1() { return cMetricContextMetricContextFqnParserRuleCall_11_1_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
 	}
 
 	public class WindowElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Window");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Window");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cWindowKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -4077,17 +4136,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cUnitTimeIntervalUnitFqnParserRuleCall_9_1_0_1 = (RuleCall)cUnitTimeIntervalUnitCrossReference_9_1_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
-		//Window returns metric::Window:
-		//	"window " name=ID "{" "window type: " windowType=WindowType "size type: " sizeType=WindowSizeType
-		//	("measurement size: " measurementSize=ELong)? ("time size: " timeSize=ELong)? ("unit: "
-		//	unit=[unit::TimeIntervalUnit|Fqn])? "}";
+		//Window metric::Window:
+		//	'window ' name=ID '{'
+		//	'window type: ' windowType=WindowType
+		//	'size type: ' sizeType=WindowSizeType ('measurement size: ' measurementSize=ELong)? ('time size: ' timeSize=ELong)?
+		//	('unit: ' unit=[unit::TimeIntervalUnit|Fqn])?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"window " name=ID "{" "window type: " windowType=WindowType "size type: " sizeType=WindowSizeType ("measurement size: "
-		//measurementSize=ELong)? ("time size: " timeSize=ELong)? ("unit: " unit=[unit::TimeIntervalUnit|Fqn])? "}"
+		//'window ' name=ID '{' 'window type: ' windowType=WindowType 'size type: ' sizeType=WindowSizeType ('measurement size: '
+		//measurementSize=ELong)? ('time size: ' timeSize=ELong)? ('unit: ' unit=[unit::TimeIntervalUnit|Fqn])? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"window "
+		//'window '
 		public Keyword getWindowKeyword_0() { return cWindowKeyword_0; }
 
 		//name=ID
@@ -4096,10 +4157,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"window type: "
+		//'window type: '
 		public Keyword getWindowTypeKeyword_3() { return cWindowTypeKeyword_3; }
 
 		//windowType=WindowType
@@ -4108,7 +4169,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//WindowType
 		public RuleCall getWindowTypeWindowTypeEnumRuleCall_4_0() { return cWindowTypeWindowTypeEnumRuleCall_4_0; }
 
-		//"size type: "
+		//'size type: '
 		public Keyword getSizeTypeKeyword_5() { return cSizeTypeKeyword_5; }
 
 		//sizeType=WindowSizeType
@@ -4117,10 +4178,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//WindowSizeType
 		public RuleCall getSizeTypeWindowSizeTypeEnumRuleCall_6_0() { return cSizeTypeWindowSizeTypeEnumRuleCall_6_0; }
 
-		//("measurement size: " measurementSize=ELong)?
+		//('measurement size: ' measurementSize=ELong)?
 		public Group getGroup_7() { return cGroup_7; }
 
-		//"measurement size: "
+		//'measurement size: '
 		public Keyword getMeasurementSizeKeyword_7_0() { return cMeasurementSizeKeyword_7_0; }
 
 		//measurementSize=ELong
@@ -4129,10 +4190,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ELong
 		public RuleCall getMeasurementSizeELongParserRuleCall_7_1_0() { return cMeasurementSizeELongParserRuleCall_7_1_0; }
 
-		//("time size: " timeSize=ELong)?
+		//('time size: ' timeSize=ELong)?
 		public Group getGroup_8() { return cGroup_8; }
 
-		//"time size: "
+		//'time size: '
 		public Keyword getTimeSizeKeyword_8_0() { return cTimeSizeKeyword_8_0; }
 
 		//timeSize=ELong
@@ -4141,10 +4202,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ELong
 		public RuleCall getTimeSizeELongParserRuleCall_8_1_0() { return cTimeSizeELongParserRuleCall_8_1_0; }
 
-		//("unit: " unit=[unit::TimeIntervalUnit|Fqn])?
+		//('unit: ' unit=[unit::TimeIntervalUnit|Fqn])?
 		public Group getGroup_9() { return cGroup_9; }
 
-		//"unit: "
+		//'unit: '
 		public Keyword getUnitKeyword_9_0() { return cUnitKeyword_9_0; }
 
 		//unit=[unit::TimeIntervalUnit|Fqn]
@@ -4156,24 +4217,24 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getUnitTimeIntervalUnitFqnParserRuleCall_9_1_0_1() { return cUnitTimeIntervalUnitFqnParserRuleCall_9_1_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
 	}
 
 	public class ELongElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ELong");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ELong");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cHyphenMinusKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
-		//ELong returns ecore::ELong:
-		//	"-"? INT;
+		//ELong ecore::ELong:
+		//	'-'? INT
 		@Override public ParserRule getRule() { return rule; }
 
-		//"-"? INT
+		//'-'? INT
 		public Group getGroup() { return cGroup; }
 
-		//"-"?
+		//'-'?
 		public Keyword getHyphenMinusKeyword_0() { return cHyphenMinusKeyword_0; }
 
 		//INT
@@ -4181,7 +4242,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class ScheduleElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Schedule");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Schedule");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cScheduleKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -4211,18 +4272,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRepetitionsEIntParserRuleCall_11_1_0 = (RuleCall)cRepetitionsAssignment_11_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		
-		//Schedule returns metric::Schedule:
-		//	"schedule " name=ID "{" "type: " type=ScheduleType "interval: " interval=ELong "unit: "
-		//	unit=[unit::TimeIntervalUnit|Fqn] ("start: " start=EDate)? ("end: " end=EDate)? ("repetitions: " repetitions=EInt)?
-		//	"}";
+		//Schedule metric::Schedule:
+		//	'schedule ' name=ID '{'
+		//	'type: ' type=ScheduleType
+		//	'interval: ' interval=ELong
+		//	'unit: ' unit=[unit::TimeIntervalUnit|Fqn] ('start: ' start=EDate)? ('end: ' end=EDate)? ('repetitions: '
+		//	repetitions=EInt)?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"schedule " name=ID "{" "type: " type=ScheduleType "interval: " interval=ELong "unit: "
-		//unit=[unit::TimeIntervalUnit|Fqn] ("start: " start=EDate)? ("end: " end=EDate)? ("repetitions: " repetitions=EInt)?
-		//"}"
+		//'schedule ' name=ID '{' 'type: ' type=ScheduleType 'interval: ' interval=ELong 'unit: '
+		//unit=[unit::TimeIntervalUnit|Fqn] ('start: ' start=EDate)? ('end: ' end=EDate)? ('repetitions: ' repetitions=EInt)? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"schedule "
+		//'schedule '
 		public Keyword getScheduleKeyword_0() { return cScheduleKeyword_0; }
 
 		//name=ID
@@ -4231,10 +4294,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"type: "
+		//'type: '
 		public Keyword getTypeKeyword_3() { return cTypeKeyword_3; }
 
 		//type=ScheduleType
@@ -4243,7 +4306,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ScheduleType
 		public RuleCall getTypeScheduleTypeEnumRuleCall_4_0() { return cTypeScheduleTypeEnumRuleCall_4_0; }
 
-		//"interval: "
+		//'interval: '
 		public Keyword getIntervalKeyword_5() { return cIntervalKeyword_5; }
 
 		//interval=ELong
@@ -4252,7 +4315,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ELong
 		public RuleCall getIntervalELongParserRuleCall_6_0() { return cIntervalELongParserRuleCall_6_0; }
 
-		//"unit: "
+		//'unit: '
 		public Keyword getUnitKeyword_7() { return cUnitKeyword_7; }
 
 		//unit=[unit::TimeIntervalUnit|Fqn]
@@ -4264,10 +4327,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getUnitTimeIntervalUnitFqnParserRuleCall_8_0_1() { return cUnitTimeIntervalUnitFqnParserRuleCall_8_0_1; }
 
-		//("start: " start=EDate)?
+		//('start: ' start=EDate)?
 		public Group getGroup_9() { return cGroup_9; }
 
-		//"start: "
+		//'start: '
 		public Keyword getStartKeyword_9_0() { return cStartKeyword_9_0; }
 
 		//start=EDate
@@ -4276,10 +4339,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDate
 		public RuleCall getStartEDateParserRuleCall_9_1_0() { return cStartEDateParserRuleCall_9_1_0; }
 
-		//("end: " end=EDate)?
+		//('end: ' end=EDate)?
 		public Group getGroup_10() { return cGroup_10; }
 
-		//"end: "
+		//'end: '
 		public Keyword getEndKeyword_10_0() { return cEndKeyword_10_0; }
 
 		//end=EDate
@@ -4288,10 +4351,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDate
 		public RuleCall getEndEDateParserRuleCall_10_1_0() { return cEndEDateParserRuleCall_10_1_0; }
 
-		//("repetitions: " repetitions=EInt)?
+		//('repetitions: ' repetitions=EInt)?
 		public Group getGroup_11() { return cGroup_11; }
 
-		//"repetitions: "
+		//'repetitions: '
 		public Keyword getRepetitionsKeyword_11_0() { return cRepetitionsKeyword_11_0; }
 
 		//repetitions=EInt
@@ -4300,12 +4363,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInt
 		public RuleCall getRepetitionsEIntParserRuleCall_11_1_0() { return cRepetitionsEIntParserRuleCall_11_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
 	}
 
 	public class MetricComponentBindingElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MetricComponentBinding");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.MetricComponentBinding");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cComponentBindingKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -4326,18 +4389,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cVmInstanceVMInstanceFqnParserRuleCall_7_1_0_1 = (RuleCall)cVmInstanceVMInstanceCrossReference_7_1_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
-		//MetricComponentBinding returns metric::MetricComponentBinding:
-		//	"component binding " name=ID "{" "execution context: " executionContext=[execution::ExecutionContext|Fqn]
-		//	"component instance: " componentInstance=[deployment::ComponentInstance|Fqn] ("vm instance: "
-		//	vmInstance=[deployment::VMInstance|Fqn])? "}";
+		//MetricComponentBinding metric::MetricComponentBinding:
+		//	'component binding ' name=ID '{'
+		//	'execution context: ' executionContext=[execution::ExecutionContext|Fqn]
+		//	'component instance: ' componentInstance=[deployment::ComponentInstance|Fqn] ('vm instance: '
+		//	vmInstance=[deployment::VMInstance|Fqn])?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"component binding " name=ID "{" "execution context: " executionContext=[execution::ExecutionContext|Fqn]
-		//"component instance: " componentInstance=[deployment::ComponentInstance|Fqn] ("vm instance: "
-		//vmInstance=[deployment::VMInstance|Fqn])? "}"
+		//'component binding ' name=ID '{' 'execution context: ' executionContext=[execution::ExecutionContext|Fqn]
+		//'component instance: ' componentInstance=[deployment::ComponentInstance|Fqn] ('vm instance: '
+		//vmInstance=[deployment::VMInstance|Fqn])? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"component binding "
+		//'component binding '
 		public Keyword getComponentBindingKeyword_0() { return cComponentBindingKeyword_0; }
 
 		//name=ID
@@ -4346,10 +4411,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"execution context: "
+		//'execution context: '
 		public Keyword getExecutionContextKeyword_3() { return cExecutionContextKeyword_3; }
 
 		//executionContext=[execution::ExecutionContext|Fqn]
@@ -4361,7 +4426,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getExecutionContextExecutionContextFqnParserRuleCall_4_0_1() { return cExecutionContextExecutionContextFqnParserRuleCall_4_0_1; }
 
-		//"component instance: "
+		//'component instance: '
 		public Keyword getComponentInstanceKeyword_5() { return cComponentInstanceKeyword_5; }
 
 		//componentInstance=[deployment::ComponentInstance|Fqn]
@@ -4373,10 +4438,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getComponentInstanceComponentInstanceFqnParserRuleCall_6_0_1() { return cComponentInstanceComponentInstanceFqnParserRuleCall_6_0_1; }
 
-		//("vm instance: " vmInstance=[deployment::VMInstance|Fqn])?
+		//('vm instance: ' vmInstance=[deployment::VMInstance|Fqn])?
 		public Group getGroup_7() { return cGroup_7; }
 
-		//"vm instance: "
+		//'vm instance: '
 		public Keyword getVmInstanceKeyword_7_0() { return cVmInstanceKeyword_7_0; }
 
 		//vmInstance=[deployment::VMInstance|Fqn]
@@ -4388,12 +4453,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getVmInstanceVMInstanceFqnParserRuleCall_7_1_0_1() { return cVmInstanceVMInstanceFqnParserRuleCall_7_1_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 	}
 
 	public class MetricVMBindingElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MetricVMBinding");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.MetricVMBinding");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cVmBindingKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -4409,16 +4474,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cVmInstanceVMInstanceFqnParserRuleCall_6_0_1 = (RuleCall)cVmInstanceVMInstanceCrossReference_6_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
-		//MetricVMBinding returns metric::MetricVMBinding:
-		//	"vm binding " name=ID "{" "execution context: " executionContext=[execution::ExecutionContext|Fqn] "vm instance: "
-		//	vmInstance=[deployment::VMInstance|Fqn] "}";
+		//MetricVMBinding metric::MetricVMBinding:
+		//	'vm binding ' name=ID '{'
+		//	'execution context: ' executionContext=[execution::ExecutionContext|Fqn]
+		//	'vm instance: ' vmInstance=[deployment::VMInstance|Fqn]
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"vm binding " name=ID "{" "execution context: " executionContext=[execution::ExecutionContext|Fqn] "vm instance: "
-		//vmInstance=[deployment::VMInstance|Fqn] "}"
+		//'vm binding ' name=ID '{' 'execution context: ' executionContext=[execution::ExecutionContext|Fqn] 'vm instance: '
+		//vmInstance=[deployment::VMInstance|Fqn] '}'
 		public Group getGroup() { return cGroup; }
 
-		//"vm binding "
+		//'vm binding '
 		public Keyword getVmBindingKeyword_0() { return cVmBindingKeyword_0; }
 
 		//name=ID
@@ -4427,10 +4494,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"execution context: "
+		//'execution context: '
 		public Keyword getExecutionContextKeyword_3() { return cExecutionContextKeyword_3; }
 
 		//executionContext=[execution::ExecutionContext|Fqn]
@@ -4442,7 +4509,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getExecutionContextExecutionContextFqnParserRuleCall_4_0_1() { return cExecutionContextExecutionContextFqnParserRuleCall_4_0_1; }
 
-		//"vm instance: "
+		//'vm instance: '
 		public Keyword getVmInstanceKeyword_5() { return cVmInstanceKeyword_5; }
 
 		//vmInstance=[deployment::VMInstance|Fqn]
@@ -4454,12 +4521,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getVmInstanceVMInstanceFqnParserRuleCall_6_0_1() { return cVmInstanceVMInstanceFqnParserRuleCall_6_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class MetricApplicationBindingElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MetricApplicationBinding");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.MetricApplicationBinding");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cApplicationBindingKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -4471,14 +4538,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cExecutionContextExecutionContextFqnParserRuleCall_4_0_1 = (RuleCall)cExecutionContextExecutionContextCrossReference_4_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//MetricApplicationBinding returns metric::MetricApplicationBinding:
-		//	"application binding " name=ID "{" "execution context: " executionContext=[execution::ExecutionContext|Fqn] "}";
+		//MetricApplicationBinding metric::MetricApplicationBinding:
+		//	'application binding ' name=ID '{'
+		//	'execution context: ' executionContext=[execution::ExecutionContext|Fqn]
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"application binding " name=ID "{" "execution context: " executionContext=[execution::ExecutionContext|Fqn] "}"
+		//'application binding ' name=ID '{' 'execution context: ' executionContext=[execution::ExecutionContext|Fqn] '}'
 		public Group getGroup() { return cGroup; }
 
-		//"application binding "
+		//'application binding '
 		public Keyword getApplicationBindingKeyword_0() { return cApplicationBindingKeyword_0; }
 
 		//name=ID
@@ -4487,10 +4556,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"execution context: "
+		//'execution context: '
 		public Keyword getExecutionContextKeyword_3() { return cExecutionContextKeyword_3; }
 
 		//executionContext=[execution::ExecutionContext|Fqn]
@@ -4502,19 +4571,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getExecutionContextExecutionContextFqnParserRuleCall_4_0_1() { return cExecutionContextExecutionContextFqnParserRuleCall_4_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class MetricObjectBindingElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MetricObjectBinding");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.MetricObjectBinding");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cMetricApplicationBindingParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cMetricComponentBindingParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cMetricVMBindingParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
-		//MetricObjectBinding returns metric::MetricObjectBinding:
-		//	MetricApplicationBinding | MetricComponentBinding | MetricVMBinding;
+		//MetricObjectBinding metric::MetricObjectBinding:
+		//	MetricApplicationBinding | MetricComponentBinding | MetricVMBinding
 		@Override public ParserRule getRule() { return rule; }
 
 		//MetricApplicationBinding | MetricComponentBinding | MetricVMBinding
@@ -4531,13 +4600,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class ConditionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Condition");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Condition");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cMetricConditionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cPropertyConditionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//Condition returns metric::Condition:
-		//	MetricCondition | PropertyCondition;
+		//Condition metric::Condition:
+		//	MetricCondition | PropertyCondition
 		@Override public ParserRule getRule() { return rule; }
 
 		//MetricCondition | PropertyCondition
@@ -4551,7 +4620,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class MetricConditionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MetricCondition");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.MetricCondition");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cMetricConditionKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -4573,16 +4642,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cValidityEDateParserRuleCall_9_1_0 = (RuleCall)cValidityAssignment_9_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
-		//MetricCondition returns metric::MetricCondition:
-		//	"metric condition " name=ID "{" "context: " metricContext=[metric::MetricContext|Fqn] "threshold: " threshold=EDouble
-		//	"comparison operator: " comparisonOperator=ComparisonOperatorType ("validity: " validity=EDate)? "}";
+		//MetricCondition metric::MetricCondition:
+		//	'metric condition ' name=ID '{'
+		//	'context: ' metricContext=[metric::MetricContext|Fqn]
+		//	'threshold: ' threshold=EDouble
+		//	'comparison operator: ' comparisonOperator=ComparisonOperatorType ('validity: ' validity=EDate)?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"metric condition " name=ID "{" "context: " metricContext=[metric::MetricContext|Fqn] "threshold: " threshold=EDouble
-		//"comparison operator: " comparisonOperator=ComparisonOperatorType ("validity: " validity=EDate)? "}"
+		//'metric condition ' name=ID '{' 'context: ' metricContext=[metric::MetricContext|Fqn] 'threshold: ' threshold=EDouble
+		//'comparison operator: ' comparisonOperator=ComparisonOperatorType ('validity: ' validity=EDate)? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"metric condition "
+		//'metric condition '
 		public Keyword getMetricConditionKeyword_0() { return cMetricConditionKeyword_0; }
 
 		//name=ID
@@ -4591,10 +4663,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"context: "
+		//'context: '
 		public Keyword getContextKeyword_3() { return cContextKeyword_3; }
 
 		//metricContext=[metric::MetricContext|Fqn]
@@ -4606,7 +4678,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getMetricContextMetricContextFqnParserRuleCall_4_0_1() { return cMetricContextMetricContextFqnParserRuleCall_4_0_1; }
 
-		//"threshold: "
+		//'threshold: '
 		public Keyword getThresholdKeyword_5() { return cThresholdKeyword_5; }
 
 		//threshold=EDouble
@@ -4615,7 +4687,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDouble
 		public RuleCall getThresholdEDoubleParserRuleCall_6_0() { return cThresholdEDoubleParserRuleCall_6_0; }
 
-		//"comparison operator: "
+		//'comparison operator: '
 		public Keyword getComparisonOperatorKeyword_7() { return cComparisonOperatorKeyword_7; }
 
 		//comparisonOperator=ComparisonOperatorType
@@ -4624,10 +4696,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ComparisonOperatorType
 		public RuleCall getComparisonOperatorComparisonOperatorTypeEnumRuleCall_8_0() { return cComparisonOperatorComparisonOperatorTypeEnumRuleCall_8_0; }
 
-		//("validity: " validity=EDate)?
+		//('validity: ' validity=EDate)?
 		public Group getGroup_9() { return cGroup_9; }
 
-		//"validity: "
+		//'validity: '
 		public Keyword getValidityKeyword_9_0() { return cValidityKeyword_9_0; }
 
 		//validity=EDate
@@ -4636,12 +4708,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDate
 		public RuleCall getValidityEDateParserRuleCall_9_1_0() { return cValidityEDateParserRuleCall_9_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
 	}
 
 	public class PropertyConditionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "PropertyCondition");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.PropertyCondition");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cPropertyConditionKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -4673,20 +4745,22 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cValidityEDateParserRuleCall_11_1_0 = (RuleCall)cValidityAssignment_11_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		
-		//PropertyCondition returns metric::PropertyCondition:
-		//	"property condition " name=ID "{" "property context: " propertyContext=[metric::PropertyContext|Fqn] "threshold: "
-		//	threshold=EDouble "comparison operator: " comparisonOperator=ComparisonOperatorType ("unit: "
-		//	unit=[unit::MonetaryUnit|Fqn])? ("time unit: " timeUnit=[unit::TimeIntervalUnit|Fqn])? ("validity: " validity=EDate)?
-		//	"}";
+		//PropertyCondition metric::PropertyCondition:
+		//	'property condition ' name=ID '{'
+		//	'property context: ' propertyContext=[metric::PropertyContext|Fqn]
+		//	'threshold: ' threshold=EDouble
+		//	'comparison operator: ' comparisonOperator=ComparisonOperatorType ('unit: ' unit=[unit::MonetaryUnit|Fqn])?
+		//	('time unit: ' timeUnit=[unit::TimeIntervalUnit|Fqn])? ('validity: ' validity=EDate)?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"property condition " name=ID "{" "property context: " propertyContext=[metric::PropertyContext|Fqn] "threshold: "
-		//threshold=EDouble "comparison operator: " comparisonOperator=ComparisonOperatorType ("unit: "
-		//unit=[unit::MonetaryUnit|Fqn])? ("time unit: " timeUnit=[unit::TimeIntervalUnit|Fqn])? ("validity: " validity=EDate)?
-		//"}"
+		//'property condition ' name=ID '{' 'property context: ' propertyContext=[metric::PropertyContext|Fqn] 'threshold: '
+		//threshold=EDouble 'comparison operator: ' comparisonOperator=ComparisonOperatorType ('unit: '
+		//unit=[unit::MonetaryUnit|Fqn])? ('time unit: ' timeUnit=[unit::TimeIntervalUnit|Fqn])? ('validity: ' validity=EDate)?
+		//'}'
 		public Group getGroup() { return cGroup; }
 
-		//"property condition "
+		//'property condition '
 		public Keyword getPropertyConditionKeyword_0() { return cPropertyConditionKeyword_0; }
 
 		//name=ID
@@ -4695,10 +4769,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"property context: "
+		//'property context: '
 		public Keyword getPropertyContextKeyword_3() { return cPropertyContextKeyword_3; }
 
 		//propertyContext=[metric::PropertyContext|Fqn]
@@ -4710,7 +4784,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getPropertyContextPropertyContextFqnParserRuleCall_4_0_1() { return cPropertyContextPropertyContextFqnParserRuleCall_4_0_1; }
 
-		//"threshold: "
+		//'threshold: '
 		public Keyword getThresholdKeyword_5() { return cThresholdKeyword_5; }
 
 		//threshold=EDouble
@@ -4719,7 +4793,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDouble
 		public RuleCall getThresholdEDoubleParserRuleCall_6_0() { return cThresholdEDoubleParserRuleCall_6_0; }
 
-		//"comparison operator: "
+		//'comparison operator: '
 		public Keyword getComparisonOperatorKeyword_7() { return cComparisonOperatorKeyword_7; }
 
 		//comparisonOperator=ComparisonOperatorType
@@ -4728,10 +4802,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ComparisonOperatorType
 		public RuleCall getComparisonOperatorComparisonOperatorTypeEnumRuleCall_8_0() { return cComparisonOperatorComparisonOperatorTypeEnumRuleCall_8_0; }
 
-		//("unit: " unit=[unit::MonetaryUnit|Fqn])?
+		//('unit: ' unit=[unit::MonetaryUnit|Fqn])?
 		public Group getGroup_9() { return cGroup_9; }
 
-		//"unit: "
+		//'unit: '
 		public Keyword getUnitKeyword_9_0() { return cUnitKeyword_9_0; }
 
 		//unit=[unit::MonetaryUnit|Fqn]
@@ -4743,10 +4817,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getUnitMonetaryUnitFqnParserRuleCall_9_1_0_1() { return cUnitMonetaryUnitFqnParserRuleCall_9_1_0_1; }
 
-		//("time unit: " timeUnit=[unit::TimeIntervalUnit|Fqn])?
+		//('time unit: ' timeUnit=[unit::TimeIntervalUnit|Fqn])?
 		public Group getGroup_10() { return cGroup_10; }
 
-		//"time unit: "
+		//'time unit: '
 		public Keyword getTimeUnitKeyword_10_0() { return cTimeUnitKeyword_10_0; }
 
 		//timeUnit=[unit::TimeIntervalUnit|Fqn]
@@ -4758,10 +4832,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getTimeUnitTimeIntervalUnitFqnParserRuleCall_10_1_0_1() { return cTimeUnitTimeIntervalUnitFqnParserRuleCall_10_1_0_1; }
 
-		//("validity: " validity=EDate)?
+		//('validity: ' validity=EDate)?
 		public Group getGroup_11() { return cGroup_11; }
 
-		//"validity: "
+		//'validity: '
 		public Keyword getValidityKeyword_11_0() { return cValidityKeyword_11_0; }
 
 		//validity=EDate
@@ -4770,19 +4844,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDate
 		public RuleCall getValidityEDateParserRuleCall_11_1_0() { return cValidityEDateParserRuleCall_11_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
 	}
 
 	public class ConditionContextElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ConditionContext");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ConditionContext");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cCompositeMetricContextParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cRawMetricContextParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cPropertyContextParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
-		//ConditionContext returns metric::ConditionContext:
-		//	CompositeMetricContext | RawMetricContext | PropertyContext;
+		//ConditionContext metric::ConditionContext:
+		//	CompositeMetricContext | RawMetricContext | PropertyContext
 		@Override public ParserRule getRule() { return rule; }
 
 		//CompositeMetricContext | RawMetricContext | PropertyContext
@@ -4799,7 +4873,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class CompositeMetricContextElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CompositeMetricContext");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.CompositeMetricContext");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cCompositeMetricContextKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -4856,24 +4930,26 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cMaxQuantityEDoubleParserRuleCall_12_3_0 = (RuleCall)cMaxQuantityAssignment_12_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		
-		//CompositeMetricContext returns metric::CompositeMetricContext:
-		//	"composite metric context " name=ID "{" "metric: " metric=[metric::Metric|Fqn] ("component: "
-		//	component=[deployment::Component|Fqn])? ("application: " application=[camel::Application|Fqn])? ("window: "
-		//	window=[metric::Window|Fqn])? ("schedule: " schedule=[metric::Schedule|Fqn])? ("composing metric contexts " "["
-		//	composingMetricContexts+=[metric::MetricContext|Fqn] ("," composingMetricContexts+=[metric::MetricContext|Fqn])*
-		//	"]")? ("quantifier: " quantifier=QuantifierType)? isRelative?="relative"? ("quantity: " minQuantity=EDouble ".."
-		//	maxQuantity=EDouble)? "}";
+		//CompositeMetricContext metric::CompositeMetricContext:
+		//	'composite metric context ' name=ID '{'
+		//	'metric: ' metric=[metric::Metric|Fqn] ('component: ' component=[deployment::Component|Fqn])? ('application: '
+		//	application=[camel::Application|Fqn])? ('window: ' window=[metric::Window|Fqn])? ('schedule: '
+		//	schedule=[metric::Schedule|Fqn])? ('composing metric contexts ' '['
+		//	composingMetricContexts+=[metric::MetricContext|Fqn] (',' composingMetricContexts+=[metric::MetricContext|Fqn])* ']')?
+		//	('quantifier: ' quantifier=QuantifierType)?
+		//	isRelative?='relative'? ('quantity: ' minQuantity=EDouble '..' maxQuantity=EDouble)?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"composite metric context " name=ID "{" "metric: " metric=[metric::Metric|Fqn] ("component: "
-		//component=[deployment::Component|Fqn])? ("application: " application=[camel::Application|Fqn])? ("window: "
-		//window=[metric::Window|Fqn])? ("schedule: " schedule=[metric::Schedule|Fqn])? ("composing metric contexts " "["
-		//composingMetricContexts+=[metric::MetricContext|Fqn] ("," composingMetricContexts+=[metric::MetricContext|Fqn])* "]")?
-		//("quantifier: " quantifier=QuantifierType)? isRelative?="relative"? ("quantity: " minQuantity=EDouble ".."
-		//maxQuantity=EDouble)? "}"
+		//'composite metric context ' name=ID '{' 'metric: ' metric=[metric::Metric|Fqn] ('component: '
+		//component=[deployment::Component|Fqn])? ('application: ' application=[camel::Application|Fqn])? ('window: '
+		//window=[metric::Window|Fqn])? ('schedule: ' schedule=[metric::Schedule|Fqn])? ('composing metric contexts ' '['
+		//composingMetricContexts+=[metric::MetricContext|Fqn] (',' composingMetricContexts+=[metric::MetricContext|Fqn])* ']')?
+		//('quantifier: ' quantifier=QuantifierType)? isRelative?='relative'? ('quantity: ' minQuantity=EDouble '..'
+		//maxQuantity=EDouble)? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"composite metric context "
+		//'composite metric context '
 		public Keyword getCompositeMetricContextKeyword_0() { return cCompositeMetricContextKeyword_0; }
 
 		//name=ID
@@ -4882,10 +4958,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"metric: "
+		//'metric: '
 		public Keyword getMetricKeyword_3() { return cMetricKeyword_3; }
 
 		//metric=[metric::Metric|Fqn]
@@ -4897,10 +4973,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getMetricMetricFqnParserRuleCall_4_0_1() { return cMetricMetricFqnParserRuleCall_4_0_1; }
 
-		//("component: " component=[deployment::Component|Fqn])?
+		//('component: ' component=[deployment::Component|Fqn])?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"component: "
+		//'component: '
 		public Keyword getComponentKeyword_5_0() { return cComponentKeyword_5_0; }
 
 		//component=[deployment::Component|Fqn]
@@ -4912,10 +4988,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getComponentComponentFqnParserRuleCall_5_1_0_1() { return cComponentComponentFqnParserRuleCall_5_1_0_1; }
 
-		//("application: " application=[camel::Application|Fqn])?
+		//('application: ' application=[camel::Application|Fqn])?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//"application: "
+		//'application: '
 		public Keyword getApplicationKeyword_6_0() { return cApplicationKeyword_6_0; }
 
 		//application=[camel::Application|Fqn]
@@ -4927,10 +5003,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getApplicationApplicationFqnParserRuleCall_6_1_0_1() { return cApplicationApplicationFqnParserRuleCall_6_1_0_1; }
 
-		//("window: " window=[metric::Window|Fqn])?
+		//('window: ' window=[metric::Window|Fqn])?
 		public Group getGroup_7() { return cGroup_7; }
 
-		//"window: "
+		//'window: '
 		public Keyword getWindowKeyword_7_0() { return cWindowKeyword_7_0; }
 
 		//window=[metric::Window|Fqn]
@@ -4942,10 +5018,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getWindowWindowFqnParserRuleCall_7_1_0_1() { return cWindowWindowFqnParserRuleCall_7_1_0_1; }
 
-		//("schedule: " schedule=[metric::Schedule|Fqn])?
+		//('schedule: ' schedule=[metric::Schedule|Fqn])?
 		public Group getGroup_8() { return cGroup_8; }
 
-		//"schedule: "
+		//'schedule: '
 		public Keyword getScheduleKeyword_8_0() { return cScheduleKeyword_8_0; }
 
 		//schedule=[metric::Schedule|Fqn]
@@ -4957,14 +5033,14 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getScheduleScheduleFqnParserRuleCall_8_1_0_1() { return cScheduleScheduleFqnParserRuleCall_8_1_0_1; }
 
-		//("composing metric contexts " "[" composingMetricContexts+=[metric::MetricContext|Fqn] (","
-		//composingMetricContexts+=[metric::MetricContext|Fqn])* "]")?
+		//('composing metric contexts ' '[' composingMetricContexts+=[metric::MetricContext|Fqn] (','
+		//composingMetricContexts+=[metric::MetricContext|Fqn])* ']')?
 		public Group getGroup_9() { return cGroup_9; }
 
-		//"composing metric contexts "
+		//'composing metric contexts '
 		public Keyword getComposingMetricContextsKeyword_9_0() { return cComposingMetricContextsKeyword_9_0; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_9_1() { return cLeftSquareBracketKeyword_9_1; }
 
 		//composingMetricContexts+=[metric::MetricContext|Fqn]
@@ -4976,10 +5052,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getComposingMetricContextsMetricContextFqnParserRuleCall_9_2_0_1() { return cComposingMetricContextsMetricContextFqnParserRuleCall_9_2_0_1; }
 
-		//("," composingMetricContexts+=[metric::MetricContext|Fqn])*
+		//(',' composingMetricContexts+=[metric::MetricContext|Fqn])*
 		public Group getGroup_9_3() { return cGroup_9_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_9_3_0() { return cCommaKeyword_9_3_0; }
 
 		//composingMetricContexts+=[metric::MetricContext|Fqn]
@@ -4991,13 +5067,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getComposingMetricContextsMetricContextFqnParserRuleCall_9_3_1_0_1() { return cComposingMetricContextsMetricContextFqnParserRuleCall_9_3_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_9_4() { return cRightSquareBracketKeyword_9_4; }
 
-		//("quantifier: " quantifier=QuantifierType)?
+		//('quantifier: ' quantifier=QuantifierType)?
 		public Group getGroup_10() { return cGroup_10; }
 
-		//"quantifier: "
+		//'quantifier: '
 		public Keyword getQuantifierKeyword_10_0() { return cQuantifierKeyword_10_0; }
 
 		//quantifier=QuantifierType
@@ -5006,16 +5082,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//QuantifierType
 		public RuleCall getQuantifierQuantifierTypeEnumRuleCall_10_1_0() { return cQuantifierQuantifierTypeEnumRuleCall_10_1_0; }
 
-		//isRelative?="relative"?
+		//isRelative?='relative'?
 		public Assignment getIsRelativeAssignment_11() { return cIsRelativeAssignment_11; }
 
-		//"relative"
+		//'relative'
 		public Keyword getIsRelativeRelativeKeyword_11_0() { return cIsRelativeRelativeKeyword_11_0; }
 
-		//("quantity: " minQuantity=EDouble ".." maxQuantity=EDouble)?
+		//('quantity: ' minQuantity=EDouble '..' maxQuantity=EDouble)?
 		public Group getGroup_12() { return cGroup_12; }
 
-		//"quantity: "
+		//'quantity: '
 		public Keyword getQuantityKeyword_12_0() { return cQuantityKeyword_12_0; }
 
 		//minQuantity=EDouble
@@ -5024,7 +5100,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDouble
 		public RuleCall getMinQuantityEDoubleParserRuleCall_12_1_0() { return cMinQuantityEDoubleParserRuleCall_12_1_0; }
 
-		//".."
+		//'..'
 		public Keyword getFullStopFullStopKeyword_12_2() { return cFullStopFullStopKeyword_12_2; }
 
 		//maxQuantity=EDouble
@@ -5033,12 +5109,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDouble
 		public RuleCall getMaxQuantityEDoubleParserRuleCall_12_3_0() { return cMaxQuantityEDoubleParserRuleCall_12_3_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_13() { return cRightCurlyBracketKeyword_13; }
 	}
 
 	public class RawMetricContextElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RawMetricContext");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.RawMetricContext");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRawMetricContextKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -5087,20 +5163,23 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cMaxQuantityEDoubleParserRuleCall_13_3_0 = (RuleCall)cMaxQuantityAssignment_13_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_14 = (Keyword)cGroup.eContents().get(14);
 		
-		//RawMetricContext returns metric::RawMetricContext:
-		//	"raw metric context " name=ID "{" "metric: " metric=[metric::Metric|Fqn] "sensor: " sensor=[metric::Sensor|Fqn]
-		//	("component: " component=[deployment::Component|Fqn])? ("application: " application=[camel::Application|Fqn])?
-		//	("window: " window=[metric::Window|Fqn])? ("schedule: " schedule=[metric::Schedule|Fqn])? ("quantifier: "
-		//	quantifier=QuantifierType)? isRelative?="relative"? ("quantity: " minQuantity=EDouble ".." maxQuantity=EDouble)? "}";
+		//RawMetricContext metric::RawMetricContext:
+		//	'raw metric context ' name=ID '{'
+		//	'metric: ' metric=[metric::Metric|Fqn]
+		//	'sensor: ' sensor=[metric::Sensor|Fqn] ('component: ' component=[deployment::Component|Fqn])? ('application: '
+		//	application=[camel::Application|Fqn])? ('window: ' window=[metric::Window|Fqn])? ('schedule: '
+		//	schedule=[metric::Schedule|Fqn])? ('quantifier: ' quantifier=QuantifierType)?
+		//	isRelative?='relative'? ('quantity: ' minQuantity=EDouble '..' maxQuantity=EDouble)?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"raw metric context " name=ID "{" "metric: " metric=[metric::Metric|Fqn] "sensor: " sensor=[metric::Sensor|Fqn]
-		//("component: " component=[deployment::Component|Fqn])? ("application: " application=[camel::Application|Fqn])?
-		//("window: " window=[metric::Window|Fqn])? ("schedule: " schedule=[metric::Schedule|Fqn])? ("quantifier: "
-		//quantifier=QuantifierType)? isRelative?="relative"? ("quantity: " minQuantity=EDouble ".." maxQuantity=EDouble)? "}"
+		//'raw metric context ' name=ID '{' 'metric: ' metric=[metric::Metric|Fqn] 'sensor: ' sensor=[metric::Sensor|Fqn]
+		//('component: ' component=[deployment::Component|Fqn])? ('application: ' application=[camel::Application|Fqn])?
+		//('window: ' window=[metric::Window|Fqn])? ('schedule: ' schedule=[metric::Schedule|Fqn])? ('quantifier: '
+		//quantifier=QuantifierType)? isRelative?='relative'? ('quantity: ' minQuantity=EDouble '..' maxQuantity=EDouble)? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"raw metric context "
+		//'raw metric context '
 		public Keyword getRawMetricContextKeyword_0() { return cRawMetricContextKeyword_0; }
 
 		//name=ID
@@ -5109,10 +5188,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"metric: "
+		//'metric: '
 		public Keyword getMetricKeyword_3() { return cMetricKeyword_3; }
 
 		//metric=[metric::Metric|Fqn]
@@ -5124,7 +5203,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getMetricMetricFqnParserRuleCall_4_0_1() { return cMetricMetricFqnParserRuleCall_4_0_1; }
 
-		//"sensor: "
+		//'sensor: '
 		public Keyword getSensorKeyword_5() { return cSensorKeyword_5; }
 
 		//sensor=[metric::Sensor|Fqn]
@@ -5136,10 +5215,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSensorSensorFqnParserRuleCall_6_0_1() { return cSensorSensorFqnParserRuleCall_6_0_1; }
 
-		//("component: " component=[deployment::Component|Fqn])?
+		//('component: ' component=[deployment::Component|Fqn])?
 		public Group getGroup_7() { return cGroup_7; }
 
-		//"component: "
+		//'component: '
 		public Keyword getComponentKeyword_7_0() { return cComponentKeyword_7_0; }
 
 		//component=[deployment::Component|Fqn]
@@ -5151,10 +5230,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getComponentComponentFqnParserRuleCall_7_1_0_1() { return cComponentComponentFqnParserRuleCall_7_1_0_1; }
 
-		//("application: " application=[camel::Application|Fqn])?
+		//('application: ' application=[camel::Application|Fqn])?
 		public Group getGroup_8() { return cGroup_8; }
 
-		//"application: "
+		//'application: '
 		public Keyword getApplicationKeyword_8_0() { return cApplicationKeyword_8_0; }
 
 		//application=[camel::Application|Fqn]
@@ -5166,10 +5245,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getApplicationApplicationFqnParserRuleCall_8_1_0_1() { return cApplicationApplicationFqnParserRuleCall_8_1_0_1; }
 
-		//("window: " window=[metric::Window|Fqn])?
+		//('window: ' window=[metric::Window|Fqn])?
 		public Group getGroup_9() { return cGroup_9; }
 
-		//"window: "
+		//'window: '
 		public Keyword getWindowKeyword_9_0() { return cWindowKeyword_9_0; }
 
 		//window=[metric::Window|Fqn]
@@ -5181,10 +5260,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getWindowWindowFqnParserRuleCall_9_1_0_1() { return cWindowWindowFqnParserRuleCall_9_1_0_1; }
 
-		//("schedule: " schedule=[metric::Schedule|Fqn])?
+		//('schedule: ' schedule=[metric::Schedule|Fqn])?
 		public Group getGroup_10() { return cGroup_10; }
 
-		//"schedule: "
+		//'schedule: '
 		public Keyword getScheduleKeyword_10_0() { return cScheduleKeyword_10_0; }
 
 		//schedule=[metric::Schedule|Fqn]
@@ -5196,10 +5275,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getScheduleScheduleFqnParserRuleCall_10_1_0_1() { return cScheduleScheduleFqnParserRuleCall_10_1_0_1; }
 
-		//("quantifier: " quantifier=QuantifierType)?
+		//('quantifier: ' quantifier=QuantifierType)?
 		public Group getGroup_11() { return cGroup_11; }
 
-		//"quantifier: "
+		//'quantifier: '
 		public Keyword getQuantifierKeyword_11_0() { return cQuantifierKeyword_11_0; }
 
 		//quantifier=QuantifierType
@@ -5208,16 +5287,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//QuantifierType
 		public RuleCall getQuantifierQuantifierTypeEnumRuleCall_11_1_0() { return cQuantifierQuantifierTypeEnumRuleCall_11_1_0; }
 
-		//isRelative?="relative"?
+		//isRelative?='relative'?
 		public Assignment getIsRelativeAssignment_12() { return cIsRelativeAssignment_12; }
 
-		//"relative"
+		//'relative'
 		public Keyword getIsRelativeRelativeKeyword_12_0() { return cIsRelativeRelativeKeyword_12_0; }
 
-		//("quantity: " minQuantity=EDouble ".." maxQuantity=EDouble)?
+		//('quantity: ' minQuantity=EDouble '..' maxQuantity=EDouble)?
 		public Group getGroup_13() { return cGroup_13; }
 
-		//"quantity: "
+		//'quantity: '
 		public Keyword getQuantityKeyword_13_0() { return cQuantityKeyword_13_0; }
 
 		//minQuantity=EDouble
@@ -5226,7 +5305,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDouble
 		public RuleCall getMinQuantityEDoubleParserRuleCall_13_1_0() { return cMinQuantityEDoubleParserRuleCall_13_1_0; }
 
-		//".."
+		//'..'
 		public Keyword getFullStopFullStopKeyword_13_2() { return cFullStopFullStopKeyword_13_2; }
 
 		//maxQuantity=EDouble
@@ -5235,12 +5314,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDouble
 		public RuleCall getMaxQuantityEDoubleParserRuleCall_13_3_0() { return cMaxQuantityEDoubleParserRuleCall_13_3_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_14() { return cRightCurlyBracketKeyword_14; }
 	}
 
 	public class PropertyContextElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "PropertyContext");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.PropertyContext");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cPropertyContextKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -5275,18 +5354,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cMaxQuantityEDoubleParserRuleCall_9_3_0 = (RuleCall)cMaxQuantityAssignment_9_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
-		//PropertyContext returns metric::PropertyContext:
-		//	"property context " name=ID "{" "property: " property=[metric::Property|Fqn] ("component: "
-		//	component=[deployment::Component|Fqn])? ("application: " application=[camel::Application|Fqn])? ("quantifier: "
-		//	quantifier=QuantifierType)? isRelative?="relative"? ("quantity: " minQuantity=EDouble ".." maxQuantity=EDouble)? "}";
+		//PropertyContext metric::PropertyContext:
+		//	'property context ' name=ID '{'
+		//	'property: ' property=[metric::Property|Fqn] ('component: ' component=[deployment::Component|Fqn])? ('application: '
+		//	application=[camel::Application|Fqn])? ('quantifier: ' quantifier=QuantifierType)?
+		//	isRelative?='relative'? ('quantity: ' minQuantity=EDouble '..' maxQuantity=EDouble)?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"property context " name=ID "{" "property: " property=[metric::Property|Fqn] ("component: "
-		//component=[deployment::Component|Fqn])? ("application: " application=[camel::Application|Fqn])? ("quantifier: "
-		//quantifier=QuantifierType)? isRelative?="relative"? ("quantity: " minQuantity=EDouble ".." maxQuantity=EDouble)? "}"
+		//'property context ' name=ID '{' 'property: ' property=[metric::Property|Fqn] ('component: '
+		//component=[deployment::Component|Fqn])? ('application: ' application=[camel::Application|Fqn])? ('quantifier: '
+		//quantifier=QuantifierType)? isRelative?='relative'? ('quantity: ' minQuantity=EDouble '..' maxQuantity=EDouble)? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"property context "
+		//'property context '
 		public Keyword getPropertyContextKeyword_0() { return cPropertyContextKeyword_0; }
 
 		//name=ID
@@ -5295,10 +5376,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"property: "
+		//'property: '
 		public Keyword getPropertyKeyword_3() { return cPropertyKeyword_3; }
 
 		//property=[metric::Property|Fqn]
@@ -5310,10 +5391,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getPropertyPropertyFqnParserRuleCall_4_0_1() { return cPropertyPropertyFqnParserRuleCall_4_0_1; }
 
-		//("component: " component=[deployment::Component|Fqn])?
+		//('component: ' component=[deployment::Component|Fqn])?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"component: "
+		//'component: '
 		public Keyword getComponentKeyword_5_0() { return cComponentKeyword_5_0; }
 
 		//component=[deployment::Component|Fqn]
@@ -5325,10 +5406,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getComponentComponentFqnParserRuleCall_5_1_0_1() { return cComponentComponentFqnParserRuleCall_5_1_0_1; }
 
-		//("application: " application=[camel::Application|Fqn])?
+		//('application: ' application=[camel::Application|Fqn])?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//"application: "
+		//'application: '
 		public Keyword getApplicationKeyword_6_0() { return cApplicationKeyword_6_0; }
 
 		//application=[camel::Application|Fqn]
@@ -5340,10 +5421,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getApplicationApplicationFqnParserRuleCall_6_1_0_1() { return cApplicationApplicationFqnParserRuleCall_6_1_0_1; }
 
-		//("quantifier: " quantifier=QuantifierType)?
+		//('quantifier: ' quantifier=QuantifierType)?
 		public Group getGroup_7() { return cGroup_7; }
 
-		//"quantifier: "
+		//'quantifier: '
 		public Keyword getQuantifierKeyword_7_0() { return cQuantifierKeyword_7_0; }
 
 		//quantifier=QuantifierType
@@ -5352,16 +5433,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//QuantifierType
 		public RuleCall getQuantifierQuantifierTypeEnumRuleCall_7_1_0() { return cQuantifierQuantifierTypeEnumRuleCall_7_1_0; }
 
-		//isRelative?="relative"?
+		//isRelative?='relative'?
 		public Assignment getIsRelativeAssignment_8() { return cIsRelativeAssignment_8; }
 
-		//"relative"
+		//'relative'
 		public Keyword getIsRelativeRelativeKeyword_8_0() { return cIsRelativeRelativeKeyword_8_0; }
 
-		//("quantity: " minQuantity=EDouble ".." maxQuantity=EDouble)?
+		//('quantity: ' minQuantity=EDouble '..' maxQuantity=EDouble)?
 		public Group getGroup_9() { return cGroup_9; }
 
-		//"quantity: "
+		//'quantity: '
 		public Keyword getQuantityKeyword_9_0() { return cQuantityKeyword_9_0; }
 
 		//minQuantity=EDouble
@@ -5370,7 +5451,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDouble
 		public RuleCall getMinQuantityEDoubleParserRuleCall_9_1_0() { return cMinQuantityEDoubleParserRuleCall_9_1_0; }
 
-		//".."
+		//'..'
 		public Keyword getFullStopFullStopKeyword_9_2() { return cFullStopFullStopKeyword_9_2; }
 
 		//maxQuantity=EDouble
@@ -5379,12 +5460,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDouble
 		public RuleCall getMaxQuantityEDoubleParserRuleCall_9_3_0() { return cMaxQuantityEDoubleParserRuleCall_9_3_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
 	}
 
 	public class CompositeMetricElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CompositeMetric");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.CompositeMetric");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cCompositeMetricKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -5419,18 +5500,21 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cFormulaMetricFormulaParserRuleCall_11_0 = (RuleCall)cFormulaAssignment_11.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		
-		//CompositeMetric returns metric::CompositeMetric:
-		//	"composite metric " name=ID "{" ("description: " description=EString)? ("value direction: " valueDirection=EShort)?
-		//	("layer: " layer=LayerType)? "property: " property=[metric::Property|Fqn] "unit: " unit=[unit::Unit|Fqn]
-		//	("value type: " valueType=[type::ValueType|Fqn])? formula=MetricFormula "}";
+		//CompositeMetric metric::CompositeMetric:
+		//	'composite metric ' name=ID '{' ('description: ' description=EString)? ('value direction: ' valueDirection=EShort)?
+		//	('layer: ' layer=LayerType)?
+		//	'property: ' property=[metric::Property|Fqn]
+		//	'unit: ' unit=[unit::Unit|Fqn] ('value type: ' valueType=[type::ValueType|Fqn])?
+		//	formula=MetricFormula
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"composite metric " name=ID "{" ("description: " description=EString)? ("value direction: " valueDirection=EShort)?
-		//("layer: " layer=LayerType)? "property: " property=[metric::Property|Fqn] "unit: " unit=[unit::Unit|Fqn]
-		//("value type: " valueType=[type::ValueType|Fqn])? formula=MetricFormula "}"
+		//'composite metric ' name=ID '{' ('description: ' description=EString)? ('value direction: ' valueDirection=EShort)?
+		//('layer: ' layer=LayerType)? 'property: ' property=[metric::Property|Fqn] 'unit: ' unit=[unit::Unit|Fqn]
+		//('value type: ' valueType=[type::ValueType|Fqn])? formula=MetricFormula '}'
 		public Group getGroup() { return cGroup; }
 
-		//"composite metric "
+		//'composite metric '
 		public Keyword getCompositeMetricKeyword_0() { return cCompositeMetricKeyword_0; }
 
 		//name=ID
@@ -5439,13 +5523,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("description: " description=EString)?
+		//('description: ' description=EString)?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"description: "
+		//'description: '
 		public Keyword getDescriptionKeyword_3_0() { return cDescriptionKeyword_3_0; }
 
 		//description=EString
@@ -5454,10 +5538,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getDescriptionEStringParserRuleCall_3_1_0() { return cDescriptionEStringParserRuleCall_3_1_0; }
 
-		//("value direction: " valueDirection=EShort)?
+		//('value direction: ' valueDirection=EShort)?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//"value direction: "
+		//'value direction: '
 		public Keyword getValueDirectionKeyword_4_0() { return cValueDirectionKeyword_4_0; }
 
 		//valueDirection=EShort
@@ -5466,10 +5550,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EShort
 		public RuleCall getValueDirectionEShortParserRuleCall_4_1_0() { return cValueDirectionEShortParserRuleCall_4_1_0; }
 
-		//("layer: " layer=LayerType)?
+		//('layer: ' layer=LayerType)?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"layer: "
+		//'layer: '
 		public Keyword getLayerKeyword_5_0() { return cLayerKeyword_5_0; }
 
 		//layer=LayerType
@@ -5478,7 +5562,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//LayerType
 		public RuleCall getLayerLayerTypeEnumRuleCall_5_1_0() { return cLayerLayerTypeEnumRuleCall_5_1_0; }
 
-		//"property: "
+		//'property: '
 		public Keyword getPropertyKeyword_6() { return cPropertyKeyword_6; }
 
 		//property=[metric::Property|Fqn]
@@ -5490,7 +5574,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getPropertyPropertyFqnParserRuleCall_7_0_1() { return cPropertyPropertyFqnParserRuleCall_7_0_1; }
 
-		//"unit: "
+		//'unit: '
 		public Keyword getUnitKeyword_8() { return cUnitKeyword_8; }
 
 		//unit=[unit::Unit|Fqn]
@@ -5502,10 +5586,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getUnitUnitFqnParserRuleCall_9_0_1() { return cUnitUnitFqnParserRuleCall_9_0_1; }
 
-		//("value type: " valueType=[type::ValueType|Fqn])?
+		//('value type: ' valueType=[type::ValueType|Fqn])?
 		public Group getGroup_10() { return cGroup_10; }
 
-		//"value type: "
+		//'value type: '
 		public Keyword getValueTypeKeyword_10_0() { return cValueTypeKeyword_10_0; }
 
 		//valueType=[type::ValueType|Fqn]
@@ -5523,12 +5607,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//MetricFormula
 		public RuleCall getFormulaMetricFormulaParserRuleCall_11_0() { return cFormulaMetricFormulaParserRuleCall_11_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
 	}
 
 	public class RawMetricElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RawMetric");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.RawMetric");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRawMetricKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -5563,18 +5647,21 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cIsVariableVariableKeyword_11_0 = (Keyword)cIsVariableAssignment_11.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		
-		//RawMetric returns metric::RawMetric:
-		//	"raw metric " name=ID "{" ("description: " description=EString)? ("value direction: " valueDirection=EShort)?
-		//	("layer: " layer=LayerType)? "property: " property=[metric::Property|Fqn] "unit: " unit=[unit::Unit|Fqn]
-		//	("value type: " valueType=[type::ValueType|Fqn])? isVariable?="variable"? "}";
+		//RawMetric metric::RawMetric:
+		//	'raw metric ' name=ID '{' ('description: ' description=EString)? ('value direction: ' valueDirection=EShort)?
+		//	('layer: ' layer=LayerType)?
+		//	'property: ' property=[metric::Property|Fqn]
+		//	'unit: ' unit=[unit::Unit|Fqn] ('value type: ' valueType=[type::ValueType|Fqn])?
+		//	isVariable?='variable'?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"raw metric " name=ID "{" ("description: " description=EString)? ("value direction: " valueDirection=EShort)? ("layer: "
-		//layer=LayerType)? "property: " property=[metric::Property|Fqn] "unit: " unit=[unit::Unit|Fqn] ("value type: "
-		//valueType=[type::ValueType|Fqn])? isVariable?="variable"? "}"
+		//'raw metric ' name=ID '{' ('description: ' description=EString)? ('value direction: ' valueDirection=EShort)? ('layer: '
+		//layer=LayerType)? 'property: ' property=[metric::Property|Fqn] 'unit: ' unit=[unit::Unit|Fqn] ('value type: '
+		//valueType=[type::ValueType|Fqn])? isVariable?='variable'? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"raw metric "
+		//'raw metric '
 		public Keyword getRawMetricKeyword_0() { return cRawMetricKeyword_0; }
 
 		//name=ID
@@ -5583,13 +5670,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("description: " description=EString)?
+		//('description: ' description=EString)?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"description: "
+		//'description: '
 		public Keyword getDescriptionKeyword_3_0() { return cDescriptionKeyword_3_0; }
 
 		//description=EString
@@ -5598,10 +5685,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getDescriptionEStringParserRuleCall_3_1_0() { return cDescriptionEStringParserRuleCall_3_1_0; }
 
-		//("value direction: " valueDirection=EShort)?
+		//('value direction: ' valueDirection=EShort)?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//"value direction: "
+		//'value direction: '
 		public Keyword getValueDirectionKeyword_4_0() { return cValueDirectionKeyword_4_0; }
 
 		//valueDirection=EShort
@@ -5610,10 +5697,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EShort
 		public RuleCall getValueDirectionEShortParserRuleCall_4_1_0() { return cValueDirectionEShortParserRuleCall_4_1_0; }
 
-		//("layer: " layer=LayerType)?
+		//('layer: ' layer=LayerType)?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"layer: "
+		//'layer: '
 		public Keyword getLayerKeyword_5_0() { return cLayerKeyword_5_0; }
 
 		//layer=LayerType
@@ -5622,7 +5709,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//LayerType
 		public RuleCall getLayerLayerTypeEnumRuleCall_5_1_0() { return cLayerLayerTypeEnumRuleCall_5_1_0; }
 
-		//"property: "
+		//'property: '
 		public Keyword getPropertyKeyword_6() { return cPropertyKeyword_6; }
 
 		//property=[metric::Property|Fqn]
@@ -5634,7 +5721,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getPropertyPropertyFqnParserRuleCall_7_0_1() { return cPropertyPropertyFqnParserRuleCall_7_0_1; }
 
-		//"unit: "
+		//'unit: '
 		public Keyword getUnitKeyword_8() { return cUnitKeyword_8; }
 
 		//unit=[unit::Unit|Fqn]
@@ -5646,10 +5733,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getUnitUnitFqnParserRuleCall_9_0_1() { return cUnitUnitFqnParserRuleCall_9_0_1; }
 
-		//("value type: " valueType=[type::ValueType|Fqn])?
+		//('value type: ' valueType=[type::ValueType|Fqn])?
 		public Group getGroup_10() { return cGroup_10; }
 
-		//"value type: "
+		//'value type: '
 		public Keyword getValueTypeKeyword_10_0() { return cValueTypeKeyword_10_0; }
 
 		//valueType=[type::ValueType|Fqn]
@@ -5661,24 +5748,24 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getValueTypeValueTypeFqnParserRuleCall_10_1_0_1() { return cValueTypeValueTypeFqnParserRuleCall_10_1_0_1; }
 
-		//isVariable?="variable"?
+		//isVariable?='variable'?
 		public Assignment getIsVariableAssignment_11() { return cIsVariableAssignment_11; }
 
-		//"variable"
+		//'variable'
 		public Keyword getIsVariableVariableKeyword_11_0() { return cIsVariableVariableKeyword_11_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
 	}
 
 	public class MetricElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Metric");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Metric");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cCompositeMetricParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cRawMetricParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//Metric returns metric::Metric:
-		//	CompositeMetric | RawMetric;
+		//Metric metric::Metric:
+		//	CompositeMetric | RawMetric
 		@Override public ParserRule getRule() { return rule; }
 
 		//CompositeMetric | RawMetric
@@ -5692,15 +5779,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class MetricFormulaParameterElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MetricFormulaParameter");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.MetricFormulaParameter");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cMetricFormulaParameter_ImplParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cMetricFormulaParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cCompositeMetricParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cRawMetricParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
-		//MetricFormulaParameter returns metric::MetricFormulaParameter:
-		//	MetricFormulaParameter_Impl | MetricFormula | CompositeMetric | RawMetric;
+		//MetricFormulaParameter metric::MetricFormulaParameter:
+		//	MetricFormulaParameter_Impl | MetricFormula | CompositeMetric | RawMetric
 		@Override public ParserRule getRule() { return rule; }
 
 		//MetricFormulaParameter_Impl | MetricFormula | CompositeMetric | RawMetric
@@ -5720,13 +5807,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class FormulaParameterElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "FormulaParameter");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.FormulaParameter");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cMetricFormulaParameter_ImplParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cMetricFormulaParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//FormulaParameter returns metric::MetricFormulaParameter:
-		//	MetricFormulaParameter_Impl | MetricFormula;
+		//FormulaParameter metric::MetricFormulaParameter:
+		//	MetricFormulaParameter_Impl | MetricFormula
 		@Override public ParserRule getRule() { return rule; }
 
 		//MetricFormulaParameter_Impl | MetricFormula
@@ -5740,7 +5827,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class MetricFormulaParameter_ImplElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MetricFormulaParameter_Impl");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.MetricFormulaParameter_Impl");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cMetricFormulaParameterAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cParameterKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -5752,17 +5839,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cValueSingleValueFqnParserRuleCall_4_0_1 = (RuleCall)cValueSingleValueCrossReference_4_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//MetricFormulaParameter_Impl returns metric::MetricFormulaParameter:
-		//	{metric::MetricFormulaParameter} "parameter " name=ID "{" value=[type::SingleValue|Fqn] "}";
+		//MetricFormulaParameter_Impl metric::MetricFormulaParameter:
+		//	{metric::MetricFormulaParameter}
+		//	'parameter ' name=ID '{'
+		//	value=[type::SingleValue|Fqn]
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//{metric::MetricFormulaParameter} "parameter " name=ID "{" value=[type::SingleValue|Fqn] "}"
+		//{metric::MetricFormulaParameter} 'parameter ' name=ID '{' value=[type::SingleValue|Fqn] '}'
 		public Group getGroup() { return cGroup; }
 
 		//{metric::MetricFormulaParameter}
 		public Action getMetricFormulaParameterAction_0() { return cMetricFormulaParameterAction_0; }
 
-		//"parameter "
+		//'parameter '
 		public Keyword getParameterKeyword_1() { return cParameterKeyword_1; }
 
 		//name=ID
@@ -5771,7 +5861,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
 		//value=[type::SingleValue|Fqn]
@@ -5783,12 +5873,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getValueSingleValueFqnParserRuleCall_4_0_1() { return cValueSingleValueFqnParserRuleCall_4_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class MetricFormulaElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MetricFormula");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.MetricFormula");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cMetricFormulaKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -5815,18 +5905,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
-		//MetricFormula returns metric::MetricFormula:
-		//	"metric formula " name=ID "{" "function arity: " functionArity=MetricFunctionArityType ("function pattern: "
-		//	functionPattern=FunctionPatternType)? function=MetricFunctionType "("
-		//	parameters+=[metric::MetricFormulaParameter|Fqn] ("," parameters+=[metric::MetricFormulaParameter|Fqn])* ")" "}";
+		//MetricFormula metric::MetricFormula:
+		//	'metric formula ' name=ID '{'
+		//	'function arity: ' functionArity=MetricFunctionArityType ('function pattern: ' functionPattern=FunctionPatternType)?
+		//	function=MetricFunctionType '(' parameters+=[metric::MetricFormulaParameter|Fqn] (','
+		//	parameters+=[metric::MetricFormulaParameter|Fqn])* ')'
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"metric formula " name=ID "{" "function arity: " functionArity=MetricFunctionArityType ("function pattern: "
-		//functionPattern=FunctionPatternType)? function=MetricFunctionType "(" parameters+=[metric::MetricFormulaParameter|Fqn]
-		//("," parameters+=[metric::MetricFormulaParameter|Fqn])* ")" "}"
+		//'metric formula ' name=ID '{' 'function arity: ' functionArity=MetricFunctionArityType ('function pattern: '
+		//functionPattern=FunctionPatternType)? function=MetricFunctionType '(' parameters+=[metric::MetricFormulaParameter|Fqn]
+		//(',' parameters+=[metric::MetricFormulaParameter|Fqn])* ')' '}'
 		public Group getGroup() { return cGroup; }
 
-		//"metric formula "
+		//'metric formula '
 		public Keyword getMetricFormulaKeyword_0() { return cMetricFormulaKeyword_0; }
 
 		//name=ID
@@ -5835,10 +5927,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"function arity: "
+		//'function arity: '
 		public Keyword getFunctionArityKeyword_3() { return cFunctionArityKeyword_3; }
 
 		//functionArity=MetricFunctionArityType
@@ -5847,10 +5939,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//MetricFunctionArityType
 		public RuleCall getFunctionArityMetricFunctionArityTypeEnumRuleCall_4_0() { return cFunctionArityMetricFunctionArityTypeEnumRuleCall_4_0; }
 
-		//("function pattern: " functionPattern=FunctionPatternType)?
+		//('function pattern: ' functionPattern=FunctionPatternType)?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"function pattern: "
+		//'function pattern: '
 		public Keyword getFunctionPatternKeyword_5_0() { return cFunctionPatternKeyword_5_0; }
 
 		//functionPattern=FunctionPatternType
@@ -5865,7 +5957,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//MetricFunctionType
 		public RuleCall getFunctionMetricFunctionTypeEnumRuleCall_6_0() { return cFunctionMetricFunctionTypeEnumRuleCall_6_0; }
 
-		//"("
+		//'('
 		public Keyword getLeftParenthesisKeyword_7() { return cLeftParenthesisKeyword_7; }
 
 		//parameters+=[metric::MetricFormulaParameter|Fqn]
@@ -5877,10 +5969,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getParametersMetricFormulaParameterFqnParserRuleCall_8_0_1() { return cParametersMetricFormulaParameterFqnParserRuleCall_8_0_1; }
 
-		//("," parameters+=[metric::MetricFormulaParameter|Fqn])*
+		//(',' parameters+=[metric::MetricFormulaParameter|Fqn])*
 		public Group getGroup_9() { return cGroup_9; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_9_0() { return cCommaKeyword_9_0; }
 
 		//parameters+=[metric::MetricFormulaParameter|Fqn]
@@ -5892,15 +5984,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getParametersMetricFormulaParameterFqnParserRuleCall_9_1_0_1() { return cParametersMetricFormulaParameterFqnParserRuleCall_9_1_0_1; }
 
-		//")"
+		//')'
 		public Keyword getRightParenthesisKeyword_10() { return cRightParenthesisKeyword_10; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
 	}
 
 	public class PropertyElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Property");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Property");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cPropertyKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -5939,18 +6031,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightSquareBracketKeyword_7_4 = (Keyword)cGroup_7.eContents().get(4);
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
-		//Property returns metric::Property:
-		//	"property " name=ID "{" ("description: " description=EString)? "type: " type=PropertyType ("sub-properties " "["
-		//	subProperties+=[metric::Property|Fqn] ("," subProperties+=[metric::Property|Fqn])* "]")? ("sensors " "["
-		//	sensors+=[metric::Sensor|Fqn] ("," sensors+=[metric::Sensor|Fqn])* "]")? "}";
+		//Property metric::Property:
+		//	'property ' name=ID '{' ('description: ' description=EString)?
+		//	'type: ' type=PropertyType ('sub-properties ' '[' subProperties+=[metric::Property|Fqn] (','
+		//	subProperties+=[metric::Property|Fqn])* ']')? ('sensors ' '[' sensors+=[metric::Sensor|Fqn] (','
+		//	sensors+=[metric::Sensor|Fqn])* ']')?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"property " name=ID "{" ("description: " description=EString)? "type: " type=PropertyType ("sub-properties " "["
-		//subProperties+=[metric::Property|Fqn] ("," subProperties+=[metric::Property|Fqn])* "]")? ("sensors " "["
-		//sensors+=[metric::Sensor|Fqn] ("," sensors+=[metric::Sensor|Fqn])* "]")? "}"
+		//'property ' name=ID '{' ('description: ' description=EString)? 'type: ' type=PropertyType ('sub-properties ' '['
+		//subProperties+=[metric::Property|Fqn] (',' subProperties+=[metric::Property|Fqn])* ']')? ('sensors ' '['
+		//sensors+=[metric::Sensor|Fqn] (',' sensors+=[metric::Sensor|Fqn])* ']')? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"property "
+		//'property '
 		public Keyword getPropertyKeyword_0() { return cPropertyKeyword_0; }
 
 		//name=ID
@@ -5959,13 +6053,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("description: " description=EString)?
+		//('description: ' description=EString)?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"description: "
+		//'description: '
 		public Keyword getDescriptionKeyword_3_0() { return cDescriptionKeyword_3_0; }
 
 		//description=EString
@@ -5974,7 +6068,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getDescriptionEStringParserRuleCall_3_1_0() { return cDescriptionEStringParserRuleCall_3_1_0; }
 
-		//"type: "
+		//'type: '
 		public Keyword getTypeKeyword_4() { return cTypeKeyword_4; }
 
 		//type=PropertyType
@@ -5983,13 +6077,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//PropertyType
 		public RuleCall getTypePropertyTypeEnumRuleCall_5_0() { return cTypePropertyTypeEnumRuleCall_5_0; }
 
-		//("sub-properties " "[" subProperties+=[metric::Property|Fqn] ("," subProperties+=[metric::Property|Fqn])* "]")?
+		//('sub-properties ' '[' subProperties+=[metric::Property|Fqn] (',' subProperties+=[metric::Property|Fqn])* ']')?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//"sub-properties "
+		//'sub-properties '
 		public Keyword getSubPropertiesKeyword_6_0() { return cSubPropertiesKeyword_6_0; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_6_1() { return cLeftSquareBracketKeyword_6_1; }
 
 		//subProperties+=[metric::Property|Fqn]
@@ -6001,10 +6095,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSubPropertiesPropertyFqnParserRuleCall_6_2_0_1() { return cSubPropertiesPropertyFqnParserRuleCall_6_2_0_1; }
 
-		//("," subProperties+=[metric::Property|Fqn])*
+		//(',' subProperties+=[metric::Property|Fqn])*
 		public Group getGroup_6_3() { return cGroup_6_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_6_3_0() { return cCommaKeyword_6_3_0; }
 
 		//subProperties+=[metric::Property|Fqn]
@@ -6016,16 +6110,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSubPropertiesPropertyFqnParserRuleCall_6_3_1_0_1() { return cSubPropertiesPropertyFqnParserRuleCall_6_3_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_6_4() { return cRightSquareBracketKeyword_6_4; }
 
-		//("sensors " "[" sensors+=[metric::Sensor|Fqn] ("," sensors+=[metric::Sensor|Fqn])* "]")?
+		//('sensors ' '[' sensors+=[metric::Sensor|Fqn] (',' sensors+=[metric::Sensor|Fqn])* ']')?
 		public Group getGroup_7() { return cGroup_7; }
 
-		//"sensors "
+		//'sensors '
 		public Keyword getSensorsKeyword_7_0() { return cSensorsKeyword_7_0; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_7_1() { return cLeftSquareBracketKeyword_7_1; }
 
 		//sensors+=[metric::Sensor|Fqn]
@@ -6037,10 +6131,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSensorsSensorFqnParserRuleCall_7_2_0_1() { return cSensorsSensorFqnParserRuleCall_7_2_0_1; }
 
-		//("," sensors+=[metric::Sensor|Fqn])*
+		//(',' sensors+=[metric::Sensor|Fqn])*
 		public Group getGroup_7_3() { return cGroup_7_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_7_3_0() { return cCommaKeyword_7_3_0; }
 
 		//sensors+=[metric::Sensor|Fqn]
@@ -6052,15 +6146,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSensorsSensorFqnParserRuleCall_7_3_1_0_1() { return cSensorsSensorFqnParserRuleCall_7_3_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_7_4() { return cRightSquareBracketKeyword_7_4; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 	}
 
 	public class SensorElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Sensor");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Sensor");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cSensorKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -6074,14 +6168,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cIsPushPushKeyword_4_0 = (Keyword)cIsPushAssignment_4.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//Sensor returns metric::Sensor:
-		//	"sensor " name=ID "{" ("configuration: " configuration=EString)? isPush?="push"? "}";
+		//Sensor metric::Sensor:
+		//	'sensor ' name=ID '{' ('configuration: ' configuration=EString)?
+		//	isPush?='push'?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"sensor " name=ID "{" ("configuration: " configuration=EString)? isPush?="push"? "}"
+		//'sensor ' name=ID '{' ('configuration: ' configuration=EString)? isPush?='push'? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"sensor "
+		//'sensor '
 		public Keyword getSensorKeyword_0() { return cSensorKeyword_0; }
 
 		//name=ID
@@ -6090,13 +6186,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("configuration: " configuration=EString)?
+		//('configuration: ' configuration=EString)?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"configuration: "
+		//'configuration: '
 		public Keyword getConfigurationKeyword_3_0() { return cConfigurationKeyword_3_0; }
 
 		//configuration=EString
@@ -6105,18 +6201,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getConfigurationEStringParserRuleCall_3_1_0() { return cConfigurationEStringParserRuleCall_3_1_0; }
 
-		//isPush?="push"?
+		//isPush?='push'?
 		public Assignment getIsPushAssignment_4() { return cIsPushAssignment_4; }
 
-		//"push"
+		//'push'
 		public Keyword getIsPushPushKeyword_4_0() { return cIsPushPushKeyword_4_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class OrganisationModelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "OrganisationModel");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.OrganisationModel");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cOrganisationModelAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cOrganisationModelKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -6149,23 +6245,27 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cSecurityLevelSecurityLevelEnumRuleCall_8_0 = (RuleCall)cSecurityLevelAssignment_8.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
-		/// * Organisation model * / OrganisationModel returns organisation::OrganisationModel:
-		//	{organisation::OrganisationModel} "organisation model " name=ID "{" organisation=Organisation_Impl?
+		/// * Organisation model * / OrganisationModel organisation::OrganisationModel:
+		//	{organisation::OrganisationModel}
+		//	'organisation model ' name=ID '{'
+		//	organisation=Organisation_Impl?
 		//	provider=CloudProvider? (externalIdentifiers+=ExternalIdentifier | users+=User | userGroups+=UserGroup |
 		//	dataCentres+=DataCenter | roles+=Role | roleAssigments+=RoleAssignment | permissions+=Permission |
-		//	resourceFilters+=ResourceFilter)* "security level: " securityLevel=SecurityLevel "}";
+		//	resourceFilters+=ResourceFilter)*
+		//	'security level: ' securityLevel=SecurityLevel
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//{organisation::OrganisationModel} "organisation model " name=ID "{" organisation=Organisation_Impl?
+		//{organisation::OrganisationModel} 'organisation model ' name=ID '{' organisation=Organisation_Impl?
 		//provider=CloudProvider? (externalIdentifiers+=ExternalIdentifier | users+=User | userGroups+=UserGroup |
 		//dataCentres+=DataCenter | roles+=Role | roleAssigments+=RoleAssignment | permissions+=Permission |
-		//resourceFilters+=ResourceFilter)* "security level: " securityLevel=SecurityLevel "}"
+		//resourceFilters+=ResourceFilter)* 'security level: ' securityLevel=SecurityLevel '}'
 		public Group getGroup() { return cGroup; }
 
 		//{organisation::OrganisationModel}
 		public Action getOrganisationModelAction_0() { return cOrganisationModelAction_0; }
 
-		//"organisation model "
+		//'organisation model '
 		public Keyword getOrganisationModelKeyword_1() { return cOrganisationModelKeyword_1; }
 
 		//name=ID
@@ -6174,7 +6274,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
 		//organisation=Organisation_Impl?
@@ -6241,7 +6341,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ResourceFilter
 		public RuleCall getResourceFiltersResourceFilterParserRuleCall_6_7_0() { return cResourceFiltersResourceFilterParserRuleCall_6_7_0; }
 
-		//"security level: "
+		//'security level: '
 		public Keyword getSecurityLevelKeyword_7() { return cSecurityLevelKeyword_7; }
 
 		//securityLevel=SecurityLevel
@@ -6250,20 +6350,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//SecurityLevel
 		public RuleCall getSecurityLevelSecurityLevelEnumRuleCall_8_0() { return cSecurityLevelSecurityLevelEnumRuleCall_8_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
 	}
 
 	public class EntityElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Entity");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Entity");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cEntity_ImplParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cOrganisation_ImplParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cCloudProviderParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cUserParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
-		//Entity returns organisation::Entity:
-		//	Entity_Impl | Organisation_Impl | CloudProvider | User;
+		//Entity organisation::Entity:
+		//	Entity_Impl | Organisation_Impl | CloudProvider | User
 		@Override public ParserRule getRule() { return rule; }
 
 		//Entity_Impl | Organisation_Impl | CloudProvider | User
@@ -6283,13 +6383,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class OrganisationElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Organisation");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Organisation");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cOrganisation_ImplParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cCloudProviderParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//Organisation returns organisation::Organisation:
-		//	Organisation_Impl | CloudProvider;
+		//Organisation organisation::Organisation:
+		//	Organisation_Impl | CloudProvider
 		@Override public ParserRule getRule() { return rule; }
 
 		//Organisation_Impl | CloudProvider
@@ -6303,7 +6403,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class DataCenterElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DataCenter");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.DataCenter");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cDataCentreKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -6318,14 +6418,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cLocationLocationFqnParserRuleCall_6_0_1 = (RuleCall)cLocationLocationCrossReference_6_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
-		//DataCenter returns organisation::DataCenter:
-		//	"data centre " name=ID "{" "code name: " codeName=EString "location: " location=[location::Location|Fqn] "}";
+		//DataCenter organisation::DataCenter:
+		//	'data centre ' name=ID '{'
+		//	'code name: ' codeName=EString
+		//	'location: ' location=[location::Location|Fqn]
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"data centre " name=ID "{" "code name: " codeName=EString "location: " location=[location::Location|Fqn] "}"
+		//'data centre ' name=ID '{' 'code name: ' codeName=EString 'location: ' location=[location::Location|Fqn] '}'
 		public Group getGroup() { return cGroup; }
 
-		//"data centre "
+		//'data centre '
 		public Keyword getDataCentreKeyword_0() { return cDataCentreKeyword_0; }
 
 		//name=ID
@@ -6334,10 +6437,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"code name: "
+		//'code name: '
 		public Keyword getCodeNameKeyword_3() { return cCodeNameKeyword_3; }
 
 		//codeName=EString
@@ -6346,7 +6449,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getCodeNameEStringParserRuleCall_4_0() { return cCodeNameEStringParserRuleCall_4_0; }
 
-		//"location: "
+		//'location: '
 		public Keyword getLocationKeyword_5() { return cLocationKeyword_5; }
 
 		//location=[location::Location|Fqn]
@@ -6358,32 +6461,33 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getLocationLocationFqnParserRuleCall_6_0_1() { return cLocationLocationFqnParserRuleCall_6_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class Entity_ImplElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Entity_Impl");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Entity_Impl");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cEntityAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cEntityKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		
-		//Entity_Impl returns organisation::Entity:
-		//	{organisation::Entity} "entity";
+		//Entity_Impl organisation::Entity:
+		//	{organisation::Entity}
+		//	'entity'
 		@Override public ParserRule getRule() { return rule; }
 
-		//{organisation::Entity} "entity"
+		//{organisation::Entity} 'entity'
 		public Group getGroup() { return cGroup; }
 
 		//{organisation::Entity}
 		public Action getEntityAction_0() { return cEntityAction_0; }
 
-		//"entity"
+		//'entity'
 		public Keyword getEntityKeyword_1() { return cEntityKeyword_1; }
 	}
 
 	public class Organisation_ImplElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Organisation_Impl");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Organisation_Impl");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cOrganisationKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -6402,16 +6506,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cEmailEStringParserRuleCall_6_0 = (RuleCall)cEmailAssignment_6.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
-		//Organisation_Impl returns organisation::Organisation:
-		//	"organisation " name=ID "{" ("www: " www=EString)? ("postal address: " postalAddress=EString)? "email: "
-		//	email=EString "}";
+		//Organisation_Impl organisation::Organisation:
+		//	'organisation ' name=ID '{' ('www: ' www=EString)? ('postal address: ' postalAddress=EString)?
+		//	'email: ' email=EString
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"organisation " name=ID "{" ("www: " www=EString)? ("postal address: " postalAddress=EString)? "email: " email=EString
-		//"}"
+		//'organisation ' name=ID '{' ('www: ' www=EString)? ('postal address: ' postalAddress=EString)? 'email: ' email=EString
+		//'}'
 		public Group getGroup() { return cGroup; }
 
-		//"organisation "
+		//'organisation '
 		public Keyword getOrganisationKeyword_0() { return cOrganisationKeyword_0; }
 
 		//name=ID
@@ -6420,13 +6525,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("www: " www=EString)?
+		//('www: ' www=EString)?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"www: "
+		//'www: '
 		public Keyword getWwwKeyword_3_0() { return cWwwKeyword_3_0; }
 
 		//www=EString
@@ -6435,10 +6540,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getWwwEStringParserRuleCall_3_1_0() { return cWwwEStringParserRuleCall_3_1_0; }
 
-		//("postal address: " postalAddress=EString)?
+		//('postal address: ' postalAddress=EString)?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//"postal address: "
+		//'postal address: '
 		public Keyword getPostalAddressKeyword_4_0() { return cPostalAddressKeyword_4_0; }
 
 		//postalAddress=EString
@@ -6447,7 +6552,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getPostalAddressEStringParserRuleCall_4_1_0() { return cPostalAddressEStringParserRuleCall_4_1_0; }
 
-		//"email: "
+		//'email: '
 		public Keyword getEmailKeyword_5() { return cEmailKeyword_5; }
 
 		//email=EString
@@ -6456,12 +6561,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getEmailEStringParserRuleCall_6_0() { return cEmailEStringParserRuleCall_6_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class CloudProviderElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CloudProvider");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.CloudProvider");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cProviderKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -6505,20 +6610,25 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cProviderModelProviderModelFqnParserRuleCall_12_1_0_1 = (RuleCall)cProviderModelProviderModelCrossReference_12_1_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		
-		//CloudProvider returns organisation::CloudProvider:
-		//	"provider " name=ID "{" ("www: " www=EString)? ("postal address: " postalAddress=EString)? "email: " email=EString
-		//	public?="Public"? SaaS?="SaaS"? PaaS?="PaaS"? IaaS?="IaaS"? ("security capability " "["
-		//	securityCapability+=[security::SecurityCapability|Fqn] ("," securityCapability+=[security::SecurityCapability|Fqn])*
-		//	"]")? ("provider model: " providerModel=[provider::ProviderModel|Fqn])? "}";
+		//CloudProvider organisation::CloudProvider:
+		//	'provider ' name=ID '{' ('www: ' www=EString)? ('postal address: ' postalAddress=EString)?
+		//	'email: ' email=EString
+		//	public?='Public'?
+		//	SaaS?='SaaS'?
+		//	PaaS?='PaaS'?
+		//	IaaS?='IaaS'? ('security capability ' '[' securityCapability+=[security::SecurityCapability|Fqn] (','
+		//	securityCapability+=[security::SecurityCapability|Fqn])* ']')? ('provider model: '
+		//	providerModel=[provider::ProviderModel|Fqn])?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"provider " name=ID "{" ("www: " www=EString)? ("postal address: " postalAddress=EString)? "email: " email=EString
-		//public?="Public"? SaaS?="SaaS"? PaaS?="PaaS"? IaaS?="IaaS"? ("security capability " "["
-		//securityCapability+=[security::SecurityCapability|Fqn] ("," securityCapability+=[security::SecurityCapability|Fqn])*
-		//"]")? ("provider model: " providerModel=[provider::ProviderModel|Fqn])? "}"
+		//'provider ' name=ID '{' ('www: ' www=EString)? ('postal address: ' postalAddress=EString)? 'email: ' email=EString
+		//public?='Public'? SaaS?='SaaS'? PaaS?='PaaS'? IaaS?='IaaS'? ('security capability ' '['
+		//securityCapability+=[security::SecurityCapability|Fqn] (',' securityCapability+=[security::SecurityCapability|Fqn])*
+		//']')? ('provider model: ' providerModel=[provider::ProviderModel|Fqn])? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"provider "
+		//'provider '
 		public Keyword getProviderKeyword_0() { return cProviderKeyword_0; }
 
 		//name=ID
@@ -6527,13 +6637,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("www: " www=EString)?
+		//('www: ' www=EString)?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"www: "
+		//'www: '
 		public Keyword getWwwKeyword_3_0() { return cWwwKeyword_3_0; }
 
 		//www=EString
@@ -6542,10 +6652,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getWwwEStringParserRuleCall_3_1_0() { return cWwwEStringParserRuleCall_3_1_0; }
 
-		//("postal address: " postalAddress=EString)?
+		//('postal address: ' postalAddress=EString)?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//"postal address: "
+		//'postal address: '
 		public Keyword getPostalAddressKeyword_4_0() { return cPostalAddressKeyword_4_0; }
 
 		//postalAddress=EString
@@ -6554,7 +6664,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getPostalAddressEStringParserRuleCall_4_1_0() { return cPostalAddressEStringParserRuleCall_4_1_0; }
 
-		//"email: "
+		//'email: '
 		public Keyword getEmailKeyword_5() { return cEmailKeyword_5; }
 
 		//email=EString
@@ -6563,38 +6673,38 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getEmailEStringParserRuleCall_6_0() { return cEmailEStringParserRuleCall_6_0; }
 
-		//public?="Public"?
+		//public?='Public'?
 		public Assignment getPublicAssignment_7() { return cPublicAssignment_7; }
 
-		//"Public"
+		//'Public'
 		public Keyword getPublicPublicKeyword_7_0() { return cPublicPublicKeyword_7_0; }
 
-		//SaaS?="SaaS"?
+		//SaaS?='SaaS'?
 		public Assignment getSaaSAssignment_8() { return cSaaSAssignment_8; }
 
-		//"SaaS"
+		//'SaaS'
 		public Keyword getSaaSSaaSKeyword_8_0() { return cSaaSSaaSKeyword_8_0; }
 
-		//PaaS?="PaaS"?
+		//PaaS?='PaaS'?
 		public Assignment getPaaSAssignment_9() { return cPaaSAssignment_9; }
 
-		//"PaaS"
+		//'PaaS'
 		public Keyword getPaaSPaaSKeyword_9_0() { return cPaaSPaaSKeyword_9_0; }
 
-		//IaaS?="IaaS"?
+		//IaaS?='IaaS'?
 		public Assignment getIaaSAssignment_10() { return cIaaSAssignment_10; }
 
-		//"IaaS"
+		//'IaaS'
 		public Keyword getIaaSIaaSKeyword_10_0() { return cIaaSIaaSKeyword_10_0; }
 
-		//("security capability " "[" securityCapability+=[security::SecurityCapability|Fqn] (","
-		//securityCapability+=[security::SecurityCapability|Fqn])* "]")?
+		//('security capability ' '[' securityCapability+=[security::SecurityCapability|Fqn] (','
+		//securityCapability+=[security::SecurityCapability|Fqn])* ']')?
 		public Group getGroup_11() { return cGroup_11; }
 
-		//"security capability "
+		//'security capability '
 		public Keyword getSecurityCapabilityKeyword_11_0() { return cSecurityCapabilityKeyword_11_0; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_11_1() { return cLeftSquareBracketKeyword_11_1; }
 
 		//securityCapability+=[security::SecurityCapability|Fqn]
@@ -6606,10 +6716,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSecurityCapabilitySecurityCapabilityFqnParserRuleCall_11_2_0_1() { return cSecurityCapabilitySecurityCapabilityFqnParserRuleCall_11_2_0_1; }
 
-		//("," securityCapability+=[security::SecurityCapability|Fqn])*
+		//(',' securityCapability+=[security::SecurityCapability|Fqn])*
 		public Group getGroup_11_3() { return cGroup_11_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_11_3_0() { return cCommaKeyword_11_3_0; }
 
 		//securityCapability+=[security::SecurityCapability|Fqn]
@@ -6621,13 +6731,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSecurityCapabilitySecurityCapabilityFqnParserRuleCall_11_3_1_0_1() { return cSecurityCapabilitySecurityCapabilityFqnParserRuleCall_11_3_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_11_4() { return cRightSquareBracketKeyword_11_4; }
 
-		//("provider model: " providerModel=[provider::ProviderModel|Fqn])?
+		//('provider model: ' providerModel=[provider::ProviderModel|Fqn])?
 		public Group getGroup_12() { return cGroup_12; }
 
-		//"provider model: "
+		//'provider model: '
 		public Keyword getProviderModelKeyword_12_0() { return cProviderModelKeyword_12_0; }
 
 		//providerModel=[provider::ProviderModel|Fqn]
@@ -6639,12 +6749,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getProviderModelProviderModelFqnParserRuleCall_12_1_0_1() { return cProviderModelProviderModelFqnParserRuleCall_12_1_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_13() { return cRightCurlyBracketKeyword_13; }
 	}
 
 	public class UserElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "User");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.User");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cUserKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -6711,26 +6821,30 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightSquareBracketKeyword_14_4 = (Keyword)cGroup_14.eContents().get(4);
 		private final Keyword cRightCurlyBracketKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		
-		//User returns organisation::User:
-		//	"user " name=ID "{" "first name: " firstName=EString "last name: " lastName=EString "email: " email=EString ("www: "
-		//	www=EString)? paasageCredentials=PaaSageCredentials ("cloud credentials " "[" cloudCredentials+=CloudCredentials (","
-		//	cloudCredentials+=CloudCredentials)* "]")? ("external identifiers " "[" externalIdentifiers+=ExternalIdentifier (","
-		//	externalIdentifiers+=ExternalIdentifier)* "]")? ("requirement models " "["
-		//	requirementModels+=[requirement::RequirementModel|Fqn] ("," requirementModels+=[requirement::RequirementModel|Fqn])*
-		//	"]")? ("deployment models " "[" deploymentModels+=[deployment::DeploymentModel|Fqn] (","
-		//	deploymentModels+=[deployment::DeploymentModel|Fqn])* "]")? "}";
+		//User organisation::User:
+		//	'user ' name=ID '{'
+		//	'first name: ' firstName=EString
+		//	'last name: ' lastName=EString
+		//	'email: ' email=EString ('www: ' www=EString)?
+		//	paasageCredentials=PaaSageCredentials ('cloud credentials ' '[' cloudCredentials+=CloudCredentials (','
+		//	cloudCredentials+=CloudCredentials)* ']')? ('external identifiers ' '[' externalIdentifiers+=ExternalIdentifier (','
+		//	externalIdentifiers+=ExternalIdentifier)* ']')? ('requirement models ' '['
+		//	requirementModels+=[requirement::RequirementModel|Fqn] (',' requirementModels+=[requirement::RequirementModel|Fqn])*
+		//	']')? ('deployment models ' '[' deploymentModels+=[deployment::DeploymentModel|Fqn] (','
+		//	deploymentModels+=[deployment::DeploymentModel|Fqn])* ']')?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"user " name=ID "{" "first name: " firstName=EString "last name: " lastName=EString "email: " email=EString ("www: "
-		//www=EString)? paasageCredentials=PaaSageCredentials ("cloud credentials " "[" cloudCredentials+=CloudCredentials (","
-		//cloudCredentials+=CloudCredentials)* "]")? ("external identifiers " "[" externalIdentifiers+=ExternalIdentifier (","
-		//externalIdentifiers+=ExternalIdentifier)* "]")? ("requirement models " "["
-		//requirementModels+=[requirement::RequirementModel|Fqn] ("," requirementModels+=[requirement::RequirementModel|Fqn])*
-		//"]")? ("deployment models " "[" deploymentModels+=[deployment::DeploymentModel|Fqn] (","
-		//deploymentModels+=[deployment::DeploymentModel|Fqn])* "]")? "}"
+		//'user ' name=ID '{' 'first name: ' firstName=EString 'last name: ' lastName=EString 'email: ' email=EString ('www: '
+		//www=EString)? paasageCredentials=PaaSageCredentials ('cloud credentials ' '[' cloudCredentials+=CloudCredentials (','
+		//cloudCredentials+=CloudCredentials)* ']')? ('external identifiers ' '[' externalIdentifiers+=ExternalIdentifier (','
+		//externalIdentifiers+=ExternalIdentifier)* ']')? ('requirement models ' '['
+		//requirementModels+=[requirement::RequirementModel|Fqn] (',' requirementModels+=[requirement::RequirementModel|Fqn])*
+		//']')? ('deployment models ' '[' deploymentModels+=[deployment::DeploymentModel|Fqn] (','
+		//deploymentModels+=[deployment::DeploymentModel|Fqn])* ']')? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"user "
+		//'user '
 		public Keyword getUserKeyword_0() { return cUserKeyword_0; }
 
 		//name=ID
@@ -6739,10 +6853,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"first name: "
+		//'first name: '
 		public Keyword getFirstNameKeyword_3() { return cFirstNameKeyword_3; }
 
 		//firstName=EString
@@ -6751,7 +6865,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getFirstNameEStringParserRuleCall_4_0() { return cFirstNameEStringParserRuleCall_4_0; }
 
-		//"last name: "
+		//'last name: '
 		public Keyword getLastNameKeyword_5() { return cLastNameKeyword_5; }
 
 		//lastName=EString
@@ -6760,7 +6874,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getLastNameEStringParserRuleCall_6_0() { return cLastNameEStringParserRuleCall_6_0; }
 
-		//"email: "
+		//'email: '
 		public Keyword getEmailKeyword_7() { return cEmailKeyword_7; }
 
 		//email=EString
@@ -6769,10 +6883,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getEmailEStringParserRuleCall_8_0() { return cEmailEStringParserRuleCall_8_0; }
 
-		//("www: " www=EString)?
+		//('www: ' www=EString)?
 		public Group getGroup_9() { return cGroup_9; }
 
-		//"www: "
+		//'www: '
 		public Keyword getWwwKeyword_9_0() { return cWwwKeyword_9_0; }
 
 		//www=EString
@@ -6787,13 +6901,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//PaaSageCredentials
 		public RuleCall getPaasageCredentialsPaaSageCredentialsParserRuleCall_10_0() { return cPaasageCredentialsPaaSageCredentialsParserRuleCall_10_0; }
 
-		//("cloud credentials " "[" cloudCredentials+=CloudCredentials ("," cloudCredentials+=CloudCredentials)* "]")?
+		//('cloud credentials ' '[' cloudCredentials+=CloudCredentials (',' cloudCredentials+=CloudCredentials)* ']')?
 		public Group getGroup_11() { return cGroup_11; }
 
-		//"cloud credentials "
+		//'cloud credentials '
 		public Keyword getCloudCredentialsKeyword_11_0() { return cCloudCredentialsKeyword_11_0; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_11_1() { return cLeftSquareBracketKeyword_11_1; }
 
 		//cloudCredentials+=CloudCredentials
@@ -6802,10 +6916,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//CloudCredentials
 		public RuleCall getCloudCredentialsCloudCredentialsParserRuleCall_11_2_0() { return cCloudCredentialsCloudCredentialsParserRuleCall_11_2_0; }
 
-		//("," cloudCredentials+=CloudCredentials)*
+		//(',' cloudCredentials+=CloudCredentials)*
 		public Group getGroup_11_3() { return cGroup_11_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_11_3_0() { return cCommaKeyword_11_3_0; }
 
 		//cloudCredentials+=CloudCredentials
@@ -6814,17 +6928,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//CloudCredentials
 		public RuleCall getCloudCredentialsCloudCredentialsParserRuleCall_11_3_1_0() { return cCloudCredentialsCloudCredentialsParserRuleCall_11_3_1_0; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_11_4() { return cRightSquareBracketKeyword_11_4; }
 
-		//("external identifiers " "[" externalIdentifiers+=ExternalIdentifier ("," externalIdentifiers+=ExternalIdentifier)*
-		//"]")?
+		//('external identifiers ' '[' externalIdentifiers+=ExternalIdentifier (',' externalIdentifiers+=ExternalIdentifier)*
+		//']')?
 		public Group getGroup_12() { return cGroup_12; }
 
-		//"external identifiers "
+		//'external identifiers '
 		public Keyword getExternalIdentifiersKeyword_12_0() { return cExternalIdentifiersKeyword_12_0; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_12_1() { return cLeftSquareBracketKeyword_12_1; }
 
 		//externalIdentifiers+=ExternalIdentifier
@@ -6833,10 +6947,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ExternalIdentifier
 		public RuleCall getExternalIdentifiersExternalIdentifierParserRuleCall_12_2_0() { return cExternalIdentifiersExternalIdentifierParserRuleCall_12_2_0; }
 
-		//("," externalIdentifiers+=ExternalIdentifier)*
+		//(',' externalIdentifiers+=ExternalIdentifier)*
 		public Group getGroup_12_3() { return cGroup_12_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_12_3_0() { return cCommaKeyword_12_3_0; }
 
 		//externalIdentifiers+=ExternalIdentifier
@@ -6845,17 +6959,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ExternalIdentifier
 		public RuleCall getExternalIdentifiersExternalIdentifierParserRuleCall_12_3_1_0() { return cExternalIdentifiersExternalIdentifierParserRuleCall_12_3_1_0; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_12_4() { return cRightSquareBracketKeyword_12_4; }
 
-		//("requirement models " "[" requirementModels+=[requirement::RequirementModel|Fqn] (","
-		//requirementModels+=[requirement::RequirementModel|Fqn])* "]")?
+		//('requirement models ' '[' requirementModels+=[requirement::RequirementModel|Fqn] (','
+		//requirementModels+=[requirement::RequirementModel|Fqn])* ']')?
 		public Group getGroup_13() { return cGroup_13; }
 
-		//"requirement models "
+		//'requirement models '
 		public Keyword getRequirementModelsKeyword_13_0() { return cRequirementModelsKeyword_13_0; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_13_1() { return cLeftSquareBracketKeyword_13_1; }
 
 		//requirementModels+=[requirement::RequirementModel|Fqn]
@@ -6867,10 +6981,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getRequirementModelsRequirementModelFqnParserRuleCall_13_2_0_1() { return cRequirementModelsRequirementModelFqnParserRuleCall_13_2_0_1; }
 
-		//("," requirementModels+=[requirement::RequirementModel|Fqn])*
+		//(',' requirementModels+=[requirement::RequirementModel|Fqn])*
 		public Group getGroup_13_3() { return cGroup_13_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_13_3_0() { return cCommaKeyword_13_3_0; }
 
 		//requirementModels+=[requirement::RequirementModel|Fqn]
@@ -6882,17 +6996,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getRequirementModelsRequirementModelFqnParserRuleCall_13_3_1_0_1() { return cRequirementModelsRequirementModelFqnParserRuleCall_13_3_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_13_4() { return cRightSquareBracketKeyword_13_4; }
 
-		//("deployment models " "[" deploymentModels+=[deployment::DeploymentModel|Fqn] (","
-		//deploymentModels+=[deployment::DeploymentModel|Fqn])* "]")?
+		//('deployment models ' '[' deploymentModels+=[deployment::DeploymentModel|Fqn] (','
+		//deploymentModels+=[deployment::DeploymentModel|Fqn])* ']')?
 		public Group getGroup_14() { return cGroup_14; }
 
-		//"deployment models "
+		//'deployment models '
 		public Keyword getDeploymentModelsKeyword_14_0() { return cDeploymentModelsKeyword_14_0; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_14_1() { return cLeftSquareBracketKeyword_14_1; }
 
 		//deploymentModels+=[deployment::DeploymentModel|Fqn]
@@ -6904,10 +7018,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getDeploymentModelsDeploymentModelFqnParserRuleCall_14_2_0_1() { return cDeploymentModelsDeploymentModelFqnParserRuleCall_14_2_0_1; }
 
-		//("," deploymentModels+=[deployment::DeploymentModel|Fqn])*
+		//(',' deploymentModels+=[deployment::DeploymentModel|Fqn])*
 		public Group getGroup_14_3() { return cGroup_14_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_14_3_0() { return cCommaKeyword_14_3_0; }
 
 		//deploymentModels+=[deployment::DeploymentModel|Fqn]
@@ -6919,15 +7033,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getDeploymentModelsDeploymentModelFqnParserRuleCall_14_3_1_0_1() { return cDeploymentModelsDeploymentModelFqnParserRuleCall_14_3_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_14_4() { return cRightSquareBracketKeyword_14_4; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_15() { return cRightCurlyBracketKeyword_15; }
 	}
 
 	public class ExternalIdentifierElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ExternalIdentifier");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ExternalIdentifier");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cExternalIdKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cIdentifierAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -6939,14 +7053,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDescriptionEStringParserRuleCall_3_1_0 = (RuleCall)cDescriptionAssignment_3_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//ExternalIdentifier returns organisation::ExternalIdentifier:
-		//	"external id " identifier=ID "{" ("description: " description=EString)? "}";
+		//ExternalIdentifier organisation::ExternalIdentifier:
+		//	'external id ' identifier=ID '{' ('description: ' description=EString)?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"external id " identifier=ID "{" ("description: " description=EString)? "}"
+		//'external id ' identifier=ID '{' ('description: ' description=EString)? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"external id "
+		//'external id '
 		public Keyword getExternalIdKeyword_0() { return cExternalIdKeyword_0; }
 
 		//identifier=ID
@@ -6955,13 +7070,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getIdentifierIDTerminalRuleCall_1_0() { return cIdentifierIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("description: " description=EString)?
+		//('description: ' description=EString)?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"description: "
+		//'description: '
 		public Keyword getDescriptionKeyword_3_0() { return cDescriptionKeyword_3_0; }
 
 		//description=EString
@@ -6970,12 +7085,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getDescriptionEStringParserRuleCall_3_1_0() { return cDescriptionEStringParserRuleCall_3_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 
 	public class CloudCredentialsElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CloudCredentials");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.CloudCredentials");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
@@ -7006,15 +7121,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCloudProviderCloudProviderFqnParserRuleCall_8_0_1 = (RuleCall)cCloudProviderCloudProviderCrossReference_8_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
-		//CloudCredentials returns organisation::CloudCredentials:
-		//	name=ID "{" ("security group: " securityGroup=EString)? ("public SSH key: " publicSSHKey=EString)?
-		//	("private SSH key: " privateSSHKey=EString)? ("username: " username=EString)? ("password: " password=EString)?
-		//	"cloud provider: " cloudProvider=[organisation::CloudProvider|Fqn] "}";
+		//CloudCredentials organisation::CloudCredentials:
+		//	name=ID '{' ('security group: ' securityGroup=EString)? ('public SSH key: ' publicSSHKey=EString)?
+		//	('private SSH key: ' privateSSHKey=EString)? ('username: ' username=EString)? ('password: ' password=EString)?
+		//	'cloud provider: ' cloudProvider=[organisation::CloudProvider|Fqn]
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//name=ID "{" ("security group: " securityGroup=EString)? ("public SSH key: " publicSSHKey=EString)? ("private SSH key: "
-		//privateSSHKey=EString)? ("username: " username=EString)? ("password: " password=EString)? "cloud provider: "
-		//cloudProvider=[organisation::CloudProvider|Fqn] "}"
+		//name=ID '{' ('security group: ' securityGroup=EString)? ('public SSH key: ' publicSSHKey=EString)? ('private SSH key: '
+		//privateSSHKey=EString)? ('username: ' username=EString)? ('password: ' password=EString)? 'cloud provider: '
+		//cloudProvider=[organisation::CloudProvider|Fqn] '}'
 		public Group getGroup() { return cGroup; }
 
 		//name=ID
@@ -7023,13 +7139,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 
-		//("security group: " securityGroup=EString)?
+		//('security group: ' securityGroup=EString)?
 		public Group getGroup_2() { return cGroup_2; }
 
-		//"security group: "
+		//'security group: '
 		public Keyword getSecurityGroupKeyword_2_0() { return cSecurityGroupKeyword_2_0; }
 
 		//securityGroup=EString
@@ -7038,10 +7154,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getSecurityGroupEStringParserRuleCall_2_1_0() { return cSecurityGroupEStringParserRuleCall_2_1_0; }
 
-		//("public SSH key: " publicSSHKey=EString)?
+		//('public SSH key: ' publicSSHKey=EString)?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"public SSH key: "
+		//'public SSH key: '
 		public Keyword getPublicSSHKeyKeyword_3_0() { return cPublicSSHKeyKeyword_3_0; }
 
 		//publicSSHKey=EString
@@ -7050,10 +7166,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getPublicSSHKeyEStringParserRuleCall_3_1_0() { return cPublicSSHKeyEStringParserRuleCall_3_1_0; }
 
-		//("private SSH key: " privateSSHKey=EString)?
+		//('private SSH key: ' privateSSHKey=EString)?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//"private SSH key: "
+		//'private SSH key: '
 		public Keyword getPrivateSSHKeyKeyword_4_0() { return cPrivateSSHKeyKeyword_4_0; }
 
 		//privateSSHKey=EString
@@ -7062,10 +7178,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getPrivateSSHKeyEStringParserRuleCall_4_1_0() { return cPrivateSSHKeyEStringParserRuleCall_4_1_0; }
 
-		//("username: " username=EString)?
+		//('username: ' username=EString)?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"username: "
+		//'username: '
 		public Keyword getUsernameKeyword_5_0() { return cUsernameKeyword_5_0; }
 
 		//username=EString
@@ -7074,10 +7190,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getUsernameEStringParserRuleCall_5_1_0() { return cUsernameEStringParserRuleCall_5_1_0; }
 
-		//("password: " password=EString)?
+		//('password: ' password=EString)?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//"password: "
+		//'password: '
 		public Keyword getPasswordKeyword_6_0() { return cPasswordKeyword_6_0; }
 
 		//password=EString
@@ -7086,7 +7202,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getPasswordEStringParserRuleCall_6_1_0() { return cPasswordEStringParserRuleCall_6_1_0; }
 
-		//"cloud provider: "
+		//'cloud provider: '
 		public Keyword getCloudProviderKeyword_7() { return cCloudProviderKeyword_7; }
 
 		//cloudProvider=[organisation::CloudProvider|Fqn]
@@ -7098,25 +7214,25 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getCloudProviderCloudProviderFqnParserRuleCall_8_0_1() { return cCloudProviderCloudProviderFqnParserRuleCall_8_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
 	}
 
 	public class PaaSageCredentialsElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "PaaSageCredentials");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.PaaSageCredentials");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cPaasageCredentialsKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cPasswordAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cPasswordEStringParserRuleCall_1_0 = (RuleCall)cPasswordAssignment_1.eContents().get(0);
 		
-		//PaaSageCredentials returns organisation::PaaSageCredentials:
-		//	"paasage credentials " password=EString;
+		//PaaSageCredentials organisation::PaaSageCredentials:
+		//	'paasage credentials ' password=EString
 		@Override public ParserRule getRule() { return rule; }
 
-		//"paasage credentials " password=EString
+		//'paasage credentials ' password=EString
 		public Group getGroup() { return cGroup; }
 
-		//"paasage credentials "
+		//'paasage credentials '
 		public Keyword getPaasageCredentialsKeyword_0() { return cPaasageCredentialsKeyword_0; }
 
 		//password=EString
@@ -7127,11 +7243,11 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class EDateElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "EDate");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.EDate");
 		private final RuleCall cMYDATETerminalRuleCall = (RuleCall)rule.eContents().get(1);
 		
-		/// * TODO: implement this rule and an appropriate IValueConverter * / EDate returns ecore::EDate:
-		//	MYDATE;
+		//EDate ecore::EDate:
+		//	MYDATE
 		@Override public ParserRule getRule() { return rule; }
 
 		//MYDATE
@@ -7139,7 +7255,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class UserGroupElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "UserGroup");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.UserGroup");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cUserGroupKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -7158,15 +7274,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightSquareBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
-		//UserGroup returns organisation::UserGroup:
-		//	"user group " name=ID "{" "users " "[" users+=[organisation::User|Fqn] ("," users+=[organisation::User|Fqn])* "]"
-		//	"}";
+		//UserGroup organisation::UserGroup:
+		//	'user group ' name=ID '{'
+		//	'users ' '[' users+=[organisation::User|Fqn] (',' users+=[organisation::User|Fqn])* ']'
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"user group " name=ID "{" "users " "[" users+=[organisation::User|Fqn] ("," users+=[organisation::User|Fqn])* "]" "}"
+		//'user group ' name=ID '{' 'users ' '[' users+=[organisation::User|Fqn] (',' users+=[organisation::User|Fqn])* ']' '}'
 		public Group getGroup() { return cGroup; }
 
-		//"user group "
+		//'user group '
 		public Keyword getUserGroupKeyword_0() { return cUserGroupKeyword_0; }
 
 		//name=ID
@@ -7175,13 +7292,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"users "
+		//'users '
 		public Keyword getUsersKeyword_3() { return cUsersKeyword_3; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_4() { return cLeftSquareBracketKeyword_4; }
 
 		//users+=[organisation::User|Fqn]
@@ -7193,10 +7310,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getUsersUserFqnParserRuleCall_5_0_1() { return cUsersUserFqnParserRuleCall_5_0_1; }
 
-		//("," users+=[organisation::User|Fqn])*
+		//(',' users+=[organisation::User|Fqn])*
 		public Group getGroup_6() { return cGroup_6; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_6_0() { return cCommaKeyword_6_0; }
 
 		//users+=[organisation::User|Fqn]
@@ -7208,15 +7325,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getUsersUserFqnParserRuleCall_6_1_0_1() { return cUsersUserFqnParserRuleCall_6_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_7() { return cRightSquareBracketKeyword_7; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 	}
 
 	public class RoleAssignmentElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RoleAssignment");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.RoleAssignment");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRoleAssignmentKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -7249,18 +7366,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cUserGroupUserGroupFqnParserRuleCall_10_1_0_1 = (RuleCall)cUserGroupUserGroupCrossReference_10_1_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
-		//RoleAssignment returns organisation::RoleAssignment:
-		//	"role assignment " name=ID "{" ("start: " startTime=EDate)? ("end: " endTime=EDate)? "assigned on: "
-		//	assignmentTime=EDate ("user: " user=[organisation::User|Fqn])? "role: " role=[organisation::Role|Fqn] ("user group: "
-		//	userGroup=[organisation::UserGroup|Fqn])? "}";
+		//RoleAssignment organisation::RoleAssignment:
+		//	'role assignment ' name=ID '{' ('start: ' startTime=EDate)? ('end: ' endTime=EDate)?
+		//	'assigned on: ' assignmentTime=EDate ('user: ' user=[organisation::User|Fqn])?
+		//	'role: ' role=[organisation::Role|Fqn] ('user group: ' userGroup=[organisation::UserGroup|Fqn])?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"role assignment " name=ID "{" ("start: " startTime=EDate)? ("end: " endTime=EDate)? "assigned on: "
-		//assignmentTime=EDate ("user: " user=[organisation::User|Fqn])? "role: " role=[organisation::Role|Fqn] ("user group: "
-		//userGroup=[organisation::UserGroup|Fqn])? "}"
+		//'role assignment ' name=ID '{' ('start: ' startTime=EDate)? ('end: ' endTime=EDate)? 'assigned on: '
+		//assignmentTime=EDate ('user: ' user=[organisation::User|Fqn])? 'role: ' role=[organisation::Role|Fqn] ('user group: '
+		//userGroup=[organisation::UserGroup|Fqn])? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"role assignment "
+		//'role assignment '
 		public Keyword getRoleAssignmentKeyword_0() { return cRoleAssignmentKeyword_0; }
 
 		//name=ID
@@ -7269,13 +7387,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("start: " startTime=EDate)?
+		//('start: ' startTime=EDate)?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"start: "
+		//'start: '
 		public Keyword getStartKeyword_3_0() { return cStartKeyword_3_0; }
 
 		//startTime=EDate
@@ -7284,10 +7402,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDate
 		public RuleCall getStartTimeEDateParserRuleCall_3_1_0() { return cStartTimeEDateParserRuleCall_3_1_0; }
 
-		//("end: " endTime=EDate)?
+		//('end: ' endTime=EDate)?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//"end: "
+		//'end: '
 		public Keyword getEndKeyword_4_0() { return cEndKeyword_4_0; }
 
 		//endTime=EDate
@@ -7296,7 +7414,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDate
 		public RuleCall getEndTimeEDateParserRuleCall_4_1_0() { return cEndTimeEDateParserRuleCall_4_1_0; }
 
-		//"assigned on: "
+		//'assigned on: '
 		public Keyword getAssignedOnKeyword_5() { return cAssignedOnKeyword_5; }
 
 		//assignmentTime=EDate
@@ -7305,10 +7423,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDate
 		public RuleCall getAssignmentTimeEDateParserRuleCall_6_0() { return cAssignmentTimeEDateParserRuleCall_6_0; }
 
-		//("user: " user=[organisation::User|Fqn])?
+		//('user: ' user=[organisation::User|Fqn])?
 		public Group getGroup_7() { return cGroup_7; }
 
-		//"user: "
+		//'user: '
 		public Keyword getUserKeyword_7_0() { return cUserKeyword_7_0; }
 
 		//user=[organisation::User|Fqn]
@@ -7320,7 +7438,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getUserUserFqnParserRuleCall_7_1_0_1() { return cUserUserFqnParserRuleCall_7_1_0_1; }
 
-		//"role: "
+		//'role: '
 		public Keyword getRoleKeyword_8() { return cRoleKeyword_8; }
 
 		//role=[organisation::Role|Fqn]
@@ -7332,10 +7450,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getRoleRoleFqnParserRuleCall_9_0_1() { return cRoleRoleFqnParserRuleCall_9_0_1; }
 
-		//("user group: " userGroup=[organisation::UserGroup|Fqn])?
+		//('user group: ' userGroup=[organisation::UserGroup|Fqn])?
 		public Group getGroup_10() { return cGroup_10; }
 
-		//"user group: "
+		//'user group: '
 		public Keyword getUserGroupKeyword_10_0() { return cUserGroupKeyword_10_0; }
 
 		//userGroup=[organisation::UserGroup|Fqn]
@@ -7347,25 +7465,25 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getUserGroupUserGroupFqnParserRuleCall_10_1_0_1() { return cUserGroupUserGroupFqnParserRuleCall_10_1_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
 	}
 
 	public class RoleElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Role");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Role");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRoleKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		
-		//Role returns organisation::Role:
-		//	"role " name=ID;
+		//Role organisation::Role:
+		//	'role ' name=ID
 		@Override public ParserRule getRule() { return rule; }
 
-		//"role " name=ID
+		//'role ' name=ID
 		public Group getGroup() { return cGroup; }
 
-		//"role "
+		//'role '
 		public Keyword getRoleKeyword_0() { return cRoleKeyword_0; }
 
 		//name=ID
@@ -7376,7 +7494,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class PermissionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Permission");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Permission");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cPermissionKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -7402,16 +7520,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cActionActionTypeEnumRuleCall_11_0 = (RuleCall)cActionAssignment_11.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		
-		//Permission returns organisation::Permission:
-		//	"permission " name=ID "{" "start: " startTime=EDate ("end: " endTime=EDate)? "role: " role=[organisation::Role|Fqn]
-		//	"resource filter: " resourceFilter=[organisation::ResourceFilter|Fqn] "action: " action=ActionType "}";
+		//Permission organisation::Permission:
+		//	'permission ' name=ID '{'
+		//	'start: ' startTime=EDate ('end: ' endTime=EDate)?
+		//	'role: ' role=[organisation::Role|Fqn]
+		//	'resource filter: ' resourceFilter=[organisation::ResourceFilter|Fqn]
+		//	'action: ' action=ActionType
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"permission " name=ID "{" "start: " startTime=EDate ("end: " endTime=EDate)? "role: " role=[organisation::Role|Fqn]
-		//"resource filter: " resourceFilter=[organisation::ResourceFilter|Fqn] "action: " action=ActionType "}"
+		//'permission ' name=ID '{' 'start: ' startTime=EDate ('end: ' endTime=EDate)? 'role: ' role=[organisation::Role|Fqn]
+		//'resource filter: ' resourceFilter=[organisation::ResourceFilter|Fqn] 'action: ' action=ActionType '}'
 		public Group getGroup() { return cGroup; }
 
-		//"permission "
+		//'permission '
 		public Keyword getPermissionKeyword_0() { return cPermissionKeyword_0; }
 
 		//name=ID
@@ -7420,10 +7542,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"start: "
+		//'start: '
 		public Keyword getStartKeyword_3() { return cStartKeyword_3; }
 
 		//startTime=EDate
@@ -7432,10 +7554,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDate
 		public RuleCall getStartTimeEDateParserRuleCall_4_0() { return cStartTimeEDateParserRuleCall_4_0; }
 
-		//("end: " endTime=EDate)?
+		//('end: ' endTime=EDate)?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"end: "
+		//'end: '
 		public Keyword getEndKeyword_5_0() { return cEndKeyword_5_0; }
 
 		//endTime=EDate
@@ -7444,7 +7566,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDate
 		public RuleCall getEndTimeEDateParserRuleCall_5_1_0() { return cEndTimeEDateParserRuleCall_5_1_0; }
 
-		//"role: "
+		//'role: '
 		public Keyword getRoleKeyword_6() { return cRoleKeyword_6; }
 
 		//role=[organisation::Role|Fqn]
@@ -7456,7 +7578,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getRoleRoleFqnParserRuleCall_7_0_1() { return cRoleRoleFqnParserRuleCall_7_0_1; }
 
-		//"resource filter: "
+		//'resource filter: '
 		public Keyword getResourceFilterKeyword_8() { return cResourceFilterKeyword_8; }
 
 		//resourceFilter=[organisation::ResourceFilter|Fqn]
@@ -7468,7 +7590,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getResourceFilterResourceFilterFqnParserRuleCall_9_0_1() { return cResourceFilterResourceFilterFqnParserRuleCall_9_0_1; }
 
-		//"action: "
+		//'action: '
 		public Keyword getActionKeyword_10() { return cActionKeyword_10; }
 
 		//action=ActionType
@@ -7477,18 +7599,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ActionType
 		public RuleCall getActionActionTypeEnumRuleCall_11_0() { return cActionActionTypeEnumRuleCall_11_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
 	}
 
 	public class ResourceFilterElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ResourceFilter");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ResourceFilter");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cInformationResourceFilterParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cServiceResourceFilterParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//ResourceFilter returns organisation::ResourceFilter:
-		//	InformationResourceFilter | ServiceResourceFilter;
+		//ResourceFilter organisation::ResourceFilter:
+		//	InformationResourceFilter | ServiceResourceFilter
 		@Override public ParserRule getRule() { return rule; }
 
 		//InformationResourceFilter | ServiceResourceFilter
@@ -7502,7 +7624,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class InformationResourceFilterElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "InformationResourceFilter");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.InformationResourceFilter");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cInformationResourceFilterKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -7519,16 +7641,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEveryInformationResourceAllKeyword_6_0 = (Keyword)cEveryInformationResourceAssignment_6.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
-		//InformationResourceFilter returns organisation::InformationResourceFilter:
-		//	"information resource filter " name=ID "{" "pattern: " resourcePattern=ResourcePattern ("information resource path: "
-		//	informationResourcePath=EString)? everyInformationResource?="all" "}";
+		//InformationResourceFilter organisation::InformationResourceFilter:
+		//	'information resource filter ' name=ID '{'
+		//	'pattern: ' resourcePattern=ResourcePattern ('information resource path: ' informationResourcePath=EString)?
+		//	everyInformationResource?='all'
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"information resource filter " name=ID "{" "pattern: " resourcePattern=ResourcePattern ("information resource path: "
-		//informationResourcePath=EString)? everyInformationResource?="all" "}"
+		//'information resource filter ' name=ID '{' 'pattern: ' resourcePattern=ResourcePattern ('information resource path: '
+		//informationResourcePath=EString)? everyInformationResource?='all' '}'
 		public Group getGroup() { return cGroup; }
 
-		//"information resource filter "
+		//'information resource filter '
 		public Keyword getInformationResourceFilterKeyword_0() { return cInformationResourceFilterKeyword_0; }
 
 		//name=ID
@@ -7537,10 +7661,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"pattern: "
+		//'pattern: '
 		public Keyword getPatternKeyword_3() { return cPatternKeyword_3; }
 
 		//resourcePattern=ResourcePattern
@@ -7549,10 +7673,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ResourcePattern
 		public RuleCall getResourcePatternResourcePatternEnumRuleCall_4_0() { return cResourcePatternResourcePatternEnumRuleCall_4_0; }
 
-		//("information resource path: " informationResourcePath=EString)?
+		//('information resource path: ' informationResourcePath=EString)?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"information resource path: "
+		//'information resource path: '
 		public Keyword getInformationResourcePathKeyword_5_0() { return cInformationResourcePathKeyword_5_0; }
 
 		//informationResourcePath=EString
@@ -7561,18 +7685,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getInformationResourcePathEStringParserRuleCall_5_1_0() { return cInformationResourcePathEStringParserRuleCall_5_1_0; }
 
-		//everyInformationResource?="all"
+		//everyInformationResource?='all'
 		public Assignment getEveryInformationResourceAssignment_6() { return cEveryInformationResourceAssignment_6; }
 
-		//"all"
+		//'all'
 		public Keyword getEveryInformationResourceAllKeyword_6_0() { return cEveryInformationResourceAllKeyword_6_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class ServiceResourceFilterElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ServiceResourceFilter");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ServiceResourceFilter");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cServiceResourceFilterKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -7589,16 +7713,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEveryServiceAllKeyword_6_0 = (Keyword)cEveryServiceAssignment_6.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
-		//ServiceResourceFilter returns organisation::ServiceResourceFilter:
-		//	"service resource filter " name=ID "{" "pattern: " resourcePattern=ResourcePattern ("service url: "
-		//	serviceURL=EString)? everyService?="all" "}";
+		//ServiceResourceFilter organisation::ServiceResourceFilter:
+		//	'service resource filter ' name=ID '{'
+		//	'pattern: ' resourcePattern=ResourcePattern ('service url: ' serviceURL=EString)?
+		//	everyService?='all'
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"service resource filter " name=ID "{" "pattern: " resourcePattern=ResourcePattern ("service url: " serviceURL=EString)?
-		//everyService?="all" "}"
+		//'service resource filter ' name=ID '{' 'pattern: ' resourcePattern=ResourcePattern ('service url: ' serviceURL=EString)?
+		//everyService?='all' '}'
 		public Group getGroup() { return cGroup; }
 
-		//"service resource filter "
+		//'service resource filter '
 		public Keyword getServiceResourceFilterKeyword_0() { return cServiceResourceFilterKeyword_0; }
 
 		//name=ID
@@ -7607,10 +7733,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"pattern: "
+		//'pattern: '
 		public Keyword getPatternKeyword_3() { return cPatternKeyword_3; }
 
 		//resourcePattern=ResourcePattern
@@ -7619,10 +7745,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ResourcePattern
 		public RuleCall getResourcePatternResourcePatternEnumRuleCall_4_0() { return cResourcePatternResourcePatternEnumRuleCall_4_0; }
 
-		//("service url: " serviceURL=EString)?
+		//('service url: ' serviceURL=EString)?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"service url: "
+		//'service url: '
 		public Keyword getServiceUrlKeyword_5_0() { return cServiceUrlKeyword_5_0; }
 
 		//serviceURL=EString
@@ -7631,18 +7757,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getServiceURLEStringParserRuleCall_5_1_0() { return cServiceURLEStringParserRuleCall_5_1_0; }
 
-		//everyService?="all"
+		//everyService?='all'
 		public Assignment getEveryServiceAssignment_6() { return cEveryServiceAssignment_6; }
 
-		//"all"
+		//'all'
 		public Keyword getEveryServiceAllKeyword_6_0() { return cEveryServiceAllKeyword_6_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class ProviderModelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ProviderModel");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ProviderModel");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cProviderModelKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -7662,16 +7788,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRootFeatureFeatureParserRuleCall_5_0 = (RuleCall)cRootFeatureAssignment_5.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
-		/// * Provider model * / ProviderModel returns provider::ProviderModel:
-		//	"provider model " name=ID "{" ("constraints " "{" (constraints+=Constraint constraints+=Constraint*)? "}")? "root "
-		//	rootFeature=Feature "}";
+		/// * Provider model * / ProviderModel provider::ProviderModel:
+		//	'provider model ' name=ID '{' ('constraints ' '{' (constraints+=Constraint constraints+=Constraint*)? '}')?
+		//	'root ' rootFeature=Feature
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"provider model " name=ID "{" ("constraints " "{" (constraints+=Constraint constraints+=Constraint*)? "}")? "root "
-		//rootFeature=Feature "}"
+		//'provider model ' name=ID '{' ('constraints ' '{' (constraints+=Constraint constraints+=Constraint*)? '}')? 'root '
+		//rootFeature=Feature '}'
 		public Group getGroup() { return cGroup; }
 
-		//"provider model "
+		//'provider model '
 		public Keyword getProviderModelKeyword_0() { return cProviderModelKeyword_0; }
 
 		//name=ID
@@ -7680,16 +7807,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("constraints " "{" (constraints+=Constraint constraints+=Constraint*)? "}")?
+		//('constraints ' '{' (constraints+=Constraint constraints+=Constraint*)? '}')?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"constraints "
+		//'constraints '
 		public Keyword getConstraintsKeyword_3_0() { return cConstraintsKeyword_3_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3_1() { return cLeftCurlyBracketKeyword_3_1; }
 
 		//(constraints+=Constraint constraints+=Constraint*)?
@@ -7707,10 +7834,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Constraint
 		public RuleCall getConstraintsConstraintParserRuleCall_3_2_1_0() { return cConstraintsConstraintParserRuleCall_3_2_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_3_3() { return cRightCurlyBracketKeyword_3_3; }
 
-		//"root "
+		//'root '
 		public Keyword getRootKeyword_4() { return cRootKeyword_4; }
 
 		//rootFeature=Feature
@@ -7719,20 +7846,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Feature
 		public RuleCall getRootFeatureFeatureParserRuleCall_5_0() { return cRootFeatureFeatureParserRuleCall_5_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class ConstraintElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Constraint");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Constraint");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cExcludesParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cImpliesParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cRequires_ImplParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cFunctionalParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
-		//Constraint returns provider::Constraint:
-		//	Excludes | Implies | Requires_Impl | Functional;
+		//Constraint provider::Constraint:
+		//	Excludes | Implies | Requires_Impl | Functional
 		@Override public ParserRule getRule() { return rule; }
 
 		//Excludes | Implies | Requires_Impl | Functional
@@ -7752,14 +7879,14 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class FeatureElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Feature");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Feature");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cFeature_ImplParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cAlternative_ImplParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cExclusiveParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
-		//Feature returns provider::Feature:
-		//	Feature_Impl | Alternative_Impl | Exclusive;
+		//Feature provider::Feature:
+		//	Feature_Impl | Alternative_Impl | Exclusive
 		@Override public ParserRule getRule() { return rule; }
 
 		//Feature_Impl | Alternative_Impl | Exclusive
@@ -7776,13 +7903,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class ScopeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Scope");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Scope");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cInstanceParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cProductParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//Scope returns provider::Scope:
-		//	Instance | Product;
+		//Scope provider::Scope:
+		//	Instance | Product
 		@Override public ParserRule getRule() { return rule; }
 
 		//Instance | Product
@@ -7796,7 +7923,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class ValueTypeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ValueType");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ValueType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cBoolValueTypeParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cEnumerationParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
@@ -7805,8 +7932,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRangeUnionParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		private final RuleCall cStringsValueTypeParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		
-		//ValueType returns type::ValueType:
-		//	BoolValueType | Enumeration | List | Range | RangeUnion | StringsValueType;
+		//ValueType type::ValueType:
+		//	BoolValueType | Enumeration | List | Range | RangeUnion | StringsValueType
 		@Override public ParserRule getRule() { return rule; }
 
 		//BoolValueType | Enumeration | List | Range | RangeUnion | StringsValueType
@@ -7832,7 +7959,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class NumericValueElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "NumericValue");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.NumericValue");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cIntegerValueParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cFloatsValueParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
@@ -7841,8 +7968,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cPositiveInfParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		private final RuleCall cValueToIncreaseParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		
-		//NumericValue returns type::NumericValue:
-		//	IntegerValue | FloatsValue | DoublePrecisionValue | NegativeInf | PositiveInf | ValueToIncrease;
+		//NumericValue type::NumericValue:
+		//	IntegerValue | FloatsValue | DoublePrecisionValue | NegativeInf | PositiveInf | ValueToIncrease
 		@Override public ParserRule getRule() { return rule; }
 
 		//IntegerValue | FloatsValue | DoublePrecisionValue | NegativeInf | PositiveInf | ValueToIncrease
@@ -7868,7 +7995,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class Feature_ImplElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Feature_Impl");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Feature_Impl");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cFeatureKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -7906,18 +8033,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6_4 = (Keyword)cGroup_6.eContents().get(4);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
-		//Feature_Impl returns provider::Feature:
-		//	"feature " name=ID "{" ("attributes " "{" (attributes+=Attribute attributes+=Attribute*)? "}")? ("sub-features " "{"
-		//	(subFeatures+=Feature subFeatures+=Feature*)? "}")? featureCardinality=FeatCardinality ("clones " "{" clones+=Clone
-		//	("," clones+=Clone)* "}")? "}";
+		//Feature_Impl provider::Feature:
+		//	'feature ' name=ID '{' ('attributes ' '{' (attributes+=Attribute attributes+=Attribute*)? '}')? ('sub-features ' '{'
+		//	(subFeatures+=Feature subFeatures+=Feature*)? '}')?
+		//	featureCardinality=FeatCardinality ('clones ' '{' clones+=Clone (',' clones+=Clone)* '}')?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"feature " name=ID "{" ("attributes " "{" (attributes+=Attribute attributes+=Attribute*)? "}")? ("sub-features " "{"
-		//(subFeatures+=Feature subFeatures+=Feature*)? "}")? featureCardinality=FeatCardinality ("clones " "{" clones+=Clone
-		//("," clones+=Clone)* "}")? "}"
+		//'feature ' name=ID '{' ('attributes ' '{' (attributes+=Attribute attributes+=Attribute*)? '}')? ('sub-features ' '{'
+		//(subFeatures+=Feature subFeatures+=Feature*)? '}')? featureCardinality=FeatCardinality ('clones ' '{' clones+=Clone
+		//(',' clones+=Clone)* '}')? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"feature "
+		//'feature '
 		public Keyword getFeatureKeyword_0() { return cFeatureKeyword_0; }
 
 		//name=ID
@@ -7926,16 +8054,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("attributes " "{" (attributes+=Attribute attributes+=Attribute*)? "}")?
+		//('attributes ' '{' (attributes+=Attribute attributes+=Attribute*)? '}')?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"attributes "
+		//'attributes '
 		public Keyword getAttributesKeyword_3_0() { return cAttributesKeyword_3_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3_1() { return cLeftCurlyBracketKeyword_3_1; }
 
 		//(attributes+=Attribute attributes+=Attribute*)?
@@ -7953,16 +8081,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Attribute
 		public RuleCall getAttributesAttributeParserRuleCall_3_2_1_0() { return cAttributesAttributeParserRuleCall_3_2_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_3_3() { return cRightCurlyBracketKeyword_3_3; }
 
-		//("sub-features " "{" (subFeatures+=Feature subFeatures+=Feature*)? "}")?
+		//('sub-features ' '{' (subFeatures+=Feature subFeatures+=Feature*)? '}')?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//"sub-features "
+		//'sub-features '
 		public Keyword getSubFeaturesKeyword_4_0() { return cSubFeaturesKeyword_4_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_4_1() { return cLeftCurlyBracketKeyword_4_1; }
 
 		//(subFeatures+=Feature subFeatures+=Feature*)?
@@ -7980,7 +8108,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Feature
 		public RuleCall getSubFeaturesFeatureParserRuleCall_4_2_1_0() { return cSubFeaturesFeatureParserRuleCall_4_2_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_4_3() { return cRightCurlyBracketKeyword_4_3; }
 
 		//featureCardinality=FeatCardinality
@@ -7989,13 +8117,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//FeatCardinality
 		public RuleCall getFeatureCardinalityFeatCardinalityParserRuleCall_5_0() { return cFeatureCardinalityFeatCardinalityParserRuleCall_5_0; }
 
-		//("clones " "{" clones+=Clone ("," clones+=Clone)* "}")?
+		//('clones ' '{' clones+=Clone (',' clones+=Clone)* '}')?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//"clones "
+		//'clones '
 		public Keyword getClonesKeyword_6_0() { return cClonesKeyword_6_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_6_1() { return cLeftCurlyBracketKeyword_6_1; }
 
 		//clones+=Clone
@@ -8004,10 +8132,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Clone
 		public RuleCall getClonesCloneParserRuleCall_6_2_0() { return cClonesCloneParserRuleCall_6_2_0; }
 
-		//("," clones+=Clone)*
+		//(',' clones+=Clone)*
 		public Group getGroup_6_3() { return cGroup_6_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_6_3_0() { return cCommaKeyword_6_3_0; }
 
 		//clones+=Clone
@@ -8016,20 +8144,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Clone
 		public RuleCall getClonesCloneParserRuleCall_6_3_1_0() { return cClonesCloneParserRuleCall_6_3_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_6_4() { return cRightCurlyBracketKeyword_6_4; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class EStringElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "EString");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.EString");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cSTRINGTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cIDTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//EString returns ecore::EString:
+		//EString:
 		//	STRING | ID;
 		@Override public ParserRule getRule() { return rule; }
 
@@ -8044,7 +8172,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class AttributeConstraintElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "AttributeConstraint");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.AttributeConstraint");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cAttributeConstraintKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -8064,22 +8192,26 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cToValueValueParserRuleCall_9_0 = (RuleCall)cToValueAssignment_9.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
-		//AttributeConstraint returns provider::AttributeConstraint:
-		//	"attribute constraint " "{" "from: " from=[provider::Attribute|Fqn] "to: " to=[provider::Attribute|Fqn]
-		//	"from value: " fromValue=Value "to value: " toValue=Value "}";
+		//AttributeConstraint provider::AttributeConstraint:
+		//	'attribute constraint ' '{'
+		//	'from: ' from=[provider::Attribute|Fqn]
+		//	'to: ' to=[provider::Attribute|Fqn]
+		//	'from value: ' fromValue=Value
+		//	'to value: ' toValue=Value
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"attribute constraint " "{" "from: " from=[provider::Attribute|Fqn] "to: " to=[provider::Attribute|Fqn] "from value: "
-		//fromValue=Value "to value: " toValue=Value "}"
+		//'attribute constraint ' '{' 'from: ' from=[provider::Attribute|Fqn] 'to: ' to=[provider::Attribute|Fqn] 'from value: '
+		//fromValue=Value 'to value: ' toValue=Value '}'
 		public Group getGroup() { return cGroup; }
 
-		//"attribute constraint "
+		//'attribute constraint '
 		public Keyword getAttributeConstraintKeyword_0() { return cAttributeConstraintKeyword_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 
-		//"from: "
+		//'from: '
 		public Keyword getFromKeyword_2() { return cFromKeyword_2; }
 
 		//from=[provider::Attribute|Fqn]
@@ -8091,7 +8223,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getFromAttributeFqnParserRuleCall_3_0_1() { return cFromAttributeFqnParserRuleCall_3_0_1; }
 
-		//"to: "
+		//'to: '
 		public Keyword getToKeyword_4() { return cToKeyword_4; }
 
 		//to=[provider::Attribute|Fqn]
@@ -8103,7 +8235,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getToAttributeFqnParserRuleCall_5_0_1() { return cToAttributeFqnParserRuleCall_5_0_1; }
 
-		//"from value: "
+		//'from value: '
 		public Keyword getFromValueKeyword_6() { return cFromValueKeyword_6; }
 
 		//fromValue=Value
@@ -8112,7 +8244,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Value
 		public RuleCall getFromValueValueParserRuleCall_7_0() { return cFromValueValueParserRuleCall_7_0; }
 
-		//"to value: "
+		//'to value: '
 		public Keyword getToValueKeyword_8() { return cToValueKeyword_8; }
 
 		//toValue=Value
@@ -8121,12 +8253,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Value
 		public RuleCall getToValueValueParserRuleCall_9_0() { return cToValueValueParserRuleCall_9_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
 	}
 
 	public class ExcludesElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Excludes");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Excludes");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cExcludesKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -8151,18 +8283,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_7_3 = (Keyword)cGroup_7.eContents().get(3);
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
-		//Excludes returns provider::Excludes:
-		//	"excludes " name=ID "{" "from: " from=[provider::Feature|Fqn] "to: " to=[provider::Feature|Fqn]
-		//	("attribute constraints " "{" (attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint*)?
-		//	"}")? "}";
+		//Excludes provider::Excludes:
+		//	'excludes ' name=ID '{'
+		//	'from: ' from=[provider::Feature|Fqn]
+		//	'to: ' to=[provider::Feature|Fqn] ('attribute constraints ' '{' (attributeConstraints+=AttributeConstraint
+		//	attributeConstraints+=AttributeConstraint*)? '}')?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"excludes " name=ID "{" "from: " from=[provider::Feature|Fqn] "to: " to=[provider::Feature|Fqn]
-		//("attribute constraints " "{" (attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint*)?
-		//"}")? "}"
+		//'excludes ' name=ID '{' 'from: ' from=[provider::Feature|Fqn] 'to: ' to=[provider::Feature|Fqn]
+		//('attribute constraints ' '{' (attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint*)?
+		//'}')? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"excludes "
+		//'excludes '
 		public Keyword getExcludesKeyword_0() { return cExcludesKeyword_0; }
 
 		//name=ID
@@ -8171,10 +8305,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"from: "
+		//'from: '
 		public Keyword getFromKeyword_3() { return cFromKeyword_3; }
 
 		//from=[provider::Feature|Fqn]
@@ -8186,7 +8320,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getFromFeatureFqnParserRuleCall_4_0_1() { return cFromFeatureFqnParserRuleCall_4_0_1; }
 
-		//"to: "
+		//'to: '
 		public Keyword getToKeyword_5() { return cToKeyword_5; }
 
 		//to=[provider::Feature|Fqn]
@@ -8198,14 +8332,14 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getToFeatureFqnParserRuleCall_6_0_1() { return cToFeatureFqnParserRuleCall_6_0_1; }
 
-		//("attribute constraints " "{" (attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint*)?
-		//"}")?
+		//('attribute constraints ' '{' (attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint*)?
+		//'}')?
 		public Group getGroup_7() { return cGroup_7; }
 
-		//"attribute constraints "
+		//'attribute constraints '
 		public Keyword getAttributeConstraintsKeyword_7_0() { return cAttributeConstraintsKeyword_7_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_7_1() { return cLeftCurlyBracketKeyword_7_1; }
 
 		//(attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint*)?
@@ -8223,15 +8357,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//AttributeConstraint
 		public RuleCall getAttributeConstraintsAttributeConstraintParserRuleCall_7_2_1_0() { return cAttributeConstraintsAttributeConstraintParserRuleCall_7_2_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_7_3() { return cRightCurlyBracketKeyword_7_3; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 	}
 
 	public class ImpliesElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Implies");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Implies");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cImpliesKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -8255,17 +8389,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_7_4 = (Keyword)cGroup_7.eContents().get(4);
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
-		//Implies returns provider::Implies:
-		//	"implies " name=ID "{" "from: " from=[provider::Feature|Fqn] "to: " to=[provider::Feature|Fqn]
-		//	("attribute constraints " "{" attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint*
-		//	"}")? "}";
+		//Implies provider::Implies:
+		//	'implies ' name=ID '{'
+		//	'from: ' from=[provider::Feature|Fqn]
+		//	'to: ' to=[provider::Feature|Fqn] ('attribute constraints ' '{' attributeConstraints+=AttributeConstraint
+		//	attributeConstraints+=AttributeConstraint* '}')?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"implies " name=ID "{" "from: " from=[provider::Feature|Fqn] "to: " to=[provider::Feature|Fqn] ("attribute constraints "
-		//"{" attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint* "}")? "}"
+		//'implies ' name=ID '{' 'from: ' from=[provider::Feature|Fqn] 'to: ' to=[provider::Feature|Fqn] ('attribute constraints '
+		//'{' attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint* '}')? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"implies "
+		//'implies '
 		public Keyword getImpliesKeyword_0() { return cImpliesKeyword_0; }
 
 		//name=ID
@@ -8274,10 +8410,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"from: "
+		//'from: '
 		public Keyword getFromKeyword_3() { return cFromKeyword_3; }
 
 		//from=[provider::Feature|Fqn]
@@ -8289,7 +8425,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getFromFeatureFqnParserRuleCall_4_0_1() { return cFromFeatureFqnParserRuleCall_4_0_1; }
 
-		//"to: "
+		//'to: '
 		public Keyword getToKeyword_5() { return cToKeyword_5; }
 
 		//to=[provider::Feature|Fqn]
@@ -8301,13 +8437,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getToFeatureFqnParserRuleCall_6_0_1() { return cToFeatureFqnParserRuleCall_6_0_1; }
 
-		//("attribute constraints " "{" attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint* "}")?
+		//('attribute constraints ' '{' attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint* '}')?
 		public Group getGroup_7() { return cGroup_7; }
 
-		//"attribute constraints "
+		//'attribute constraints '
 		public Keyword getAttributeConstraintsKeyword_7_0() { return cAttributeConstraintsKeyword_7_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_7_1() { return cLeftCurlyBracketKeyword_7_1; }
 
 		//attributeConstraints+=AttributeConstraint
@@ -8322,15 +8458,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//AttributeConstraint
 		public RuleCall getAttributeConstraintsAttributeConstraintParserRuleCall_7_3_0() { return cAttributeConstraintsAttributeConstraintParserRuleCall_7_3_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_7_4() { return cRightCurlyBracketKeyword_7_4; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 	}
 
 	public class Requires_ImplElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Requires_Impl");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Requires_Impl");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRequiresKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -8370,20 +8506,22 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCardToFeatCardinalityParserRuleCall_11_1_0 = (RuleCall)cCardToAssignment_11_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		
-		//Requires_Impl returns provider::Requires:
-		//	"requires " name=ID "{" "from: " from=[provider::Feature|Fqn] "to: " to=[provider::Feature|Fqn]
-		//	("attribute constraints " "{" attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint*
-		//	"}")? ("scope from: " scopeFrom=Scope)? ("scope to: " scopeTo=Scope)? ("card from: " cardFrom=FeatCardinality)?
-		//	("card to: " cardTo=FeatCardinality)? "}";
+		//Requires_Impl provider::Requires:
+		//	'requires ' name=ID '{'
+		//	'from: ' from=[provider::Feature|Fqn]
+		//	'to: ' to=[provider::Feature|Fqn] ('attribute constraints ' '{' attributeConstraints+=AttributeConstraint
+		//	attributeConstraints+=AttributeConstraint* '}')? ('scope from: ' scopeFrom=Scope)? ('scope to: ' scopeTo=Scope)?
+		//	('card from: ' cardFrom=FeatCardinality)? ('card to: ' cardTo=FeatCardinality)?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"requires " name=ID "{" "from: " from=[provider::Feature|Fqn] "to: " to=[provider::Feature|Fqn]
-		//("attribute constraints " "{" attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint*
-		//"}")? ("scope from: " scopeFrom=Scope)? ("scope to: " scopeTo=Scope)? ("card from: " cardFrom=FeatCardinality)?
-		//("card to: " cardTo=FeatCardinality)? "}"
+		//'requires ' name=ID '{' 'from: ' from=[provider::Feature|Fqn] 'to: ' to=[provider::Feature|Fqn]
+		//('attribute constraints ' '{' attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint*
+		//'}')? ('scope from: ' scopeFrom=Scope)? ('scope to: ' scopeTo=Scope)? ('card from: ' cardFrom=FeatCardinality)?
+		//('card to: ' cardTo=FeatCardinality)? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"requires "
+		//'requires '
 		public Keyword getRequiresKeyword_0() { return cRequiresKeyword_0; }
 
 		//name=ID
@@ -8392,10 +8530,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"from: "
+		//'from: '
 		public Keyword getFromKeyword_3() { return cFromKeyword_3; }
 
 		//from=[provider::Feature|Fqn]
@@ -8407,7 +8545,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getFromFeatureFqnParserRuleCall_4_0_1() { return cFromFeatureFqnParserRuleCall_4_0_1; }
 
-		//"to: "
+		//'to: '
 		public Keyword getToKeyword_5() { return cToKeyword_5; }
 
 		//to=[provider::Feature|Fqn]
@@ -8419,13 +8557,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getToFeatureFqnParserRuleCall_6_0_1() { return cToFeatureFqnParserRuleCall_6_0_1; }
 
-		//("attribute constraints " "{" attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint* "}")?
+		//('attribute constraints ' '{' attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint* '}')?
 		public Group getGroup_7() { return cGroup_7; }
 
-		//"attribute constraints "
+		//'attribute constraints '
 		public Keyword getAttributeConstraintsKeyword_7_0() { return cAttributeConstraintsKeyword_7_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_7_1() { return cLeftCurlyBracketKeyword_7_1; }
 
 		//attributeConstraints+=AttributeConstraint
@@ -8440,13 +8578,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//AttributeConstraint
 		public RuleCall getAttributeConstraintsAttributeConstraintParserRuleCall_7_3_0() { return cAttributeConstraintsAttributeConstraintParserRuleCall_7_3_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_7_4() { return cRightCurlyBracketKeyword_7_4; }
 
-		//("scope from: " scopeFrom=Scope)?
+		//('scope from: ' scopeFrom=Scope)?
 		public Group getGroup_8() { return cGroup_8; }
 
-		//"scope from: "
+		//'scope from: '
 		public Keyword getScopeFromKeyword_8_0() { return cScopeFromKeyword_8_0; }
 
 		//scopeFrom=Scope
@@ -8455,10 +8593,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Scope
 		public RuleCall getScopeFromScopeParserRuleCall_8_1_0() { return cScopeFromScopeParserRuleCall_8_1_0; }
 
-		//("scope to: " scopeTo=Scope)?
+		//('scope to: ' scopeTo=Scope)?
 		public Group getGroup_9() { return cGroup_9; }
 
-		//"scope to: "
+		//'scope to: '
 		public Keyword getScopeToKeyword_9_0() { return cScopeToKeyword_9_0; }
 
 		//scopeTo=Scope
@@ -8467,10 +8605,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Scope
 		public RuleCall getScopeToScopeParserRuleCall_9_1_0() { return cScopeToScopeParserRuleCall_9_1_0; }
 
-		//("card from: " cardFrom=FeatCardinality)?
+		//('card from: ' cardFrom=FeatCardinality)?
 		public Group getGroup_10() { return cGroup_10; }
 
-		//"card from: "
+		//'card from: '
 		public Keyword getCardFromKeyword_10_0() { return cCardFromKeyword_10_0; }
 
 		//cardFrom=FeatCardinality
@@ -8479,10 +8617,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//FeatCardinality
 		public RuleCall getCardFromFeatCardinalityParserRuleCall_10_1_0() { return cCardFromFeatCardinalityParserRuleCall_10_1_0; }
 
-		//("card to: " cardTo=FeatCardinality)?
+		//('card to: ' cardTo=FeatCardinality)?
 		public Group getGroup_11() { return cGroup_11; }
 
-		//"card to: "
+		//'card to: '
 		public Keyword getCardToKeyword_11_0() { return cCardToKeyword_11_0; }
 
 		//cardTo=FeatCardinality
@@ -8491,12 +8629,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//FeatCardinality
 		public RuleCall getCardToFeatCardinalityParserRuleCall_11_1_0() { return cCardToFeatCardinalityParserRuleCall_11_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
 	}
 
 	public class FunctionalElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Functional");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Functional");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cFunctionalKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -8547,22 +8685,24 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCardToFeatCardinalityParserRuleCall_15_1_0 = (RuleCall)cCardToAssignment_15_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_16 = (Keyword)cGroup.eContents().get(16);
 		
-		//Functional returns provider::Functional:
-		//	"functional " name=ID "{" ("type: " type=Operator)? ("order: " order=EInt)? "value: " value=EInt "from: "
-		//	from=[provider::Feature|Fqn] "to: " to=[provider::Feature|Fqn] ("attribute constraints " "{"
-		//	attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint* "}")? ("scope from: "
-		//	scopeFrom=Scope)? ("scope to: " scopeTo=Scope)? ("card from: " cardFrom=FeatCardinality)? ("card to: "
-		//	cardTo=FeatCardinality)? "}";
+		//Functional provider::Functional:
+		//	'functional ' name=ID '{' ('type: ' type=Operator)? ('order: ' order=EInt)?
+		//	'value: ' value=EInt
+		//	'from: ' from=[provider::Feature|Fqn]
+		//	'to: ' to=[provider::Feature|Fqn] ('attribute constraints ' '{' attributeConstraints+=AttributeConstraint
+		//	attributeConstraints+=AttributeConstraint* '}')? ('scope from: ' scopeFrom=Scope)? ('scope to: ' scopeTo=Scope)?
+		//	('card from: ' cardFrom=FeatCardinality)? ('card to: ' cardTo=FeatCardinality)?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"functional " name=ID "{" ("type: " type=Operator)? ("order: " order=EInt)? "value: " value=EInt "from: "
-		//from=[provider::Feature|Fqn] "to: " to=[provider::Feature|Fqn] ("attribute constraints " "{"
-		//attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint* "}")? ("scope from: "
-		//scopeFrom=Scope)? ("scope to: " scopeTo=Scope)? ("card from: " cardFrom=FeatCardinality)? ("card to: "
-		//cardTo=FeatCardinality)? "}"
+		//'functional ' name=ID '{' ('type: ' type=Operator)? ('order: ' order=EInt)? 'value: ' value=EInt 'from: '
+		//from=[provider::Feature|Fqn] 'to: ' to=[provider::Feature|Fqn] ('attribute constraints ' '{'
+		//attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint* '}')? ('scope from: '
+		//scopeFrom=Scope)? ('scope to: ' scopeTo=Scope)? ('card from: ' cardFrom=FeatCardinality)? ('card to: '
+		//cardTo=FeatCardinality)? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"functional "
+		//'functional '
 		public Keyword getFunctionalKeyword_0() { return cFunctionalKeyword_0; }
 
 		//name=ID
@@ -8571,13 +8711,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("type: " type=Operator)?
+		//('type: ' type=Operator)?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"type: "
+		//'type: '
 		public Keyword getTypeKeyword_3_0() { return cTypeKeyword_3_0; }
 
 		//type=Operator
@@ -8586,10 +8726,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Operator
 		public RuleCall getTypeOperatorEnumRuleCall_3_1_0() { return cTypeOperatorEnumRuleCall_3_1_0; }
 
-		//("order: " order=EInt)?
+		//('order: ' order=EInt)?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//"order: "
+		//'order: '
 		public Keyword getOrderKeyword_4_0() { return cOrderKeyword_4_0; }
 
 		//order=EInt
@@ -8598,7 +8738,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInt
 		public RuleCall getOrderEIntParserRuleCall_4_1_0() { return cOrderEIntParserRuleCall_4_1_0; }
 
-		//"value: "
+		//'value: '
 		public Keyword getValueKeyword_5() { return cValueKeyword_5; }
 
 		//value=EInt
@@ -8607,7 +8747,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInt
 		public RuleCall getValueEIntParserRuleCall_6_0() { return cValueEIntParserRuleCall_6_0; }
 
-		//"from: "
+		//'from: '
 		public Keyword getFromKeyword_7() { return cFromKeyword_7; }
 
 		//from=[provider::Feature|Fqn]
@@ -8619,7 +8759,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getFromFeatureFqnParserRuleCall_8_0_1() { return cFromFeatureFqnParserRuleCall_8_0_1; }
 
-		//"to: "
+		//'to: '
 		public Keyword getToKeyword_9() { return cToKeyword_9; }
 
 		//to=[provider::Feature|Fqn]
@@ -8631,13 +8771,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getToFeatureFqnParserRuleCall_10_0_1() { return cToFeatureFqnParserRuleCall_10_0_1; }
 
-		//("attribute constraints " "{" attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint* "}")?
+		//('attribute constraints ' '{' attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint* '}')?
 		public Group getGroup_11() { return cGroup_11; }
 
-		//"attribute constraints "
+		//'attribute constraints '
 		public Keyword getAttributeConstraintsKeyword_11_0() { return cAttributeConstraintsKeyword_11_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_11_1() { return cLeftCurlyBracketKeyword_11_1; }
 
 		//attributeConstraints+=AttributeConstraint
@@ -8652,13 +8792,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//AttributeConstraint
 		public RuleCall getAttributeConstraintsAttributeConstraintParserRuleCall_11_3_0() { return cAttributeConstraintsAttributeConstraintParserRuleCall_11_3_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_11_4() { return cRightCurlyBracketKeyword_11_4; }
 
-		//("scope from: " scopeFrom=Scope)?
+		//('scope from: ' scopeFrom=Scope)?
 		public Group getGroup_12() { return cGroup_12; }
 
-		//"scope from: "
+		//'scope from: '
 		public Keyword getScopeFromKeyword_12_0() { return cScopeFromKeyword_12_0; }
 
 		//scopeFrom=Scope
@@ -8667,10 +8807,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Scope
 		public RuleCall getScopeFromScopeParserRuleCall_12_1_0() { return cScopeFromScopeParserRuleCall_12_1_0; }
 
-		//("scope to: " scopeTo=Scope)?
+		//('scope to: ' scopeTo=Scope)?
 		public Group getGroup_13() { return cGroup_13; }
 
-		//"scope to: "
+		//'scope to: '
 		public Keyword getScopeToKeyword_13_0() { return cScopeToKeyword_13_0; }
 
 		//scopeTo=Scope
@@ -8679,10 +8819,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Scope
 		public RuleCall getScopeToScopeParserRuleCall_13_1_0() { return cScopeToScopeParserRuleCall_13_1_0; }
 
-		//("card from: " cardFrom=FeatCardinality)?
+		//('card from: ' cardFrom=FeatCardinality)?
 		public Group getGroup_14() { return cGroup_14; }
 
-		//"card from: "
+		//'card from: '
 		public Keyword getCardFromKeyword_14_0() { return cCardFromKeyword_14_0; }
 
 		//cardFrom=FeatCardinality
@@ -8691,10 +8831,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//FeatCardinality
 		public RuleCall getCardFromFeatCardinalityParserRuleCall_14_1_0() { return cCardFromFeatCardinalityParserRuleCall_14_1_0; }
 
-		//("card to: " cardTo=FeatCardinality)?
+		//('card to: ' cardTo=FeatCardinality)?
 		public Group getGroup_15() { return cGroup_15; }
 
-		//"card to: "
+		//'card to: '
 		public Keyword getCardToKeyword_15_0() { return cCardToKeyword_15_0; }
 
 		//cardTo=FeatCardinality
@@ -8703,12 +8843,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//FeatCardinality
 		public RuleCall getCardToFeatCardinalityParserRuleCall_15_1_0() { return cCardToFeatCardinalityParserRuleCall_15_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_16() { return cRightCurlyBracketKeyword_16; }
 	}
 
 	public class AttributeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Attribute");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Attribute");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cAttributeAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cAttributeKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -8730,19 +8870,21 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cValueTypeValueTypeFqnParserRuleCall_6_1_0_1 = (RuleCall)cValueTypeValueTypeCrossReference_6_1_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
-		//Attribute returns provider::Attribute:
-		//	{provider::Attribute} "attribute " name=ID "{" ("unit type: " unitType=UnitType)? ("value: " value=Value)?
-		//	("value type: " valueType=[type::ValueType|Fqn])? "}";
+		//Attribute provider::Attribute:
+		//	{provider::Attribute}
+		//	'attribute ' name=ID '{' ('unit type: ' unitType=UnitType)? ('value: ' value=Value)? ('value type: '
+		//	valueType=[type::ValueType|Fqn])?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//{provider::Attribute} "attribute " name=ID "{" ("unit type: " unitType=UnitType)? ("value: " value=Value)?
-		//("value type: " valueType=[type::ValueType|Fqn])? "}"
+		//{provider::Attribute} 'attribute ' name=ID '{' ('unit type: ' unitType=UnitType)? ('value: ' value=Value)?
+		//('value type: ' valueType=[type::ValueType|Fqn])? '}'
 		public Group getGroup() { return cGroup; }
 
 		//{provider::Attribute}
 		public Action getAttributeAction_0() { return cAttributeAction_0; }
 
-		//"attribute "
+		//'attribute '
 		public Keyword getAttributeKeyword_1() { return cAttributeKeyword_1; }
 
 		//name=ID
@@ -8751,13 +8893,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
-		//("unit type: " unitType=UnitType)?
+		//('unit type: ' unitType=UnitType)?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//"unit type: "
+		//'unit type: '
 		public Keyword getUnitTypeKeyword_4_0() { return cUnitTypeKeyword_4_0; }
 
 		//unitType=UnitType
@@ -8766,10 +8908,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//UnitType
 		public RuleCall getUnitTypeUnitTypeEnumRuleCall_4_1_0() { return cUnitTypeUnitTypeEnumRuleCall_4_1_0; }
 
-		//("value: " value=Value)?
+		//('value: ' value=Value)?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"value: "
+		//'value: '
 		public Keyword getValueKeyword_5_0() { return cValueKeyword_5_0; }
 
 		//value=Value
@@ -8778,10 +8920,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Value
 		public RuleCall getValueValueParserRuleCall_5_1_0() { return cValueValueParserRuleCall_5_1_0; }
 
-		//("value type: " valueType=[type::ValueType|Fqn])?
+		//('value type: ' valueType=[type::ValueType|Fqn])?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//"value type: "
+		//'value type: '
 		public Keyword getValueTypeKeyword_6_0() { return cValueTypeKeyword_6_0; }
 
 		//valueType=[type::ValueType|Fqn]
@@ -8793,12 +8935,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getValueTypeValueTypeFqnParserRuleCall_6_1_0_1() { return cValueTypeValueTypeFqnParserRuleCall_6_1_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class FeatCardinalityElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "FeatCardinality");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.FeatCardinality");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cFeatureCardinalityKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -8814,20 +8956,22 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cValueEIntParserRuleCall_6_1_0 = (RuleCall)cValueAssignment_6_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
-		//FeatCardinality returns provider::FeatCardinality:
-		//	"feature cardinality" "{" "cardinality: " cardinalityMin=EInt ".." cardinalityMax=EInt ("value: " value=EInt)? "}";
+		//FeatCardinality provider::FeatCardinality:
+		//	'feature cardinality' '{'
+		//	'cardinality: ' cardinalityMin=EInt '..' cardinalityMax=EInt ('value: ' value=EInt)?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"feature cardinality" "{" "cardinality: " cardinalityMin=EInt ".." cardinalityMax=EInt ("value: " value=EInt)? "}"
+		//'feature cardinality' '{' 'cardinality: ' cardinalityMin=EInt '..' cardinalityMax=EInt ('value: ' value=EInt)? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"feature cardinality"
+		//'feature cardinality'
 		public Keyword getFeatureCardinalityKeyword_0() { return cFeatureCardinalityKeyword_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 
-		//"cardinality: "
+		//'cardinality: '
 		public Keyword getCardinalityKeyword_2() { return cCardinalityKeyword_2; }
 
 		//cardinalityMin=EInt
@@ -8836,7 +8980,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInt
 		public RuleCall getCardinalityMinEIntParserRuleCall_3_0() { return cCardinalityMinEIntParserRuleCall_3_0; }
 
-		//".."
+		//'..'
 		public Keyword getFullStopFullStopKeyword_4() { return cFullStopFullStopKeyword_4; }
 
 		//cardinalityMax=EInt
@@ -8845,10 +8989,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInt
 		public RuleCall getCardinalityMaxEIntParserRuleCall_5_0() { return cCardinalityMaxEIntParserRuleCall_5_0; }
 
-		//("value: " value=EInt)?
+		//('value: ' value=EInt)?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//"value: "
+		//'value: '
 		public Keyword getValueKeyword_6_0() { return cValueKeyword_6_0; }
 
 		//value=EInt
@@ -8857,12 +9001,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInt
 		public RuleCall getValueEIntParserRuleCall_6_1_0() { return cValueEIntParserRuleCall_6_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class InstanceElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instance");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Instance");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cInstanceKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -8872,20 +9016,22 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cFeatureFeatureFqnParserRuleCall_3_0_1 = (RuleCall)cFeatureFeatureCrossReference_3_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//Instance returns provider::Instance:
-		//	"instance" "{" "feature: " feature=[provider::Feature|Fqn] "}";
+		//Instance provider::Instance:
+		//	'instance' '{'
+		//	'feature: ' feature=[provider::Feature|Fqn]
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"instance" "{" "feature: " feature=[provider::Feature|Fqn] "}"
+		//'instance' '{' 'feature: ' feature=[provider::Feature|Fqn] '}'
 		public Group getGroup() { return cGroup; }
 
-		//"instance"
+		//'instance'
 		public Keyword getInstanceKeyword_0() { return cInstanceKeyword_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 
-		//"feature: "
+		//'feature: '
 		public Keyword getFeatureKeyword_2() { return cFeatureKeyword_2; }
 
 		//feature=[provider::Feature|Fqn]
@@ -8897,32 +9043,33 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getFeatureFeatureFqnParserRuleCall_3_0_1() { return cFeatureFeatureFqnParserRuleCall_3_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 
 	public class ProductElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Product");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Product");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cProductAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cProductKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		
-		//Product returns provider::Product:
-		//	{provider::Product} "product";
+		//Product provider::Product:
+		//	{provider::Product}
+		//	'product'
 		@Override public ParserRule getRule() { return rule; }
 
-		//{provider::Product} "product"
+		//{provider::Product} 'product'
 		public Group getGroup() { return cGroup; }
 
 		//{provider::Product}
 		public Action getProductAction_0() { return cProductAction_0; }
 
-		//"product"
+		//'product'
 		public Keyword getProductKeyword_1() { return cProductKeyword_1; }
 	}
 
 	public class CloneElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Clone");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Clone");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cCloneAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cCloneKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -8943,19 +9090,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightSquareBracketKeyword_4_4 = (Keyword)cGroup_4.eContents().get(4);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//Clone returns provider::Clone:
-		//	{provider::Clone} "clone " name=ID "{" ("sub-clones " "[" subClones+=[provider::Clone|Fqn] (","
-		//	subClones+=[provider::Clone|Fqn])* "]")? "}";
+		//Clone provider::Clone:
+		//	{provider::Clone}
+		//	'clone ' name=ID '{' ('sub-clones ' '[' subClones+=[provider::Clone|Fqn] (',' subClones+=[provider::Clone|Fqn])* ']')?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//{provider::Clone} "clone " name=ID "{" ("sub-clones " "[" subClones+=[provider::Clone|Fqn] (","
-		//subClones+=[provider::Clone|Fqn])* "]")? "}"
+		//{provider::Clone} 'clone ' name=ID '{' ('sub-clones ' '[' subClones+=[provider::Clone|Fqn] (','
+		//subClones+=[provider::Clone|Fqn])* ']')? '}'
 		public Group getGroup() { return cGroup; }
 
 		//{provider::Clone}
 		public Action getCloneAction_0() { return cCloneAction_0; }
 
-		//"clone "
+		//'clone '
 		public Keyword getCloneKeyword_1() { return cCloneKeyword_1; }
 
 		//name=ID
@@ -8964,16 +9112,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
-		//("sub-clones " "[" subClones+=[provider::Clone|Fqn] ("," subClones+=[provider::Clone|Fqn])* "]")?
+		//('sub-clones ' '[' subClones+=[provider::Clone|Fqn] (',' subClones+=[provider::Clone|Fqn])* ']')?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//"sub-clones "
+		//'sub-clones '
 		public Keyword getSubClonesKeyword_4_0() { return cSubClonesKeyword_4_0; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_4_1() { return cLeftSquareBracketKeyword_4_1; }
 
 		//subClones+=[provider::Clone|Fqn]
@@ -8985,10 +9133,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSubClonesCloneFqnParserRuleCall_4_2_0_1() { return cSubClonesCloneFqnParserRuleCall_4_2_0_1; }
 
-		//("," subClones+=[provider::Clone|Fqn])*
+		//(',' subClones+=[provider::Clone|Fqn])*
 		public Group getGroup_4_3() { return cGroup_4_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_4_3_0() { return cCommaKeyword_4_3_0; }
 
 		//subClones+=[provider::Clone|Fqn]
@@ -9000,15 +9148,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSubClonesCloneFqnParserRuleCall_4_3_1_0_1() { return cSubClonesCloneFqnParserRuleCall_4_3_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_4_4() { return cRightSquareBracketKeyword_4_4; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class Alternative_ImplElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Alternative_Impl");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Alternative_Impl");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cAlternativeKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -9055,20 +9203,22 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		private final Keyword cRightCurlyBracketKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		
-		//Alternative_Impl returns provider::Alternative:
-		//	"alternative" name=ID "{" ("attributes " "{" attributes+=Attribute attributes+=Attribute* "}")? ("sub-features " "{"
-		//	subFeatures+=Feature subFeatures+=Feature* "}")? featureCardinality=FeatCardinality ("clones " "{" clones+=Clone (","
-		//	clones+=Clone)* "}")? groupCardinality=GroupCardinality? "variants " "{" variants+=Feature ("," variants+=Feature)*
-		//	"}" "}";
+		//Alternative_Impl provider::Alternative:
+		//	'alternative' name=ID '{' ('attributes ' '{' attributes+=Attribute attributes+=Attribute* '}')? ('sub-features ' '{'
+		//	subFeatures+=Feature subFeatures+=Feature* '}')?
+		//	featureCardinality=FeatCardinality ('clones ' '{' clones+=Clone (',' clones+=Clone)* '}')?
+		//	groupCardinality=GroupCardinality?
+		//	'variants ' '{' variants+=Feature (',' variants+=Feature)* '}'
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"alternative" name=ID "{" ("attributes " "{" attributes+=Attribute attributes+=Attribute* "}")? ("sub-features " "{"
-		//subFeatures+=Feature subFeatures+=Feature* "}")? featureCardinality=FeatCardinality ("clones " "{" clones+=Clone (","
-		//clones+=Clone)* "}")? groupCardinality=GroupCardinality? "variants " "{" variants+=Feature ("," variants+=Feature)*
-		//"}" "}"
+		//'alternative' name=ID '{' ('attributes ' '{' attributes+=Attribute attributes+=Attribute* '}')? ('sub-features ' '{'
+		//subFeatures+=Feature subFeatures+=Feature* '}')? featureCardinality=FeatCardinality ('clones ' '{' clones+=Clone (','
+		//clones+=Clone)* '}')? groupCardinality=GroupCardinality? 'variants ' '{' variants+=Feature (',' variants+=Feature)* '}'
+		//'}'
 		public Group getGroup() { return cGroup; }
 
-		//"alternative"
+		//'alternative'
 		public Keyword getAlternativeKeyword_0() { return cAlternativeKeyword_0; }
 
 		//name=ID
@@ -9077,16 +9227,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("attributes " "{" attributes+=Attribute attributes+=Attribute* "}")?
+		//('attributes ' '{' attributes+=Attribute attributes+=Attribute* '}')?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"attributes "
+		//'attributes '
 		public Keyword getAttributesKeyword_3_0() { return cAttributesKeyword_3_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3_1() { return cLeftCurlyBracketKeyword_3_1; }
 
 		//attributes+=Attribute
@@ -9101,16 +9251,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Attribute
 		public RuleCall getAttributesAttributeParserRuleCall_3_3_0() { return cAttributesAttributeParserRuleCall_3_3_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_3_4() { return cRightCurlyBracketKeyword_3_4; }
 
-		//("sub-features " "{" subFeatures+=Feature subFeatures+=Feature* "}")?
+		//('sub-features ' '{' subFeatures+=Feature subFeatures+=Feature* '}')?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//"sub-features "
+		//'sub-features '
 		public Keyword getSubFeaturesKeyword_4_0() { return cSubFeaturesKeyword_4_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_4_1() { return cLeftCurlyBracketKeyword_4_1; }
 
 		//subFeatures+=Feature
@@ -9125,7 +9275,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Feature
 		public RuleCall getSubFeaturesFeatureParserRuleCall_4_3_0() { return cSubFeaturesFeatureParserRuleCall_4_3_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_4_4() { return cRightCurlyBracketKeyword_4_4; }
 
 		//featureCardinality=FeatCardinality
@@ -9134,13 +9284,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//FeatCardinality
 		public RuleCall getFeatureCardinalityFeatCardinalityParserRuleCall_5_0() { return cFeatureCardinalityFeatCardinalityParserRuleCall_5_0; }
 
-		//("clones " "{" clones+=Clone ("," clones+=Clone)* "}")?
+		//('clones ' '{' clones+=Clone (',' clones+=Clone)* '}')?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//"clones "
+		//'clones '
 		public Keyword getClonesKeyword_6_0() { return cClonesKeyword_6_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_6_1() { return cLeftCurlyBracketKeyword_6_1; }
 
 		//clones+=Clone
@@ -9149,10 +9299,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Clone
 		public RuleCall getClonesCloneParserRuleCall_6_2_0() { return cClonesCloneParserRuleCall_6_2_0; }
 
-		//("," clones+=Clone)*
+		//(',' clones+=Clone)*
 		public Group getGroup_6_3() { return cGroup_6_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_6_3_0() { return cCommaKeyword_6_3_0; }
 
 		//clones+=Clone
@@ -9161,7 +9311,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Clone
 		public RuleCall getClonesCloneParserRuleCall_6_3_1_0() { return cClonesCloneParserRuleCall_6_3_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_6_4() { return cRightCurlyBracketKeyword_6_4; }
 
 		//groupCardinality=GroupCardinality?
@@ -9170,10 +9320,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//GroupCardinality
 		public RuleCall getGroupCardinalityGroupCardinalityParserRuleCall_7_0() { return cGroupCardinalityGroupCardinalityParserRuleCall_7_0; }
 
-		//"variants "
+		//'variants '
 		public Keyword getVariantsKeyword_8() { return cVariantsKeyword_8; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_9() { return cLeftCurlyBracketKeyword_9; }
 
 		//variants+=Feature
@@ -9182,10 +9332,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Feature
 		public RuleCall getVariantsFeatureParserRuleCall_10_0() { return cVariantsFeatureParserRuleCall_10_0; }
 
-		//("," variants+=Feature)*
+		//(',' variants+=Feature)*
 		public Group getGroup_11() { return cGroup_11; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_11_0() { return cCommaKeyword_11_0; }
 
 		//variants+=Feature
@@ -9194,15 +9344,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Feature
 		public RuleCall getVariantsFeatureParserRuleCall_11_1_0() { return cVariantsFeatureParserRuleCall_11_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_13() { return cRightCurlyBracketKeyword_13; }
 	}
 
 	public class ExclusiveElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Exclusive");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Exclusive");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cExclusiveKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -9247,19 +9397,21 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		private final Keyword cRightCurlyBracketKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		
-		//Exclusive returns provider::Exclusive:
-		//	"exclusive " name=ID "{" ("attributes " "{" attributes+=Attribute attributes+=Attribute* "}")? ("sub-features " "{"
-		//	subFeatures+=Feature subFeatures+=Feature* "}")? featureCardinality=FeatCardinality ("clones " "{" clones+=Clone (","
-		//	clones+=Clone)* "}")? groupCardinality=GroupCardinality? "variants " "{" variants+=Feature variants+=Feature* "}"
-		//	"}";
+		//Exclusive provider::Exclusive:
+		//	'exclusive ' name=ID '{' ('attributes ' '{' attributes+=Attribute attributes+=Attribute* '}')? ('sub-features ' '{'
+		//	subFeatures+=Feature subFeatures+=Feature* '}')?
+		//	featureCardinality=FeatCardinality ('clones ' '{' clones+=Clone (',' clones+=Clone)* '}')?
+		//	groupCardinality=GroupCardinality?
+		//	'variants ' '{' variants+=Feature variants+=Feature* '}'
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"exclusive " name=ID "{" ("attributes " "{" attributes+=Attribute attributes+=Attribute* "}")? ("sub-features " "{"
-		//subFeatures+=Feature subFeatures+=Feature* "}")? featureCardinality=FeatCardinality ("clones " "{" clones+=Clone (","
-		//clones+=Clone)* "}")? groupCardinality=GroupCardinality? "variants " "{" variants+=Feature variants+=Feature* "}" "}"
+		//'exclusive ' name=ID '{' ('attributes ' '{' attributes+=Attribute attributes+=Attribute* '}')? ('sub-features ' '{'
+		//subFeatures+=Feature subFeatures+=Feature* '}')? featureCardinality=FeatCardinality ('clones ' '{' clones+=Clone (','
+		//clones+=Clone)* '}')? groupCardinality=GroupCardinality? 'variants ' '{' variants+=Feature variants+=Feature* '}' '}'
 		public Group getGroup() { return cGroup; }
 
-		//"exclusive "
+		//'exclusive '
 		public Keyword getExclusiveKeyword_0() { return cExclusiveKeyword_0; }
 
 		//name=ID
@@ -9268,16 +9420,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("attributes " "{" attributes+=Attribute attributes+=Attribute* "}")?
+		//('attributes ' '{' attributes+=Attribute attributes+=Attribute* '}')?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"attributes "
+		//'attributes '
 		public Keyword getAttributesKeyword_3_0() { return cAttributesKeyword_3_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3_1() { return cLeftCurlyBracketKeyword_3_1; }
 
 		//attributes+=Attribute
@@ -9292,16 +9444,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Attribute
 		public RuleCall getAttributesAttributeParserRuleCall_3_3_0() { return cAttributesAttributeParserRuleCall_3_3_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_3_4() { return cRightCurlyBracketKeyword_3_4; }
 
-		//("sub-features " "{" subFeatures+=Feature subFeatures+=Feature* "}")?
+		//('sub-features ' '{' subFeatures+=Feature subFeatures+=Feature* '}')?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//"sub-features "
+		//'sub-features '
 		public Keyword getSubFeaturesKeyword_4_0() { return cSubFeaturesKeyword_4_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_4_1() { return cLeftCurlyBracketKeyword_4_1; }
 
 		//subFeatures+=Feature
@@ -9316,7 +9468,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Feature
 		public RuleCall getSubFeaturesFeatureParserRuleCall_4_3_0() { return cSubFeaturesFeatureParserRuleCall_4_3_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_4_4() { return cRightCurlyBracketKeyword_4_4; }
 
 		//featureCardinality=FeatCardinality
@@ -9325,13 +9477,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//FeatCardinality
 		public RuleCall getFeatureCardinalityFeatCardinalityParserRuleCall_5_0() { return cFeatureCardinalityFeatCardinalityParserRuleCall_5_0; }
 
-		//("clones " "{" clones+=Clone ("," clones+=Clone)* "}")?
+		//('clones ' '{' clones+=Clone (',' clones+=Clone)* '}')?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//"clones "
+		//'clones '
 		public Keyword getClonesKeyword_6_0() { return cClonesKeyword_6_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_6_1() { return cLeftCurlyBracketKeyword_6_1; }
 
 		//clones+=Clone
@@ -9340,10 +9492,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Clone
 		public RuleCall getClonesCloneParserRuleCall_6_2_0() { return cClonesCloneParserRuleCall_6_2_0; }
 
-		//("," clones+=Clone)*
+		//(',' clones+=Clone)*
 		public Group getGroup_6_3() { return cGroup_6_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_6_3_0() { return cCommaKeyword_6_3_0; }
 
 		//clones+=Clone
@@ -9352,7 +9504,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Clone
 		public RuleCall getClonesCloneParserRuleCall_6_3_1_0() { return cClonesCloneParserRuleCall_6_3_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_6_4() { return cRightCurlyBracketKeyword_6_4; }
 
 		//groupCardinality=GroupCardinality?
@@ -9361,10 +9513,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//GroupCardinality
 		public RuleCall getGroupCardinalityGroupCardinalityParserRuleCall_7_0() { return cGroupCardinalityGroupCardinalityParserRuleCall_7_0; }
 
-		//"variants "
+		//'variants '
 		public Keyword getVariantsKeyword_8() { return cVariantsKeyword_8; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_9() { return cLeftCurlyBracketKeyword_9; }
 
 		//variants+=Feature
@@ -9379,15 +9531,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Feature
 		public RuleCall getVariantsFeatureParserRuleCall_11_0() { return cVariantsFeatureParserRuleCall_11_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_13() { return cRightCurlyBracketKeyword_13; }
 	}
 
 	public class GroupCardinalityElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "GroupCardinality");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.GroupCardinality");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cGroupCardinalityKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -9399,20 +9551,22 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCardinalityMaxEIntParserRuleCall_5_0 = (RuleCall)cCardinalityMaxAssignment_5.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
-		//GroupCardinality returns provider::GroupCardinality:
-		//	"group cardinality" "{" "cardinality: " cardinalityMin=EInt ".." cardinalityMax=EInt "}";
+		//GroupCardinality provider::GroupCardinality:
+		//	'group cardinality' '{'
+		//	'cardinality: ' cardinalityMin=EInt '..' cardinalityMax=EInt
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"group cardinality" "{" "cardinality: " cardinalityMin=EInt ".." cardinalityMax=EInt "}"
+		//'group cardinality' '{' 'cardinality: ' cardinalityMin=EInt '..' cardinalityMax=EInt '}'
 		public Group getGroup() { return cGroup; }
 
-		//"group cardinality"
+		//'group cardinality'
 		public Keyword getGroupCardinalityKeyword_0() { return cGroupCardinalityKeyword_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 
-		//"cardinality: "
+		//'cardinality: '
 		public Keyword getCardinalityKeyword_2() { return cCardinalityKeyword_2; }
 
 		//cardinalityMin=EInt
@@ -9421,7 +9575,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInt
 		public RuleCall getCardinalityMinEIntParserRuleCall_3_0() { return cCardinalityMinEIntParserRuleCall_3_0; }
 
-		//".."
+		//'..'
 		public Keyword getFullStopFullStopKeyword_4() { return cFullStopFullStopKeyword_4; }
 
 		//cardinalityMax=EInt
@@ -9430,12 +9584,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInt
 		public RuleCall getCardinalityMaxEIntParserRuleCall_5_0() { return cCardinalityMaxEIntParserRuleCall_5_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class RequirementModelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RequirementModel");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.RequirementModel");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRequirementModelKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -9468,22 +9622,23 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRequirementsRequirementGroupParserRuleCall_3_11_0 = (RuleCall)cRequirementsAssignment_3_11.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		/// * Requirements model * / RequirementModel returns requirement::RequirementModel:
-		//	"requirement model " name=ID "{" (requirements+=LocationRequirement | requirements+=QuantitativeHardwareRequirement |
+		/// * Requirements model * / RequirementModel requirement::RequirementModel:
+		//	'requirement model ' name=ID '{' (requirements+=LocationRequirement | requirements+=QuantitativeHardwareRequirement |
 		//	requirements+=QualitativeHardwareRequirement | requirements+=ImageRequirement | requirements+=OSRequirement |
 		//	requirements+=HorizontalScaleRequirement | requirements+=VerticalScaleRequirement | requirements+=SecurityRequirement
 		//	| requirements+=ServiceLevelObjective | requirements+=OptimisationRequirement | requirements+=ProviderRequirement |
-		//	requirements+=RequirementGroup)* "}";
+		//	requirements+=RequirementGroup)*
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"requirement model " name=ID "{" (requirements+=LocationRequirement | requirements+=QuantitativeHardwareRequirement |
+		//'requirement model ' name=ID '{' (requirements+=LocationRequirement | requirements+=QuantitativeHardwareRequirement |
 		//requirements+=QualitativeHardwareRequirement | requirements+=ImageRequirement | requirements+=OSRequirement |
-		//requirements+=HorizontalScaleRequirement | requirements+=VerticalScaleRequirement | requirements+=SecurityRequirement
-		//| requirements+=ServiceLevelObjective | requirements+=OptimisationRequirement | requirements+=ProviderRequirement |
-		//requirements+=RequirementGroup)* "}"
+		//requirements+=HorizontalScaleRequirement | requirements+=VerticalScaleRequirement | requirements+=SecurityRequirement |
+		//requirements+=ServiceLevelObjective | requirements+=OptimisationRequirement | requirements+=ProviderRequirement |
+		//requirements+=RequirementGroup)* '}'
 		public Group getGroup() { return cGroup; }
 
-		//"requirement model "
+		//'requirement model '
 		public Keyword getRequirementModelKeyword_0() { return cRequirementModelKeyword_0; }
 
 		//name=ID
@@ -9492,13 +9647,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
 		//(requirements+=LocationRequirement | requirements+=QuantitativeHardwareRequirement |
 		//requirements+=QualitativeHardwareRequirement | requirements+=ImageRequirement | requirements+=OSRequirement |
-		//requirements+=HorizontalScaleRequirement | requirements+=VerticalScaleRequirement | requirements+=SecurityRequirement
-		//| requirements+=ServiceLevelObjective | requirements+=OptimisationRequirement | requirements+=ProviderRequirement |
+		//requirements+=HorizontalScaleRequirement | requirements+=VerticalScaleRequirement | requirements+=SecurityRequirement |
+		//requirements+=ServiceLevelObjective | requirements+=OptimisationRequirement | requirements+=ProviderRequirement |
 		//requirements+=RequirementGroup)*
 		public Alternatives getAlternatives_3() { return cAlternatives_3; }
 
@@ -9574,12 +9729,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//RequirementGroup
 		public RuleCall getRequirementsRequirementGroupParserRuleCall_3_11_0() { return cRequirementsRequirementGroupParserRuleCall_3_11_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 
 	public class RequirementGroupElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RequirementGroup");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.RequirementGroup");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cGroupKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -9613,18 +9768,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightSquareBracketKeyword_10_4 = (Keyword)cGroup_10.eContents().get(4);
 		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
-		//RequirementGroup returns requirement::RequirementGroup:
-		//	"group " name=ID "{" "operator: " requirementOperator=RequirementOperatorType "requirements " "["
-		//	requirements+=[requirement::Requirement|Fqn] ("," requirements+=[requirement::Requirement|Fqn])* "]" ("application "
-		//	"[" application+=[camel::Application|Fqn] ("," application+=[camel::Application|Fqn])* "]")? "}";
+		//RequirementGroup requirement::RequirementGroup:
+		//	'group ' name=ID '{'
+		//	'operator: ' requirementOperator=RequirementOperatorType
+		//	'requirements ' '[' requirements+=[requirement::Requirement|Fqn] (',' requirements+=[requirement::Requirement|Fqn])*
+		//	']' ('application ' '[' application+=[camel::Application|Fqn] (',' application+=[camel::Application|Fqn])* ']')?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"group " name=ID "{" "operator: " requirementOperator=RequirementOperatorType "requirements " "["
-		//requirements+=[requirement::Requirement|Fqn] ("," requirements+=[requirement::Requirement|Fqn])* "]" ("application "
-		//"[" application+=[camel::Application|Fqn] ("," application+=[camel::Application|Fqn])* "]")? "}"
+		//'group ' name=ID '{' 'operator: ' requirementOperator=RequirementOperatorType 'requirements ' '['
+		//requirements+=[requirement::Requirement|Fqn] (',' requirements+=[requirement::Requirement|Fqn])* ']' ('application '
+		//'[' application+=[camel::Application|Fqn] (',' application+=[camel::Application|Fqn])* ']')? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"group "
+		//'group '
 		public Keyword getGroupKeyword_0() { return cGroupKeyword_0; }
 
 		//name=ID
@@ -9633,10 +9790,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"operator: "
+		//'operator: '
 		public Keyword getOperatorKeyword_3() { return cOperatorKeyword_3; }
 
 		//requirementOperator=RequirementOperatorType
@@ -9645,10 +9802,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//RequirementOperatorType
 		public RuleCall getRequirementOperatorRequirementOperatorTypeEnumRuleCall_4_0() { return cRequirementOperatorRequirementOperatorTypeEnumRuleCall_4_0; }
 
-		//"requirements "
+		//'requirements '
 		public Keyword getRequirementsKeyword_5() { return cRequirementsKeyword_5; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_6() { return cLeftSquareBracketKeyword_6; }
 
 		//requirements+=[requirement::Requirement|Fqn]
@@ -9660,10 +9817,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getRequirementsRequirementFqnParserRuleCall_7_0_1() { return cRequirementsRequirementFqnParserRuleCall_7_0_1; }
 
-		//("," requirements+=[requirement::Requirement|Fqn])*
+		//(',' requirements+=[requirement::Requirement|Fqn])*
 		public Group getGroup_8() { return cGroup_8; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_8_0() { return cCommaKeyword_8_0; }
 
 		//requirements+=[requirement::Requirement|Fqn]
@@ -9675,16 +9832,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getRequirementsRequirementFqnParserRuleCall_8_1_0_1() { return cRequirementsRequirementFqnParserRuleCall_8_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_9() { return cRightSquareBracketKeyword_9; }
 
-		//("application " "[" application+=[camel::Application|Fqn] ("," application+=[camel::Application|Fqn])* "]")?
+		//('application ' '[' application+=[camel::Application|Fqn] (',' application+=[camel::Application|Fqn])* ']')?
 		public Group getGroup_10() { return cGroup_10; }
 
-		//"application "
+		//'application '
 		public Keyword getApplicationKeyword_10_0() { return cApplicationKeyword_10_0; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_10_1() { return cLeftSquareBracketKeyword_10_1; }
 
 		//application+=[camel::Application|Fqn]
@@ -9696,10 +9853,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getApplicationApplicationFqnParserRuleCall_10_2_0_1() { return cApplicationApplicationFqnParserRuleCall_10_2_0_1; }
 
-		//("," application+=[camel::Application|Fqn])*
+		//(',' application+=[camel::Application|Fqn])*
 		public Group getGroup_10_3() { return cGroup_10_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_10_3_0() { return cCommaKeyword_10_3_0; }
 
 		//application+=[camel::Application|Fqn]
@@ -9711,15 +9868,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getApplicationApplicationFqnParserRuleCall_10_3_1_0_1() { return cApplicationApplicationFqnParserRuleCall_10_3_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_10_4() { return cRightSquareBracketKeyword_10_4; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
 	}
 
 	public class RequirementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Requirement");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Requirement");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cLocationRequirementParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cHorizontalScaleRequirementParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
@@ -9729,9 +9886,9 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cOptimisationRequirementParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		private final RuleCall cRequirementGroupParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
 		
-		//Requirement returns requirement::Requirement:
+		//Requirement requirement::Requirement:
 		//	LocationRequirement | HorizontalScaleRequirement | VerticalScaleRequirement | SecurityRequirement |
-		//	ServiceLevelObjective | OptimisationRequirement | RequirementGroup;
+		//	ServiceLevelObjective | OptimisationRequirement | RequirementGroup
 		@Override public ParserRule getRule() { return rule; }
 
 		//LocationRequirement | HorizontalScaleRequirement | VerticalScaleRequirement | SecurityRequirement |
@@ -9761,7 +9918,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class ServiceLevelObjectiveElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ServiceLevelObjective");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ServiceLevelObjective");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cSloKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -9773,14 +9930,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCustomServiceLevelConditionFqnParserRuleCall_4_0_1 = (RuleCall)cCustomServiceLevelConditionCrossReference_4_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//ServiceLevelObjective returns requirement::ServiceLevelObjective:
-		//	"slo " name=ID "{" "service level: " customServiceLevel=[metric::Condition|Fqn] "}";
+		//ServiceLevelObjective requirement::ServiceLevelObjective:
+		//	'slo ' name=ID '{'
+		//	'service level: ' customServiceLevel=[metric::Condition|Fqn]
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"slo " name=ID "{" "service level: " customServiceLevel=[metric::Condition|Fqn] "}"
+		//'slo ' name=ID '{' 'service level: ' customServiceLevel=[metric::Condition|Fqn] '}'
 		public Group getGroup() { return cGroup; }
 
-		//"slo "
+		//'slo '
 		public Keyword getSloKeyword_0() { return cSloKeyword_0; }
 
 		//name=ID
@@ -9789,10 +9948,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"service level: "
+		//'service level: '
 		public Keyword getServiceLevelKeyword_3() { return cServiceLevelKeyword_3; }
 
 		//customServiceLevel=[metric::Condition|Fqn]
@@ -9804,12 +9963,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getCustomServiceLevelConditionFqnParserRuleCall_4_0_1() { return cCustomServiceLevelConditionFqnParserRuleCall_4_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class ProviderRequirementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ProviderRequirement");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ProviderRequirement");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cProviderRequirementKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -9828,16 +9987,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightSquareBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
-		//ProviderRequirement returns requirement::ProviderRequirement:
-		//	"provider requirement " name=ID "{" "providers: " "[" providers+=[organisation::CloudProvider|Fqn] (","
-		//	providers+=[organisation::CloudProvider|Fqn])* "]" "}";
+		//ProviderRequirement requirement::ProviderRequirement:
+		//	'provider requirement ' name=ID '{'
+		//	'providers: ' '[' providers+=[organisation::CloudProvider|Fqn] (',' providers+=[organisation::CloudProvider|Fqn])* ']'
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"provider requirement " name=ID "{" "providers: " "[" providers+=[organisation::CloudProvider|Fqn] (","
-		//providers+=[organisation::CloudProvider|Fqn])* "]" "}"
+		//'provider requirement ' name=ID '{' 'providers: ' '[' providers+=[organisation::CloudProvider|Fqn] (','
+		//providers+=[organisation::CloudProvider|Fqn])* ']' '}'
 		public Group getGroup() { return cGroup; }
 
-		//"provider requirement "
+		//'provider requirement '
 		public Keyword getProviderRequirementKeyword_0() { return cProviderRequirementKeyword_0; }
 
 		//name=ID
@@ -9846,13 +10006,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"providers: "
+		//'providers: '
 		public Keyword getProvidersKeyword_3() { return cProvidersKeyword_3; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_4() { return cLeftSquareBracketKeyword_4; }
 
 		//providers+=[organisation::CloudProvider|Fqn]
@@ -9864,10 +10024,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getProvidersCloudProviderFqnParserRuleCall_5_0_1() { return cProvidersCloudProviderFqnParserRuleCall_5_0_1; }
 
-		//("," providers+=[organisation::CloudProvider|Fqn])*
+		//(',' providers+=[organisation::CloudProvider|Fqn])*
 		public Group getGroup_6() { return cGroup_6; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_6_0() { return cCommaKeyword_6_0; }
 
 		//providers+=[organisation::CloudProvider|Fqn]
@@ -9879,15 +10039,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getProvidersCloudProviderFqnParserRuleCall_6_1_0_1() { return cProvidersCloudProviderFqnParserRuleCall_6_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_7() { return cRightSquareBracketKeyword_7; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 	}
 
 	public class OptimisationRequirementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "OptimisationRequirement");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.OptimisationRequirement");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cOptimisationRequirementKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -9927,20 +10087,22 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cPriorityEDoubleParserRuleCall_10_1_0 = (RuleCall)cPriorityAssignment_10_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
-		//OptimisationRequirement returns requirement::OptimisationRequirement:
-		//	"optimisation requirement " name=ID "{" "function: " optimisationFunction=OptimisationFunctionType ("metric: "
-		//	metric=[metric::Metric|Fqn])? ("metric context: " metricContext=[metric::MetricContext|Fqn])? ("property: "
-		//	property=[metric::Property|Fqn])? ("application: " application=[camel::Application|Fqn])? ("component: "
-		//	component=[deployment::Component|Fqn])? ("priority: " priority=EDouble)? "}";
+		//OptimisationRequirement requirement::OptimisationRequirement:
+		//	'optimisation requirement ' name=ID '{'
+		//	'function: ' optimisationFunction=OptimisationFunctionType ('metric: ' metric=[metric::Metric|Fqn])?
+		//	('metric context: ' metricContext=[metric::MetricContext|Fqn])? ('property: ' property=[metric::Property|Fqn])?
+		//	('application: ' application=[camel::Application|Fqn])? ('component: ' component=[deployment::Component|Fqn])?
+		//	('priority: ' priority=EDouble)?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"optimisation requirement " name=ID "{" "function: " optimisationFunction=OptimisationFunctionType ("metric: "
-		//metric=[metric::Metric|Fqn])? ("metric context: " metricContext=[metric::MetricContext|Fqn])? ("property: "
-		//property=[metric::Property|Fqn])? ("application: " application=[camel::Application|Fqn])? ("component: "
-		//component=[deployment::Component|Fqn])? ("priority: " priority=EDouble)? "}"
+		//'optimisation requirement ' name=ID '{' 'function: ' optimisationFunction=OptimisationFunctionType ('metric: '
+		//metric=[metric::Metric|Fqn])? ('metric context: ' metricContext=[metric::MetricContext|Fqn])? ('property: '
+		//property=[metric::Property|Fqn])? ('application: ' application=[camel::Application|Fqn])? ('component: '
+		//component=[deployment::Component|Fqn])? ('priority: ' priority=EDouble)? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"optimisation requirement "
+		//'optimisation requirement '
 		public Keyword getOptimisationRequirementKeyword_0() { return cOptimisationRequirementKeyword_0; }
 
 		//name=ID
@@ -9949,10 +10111,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"function: "
+		//'function: '
 		public Keyword getFunctionKeyword_3() { return cFunctionKeyword_3; }
 
 		//optimisationFunction=OptimisationFunctionType
@@ -9961,10 +10123,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//OptimisationFunctionType
 		public RuleCall getOptimisationFunctionOptimisationFunctionTypeEnumRuleCall_4_0() { return cOptimisationFunctionOptimisationFunctionTypeEnumRuleCall_4_0; }
 
-		//("metric: " metric=[metric::Metric|Fqn])?
+		//('metric: ' metric=[metric::Metric|Fqn])?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"metric: "
+		//'metric: '
 		public Keyword getMetricKeyword_5_0() { return cMetricKeyword_5_0; }
 
 		//metric=[metric::Metric|Fqn]
@@ -9976,10 +10138,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getMetricMetricFqnParserRuleCall_5_1_0_1() { return cMetricMetricFqnParserRuleCall_5_1_0_1; }
 
-		//("metric context: " metricContext=[metric::MetricContext|Fqn])?
+		//('metric context: ' metricContext=[metric::MetricContext|Fqn])?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//"metric context: "
+		//'metric context: '
 		public Keyword getMetricContextKeyword_6_0() { return cMetricContextKeyword_6_0; }
 
 		//metricContext=[metric::MetricContext|Fqn]
@@ -9991,10 +10153,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getMetricContextMetricContextFqnParserRuleCall_6_1_0_1() { return cMetricContextMetricContextFqnParserRuleCall_6_1_0_1; }
 
-		//("property: " property=[metric::Property|Fqn])?
+		//('property: ' property=[metric::Property|Fqn])?
 		public Group getGroup_7() { return cGroup_7; }
 
-		//"property: "
+		//'property: '
 		public Keyword getPropertyKeyword_7_0() { return cPropertyKeyword_7_0; }
 
 		//property=[metric::Property|Fqn]
@@ -10006,10 +10168,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getPropertyPropertyFqnParserRuleCall_7_1_0_1() { return cPropertyPropertyFqnParserRuleCall_7_1_0_1; }
 
-		//("application: " application=[camel::Application|Fqn])?
+		//('application: ' application=[camel::Application|Fqn])?
 		public Group getGroup_8() { return cGroup_8; }
 
-		//"application: "
+		//'application: '
 		public Keyword getApplicationKeyword_8_0() { return cApplicationKeyword_8_0; }
 
 		//application=[camel::Application|Fqn]
@@ -10021,10 +10183,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getApplicationApplicationFqnParserRuleCall_8_1_0_1() { return cApplicationApplicationFqnParserRuleCall_8_1_0_1; }
 
-		//("component: " component=[deployment::Component|Fqn])?
+		//('component: ' component=[deployment::Component|Fqn])?
 		public Group getGroup_9() { return cGroup_9; }
 
-		//"component: "
+		//'component: '
 		public Keyword getComponentKeyword_9_0() { return cComponentKeyword_9_0; }
 
 		//component=[deployment::Component|Fqn]
@@ -10036,10 +10198,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getComponentComponentFqnParserRuleCall_9_1_0_1() { return cComponentComponentFqnParserRuleCall_9_1_0_1; }
 
-		//("priority: " priority=EDouble)?
+		//('priority: ' priority=EDouble)?
 		public Group getGroup_10() { return cGroup_10; }
 
-		//"priority: "
+		//'priority: '
 		public Keyword getPriorityKeyword_10_0() { return cPriorityKeyword_10_0; }
 
 		//priority=EDouble
@@ -10048,12 +10210,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDouble
 		public RuleCall getPriorityEDoubleParserRuleCall_10_1_0() { return cPriorityEDoubleParserRuleCall_10_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
 	}
 
 	public class OSRequirementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "OSRequirement");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.OSRequirement");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cOsKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -10066,14 +10228,14 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cIs64os64osKeyword_5_0 = (Keyword)cIs64osAssignment_5.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
-		//OSRequirement returns requirement::OSRequirement:
-		//	"os " name=ID "{" "os: " os=EString is64os?="64os"? "}";
+		//OSRequirement requirement::OSRequirement:
+		//	'os ' name=ID '{' 'os: ' os=EString is64os?='64os'? '}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"os " name=ID "{" "os: " os=EString is64os?="64os"? "}"
+		//'os ' name=ID '{' 'os: ' os=EString is64os?='64os'? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"os "
+		//'os '
 		public Keyword getOsKeyword_0() { return cOsKeyword_0; }
 
 		//name=ID
@@ -10082,10 +10244,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"os: "
+		//'os: '
 		public Keyword getOsKeyword_3() { return cOsKeyword_3; }
 
 		//os=EString
@@ -10094,18 +10256,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getOsEStringParserRuleCall_4_0() { return cOsEStringParserRuleCall_4_0; }
 
-		//is64os?="64os"?
+		//is64os?='64os'?
 		public Assignment getIs64osAssignment_5() { return cIs64osAssignment_5; }
 
-		//"64os"
+		//'64os'
 		public Keyword getIs64os64osKeyword_5_0() { return cIs64os64osKeyword_5_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class ImageRequirementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ImageRequirement");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ImageRequirement");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cImageKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -10116,14 +10278,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cImageIdEStringParserRuleCall_4_0 = (RuleCall)cImageIdAssignment_4.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//ImageRequirement returns requirement::ImageRequirement:
-		//	"image " name=ID "{" "imageID: " imageId=EString "}";
+		//ImageRequirement requirement::ImageRequirement:
+		//	'image ' name=ID '{'
+		//	'imageID: ' imageId=EString
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"image " name=ID "{" "imageID: " imageId=EString "}"
+		//'image ' name=ID '{' 'imageID: ' imageId=EString '}'
 		public Group getGroup() { return cGroup; }
 
-		//"image "
+		//'image '
 		public Keyword getImageKeyword_0() { return cImageKeyword_0; }
 
 		//name=ID
@@ -10132,10 +10296,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"imageID: "
+		//'imageID: '
 		public Keyword getImageIDKeyword_3() { return cImageIDKeyword_3; }
 
 		//imageId=EString
@@ -10144,32 +10308,32 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getImageIdEStringParserRuleCall_4_0() { return cImageIdEStringParserRuleCall_4_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class DoubleElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Double");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Double");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cHyphenMinusKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		private final Keyword cFullStopKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final RuleCall cINTTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
 		
-		//Double returns ecore::EDouble:
-		//	"-"? INT? "." INT;
+		//Double ecore::EDouble:
+		//	'-'? INT? '.' INT
 		@Override public ParserRule getRule() { return rule; }
 
-		//"-"? INT? "." INT
+		//'-'? INT? '.' INT
 		public Group getGroup() { return cGroup; }
 
-		//"-"?
+		//'-'?
 		public Keyword getHyphenMinusKeyword_0() { return cHyphenMinusKeyword_0; }
 
 		//INT?
 		public RuleCall getINTTerminalRuleCall_1() { return cINTTerminalRuleCall_1; }
 
-		//"."
+		//'.'
 		public Keyword getFullStopKeyword_2() { return cFullStopKeyword_2; }
 
 		//INT
@@ -10177,7 +10341,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class QualitativeHardwareRequirementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "QualitativeHardwareRequirement");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.QualitativeHardwareRequirement");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cQualitativeKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cHardwareKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -10192,17 +10356,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cMaxBenchmarkDoubleParserRuleCall_7_0 = (RuleCall)cMaxBenchmarkAssignment_7.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
-		//QualitativeHardwareRequirement returns requirement::QualitativeHardwareRequirement:
-		//	"qualitative" "hardware " name=ID "{" "benchmark: " minBenchmark=Double ".." maxBenchmark=Double? "}";
+		//QualitativeHardwareRequirement requirement::QualitativeHardwareRequirement:
+		//	'qualitative' 'hardware ' name=ID '{'
+		//	'benchmark: ' minBenchmark=Double '..' maxBenchmark=Double?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"qualitative" "hardware " name=ID "{" "benchmark: " minBenchmark=Double ".." maxBenchmark=Double? "}"
+		//'qualitative' 'hardware ' name=ID '{' 'benchmark: ' minBenchmark=Double '..' maxBenchmark=Double? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"qualitative"
+		//'qualitative'
 		public Keyword getQualitativeKeyword_0() { return cQualitativeKeyword_0; }
 
-		//"hardware "
+		//'hardware '
 		public Keyword getHardwareKeyword_1() { return cHardwareKeyword_1; }
 
 		//name=ID
@@ -10211,10 +10377,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
-		//"benchmark: "
+		//'benchmark: '
 		public Keyword getBenchmarkKeyword_4() { return cBenchmarkKeyword_4; }
 
 		//minBenchmark=Double
@@ -10223,7 +10389,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Double
 		public RuleCall getMinBenchmarkDoubleParserRuleCall_5_0() { return cMinBenchmarkDoubleParserRuleCall_5_0; }
 
-		//".."
+		//'..'
 		public Keyword getFullStopFullStopKeyword_6() { return cFullStopFullStopKeyword_6; }
 
 		//maxBenchmark=Double?
@@ -10232,12 +10398,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Double
 		public RuleCall getMaxBenchmarkDoubleParserRuleCall_7_0() { return cMaxBenchmarkDoubleParserRuleCall_7_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 	}
 
 	public class QuantitativeHardwareRequirementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "QuantitativeHardwareRequirement");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.QuantitativeHardwareRequirement");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cQuantitativeHardwareKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -10273,16 +10439,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cMaxCPUDoubleParserRuleCall_6_3_0 = (RuleCall)cMaxCPUAssignment_6_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
-		//QuantitativeHardwareRequirement returns requirement::QuantitativeHardwareRequirement:
-		//	"quantitative hardware " name=ID "{" ("core: " minCores=INT ".." maxCores=INT?)? ("ram: " minRAM=INT ".."
-		//	maxRAM=INT?)? ("storage: " minStorage=INT ".." maxStorage=INT?)? ("cpu: " minCPU=Double ".." maxCPU=Double?)? "}";
+		//QuantitativeHardwareRequirement requirement::QuantitativeHardwareRequirement:
+		//	'quantitative hardware ' name=ID '{' ('core: ' minCores=INT '..' maxCores=INT?)? ('ram: ' minRAM=INT '..'
+		//	maxRAM=INT?)? ('storage: ' minStorage=INT '..' maxStorage=INT?)? ('cpu: ' minCPU=Double '..' maxCPU=Double?)?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"quantitative hardware " name=ID "{" ("core: " minCores=INT ".." maxCores=INT?)? ("ram: " minRAM=INT ".." maxRAM=INT?)?
-		//("storage: " minStorage=INT ".." maxStorage=INT?)? ("cpu: " minCPU=Double ".." maxCPU=Double?)? "}"
+		//'quantitative hardware ' name=ID '{' ('core: ' minCores=INT '..' maxCores=INT?)? ('ram: ' minRAM=INT '..' maxRAM=INT?)?
+		//('storage: ' minStorage=INT '..' maxStorage=INT?)? ('cpu: ' minCPU=Double '..' maxCPU=Double?)? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"quantitative hardware "
+		//'quantitative hardware '
 		public Keyword getQuantitativeHardwareKeyword_0() { return cQuantitativeHardwareKeyword_0; }
 
 		//name=ID
@@ -10291,13 +10458,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("core: " minCores=INT ".." maxCores=INT?)?
+		//('core: ' minCores=INT '..' maxCores=INT?)?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"core: "
+		//'core: '
 		public Keyword getCoreKeyword_3_0() { return cCoreKeyword_3_0; }
 
 		//minCores=INT
@@ -10306,7 +10473,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getMinCoresINTTerminalRuleCall_3_1_0() { return cMinCoresINTTerminalRuleCall_3_1_0; }
 
-		//".."
+		//'..'
 		public Keyword getFullStopFullStopKeyword_3_2() { return cFullStopFullStopKeyword_3_2; }
 
 		//maxCores=INT?
@@ -10315,10 +10482,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getMaxCoresINTTerminalRuleCall_3_3_0() { return cMaxCoresINTTerminalRuleCall_3_3_0; }
 
-		//("ram: " minRAM=INT ".." maxRAM=INT?)?
+		//('ram: ' minRAM=INT '..' maxRAM=INT?)?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//"ram: "
+		//'ram: '
 		public Keyword getRamKeyword_4_0() { return cRamKeyword_4_0; }
 
 		//minRAM=INT
@@ -10327,7 +10494,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getMinRAMINTTerminalRuleCall_4_1_0() { return cMinRAMINTTerminalRuleCall_4_1_0; }
 
-		//".."
+		//'..'
 		public Keyword getFullStopFullStopKeyword_4_2() { return cFullStopFullStopKeyword_4_2; }
 
 		//maxRAM=INT?
@@ -10336,10 +10503,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getMaxRAMINTTerminalRuleCall_4_3_0() { return cMaxRAMINTTerminalRuleCall_4_3_0; }
 
-		//("storage: " minStorage=INT ".." maxStorage=INT?)?
+		//('storage: ' minStorage=INT '..' maxStorage=INT?)?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"storage: "
+		//'storage: '
 		public Keyword getStorageKeyword_5_0() { return cStorageKeyword_5_0; }
 
 		//minStorage=INT
@@ -10348,7 +10515,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getMinStorageINTTerminalRuleCall_5_1_0() { return cMinStorageINTTerminalRuleCall_5_1_0; }
 
-		//".."
+		//'..'
 		public Keyword getFullStopFullStopKeyword_5_2() { return cFullStopFullStopKeyword_5_2; }
 
 		//maxStorage=INT?
@@ -10357,10 +10524,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getMaxStorageINTTerminalRuleCall_5_3_0() { return cMaxStorageINTTerminalRuleCall_5_3_0; }
 
-		//("cpu: " minCPU=Double ".." maxCPU=Double?)?
+		//('cpu: ' minCPU=Double '..' maxCPU=Double?)?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//"cpu: "
+		//'cpu: '
 		public Keyword getCpuKeyword_6_0() { return cCpuKeyword_6_0; }
 
 		//minCPU=Double
@@ -10369,7 +10536,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Double
 		public RuleCall getMinCPUDoubleParserRuleCall_6_1_0() { return cMinCPUDoubleParserRuleCall_6_1_0; }
 
-		//".."
+		//'..'
 		public Keyword getFullStopFullStopKeyword_6_2() { return cFullStopFullStopKeyword_6_2; }
 
 		//maxCPU=Double?
@@ -10378,12 +10545,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Double
 		public RuleCall getMaxCPUDoubleParserRuleCall_6_3_0() { return cMaxCPUDoubleParserRuleCall_6_3_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class LocationRequirementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LocationRequirement");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.LocationRequirement");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cLocationRequirementKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -10404,16 +10571,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightSquareBracketKeyword_3_3 = (Keyword)cGroup_3.eContents().get(3);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//LocationRequirement returns requirement::LocationRequirement:
-		//	"location requirement "+ name=ID "{" ("locations " "[" (locations+=[location::Location|Fqn] (","
-		//	locations+=[location::Location|Fqn])*)? "]")? "}";
+		//LocationRequirement requirement::LocationRequirement:
+		//	'location requirement '+ name=ID '{' ('locations ' '[' (locations+=[location::Location|Fqn] (','
+		//	locations+=[location::Location|Fqn])*)? ']')?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"location requirement "+ name=ID "{" ("locations " "[" (locations+=[location::Location|Fqn] (","
-		//locations+=[location::Location|Fqn])*)? "]")? "}"
+		//'location requirement '+ name=ID '{' ('locations ' '[' (locations+=[location::Location|Fqn] (','
+		//locations+=[location::Location|Fqn])*)? ']')? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"location requirement "+
+		//'location requirement '+
 		public Keyword getLocationRequirementKeyword_0() { return cLocationRequirementKeyword_0; }
 
 		//name=ID
@@ -10422,19 +10590,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("locations " "[" (locations+=[location::Location|Fqn] ("," locations+=[location::Location|Fqn])*)? "]")?
+		//('locations ' '[' (locations+=[location::Location|Fqn] (',' locations+=[location::Location|Fqn])*)? ']')?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"locations "
+		//'locations '
 		public Keyword getLocationsKeyword_3_0() { return cLocationsKeyword_3_0; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_3_1() { return cLeftSquareBracketKeyword_3_1; }
 
-		//(locations+=[location::Location|Fqn] ("," locations+=[location::Location|Fqn])*)?
+		//(locations+=[location::Location|Fqn] (',' locations+=[location::Location|Fqn])*)?
 		public Group getGroup_3_2() { return cGroup_3_2; }
 
 		//locations+=[location::Location|Fqn]
@@ -10446,10 +10614,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getLocationsLocationFqnParserRuleCall_3_2_0_0_1() { return cLocationsLocationFqnParserRuleCall_3_2_0_0_1; }
 
-		//("," locations+=[location::Location|Fqn])*
+		//(',' locations+=[location::Location|Fqn])*
 		public Group getGroup_3_2_1() { return cGroup_3_2_1; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_3_2_1_0() { return cCommaKeyword_3_2_1_0; }
 
 		//locations+=[location::Location|Fqn]
@@ -10461,15 +10629,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getLocationsLocationFqnParserRuleCall_3_2_1_1_0_1() { return cLocationsLocationFqnParserRuleCall_3_2_1_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_3_3() { return cRightSquareBracketKeyword_3_3; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 
 	public class ScalabilityModelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ScalabilityModel");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ScalabilityModel");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cScalabilityModelAction_0 = (Action)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
@@ -10501,27 +10669,28 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cScaleRequirementsScaleRequirementParserRuleCall_5_5_0 = (RuleCall)cScaleRequirementsAssignment_5_5.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
-		/// * Scalability model * / ScalabilityModel returns scalability::ScalabilityModel:
-		//	{scalability::ScalabilityModel} ("importURI" "{" importURI+=EString ("," importURI+=EString)* "}")?
-		//	"scalability model " name=ID "{" (rules+=ScalabilityRule | events+=Event | eventInstances+=EventInstance |
-		//	actions+=ScalingAction | timers+=Timer | scaleRequirements+=ScaleRequirement)* "}";
+		/// * Scalability model * / ScalabilityModel scalability::ScalabilityModel:
+		//	{scalability::ScalabilityModel} ('importURI' '{' importURI+=EString (',' importURI+=EString)* '}')?
+		//	'scalability model ' name=ID '{' (rules+=ScalabilityRule | events+=Event | eventInstances+=EventInstance |
+		//	actions+=ScalingAction | timers+=Timer | scaleRequirements+=ScaleRequirement)*
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//{scalability::ScalabilityModel} ("importURI" "{" importURI+=EString ("," importURI+=EString)* "}")? "scalability model "
-		//name=ID "{" (rules+=ScalabilityRule | events+=Event | eventInstances+=EventInstance | actions+=ScalingAction |
-		//timers+=Timer | scaleRequirements+=ScaleRequirement)* "}"
+		//{scalability::ScalabilityModel} ('importURI' '{' importURI+=EString (',' importURI+=EString)* '}')? 'scalability model '
+		//name=ID '{' (rules+=ScalabilityRule | events+=Event | eventInstances+=EventInstance | actions+=ScalingAction |
+		//timers+=Timer | scaleRequirements+=ScaleRequirement)* '}'
 		public Group getGroup() { return cGroup; }
 
 		//{scalability::ScalabilityModel}
 		public Action getScalabilityModelAction_0() { return cScalabilityModelAction_0; }
 
-		//("importURI" "{" importURI+=EString ("," importURI+=EString)* "}")?
+		//('importURI' '{' importURI+=EString (',' importURI+=EString)* '}')?
 		public Group getGroup_1() { return cGroup_1; }
 
-		//"importURI"
+		//'importURI'
 		public Keyword getImportURIKeyword_1_0() { return cImportURIKeyword_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1_1() { return cLeftCurlyBracketKeyword_1_1; }
 
 		//importURI+=EString
@@ -10530,10 +10699,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getImportURIEStringParserRuleCall_1_2_0() { return cImportURIEStringParserRuleCall_1_2_0; }
 
-		//("," importURI+=EString)*
+		//(',' importURI+=EString)*
 		public Group getGroup_1_3() { return cGroup_1_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_1_3_0() { return cCommaKeyword_1_3_0; }
 
 		//importURI+=EString
@@ -10542,10 +10711,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getImportURIEStringParserRuleCall_1_3_1_0() { return cImportURIEStringParserRuleCall_1_3_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_1_4() { return cRightCurlyBracketKeyword_1_4; }
 
-		//"scalability model "
+		//'scalability model '
 		public Keyword getScalabilityModelKeyword_2() { return cScalabilityModelKeyword_2; }
 
 		//name=ID
@@ -10554,7 +10723,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_3_0() { return cNameIDTerminalRuleCall_3_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 
 		//(rules+=ScalabilityRule | events+=Event | eventInstances+=EventInstance | actions+=ScalingAction | timers+=Timer |
@@ -10597,12 +10766,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ScaleRequirement
 		public RuleCall getScaleRequirementsScaleRequirementParserRuleCall_5_5_0() { return cScaleRequirementsScaleRequirementParserRuleCall_5_5_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class EventInstanceElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "EventInstance");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.EventInstance");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cEventInstanceKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -10626,16 +10795,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cMetricInstanceMetricInstanceFqnParserRuleCall_8_1_0_1 = (RuleCall)cMetricInstanceMetricInstanceCrossReference_8_1_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
-		//EventInstance returns scalability::EventInstance:
-		//	"event instance" name=ID "{" "event: " event=[scalability::SimpleEvent|Fqn] "status: " status=StatusType ("layer: "
-		//	layer=LayerType)? ("metric instance: " metricInstance=[metric::MetricInstance|Fqn])? "}";
+		//EventInstance scalability::EventInstance:
+		//	'event instance' name=ID '{'
+		//	'event: ' event=[scalability::SimpleEvent|Fqn]
+		//	'status: ' status=StatusType ('layer: ' layer=LayerType)? ('metric instance: '
+		//	metricInstance=[metric::MetricInstance|Fqn])?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"event instance" name=ID "{" "event: " event=[scalability::SimpleEvent|Fqn] "status: " status=StatusType ("layer: "
-		//layer=LayerType)? ("metric instance: " metricInstance=[metric::MetricInstance|Fqn])? "}"
+		//'event instance' name=ID '{' 'event: ' event=[scalability::SimpleEvent|Fqn] 'status: ' status=StatusType ('layer: '
+		//layer=LayerType)? ('metric instance: ' metricInstance=[metric::MetricInstance|Fqn])? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"event instance"
+		//'event instance'
 		public Keyword getEventInstanceKeyword_0() { return cEventInstanceKeyword_0; }
 
 		//name=ID
@@ -10644,10 +10816,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"event: "
+		//'event: '
 		public Keyword getEventKeyword_3() { return cEventKeyword_3; }
 
 		//event=[scalability::SimpleEvent|Fqn]
@@ -10659,7 +10831,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getEventSimpleEventFqnParserRuleCall_4_0_1() { return cEventSimpleEventFqnParserRuleCall_4_0_1; }
 
-		//"status: "
+		//'status: '
 		public Keyword getStatusKeyword_5() { return cStatusKeyword_5; }
 
 		//status=StatusType
@@ -10668,10 +10840,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//StatusType
 		public RuleCall getStatusStatusTypeEnumRuleCall_6_0() { return cStatusStatusTypeEnumRuleCall_6_0; }
 
-		//("layer: " layer=LayerType)?
+		//('layer: ' layer=LayerType)?
 		public Group getGroup_7() { return cGroup_7; }
 
-		//"layer: "
+		//'layer: '
 		public Keyword getLayerKeyword_7_0() { return cLayerKeyword_7_0; }
 
 		//layer=LayerType
@@ -10680,10 +10852,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//LayerType
 		public RuleCall getLayerLayerTypeEnumRuleCall_7_1_0() { return cLayerLayerTypeEnumRuleCall_7_1_0; }
 
-		//("metric instance: " metricInstance=[metric::MetricInstance|Fqn])?
+		//('metric instance: ' metricInstance=[metric::MetricInstance|Fqn])?
 		public Group getGroup_8() { return cGroup_8; }
 
-		//"metric instance: "
+		//'metric instance: '
 		public Keyword getMetricInstanceKeyword_8_0() { return cMetricInstanceKeyword_8_0; }
 
 		//metricInstance=[metric::MetricInstance|Fqn]
@@ -10695,18 +10867,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getMetricInstanceMetricInstanceFqnParserRuleCall_8_1_0_1() { return cMetricInstanceMetricInstanceFqnParserRuleCall_8_1_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
 	}
 
 	public class ScaleRequirementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ScaleRequirement");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ScaleRequirement");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cHorizontalScaleRequirementParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cVerticalScaleRequirementParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//ScaleRequirement returns requirement::ScaleRequirement:
-		//	HorizontalScaleRequirement | VerticalScaleRequirement;
+		//ScaleRequirement requirement::ScaleRequirement:
+		//	HorizontalScaleRequirement | VerticalScaleRequirement
 		@Override public ParserRule getRule() { return rule; }
 
 		//HorizontalScaleRequirement | VerticalScaleRequirement
@@ -10720,7 +10892,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class HorizontalScaleRequirementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "HorizontalScaleRequirement");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.HorizontalScaleRequirement");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cHorizontalScaleRequirementKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -10738,16 +10910,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cMaxInstancesEIntParserRuleCall_8_0 = (RuleCall)cMaxInstancesAssignment_8.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
-		//HorizontalScaleRequirement returns requirement::HorizontalScaleRequirement:
-		//	"horizontal scale requirement " name=ID "{" "component: " component=[deployment::InternalComponent|Fqn] "instances: "
-		//	minInstances=EInt ".." maxInstances=EInt "}";
+		//HorizontalScaleRequirement requirement::HorizontalScaleRequirement:
+		//	'horizontal scale requirement ' name=ID '{'
+		//	'component: ' component=[deployment::InternalComponent|Fqn]
+		//	'instances: ' minInstances=EInt '..' maxInstances=EInt
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"horizontal scale requirement " name=ID "{" "component: " component=[deployment::InternalComponent|Fqn] "instances: "
-		//minInstances=EInt ".." maxInstances=EInt "}"
+		//'horizontal scale requirement ' name=ID '{' 'component: ' component=[deployment::InternalComponent|Fqn] 'instances: '
+		//minInstances=EInt '..' maxInstances=EInt '}'
 		public Group getGroup() { return cGroup; }
 
-		//"horizontal scale requirement "
+		//'horizontal scale requirement '
 		public Keyword getHorizontalScaleRequirementKeyword_0() { return cHorizontalScaleRequirementKeyword_0; }
 
 		//name=ID
@@ -10756,10 +10930,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"component: "
+		//'component: '
 		public Keyword getComponentKeyword_3() { return cComponentKeyword_3; }
 
 		//component=[deployment::InternalComponent|Fqn]
@@ -10771,7 +10945,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getComponentInternalComponentFqnParserRuleCall_4_0_1() { return cComponentInternalComponentFqnParserRuleCall_4_0_1; }
 
-		//"instances: "
+		//'instances: '
 		public Keyword getInstancesKeyword_5() { return cInstancesKeyword_5; }
 
 		//minInstances=EInt
@@ -10780,7 +10954,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInt
 		public RuleCall getMinInstancesEIntParserRuleCall_6_0() { return cMinInstancesEIntParserRuleCall_6_0; }
 
-		//".."
+		//'..'
 		public Keyword getFullStopFullStopKeyword_7() { return cFullStopFullStopKeyword_7; }
 
 		//maxInstances=EInt
@@ -10789,12 +10963,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInt
 		public RuleCall getMaxInstancesEIntParserRuleCall_8_0() { return cMaxInstancesEIntParserRuleCall_8_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
 	}
 
 	public class VerticalScaleRequirementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "VerticalScaleRequirement");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.VerticalScaleRequirement");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cVerticalScaleRequirementKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -10834,18 +11008,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cMaxCPUDoubleParserRuleCall_8_3_0 = (RuleCall)cMaxCPUAssignment_8_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
-		//VerticalScaleRequirement returns requirement::VerticalScaleRequirement:
-		//	"vertical scale requirement " name=ID "{" "vm: " vm=[deployment::VM|Fqn] ("core: " minCores=INT ".." maxCores=INT?)?
-		//	("ram: " minRAM=INT ".." maxRAM=INT?)? ("storage: " minStorage=INT ".." maxStorage=INT?)? ("cpu: " minCPU=Double ".."
-		//	maxCPU=Double?)? "}";
+		//VerticalScaleRequirement requirement::VerticalScaleRequirement:
+		//	'vertical scale requirement ' name=ID '{'
+		//	'vm: ' vm=[deployment::VM|Fqn] ('core: ' minCores=INT '..' maxCores=INT?)? ('ram: ' minRAM=INT '..' maxRAM=INT?)?
+		//	('storage: ' minStorage=INT '..' maxStorage=INT?)? ('cpu: ' minCPU=Double '..' maxCPU=Double?)?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"vertical scale requirement " name=ID "{" "vm: " vm=[deployment::VM|Fqn] ("core: " minCores=INT ".." maxCores=INT?)?
-		//("ram: " minRAM=INT ".." maxRAM=INT?)? ("storage: " minStorage=INT ".." maxStorage=INT?)? ("cpu: " minCPU=Double ".."
-		//maxCPU=Double?)? "}"
+		//'vertical scale requirement ' name=ID '{' 'vm: ' vm=[deployment::VM|Fqn] ('core: ' minCores=INT '..' maxCores=INT?)?
+		//('ram: ' minRAM=INT '..' maxRAM=INT?)? ('storage: ' minStorage=INT '..' maxStorage=INT?)? ('cpu: ' minCPU=Double '..'
+		//maxCPU=Double?)? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"vertical scale requirement "
+		//'vertical scale requirement '
 		public Keyword getVerticalScaleRequirementKeyword_0() { return cVerticalScaleRequirementKeyword_0; }
 
 		//name=ID
@@ -10854,10 +11029,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"vm: "
+		//'vm: '
 		public Keyword getVmKeyword_3() { return cVmKeyword_3; }
 
 		//vm=[deployment::VM|Fqn]
@@ -10869,10 +11044,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getVmVMFqnParserRuleCall_4_0_1() { return cVmVMFqnParserRuleCall_4_0_1; }
 
-		//("core: " minCores=INT ".." maxCores=INT?)?
+		//('core: ' minCores=INT '..' maxCores=INT?)?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"core: "
+		//'core: '
 		public Keyword getCoreKeyword_5_0() { return cCoreKeyword_5_0; }
 
 		//minCores=INT
@@ -10881,7 +11056,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getMinCoresINTTerminalRuleCall_5_1_0() { return cMinCoresINTTerminalRuleCall_5_1_0; }
 
-		//".."
+		//'..'
 		public Keyword getFullStopFullStopKeyword_5_2() { return cFullStopFullStopKeyword_5_2; }
 
 		//maxCores=INT?
@@ -10890,10 +11065,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getMaxCoresINTTerminalRuleCall_5_3_0() { return cMaxCoresINTTerminalRuleCall_5_3_0; }
 
-		//("ram: " minRAM=INT ".." maxRAM=INT?)?
+		//('ram: ' minRAM=INT '..' maxRAM=INT?)?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//"ram: "
+		//'ram: '
 		public Keyword getRamKeyword_6_0() { return cRamKeyword_6_0; }
 
 		//minRAM=INT
@@ -10902,7 +11077,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getMinRAMINTTerminalRuleCall_6_1_0() { return cMinRAMINTTerminalRuleCall_6_1_0; }
 
-		//".."
+		//'..'
 		public Keyword getFullStopFullStopKeyword_6_2() { return cFullStopFullStopKeyword_6_2; }
 
 		//maxRAM=INT?
@@ -10911,10 +11086,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getMaxRAMINTTerminalRuleCall_6_3_0() { return cMaxRAMINTTerminalRuleCall_6_3_0; }
 
-		//("storage: " minStorage=INT ".." maxStorage=INT?)?
+		//('storage: ' minStorage=INT '..' maxStorage=INT?)?
 		public Group getGroup_7() { return cGroup_7; }
 
-		//"storage: "
+		//'storage: '
 		public Keyword getStorageKeyword_7_0() { return cStorageKeyword_7_0; }
 
 		//minStorage=INT
@@ -10923,7 +11098,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getMinStorageINTTerminalRuleCall_7_1_0() { return cMinStorageINTTerminalRuleCall_7_1_0; }
 
-		//".."
+		//'..'
 		public Keyword getFullStopFullStopKeyword_7_2() { return cFullStopFullStopKeyword_7_2; }
 
 		//maxStorage=INT?
@@ -10932,10 +11107,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getMaxStorageINTTerminalRuleCall_7_3_0() { return cMaxStorageINTTerminalRuleCall_7_3_0; }
 
-		//("cpu: " minCPU=Double ".." maxCPU=Double?)?
+		//('cpu: ' minCPU=Double '..' maxCPU=Double?)?
 		public Group getGroup_8() { return cGroup_8; }
 
-		//"cpu: "
+		//'cpu: '
 		public Keyword getCpuKeyword_8_0() { return cCpuKeyword_8_0; }
 
 		//minCPU=Double
@@ -10944,7 +11119,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Double
 		public RuleCall getMinCPUDoubleParserRuleCall_8_1_0() { return cMinCPUDoubleParserRuleCall_8_1_0; }
 
-		//".."
+		//'..'
 		public Keyword getFullStopFullStopKeyword_8_2() { return cFullStopFullStopKeyword_8_2; }
 
 		//maxCPU=Double?
@@ -10953,12 +11128,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Double
 		public RuleCall getMaxCPUDoubleParserRuleCall_8_3_0() { return cMaxCPUDoubleParserRuleCall_8_3_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
 	}
 
 	public class ScalabilityRuleElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ScalabilityRule");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ScalabilityRule");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cScalabilityRuleKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -11005,22 +11180,24 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightSquareBracketKeyword_11_4 = (Keyword)cGroup_11.eContents().get(4);
 		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		
-		//ScalabilityRule returns scalability::ScalabilityRule:
-		//	"scalability rule " name=ID "{" "event: " event=[scalability::Event|Fqn] "actions " "[" actions+=[camel::Action|Fqn]
-		//	("," actions+=[camel::Action|Fqn])* "]" ("entities " "[" entity+=[organisation::Entity|Fqn] (","
-		//	entity+=[organisation::Entity|Fqn])* "]")? ("scale requirements " "["
-		//	scaleRequirements+=[requirement::ScaleRequirement|Fqn] ("," scaleRequirements+=[requirement::ScaleRequirement|Fqn])*
-		//	"]")? "}";
+		//ScalabilityRule scalability::ScalabilityRule:
+		//	'scalability rule ' name=ID '{'
+		//	'event: ' event=[scalability::Event|Fqn]
+		//	'actions ' '[' actions+=[camel::Action|Fqn] (',' actions+=[camel::Action|Fqn])* ']' ('entities ' '['
+		//	entity+=[organisation::Entity|Fqn] (',' entity+=[organisation::Entity|Fqn])* ']')? ('scale requirements ' '['
+		//	scaleRequirements+=[requirement::ScaleRequirement|Fqn] (',' scaleRequirements+=[requirement::ScaleRequirement|Fqn])*
+		//	']')?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"scalability rule " name=ID "{" "event: " event=[scalability::Event|Fqn] "actions " "[" actions+=[camel::Action|Fqn]
-		//("," actions+=[camel::Action|Fqn])* "]" ("entities " "[" entity+=[organisation::Entity|Fqn] (","
-		//entity+=[organisation::Entity|Fqn])* "]")? ("scale requirements " "["
-		//scaleRequirements+=[requirement::ScaleRequirement|Fqn] ("," scaleRequirements+=[requirement::ScaleRequirement|Fqn])*
-		//"]")? "}"
+		//'scalability rule ' name=ID '{' 'event: ' event=[scalability::Event|Fqn] 'actions ' '[' actions+=[camel::Action|Fqn]
+		//(',' actions+=[camel::Action|Fqn])* ']' ('entities ' '[' entity+=[organisation::Entity|Fqn] (','
+		//entity+=[organisation::Entity|Fqn])* ']')? ('scale requirements ' '['
+		//scaleRequirements+=[requirement::ScaleRequirement|Fqn] (',' scaleRequirements+=[requirement::ScaleRequirement|Fqn])*
+		//']')? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"scalability rule "
+		//'scalability rule '
 		public Keyword getScalabilityRuleKeyword_0() { return cScalabilityRuleKeyword_0; }
 
 		//name=ID
@@ -11029,10 +11206,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"event: "
+		//'event: '
 		public Keyword getEventKeyword_3() { return cEventKeyword_3; }
 
 		//event=[scalability::Event|Fqn]
@@ -11044,10 +11221,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getEventEventFqnParserRuleCall_4_0_1() { return cEventEventFqnParserRuleCall_4_0_1; }
 
-		//"actions "
+		//'actions '
 		public Keyword getActionsKeyword_5() { return cActionsKeyword_5; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_6() { return cLeftSquareBracketKeyword_6; }
 
 		//actions+=[camel::Action|Fqn]
@@ -11059,10 +11236,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getActionsActionFqnParserRuleCall_7_0_1() { return cActionsActionFqnParserRuleCall_7_0_1; }
 
-		//("," actions+=[camel::Action|Fqn])*
+		//(',' actions+=[camel::Action|Fqn])*
 		public Group getGroup_8() { return cGroup_8; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_8_0() { return cCommaKeyword_8_0; }
 
 		//actions+=[camel::Action|Fqn]
@@ -11074,16 +11251,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getActionsActionFqnParserRuleCall_8_1_0_1() { return cActionsActionFqnParserRuleCall_8_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_9() { return cRightSquareBracketKeyword_9; }
 
-		//("entities " "[" entity+=[organisation::Entity|Fqn] ("," entity+=[organisation::Entity|Fqn])* "]")?
+		//('entities ' '[' entity+=[organisation::Entity|Fqn] (',' entity+=[organisation::Entity|Fqn])* ']')?
 		public Group getGroup_10() { return cGroup_10; }
 
-		//"entities "
+		//'entities '
 		public Keyword getEntitiesKeyword_10_0() { return cEntitiesKeyword_10_0; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_10_1() { return cLeftSquareBracketKeyword_10_1; }
 
 		//entity+=[organisation::Entity|Fqn]
@@ -11095,10 +11272,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getEntityEntityFqnParserRuleCall_10_2_0_1() { return cEntityEntityFqnParserRuleCall_10_2_0_1; }
 
-		//("," entity+=[organisation::Entity|Fqn])*
+		//(',' entity+=[organisation::Entity|Fqn])*
 		public Group getGroup_10_3() { return cGroup_10_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_10_3_0() { return cCommaKeyword_10_3_0; }
 
 		//entity+=[organisation::Entity|Fqn]
@@ -11110,17 +11287,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getEntityEntityFqnParserRuleCall_10_3_1_0_1() { return cEntityEntityFqnParserRuleCall_10_3_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_10_4() { return cRightSquareBracketKeyword_10_4; }
 
-		//("scale requirements " "[" scaleRequirements+=[requirement::ScaleRequirement|Fqn] (","
-		//scaleRequirements+=[requirement::ScaleRequirement|Fqn])* "]")?
+		//('scale requirements ' '[' scaleRequirements+=[requirement::ScaleRequirement|Fqn] (','
+		//scaleRequirements+=[requirement::ScaleRequirement|Fqn])* ']')?
 		public Group getGroup_11() { return cGroup_11; }
 
-		//"scale requirements "
+		//'scale requirements '
 		public Keyword getScaleRequirementsKeyword_11_0() { return cScaleRequirementsKeyword_11_0; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_11_1() { return cLeftSquareBracketKeyword_11_1; }
 
 		//scaleRequirements+=[requirement::ScaleRequirement|Fqn]
@@ -11132,10 +11309,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getScaleRequirementsScaleRequirementFqnParserRuleCall_11_2_0_1() { return cScaleRequirementsScaleRequirementFqnParserRuleCall_11_2_0_1; }
 
-		//("," scaleRequirements+=[requirement::ScaleRequirement|Fqn])*
+		//(',' scaleRequirements+=[requirement::ScaleRequirement|Fqn])*
 		public Group getGroup_11_3() { return cGroup_11_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_11_3_0() { return cCommaKeyword_11_3_0; }
 
 		//scaleRequirements+=[requirement::ScaleRequirement|Fqn]
@@ -11147,21 +11324,21 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getScaleRequirementsScaleRequirementFqnParserRuleCall_11_3_1_0_1() { return cScaleRequirementsScaleRequirementFqnParserRuleCall_11_3_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_11_4() { return cRightSquareBracketKeyword_11_4; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
 	}
 
 	public class ScalingActionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ScalingAction");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ScalingAction");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cHorizontalScalingActionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cVerticalScalingActionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//ScalingAction returns scalability::ScalingAction:
-		//	HorizontalScalingAction | VerticalScalingAction;
+		//ScalingAction scalability::ScalingAction:
+		//	HorizontalScalingAction | VerticalScalingAction
 		@Override public ParserRule getRule() { return rule; }
 
 		//HorizontalScalingAction | VerticalScalingAction
@@ -11175,7 +11352,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class HorizontalScalingActionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "HorizontalScalingAction");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.HorizontalScalingAction");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cHorizontalScalingActionKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -11198,16 +11375,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCountEIntParserRuleCall_9_1_0 = (RuleCall)cCountAssignment_9_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
-		//HorizontalScalingAction returns scalability::HorizontalScalingAction:
-		//	"horizontal scaling action " name=ID "{" "type: " type=ActionType "vm: " vm=[deployment::VM|Fqn]
-		//	"internal component: " internalComponent=[deployment::InternalComponent|Fqn] ("count: " count=EInt)? "}";
+		//HorizontalScalingAction scalability::HorizontalScalingAction:
+		//	'horizontal scaling action ' name=ID '{'
+		//	'type: ' type=ActionType
+		//	'vm: ' vm=[deployment::VM|Fqn]
+		//	'internal component: ' internalComponent=[deployment::InternalComponent|Fqn] ('count: ' count=EInt)?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"horizontal scaling action " name=ID "{" "type: " type=ActionType "vm: " vm=[deployment::VM|Fqn] "internal component: "
-		//internalComponent=[deployment::InternalComponent|Fqn] ("count: " count=EInt)? "}"
+		//'horizontal scaling action ' name=ID '{' 'type: ' type=ActionType 'vm: ' vm=[deployment::VM|Fqn] 'internal component: '
+		//internalComponent=[deployment::InternalComponent|Fqn] ('count: ' count=EInt)? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"horizontal scaling action "
+		//'horizontal scaling action '
 		public Keyword getHorizontalScalingActionKeyword_0() { return cHorizontalScalingActionKeyword_0; }
 
 		//name=ID
@@ -11216,10 +11396,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"type: "
+		//'type: '
 		public Keyword getTypeKeyword_3() { return cTypeKeyword_3; }
 
 		//type=ActionType
@@ -11228,7 +11408,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ActionType
 		public RuleCall getTypeActionTypeEnumRuleCall_4_0() { return cTypeActionTypeEnumRuleCall_4_0; }
 
-		//"vm: "
+		//'vm: '
 		public Keyword getVmKeyword_5() { return cVmKeyword_5; }
 
 		//vm=[deployment::VM|Fqn]
@@ -11240,7 +11420,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getVmVMFqnParserRuleCall_6_0_1() { return cVmVMFqnParserRuleCall_6_0_1; }
 
-		//"internal component: "
+		//'internal component: '
 		public Keyword getInternalComponentKeyword_7() { return cInternalComponentKeyword_7; }
 
 		//internalComponent=[deployment::InternalComponent|Fqn]
@@ -11252,10 +11432,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getInternalComponentInternalComponentFqnParserRuleCall_8_0_1() { return cInternalComponentInternalComponentFqnParserRuleCall_8_0_1; }
 
-		//("count: " count=EInt)?
+		//('count: ' count=EInt)?
 		public Group getGroup_9() { return cGroup_9; }
 
-		//"count: "
+		//'count: '
 		public Keyword getCountKeyword_9_0() { return cCountKeyword_9_0; }
 
 		//count=EInt
@@ -11264,12 +11444,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInt
 		public RuleCall getCountEIntParserRuleCall_9_1_0() { return cCountEIntParserRuleCall_9_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
 	}
 
 	public class VerticalScalingActionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "VerticalScalingAction");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.VerticalScalingAction");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cVerticalScalingActionKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -11308,18 +11488,21 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNetworkUpdateEIntParserRuleCall_12_1_0 = (RuleCall)cNetworkUpdateAssignment_12_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		
-		//VerticalScalingAction returns scalability::VerticalScalingAction:
-		//	"vertical scaling action " name=ID "{" "type: " type=ActionType "vm: " vm=[deployment::VM|Fqn] ("core update: "
-		//	coreUpdate=EInt)? ("CPU update: " CPUUpdate=EDouble)? ("memory update: " memoryUpdate=EInt)? ("storage update: "
-		//	storageUpdate=EInt)? ("io update: " ioUpdate=EInt)? ("network update: " networkUpdate=EInt)? "}";
+		//VerticalScalingAction scalability::VerticalScalingAction:
+		//	'vertical scaling action ' name=ID '{'
+		//	'type: ' type=ActionType
+		//	'vm: ' vm=[deployment::VM|Fqn] ('core update: ' coreUpdate=EInt)? ('CPU update: ' CPUUpdate=EDouble)?
+		//	('memory update: ' memoryUpdate=EInt)? ('storage update: ' storageUpdate=EInt)? ('io update: ' ioUpdate=EInt)?
+		//	('network update: ' networkUpdate=EInt)?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"vertical scaling action " name=ID "{" "type: " type=ActionType "vm: " vm=[deployment::VM|Fqn] ("core update: "
-		//coreUpdate=EInt)? ("CPU update: " CPUUpdate=EDouble)? ("memory update: " memoryUpdate=EInt)? ("storage update: "
-		//storageUpdate=EInt)? ("io update: " ioUpdate=EInt)? ("network update: " networkUpdate=EInt)? "}"
+		//'vertical scaling action ' name=ID '{' 'type: ' type=ActionType 'vm: ' vm=[deployment::VM|Fqn] ('core update: '
+		//coreUpdate=EInt)? ('CPU update: ' CPUUpdate=EDouble)? ('memory update: ' memoryUpdate=EInt)? ('storage update: '
+		//storageUpdate=EInt)? ('io update: ' ioUpdate=EInt)? ('network update: ' networkUpdate=EInt)? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"vertical scaling action "
+		//'vertical scaling action '
 		public Keyword getVerticalScalingActionKeyword_0() { return cVerticalScalingActionKeyword_0; }
 
 		//name=ID
@@ -11328,10 +11511,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"type: "
+		//'type: '
 		public Keyword getTypeKeyword_3() { return cTypeKeyword_3; }
 
 		//type=ActionType
@@ -11340,7 +11523,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ActionType
 		public RuleCall getTypeActionTypeEnumRuleCall_4_0() { return cTypeActionTypeEnumRuleCall_4_0; }
 
-		//"vm: "
+		//'vm: '
 		public Keyword getVmKeyword_5() { return cVmKeyword_5; }
 
 		//vm=[deployment::VM|Fqn]
@@ -11352,10 +11535,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getVmVMFqnParserRuleCall_6_0_1() { return cVmVMFqnParserRuleCall_6_0_1; }
 
-		//("core update: " coreUpdate=EInt)?
+		//('core update: ' coreUpdate=EInt)?
 		public Group getGroup_7() { return cGroup_7; }
 
-		//"core update: "
+		//'core update: '
 		public Keyword getCoreUpdateKeyword_7_0() { return cCoreUpdateKeyword_7_0; }
 
 		//coreUpdate=EInt
@@ -11364,10 +11547,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInt
 		public RuleCall getCoreUpdateEIntParserRuleCall_7_1_0() { return cCoreUpdateEIntParserRuleCall_7_1_0; }
 
-		//("CPU update: " CPUUpdate=EDouble)?
+		//('CPU update: ' CPUUpdate=EDouble)?
 		public Group getGroup_8() { return cGroup_8; }
 
-		//"CPU update: "
+		//'CPU update: '
 		public Keyword getCPUUpdateKeyword_8_0() { return cCPUUpdateKeyword_8_0; }
 
 		//CPUUpdate=EDouble
@@ -11376,10 +11559,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EDouble
 		public RuleCall getCPUUpdateEDoubleParserRuleCall_8_1_0() { return cCPUUpdateEDoubleParserRuleCall_8_1_0; }
 
-		//("memory update: " memoryUpdate=EInt)?
+		//('memory update: ' memoryUpdate=EInt)?
 		public Group getGroup_9() { return cGroup_9; }
 
-		//"memory update: "
+		//'memory update: '
 		public Keyword getMemoryUpdateKeyword_9_0() { return cMemoryUpdateKeyword_9_0; }
 
 		//memoryUpdate=EInt
@@ -11388,10 +11571,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInt
 		public RuleCall getMemoryUpdateEIntParserRuleCall_9_1_0() { return cMemoryUpdateEIntParserRuleCall_9_1_0; }
 
-		//("storage update: " storageUpdate=EInt)?
+		//('storage update: ' storageUpdate=EInt)?
 		public Group getGroup_10() { return cGroup_10; }
 
-		//"storage update: "
+		//'storage update: '
 		public Keyword getStorageUpdateKeyword_10_0() { return cStorageUpdateKeyword_10_0; }
 
 		//storageUpdate=EInt
@@ -11400,10 +11583,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInt
 		public RuleCall getStorageUpdateEIntParserRuleCall_10_1_0() { return cStorageUpdateEIntParserRuleCall_10_1_0; }
 
-		//("io update: " ioUpdate=EInt)?
+		//('io update: ' ioUpdate=EInt)?
 		public Group getGroup_11() { return cGroup_11; }
 
-		//"io update: "
+		//'io update: '
 		public Keyword getIoUpdateKeyword_11_0() { return cIoUpdateKeyword_11_0; }
 
 		//ioUpdate=EInt
@@ -11412,10 +11595,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInt
 		public RuleCall getIoUpdateEIntParserRuleCall_11_1_0() { return cIoUpdateEIntParserRuleCall_11_1_0; }
 
-		//("network update: " networkUpdate=EInt)?
+		//('network update: ' networkUpdate=EInt)?
 		public Group getGroup_12() { return cGroup_12; }
 
-		//"network update: "
+		//'network update: '
 		public Keyword getNetworkUpdateKeyword_12_0() { return cNetworkUpdateKeyword_12_0; }
 
 		//networkUpdate=EInt
@@ -11424,18 +11607,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInt
 		public RuleCall getNetworkUpdateEIntParserRuleCall_12_1_0() { return cNetworkUpdateEIntParserRuleCall_12_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_13() { return cRightCurlyBracketKeyword_13; }
 	}
 
 	public class EventPatternElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "EventPattern");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.EventPattern");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cBinaryEventPatternParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cUnaryEventPatternParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//EventPattern returns scalability::EventPattern:
-		//	BinaryEventPattern | UnaryEventPattern;
+		//EventPattern scalability::EventPattern:
+		//	BinaryEventPattern | UnaryEventPattern
 		@Override public ParserRule getRule() { return rule; }
 
 		//BinaryEventPattern | UnaryEventPattern
@@ -11449,15 +11632,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class EventElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Event");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Event");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cBinaryEventPatternParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cUnaryEventPatternParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cFunctionalEventParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cNonFunctionalEventParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
-		//Event returns scalability::Event:
-		//	BinaryEventPattern | UnaryEventPattern | FunctionalEvent | NonFunctionalEvent;
+		//Event scalability::Event:
+		//	BinaryEventPattern | UnaryEventPattern | FunctionalEvent | NonFunctionalEvent
 		@Override public ParserRule getRule() { return rule; }
 
 		//BinaryEventPattern | UnaryEventPattern | FunctionalEvent | NonFunctionalEvent
@@ -11477,13 +11660,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class SimpleEventElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SimpleEvent");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.SimpleEvent");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cFunctionalEventParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cNonFunctionalEventParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//SimpleEvent returns scalability::SimpleEvent:
-		//	FunctionalEvent | NonFunctionalEvent;
+		//SimpleEvent scalability::SimpleEvent:
+		//	FunctionalEvent | NonFunctionalEvent
 		@Override public ParserRule getRule() { return rule; }
 
 		//FunctionalEvent | NonFunctionalEvent
@@ -11497,7 +11680,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class FunctionalEventElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "FunctionalEvent");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.FunctionalEvent");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cFunctionalEventKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -11508,14 +11691,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cFunctionalTypeEStringParserRuleCall_4_0 = (RuleCall)cFunctionalTypeAssignment_4.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//FunctionalEvent returns scalability::FunctionalEvent:
-		//	"functional event " name=ID "{" "functional type: " functionalType=EString "}";
+		//FunctionalEvent scalability::FunctionalEvent:
+		//	'functional event ' name=ID '{'
+		//	'functional type: ' functionalType=EString
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"functional event " name=ID "{" "functional type: " functionalType=EString "}"
+		//'functional event ' name=ID '{' 'functional type: ' functionalType=EString '}'
 		public Group getGroup() { return cGroup; }
 
-		//"functional event "
+		//'functional event '
 		public Keyword getFunctionalEventKeyword_0() { return cFunctionalEventKeyword_0; }
 
 		//name=ID
@@ -11524,10 +11709,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"functional type: "
+		//'functional type: '
 		public Keyword getFunctionalTypeKeyword_3() { return cFunctionalTypeKeyword_3; }
 
 		//functionalType=EString
@@ -11536,12 +11721,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getFunctionalTypeEStringParserRuleCall_4_0() { return cFunctionalTypeEStringParserRuleCall_4_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class NonFunctionalEventElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "NonFunctionalEvent");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.NonFunctionalEvent");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cNonFunctionalEventKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -11555,16 +11740,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cIsViolationViolationKeyword_5_0 = (Keyword)cIsViolationAssignment_5.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
-		//NonFunctionalEvent returns scalability::NonFunctionalEvent:
-		//	"non-functional event " name=ID "{" "metric condition: " metricCondition=[metric::MetricCondition|Fqn]
-		//	isViolation?="violation" "}";
+		//NonFunctionalEvent scalability::NonFunctionalEvent:
+		//	'non-functional event ' name=ID '{'
+		//	'metric condition: ' metricCondition=[metric::MetricCondition|Fqn] isViolation?='violation'
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"non-functional event " name=ID "{" "metric condition: " metricCondition=[metric::MetricCondition|Fqn]
-		//isViolation?="violation" "}"
+		//'non-functional event ' name=ID '{' 'metric condition: ' metricCondition=[metric::MetricCondition|Fqn]
+		//isViolation?='violation' '}'
 		public Group getGroup() { return cGroup; }
 
-		//"non-functional event "
+		//'non-functional event '
 		public Keyword getNonFunctionalEventKeyword_0() { return cNonFunctionalEventKeyword_0; }
 
 		//name=ID
@@ -11573,10 +11759,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"metric condition: "
+		//'metric condition: '
 		public Keyword getMetricConditionKeyword_3() { return cMetricConditionKeyword_3; }
 
 		//metricCondition=[metric::MetricCondition|Fqn]
@@ -11588,18 +11774,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getMetricConditionMetricConditionFqnParserRuleCall_4_0_1() { return cMetricConditionMetricConditionFqnParserRuleCall_4_0_1; }
 
-		//isViolation?="violation"
+		//isViolation?='violation'
 		public Assignment getIsViolationAssignment_5() { return cIsViolationAssignment_5; }
 
-		//"violation"
+		//'violation'
 		public Keyword getIsViolationViolationKeyword_5_0() { return cIsViolationViolationKeyword_5_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class BinaryEventPatternElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BinaryEventPattern");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.BinaryEventPattern");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cBinaryEventPatternKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -11633,20 +11819,21 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cUpperOccurrenceBoundEIntParserRuleCall_9_1_0 = (RuleCall)cUpperOccurrenceBoundAssignment_9_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
-		//BinaryEventPattern returns scalability::BinaryEventPattern:
-		//	"binary event pattern " name=ID "{" ("left event: " leftEvent=[scalability::Event|Fqn])? ("right event: "
-		//	rightEvent=[scalability::Event|Fqn])? ("timer: " timer=[scalability::Timer|Fqn])? "operator: "
-		//	operator=BinaryPatternOperatorType ("lower occurrence bound: " lowerOccurrenceBound=EInt)?
-		//	("upper occurrence bound: " upperOccurrenceBound=EInt)? "}";
+		//BinaryEventPattern scalability::BinaryEventPattern:
+		//	'binary event pattern ' name=ID '{' ('left event: ' leftEvent=[scalability::Event|Fqn])? ('right event: '
+		//	rightEvent=[scalability::Event|Fqn])? ('timer: ' timer=[scalability::Timer|Fqn])?
+		//	'operator: ' operator=BinaryPatternOperatorType ('lower occurrence bound: ' lowerOccurrenceBound=EInt)?
+		//	('upper occurrence bound: ' upperOccurrenceBound=EInt)?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"binary event pattern " name=ID "{" ("left event: " leftEvent=[scalability::Event|Fqn])? ("right event: "
-		//rightEvent=[scalability::Event|Fqn])? ("timer: " timer=[scalability::Timer|Fqn])? "operator: "
-		//operator=BinaryPatternOperatorType ("lower occurrence bound: " lowerOccurrenceBound=EInt)? ("upper occurrence bound: "
-		//upperOccurrenceBound=EInt)? "}"
+		//'binary event pattern ' name=ID '{' ('left event: ' leftEvent=[scalability::Event|Fqn])? ('right event: '
+		//rightEvent=[scalability::Event|Fqn])? ('timer: ' timer=[scalability::Timer|Fqn])? 'operator: '
+		//operator=BinaryPatternOperatorType ('lower occurrence bound: ' lowerOccurrenceBound=EInt)? ('upper occurrence bound: '
+		//upperOccurrenceBound=EInt)? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"binary event pattern "
+		//'binary event pattern '
 		public Keyword getBinaryEventPatternKeyword_0() { return cBinaryEventPatternKeyword_0; }
 
 		//name=ID
@@ -11655,13 +11842,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("left event: " leftEvent=[scalability::Event|Fqn])?
+		//('left event: ' leftEvent=[scalability::Event|Fqn])?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"left event: "
+		//'left event: '
 		public Keyword getLeftEventKeyword_3_0() { return cLeftEventKeyword_3_0; }
 
 		//leftEvent=[scalability::Event|Fqn]
@@ -11673,10 +11860,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getLeftEventEventFqnParserRuleCall_3_1_0_1() { return cLeftEventEventFqnParserRuleCall_3_1_0_1; }
 
-		//("right event: " rightEvent=[scalability::Event|Fqn])?
+		//('right event: ' rightEvent=[scalability::Event|Fqn])?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//"right event: "
+		//'right event: '
 		public Keyword getRightEventKeyword_4_0() { return cRightEventKeyword_4_0; }
 
 		//rightEvent=[scalability::Event|Fqn]
@@ -11688,10 +11875,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getRightEventEventFqnParserRuleCall_4_1_0_1() { return cRightEventEventFqnParserRuleCall_4_1_0_1; }
 
-		//("timer: " timer=[scalability::Timer|Fqn])?
+		//('timer: ' timer=[scalability::Timer|Fqn])?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"timer: "
+		//'timer: '
 		public Keyword getTimerKeyword_5_0() { return cTimerKeyword_5_0; }
 
 		//timer=[scalability::Timer|Fqn]
@@ -11703,7 +11890,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getTimerTimerFqnParserRuleCall_5_1_0_1() { return cTimerTimerFqnParserRuleCall_5_1_0_1; }
 
-		//"operator: "
+		//'operator: '
 		public Keyword getOperatorKeyword_6() { return cOperatorKeyword_6; }
 
 		//operator=BinaryPatternOperatorType
@@ -11712,10 +11899,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//BinaryPatternOperatorType
 		public RuleCall getOperatorBinaryPatternOperatorTypeEnumRuleCall_7_0() { return cOperatorBinaryPatternOperatorTypeEnumRuleCall_7_0; }
 
-		//("lower occurrence bound: " lowerOccurrenceBound=EInt)?
+		//('lower occurrence bound: ' lowerOccurrenceBound=EInt)?
 		public Group getGroup_8() { return cGroup_8; }
 
-		//"lower occurrence bound: "
+		//'lower occurrence bound: '
 		public Keyword getLowerOccurrenceBoundKeyword_8_0() { return cLowerOccurrenceBoundKeyword_8_0; }
 
 		//lowerOccurrenceBound=EInt
@@ -11724,10 +11911,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInt
 		public RuleCall getLowerOccurrenceBoundEIntParserRuleCall_8_1_0() { return cLowerOccurrenceBoundEIntParserRuleCall_8_1_0; }
 
-		//("upper occurrence bound: " upperOccurrenceBound=EInt)?
+		//('upper occurrence bound: ' upperOccurrenceBound=EInt)?
 		public Group getGroup_9() { return cGroup_9; }
 
-		//"upper occurrence bound: "
+		//'upper occurrence bound: '
 		public Keyword getUpperOccurrenceBoundKeyword_9_0() { return cUpperOccurrenceBoundKeyword_9_0; }
 
 		//upperOccurrenceBound=EInt
@@ -11736,12 +11923,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInt
 		public RuleCall getUpperOccurrenceBoundEIntParserRuleCall_9_1_0() { return cUpperOccurrenceBoundEIntParserRuleCall_9_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
 	}
 
 	public class UnaryEventPatternElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "UnaryEventPattern");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.UnaryEventPattern");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cUnaryEventPatternKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -11765,18 +11952,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cOccurrenceNumEIntParserRuleCall_8_1_0 = (RuleCall)cOccurrenceNumAssignment_8_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
-		//UnaryEventPattern returns scalability::UnaryEventPattern:
-		//	"unary event pattern " name=ID "{" "event: " event=[scalability::Event|Fqn] "operator: "
-		//	operator=UnaryPatternOperatorType ("timer: " timer=[scalability::Timer|Fqn])? ("occurrence num: "
-		//	occurrenceNum=EInt)? "}";
+		//UnaryEventPattern scalability::UnaryEventPattern:
+		//	'unary event pattern ' name=ID '{'
+		//	'event: ' event=[scalability::Event|Fqn]
+		//	'operator: ' operator=UnaryPatternOperatorType ('timer: ' timer=[scalability::Timer|Fqn])? ('occurrence num: '
+		//	occurrenceNum=EInt)?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"unary event pattern " name=ID "{" "event: " event=[scalability::Event|Fqn] "operator: "
-		//operator=UnaryPatternOperatorType ("timer: " timer=[scalability::Timer|Fqn])? ("occurrence num: " occurrenceNum=EInt)?
-		//"}"
+		//'unary event pattern ' name=ID '{' 'event: ' event=[scalability::Event|Fqn] 'operator: '
+		//operator=UnaryPatternOperatorType ('timer: ' timer=[scalability::Timer|Fqn])? ('occurrence num: ' occurrenceNum=EInt)?
+		//'}'
 		public Group getGroup() { return cGroup; }
 
-		//"unary event pattern "
+		//'unary event pattern '
 		public Keyword getUnaryEventPatternKeyword_0() { return cUnaryEventPatternKeyword_0; }
 
 		//name=ID
@@ -11785,10 +11974,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"event: "
+		//'event: '
 		public Keyword getEventKeyword_3() { return cEventKeyword_3; }
 
 		//event=[scalability::Event|Fqn]
@@ -11800,7 +11989,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getEventEventFqnParserRuleCall_4_0_1() { return cEventEventFqnParserRuleCall_4_0_1; }
 
-		//"operator: "
+		//'operator: '
 		public Keyword getOperatorKeyword_5() { return cOperatorKeyword_5; }
 
 		//operator=UnaryPatternOperatorType
@@ -11809,10 +11998,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//UnaryPatternOperatorType
 		public RuleCall getOperatorUnaryPatternOperatorTypeEnumRuleCall_6_0() { return cOperatorUnaryPatternOperatorTypeEnumRuleCall_6_0; }
 
-		//("timer: " timer=[scalability::Timer|Fqn])?
+		//('timer: ' timer=[scalability::Timer|Fqn])?
 		public Group getGroup_7() { return cGroup_7; }
 
-		//"timer: "
+		//'timer: '
 		public Keyword getTimerKeyword_7_0() { return cTimerKeyword_7_0; }
 
 		//timer=[scalability::Timer|Fqn]
@@ -11824,10 +12013,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getTimerTimerFqnParserRuleCall_7_1_0_1() { return cTimerTimerFqnParserRuleCall_7_1_0_1; }
 
-		//("occurrence num: " occurrenceNum=EInt)?
+		//('occurrence num: ' occurrenceNum=EInt)?
 		public Group getGroup_8() { return cGroup_8; }
 
-		//"occurrence num: "
+		//'occurrence num: '
 		public Keyword getOccurrenceNumKeyword_8_0() { return cOccurrenceNumKeyword_8_0; }
 
 		//occurrenceNum=EInt
@@ -11836,12 +12025,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInt
 		public RuleCall getOccurrenceNumEIntParserRuleCall_8_1_0() { return cOccurrenceNumEIntParserRuleCall_8_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
 	}
 
 	public class TimerElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Timer");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Timer");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cTimerKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -11863,16 +12052,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cMaxOccurrenceNumEIntParserRuleCall_9_1_0 = (RuleCall)cMaxOccurrenceNumAssignment_9_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
-		//Timer returns scalability::Timer:
-		//	"timer " name=ID "{" "type: " type=TimerType "time value: " timeValue=EInt "unit: " unit=[unit::TimeIntervalUnit|Fqn]
-		//	("max occurrence num: " maxOccurrenceNum=EInt)? "}";
+		//Timer scalability::Timer:
+		//	'timer ' name=ID '{'
+		//	'type: ' type=TimerType
+		//	'time value: ' timeValue=EInt
+		//	'unit: ' unit=[unit::TimeIntervalUnit|Fqn] ('max occurrence num: ' maxOccurrenceNum=EInt)?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"timer " name=ID "{" "type: " type=TimerType "time value: " timeValue=EInt "unit: " unit=[unit::TimeIntervalUnit|Fqn]
-		//("max occurrence num: " maxOccurrenceNum=EInt)? "}"
+		//'timer ' name=ID '{' 'type: ' type=TimerType 'time value: ' timeValue=EInt 'unit: ' unit=[unit::TimeIntervalUnit|Fqn]
+		//('max occurrence num: ' maxOccurrenceNum=EInt)? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"timer "
+		//'timer '
 		public Keyword getTimerKeyword_0() { return cTimerKeyword_0; }
 
 		//name=ID
@@ -11881,10 +12073,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"type: "
+		//'type: '
 		public Keyword getTypeKeyword_3() { return cTypeKeyword_3; }
 
 		//type=TimerType
@@ -11893,7 +12085,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//TimerType
 		public RuleCall getTypeTimerTypeEnumRuleCall_4_0() { return cTypeTimerTypeEnumRuleCall_4_0; }
 
-		//"time value: "
+		//'time value: '
 		public Keyword getTimeValueKeyword_5() { return cTimeValueKeyword_5; }
 
 		//timeValue=EInt
@@ -11902,7 +12094,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInt
 		public RuleCall getTimeValueEIntParserRuleCall_6_0() { return cTimeValueEIntParserRuleCall_6_0; }
 
-		//"unit: "
+		//'unit: '
 		public Keyword getUnitKeyword_7() { return cUnitKeyword_7; }
 
 		//unit=[unit::TimeIntervalUnit|Fqn]
@@ -11914,10 +12106,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getUnitTimeIntervalUnitFqnParserRuleCall_8_0_1() { return cUnitTimeIntervalUnitFqnParserRuleCall_8_0_1; }
 
-		//("max occurrence num: " maxOccurrenceNum=EInt)?
+		//('max occurrence num: ' maxOccurrenceNum=EInt)?
 		public Group getGroup_9() { return cGroup_9; }
 
-		//"max occurrence num: "
+		//'max occurrence num: '
 		public Keyword getMaxOccurrenceNumKeyword_9_0() { return cMaxOccurrenceNumKeyword_9_0; }
 
 		//maxOccurrenceNum=EInt
@@ -11926,12 +12118,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EInt
 		public RuleCall getMaxOccurrenceNumEIntParserRuleCall_9_1_0() { return cMaxOccurrenceNumEIntParserRuleCall_9_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
 	}
 
 	public class SecurityModelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SecurityModel");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.SecurityModel");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cSecurityModelAction_0 = (Action)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
@@ -11969,33 +12161,33 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cSecuritySLOsSecuritySLOParserRuleCall_5_8_0 = (RuleCall)cSecuritySLOsAssignment_5_8.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
-		/// * Security model * / SecurityModel returns security::SecurityModel:
-		//	{security::SecurityModel} ("importURI" "{" importURI+=EString ("," importURI+=EString)* "}")? "security model "
-		//	name=ID "{" (securityControls+=SecurityControl | / *securityRequirements += SecurityRequirement | * /
-		//	securityProperties+=SecurityProperty | rawSecurityMetrics+=RawSecurityMetric |
-		//	compositeSecurityMetrics+=CompositeSecurityMetric | rawSecurityMetricInstances+=RawSecurityMetricInstance |
+		/// * Security model * / SecurityModel security::SecurityModel:
+		//	{security::SecurityModel} ('importURI' '{' importURI+=EString (',' importURI+=EString)* '}')?
+		//	'security model ' name=ID '{' (securityControls+=SecurityControl | securityProperties+=SecurityProperty |
+		//	rawSecurityMetrics+=RawSecurityMetric | compositeSecurityMetrics+=CompositeSecurityMetric |
+		//	rawSecurityMetricInstances+=RawSecurityMetricInstance |
 		//	compositeSecurityMetricInstances+=CompositeSecurityMetricInstance | securityDomains+=SecurityDomain |
-		//	securityCapabilities+=SecurityCapability | securitySLOs+=SecuritySLO)* "}";
+		//	securityCapabilities+=SecurityCapability | securitySLOs+=SecuritySLO)*
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//{security::SecurityModel} ("importURI" "{" importURI+=EString ("," importURI+=EString)* "}")? "security model " name=ID
-		//"{" (securityControls+=SecurityControl | / *securityRequirements += SecurityRequirement | * /
-		//securityProperties+=SecurityProperty | rawSecurityMetrics+=RawSecurityMetric |
+		//{security::SecurityModel} ('importURI' '{' importURI+=EString (',' importURI+=EString)* '}')? 'security model ' name=ID
+		//'{' (securityControls+=SecurityControl | securityProperties+=SecurityProperty | rawSecurityMetrics+=RawSecurityMetric |
 		//compositeSecurityMetrics+=CompositeSecurityMetric | rawSecurityMetricInstances+=RawSecurityMetricInstance |
 		//compositeSecurityMetricInstances+=CompositeSecurityMetricInstance | securityDomains+=SecurityDomain |
-		//securityCapabilities+=SecurityCapability | securitySLOs+=SecuritySLO)* "}"
+		//securityCapabilities+=SecurityCapability | securitySLOs+=SecuritySLO)* '}'
 		public Group getGroup() { return cGroup; }
 
 		//{security::SecurityModel}
 		public Action getSecurityModelAction_0() { return cSecurityModelAction_0; }
 
-		//("importURI" "{" importURI+=EString ("," importURI+=EString)* "}")?
+		//('importURI' '{' importURI+=EString (',' importURI+=EString)* '}')?
 		public Group getGroup_1() { return cGroup_1; }
 
-		//"importURI"
+		//'importURI'
 		public Keyword getImportURIKeyword_1_0() { return cImportURIKeyword_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1_1() { return cLeftCurlyBracketKeyword_1_1; }
 
 		//importURI+=EString
@@ -12004,10 +12196,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getImportURIEStringParserRuleCall_1_2_0() { return cImportURIEStringParserRuleCall_1_2_0; }
 
-		//("," importURI+=EString)*
+		//(',' importURI+=EString)*
 		public Group getGroup_1_3() { return cGroup_1_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_1_3_0() { return cCommaKeyword_1_3_0; }
 
 		//importURI+=EString
@@ -12016,10 +12208,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getImportURIEStringParserRuleCall_1_3_1_0() { return cImportURIEStringParserRuleCall_1_3_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_1_4() { return cRightCurlyBracketKeyword_1_4; }
 
-		//"security model "
+		//'security model '
 		public Keyword getSecurityModelKeyword_2() { return cSecurityModelKeyword_2; }
 
 		//name=ID
@@ -12028,11 +12220,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_3_0() { return cNameIDTerminalRuleCall_3_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 
-		//(securityControls+=SecurityControl | / *securityRequirements += SecurityRequirement | * /
-		//securityProperties+=SecurityProperty | rawSecurityMetrics+=RawSecurityMetric |
+		//(securityControls+=SecurityControl | securityProperties+=SecurityProperty | rawSecurityMetrics+=RawSecurityMetric |
 		//compositeSecurityMetrics+=CompositeSecurityMetric | rawSecurityMetricInstances+=RawSecurityMetricInstance |
 		//compositeSecurityMetricInstances+=CompositeSecurityMetricInstance | securityDomains+=SecurityDomain |
 		//securityCapabilities+=SecurityCapability | securitySLOs+=SecuritySLO)*
@@ -12092,12 +12283,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//SecuritySLO
 		public RuleCall getSecuritySLOsSecuritySLOParserRuleCall_5_8_0() { return cSecuritySLOsSecuritySLOParserRuleCall_5_8_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class RawSecurityMetricElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RawSecurityMetric");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.RawSecurityMetric");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRawSecurityMetricKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -12135,20 +12326,21 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cUnitUnitFqnParserRuleCall_11_0_1 = (RuleCall)cUnitUnitCrossReference_11_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		
-		//RawSecurityMetric returns security::RawSecurityMetric:
-		//	"raw security metric " name=ID "{" ("description: " description=EString)? "property: "
-		//	property=[security::SecurityProperty|Fqn] ("value direction: " valueDirection=EShort)? ("layer: " layer=LayerType)?
-		//	("value: " value=[type::SingleValue|Fqn])? ("value type: " valueType=[type::ValueType|Fqn])? "unit: "
-		//	unit=[unit::Unit|Fqn] "}";
+		//RawSecurityMetric security::RawSecurityMetric:
+		//	'raw security metric ' name=ID '{' ('description: ' description=EString)?
+		//	'property: ' property=[security::SecurityProperty|Fqn] ('value direction: ' valueDirection=EShort)? ('layer: '
+		//	layer=LayerType)? ('value: ' value=[type::SingleValue|Fqn])? ('value type: ' valueType=[type::ValueType|Fqn])?
+		//	'unit: ' unit=[unit::Unit|Fqn]
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"raw security metric " name=ID "{" ("description: " description=EString)? "property: "
-		//property=[security::SecurityProperty|Fqn] ("value direction: " valueDirection=EShort)? ("layer: " layer=LayerType)?
-		//("value: " value=[type::SingleValue|Fqn])? ("value type: " valueType=[type::ValueType|Fqn])? "unit: "
-		//unit=[unit::Unit|Fqn] "}"
+		//'raw security metric ' name=ID '{' ('description: ' description=EString)? 'property: '
+		//property=[security::SecurityProperty|Fqn] ('value direction: ' valueDirection=EShort)? ('layer: ' layer=LayerType)?
+		//('value: ' value=[type::SingleValue|Fqn])? ('value type: ' valueType=[type::ValueType|Fqn])? 'unit: '
+		//unit=[unit::Unit|Fqn] '}'
 		public Group getGroup() { return cGroup; }
 
-		//"raw security metric "
+		//'raw security metric '
 		public Keyword getRawSecurityMetricKeyword_0() { return cRawSecurityMetricKeyword_0; }
 
 		//name=ID
@@ -12157,13 +12349,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("description: " description=EString)?
+		//('description: ' description=EString)?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"description: "
+		//'description: '
 		public Keyword getDescriptionKeyword_3_0() { return cDescriptionKeyword_3_0; }
 
 		//description=EString
@@ -12172,7 +12364,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getDescriptionEStringParserRuleCall_3_1_0() { return cDescriptionEStringParserRuleCall_3_1_0; }
 
-		//"property: "
+		//'property: '
 		public Keyword getPropertyKeyword_4() { return cPropertyKeyword_4; }
 
 		//property=[security::SecurityProperty|Fqn]
@@ -12184,10 +12376,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getPropertySecurityPropertyFqnParserRuleCall_5_0_1() { return cPropertySecurityPropertyFqnParserRuleCall_5_0_1; }
 
-		//("value direction: " valueDirection=EShort)?
+		//('value direction: ' valueDirection=EShort)?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//"value direction: "
+		//'value direction: '
 		public Keyword getValueDirectionKeyword_6_0() { return cValueDirectionKeyword_6_0; }
 
 		//valueDirection=EShort
@@ -12196,10 +12388,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EShort
 		public RuleCall getValueDirectionEShortParserRuleCall_6_1_0() { return cValueDirectionEShortParserRuleCall_6_1_0; }
 
-		//("layer: " layer=LayerType)?
+		//('layer: ' layer=LayerType)?
 		public Group getGroup_7() { return cGroup_7; }
 
-		//"layer: "
+		//'layer: '
 		public Keyword getLayerKeyword_7_0() { return cLayerKeyword_7_0; }
 
 		//layer=LayerType
@@ -12208,10 +12400,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//LayerType
 		public RuleCall getLayerLayerTypeEnumRuleCall_7_1_0() { return cLayerLayerTypeEnumRuleCall_7_1_0; }
 
-		//("value: " value=[type::SingleValue|Fqn])?
+		//('value: ' value=[type::SingleValue|Fqn])?
 		public Group getGroup_8() { return cGroup_8; }
 
-		//"value: "
+		//'value: '
 		public Keyword getValueKeyword_8_0() { return cValueKeyword_8_0; }
 
 		//value=[type::SingleValue|Fqn]
@@ -12223,10 +12415,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getValueSingleValueFqnParserRuleCall_8_1_0_1() { return cValueSingleValueFqnParserRuleCall_8_1_0_1; }
 
-		//("value type: " valueType=[type::ValueType|Fqn])?
+		//('value type: ' valueType=[type::ValueType|Fqn])?
 		public Group getGroup_9() { return cGroup_9; }
 
-		//"value type: "
+		//'value type: '
 		public Keyword getValueTypeKeyword_9_0() { return cValueTypeKeyword_9_0; }
 
 		//valueType=[type::ValueType|Fqn]
@@ -12238,7 +12430,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getValueTypeValueTypeFqnParserRuleCall_9_1_0_1() { return cValueTypeValueTypeFqnParserRuleCall_9_1_0_1; }
 
-		//"unit: "
+		//'unit: '
 		public Keyword getUnitKeyword_10() { return cUnitKeyword_10; }
 
 		//unit=[unit::Unit|Fqn]
@@ -12250,12 +12442,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getUnitUnitFqnParserRuleCall_11_0_1() { return cUnitUnitFqnParserRuleCall_11_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
 	}
 
 	public class CompositeSecurityMetricElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CompositeSecurityMetric");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.CompositeSecurityMetric");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cCompositeSecurityMetricKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -12295,20 +12487,21 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cFormulaMetricFormulaParserRuleCall_12_0 = (RuleCall)cFormulaAssignment_12.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		
-		//CompositeSecurityMetric returns security::CompositeSecurityMetric:
-		//	"composite security metric " name=ID "{" ("description: " description=EString)? "property: "
-		//	property=[security::SecurityProperty|Fqn] ("value direction: " valueDirection=EShort)? ("layer: " layer=LayerType)?
-		//	("value: " value=[type::SingleValue|Fqn])? ("value type: " valueType=[type::ValueType|Fqn])? "unit: "
-		//	unit=[unit::Unit|Fqn] formula=MetricFormula "}";
+		//CompositeSecurityMetric security::CompositeSecurityMetric:
+		//	'composite security metric ' name=ID '{' ('description: ' description=EString)?
+		//	'property: ' property=[security::SecurityProperty|Fqn] ('value direction: ' valueDirection=EShort)? ('layer: '
+		//	layer=LayerType)? ('value: ' value=[type::SingleValue|Fqn])? ('value type: ' valueType=[type::ValueType|Fqn])?
+		//	'unit: ' unit=[unit::Unit|Fqn] formula=MetricFormula
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"composite security metric " name=ID "{" ("description: " description=EString)? "property: "
-		//property=[security::SecurityProperty|Fqn] ("value direction: " valueDirection=EShort)? ("layer: " layer=LayerType)?
-		//("value: " value=[type::SingleValue|Fqn])? ("value type: " valueType=[type::ValueType|Fqn])? "unit: "
-		//unit=[unit::Unit|Fqn] formula=MetricFormula "}"
+		//'composite security metric ' name=ID '{' ('description: ' description=EString)? 'property: '
+		//property=[security::SecurityProperty|Fqn] ('value direction: ' valueDirection=EShort)? ('layer: ' layer=LayerType)?
+		//('value: ' value=[type::SingleValue|Fqn])? ('value type: ' valueType=[type::ValueType|Fqn])? 'unit: '
+		//unit=[unit::Unit|Fqn] formula=MetricFormula '}'
 		public Group getGroup() { return cGroup; }
 
-		//"composite security metric "
+		//'composite security metric '
 		public Keyword getCompositeSecurityMetricKeyword_0() { return cCompositeSecurityMetricKeyword_0; }
 
 		//name=ID
@@ -12317,13 +12510,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("description: " description=EString)?
+		//('description: ' description=EString)?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"description: "
+		//'description: '
 		public Keyword getDescriptionKeyword_3_0() { return cDescriptionKeyword_3_0; }
 
 		//description=EString
@@ -12332,7 +12525,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getDescriptionEStringParserRuleCall_3_1_0() { return cDescriptionEStringParserRuleCall_3_1_0; }
 
-		//"property: "
+		//'property: '
 		public Keyword getPropertyKeyword_4() { return cPropertyKeyword_4; }
 
 		//property=[security::SecurityProperty|Fqn]
@@ -12344,10 +12537,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getPropertySecurityPropertyFqnParserRuleCall_5_0_1() { return cPropertySecurityPropertyFqnParserRuleCall_5_0_1; }
 
-		//("value direction: " valueDirection=EShort)?
+		//('value direction: ' valueDirection=EShort)?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//"value direction: "
+		//'value direction: '
 		public Keyword getValueDirectionKeyword_6_0() { return cValueDirectionKeyword_6_0; }
 
 		//valueDirection=EShort
@@ -12356,10 +12549,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EShort
 		public RuleCall getValueDirectionEShortParserRuleCall_6_1_0() { return cValueDirectionEShortParserRuleCall_6_1_0; }
 
-		//("layer: " layer=LayerType)?
+		//('layer: ' layer=LayerType)?
 		public Group getGroup_7() { return cGroup_7; }
 
-		//"layer: "
+		//'layer: '
 		public Keyword getLayerKeyword_7_0() { return cLayerKeyword_7_0; }
 
 		//layer=LayerType
@@ -12368,10 +12561,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//LayerType
 		public RuleCall getLayerLayerTypeEnumRuleCall_7_1_0() { return cLayerLayerTypeEnumRuleCall_7_1_0; }
 
-		//("value: " value=[type::SingleValue|Fqn])?
+		//('value: ' value=[type::SingleValue|Fqn])?
 		public Group getGroup_8() { return cGroup_8; }
 
-		//"value: "
+		//'value: '
 		public Keyword getValueKeyword_8_0() { return cValueKeyword_8_0; }
 
 		//value=[type::SingleValue|Fqn]
@@ -12383,10 +12576,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getValueSingleValueFqnParserRuleCall_8_1_0_1() { return cValueSingleValueFqnParserRuleCall_8_1_0_1; }
 
-		//("value type: " valueType=[type::ValueType|Fqn])?
+		//('value type: ' valueType=[type::ValueType|Fqn])?
 		public Group getGroup_9() { return cGroup_9; }
 
-		//"value type: "
+		//'value type: '
 		public Keyword getValueTypeKeyword_9_0() { return cValueTypeKeyword_9_0; }
 
 		//valueType=[type::ValueType|Fqn]
@@ -12398,7 +12591,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getValueTypeValueTypeFqnParserRuleCall_9_1_0_1() { return cValueTypeValueTypeFqnParserRuleCall_9_1_0_1; }
 
-		//"unit: "
+		//'unit: '
 		public Keyword getUnitKeyword_10() { return cUnitKeyword_10; }
 
 		//unit=[unit::Unit|Fqn]
@@ -12416,12 +12609,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//MetricFormula
 		public RuleCall getFormulaMetricFormulaParserRuleCall_12_0() { return cFormulaMetricFormulaParserRuleCall_12_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_13() { return cRightCurlyBracketKeyword_13; }
 	}
 
 	public class RawSecurityMetricInstanceElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RawSecurityMetricInstance");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.RawSecurityMetricInstance");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRawSecurityMetricInstanceKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -12456,20 +12649,22 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cMetricContextMetricContextFqnParserRuleCall_11_1_0_1 = (RuleCall)cMetricContextMetricContextCrossReference_11_1_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		
-		//RawSecurityMetricInstance returns security::RawSecurityMetricInstance:
-		//	"raw security metric instance " name=ID "{" "metric: " metric=[metric::Metric|Fqn] "sensor: "
-		//	sensor=[metric::Sensor|Fqn] "object binding: " objectBinding=[metric::MetricObjectBinding|Fqn] ("schedule: "
-		//	schedule=[metric::Schedule|Fqn])? ("window: " window=[metric::Window|Fqn])? ("context: "
-		//	metricContext=[metric::MetricContext|Fqn])? "}";
+		//RawSecurityMetricInstance security::RawSecurityMetricInstance:
+		//	'raw security metric instance ' name=ID '{'
+		//	'metric: ' metric=[metric::Metric|Fqn]
+		//	'sensor: ' sensor=[metric::Sensor|Fqn]
+		//	'object binding: ' objectBinding=[metric::MetricObjectBinding|Fqn] ('schedule: ' schedule=[metric::Schedule|Fqn])?
+		//	('window: ' window=[metric::Window|Fqn])? ('context: ' metricContext=[metric::MetricContext|Fqn])?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"raw security metric instance " name=ID "{" "metric: " metric=[metric::Metric|Fqn] "sensor: "
-		//sensor=[metric::Sensor|Fqn] "object binding: " objectBinding=[metric::MetricObjectBinding|Fqn] ("schedule: "
-		//schedule=[metric::Schedule|Fqn])? ("window: " window=[metric::Window|Fqn])? ("context: "
-		//metricContext=[metric::MetricContext|Fqn])? "}"
+		//'raw security metric instance ' name=ID '{' 'metric: ' metric=[metric::Metric|Fqn] 'sensor: '
+		//sensor=[metric::Sensor|Fqn] 'object binding: ' objectBinding=[metric::MetricObjectBinding|Fqn] ('schedule: '
+		//schedule=[metric::Schedule|Fqn])? ('window: ' window=[metric::Window|Fqn])? ('context: '
+		//metricContext=[metric::MetricContext|Fqn])? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"raw security metric instance "
+		//'raw security metric instance '
 		public Keyword getRawSecurityMetricInstanceKeyword_0() { return cRawSecurityMetricInstanceKeyword_0; }
 
 		//name=ID
@@ -12478,10 +12673,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"metric: "
+		//'metric: '
 		public Keyword getMetricKeyword_3() { return cMetricKeyword_3; }
 
 		//metric=[metric::Metric|Fqn]
@@ -12493,7 +12688,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getMetricMetricFqnParserRuleCall_4_0_1() { return cMetricMetricFqnParserRuleCall_4_0_1; }
 
-		//"sensor: "
+		//'sensor: '
 		public Keyword getSensorKeyword_5() { return cSensorKeyword_5; }
 
 		//sensor=[metric::Sensor|Fqn]
@@ -12505,7 +12700,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSensorSensorFqnParserRuleCall_6_0_1() { return cSensorSensorFqnParserRuleCall_6_0_1; }
 
-		//"object binding: "
+		//'object binding: '
 		public Keyword getObjectBindingKeyword_7() { return cObjectBindingKeyword_7; }
 
 		//objectBinding=[metric::MetricObjectBinding|Fqn]
@@ -12517,10 +12712,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getObjectBindingMetricObjectBindingFqnParserRuleCall_8_0_1() { return cObjectBindingMetricObjectBindingFqnParserRuleCall_8_0_1; }
 
-		//("schedule: " schedule=[metric::Schedule|Fqn])?
+		//('schedule: ' schedule=[metric::Schedule|Fqn])?
 		public Group getGroup_9() { return cGroup_9; }
 
-		//"schedule: "
+		//'schedule: '
 		public Keyword getScheduleKeyword_9_0() { return cScheduleKeyword_9_0; }
 
 		//schedule=[metric::Schedule|Fqn]
@@ -12532,10 +12727,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getScheduleScheduleFqnParserRuleCall_9_1_0_1() { return cScheduleScheduleFqnParserRuleCall_9_1_0_1; }
 
-		//("window: " window=[metric::Window|Fqn])?
+		//('window: ' window=[metric::Window|Fqn])?
 		public Group getGroup_10() { return cGroup_10; }
 
-		//"window: "
+		//'window: '
 		public Keyword getWindowKeyword_10_0() { return cWindowKeyword_10_0; }
 
 		//window=[metric::Window|Fqn]
@@ -12547,10 +12742,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getWindowWindowFqnParserRuleCall_10_1_0_1() { return cWindowWindowFqnParserRuleCall_10_1_0_1; }
 
-		//("context: " metricContext=[metric::MetricContext|Fqn])?
+		//('context: ' metricContext=[metric::MetricContext|Fqn])?
 		public Group getGroup_11() { return cGroup_11; }
 
-		//"context: "
+		//'context: '
 		public Keyword getContextKeyword_11_0() { return cContextKeyword_11_0; }
 
 		//metricContext=[metric::MetricContext|Fqn]
@@ -12562,12 +12757,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getMetricContextMetricContextFqnParserRuleCall_11_1_0_1() { return cMetricContextMetricContextFqnParserRuleCall_11_1_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
 	}
 
 	public class CompositeSecurityMetricInstanceElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CompositeSecurityMetricInstance");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.CompositeSecurityMetricInstance");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cCompositeSecurityMetricInstanceKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -12609,22 +12804,24 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cMetricContextMetricContextFqnParserRuleCall_14_1_0_1 = (RuleCall)cMetricContextMetricContextCrossReference_14_1_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		
-		//CompositeSecurityMetricInstance returns security::CompositeSecurityMetricInstance:
-		//	"composite security metric instance" name=ID "{" "metric: " metric=[metric::Metric|Fqn] "composing metric instances "
-		//	"[" composingMetricInstances+=[metric::MetricInstance|Fqn] (","
-		//	composingMetricInstances+=[metric::MetricInstance|Fqn])* "]" "object binding: "
-		//	objectBinding=[metric::MetricObjectBinding|Fqn] ("schedule: " schedule=[metric::Schedule|Fqn])? ("window: "
-		//	window=[metric::Window|Fqn])? ("context: " metricContext=[metric::MetricContext|Fqn])? "}";
+		//CompositeSecurityMetricInstance security::CompositeSecurityMetricInstance:
+		//	'composite security metric instance' name=ID '{'
+		//	'metric: ' metric=[metric::Metric|Fqn]
+		//	'composing metric instances ' '[' composingMetricInstances+=[metric::MetricInstance|Fqn] (','
+		//	composingMetricInstances+=[metric::MetricInstance|Fqn])* ']'
+		//	'object binding: ' objectBinding=[metric::MetricObjectBinding|Fqn] ('schedule: ' schedule=[metric::Schedule|Fqn])?
+		//	('window: ' window=[metric::Window|Fqn])? ('context: ' metricContext=[metric::MetricContext|Fqn])?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"composite security metric instance" name=ID "{" "metric: " metric=[metric::Metric|Fqn] "composing metric instances "
-		//"[" composingMetricInstances+=[metric::MetricInstance|Fqn] (","
-		//composingMetricInstances+=[metric::MetricInstance|Fqn])* "]" "object binding: "
-		//objectBinding=[metric::MetricObjectBinding|Fqn] ("schedule: " schedule=[metric::Schedule|Fqn])? ("window: "
-		//window=[metric::Window|Fqn])? ("context: " metricContext=[metric::MetricContext|Fqn])? "}"
+		//'composite security metric instance' name=ID '{' 'metric: ' metric=[metric::Metric|Fqn] 'composing metric instances '
+		//'[' composingMetricInstances+=[metric::MetricInstance|Fqn] (','
+		//composingMetricInstances+=[metric::MetricInstance|Fqn])* ']' 'object binding: '
+		//objectBinding=[metric::MetricObjectBinding|Fqn] ('schedule: ' schedule=[metric::Schedule|Fqn])? ('window: '
+		//window=[metric::Window|Fqn])? ('context: ' metricContext=[metric::MetricContext|Fqn])? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"composite security metric instance"
+		//'composite security metric instance'
 		public Keyword getCompositeSecurityMetricInstanceKeyword_0() { return cCompositeSecurityMetricInstanceKeyword_0; }
 
 		//name=ID
@@ -12633,10 +12830,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"metric: "
+		//'metric: '
 		public Keyword getMetricKeyword_3() { return cMetricKeyword_3; }
 
 		//metric=[metric::Metric|Fqn]
@@ -12648,10 +12845,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getMetricMetricFqnParserRuleCall_4_0_1() { return cMetricMetricFqnParserRuleCall_4_0_1; }
 
-		//"composing metric instances "
+		//'composing metric instances '
 		public Keyword getComposingMetricInstancesKeyword_5() { return cComposingMetricInstancesKeyword_5; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_6() { return cLeftSquareBracketKeyword_6; }
 
 		//composingMetricInstances+=[metric::MetricInstance|Fqn]
@@ -12663,10 +12860,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getComposingMetricInstancesMetricInstanceFqnParserRuleCall_7_0_1() { return cComposingMetricInstancesMetricInstanceFqnParserRuleCall_7_0_1; }
 
-		//("," composingMetricInstances+=[metric::MetricInstance|Fqn])*
+		//(',' composingMetricInstances+=[metric::MetricInstance|Fqn])*
 		public Group getGroup_8() { return cGroup_8; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_8_0() { return cCommaKeyword_8_0; }
 
 		//composingMetricInstances+=[metric::MetricInstance|Fqn]
@@ -12678,10 +12875,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getComposingMetricInstancesMetricInstanceFqnParserRuleCall_8_1_0_1() { return cComposingMetricInstancesMetricInstanceFqnParserRuleCall_8_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_9() { return cRightSquareBracketKeyword_9; }
 
-		//"object binding: "
+		//'object binding: '
 		public Keyword getObjectBindingKeyword_10() { return cObjectBindingKeyword_10; }
 
 		//objectBinding=[metric::MetricObjectBinding|Fqn]
@@ -12693,10 +12890,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getObjectBindingMetricObjectBindingFqnParserRuleCall_11_0_1() { return cObjectBindingMetricObjectBindingFqnParserRuleCall_11_0_1; }
 
-		//("schedule: " schedule=[metric::Schedule|Fqn])?
+		//('schedule: ' schedule=[metric::Schedule|Fqn])?
 		public Group getGroup_12() { return cGroup_12; }
 
-		//"schedule: "
+		//'schedule: '
 		public Keyword getScheduleKeyword_12_0() { return cScheduleKeyword_12_0; }
 
 		//schedule=[metric::Schedule|Fqn]
@@ -12708,10 +12905,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getScheduleScheduleFqnParserRuleCall_12_1_0_1() { return cScheduleScheduleFqnParserRuleCall_12_1_0_1; }
 
-		//("window: " window=[metric::Window|Fqn])?
+		//('window: ' window=[metric::Window|Fqn])?
 		public Group getGroup_13() { return cGroup_13; }
 
-		//"window: "
+		//'window: '
 		public Keyword getWindowKeyword_13_0() { return cWindowKeyword_13_0; }
 
 		//window=[metric::Window|Fqn]
@@ -12723,10 +12920,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getWindowWindowFqnParserRuleCall_13_1_0_1() { return cWindowWindowFqnParserRuleCall_13_1_0_1; }
 
-		//("context: " metricContext=[metric::MetricContext|Fqn])?
+		//('context: ' metricContext=[metric::MetricContext|Fqn])?
 		public Group getGroup_14() { return cGroup_14; }
 
-		//"context: "
+		//'context: '
 		public Keyword getContextKeyword_14_0() { return cContextKeyword_14_0; }
 
 		//metricContext=[metric::MetricContext|Fqn]
@@ -12738,12 +12935,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getMetricContextMetricContextFqnParserRuleCall_14_1_0_1() { return cMetricContextMetricContextFqnParserRuleCall_14_1_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_15() { return cRightCurlyBracketKeyword_15; }
 	}
 
 	public class SecuritySLOElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SecuritySLO");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.SecuritySLO");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cSecuritySloKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -12755,14 +12952,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCustomServiceLevelConditionFqnParserRuleCall_4_0_1 = (RuleCall)cCustomServiceLevelConditionCrossReference_4_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//SecuritySLO returns security::SecuritySLO:
-		//	"security slo " name=ID "{" "custom service level: " customServiceLevel=[metric::Condition|Fqn] "}";
+		//SecuritySLO security::SecuritySLO:
+		//	'security slo ' name=ID '{'
+		//	'custom service level: ' customServiceLevel=[metric::Condition|Fqn]
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"security slo " name=ID "{" "custom service level: " customServiceLevel=[metric::Condition|Fqn] "}"
+		//'security slo ' name=ID '{' 'custom service level: ' customServiceLevel=[metric::Condition|Fqn] '}'
 		public Group getGroup() { return cGroup; }
 
-		//"security slo "
+		//'security slo '
 		public Keyword getSecuritySloKeyword_0() { return cSecuritySloKeyword_0; }
 
 		//name=ID
@@ -12771,10 +12970,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"custom service level: "
+		//'custom service level: '
 		public Keyword getCustomServiceLevelKeyword_3() { return cCustomServiceLevelKeyword_3; }
 
 		//customServiceLevel=[metric::Condition|Fqn]
@@ -12786,18 +12985,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getCustomServiceLevelConditionFqnParserRuleCall_4_0_1() { return cCustomServiceLevelConditionFqnParserRuleCall_4_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class SecurityPropertyElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SecurityProperty");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.SecurityProperty");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cSecurityProperty_ImplParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cCertifiableParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//SecurityProperty returns security::SecurityProperty:
-		//	SecurityProperty_Impl | Certifiable;
+		//SecurityProperty security::SecurityProperty:
+		//	SecurityProperty_Impl | Certifiable
 		@Override public ParserRule getRule() { return rule; }
 
 		//SecurityProperty_Impl | Certifiable
@@ -12811,7 +13010,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class SecurityDomainElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SecurityDomain");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.SecurityDomain");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cDomainKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cIdAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -12834,16 +13033,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightSquareBracketKeyword_5_4 = (Keyword)cGroup_5.eContents().get(4);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
-		//SecurityDomain returns security::SecurityDomain:
-		//	"domain " id=ID "{" "name: " name=EString ("sub-domains " "[" subDomain+=[security::SecurityDomain|Fqn] (","
-		//	subDomain+=[security::SecurityDomain|Fqn])* "]")? "}";
+		//SecurityDomain security::SecurityDomain:
+		//	'domain ' id=ID '{'
+		//	'name: ' name=EString ('sub-domains ' '[' subDomain+=[security::SecurityDomain|Fqn] (','
+		//	subDomain+=[security::SecurityDomain|Fqn])* ']')?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"domain " id=ID "{" "name: " name=EString ("sub-domains " "[" subDomain+=[security::SecurityDomain|Fqn] (","
-		//subDomain+=[security::SecurityDomain|Fqn])* "]")? "}"
+		//'domain ' id=ID '{' 'name: ' name=EString ('sub-domains ' '[' subDomain+=[security::SecurityDomain|Fqn] (','
+		//subDomain+=[security::SecurityDomain|Fqn])* ']')? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"domain "
+		//'domain '
 		public Keyword getDomainKeyword_0() { return cDomainKeyword_0; }
 
 		//id=ID
@@ -12852,10 +13053,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getIdIDTerminalRuleCall_1_0() { return cIdIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"name: "
+		//'name: '
 		public Keyword getNameKeyword_3() { return cNameKeyword_3; }
 
 		//name=EString
@@ -12864,13 +13065,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getNameEStringParserRuleCall_4_0() { return cNameEStringParserRuleCall_4_0; }
 
-		//("sub-domains " "[" subDomain+=[security::SecurityDomain|Fqn] ("," subDomain+=[security::SecurityDomain|Fqn])* "]")?
+		//('sub-domains ' '[' subDomain+=[security::SecurityDomain|Fqn] (',' subDomain+=[security::SecurityDomain|Fqn])* ']')?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"sub-domains "
+		//'sub-domains '
 		public Keyword getSubDomainsKeyword_5_0() { return cSubDomainsKeyword_5_0; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_5_1() { return cLeftSquareBracketKeyword_5_1; }
 
 		//subDomain+=[security::SecurityDomain|Fqn]
@@ -12882,10 +13083,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSubDomainSecurityDomainFqnParserRuleCall_5_2_0_1() { return cSubDomainSecurityDomainFqnParserRuleCall_5_2_0_1; }
 
-		//("," subDomain+=[security::SecurityDomain|Fqn])*
+		//(',' subDomain+=[security::SecurityDomain|Fqn])*
 		public Group getGroup_5_3() { return cGroup_5_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_5_3_0() { return cCommaKeyword_5_3_0; }
 
 		//subDomain+=[security::SecurityDomain|Fqn]
@@ -12897,15 +13098,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSubDomainSecurityDomainFqnParserRuleCall_5_3_1_0_1() { return cSubDomainSecurityDomainFqnParserRuleCall_5_3_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_5_4() { return cRightSquareBracketKeyword_5_4; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class SecurityProperty_ImplElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SecurityProperty_Impl");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.SecurityProperty_Impl");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cPropertyKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -12948,20 +13149,22 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDomainSecurityDomainFqnParserRuleCall_9_0_1 = (RuleCall)cDomainSecurityDomainCrossReference_9_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
-		//SecurityProperty_Impl returns security::SecurityProperty:
-		//	"property " name=ID "{" ("description: " description=EString)? "type: " type=PropertyType ("sub-properties " "["
-		//	subProperties+=[security::SecurityProperty|Fqn] ("," subProperties+=[security::SecurityProperty|Fqn])* "]")?
-		//	("sensors " "[" sensors+=[metric::Sensor|Fqn] ("," sensors+=[metric::Sensor|Fqn])* "]")? "domain: "
-		//	domain=[security::SecurityDomain|Fqn] "}";
+		//SecurityProperty_Impl security::SecurityProperty:
+		//	'property ' name=ID '{' ('description: ' description=EString)?
+		//	'type: ' type=PropertyType ('sub-properties ' '[' subProperties+=[security::SecurityProperty|Fqn] (','
+		//	subProperties+=[security::SecurityProperty|Fqn])* ']')? ('sensors ' '[' sensors+=[metric::Sensor|Fqn] (','
+		//	sensors+=[metric::Sensor|Fqn])* ']')?
+		//	'domain: ' domain=[security::SecurityDomain|Fqn]
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"property " name=ID "{" ("description: " description=EString)? "type: " type=PropertyType ("sub-properties " "["
-		//subProperties+=[security::SecurityProperty|Fqn] ("," subProperties+=[security::SecurityProperty|Fqn])* "]")?
-		//("sensors " "[" sensors+=[metric::Sensor|Fqn] ("," sensors+=[metric::Sensor|Fqn])* "]")? "domain: "
-		//domain=[security::SecurityDomain|Fqn] "}"
+		//'property ' name=ID '{' ('description: ' description=EString)? 'type: ' type=PropertyType ('sub-properties ' '['
+		//subProperties+=[security::SecurityProperty|Fqn] (',' subProperties+=[security::SecurityProperty|Fqn])* ']')?
+		//('sensors ' '[' sensors+=[metric::Sensor|Fqn] (',' sensors+=[metric::Sensor|Fqn])* ']')? 'domain: '
+		//domain=[security::SecurityDomain|Fqn] '}'
 		public Group getGroup() { return cGroup; }
 
-		//"property "
+		//'property '
 		public Keyword getPropertyKeyword_0() { return cPropertyKeyword_0; }
 
 		//name=ID
@@ -12970,13 +13173,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("description: " description=EString)?
+		//('description: ' description=EString)?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"description: "
+		//'description: '
 		public Keyword getDescriptionKeyword_3_0() { return cDescriptionKeyword_3_0; }
 
 		//description=EString
@@ -12985,7 +13188,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getDescriptionEStringParserRuleCall_3_1_0() { return cDescriptionEStringParserRuleCall_3_1_0; }
 
-		//"type: "
+		//'type: '
 		public Keyword getTypeKeyword_4() { return cTypeKeyword_4; }
 
 		//type=PropertyType
@@ -12994,14 +13197,14 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//PropertyType
 		public RuleCall getTypePropertyTypeEnumRuleCall_5_0() { return cTypePropertyTypeEnumRuleCall_5_0; }
 
-		//("sub-properties " "[" subProperties+=[security::SecurityProperty|Fqn] (","
-		//subProperties+=[security::SecurityProperty|Fqn])* "]")?
+		//('sub-properties ' '[' subProperties+=[security::SecurityProperty|Fqn] (','
+		//subProperties+=[security::SecurityProperty|Fqn])* ']')?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//"sub-properties "
+		//'sub-properties '
 		public Keyword getSubPropertiesKeyword_6_0() { return cSubPropertiesKeyword_6_0; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_6_1() { return cLeftSquareBracketKeyword_6_1; }
 
 		//subProperties+=[security::SecurityProperty|Fqn]
@@ -13013,10 +13216,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSubPropertiesSecurityPropertyFqnParserRuleCall_6_2_0_1() { return cSubPropertiesSecurityPropertyFqnParserRuleCall_6_2_0_1; }
 
-		//("," subProperties+=[security::SecurityProperty|Fqn])*
+		//(',' subProperties+=[security::SecurityProperty|Fqn])*
 		public Group getGroup_6_3() { return cGroup_6_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_6_3_0() { return cCommaKeyword_6_3_0; }
 
 		//subProperties+=[security::SecurityProperty|Fqn]
@@ -13028,16 +13231,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSubPropertiesSecurityPropertyFqnParserRuleCall_6_3_1_0_1() { return cSubPropertiesSecurityPropertyFqnParserRuleCall_6_3_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_6_4() { return cRightSquareBracketKeyword_6_4; }
 
-		//("sensors " "[" sensors+=[metric::Sensor|Fqn] ("," sensors+=[metric::Sensor|Fqn])* "]")?
+		//('sensors ' '[' sensors+=[metric::Sensor|Fqn] (',' sensors+=[metric::Sensor|Fqn])* ']')?
 		public Group getGroup_7() { return cGroup_7; }
 
-		//"sensors "
+		//'sensors '
 		public Keyword getSensorsKeyword_7_0() { return cSensorsKeyword_7_0; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_7_1() { return cLeftSquareBracketKeyword_7_1; }
 
 		//sensors+=[metric::Sensor|Fqn]
@@ -13049,10 +13252,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSensorsSensorFqnParserRuleCall_7_2_0_1() { return cSensorsSensorFqnParserRuleCall_7_2_0_1; }
 
-		//("," sensors+=[metric::Sensor|Fqn])*
+		//(',' sensors+=[metric::Sensor|Fqn])*
 		public Group getGroup_7_3() { return cGroup_7_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_7_3_0() { return cCommaKeyword_7_3_0; }
 
 		//sensors+=[metric::Sensor|Fqn]
@@ -13064,10 +13267,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSensorsSensorFqnParserRuleCall_7_3_1_0_1() { return cSensorsSensorFqnParserRuleCall_7_3_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_7_4() { return cRightSquareBracketKeyword_7_4; }
 
-		//"domain: "
+		//'domain: '
 		public Keyword getDomainKeyword_8() { return cDomainKeyword_8; }
 
 		//domain=[security::SecurityDomain|Fqn]
@@ -13079,12 +13282,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getDomainSecurityDomainFqnParserRuleCall_9_0_1() { return cDomainSecurityDomainFqnParserRuleCall_9_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
 	}
 
 	public class CertifiableElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Certifiable");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Certifiable");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cCertifiableKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -13115,18 +13318,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDomainSecurityDomainFqnParserRuleCall_8_0_1 = (RuleCall)cDomainSecurityDomainCrossReference_8_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
-		//Certifiable returns security::Certifiable:
-		//	"certifiable" name=ID "{" ("description: " description=EString)? "type: " type=PropertyType ("sensors: " "["
-		//	sensors+=[metric::Sensor|Fqn] ("," sensors+=[metric::Sensor|Fqn])* "]")? "domain: "
-		//	domain=[security::SecurityDomain|Fqn] "}";
+		//Certifiable security::Certifiable:
+		//	'certifiable' name=ID '{' ('description: ' description=EString)?
+		//	'type: ' type=PropertyType ('sensors: ' '[' sensors+=[metric::Sensor|Fqn] (',' sensors+=[metric::Sensor|Fqn])* ']')?
+		//	'domain: ' domain=[security::SecurityDomain|Fqn]
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"certifiable" name=ID "{" ("description: " description=EString)? "type: " type=PropertyType ("sensors: " "["
-		//sensors+=[metric::Sensor|Fqn] ("," sensors+=[metric::Sensor|Fqn])* "]")? "domain: "
-		//domain=[security::SecurityDomain|Fqn] "}"
+		//'certifiable' name=ID '{' ('description: ' description=EString)? 'type: ' type=PropertyType ('sensors: ' '['
+		//sensors+=[metric::Sensor|Fqn] (',' sensors+=[metric::Sensor|Fqn])* ']')? 'domain: '
+		//domain=[security::SecurityDomain|Fqn] '}'
 		public Group getGroup() { return cGroup; }
 
-		//"certifiable"
+		//'certifiable'
 		public Keyword getCertifiableKeyword_0() { return cCertifiableKeyword_0; }
 
 		//name=ID
@@ -13135,13 +13339,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("description: " description=EString)?
+		//('description: ' description=EString)?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"description: "
+		//'description: '
 		public Keyword getDescriptionKeyword_3_0() { return cDescriptionKeyword_3_0; }
 
 		//description=EString
@@ -13150,7 +13354,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getDescriptionEStringParserRuleCall_3_1_0() { return cDescriptionEStringParserRuleCall_3_1_0; }
 
-		//"type: "
+		//'type: '
 		public Keyword getTypeKeyword_4() { return cTypeKeyword_4; }
 
 		//type=PropertyType
@@ -13159,13 +13363,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//PropertyType
 		public RuleCall getTypePropertyTypeEnumRuleCall_5_0() { return cTypePropertyTypeEnumRuleCall_5_0; }
 
-		//("sensors: " "[" sensors+=[metric::Sensor|Fqn] ("," sensors+=[metric::Sensor|Fqn])* "]")?
+		//('sensors: ' '[' sensors+=[metric::Sensor|Fqn] (',' sensors+=[metric::Sensor|Fqn])* ']')?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//"sensors: "
+		//'sensors: '
 		public Keyword getSensorsKeyword_6_0() { return cSensorsKeyword_6_0; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_6_1() { return cLeftSquareBracketKeyword_6_1; }
 
 		//sensors+=[metric::Sensor|Fqn]
@@ -13177,10 +13381,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSensorsSensorFqnParserRuleCall_6_2_0_1() { return cSensorsSensorFqnParserRuleCall_6_2_0_1; }
 
-		//("," sensors+=[metric::Sensor|Fqn])*
+		//(',' sensors+=[metric::Sensor|Fqn])*
 		public Group getGroup_6_3() { return cGroup_6_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_6_3_0() { return cCommaKeyword_6_3_0; }
 
 		//sensors+=[metric::Sensor|Fqn]
@@ -13192,10 +13396,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSensorsSensorFqnParserRuleCall_6_3_1_0_1() { return cSensorsSensorFqnParserRuleCall_6_3_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_6_4() { return cRightSquareBracketKeyword_6_4; }
 
-		//"domain: "
+		//'domain: '
 		public Keyword getDomainKeyword_7() { return cDomainKeyword_7; }
 
 		//domain=[security::SecurityDomain|Fqn]
@@ -13207,12 +13411,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getDomainSecurityDomainFqnParserRuleCall_8_0_1() { return cDomainSecurityDomainFqnParserRuleCall_8_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
 	}
 
 	public class SecurityRequirementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SecurityRequirement");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.SecurityRequirement");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cSecurityRequirementKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -13241,18 +13445,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cComponentInternalComponentFqnParserRuleCall_9_1_0_1 = (RuleCall)cComponentInternalComponentCrossReference_9_1_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
-		//SecurityRequirement returns requirement::SecurityRequirement:
-		//	"security requirement " name=ID "{" "controls " "[" securityControls+=[security::SecurityControl|Fqn] (","
-		//	securityControls+=[security::SecurityControl|Fqn])* "]" ("application: " application=[camel::Application|Fqn])?
-		//	("component: " component=[deployment::InternalComponent|Fqn])? "}";
+		//SecurityRequirement requirement::SecurityRequirement:
+		//	'security requirement ' name=ID '{'
+		//	'controls ' '[' securityControls+=[security::SecurityControl|Fqn] (','
+		//	securityControls+=[security::SecurityControl|Fqn])* ']' ('application: ' application=[camel::Application|Fqn])?
+		//	('component: ' component=[deployment::InternalComponent|Fqn])?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"security requirement " name=ID "{" "controls " "[" securityControls+=[security::SecurityControl|Fqn] (","
-		//securityControls+=[security::SecurityControl|Fqn])* "]" ("application: " application=[camel::Application|Fqn])?
-		//("component: " component=[deployment::InternalComponent|Fqn])? "}"
+		//'security requirement ' name=ID '{' 'controls ' '[' securityControls+=[security::SecurityControl|Fqn] (','
+		//securityControls+=[security::SecurityControl|Fqn])* ']' ('application: ' application=[camel::Application|Fqn])?
+		//('component: ' component=[deployment::InternalComponent|Fqn])? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"security requirement "
+		//'security requirement '
 		public Keyword getSecurityRequirementKeyword_0() { return cSecurityRequirementKeyword_0; }
 
 		//name=ID
@@ -13261,13 +13467,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"controls "
+		//'controls '
 		public Keyword getControlsKeyword_3() { return cControlsKeyword_3; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_4() { return cLeftSquareBracketKeyword_4; }
 
 		//securityControls+=[security::SecurityControl|Fqn]
@@ -13279,10 +13485,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSecurityControlsSecurityControlFqnParserRuleCall_5_0_1() { return cSecurityControlsSecurityControlFqnParserRuleCall_5_0_1; }
 
-		//("," securityControls+=[security::SecurityControl|Fqn])*
+		//(',' securityControls+=[security::SecurityControl|Fqn])*
 		public Group getGroup_6() { return cGroup_6; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_6_0() { return cCommaKeyword_6_0; }
 
 		//securityControls+=[security::SecurityControl|Fqn]
@@ -13294,13 +13500,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSecurityControlsSecurityControlFqnParserRuleCall_6_1_0_1() { return cSecurityControlsSecurityControlFqnParserRuleCall_6_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_7() { return cRightSquareBracketKeyword_7; }
 
-		//("application: " application=[camel::Application|Fqn])?
+		//('application: ' application=[camel::Application|Fqn])?
 		public Group getGroup_8() { return cGroup_8; }
 
-		//"application: "
+		//'application: '
 		public Keyword getApplicationKeyword_8_0() { return cApplicationKeyword_8_0; }
 
 		//application=[camel::Application|Fqn]
@@ -13312,10 +13518,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getApplicationApplicationFqnParserRuleCall_8_1_0_1() { return cApplicationApplicationFqnParserRuleCall_8_1_0_1; }
 
-		//("component: " component=[deployment::InternalComponent|Fqn])?
+		//('component: ' component=[deployment::InternalComponent|Fqn])?
 		public Group getGroup_9() { return cGroup_9; }
 
-		//"component: "
+		//'component: '
 		public Keyword getComponentKeyword_9_0() { return cComponentKeyword_9_0; }
 
 		//component=[deployment::InternalComponent|Fqn]
@@ -13327,12 +13533,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getComponentInternalComponentFqnParserRuleCall_9_1_0_1() { return cComponentInternalComponentFqnParserRuleCall_9_1_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
 	}
 
 	public class SecurityCapabilityElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SecurityCapability");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.SecurityCapability");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cSecurityCapabilityKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -13356,18 +13562,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDataCenterDataCenterFqnParserRuleCall_8_1_0_1 = (RuleCall)cDataCenterDataCenterCrossReference_8_1_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
-		//SecurityCapability returns security::SecurityCapability:
-		//	"security capability " name=ID "{" "controls " "[" securityControls+=[security::SecurityControl|Fqn] (","
-		//	securityControls+=[security::SecurityControl|Fqn])* "]" ("data center: " dataCenter=[organisation::DataCenter|Fqn])?
-		//	"}";
+		//SecurityCapability security::SecurityCapability:
+		//	'security capability ' name=ID '{'
+		//	'controls ' '[' securityControls+=[security::SecurityControl|Fqn] (','
+		//	securityControls+=[security::SecurityControl|Fqn])* ']' ('data center: ' dataCenter=[organisation::DataCenter|Fqn])?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"security capability " name=ID "{" "controls " "[" securityControls+=[security::SecurityControl|Fqn] (","
-		//securityControls+=[security::SecurityControl|Fqn])* "]" ("data center: " dataCenter=[organisation::DataCenter|Fqn])?
-		//"}"
+		//'security capability ' name=ID '{' 'controls ' '[' securityControls+=[security::SecurityControl|Fqn] (','
+		//securityControls+=[security::SecurityControl|Fqn])* ']' ('data center: ' dataCenter=[organisation::DataCenter|Fqn])?
+		//'}'
 		public Group getGroup() { return cGroup; }
 
-		//"security capability "
+		//'security capability '
 		public Keyword getSecurityCapabilityKeyword_0() { return cSecurityCapabilityKeyword_0; }
 
 		//name=ID
@@ -13376,13 +13583,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"controls "
+		//'controls '
 		public Keyword getControlsKeyword_3() { return cControlsKeyword_3; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_4() { return cLeftSquareBracketKeyword_4; }
 
 		//securityControls+=[security::SecurityControl|Fqn]
@@ -13394,10 +13601,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSecurityControlsSecurityControlFqnParserRuleCall_5_0_1() { return cSecurityControlsSecurityControlFqnParserRuleCall_5_0_1; }
 
-		//("," securityControls+=[security::SecurityControl|Fqn])*
+		//(',' securityControls+=[security::SecurityControl|Fqn])*
 		public Group getGroup_6() { return cGroup_6; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_6_0() { return cCommaKeyword_6_0; }
 
 		//securityControls+=[security::SecurityControl|Fqn]
@@ -13409,13 +13616,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSecurityControlsSecurityControlFqnParserRuleCall_6_1_0_1() { return cSecurityControlsSecurityControlFqnParserRuleCall_6_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_7() { return cRightSquareBracketKeyword_7; }
 
-		//("data center: " dataCenter=[organisation::DataCenter|Fqn])?
+		//('data center: ' dataCenter=[organisation::DataCenter|Fqn])?
 		public Group getGroup_8() { return cGroup_8; }
 
-		//"data center: "
+		//'data center: '
 		public Keyword getDataCenterKeyword_8_0() { return cDataCenterKeyword_8_0; }
 
 		//dataCenter=[organisation::DataCenter|Fqn]
@@ -13427,12 +13634,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getDataCenterDataCenterFqnParserRuleCall_8_1_0_1() { return cDataCenterDataCenterFqnParserRuleCall_8_1_0_1; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
 	}
 
 	public class SecurityControlElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SecurityControl");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.SecurityControl");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cSecurityControlKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -13487,26 +13694,29 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightSquareBracketKeyword_11_4 = (Keyword)cGroup_11.eContents().get(4);
 		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		
-		//SecurityControl returns security::SecurityControl:
-		//	"security control " name=ID "{" "specification: " specification=EString "domain: "
-		//	domain=[security::SecurityDomain|Fqn] "sub-domain: " subDomain=[security::SecurityDomain|Fqn] ("security properties "
-		//	"[" securityProperties+=[security::SecurityProperty|Fqn] ("," securityProperties+=[security::SecurityProperty|Fqn])*
-		//	"]")? ("raw security metrics " "[" rawSecurityMetrics+=[security::RawSecurityMetric|Fqn] (","
-		//	rawSecurityMetrics+=[security::RawSecurityMetric|Fqn])* "]")? ("composite security metrics " "["
-		//	compositeSecurityMetrics+=[security::CompositeSecurityMetric|Fqn] (","
-		//	compositeSecurityMetrics+=[security::CompositeSecurityMetric|Fqn])* "]")? "}";
+		//SecurityControl security::SecurityControl:
+		//	'security control ' name=ID '{'
+		//	'specification: ' specification=EString
+		//	'domain: ' domain=[security::SecurityDomain|Fqn]
+		//	'sub-domain: ' subDomain=[security::SecurityDomain|Fqn] ('security properties ' '['
+		//	securityProperties+=[security::SecurityProperty|Fqn] (',' securityProperties+=[security::SecurityProperty|Fqn])* ']')?
+		//	('raw security metrics ' '[' rawSecurityMetrics+=[security::RawSecurityMetric|Fqn] (','
+		//	rawSecurityMetrics+=[security::RawSecurityMetric|Fqn])* ']')? ('composite security metrics ' '['
+		//	compositeSecurityMetrics+=[security::CompositeSecurityMetric|Fqn] (','
+		//	compositeSecurityMetrics+=[security::CompositeSecurityMetric|Fqn])* ']')?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"security control " name=ID "{" "specification: " specification=EString "domain: " domain=[security::SecurityDomain|Fqn]
-		//"sub-domain: " subDomain=[security::SecurityDomain|Fqn] ("security properties " "["
-		//securityProperties+=[security::SecurityProperty|Fqn] ("," securityProperties+=[security::SecurityProperty|Fqn])* "]")?
-		//("raw security metrics " "[" rawSecurityMetrics+=[security::RawSecurityMetric|Fqn] (","
-		//rawSecurityMetrics+=[security::RawSecurityMetric|Fqn])* "]")? ("composite security metrics " "["
-		//compositeSecurityMetrics+=[security::CompositeSecurityMetric|Fqn] (","
-		//compositeSecurityMetrics+=[security::CompositeSecurityMetric|Fqn])* "]")? "}"
+		//'security control ' name=ID '{' 'specification: ' specification=EString 'domain: ' domain=[security::SecurityDomain|Fqn]
+		//'sub-domain: ' subDomain=[security::SecurityDomain|Fqn] ('security properties ' '['
+		//securityProperties+=[security::SecurityProperty|Fqn] (',' securityProperties+=[security::SecurityProperty|Fqn])* ']')?
+		//('raw security metrics ' '[' rawSecurityMetrics+=[security::RawSecurityMetric|Fqn] (','
+		//rawSecurityMetrics+=[security::RawSecurityMetric|Fqn])* ']')? ('composite security metrics ' '['
+		//compositeSecurityMetrics+=[security::CompositeSecurityMetric|Fqn] (','
+		//compositeSecurityMetrics+=[security::CompositeSecurityMetric|Fqn])* ']')? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"security control "
+		//'security control '
 		public Keyword getSecurityControlKeyword_0() { return cSecurityControlKeyword_0; }
 
 		//name=ID
@@ -13515,10 +13725,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"specification: "
+		//'specification: '
 		public Keyword getSpecificationKeyword_3() { return cSpecificationKeyword_3; }
 
 		//specification=EString
@@ -13527,7 +13737,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getSpecificationEStringParserRuleCall_4_0() { return cSpecificationEStringParserRuleCall_4_0; }
 
-		//"domain: "
+		//'domain: '
 		public Keyword getDomainKeyword_5() { return cDomainKeyword_5; }
 
 		//domain=[security::SecurityDomain|Fqn]
@@ -13539,7 +13749,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getDomainSecurityDomainFqnParserRuleCall_6_0_1() { return cDomainSecurityDomainFqnParserRuleCall_6_0_1; }
 
-		//"sub-domain: "
+		//'sub-domain: '
 		public Keyword getSubDomainKeyword_7() { return cSubDomainKeyword_7; }
 
 		//subDomain=[security::SecurityDomain|Fqn]
@@ -13551,14 +13761,14 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSubDomainSecurityDomainFqnParserRuleCall_8_0_1() { return cSubDomainSecurityDomainFqnParserRuleCall_8_0_1; }
 
-		//("security properties " "[" securityProperties+=[security::SecurityProperty|Fqn] (","
-		//securityProperties+=[security::SecurityProperty|Fqn])* "]")?
+		//('security properties ' '[' securityProperties+=[security::SecurityProperty|Fqn] (','
+		//securityProperties+=[security::SecurityProperty|Fqn])* ']')?
 		public Group getGroup_9() { return cGroup_9; }
 
-		//"security properties "
+		//'security properties '
 		public Keyword getSecurityPropertiesKeyword_9_0() { return cSecurityPropertiesKeyword_9_0; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_9_1() { return cLeftSquareBracketKeyword_9_1; }
 
 		//securityProperties+=[security::SecurityProperty|Fqn]
@@ -13570,10 +13780,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSecurityPropertiesSecurityPropertyFqnParserRuleCall_9_2_0_1() { return cSecurityPropertiesSecurityPropertyFqnParserRuleCall_9_2_0_1; }
 
-		//("," securityProperties+=[security::SecurityProperty|Fqn])*
+		//(',' securityProperties+=[security::SecurityProperty|Fqn])*
 		public Group getGroup_9_3() { return cGroup_9_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_9_3_0() { return cCommaKeyword_9_3_0; }
 
 		//securityProperties+=[security::SecurityProperty|Fqn]
@@ -13585,17 +13795,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getSecurityPropertiesSecurityPropertyFqnParserRuleCall_9_3_1_0_1() { return cSecurityPropertiesSecurityPropertyFqnParserRuleCall_9_3_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_9_4() { return cRightSquareBracketKeyword_9_4; }
 
-		//("raw security metrics " "[" rawSecurityMetrics+=[security::RawSecurityMetric|Fqn] (","
-		//rawSecurityMetrics+=[security::RawSecurityMetric|Fqn])* "]")?
+		//('raw security metrics ' '[' rawSecurityMetrics+=[security::RawSecurityMetric|Fqn] (','
+		//rawSecurityMetrics+=[security::RawSecurityMetric|Fqn])* ']')?
 		public Group getGroup_10() { return cGroup_10; }
 
-		//"raw security metrics "
+		//'raw security metrics '
 		public Keyword getRawSecurityMetricsKeyword_10_0() { return cRawSecurityMetricsKeyword_10_0; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_10_1() { return cLeftSquareBracketKeyword_10_1; }
 
 		//rawSecurityMetrics+=[security::RawSecurityMetric|Fqn]
@@ -13607,10 +13817,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getRawSecurityMetricsRawSecurityMetricFqnParserRuleCall_10_2_0_1() { return cRawSecurityMetricsRawSecurityMetricFqnParserRuleCall_10_2_0_1; }
 
-		//("," rawSecurityMetrics+=[security::RawSecurityMetric|Fqn])*
+		//(',' rawSecurityMetrics+=[security::RawSecurityMetric|Fqn])*
 		public Group getGroup_10_3() { return cGroup_10_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_10_3_0() { return cCommaKeyword_10_3_0; }
 
 		//rawSecurityMetrics+=[security::RawSecurityMetric|Fqn]
@@ -13622,17 +13832,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getRawSecurityMetricsRawSecurityMetricFqnParserRuleCall_10_3_1_0_1() { return cRawSecurityMetricsRawSecurityMetricFqnParserRuleCall_10_3_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_10_4() { return cRightSquareBracketKeyword_10_4; }
 
-		//("composite security metrics " "[" compositeSecurityMetrics+=[security::CompositeSecurityMetric|Fqn] (","
-		//compositeSecurityMetrics+=[security::CompositeSecurityMetric|Fqn])* "]")?
+		//('composite security metrics ' '[' compositeSecurityMetrics+=[security::CompositeSecurityMetric|Fqn] (','
+		//compositeSecurityMetrics+=[security::CompositeSecurityMetric|Fqn])* ']')?
 		public Group getGroup_11() { return cGroup_11; }
 
-		//"composite security metrics "
+		//'composite security metrics '
 		public Keyword getCompositeSecurityMetricsKeyword_11_0() { return cCompositeSecurityMetricsKeyword_11_0; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_11_1() { return cLeftSquareBracketKeyword_11_1; }
 
 		//compositeSecurityMetrics+=[security::CompositeSecurityMetric|Fqn]
@@ -13644,10 +13854,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getCompositeSecurityMetricsCompositeSecurityMetricFqnParserRuleCall_11_2_0_1() { return cCompositeSecurityMetricsCompositeSecurityMetricFqnParserRuleCall_11_2_0_1; }
 
-		//("," compositeSecurityMetrics+=[security::CompositeSecurityMetric|Fqn])*
+		//(',' compositeSecurityMetrics+=[security::CompositeSecurityMetric|Fqn])*
 		public Group getGroup_11_3() { return cGroup_11_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_11_3_0() { return cCommaKeyword_11_3_0; }
 
 		//compositeSecurityMetrics+=[security::CompositeSecurityMetric|Fqn]
@@ -13659,15 +13869,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getCompositeSecurityMetricsCompositeSecurityMetricFqnParserRuleCall_11_3_1_0_1() { return cCompositeSecurityMetricsCompositeSecurityMetricFqnParserRuleCall_11_3_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_11_4() { return cRightSquareBracketKeyword_11_4; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
 	}
 
 	public class TypeModelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TypeModel");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.TypeModel");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cTypeModelAction_0 = (Action)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
@@ -13691,25 +13901,26 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cValuesValueParserRuleCall_5_1_0 = (RuleCall)cValuesAssignment_5_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
-		/// * Type model * / TypeModel returns type::TypeModel:
-		//	{type::TypeModel} ("importURI" "{" importURI+=EString ("," importURI+=EString)* "}")? "type model " name=ID "{"
-		//	(dataTypes+=ValueType | values+=Value)* "}";
+		/// * Type model * / TypeModel type::TypeModel:
+		//	{type::TypeModel} ('importURI' '{' importURI+=EString (',' importURI+=EString)* '}')?
+		//	'type model ' name=ID '{' (dataTypes+=ValueType | values+=Value)*
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//{type::TypeModel} ("importURI" "{" importURI+=EString ("," importURI+=EString)* "}")? "type model " name=ID "{"
-		//(dataTypes+=ValueType | values+=Value)* "}"
+		//{type::TypeModel} ('importURI' '{' importURI+=EString (',' importURI+=EString)* '}')? 'type model ' name=ID '{'
+		//(dataTypes+=ValueType | values+=Value)* '}'
 		public Group getGroup() { return cGroup; }
 
 		//{type::TypeModel}
 		public Action getTypeModelAction_0() { return cTypeModelAction_0; }
 
-		//("importURI" "{" importURI+=EString ("," importURI+=EString)* "}")?
+		//('importURI' '{' importURI+=EString (',' importURI+=EString)* '}')?
 		public Group getGroup_1() { return cGroup_1; }
 
-		//"importURI"
+		//'importURI'
 		public Keyword getImportURIKeyword_1_0() { return cImportURIKeyword_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1_1() { return cLeftCurlyBracketKeyword_1_1; }
 
 		//importURI+=EString
@@ -13718,10 +13929,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getImportURIEStringParserRuleCall_1_2_0() { return cImportURIEStringParserRuleCall_1_2_0; }
 
-		//("," importURI+=EString)*
+		//(',' importURI+=EString)*
 		public Group getGroup_1_3() { return cGroup_1_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_1_3_0() { return cCommaKeyword_1_3_0; }
 
 		//importURI+=EString
@@ -13730,10 +13941,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getImportURIEStringParserRuleCall_1_3_1_0() { return cImportURIEStringParserRuleCall_1_3_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_1_4() { return cRightCurlyBracketKeyword_1_4; }
 
-		//"type model "
+		//'type model '
 		public Keyword getTypeModelKeyword_2() { return cTypeModelKeyword_2; }
 
 		//name=ID
@@ -13742,7 +13953,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_3_0() { return cNameIDTerminalRuleCall_3_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 
 		//(dataTypes+=ValueType | values+=Value)*
@@ -13760,12 +13971,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Value
 		public RuleCall getValuesValueParserRuleCall_5_1_0() { return cValuesValueParserRuleCall_5_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class ValueElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Value");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Value");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cBoolValueParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cEnumerateValueParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
@@ -13777,9 +13988,9 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cValueToIncreaseParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
 		private final RuleCall cStringsValueParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
 		
-		//Value returns type::SingleValue:
+		//Value type::SingleValue:
 		//	BoolValue | EnumerateValue | IntegerValue | FloatsValue | DoublePrecisionValue | NegativeInf | PositiveInf |
-		//	ValueToIncrease | StringsValue;
+		//	ValueToIncrease | StringsValue
 		@Override public ParserRule getRule() { return rule; }
 
 		//BoolValue | EnumerateValue | IntegerValue | FloatsValue | DoublePrecisionValue | NegativeInf | PositiveInf |
@@ -13815,7 +14026,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class BoolValueTypeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BoolValueType");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.BoolValueType");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cBooleanValueTypeKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -13826,14 +14037,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cPrimitiveTypeTypeEnumEnumRuleCall_4_0 = (RuleCall)cPrimitiveTypeAssignment_4.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//BoolValueType returns type::BooleanValueType:
-		//	"boolean value type " name=ID "{" "primitive type: " primitiveType=TypeEnum "}";
+		//BoolValueType type::BooleanValueType:
+		//	'boolean value type ' name=ID '{'
+		//	'primitive type: ' primitiveType=TypeEnum
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"boolean value type " name=ID "{" "primitive type: " primitiveType=TypeEnum "}"
+		//'boolean value type ' name=ID '{' 'primitive type: ' primitiveType=TypeEnum '}'
 		public Group getGroup() { return cGroup; }
 
-		//"boolean value type "
+		//'boolean value type '
 		public Keyword getBooleanValueTypeKeyword_0() { return cBooleanValueTypeKeyword_0; }
 
 		//name=ID
@@ -13842,10 +14055,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"primitive type: "
+		//'primitive type: '
 		public Keyword getPrimitiveTypeKeyword_3() { return cPrimitiveTypeKeyword_3; }
 
 		//primitiveType=TypeEnum
@@ -13854,12 +14067,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//TypeEnum
 		public RuleCall getPrimitiveTypeTypeEnumEnumRuleCall_4_0() { return cPrimitiveTypeTypeEnumEnumRuleCall_4_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class EnumerationElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Enumeration");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Enumeration");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cEnumerationKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -13876,14 +14089,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightSquareBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
-		//Enumeration returns type::Enumeration:
-		//	"enumeration " name=ID "{" "values " "[" values+=EnumerateValue ("," values+=EnumerateValue)* "]" "}";
+		//Enumeration type::Enumeration:
+		//	'enumeration ' name=ID '{'
+		//	'values ' '[' values+=EnumerateValue (',' values+=EnumerateValue)* ']'
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"enumeration " name=ID "{" "values " "[" values+=EnumerateValue ("," values+=EnumerateValue)* "]" "}"
+		//'enumeration ' name=ID '{' 'values ' '[' values+=EnumerateValue (',' values+=EnumerateValue)* ']' '}'
 		public Group getGroup() { return cGroup; }
 
-		//"enumeration "
+		//'enumeration '
 		public Keyword getEnumerationKeyword_0() { return cEnumerationKeyword_0; }
 
 		//name=ID
@@ -13892,13 +14107,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"values "
+		//'values '
 		public Keyword getValuesKeyword_3() { return cValuesKeyword_3; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_4() { return cLeftSquareBracketKeyword_4; }
 
 		//values+=EnumerateValue
@@ -13907,10 +14122,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EnumerateValue
 		public RuleCall getValuesEnumerateValueParserRuleCall_5_0() { return cValuesEnumerateValueParserRuleCall_5_0; }
 
-		//("," values+=EnumerateValue)*
+		//(',' values+=EnumerateValue)*
 		public Group getGroup_6() { return cGroup_6; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_6_0() { return cCommaKeyword_6_0; }
 
 		//values+=EnumerateValue
@@ -13919,15 +14134,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EnumerateValue
 		public RuleCall getValuesEnumerateValueParserRuleCall_6_1_0() { return cValuesEnumerateValueParserRuleCall_6_1_0; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_7() { return cRightSquareBracketKeyword_7; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 	}
 
 	public class ListElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "List");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.List");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cListKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -13953,16 +14168,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightSquareBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
-		//List returns type::List:
-		//	"list " name=ID "{" ("primitive type: " primitiveType=TypeEnum)? ("type: " type=[type::ValueType|Fqn])? "values " "["
-		//	values+=Value ("," values+=Value)* "]" "}";
+		//List type::List:
+		//	'list ' name=ID '{' ('primitive type: ' primitiveType=TypeEnum)? ('type: ' type=[type::ValueType|Fqn])?
+		//	'values ' '[' values+=Value (',' values+=Value)* ']'
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"list " name=ID "{" ("primitive type: " primitiveType=TypeEnum)? ("type: " type=[type::ValueType|Fqn])? "values " "["
-		//values+=Value ("," values+=Value)* "]" "}"
+		//'list ' name=ID '{' ('primitive type: ' primitiveType=TypeEnum)? ('type: ' type=[type::ValueType|Fqn])? 'values ' '['
+		//values+=Value (',' values+=Value)* ']' '}'
 		public Group getGroup() { return cGroup; }
 
-		//"list "
+		//'list '
 		public Keyword getListKeyword_0() { return cListKeyword_0; }
 
 		//name=ID
@@ -13971,13 +14187,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("primitive type: " primitiveType=TypeEnum)?
+		//('primitive type: ' primitiveType=TypeEnum)?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"primitive type: "
+		//'primitive type: '
 		public Keyword getPrimitiveTypeKeyword_3_0() { return cPrimitiveTypeKeyword_3_0; }
 
 		//primitiveType=TypeEnum
@@ -13986,10 +14202,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//TypeEnum
 		public RuleCall getPrimitiveTypeTypeEnumEnumRuleCall_3_1_0() { return cPrimitiveTypeTypeEnumEnumRuleCall_3_1_0; }
 
-		//("type: " type=[type::ValueType|Fqn])?
+		//('type: ' type=[type::ValueType|Fqn])?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//"type: "
+		//'type: '
 		public Keyword getTypeKeyword_4_0() { return cTypeKeyword_4_0; }
 
 		//type=[type::ValueType|Fqn]
@@ -14001,10 +14217,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getTypeValueTypeFqnParserRuleCall_4_1_0_1() { return cTypeValueTypeFqnParserRuleCall_4_1_0_1; }
 
-		//"values "
+		//'values '
 		public Keyword getValuesKeyword_5() { return cValuesKeyword_5; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_6() { return cLeftSquareBracketKeyword_6; }
 
 		//values+=Value
@@ -14013,10 +14229,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Value
 		public RuleCall getValuesValueParserRuleCall_7_0() { return cValuesValueParserRuleCall_7_0; }
 
-		//("," values+=Value)*
+		//(',' values+=Value)*
 		public Group getGroup_8() { return cGroup_8; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_8_0() { return cCommaKeyword_8_0; }
 
 		//values+=Value
@@ -14025,15 +14241,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Value
 		public RuleCall getValuesValueParserRuleCall_8_1_0() { return cValuesValueParserRuleCall_8_1_0; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_9() { return cRightSquareBracketKeyword_9; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
 	}
 
 	public class RangeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Range");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Range");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRangeKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -14050,16 +14266,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cUpperLimitLimitParserRuleCall_8_0 = (RuleCall)cUpperLimitAssignment_8.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
-		//Range returns type::Range:
-		//	"range " name=ID "{" "primitive type: " primitiveType=TypeEnum "lower limit " lowerLimit=Limit "upper limit "
-		//	upperLimit=Limit "}";
+		//Range type::Range:
+		//	'range ' name=ID '{'
+		//	'primitive type: ' primitiveType=TypeEnum
+		//	'lower limit ' lowerLimit=Limit
+		//	'upper limit ' upperLimit=Limit
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"range " name=ID "{" "primitive type: " primitiveType=TypeEnum "lower limit " lowerLimit=Limit "upper limit "
-		//upperLimit=Limit "}"
+		//'range ' name=ID '{' 'primitive type: ' primitiveType=TypeEnum 'lower limit ' lowerLimit=Limit 'upper limit '
+		//upperLimit=Limit '}'
 		public Group getGroup() { return cGroup; }
 
-		//"range "
+		//'range '
 		public Keyword getRangeKeyword_0() { return cRangeKeyword_0; }
 
 		//name=ID
@@ -14068,10 +14287,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"primitive type: "
+		//'primitive type: '
 		public Keyword getPrimitiveTypeKeyword_3() { return cPrimitiveTypeKeyword_3; }
 
 		//primitiveType=TypeEnum
@@ -14080,7 +14299,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//TypeEnum
 		public RuleCall getPrimitiveTypeTypeEnumEnumRuleCall_4_0() { return cPrimitiveTypeTypeEnumEnumRuleCall_4_0; }
 
-		//"lower limit "
+		//'lower limit '
 		public Keyword getLowerLimitKeyword_5() { return cLowerLimitKeyword_5; }
 
 		//lowerLimit=Limit
@@ -14089,7 +14308,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Limit
 		public RuleCall getLowerLimitLimitParserRuleCall_6_0() { return cLowerLimitLimitParserRuleCall_6_0; }
 
-		//"upper limit "
+		//'upper limit '
 		public Keyword getUpperLimitKeyword_7() { return cUpperLimitKeyword_7; }
 
 		//upperLimit=Limit
@@ -14098,12 +14317,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Limit
 		public RuleCall getUpperLimitLimitParserRuleCall_8_0() { return cUpperLimitLimitParserRuleCall_8_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
 	}
 
 	public class RangeUnionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RangeUnion");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.RangeUnion");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRangeUnionKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -14123,16 +14342,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightSquareBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
-		//RangeUnion returns type::RangeUnion:
-		//	"range union " name=ID "{" "primitive type: " primitiveType=TypeEnum "ranges " "[" ranges+=Range ("," ranges+=Range)*
-		//	"]" "}";
+		//RangeUnion type::RangeUnion:
+		//	'range union ' name=ID '{'
+		//	'primitive type: ' primitiveType=TypeEnum
+		//	'ranges ' '[' ranges+=Range (',' ranges+=Range)* ']'
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"range union " name=ID "{" "primitive type: " primitiveType=TypeEnum "ranges " "[" ranges+=Range ("," ranges+=Range)*
-		//"]" "}"
+		//'range union ' name=ID '{' 'primitive type: ' primitiveType=TypeEnum 'ranges ' '[' ranges+=Range (',' ranges+=Range)*
+		//']' '}'
 		public Group getGroup() { return cGroup; }
 
-		//"range union "
+		//'range union '
 		public Keyword getRangeUnionKeyword_0() { return cRangeUnionKeyword_0; }
 
 		//name=ID
@@ -14141,10 +14362,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"primitive type: "
+		//'primitive type: '
 		public Keyword getPrimitiveTypeKeyword_3() { return cPrimitiveTypeKeyword_3; }
 
 		//primitiveType=TypeEnum
@@ -14153,10 +14374,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//TypeEnum
 		public RuleCall getPrimitiveTypeTypeEnumEnumRuleCall_4_0() { return cPrimitiveTypeTypeEnumEnumRuleCall_4_0; }
 
-		//"ranges "
+		//'ranges '
 		public Keyword getRangesKeyword_5() { return cRangesKeyword_5; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_6() { return cLeftSquareBracketKeyword_6; }
 
 		//ranges+=Range
@@ -14165,10 +14386,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Range
 		public RuleCall getRangesRangeParserRuleCall_7_0() { return cRangesRangeParserRuleCall_7_0; }
 
-		//("," ranges+=Range)*
+		//(',' ranges+=Range)*
 		public Group getGroup_8() { return cGroup_8; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_8_0() { return cCommaKeyword_8_0; }
 
 		//ranges+=Range
@@ -14177,15 +14398,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Range
 		public RuleCall getRangesRangeParserRuleCall_8_1_0() { return cRangesRangeParserRuleCall_8_1_0; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_9() { return cRightSquareBracketKeyword_9; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
 	}
 
 	public class StringsValueTypeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "StringsValueType");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.StringsValueType");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cStringValueTypeKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -14196,14 +14417,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cPrimitiveTypeTypeEnumEnumRuleCall_4_0 = (RuleCall)cPrimitiveTypeAssignment_4.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//StringsValueType returns type::StringValueType:
-		//	"string value type " name=ID "{" "primitive type: " primitiveType=TypeEnum "}";
+		//StringsValueType type::StringValueType:
+		//	'string value type ' name=ID '{'
+		//	'primitive type: ' primitiveType=TypeEnum
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"string value type " name=ID "{" "primitive type: " primitiveType=TypeEnum "}"
+		//'string value type ' name=ID '{' 'primitive type: ' primitiveType=TypeEnum '}'
 		public Group getGroup() { return cGroup; }
 
-		//"string value type "
+		//'string value type '
 		public Keyword getStringValueTypeKeyword_0() { return cStringValueTypeKeyword_0; }
 
 		//name=ID
@@ -14212,10 +14435,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"primitive type: "
+		//'primitive type: '
 		public Keyword getPrimitiveTypeKeyword_3() { return cPrimitiveTypeKeyword_3; }
 
 		//primitiveType=TypeEnum
@@ -14224,12 +14447,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//TypeEnum
 		public RuleCall getPrimitiveTypeTypeEnumEnumRuleCall_4_0() { return cPrimitiveTypeTypeEnumEnumRuleCall_4_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class EnumerateValueElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "EnumerateValue");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.EnumerateValue");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cNameEStringParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
@@ -14237,11 +14460,11 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cValueEIntParserRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
 		
-		//EnumerateValue returns type::EnumerateValue:
-		//	name=EString ":" value=EInt;
+		//EnumerateValue type::EnumerateValue:
+		//	name=EString ':' value=EInt
 		@Override public ParserRule getRule() { return rule; }
 
-		//name=EString ":" value=EInt
+		//name=EString ':' value=EInt
 		public Group getGroup() { return cGroup; }
 
 		//name=EString
@@ -14250,7 +14473,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getNameEStringParserRuleCall_0_0() { return cNameEStringParserRuleCall_0_0; }
 
-		//":"
+		//':'
 		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
 
 		//value=EInt
@@ -14261,19 +14484,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class EIntElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "EInt");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.EInt");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cHyphenMinusKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
-		//EInt returns ecore::EInt:
-		//	"-"? INT;
+		//EInt ecore::EInt:
+		//	'-'? INT
 		@Override public ParserRule getRule() { return rule; }
 
-		//"-"? INT
+		//'-'? INT
 		public Group getGroup() { return cGroup; }
 
-		//"-"?
+		//'-'?
 		public Keyword getHyphenMinusKeyword_0() { return cHyphenMinusKeyword_0; }
 
 		//INT
@@ -14281,7 +14504,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class LimitElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Limit");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Limit");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cLeftCurlyBracketKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -14290,14 +14513,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cIncludedIncludedKeyword_2_0 = (Keyword)cIncludedAssignment_2.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
-		//Limit returns type::Limit:
-		//	"{" value=NumericValue included?="included"? "}";
+		//Limit type::Limit:
+		//	'{'
+		//	value=NumericValue
+		//	included?='included'?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"{" value=NumericValue included?="included"? "}"
+		//'{' value=NumericValue included?='included'? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_0() { return cLeftCurlyBracketKeyword_0; }
 
 		//value=NumericValue
@@ -14306,50 +14532,50 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//NumericValue
 		public RuleCall getValueNumericValueParserRuleCall_1_0() { return cValueNumericValueParserRuleCall_1_0; }
 
-		//included?="included"?
+		//included?='included'?
 		public Assignment getIncludedAssignment_2() { return cIncludedAssignment_2; }
 
-		//"included"
+		//'included'
 		public Keyword getIncludedIncludedKeyword_2_0() { return cIncludedIncludedKeyword_2_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 	}
 
 	public class EBooleanElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "EBoolean");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.EBoolean");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Keyword cTrueKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
 		private final Keyword cFalseKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
 		
-		//EBoolean returns ecore::EBoolean:
-		//	"true" | "false";
+		//EBoolean ecore::EBoolean:
+		//	'true' | 'false'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"true" | "false"
+		//'true' | 'false'
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//"true"
+		//'true'
 		public Keyword getTrueKeyword_0() { return cTrueKeyword_0; }
 
-		//"false"
+		//'false'
 		public Keyword getFalseKeyword_1() { return cFalseKeyword_1; }
 	}
 
 	public class EShortElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "EShort");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.EShort");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cHyphenMinusKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
-		//EShort returns ecore::EShort:
-		//	"-"? INT;
+		//EShort ecore::EShort:
+		//	'-'? INT
 		@Override public ParserRule getRule() { return rule; }
 
-		//"-"? INT
+		//'-'? INT
 		public Group getGroup() { return cGroup; }
 
-		//"-"?
+		//'-'?
 		public Keyword getHyphenMinusKeyword_0() { return cHyphenMinusKeyword_0; }
 
 		//INT
@@ -14357,20 +14583,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class IntegerValueElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "IntegerValue");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.IntegerValue");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cIntValueKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cValueEIntParserRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
 		
-		//IntegerValue returns type::IntegerValue:
-		//	"int value " value=EInt;
+		//IntegerValue type::IntegerValue:
+		//	'int value ' value=EInt
 		@Override public ParserRule getRule() { return rule; }
 
-		//"int value " value=EInt
+		//'int value ' value=EInt
 		public Group getGroup() { return cGroup; }
 
-		//"int value "
+		//'int value '
 		public Keyword getIntValueKeyword_0() { return cIntValueKeyword_0; }
 
 		//value=EInt
@@ -14381,20 +14607,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class FloatsValueElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "FloatsValue");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.FloatsValue");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cFloatValueKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cValueEFloatParserRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
 		
-		//FloatsValue returns type::FloatsValue:
-		//	"float value " value=EFloat;
+		//FloatsValue type::FloatsValue:
+		//	'float value ' value=EFloat
 		@Override public ParserRule getRule() { return rule; }
 
-		//"float value " value=EFloat
+		//'float value ' value=EFloat
 		public Group getGroup() { return cGroup; }
 
-		//"float value "
+		//'float value '
 		public Keyword getFloatValueKeyword_0() { return cFloatValueKeyword_0; }
 
 		//value=EFloat
@@ -14405,20 +14631,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class DoublePrecisionValueElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DoublePrecisionValue");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.DoublePrecisionValue");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cDoubleValueKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cValueEDoubleParserRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
 		
-		//DoublePrecisionValue returns type::DoublePrecisionValue:
-		//	"double value " value=EDouble;
+		//DoublePrecisionValue type::DoublePrecisionValue:
+		//	'double value ' value=EDouble
 		@Override public ParserRule getRule() { return rule; }
 
-		//"double value " value=EDouble
+		//'double value ' value=EDouble
 		public Group getGroup() { return cGroup; }
 
-		//"double value "
+		//'double value '
 		public Keyword getDoubleValueKeyword_0() { return cDoubleValueKeyword_0; }
 
 		//value=EDouble
@@ -14429,60 +14655,62 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class NegativeInfElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "NegativeInf");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.NegativeInf");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cNegativeInfAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cNegativeInfinityKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		
-		//NegativeInf returns type::NegativeInf:
-		//	{type::NegativeInf} "negative infinity";
+		//NegativeInf type::NegativeInf:
+		//	{type::NegativeInf}
+		//	'negative infinity'
 		@Override public ParserRule getRule() { return rule; }
 
-		//{type::NegativeInf} "negative infinity"
+		//{type::NegativeInf} 'negative infinity'
 		public Group getGroup() { return cGroup; }
 
 		//{type::NegativeInf}
 		public Action getNegativeInfAction_0() { return cNegativeInfAction_0; }
 
-		//"negative infinity"
+		//'negative infinity'
 		public Keyword getNegativeInfinityKeyword_1() { return cNegativeInfinityKeyword_1; }
 	}
 
 	public class PositiveInfElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "PositiveInf");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.PositiveInf");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cPositiveInfAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cPositiveInfinityKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		
-		//PositiveInf returns type::PositiveInf:
-		//	{type::PositiveInf} "positive infinity";
+		//PositiveInf type::PositiveInf:
+		//	{type::PositiveInf}
+		//	'positive infinity'
 		@Override public ParserRule getRule() { return rule; }
 
-		//{type::PositiveInf} "positive infinity"
+		//{type::PositiveInf} 'positive infinity'
 		public Group getGroup() { return cGroup; }
 
 		//{type::PositiveInf}
 		public Action getPositiveInfAction_0() { return cPositiveInfAction_0; }
 
-		//"positive infinity"
+		//'positive infinity'
 		public Keyword getPositiveInfinityKeyword_1() { return cPositiveInfinityKeyword_1; }
 	}
 
 	public class ValueToIncreaseElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ValueToIncrease");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ValueToIncrease");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cValueToIncreaseKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cValueNumericValueParserRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
 		
-		//ValueToIncrease returns type::ValueToIncrease:
-		//	"value to increase " value=NumericValue;
+		//ValueToIncrease type::ValueToIncrease:
+		//	'value to increase ' value=NumericValue
 		@Override public ParserRule getRule() { return rule; }
 
-		//"value to increase " value=NumericValue
+		//'value to increase ' value=NumericValue
 		public Group getGroup() { return cGroup; }
 
-		//"value to increase "
+		//'value to increase '
 		public Keyword getValueToIncreaseKeyword_0() { return cValueToIncreaseKeyword_0; }
 
 		//value=NumericValue
@@ -14493,7 +14721,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class EFloatElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "EFloat");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.EFloat");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cHyphenMinusKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
@@ -14506,38 +14734,38 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cHyphenMinusKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
 		private final RuleCall cINTTerminalRuleCall_4_2 = (RuleCall)cGroup_4.eContents().get(2);
 		
-		//EFloat returns ecore::EFloat:
-		//	"-"? INT? "." INT (("E" | "e") "-"? INT)?;
+		//EFloat ecore::EFloat:
+		//	'-'? INT? '.' INT (('E' | 'e') '-'? INT)?
 		@Override public ParserRule getRule() { return rule; }
 
-		//"-"? INT? "." INT (("E" | "e") "-"? INT)?
+		//'-'? INT? '.' INT (('E' | 'e') '-'? INT)?
 		public Group getGroup() { return cGroup; }
 
-		//"-"?
+		//'-'?
 		public Keyword getHyphenMinusKeyword_0() { return cHyphenMinusKeyword_0; }
 
 		//INT?
 		public RuleCall getINTTerminalRuleCall_1() { return cINTTerminalRuleCall_1; }
 
-		//"."
+		//'.'
 		public Keyword getFullStopKeyword_2() { return cFullStopKeyword_2; }
 
 		//INT
 		public RuleCall getINTTerminalRuleCall_3() { return cINTTerminalRuleCall_3; }
 
-		//(("E" | "e") "-"? INT)?
+		//(('E' | 'e') '-'? INT)?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//"E" | "e"
+		//('E' | 'e')
 		public Alternatives getAlternatives_4_0() { return cAlternatives_4_0; }
 
-		//"E"
+		//'E'
 		public Keyword getEKeyword_4_0_0() { return cEKeyword_4_0_0; }
 
-		//"e"
+		//'e'
 		public Keyword getEKeyword_4_0_1() { return cEKeyword_4_0_1; }
 
-		//"-"?
+		//'-'?
 		public Keyword getHyphenMinusKeyword_4_1() { return cHyphenMinusKeyword_4_1; }
 
 		//INT
@@ -14545,7 +14773,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class EDoubleElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "EDouble");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.EDouble");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cHyphenMinusKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
@@ -14558,38 +14786,38 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cHyphenMinusKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
 		private final RuleCall cINTTerminalRuleCall_4_2 = (RuleCall)cGroup_4.eContents().get(2);
 		
-		//EDouble returns ecore::EDouble:
-		//	"-"? INT? "." INT (("E" | "e") "-"? INT)?;
+		//EDouble ecore::EDouble:
+		//	'-'? INT? '.' INT (('E' | 'e') '-'? INT)?
 		@Override public ParserRule getRule() { return rule; }
 
-		//"-"? INT? "." INT (("E" | "e") "-"? INT)?
+		//'-'? INT? '.' INT (('E' | 'e') '-'? INT)?
 		public Group getGroup() { return cGroup; }
 
-		//"-"?
+		//'-'?
 		public Keyword getHyphenMinusKeyword_0() { return cHyphenMinusKeyword_0; }
 
 		//INT?
 		public RuleCall getINTTerminalRuleCall_1() { return cINTTerminalRuleCall_1; }
 
-		//"."
+		//'.'
 		public Keyword getFullStopKeyword_2() { return cFullStopKeyword_2; }
 
 		//INT
 		public RuleCall getINTTerminalRuleCall_3() { return cINTTerminalRuleCall_3; }
 
-		//(("E" | "e") "-"? INT)?
+		//(('E' | 'e') '-'? INT)?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//"E" | "e"
+		//('E' | 'e')
 		public Alternatives getAlternatives_4_0() { return cAlternatives_4_0; }
 
-		//"E"
+		//'E'
 		public Keyword getEKeyword_4_0_0() { return cEKeyword_4_0_0; }
 
-		//"e"
+		//'e'
 		public Keyword getEKeyword_4_0_1() { return cEKeyword_4_0_1; }
 
-		//"-"?
+		//'-'?
 		public Keyword getHyphenMinusKeyword_4_1() { return cHyphenMinusKeyword_4_1; }
 
 		//INT
@@ -14597,20 +14825,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class BoolValueElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BoolValue");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.BoolValue");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cBooleanValueKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cValueEBooleanParserRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
 		
-		//BoolValue returns type::BoolValue:
-		//	"boolean value " value=EBoolean;
+		//BoolValue type::BoolValue:
+		//	'boolean value ' value=EBoolean
 		@Override public ParserRule getRule() { return rule; }
 
-		//"boolean value " value=EBoolean
+		//'boolean value ' value=EBoolean
 		public Group getGroup() { return cGroup; }
 
-		//"boolean value "
+		//'boolean value '
 		public Keyword getBooleanValueKeyword_0() { return cBooleanValueKeyword_0; }
 
 		//value=EBoolean
@@ -14621,20 +14849,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class StringsValueElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "StringsValue");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.StringsValue");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cStringValueKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cValueEStringParserRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
 		
-		//StringsValue returns type::StringsValue:
-		//	"string value " value=EString;
+		//StringsValue type::StringsValue:
+		//	'string value ' value=EString
 		@Override public ParserRule getRule() { return rule; }
 
-		//"string value " value=EString
+		//'string value ' value=EString
 		public Group getGroup() { return cGroup; }
 
-		//"string value "
+		//'string value '
 		public Keyword getStringValueKeyword_0() { return cStringValueKeyword_0; }
 
 		//value=EString
@@ -14645,7 +14873,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class UnitModelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "UnitModel");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.UnitModel");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cUnitModelKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -14655,14 +14883,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cUnitsUnitParserRuleCall_3_0 = (RuleCall)cUnitsAssignment_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		/// * Unit model * / UnitModel returns unit::UnitModel:
-		//	"unit model " name=ID "{" units+=Unit* "}";
+		/// * Unit model * / UnitModel unit::UnitModel:
+		//	'unit model ' name=ID '{'
+		//	units+=Unit*
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"unit model " name=ID "{" units+=Unit* "}"
+		//'unit model ' name=ID '{' units+=Unit* '}'
 		public Group getGroup() { return cGroup; }
 
-		//"unit model "
+		//'unit model '
 		public Keyword getUnitModelKeyword_0() { return cUnitModelKeyword_0; }
 
 		//name=ID
@@ -14671,7 +14901,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
 		//units+=Unit*
@@ -14680,12 +14910,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Unit
 		public RuleCall getUnitsUnitParserRuleCall_3_0() { return cUnitsUnitParserRuleCall_3_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 
 	public class UnitElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Unit");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Unit");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cCoreUnitParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cDimensionlessParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
@@ -14696,9 +14926,9 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cTimeIntervalUnitParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
 		private final RuleCall cTransactionUnitParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
 		
-		//Unit returns unit::Unit:
+		//Unit unit::Unit:
 		//	CoreUnit | Dimensionless | MonetaryUnit | RequestUnit | StorageUnit | ThroughputUnit | TimeIntervalUnit |
-		//	TransactionUnit;
+		//	TransactionUnit
 		@Override public ParserRule getRule() { return rule; }
 
 		//CoreUnit | Dimensionless | MonetaryUnit | RequestUnit | StorageUnit | ThroughputUnit | TimeIntervalUnit |
@@ -14731,7 +14961,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class TimeIntervalUnitElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TimeIntervalUnit");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.TimeIntervalUnit");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cTimeIntervalUnitKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -14742,17 +14972,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cUnitUnitTypeEnumRuleCall_4_0 = (RuleCall)cUnitAssignment_4.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//TimeIntervalUnit returns unit::TimeIntervalUnit:
-		//	"time interval unit " "{" name=ID ":" unit=UnitType "}";
+		//TimeIntervalUnit unit::TimeIntervalUnit:
+		//	'time interval unit ' '{' name=ID ':' unit=UnitType '}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"time interval unit " "{" name=ID ":" unit=UnitType "}"
+		//'time interval unit ' '{' name=ID ':' unit=UnitType '}'
 		public Group getGroup() { return cGroup; }
 
-		//"time interval unit "
+		//'time interval unit '
 		public Keyword getTimeIntervalUnitKeyword_0() { return cTimeIntervalUnitKeyword_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 
 		//name=ID
@@ -14761,7 +14991,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
-		//":"
+		//':'
 		public Keyword getColonKeyword_3() { return cColonKeyword_3; }
 
 		//unit=UnitType
@@ -14770,12 +15000,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//UnitType
 		public RuleCall getUnitUnitTypeEnumRuleCall_4_0() { return cUnitUnitTypeEnumRuleCall_4_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class MonetaryUnitElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MonetaryUnit");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.MonetaryUnit");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cMonetaryUnitKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -14786,17 +15016,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cUnitUnitTypeEnumRuleCall_4_0 = (RuleCall)cUnitAssignment_4.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//MonetaryUnit returns unit::MonetaryUnit:
-		//	"monetary unit " "{" name=ID ":" unit=UnitType "}";
+		//MonetaryUnit unit::MonetaryUnit:
+		//	'monetary unit ' '{' name=ID ':' unit=UnitType '}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"monetary unit " "{" name=ID ":" unit=UnitType "}"
+		//'monetary unit ' '{' name=ID ':' unit=UnitType '}'
 		public Group getGroup() { return cGroup; }
 
-		//"monetary unit "
+		//'monetary unit '
 		public Keyword getMonetaryUnitKeyword_0() { return cMonetaryUnitKeyword_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 
 		//name=ID
@@ -14805,7 +15035,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
-		//":"
+		//':'
 		public Keyword getColonKeyword_3() { return cColonKeyword_3; }
 
 		//unit=UnitType
@@ -14814,12 +15044,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//UnitType
 		public RuleCall getUnitUnitTypeEnumRuleCall_4_0() { return cUnitUnitTypeEnumRuleCall_4_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class CoreUnitElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CoreUnit");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.CoreUnit");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cCoreUnitKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -14830,17 +15060,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cUnitUnitTypeEnumRuleCall_4_0 = (RuleCall)cUnitAssignment_4.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//CoreUnit returns unit::CoreUnit:
-		//	"core unit " "{" name=ID ":" unit=UnitType "}";
+		//CoreUnit unit::CoreUnit:
+		//	'core unit ' '{' name=ID ':' unit=UnitType '}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"core unit " "{" name=ID ":" unit=UnitType "}"
+		//'core unit ' '{' name=ID ':' unit=UnitType '}'
 		public Group getGroup() { return cGroup; }
 
-		//"core unit "
+		//'core unit '
 		public Keyword getCoreUnitKeyword_0() { return cCoreUnitKeyword_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 
 		//name=ID
@@ -14849,7 +15079,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
-		//":"
+		//':'
 		public Keyword getColonKeyword_3() { return cColonKeyword_3; }
 
 		//unit=UnitType
@@ -14858,12 +15088,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//UnitType
 		public RuleCall getUnitUnitTypeEnumRuleCall_4_0() { return cUnitUnitTypeEnumRuleCall_4_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class DimensionlessElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Dimensionless");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Dimensionless");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cDimensionlessKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -14874,17 +15104,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cUnitUnitTypeEnumRuleCall_4_0 = (RuleCall)cUnitAssignment_4.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//Dimensionless returns unit::Dimensionless:
-		//	"dimensionless " "{" name=ID ":" unit=UnitType "}";
+		//Dimensionless unit::Dimensionless:
+		//	'dimensionless ' '{' name=ID ':' unit=UnitType '}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"dimensionless " "{" name=ID ":" unit=UnitType "}"
+		//'dimensionless ' '{' name=ID ':' unit=UnitType '}'
 		public Group getGroup() { return cGroup; }
 
-		//"dimensionless "
+		//'dimensionless '
 		public Keyword getDimensionlessKeyword_0() { return cDimensionlessKeyword_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 
 		//name=ID
@@ -14893,7 +15123,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
-		//":"
+		//':'
 		public Keyword getColonKeyword_3() { return cColonKeyword_3; }
 
 		//unit=UnitType
@@ -14902,12 +15132,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//UnitType
 		public RuleCall getUnitUnitTypeEnumRuleCall_4_0() { return cUnitUnitTypeEnumRuleCall_4_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class RequestUnitElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RequestUnit");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.RequestUnit");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRequestUnitKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -14918,17 +15148,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cUnitUnitTypeEnumRuleCall_4_0 = (RuleCall)cUnitAssignment_4.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//RequestUnit returns unit::RequestUnit:
-		//	"request unit " "{" name=ID ":" unit=UnitType "}";
+		//RequestUnit unit::RequestUnit:
+		//	'request unit ' '{' name=ID ':' unit=UnitType '}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"request unit " "{" name=ID ":" unit=UnitType "}"
+		//'request unit ' '{' name=ID ':' unit=UnitType '}'
 		public Group getGroup() { return cGroup; }
 
-		//"request unit "
+		//'request unit '
 		public Keyword getRequestUnitKeyword_0() { return cRequestUnitKeyword_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 
 		//name=ID
@@ -14937,7 +15167,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
-		//":"
+		//':'
 		public Keyword getColonKeyword_3() { return cColonKeyword_3; }
 
 		//unit=UnitType
@@ -14946,12 +15176,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//UnitType
 		public RuleCall getUnitUnitTypeEnumRuleCall_4_0() { return cUnitUnitTypeEnumRuleCall_4_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class StorageUnitElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "StorageUnit");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.StorageUnit");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cStorageUnitKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -14962,17 +15192,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cUnitUnitTypeEnumRuleCall_4_0 = (RuleCall)cUnitAssignment_4.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//StorageUnit returns unit::StorageUnit:
-		//	"storage unit " "{" name=ID ":" unit=UnitType "}";
+		//StorageUnit unit::StorageUnit:
+		//	'storage unit ' '{' name=ID ':' unit=UnitType '}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"storage unit " "{" name=ID ":" unit=UnitType "}"
+		//'storage unit ' '{' name=ID ':' unit=UnitType '}'
 		public Group getGroup() { return cGroup; }
 
-		//"storage unit "
+		//'storage unit '
 		public Keyword getStorageUnitKeyword_0() { return cStorageUnitKeyword_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 
 		//name=ID
@@ -14981,7 +15211,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
-		//":"
+		//':'
 		public Keyword getColonKeyword_3() { return cColonKeyword_3; }
 
 		//unit=UnitType
@@ -14990,12 +15220,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//UnitType
 		public RuleCall getUnitUnitTypeEnumRuleCall_4_0() { return cUnitUnitTypeEnumRuleCall_4_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class ThroughputUnitElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ThroughputUnit");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ThroughputUnit");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cThroughputUnitKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -15006,17 +15236,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cUnitUnitTypeEnumRuleCall_4_0 = (RuleCall)cUnitAssignment_4.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//ThroughputUnit returns unit::ThroughputUnit:
-		//	"throughput unit " "{" name=ID ":" unit=UnitType "}";
+		//ThroughputUnit unit::ThroughputUnit:
+		//	'throughput unit ' '{' name=ID ':' unit=UnitType '}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"throughput unit " "{" name=ID ":" unit=UnitType "}"
+		//'throughput unit ' '{' name=ID ':' unit=UnitType '}'
 		public Group getGroup() { return cGroup; }
 
-		//"throughput unit "
+		//'throughput unit '
 		public Keyword getThroughputUnitKeyword_0() { return cThroughputUnitKeyword_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 
 		//name=ID
@@ -15025,7 +15255,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
-		//":"
+		//':'
 		public Keyword getColonKeyword_3() { return cColonKeyword_3; }
 
 		//unit=UnitType
@@ -15034,12 +15264,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//UnitType
 		public RuleCall getUnitUnitTypeEnumRuleCall_4_0() { return cUnitUnitTypeEnumRuleCall_4_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class TransactionUnitElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TransactionUnit");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.TransactionUnit");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cTransactionUnitKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -15050,17 +15280,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cUnitUnitTypeEnumRuleCall_4_0 = (RuleCall)cUnitAssignment_4.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//TransactionUnit returns unit::TransactionUnit:
-		//	"transaction unit " "{" name=ID ":" unit=UnitType "}";
+		//TransactionUnit unit::TransactionUnit:
+		//	'transaction unit ' '{' name=ID ':' unit=UnitType '}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"transaction unit " "{" name=ID ":" unit=UnitType "}"
+		//'transaction unit ' '{' name=ID ':' unit=UnitType '}'
 		public Group getGroup() { return cGroup; }
 
-		//"transaction unit "
+		//'transaction unit '
 		public Keyword getTransactionUnitKeyword_0() { return cTransactionUnitKeyword_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 
 		//name=ID
@@ -15069,7 +15299,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
-		//":"
+		//':'
 		public Keyword getColonKeyword_3() { return cColonKeyword_3; }
 
 		//unit=UnitType
@@ -15078,12 +15308,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//UnitType
 		public RuleCall getUnitUnitTypeEnumRuleCall_4_0() { return cUnitUnitTypeEnumRuleCall_4_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class ActionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Action");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Action");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cActionKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -15094,14 +15324,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cTypeActionTypeEnumRuleCall_4_0 = (RuleCall)cTypeAssignment_4.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		/// * Global CAMEL elements * / Action returns camel::Action:
-		//	"action " name=ID "{" "type: " type=ActionType "}";
+		/// * Global CAMEL elements * / Action camel::Action:
+		//	'action ' name=ID '{'
+		//	'type: ' type=ActionType
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"action " name=ID "{" "type: " type=ActionType "}"
+		//'action ' name=ID '{' 'type: ' type=ActionType '}'
 		public Group getGroup() { return cGroup; }
 
-		//"action "
+		//'action '
 		public Keyword getActionKeyword_0() { return cActionKeyword_0; }
 
 		//name=ID
@@ -15110,10 +15342,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"type: "
+		//'type: '
 		public Keyword getTypeKeyword_3() { return cTypeKeyword_3; }
 
 		//type=ActionType
@@ -15122,12 +15354,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ActionType
 		public RuleCall getTypeActionTypeEnumRuleCall_4_0() { return cTypeActionTypeEnumRuleCall_4_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class ApplicationElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Application");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Application");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cApplicationKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -15158,18 +15390,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightSquareBracketKeyword_8_4 = (Keyword)cGroup_8.eContents().get(4);
 		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
-		//Application returns camel::Application:
-		//	"application " name=ID "{" "version: " version=EString ("description: " description=EString)? "owner: "
-		//	owner=[organisation::Entity|Fqn] ("deployment models " "[" deploymentModels+=[deployment::DeploymentModel|Fqn] (","
-		//	deploymentModels+=[deployment::DeploymentModel|Fqn])* "]")? "}";
+		//Application camel::Application:
+		//	'application ' name=ID '{'
+		//	'version: ' version=EString ('description: ' description=EString)?
+		//	'owner: ' owner=[organisation::Entity|Fqn] ('deployment models ' '['
+		//	deploymentModels+=[deployment::DeploymentModel|Fqn] (',' deploymentModels+=[deployment::DeploymentModel|Fqn])* ']')?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//"application " name=ID "{" "version: " version=EString ("description: " description=EString)? "owner: "
-		//owner=[organisation::Entity|Fqn] ("deployment models " "[" deploymentModels+=[deployment::DeploymentModel|Fqn] (","
-		//deploymentModels+=[deployment::DeploymentModel|Fqn])* "]")? "}"
+		//'application ' name=ID '{' 'version: ' version=EString ('description: ' description=EString)? 'owner: '
+		//owner=[organisation::Entity|Fqn] ('deployment models ' '[' deploymentModels+=[deployment::DeploymentModel|Fqn] (','
+		//deploymentModels+=[deployment::DeploymentModel|Fqn])* ']')? '}'
 		public Group getGroup() { return cGroup; }
 
-		//"application "
+		//'application '
 		public Keyword getApplicationKeyword_0() { return cApplicationKeyword_0; }
 
 		//name=ID
@@ -15178,10 +15412,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"version: "
+		//'version: '
 		public Keyword getVersionKeyword_3() { return cVersionKeyword_3; }
 
 		//version=EString
@@ -15190,10 +15424,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getVersionEStringParserRuleCall_4_0() { return cVersionEStringParserRuleCall_4_0; }
 
-		//("description: " description=EString)?
+		//('description: ' description=EString)?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"description: "
+		//'description: '
 		public Keyword getDescriptionKeyword_5_0() { return cDescriptionKeyword_5_0; }
 
 		//description=EString
@@ -15202,7 +15436,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getDescriptionEStringParserRuleCall_5_1_0() { return cDescriptionEStringParserRuleCall_5_1_0; }
 
-		//"owner: "
+		//'owner: '
 		public Keyword getOwnerKeyword_6() { return cOwnerKeyword_6; }
 
 		//owner=[organisation::Entity|Fqn]
@@ -15214,14 +15448,14 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getOwnerEntityFqnParserRuleCall_7_0_1() { return cOwnerEntityFqnParserRuleCall_7_0_1; }
 
-		//("deployment models " "[" deploymentModels+=[deployment::DeploymentModel|Fqn] (","
-		//deploymentModels+=[deployment::DeploymentModel|Fqn])* "]")?
+		//('deployment models ' '[' deploymentModels+=[deployment::DeploymentModel|Fqn] (','
+		//deploymentModels+=[deployment::DeploymentModel|Fqn])* ']')?
 		public Group getGroup_8() { return cGroup_8; }
 
-		//"deployment models "
+		//'deployment models '
 		public Keyword getDeploymentModelsKeyword_8_0() { return cDeploymentModelsKeyword_8_0; }
 
-		//"["
+		//'['
 		public Keyword getLeftSquareBracketKeyword_8_1() { return cLeftSquareBracketKeyword_8_1; }
 
 		//deploymentModels+=[deployment::DeploymentModel|Fqn]
@@ -15233,10 +15467,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getDeploymentModelsDeploymentModelFqnParserRuleCall_8_2_0_1() { return cDeploymentModelsDeploymentModelFqnParserRuleCall_8_2_0_1; }
 
-		//("," deploymentModels+=[deployment::DeploymentModel|Fqn])*
+		//(',' deploymentModels+=[deployment::DeploymentModel|Fqn])*
 		public Group getGroup_8_3() { return cGroup_8_3; }
 
-		//","
+		//','
 		public Keyword getCommaKeyword_8_3_0() { return cCommaKeyword_8_3_0; }
 
 		//deploymentModels+=[deployment::DeploymentModel|Fqn]
@@ -15248,15 +15482,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Fqn
 		public RuleCall getDeploymentModelsDeploymentModelFqnParserRuleCall_8_3_1_0_1() { return cDeploymentModelsDeploymentModelFqnParserRuleCall_8_3_1_0_1; }
 
-		//"]"
+		//']'
 		public Keyword getRightSquareBracketKeyword_8_4() { return cRightSquareBracketKeyword_8_4; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
 	}
 
 	public class FqnElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Fqn");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Fqn");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
@@ -15264,19 +15498,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cIDTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
 		
 		/// * Auxiliary terminals * / Fqn:
-		//	ID ("." ID)*;
+		//	ID ('.' ID)*;
 		@Override public ParserRule getRule() { return rule; }
 
-		//ID ("." ID)*
+		//ID ('.' ID)*
 		public Group getGroup() { return cGroup; }
 
 		//ID
 		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
 
-		//("." ID)*
+		//('.' ID)*
 		public Group getGroup_1() { return cGroup_1; }
 
-		//"."
+		//'.'
 		public Keyword getFullStopKeyword_1_0() { return cFullStopKeyword_1_0; }
 
 		//ID
@@ -15285,7 +15519,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
 	public class CommunicationTypeElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "CommunicationType");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.CommunicationType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cLOCALEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cLOCALLOCALKeyword_0_0 = (Keyword)cLOCALEnumLiteralDeclaration_0.eContents().get(0);
@@ -15304,24 +15538,24 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//LOCAL
 		public EnumLiteralDeclaration getLOCALEnumLiteralDeclaration_0() { return cLOCALEnumLiteralDeclaration_0; }
 
-		//"LOCAL"
+		//'LOCAL'
 		public Keyword getLOCALLOCALKeyword_0_0() { return cLOCALLOCALKeyword_0_0; }
 
 		//REMOTE
 		public EnumLiteralDeclaration getREMOTEEnumLiteralDeclaration_1() { return cREMOTEEnumLiteralDeclaration_1; }
 
-		//"REMOTE"
+		//'REMOTE'
 		public Keyword getREMOTEREMOTEKeyword_1_0() { return cREMOTEREMOTEKeyword_1_0; }
 
 		//ANY
 		public EnumLiteralDeclaration getANYEnumLiteralDeclaration_2() { return cANYEnumLiteralDeclaration_2; }
 
-		//"ANY"
+		//'ANY'
 		public Keyword getANYANYKeyword_2_0() { return cANYANYKeyword_2_0; }
 	}
 
 	public class WindowTypeElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "WindowType");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.WindowType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cFIXEDEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cFIXEDFIXEDKeyword_0_0 = (Keyword)cFIXEDEnumLiteralDeclaration_0.eContents().get(0);
@@ -15338,18 +15572,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//FIXED
 		public EnumLiteralDeclaration getFIXEDEnumLiteralDeclaration_0() { return cFIXEDEnumLiteralDeclaration_0; }
 
-		//"FIXED"
+		//'FIXED'
 		public Keyword getFIXEDFIXEDKeyword_0_0() { return cFIXEDFIXEDKeyword_0_0; }
 
 		//SLIDING
 		public EnumLiteralDeclaration getSLIDINGEnumLiteralDeclaration_1() { return cSLIDINGEnumLiteralDeclaration_1; }
 
-		//"SLIDING"
+		//'SLIDING'
 		public Keyword getSLIDINGSLIDINGKeyword_1_0() { return cSLIDINGSLIDINGKeyword_1_0; }
 	}
 
 	public class WindowSizeTypeElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "WindowSizeType");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.WindowSizeType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cMEASUREMENTS_ONLYEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cMEASUREMENTS_ONLYMEASUREMENTS_ONLYKeyword_0_0 = (Keyword)cMEASUREMENTS_ONLYEnumLiteralDeclaration_0.eContents().get(0);
@@ -15370,30 +15604,30 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//MEASUREMENTS_ONLY
 		public EnumLiteralDeclaration getMEASUREMENTS_ONLYEnumLiteralDeclaration_0() { return cMEASUREMENTS_ONLYEnumLiteralDeclaration_0; }
 
-		//"MEASUREMENTS_ONLY"
+		//'MEASUREMENTS_ONLY'
 		public Keyword getMEASUREMENTS_ONLYMEASUREMENTS_ONLYKeyword_0_0() { return cMEASUREMENTS_ONLYMEASUREMENTS_ONLYKeyword_0_0; }
 
 		//TIME_ONLY
 		public EnumLiteralDeclaration getTIME_ONLYEnumLiteralDeclaration_1() { return cTIME_ONLYEnumLiteralDeclaration_1; }
 
-		//"TIME_ONLY"
+		//'TIME_ONLY'
 		public Keyword getTIME_ONLYTIME_ONLYKeyword_1_0() { return cTIME_ONLYTIME_ONLYKeyword_1_0; }
 
 		//FIRST_MATCH
 		public EnumLiteralDeclaration getFIRST_MATCHEnumLiteralDeclaration_2() { return cFIRST_MATCHEnumLiteralDeclaration_2; }
 
-		//"FIRST_MATCH"
+		//'FIRST_MATCH'
 		public Keyword getFIRST_MATCHFIRST_MATCHKeyword_2_0() { return cFIRST_MATCHFIRST_MATCHKeyword_2_0; }
 
 		//BOTH_MATCH
 		public EnumLiteralDeclaration getBOTH_MATCHEnumLiteralDeclaration_3() { return cBOTH_MATCHEnumLiteralDeclaration_3; }
 
-		//"BOTH_MATCH"
+		//'BOTH_MATCH'
 		public Keyword getBOTH_MATCHBOTH_MATCHKeyword_3_0() { return cBOTH_MATCHBOTH_MATCHKeyword_3_0; }
 	}
 
 	public class ScheduleTypeElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "ScheduleType");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ScheduleType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cFIXED_RATEEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cFIXED_RATEFIXED_RATEKeyword_0_0 = (Keyword)cFIXED_RATEEnumLiteralDeclaration_0.eContents().get(0);
@@ -15412,24 +15646,24 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//FIXED_RATE
 		public EnumLiteralDeclaration getFIXED_RATEEnumLiteralDeclaration_0() { return cFIXED_RATEEnumLiteralDeclaration_0; }
 
-		//"FIXED_RATE"
+		//'FIXED_RATE'
 		public Keyword getFIXED_RATEFIXED_RATEKeyword_0_0() { return cFIXED_RATEFIXED_RATEKeyword_0_0; }
 
 		//FIXED_DELAY
 		public EnumLiteralDeclaration getFIXED_DELAYEnumLiteralDeclaration_1() { return cFIXED_DELAYEnumLiteralDeclaration_1; }
 
-		//"FIXED_DELAY"
+		//'FIXED_DELAY'
 		public Keyword getFIXED_DELAYFIXED_DELAYKeyword_1_0() { return cFIXED_DELAYFIXED_DELAYKeyword_1_0; }
 
 		//SINGLE_EVENT
 		public EnumLiteralDeclaration getSINGLE_EVENTEnumLiteralDeclaration_2() { return cSINGLE_EVENTEnumLiteralDeclaration_2; }
 
-		//"SINGLE_EVENT"
+		//'SINGLE_EVENT'
 		public Keyword getSINGLE_EVENTSINGLE_EVENTKeyword_2_0() { return cSINGLE_EVENTSINGLE_EVENTKeyword_2_0; }
 	}
 
 	public class ComparisonOperatorTypeElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "ComparisonOperatorType");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ComparisonOperatorType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cGREATER_THANEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cGREATER_THANGreaterThanSignKeyword_0_0 = (Keyword)cGREATER_THANEnumLiteralDeclaration_0.eContents().get(0);
@@ -15445,52 +15679,52 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cNOT_EQUALLessThanSignGreaterThanSignKeyword_5_0 = (Keyword)cNOT_EQUALEnumLiteralDeclaration_5.eContents().get(0);
 		
 		//enum ComparisonOperatorType returns metric::ComparisonOperatorType:
-		//	GREATER_THAN=">" | GREATER_EQUAL_THAN="> = " | LESS_THAN="<" | LESS_EQUAL_THAN="< = " | EQUAL=" =  = " |
-		//	NOT_EQUAL="<>";
+		//	GREATER_THAN='>' | GREATER_EQUAL_THAN='> = ' | LESS_THAN='<' | LESS_EQUAL_THAN='< = ' | EQUAL=' =  = ' |
+		//	NOT_EQUAL='<>';
 		public EnumRule getRule() { return rule; }
 
-		//GREATER_THAN=">" | GREATER_EQUAL_THAN="> = " | LESS_THAN="<" | LESS_EQUAL_THAN="< = " | EQUAL=" =  = " | NOT_EQUAL="<>"
+		//GREATER_THAN='>' | GREATER_EQUAL_THAN='> = ' | LESS_THAN='<' | LESS_EQUAL_THAN='< = ' | EQUAL=' =  = ' | NOT_EQUAL='<>'
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//GREATER_THAN=">"
+		//GREATER_THAN='>'
 		public EnumLiteralDeclaration getGREATER_THANEnumLiteralDeclaration_0() { return cGREATER_THANEnumLiteralDeclaration_0; }
 
-		//">"
+		//'>'
 		public Keyword getGREATER_THANGreaterThanSignKeyword_0_0() { return cGREATER_THANGreaterThanSignKeyword_0_0; }
 
-		//GREATER_EQUAL_THAN="> = "
+		//GREATER_EQUAL_THAN='> = '
 		public EnumLiteralDeclaration getGREATER_EQUAL_THANEnumLiteralDeclaration_1() { return cGREATER_EQUAL_THANEnumLiteralDeclaration_1; }
 
-		//"> = "
+		//'> = '
 		public Keyword getGREATER_EQUAL_THANGreaterThanSignSpaceEqualsSignSpaceKeyword_1_0() { return cGREATER_EQUAL_THANGreaterThanSignSpaceEqualsSignSpaceKeyword_1_0; }
 
-		//LESS_THAN="<"
+		//LESS_THAN='<'
 		public EnumLiteralDeclaration getLESS_THANEnumLiteralDeclaration_2() { return cLESS_THANEnumLiteralDeclaration_2; }
 
-		//"<"
+		//'<'
 		public Keyword getLESS_THANLessThanSignKeyword_2_0() { return cLESS_THANLessThanSignKeyword_2_0; }
 
-		//LESS_EQUAL_THAN="< = "
+		//LESS_EQUAL_THAN='< = '
 		public EnumLiteralDeclaration getLESS_EQUAL_THANEnumLiteralDeclaration_3() { return cLESS_EQUAL_THANEnumLiteralDeclaration_3; }
 
-		//"< = "
+		//'< = '
 		public Keyword getLESS_EQUAL_THANLessThanSignSpaceEqualsSignSpaceKeyword_3_0() { return cLESS_EQUAL_THANLessThanSignSpaceEqualsSignSpaceKeyword_3_0; }
 
-		//EQUAL=" =  = "
+		//EQUAL=' =  = '
 		public EnumLiteralDeclaration getEQUALEnumLiteralDeclaration_4() { return cEQUALEnumLiteralDeclaration_4; }
 
-		//" =  = "
+		//' =  = '
 		public Keyword getEQUALSpaceEqualsSignSpaceSpaceEqualsSignSpaceKeyword_4_0() { return cEQUALSpaceEqualsSignSpaceSpaceEqualsSignSpaceKeyword_4_0; }
 
-		//NOT_EQUAL="<>"
+		//NOT_EQUAL='<>'
 		public EnumLiteralDeclaration getNOT_EQUALEnumLiteralDeclaration_5() { return cNOT_EQUALEnumLiteralDeclaration_5; }
 
-		//"<>"
+		//'<>'
 		public Keyword getNOT_EQUALLessThanSignGreaterThanSignKeyword_5_0() { return cNOT_EQUALLessThanSignGreaterThanSignKeyword_5_0; }
 	}
 
 	public class QuantifierTypeElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "QuantifierType");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.QuantifierType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cANYEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cANYANYKeyword_0_0 = (Keyword)cANYEnumLiteralDeclaration_0.eContents().get(0);
@@ -15509,24 +15743,24 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ANY
 		public EnumLiteralDeclaration getANYEnumLiteralDeclaration_0() { return cANYEnumLiteralDeclaration_0; }
 
-		//"ANY"
+		//'ANY'
 		public Keyword getANYANYKeyword_0_0() { return cANYANYKeyword_0_0; }
 
 		//ALL
 		public EnumLiteralDeclaration getALLEnumLiteralDeclaration_1() { return cALLEnumLiteralDeclaration_1; }
 
-		//"ALL"
+		//'ALL'
 		public Keyword getALLALLKeyword_1_0() { return cALLALLKeyword_1_0; }
 
 		//SOME
 		public EnumLiteralDeclaration getSOMEEnumLiteralDeclaration_2() { return cSOMEEnumLiteralDeclaration_2; }
 
-		//"SOME"
+		//'SOME'
 		public Keyword getSOMESOMEKeyword_2_0() { return cSOMESOMEKeyword_2_0; }
 	}
 
 	public class LayerTypeElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "LayerType");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.LayerType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cSaaSEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cSaaSSaaSKeyword_0_0 = (Keyword)cSaaSEnumLiteralDeclaration_0.eContents().get(0);
@@ -15549,36 +15783,36 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//SaaS
 		public EnumLiteralDeclaration getSaaSEnumLiteralDeclaration_0() { return cSaaSEnumLiteralDeclaration_0; }
 
-		//"SaaS"
+		//'SaaS'
 		public Keyword getSaaSSaaSKeyword_0_0() { return cSaaSSaaSKeyword_0_0; }
 
 		//PaaS
 		public EnumLiteralDeclaration getPaaSEnumLiteralDeclaration_1() { return cPaaSEnumLiteralDeclaration_1; }
 
-		//"PaaS"
+		//'PaaS'
 		public Keyword getPaaSPaaSKeyword_1_0() { return cPaaSPaaSKeyword_1_0; }
 
 		//IaaS
 		public EnumLiteralDeclaration getIaaSEnumLiteralDeclaration_2() { return cIaaSEnumLiteralDeclaration_2; }
 
-		//"IaaS"
+		//'IaaS'
 		public Keyword getIaaSIaaSKeyword_2_0() { return cIaaSIaaSKeyword_2_0; }
 
 		//BPM
 		public EnumLiteralDeclaration getBPMEnumLiteralDeclaration_3() { return cBPMEnumLiteralDeclaration_3; }
 
-		//"BPM"
+		//'BPM'
 		public Keyword getBPMBPMKeyword_3_0() { return cBPMBPMKeyword_3_0; }
 
 		//SCC
 		public EnumLiteralDeclaration getSCCEnumLiteralDeclaration_4() { return cSCCEnumLiteralDeclaration_4; }
 
-		//"SCC"
+		//'SCC'
 		public Keyword getSCCSCCKeyword_4_0() { return cSCCSCCKeyword_4_0; }
 	}
 
 	public class MetricFunctionTypeElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "MetricFunctionType");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.MetricFunctionType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cPLUSEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cPLUSPLUSKeyword_0_0 = (Keyword)cPLUSEnumLiteralDeclaration_0.eContents().get(0);
@@ -15619,90 +15853,90 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//PLUS
 		public EnumLiteralDeclaration getPLUSEnumLiteralDeclaration_0() { return cPLUSEnumLiteralDeclaration_0; }
 
-		//"PLUS"
+		//'PLUS'
 		public Keyword getPLUSPLUSKeyword_0_0() { return cPLUSPLUSKeyword_0_0; }
 
 		//MINUS
 		public EnumLiteralDeclaration getMINUSEnumLiteralDeclaration_1() { return cMINUSEnumLiteralDeclaration_1; }
 
-		//"MINUS"
+		//'MINUS'
 		public Keyword getMINUSMINUSKeyword_1_0() { return cMINUSMINUSKeyword_1_0; }
 
 		//TIMES
 		public EnumLiteralDeclaration getTIMESEnumLiteralDeclaration_2() { return cTIMESEnumLiteralDeclaration_2; }
 
-		//"TIMES"
+		//'TIMES'
 		public Keyword getTIMESTIMESKeyword_2_0() { return cTIMESTIMESKeyword_2_0; }
 
 		//DIV
 		public EnumLiteralDeclaration getDIVEnumLiteralDeclaration_3() { return cDIVEnumLiteralDeclaration_3; }
 
-		//"DIV"
+		//'DIV'
 		public Keyword getDIVDIVKeyword_3_0() { return cDIVDIVKeyword_3_0; }
 
 		//MODULO
 		public EnumLiteralDeclaration getMODULOEnumLiteralDeclaration_4() { return cMODULOEnumLiteralDeclaration_4; }
 
-		//"MODULO"
+		//'MODULO'
 		public Keyword getMODULOMODULOKeyword_4_0() { return cMODULOMODULOKeyword_4_0; }
 
 		//MEAN
 		public EnumLiteralDeclaration getMEANEnumLiteralDeclaration_5() { return cMEANEnumLiteralDeclaration_5; }
 
-		//"MEAN"
+		//'MEAN'
 		public Keyword getMEANMEANKeyword_5_0() { return cMEANMEANKeyword_5_0; }
 
 		//STD
 		public EnumLiteralDeclaration getSTDEnumLiteralDeclaration_6() { return cSTDEnumLiteralDeclaration_6; }
 
-		//"STD"
+		//'STD'
 		public Keyword getSTDSTDKeyword_6_0() { return cSTDSTDKeyword_6_0; }
 
 		//COUNT
 		public EnumLiteralDeclaration getCOUNTEnumLiteralDeclaration_7() { return cCOUNTEnumLiteralDeclaration_7; }
 
-		//"COUNT"
+		//'COUNT'
 		public Keyword getCOUNTCOUNTKeyword_7_0() { return cCOUNTCOUNTKeyword_7_0; }
 
 		//MIN
 		public EnumLiteralDeclaration getMINEnumLiteralDeclaration_8() { return cMINEnumLiteralDeclaration_8; }
 
-		//"MIN"
+		//'MIN'
 		public Keyword getMINMINKeyword_8_0() { return cMINMINKeyword_8_0; }
 
 		//MAX
 		public EnumLiteralDeclaration getMAXEnumLiteralDeclaration_9() { return cMAXEnumLiteralDeclaration_9; }
 
-		//"MAX"
+		//'MAX'
 		public Keyword getMAXMAXKeyword_9_0() { return cMAXMAXKeyword_9_0; }
 
 		//PERCENTILE
 		public EnumLiteralDeclaration getPERCENTILEEnumLiteralDeclaration_10() { return cPERCENTILEEnumLiteralDeclaration_10; }
 
-		//"PERCENTILE"
+		//'PERCENTILE'
 		public Keyword getPERCENTILEPERCENTILEKeyword_10_0() { return cPERCENTILEPERCENTILEKeyword_10_0; }
 
 		//DERIVATIVE
 		public EnumLiteralDeclaration getDERIVATIVEEnumLiteralDeclaration_11() { return cDERIVATIVEEnumLiteralDeclaration_11; }
 
-		//"DERIVATIVE"
+		//'DERIVATIVE'
 		public Keyword getDERIVATIVEDERIVATIVEKeyword_11_0() { return cDERIVATIVEDERIVATIVEKeyword_11_0; }
 
 		//MODE
 		public EnumLiteralDeclaration getMODEEnumLiteralDeclaration_12() { return cMODEEnumLiteralDeclaration_12; }
 
-		//"MODE"
+		//'MODE'
 		public Keyword getMODEMODEKeyword_12_0() { return cMODEMODEKeyword_12_0; }
 
 		//MEDIAN
 		public EnumLiteralDeclaration getMEDIANEnumLiteralDeclaration_13() { return cMEDIANEnumLiteralDeclaration_13; }
 
-		//"MEDIAN"
+		//'MEDIAN'
 		public Keyword getMEDIANMEDIANKeyword_13_0() { return cMEDIANMEDIANKeyword_13_0; }
 	}
 
 	public class MetricFunctionArityTypeElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "MetricFunctionArityType");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.MetricFunctionArityType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cUNARYEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cUNARYUNARYKeyword_0_0 = (Keyword)cUNARYEnumLiteralDeclaration_0.eContents().get(0);
@@ -15721,24 +15955,24 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//UNARY
 		public EnumLiteralDeclaration getUNARYEnumLiteralDeclaration_0() { return cUNARYEnumLiteralDeclaration_0; }
 
-		//"UNARY"
+		//'UNARY'
 		public Keyword getUNARYUNARYKeyword_0_0() { return cUNARYUNARYKeyword_0_0; }
 
 		//BINARY
 		public EnumLiteralDeclaration getBINARYEnumLiteralDeclaration_1() { return cBINARYEnumLiteralDeclaration_1; }
 
-		//"BINARY"
+		//'BINARY'
 		public Keyword getBINARYBINARYKeyword_1_0() { return cBINARYBINARYKeyword_1_0; }
 
 		//N_ARY
 		public EnumLiteralDeclaration getN_ARYEnumLiteralDeclaration_2() { return cN_ARYEnumLiteralDeclaration_2; }
 
-		//"N_ARY"
+		//'N_ARY'
 		public Keyword getN_ARYN_ARYKeyword_2_0() { return cN_ARYN_ARYKeyword_2_0; }
 	}
 
 	public class FunctionPatternTypeElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "FunctionPatternType");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.FunctionPatternType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cMAPEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cMAPMAPKeyword_0_0 = (Keyword)cMAPEnumLiteralDeclaration_0.eContents().get(0);
@@ -15755,18 +15989,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//MAP
 		public EnumLiteralDeclaration getMAPEnumLiteralDeclaration_0() { return cMAPEnumLiteralDeclaration_0; }
 
-		//"MAP"
+		//'MAP'
 		public Keyword getMAPMAPKeyword_0_0() { return cMAPMAPKeyword_0_0; }
 
 		//REDUCE
 		public EnumLiteralDeclaration getREDUCEEnumLiteralDeclaration_1() { return cREDUCEEnumLiteralDeclaration_1; }
 
-		//"REDUCE"
+		//'REDUCE'
 		public Keyword getREDUCEREDUCEKeyword_1_0() { return cREDUCEREDUCEKeyword_1_0; }
 	}
 
 	public class PropertyTypeElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "PropertyType");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.PropertyType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cABSTRACTEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cABSTRACTABSTRACTKeyword_0_0 = (Keyword)cABSTRACTEnumLiteralDeclaration_0.eContents().get(0);
@@ -15783,18 +16017,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ABSTRACT
 		public EnumLiteralDeclaration getABSTRACTEnumLiteralDeclaration_0() { return cABSTRACTEnumLiteralDeclaration_0; }
 
-		//"ABSTRACT"
+		//'ABSTRACT'
 		public Keyword getABSTRACTABSTRACTKeyword_0_0() { return cABSTRACTABSTRACTKeyword_0_0; }
 
 		//MEASURABLE
 		public EnumLiteralDeclaration getMEASURABLEEnumLiteralDeclaration_1() { return cMEASURABLEEnumLiteralDeclaration_1; }
 
-		//"MEASURABLE"
+		//'MEASURABLE'
 		public Keyword getMEASURABLEMEASURABLEKeyword_1_0() { return cMEASURABLEMEASURABLEKeyword_1_0; }
 	}
 
 	public class ResourcePatternElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "ResourcePattern");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ResourcePattern");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cEXACTEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cEXACTEXACTKeyword_0_0 = (Keyword)cEXACTEnumLiteralDeclaration_0.eContents().get(0);
@@ -15811,18 +16045,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EXACT
 		public EnumLiteralDeclaration getEXACTEnumLiteralDeclaration_0() { return cEXACTEnumLiteralDeclaration_0; }
 
-		//"EXACT"
+		//'EXACT'
 		public Keyword getEXACTEXACTKeyword_0_0() { return cEXACTEXACTKeyword_0_0; }
 
 		//TREE
 		public EnumLiteralDeclaration getTREEEnumLiteralDeclaration_1() { return cTREEEnumLiteralDeclaration_1; }
 
-		//"TREE"
+		//'TREE'
 		public Keyword getTREETREEKeyword_1_0() { return cTREETREEKeyword_1_0; }
 	}
 
 	public class SecurityLevelElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "SecurityLevel");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.SecurityLevel");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cLOWEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cLOWLOWKeyword_0_0 = (Keyword)cLOWEnumLiteralDeclaration_0.eContents().get(0);
@@ -15841,24 +16075,24 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//LOW
 		public EnumLiteralDeclaration getLOWEnumLiteralDeclaration_0() { return cLOWEnumLiteralDeclaration_0; }
 
-		//"LOW"
+		//'LOW'
 		public Keyword getLOWLOWKeyword_0_0() { return cLOWLOWKeyword_0_0; }
 
 		//MEDIUM
 		public EnumLiteralDeclaration getMEDIUMEnumLiteralDeclaration_1() { return cMEDIUMEnumLiteralDeclaration_1; }
 
-		//"MEDIUM"
+		//'MEDIUM'
 		public Keyword getMEDIUMMEDIUMKeyword_1_0() { return cMEDIUMMEDIUMKeyword_1_0; }
 
 		//HIGH
 		public EnumLiteralDeclaration getHIGHEnumLiteralDeclaration_2() { return cHIGHEnumLiteralDeclaration_2; }
 
-		//"HIGH"
+		//'HIGH'
 		public Keyword getHIGHHIGHKeyword_2_0() { return cHIGHHIGHKeyword_2_0; }
 	}
 
 	public class OperatorElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "Operator");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.Operator");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cSelectEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cSelectSelectKeyword_0_0 = (Keyword)cSelectEnumLiteralDeclaration_0.eContents().get(0);
@@ -15881,36 +16115,36 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//select
 		public EnumLiteralDeclaration getSelectEnumLiteralDeclaration_0() { return cSelectEnumLiteralDeclaration_0; }
 
-		//"select"
+		//'select'
 		public Keyword getSelectSelectKeyword_0_0() { return cSelectSelectKeyword_0_0; }
 
 		//add
 		public EnumLiteralDeclaration getAddEnumLiteralDeclaration_1() { return cAddEnumLiteralDeclaration_1; }
 
-		//"add"
+		//'add'
 		public Keyword getAddAddKeyword_1_0() { return cAddAddKeyword_1_0; }
 
 		//remove
 		public EnumLiteralDeclaration getRemoveEnumLiteralDeclaration_2() { return cRemoveEnumLiteralDeclaration_2; }
 
-		//"remove"
+		//'remove'
 		public Keyword getRemoveRemoveKeyword_2_0() { return cRemoveRemoveKeyword_2_0; }
 
 		//multiply
 		public EnumLiteralDeclaration getMultiplyEnumLiteralDeclaration_3() { return cMultiplyEnumLiteralDeclaration_3; }
 
-		//"multiply"
+		//'multiply'
 		public Keyword getMultiplyMultiplyKeyword_3_0() { return cMultiplyMultiplyKeyword_3_0; }
 
 		//divide
 		public EnumLiteralDeclaration getDivideEnumLiteralDeclaration_4() { return cDivideEnumLiteralDeclaration_4; }
 
-		//"divide"
+		//'divide'
 		public Keyword getDivideDivideKeyword_4_0() { return cDivideDivideKeyword_4_0; }
 	}
 
 	public class RequirementOperatorTypeElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "RequirementOperatorType");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.RequirementOperatorType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cANDEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cANDANDKeyword_0_0 = (Keyword)cANDEnumLiteralDeclaration_0.eContents().get(0);
@@ -15929,24 +16163,24 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//AND
 		public EnumLiteralDeclaration getANDEnumLiteralDeclaration_0() { return cANDEnumLiteralDeclaration_0; }
 
-		//"AND"
+		//'AND'
 		public Keyword getANDANDKeyword_0_0() { return cANDANDKeyword_0_0; }
 
 		//OR
 		public EnumLiteralDeclaration getOREnumLiteralDeclaration_1() { return cOREnumLiteralDeclaration_1; }
 
-		//"OR"
+		//'OR'
 		public Keyword getORORKeyword_1_0() { return cORORKeyword_1_0; }
 
 		//XOR
 		public EnumLiteralDeclaration getXOREnumLiteralDeclaration_2() { return cXOREnumLiteralDeclaration_2; }
 
-		//"XOR"
+		//'XOR'
 		public Keyword getXORXORKeyword_2_0() { return cXORXORKeyword_2_0; }
 	}
 
 	public class OptimisationFunctionTypeElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "OptimisationFunctionType");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.OptimisationFunctionType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cMINIMISEEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cMINIMISEMINKeyword_0_0 = (Keyword)cMINIMISEEnumLiteralDeclaration_0.eContents().get(0);
@@ -15954,27 +16188,27 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cMAXIMISEMAXKeyword_1_0 = (Keyword)cMAXIMISEEnumLiteralDeclaration_1.eContents().get(0);
 		
 		//enum OptimisationFunctionType returns requirement::OptimisationFunctionType:
-		//	MINIMISE="MIN" | MAXIMISE="MAX";
+		//	MINIMISE='MIN' | MAXIMISE='MAX';
 		public EnumRule getRule() { return rule; }
 
-		//MINIMISE="MIN" | MAXIMISE="MAX"
+		//MINIMISE='MIN' | MAXIMISE='MAX'
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//MINIMISE="MIN"
+		//MINIMISE='MIN'
 		public EnumLiteralDeclaration getMINIMISEEnumLiteralDeclaration_0() { return cMINIMISEEnumLiteralDeclaration_0; }
 
-		//"MIN"
+		//'MIN'
 		public Keyword getMINIMISEMINKeyword_0_0() { return cMINIMISEMINKeyword_0_0; }
 
-		//MAXIMISE="MAX"
+		//MAXIMISE='MAX'
 		public EnumLiteralDeclaration getMAXIMISEEnumLiteralDeclaration_1() { return cMAXIMISEEnumLiteralDeclaration_1; }
 
-		//"MAX"
+		//'MAX'
 		public Keyword getMAXIMISEMAXKeyword_1_0() { return cMAXIMISEMAXKeyword_1_0; }
 	}
 
 	public class StatusTypeElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "StatusType");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.StatusType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cCRITICALEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cCRITICALCRITICALKeyword_0_0 = (Keyword)cCRITICALEnumLiteralDeclaration_0.eContents().get(0);
@@ -15995,30 +16229,30 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//CRITICAL
 		public EnumLiteralDeclaration getCRITICALEnumLiteralDeclaration_0() { return cCRITICALEnumLiteralDeclaration_0; }
 
-		//"CRITICAL"
+		//'CRITICAL'
 		public Keyword getCRITICALCRITICALKeyword_0_0() { return cCRITICALCRITICALKeyword_0_0; }
 
 		//WARNING
 		public EnumLiteralDeclaration getWARNINGEnumLiteralDeclaration_1() { return cWARNINGEnumLiteralDeclaration_1; }
 
-		//"WARNING"
+		//'WARNING'
 		public Keyword getWARNINGWARNINGKeyword_1_0() { return cWARNINGWARNINGKeyword_1_0; }
 
 		//SUCCESS
 		public EnumLiteralDeclaration getSUCCESSEnumLiteralDeclaration_2() { return cSUCCESSEnumLiteralDeclaration_2; }
 
-		//"SUCCESS"
+		//'SUCCESS'
 		public Keyword getSUCCESSSUCCESSKeyword_2_0() { return cSUCCESSSUCCESSKeyword_2_0; }
 
 		//FATAL
 		public EnumLiteralDeclaration getFATALEnumLiteralDeclaration_3() { return cFATALEnumLiteralDeclaration_3; }
 
-		//"FATAL"
+		//'FATAL'
 		public Keyword getFATALFATALKeyword_3_0() { return cFATALFATALKeyword_3_0; }
 	}
 
 	public class TimerTypeElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "TimerType");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.TimerType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cWITHINEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cWITHINWITHINKeyword_0_0 = (Keyword)cWITHINEnumLiteralDeclaration_0.eContents().get(0);
@@ -16037,24 +16271,24 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//WITHIN
 		public EnumLiteralDeclaration getWITHINEnumLiteralDeclaration_0() { return cWITHINEnumLiteralDeclaration_0; }
 
-		//"WITHIN"
+		//'WITHIN'
 		public Keyword getWITHINWITHINKeyword_0_0() { return cWITHINWITHINKeyword_0_0; }
 
 		//WITHIN_MAX
 		public EnumLiteralDeclaration getWITHIN_MAXEnumLiteralDeclaration_1() { return cWITHIN_MAXEnumLiteralDeclaration_1; }
 
-		//"WITHIN_MAX"
+		//'WITHIN_MAX'
 		public Keyword getWITHIN_MAXWITHIN_MAXKeyword_1_0() { return cWITHIN_MAXWITHIN_MAXKeyword_1_0; }
 
 		//INTERVAL
 		public EnumLiteralDeclaration getINTERVALEnumLiteralDeclaration_2() { return cINTERVALEnumLiteralDeclaration_2; }
 
-		//"INTERVAL"
+		//'INTERVAL'
 		public Keyword getINTERVALINTERVALKeyword_2_0() { return cINTERVALINTERVALKeyword_2_0; }
 	}
 
 	public class BinaryPatternOperatorTypeElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "BinaryPatternOperatorType");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.BinaryPatternOperatorType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cANDEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cANDANDKeyword_0_0 = (Keyword)cANDEnumLiteralDeclaration_0.eContents().get(0);
@@ -16077,36 +16311,36 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//AND
 		public EnumLiteralDeclaration getANDEnumLiteralDeclaration_0() { return cANDEnumLiteralDeclaration_0; }
 
-		//"AND"
+		//'AND'
 		public Keyword getANDANDKeyword_0_0() { return cANDANDKeyword_0_0; }
 
 		//OR
 		public EnumLiteralDeclaration getOREnumLiteralDeclaration_1() { return cOREnumLiteralDeclaration_1; }
 
-		//"OR"
+		//'OR'
 		public Keyword getORORKeyword_1_0() { return cORORKeyword_1_0; }
 
 		//XOR
 		public EnumLiteralDeclaration getXOREnumLiteralDeclaration_2() { return cXOREnumLiteralDeclaration_2; }
 
-		//"XOR"
+		//'XOR'
 		public Keyword getXORXORKeyword_2_0() { return cXORXORKeyword_2_0; }
 
 		//PRECEDES
 		public EnumLiteralDeclaration getPRECEDESEnumLiteralDeclaration_3() { return cPRECEDESEnumLiteralDeclaration_3; }
 
-		//"PRECEDES"
+		//'PRECEDES'
 		public Keyword getPRECEDESPRECEDESKeyword_3_0() { return cPRECEDESPRECEDESKeyword_3_0; }
 
 		//REPEAT_UNTIL
 		public EnumLiteralDeclaration getREPEAT_UNTILEnumLiteralDeclaration_4() { return cREPEAT_UNTILEnumLiteralDeclaration_4; }
 
-		//"REPEAT_UNTIL"
+		//'REPEAT_UNTIL'
 		public Keyword getREPEAT_UNTILREPEAT_UNTILKeyword_4_0() { return cREPEAT_UNTILREPEAT_UNTILKeyword_4_0; }
 	}
 
 	public class UnaryPatternOperatorTypeElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "UnaryPatternOperatorType");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.UnaryPatternOperatorType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cEVERYEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cEVERYEVERYKeyword_0_0 = (Keyword)cEVERYEnumLiteralDeclaration_0.eContents().get(0);
@@ -16127,30 +16361,30 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EVERY
 		public EnumLiteralDeclaration getEVERYEnumLiteralDeclaration_0() { return cEVERYEnumLiteralDeclaration_0; }
 
-		//"EVERY"
+		//'EVERY'
 		public Keyword getEVERYEVERYKeyword_0_0() { return cEVERYEVERYKeyword_0_0; }
 
 		//NOT
 		public EnumLiteralDeclaration getNOTEnumLiteralDeclaration_1() { return cNOTEnumLiteralDeclaration_1; }
 
-		//"NOT"
+		//'NOT'
 		public Keyword getNOTNOTKeyword_1_0() { return cNOTNOTKeyword_1_0; }
 
 		//REPEAT
 		public EnumLiteralDeclaration getREPEATEnumLiteralDeclaration_2() { return cREPEATEnumLiteralDeclaration_2; }
 
-		//"REPEAT"
+		//'REPEAT'
 		public Keyword getREPEATREPEATKeyword_2_0() { return cREPEATREPEATKeyword_2_0; }
 
 		//WHEN
 		public EnumLiteralDeclaration getWHENEnumLiteralDeclaration_3() { return cWHENEnumLiteralDeclaration_3; }
 
-		//"WHEN"
+		//'WHEN'
 		public Keyword getWHENWHENKeyword_3_0() { return cWHENWHENKeyword_3_0; }
 	}
 
 	public class TypeEnumElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "TypeEnum");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.TypeEnum");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cIntTypeEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cIntTypeIntTypeKeyword_0_0 = (Keyword)cIntTypeEnumLiteralDeclaration_0.eContents().get(0);
@@ -16173,36 +16407,36 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//IntType
 		public EnumLiteralDeclaration getIntTypeEnumLiteralDeclaration_0() { return cIntTypeEnumLiteralDeclaration_0; }
 
-		//"IntType"
+		//'IntType'
 		public Keyword getIntTypeIntTypeKeyword_0_0() { return cIntTypeIntTypeKeyword_0_0; }
 
 		//StringType
 		public EnumLiteralDeclaration getStringTypeEnumLiteralDeclaration_1() { return cStringTypeEnumLiteralDeclaration_1; }
 
-		//"StringType"
+		//'StringType'
 		public Keyword getStringTypeStringTypeKeyword_1_0() { return cStringTypeStringTypeKeyword_1_0; }
 
 		//BooleanType
 		public EnumLiteralDeclaration getBooleanTypeEnumLiteralDeclaration_2() { return cBooleanTypeEnumLiteralDeclaration_2; }
 
-		//"BooleanType"
+		//'BooleanType'
 		public Keyword getBooleanTypeBooleanTypeKeyword_2_0() { return cBooleanTypeBooleanTypeKeyword_2_0; }
 
 		//FloatType
 		public EnumLiteralDeclaration getFloatTypeEnumLiteralDeclaration_3() { return cFloatTypeEnumLiteralDeclaration_3; }
 
-		//"FloatType"
+		//'FloatType'
 		public Keyword getFloatTypeFloatTypeKeyword_3_0() { return cFloatTypeFloatTypeKeyword_3_0; }
 
 		//DoubleType
 		public EnumLiteralDeclaration getDoubleTypeEnumLiteralDeclaration_4() { return cDoubleTypeEnumLiteralDeclaration_4; }
 
-		//"DoubleType"
+		//'DoubleType'
 		public Keyword getDoubleTypeDoubleTypeKeyword_4_0() { return cDoubleTypeDoubleTypeKeyword_4_0; }
 	}
 
 	public class UnitTypeElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "UnitType");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.UnitType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cBYTESEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cBYTESBYTESKeyword_0_0 = (Keyword)cBYTESEnumLiteralDeclaration_0.eContents().get(0);
@@ -16248,8 +16482,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCORESCORESKeyword_20_0 = (Keyword)cCORESEnumLiteralDeclaration_20.eContents().get(0);
 		
 		//enum UnitType returns unit::UnitType:
-		//	BYTES | KILOBYTES | GIGABYTES | MEGABYTES | EUROS | DOLLARS | POUNDS | MILLISECONDS | SECONDS | MINUTES | HOURS |
-		//	DAYS | WEEKS | MONTHS | REQUESTS | REQUESTS_PER_SECOND | TRANSACTIONS | TRANSACTIONS_PER_SECOND | BYTES_PER_SECOND |
+		//	BYTES | KILOBYTES | GIGABYTES | MEGABYTES | EUROS | DOLLARS | POUNDS | MILLISECONDS | SECONDS | MINUTES | HOURS | DAYS
+		//	| WEEKS | MONTHS | REQUESTS | REQUESTS_PER_SECOND | TRANSACTIONS | TRANSACTIONS_PER_SECOND | BYTES_PER_SECOND |
 		//	PERCENTAGE | CORES;
 		public EnumRule getRule() { return rule; }
 
@@ -16261,132 +16495,132 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//BYTES
 		public EnumLiteralDeclaration getBYTESEnumLiteralDeclaration_0() { return cBYTESEnumLiteralDeclaration_0; }
 
-		//"BYTES"
+		//'BYTES'
 		public Keyword getBYTESBYTESKeyword_0_0() { return cBYTESBYTESKeyword_0_0; }
 
 		//KILOBYTES
 		public EnumLiteralDeclaration getKILOBYTESEnumLiteralDeclaration_1() { return cKILOBYTESEnumLiteralDeclaration_1; }
 
-		//"KILOBYTES"
+		//'KILOBYTES'
 		public Keyword getKILOBYTESKILOBYTESKeyword_1_0() { return cKILOBYTESKILOBYTESKeyword_1_0; }
 
 		//GIGABYTES
 		public EnumLiteralDeclaration getGIGABYTESEnumLiteralDeclaration_2() { return cGIGABYTESEnumLiteralDeclaration_2; }
 
-		//"GIGABYTES"
+		//'GIGABYTES'
 		public Keyword getGIGABYTESGIGABYTESKeyword_2_0() { return cGIGABYTESGIGABYTESKeyword_2_0; }
 
 		//MEGABYTES
 		public EnumLiteralDeclaration getMEGABYTESEnumLiteralDeclaration_3() { return cMEGABYTESEnumLiteralDeclaration_3; }
 
-		//"MEGABYTES"
+		//'MEGABYTES'
 		public Keyword getMEGABYTESMEGABYTESKeyword_3_0() { return cMEGABYTESMEGABYTESKeyword_3_0; }
 
 		//EUROS
 		public EnumLiteralDeclaration getEUROSEnumLiteralDeclaration_4() { return cEUROSEnumLiteralDeclaration_4; }
 
-		//"EUROS"
+		//'EUROS'
 		public Keyword getEUROSEUROSKeyword_4_0() { return cEUROSEUROSKeyword_4_0; }
 
 		//DOLLARS
 		public EnumLiteralDeclaration getDOLLARSEnumLiteralDeclaration_5() { return cDOLLARSEnumLiteralDeclaration_5; }
 
-		//"DOLLARS"
+		//'DOLLARS'
 		public Keyword getDOLLARSDOLLARSKeyword_5_0() { return cDOLLARSDOLLARSKeyword_5_0; }
 
 		//POUNDS
 		public EnumLiteralDeclaration getPOUNDSEnumLiteralDeclaration_6() { return cPOUNDSEnumLiteralDeclaration_6; }
 
-		//"POUNDS"
+		//'POUNDS'
 		public Keyword getPOUNDSPOUNDSKeyword_6_0() { return cPOUNDSPOUNDSKeyword_6_0; }
 
 		//MILLISECONDS
 		public EnumLiteralDeclaration getMILLISECONDSEnumLiteralDeclaration_7() { return cMILLISECONDSEnumLiteralDeclaration_7; }
 
-		//"MILLISECONDS"
+		//'MILLISECONDS'
 		public Keyword getMILLISECONDSMILLISECONDSKeyword_7_0() { return cMILLISECONDSMILLISECONDSKeyword_7_0; }
 
 		//SECONDS
 		public EnumLiteralDeclaration getSECONDSEnumLiteralDeclaration_8() { return cSECONDSEnumLiteralDeclaration_8; }
 
-		//"SECONDS"
+		//'SECONDS'
 		public Keyword getSECONDSSECONDSKeyword_8_0() { return cSECONDSSECONDSKeyword_8_0; }
 
 		//MINUTES
 		public EnumLiteralDeclaration getMINUTESEnumLiteralDeclaration_9() { return cMINUTESEnumLiteralDeclaration_9; }
 
-		//"MINUTES"
+		//'MINUTES'
 		public Keyword getMINUTESMINUTESKeyword_9_0() { return cMINUTESMINUTESKeyword_9_0; }
 
 		//HOURS
 		public EnumLiteralDeclaration getHOURSEnumLiteralDeclaration_10() { return cHOURSEnumLiteralDeclaration_10; }
 
-		//"HOURS"
+		//'HOURS'
 		public Keyword getHOURSHOURSKeyword_10_0() { return cHOURSHOURSKeyword_10_0; }
 
 		//DAYS
 		public EnumLiteralDeclaration getDAYSEnumLiteralDeclaration_11() { return cDAYSEnumLiteralDeclaration_11; }
 
-		//"DAYS"
+		//'DAYS'
 		public Keyword getDAYSDAYSKeyword_11_0() { return cDAYSDAYSKeyword_11_0; }
 
 		//WEEKS
 		public EnumLiteralDeclaration getWEEKSEnumLiteralDeclaration_12() { return cWEEKSEnumLiteralDeclaration_12; }
 
-		//"WEEKS"
+		//'WEEKS'
 		public Keyword getWEEKSWEEKSKeyword_12_0() { return cWEEKSWEEKSKeyword_12_0; }
 
 		//MONTHS
 		public EnumLiteralDeclaration getMONTHSEnumLiteralDeclaration_13() { return cMONTHSEnumLiteralDeclaration_13; }
 
-		//"MONTHS"
+		//'MONTHS'
 		public Keyword getMONTHSMONTHSKeyword_13_0() { return cMONTHSMONTHSKeyword_13_0; }
 
 		//REQUESTS
 		public EnumLiteralDeclaration getREQUESTSEnumLiteralDeclaration_14() { return cREQUESTSEnumLiteralDeclaration_14; }
 
-		//"REQUESTS"
+		//'REQUESTS'
 		public Keyword getREQUESTSREQUESTSKeyword_14_0() { return cREQUESTSREQUESTSKeyword_14_0; }
 
 		//REQUESTS_PER_SECOND
 		public EnumLiteralDeclaration getREQUESTS_PER_SECONDEnumLiteralDeclaration_15() { return cREQUESTS_PER_SECONDEnumLiteralDeclaration_15; }
 
-		//"REQUESTS_PER_SECOND"
+		//'REQUESTS_PER_SECOND'
 		public Keyword getREQUESTS_PER_SECONDREQUESTS_PER_SECONDKeyword_15_0() { return cREQUESTS_PER_SECONDREQUESTS_PER_SECONDKeyword_15_0; }
 
 		//TRANSACTIONS
 		public EnumLiteralDeclaration getTRANSACTIONSEnumLiteralDeclaration_16() { return cTRANSACTIONSEnumLiteralDeclaration_16; }
 
-		//"TRANSACTIONS"
+		//'TRANSACTIONS'
 		public Keyword getTRANSACTIONSTRANSACTIONSKeyword_16_0() { return cTRANSACTIONSTRANSACTIONSKeyword_16_0; }
 
 		//TRANSACTIONS_PER_SECOND
 		public EnumLiteralDeclaration getTRANSACTIONS_PER_SECONDEnumLiteralDeclaration_17() { return cTRANSACTIONS_PER_SECONDEnumLiteralDeclaration_17; }
 
-		//"TRANSACTIONS_PER_SECOND"
+		//'TRANSACTIONS_PER_SECOND'
 		public Keyword getTRANSACTIONS_PER_SECONDTRANSACTIONS_PER_SECONDKeyword_17_0() { return cTRANSACTIONS_PER_SECONDTRANSACTIONS_PER_SECONDKeyword_17_0; }
 
 		//BYTES_PER_SECOND
 		public EnumLiteralDeclaration getBYTES_PER_SECONDEnumLiteralDeclaration_18() { return cBYTES_PER_SECONDEnumLiteralDeclaration_18; }
 
-		//"BYTES_PER_SECOND"
+		//'BYTES_PER_SECOND'
 		public Keyword getBYTES_PER_SECONDBYTES_PER_SECONDKeyword_18_0() { return cBYTES_PER_SECONDBYTES_PER_SECONDKeyword_18_0; }
 
 		//PERCENTAGE
 		public EnumLiteralDeclaration getPERCENTAGEEnumLiteralDeclaration_19() { return cPERCENTAGEEnumLiteralDeclaration_19; }
 
-		//"PERCENTAGE"
+		//'PERCENTAGE'
 		public Keyword getPERCENTAGEPERCENTAGEKeyword_19_0() { return cPERCENTAGEPERCENTAGEKeyword_19_0; }
 
 		//CORES
 		public EnumLiteralDeclaration getCORESEnumLiteralDeclaration_20() { return cCORESEnumLiteralDeclaration_20; }
 
-		//"CORES"
+		//'CORES'
 		public Keyword getCORESCORESKeyword_20_0() { return cCORESCORESKeyword_20_0; }
 	}
 
 	public class ActionTypeElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "ActionType");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.ActionType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cEVENT_CREATIONEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cEVENT_CREATIONEVENTCREATIONKeyword_0_0 = (Keyword)cEVENT_CREATIONEnumLiteralDeclaration_0.eContents().get(0);
@@ -16400,42 +16634,42 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSCALE_DOWNSCALEDOWNKeyword_4_0 = (Keyword)cSCALE_DOWNEnumLiteralDeclaration_4.eContents().get(0);
 		
 		//enum ActionType returns camel::ActionType:
-		//	EVENT_CREATION="EVENT CREATION" | SCALE_IN="SCALE IN" | SCALE_OUT="SCALE OUT" | SCALE_UP="SCALE UP" |
-		//	SCALE_DOWN="SCALE DOWN";
+		//	EVENT_CREATION='EVENT CREATION' | SCALE_IN='SCALE IN' | SCALE_OUT='SCALE OUT' | SCALE_UP='SCALE UP' |
+		//	SCALE_DOWN='SCALE DOWN';
 		public EnumRule getRule() { return rule; }
 
-		//EVENT_CREATION="EVENT CREATION" | SCALE_IN="SCALE IN" | SCALE_OUT="SCALE OUT" | SCALE_UP="SCALE UP" |
-		//SCALE_DOWN="SCALE DOWN"
+		//EVENT_CREATION='EVENT CREATION' | SCALE_IN='SCALE IN' | SCALE_OUT='SCALE OUT' | SCALE_UP='SCALE UP' |
+		//SCALE_DOWN='SCALE DOWN'
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//EVENT_CREATION="EVENT CREATION"
+		//EVENT_CREATION='EVENT CREATION'
 		public EnumLiteralDeclaration getEVENT_CREATIONEnumLiteralDeclaration_0() { return cEVENT_CREATIONEnumLiteralDeclaration_0; }
 
-		//"EVENT CREATION"
+		//'EVENT CREATION'
 		public Keyword getEVENT_CREATIONEVENTCREATIONKeyword_0_0() { return cEVENT_CREATIONEVENTCREATIONKeyword_0_0; }
 
-		//SCALE_IN="SCALE IN"
+		//SCALE_IN='SCALE IN'
 		public EnumLiteralDeclaration getSCALE_INEnumLiteralDeclaration_1() { return cSCALE_INEnumLiteralDeclaration_1; }
 
-		//"SCALE IN"
+		//'SCALE IN'
 		public Keyword getSCALE_INSCALEINKeyword_1_0() { return cSCALE_INSCALEINKeyword_1_0; }
 
-		//SCALE_OUT="SCALE OUT"
+		//SCALE_OUT='SCALE OUT'
 		public EnumLiteralDeclaration getSCALE_OUTEnumLiteralDeclaration_2() { return cSCALE_OUTEnumLiteralDeclaration_2; }
 
-		//"SCALE OUT"
+		//'SCALE OUT'
 		public Keyword getSCALE_OUTSCALEOUTKeyword_2_0() { return cSCALE_OUTSCALEOUTKeyword_2_0; }
 
-		//SCALE_UP="SCALE UP"
+		//SCALE_UP='SCALE UP'
 		public EnumLiteralDeclaration getSCALE_UPEnumLiteralDeclaration_3() { return cSCALE_UPEnumLiteralDeclaration_3; }
 
-		//"SCALE UP"
+		//'SCALE UP'
 		public Keyword getSCALE_UPSCALEUPKeyword_3_0() { return cSCALE_UPSCALEUPKeyword_3_0; }
 
-		//SCALE_DOWN="SCALE DOWN"
+		//SCALE_DOWN='SCALE DOWN'
 		public EnumLiteralDeclaration getSCALE_DOWNEnumLiteralDeclaration_4() { return cSCALE_DOWNEnumLiteralDeclaration_4; }
 
-		//"SCALE DOWN"
+		//'SCALE DOWN'
 		public Keyword getSCALE_DOWNSCALEDOWNKeyword_4_0() { return cSCALE_DOWNSCALEDOWNKeyword_4_0; }
 	}
 	
@@ -16449,7 +16683,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final RequiredCommunicationElements pRequiredCommunication;
 	private final ProvidedHostElements pProvidedHost;
 	private final RequiredHostElements pRequiredHost;
-	private final CommunicationTypeElements unknownRuleCommunicationType;
+	private final CommunicationTypeElements eCommunicationType;
 	private final CommunicationElements pCommunication;
 	private final HostingElements pHosting;
 	private final VMInstanceElements pVMInstance;
@@ -16479,10 +16713,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final CompositeMetricInstanceElements pCompositeMetricInstance;
 	private final RawMetricInstanceElements pRawMetricInstance;
 	private final WindowElements pWindow;
-	private final WindowTypeElements unknownRuleWindowType;
-	private final WindowSizeTypeElements unknownRuleWindowSizeType;
+	private final WindowTypeElements eWindowType;
+	private final WindowSizeTypeElements eWindowSizeType;
 	private final ELongElements pELong;
-	private final ScheduleTypeElements unknownRuleScheduleType;
+	private final ScheduleTypeElements eScheduleType;
 	private final ScheduleElements pSchedule;
 	private final MetricComponentBindingElements pMetricComponentBinding;
 	private final MetricVMBindingElements pMetricVMBinding;
@@ -16491,24 +16725,24 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final ConditionElements pCondition;
 	private final MetricConditionElements pMetricCondition;
 	private final PropertyConditionElements pPropertyCondition;
-	private final ComparisonOperatorTypeElements unknownRuleComparisonOperatorType;
+	private final ComparisonOperatorTypeElements eComparisonOperatorType;
 	private final ConditionContextElements pConditionContext;
-	private final QuantifierTypeElements unknownRuleQuantifierType;
+	private final QuantifierTypeElements eQuantifierType;
 	private final CompositeMetricContextElements pCompositeMetricContext;
 	private final RawMetricContextElements pRawMetricContext;
 	private final PropertyContextElements pPropertyContext;
 	private final CompositeMetricElements pCompositeMetric;
 	private final RawMetricElements pRawMetric;
 	private final MetricElements pMetric;
-	private final LayerTypeElements unknownRuleLayerType;
+	private final LayerTypeElements eLayerType;
 	private final MetricFormulaParameterElements pMetricFormulaParameter;
 	private final FormulaParameterElements pFormulaParameter;
 	private final MetricFormulaParameter_ImplElements pMetricFormulaParameter_Impl;
 	private final MetricFormulaElements pMetricFormula;
-	private final MetricFunctionTypeElements unknownRuleMetricFunctionType;
-	private final MetricFunctionArityTypeElements unknownRuleMetricFunctionArityType;
-	private final FunctionPatternTypeElements unknownRuleFunctionPatternType;
-	private final PropertyTypeElements unknownRulePropertyType;
+	private final MetricFunctionTypeElements eMetricFunctionType;
+	private final MetricFunctionArityTypeElements eMetricFunctionArityType;
+	private final FunctionPatternTypeElements eFunctionPatternType;
+	private final PropertyTypeElements ePropertyType;
 	private final PropertyElements pProperty;
 	private final SensorElements pSensor;
 	private final OrganisationModelElements pOrganisationModel;
@@ -16528,8 +16762,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final RoleElements pRole;
 	private final PermissionElements pPermission;
 	private final ResourceFilterElements pResourceFilter;
-	private final ResourcePatternElements unknownRuleResourcePattern;
-	private final SecurityLevelElements unknownRuleSecurityLevel;
+	private final ResourcePatternElements eResourcePattern;
+	private final SecurityLevelElements eSecurityLevel;
 	private final InformationResourceFilterElements pInformationResourceFilter;
 	private final ServiceResourceFilterElements pServiceResourceFilter;
 	private final ProviderModelElements pProviderModel;
@@ -16549,19 +16783,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final FeatCardinalityElements pFeatCardinality;
 	private final InstanceElements pInstance;
 	private final ProductElements pProduct;
-	private final OperatorElements unknownRuleOperator;
+	private final OperatorElements eOperator;
 	private final CloneElements pClone;
 	private final Alternative_ImplElements pAlternative_Impl;
 	private final ExclusiveElements pExclusive;
 	private final GroupCardinalityElements pGroupCardinality;
 	private final RequirementModelElements pRequirementModel;
 	private final RequirementGroupElements pRequirementGroup;
-	private final RequirementOperatorTypeElements unknownRuleRequirementOperatorType;
+	private final RequirementOperatorTypeElements eRequirementOperatorType;
 	private final RequirementElements pRequirement;
 	private final ServiceLevelObjectiveElements pServiceLevelObjective;
 	private final ProviderRequirementElements pProviderRequirement;
 	private final OptimisationRequirementElements pOptimisationRequirement;
-	private final OptimisationFunctionTypeElements unknownRuleOptimisationFunctionType;
+	private final OptimisationFunctionTypeElements eOptimisationFunctionType;
 	private final OSRequirementElements pOSRequirement;
 	private final ImageRequirementElements pImageRequirement;
 	private final DoubleElements pDouble;
@@ -16580,15 +16814,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final EventPatternElements pEventPattern;
 	private final EventElements pEvent;
 	private final SimpleEventElements pSimpleEvent;
-	private final StatusTypeElements unknownRuleStatusType;
+	private final StatusTypeElements eStatusType;
 	private final FunctionalEventElements pFunctionalEvent;
 	private final NonFunctionalEventElements pNonFunctionalEvent;
 	private final BinaryEventPatternElements pBinaryEventPattern;
 	private final UnaryEventPatternElements pUnaryEventPattern;
 	private final TimerElements pTimer;
-	private final TimerTypeElements unknownRuleTimerType;
-	private final BinaryPatternOperatorTypeElements unknownRuleBinaryPatternOperatorType;
-	private final UnaryPatternOperatorTypeElements unknownRuleUnaryPatternOperatorType;
+	private final TimerTypeElements eTimerType;
+	private final BinaryPatternOperatorTypeElements eBinaryPatternOperatorType;
+	private final UnaryPatternOperatorTypeElements eUnaryPatternOperatorType;
 	private final SecurityModelElements pSecurityModel;
 	private final RawSecurityMetricElements pRawSecurityMetric;
 	private final CompositeSecurityMetricElements pCompositeSecurityMetric;
@@ -16610,7 +16844,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final RangeElements pRange;
 	private final RangeUnionElements pRangeUnion;
 	private final StringsValueTypeElements pStringsValueType;
-	private final TypeEnumElements unknownRuleTypeEnum;
+	private final TypeEnumElements eTypeEnum;
 	private final EnumerateValueElements pEnumerateValue;
 	private final EIntElements pEInt;
 	private final LimitElements pLimit;
@@ -16636,9 +16870,9 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final StorageUnitElements pStorageUnit;
 	private final ThroughputUnitElements pThroughputUnit;
 	private final TransactionUnitElements pTransactionUnit;
-	private final UnitTypeElements unknownRuleUnitType;
+	private final UnitTypeElements eUnitType;
 	private final ActionElements pAction;
-	private final ActionTypeElements unknownRuleActionType;
+	private final ActionTypeElements eActionType;
 	private final ApplicationElements pApplication;
 	private final FqnElements pFqn;
 	private final TerminalRule tMYDATE;
@@ -16662,7 +16896,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.pRequiredCommunication = new RequiredCommunicationElements();
 		this.pProvidedHost = new ProvidedHostElements();
 		this.pRequiredHost = new RequiredHostElements();
-		this.unknownRuleCommunicationType = new CommunicationTypeElements();
+		this.eCommunicationType = new CommunicationTypeElements();
 		this.pCommunication = new CommunicationElements();
 		this.pHosting = new HostingElements();
 		this.pVMInstance = new VMInstanceElements();
@@ -16692,10 +16926,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.pCompositeMetricInstance = new CompositeMetricInstanceElements();
 		this.pRawMetricInstance = new RawMetricInstanceElements();
 		this.pWindow = new WindowElements();
-		this.unknownRuleWindowType = new WindowTypeElements();
-		this.unknownRuleWindowSizeType = new WindowSizeTypeElements();
+		this.eWindowType = new WindowTypeElements();
+		this.eWindowSizeType = new WindowSizeTypeElements();
 		this.pELong = new ELongElements();
-		this.unknownRuleScheduleType = new ScheduleTypeElements();
+		this.eScheduleType = new ScheduleTypeElements();
 		this.pSchedule = new ScheduleElements();
 		this.pMetricComponentBinding = new MetricComponentBindingElements();
 		this.pMetricVMBinding = new MetricVMBindingElements();
@@ -16704,24 +16938,24 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.pCondition = new ConditionElements();
 		this.pMetricCondition = new MetricConditionElements();
 		this.pPropertyCondition = new PropertyConditionElements();
-		this.unknownRuleComparisonOperatorType = new ComparisonOperatorTypeElements();
+		this.eComparisonOperatorType = new ComparisonOperatorTypeElements();
 		this.pConditionContext = new ConditionContextElements();
-		this.unknownRuleQuantifierType = new QuantifierTypeElements();
+		this.eQuantifierType = new QuantifierTypeElements();
 		this.pCompositeMetricContext = new CompositeMetricContextElements();
 		this.pRawMetricContext = new RawMetricContextElements();
 		this.pPropertyContext = new PropertyContextElements();
 		this.pCompositeMetric = new CompositeMetricElements();
 		this.pRawMetric = new RawMetricElements();
 		this.pMetric = new MetricElements();
-		this.unknownRuleLayerType = new LayerTypeElements();
+		this.eLayerType = new LayerTypeElements();
 		this.pMetricFormulaParameter = new MetricFormulaParameterElements();
 		this.pFormulaParameter = new FormulaParameterElements();
 		this.pMetricFormulaParameter_Impl = new MetricFormulaParameter_ImplElements();
 		this.pMetricFormula = new MetricFormulaElements();
-		this.unknownRuleMetricFunctionType = new MetricFunctionTypeElements();
-		this.unknownRuleMetricFunctionArityType = new MetricFunctionArityTypeElements();
-		this.unknownRuleFunctionPatternType = new FunctionPatternTypeElements();
-		this.unknownRulePropertyType = new PropertyTypeElements();
+		this.eMetricFunctionType = new MetricFunctionTypeElements();
+		this.eMetricFunctionArityType = new MetricFunctionArityTypeElements();
+		this.eFunctionPatternType = new FunctionPatternTypeElements();
+		this.ePropertyType = new PropertyTypeElements();
 		this.pProperty = new PropertyElements();
 		this.pSensor = new SensorElements();
 		this.pOrganisationModel = new OrganisationModelElements();
@@ -16741,8 +16975,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.pRole = new RoleElements();
 		this.pPermission = new PermissionElements();
 		this.pResourceFilter = new ResourceFilterElements();
-		this.unknownRuleResourcePattern = new ResourcePatternElements();
-		this.unknownRuleSecurityLevel = new SecurityLevelElements();
+		this.eResourcePattern = new ResourcePatternElements();
+		this.eSecurityLevel = new SecurityLevelElements();
 		this.pInformationResourceFilter = new InformationResourceFilterElements();
 		this.pServiceResourceFilter = new ServiceResourceFilterElements();
 		this.pProviderModel = new ProviderModelElements();
@@ -16762,19 +16996,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.pFeatCardinality = new FeatCardinalityElements();
 		this.pInstance = new InstanceElements();
 		this.pProduct = new ProductElements();
-		this.unknownRuleOperator = new OperatorElements();
+		this.eOperator = new OperatorElements();
 		this.pClone = new CloneElements();
 		this.pAlternative_Impl = new Alternative_ImplElements();
 		this.pExclusive = new ExclusiveElements();
 		this.pGroupCardinality = new GroupCardinalityElements();
 		this.pRequirementModel = new RequirementModelElements();
 		this.pRequirementGroup = new RequirementGroupElements();
-		this.unknownRuleRequirementOperatorType = new RequirementOperatorTypeElements();
+		this.eRequirementOperatorType = new RequirementOperatorTypeElements();
 		this.pRequirement = new RequirementElements();
 		this.pServiceLevelObjective = new ServiceLevelObjectiveElements();
 		this.pProviderRequirement = new ProviderRequirementElements();
 		this.pOptimisationRequirement = new OptimisationRequirementElements();
-		this.unknownRuleOptimisationFunctionType = new OptimisationFunctionTypeElements();
+		this.eOptimisationFunctionType = new OptimisationFunctionTypeElements();
 		this.pOSRequirement = new OSRequirementElements();
 		this.pImageRequirement = new ImageRequirementElements();
 		this.pDouble = new DoubleElements();
@@ -16793,15 +17027,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.pEventPattern = new EventPatternElements();
 		this.pEvent = new EventElements();
 		this.pSimpleEvent = new SimpleEventElements();
-		this.unknownRuleStatusType = new StatusTypeElements();
+		this.eStatusType = new StatusTypeElements();
 		this.pFunctionalEvent = new FunctionalEventElements();
 		this.pNonFunctionalEvent = new NonFunctionalEventElements();
 		this.pBinaryEventPattern = new BinaryEventPatternElements();
 		this.pUnaryEventPattern = new UnaryEventPatternElements();
 		this.pTimer = new TimerElements();
-		this.unknownRuleTimerType = new TimerTypeElements();
-		this.unknownRuleBinaryPatternOperatorType = new BinaryPatternOperatorTypeElements();
-		this.unknownRuleUnaryPatternOperatorType = new UnaryPatternOperatorTypeElements();
+		this.eTimerType = new TimerTypeElements();
+		this.eBinaryPatternOperatorType = new BinaryPatternOperatorTypeElements();
+		this.eUnaryPatternOperatorType = new UnaryPatternOperatorTypeElements();
 		this.pSecurityModel = new SecurityModelElements();
 		this.pRawSecurityMetric = new RawSecurityMetricElements();
 		this.pCompositeSecurityMetric = new CompositeSecurityMetricElements();
@@ -16823,7 +17057,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.pRange = new RangeElements();
 		this.pRangeUnion = new RangeUnionElements();
 		this.pStringsValueType = new StringsValueTypeElements();
-		this.unknownRuleTypeEnum = new TypeEnumElements();
+		this.eTypeEnum = new TypeEnumElements();
 		this.pEnumerateValue = new EnumerateValueElements();
 		this.pEInt = new EIntElements();
 		this.pLimit = new LimitElements();
@@ -16849,12 +17083,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.pStorageUnit = new StorageUnitElements();
 		this.pThroughputUnit = new ThroughputUnitElements();
 		this.pTransactionUnit = new TransactionUnitElements();
-		this.unknownRuleUnitType = new UnitTypeElements();
+		this.eUnitType = new UnitTypeElements();
 		this.pAction = new ActionElements();
-		this.unknownRuleActionType = new ActionTypeElements();
+		this.eActionType = new ActionTypeElements();
 		this.pApplication = new ApplicationElements();
 		this.pFqn = new FqnElements();
-		this.tMYDATE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "MYDATE");
+		this.tMYDATE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "eu.paasage.camel.dsl.CamelDsl.MYDATE");
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -16884,12 +17118,14 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	//CamelModel returns camel::CamelModel:
-	//	("import " importURI+=EString)* "camel model " name=ID "{" (deploymentModels+=DeploymentModel |
-	//	executionModels+=ExecutionModel | locationModels+=LocationModel | metricModels+=MetricModel |
-	//	organisationModels+=OrganisationModel | providerModels+=ProviderModel | requirementModels+=RequirementModel |
-	//	scalabilityModels+=ScalabilityModel | securityModels+=SecurityModel | typeModels+=TypeModel | unitModels+=UnitModel |
-	//	actions+=Action | applications+=Application)* "}";
+	//CamelModel camel::CamelModel:
+	//	('import ' importURI+=EString)*
+	//	'camel model ' name=ID '{' (deploymentModels+=DeploymentModel | executionModels+=ExecutionModel |
+	//	locationModels+=LocationModel | metricModels+=MetricModel | organisationModels+=OrganisationModel |
+	//	providerModels+=ProviderModel | requirementModels+=RequirementModel | scalabilityModels+=ScalabilityModel |
+	//	securityModels+=SecurityModel | typeModels+=TypeModel | unitModels+=UnitModel | actions+=Action |
+	//	applications+=Application)*
+	//	'}'
 	public CamelModelElements getCamelModelAccess() {
 		return pCamelModel;
 	}
@@ -16898,11 +17134,14 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getCamelModelAccess().getRule();
 	}
 
-	/// * Deployment model * / DeploymentModel returns deployment::DeploymentModel:
-	//	"deployment model " name=ID "{" (vms+=VM | internalComponents+=InternalComponent |
-	//	vmRequirementSets+=VMRequirementSet)* hostings+=Hosting* communications+=Communication* (vmInstances+=VMInstance |
-	//	internalComponentInstances+=InternalComponentInstance)* communicationInstances+=CommunicationInstance*
-	//	hostingInstances+=HostingInstance* ("global " globalVMRequirementSet=[deployment::VMRequirementSet|Fqn])? "}";
+	/// * Deployment model * / DeploymentModel deployment::DeploymentModel:
+	//	'deployment model ' name=ID '{' (vms+=VM | internalComponents+=InternalComponent |
+	//	vmRequirementSets+=VMRequirementSet)*
+	//	hostings+=Hosting*
+	//	communications+=Communication* (vmInstances+=VMInstance | internalComponentInstances+=InternalComponentInstance)*
+	//	communicationInstances+=CommunicationInstance*
+	//	hostingInstances+=HostingInstance* ('global ' globalVMRequirementSet=[deployment::VMRequirementSet|Fqn])?
+	//	'}'
 	public DeploymentModelElements getDeploymentModelAccess() {
 		return pDeploymentModel;
 	}
@@ -16911,10 +17150,14 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getDeploymentModelAccess().getRule();
 	}
 
-	//Configuration returns deployment::Configuration:
-	//	"configuration " name=ID "{" ("download: " downloadCommand=EString | "upload: " uploadCommand=EString | "install: "
-	//	installCommand=EString | "configure: " configureCommand=EString | "start: " startCommand=EString | "stop: "
-	//	stopCommand=EString)* "}";
+	//Configuration deployment::Configuration:
+	//	'configuration ' name=ID '{' ('download: ' downloadCommand=EString |
+	//	'upload: ' uploadCommand=EString |
+	//	'install: ' installCommand=EString |
+	//	'configure: ' configureCommand=EString |
+	//	'start: ' startCommand=EString |
+	//	'stop: ' stopCommand=EString)*
+	//	'}'
 	public ConfigurationElements getConfigurationAccess() {
 		return pConfiguration;
 	}
@@ -16923,9 +17166,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getConfigurationAccess().getRule();
 	}
 
-	//VM returns deployment::VM:
-	//	"vm " name=ID "{" ("requirement set " vmRequirementSet=[deployment::VMRequirementSet])? //            providedCommunications += ProvidedCommunication |
-	//	(providedHosts+=ProvidedHost | configurations+=Configuration)* "}";
+	//VM deployment::VM:
+	//	'vm ' name=ID '{' ('requirement set ' vmRequirementSet=[deployment::VMRequirementSet])? (providedHosts+=ProvidedHost |
+	//	configurations+=Configuration)*
+	//	'}'
 	public VMElements getVMAccess() {
 		return pVM;
 	}
@@ -16934,13 +17178,14 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getVMAccess().getRule();
 	}
 
-	//VMRequirementSet returns deployment::VMRequirementSet:
-	//	"requirement set " name=ID "{" ("location: " locationRequirement=[requirement::LocationRequirement|Fqn] |
-	//	"qualitative hardware: " qualitativeHardwareRequirement=[requirement::QualitativeHardwareRequirement|Fqn] |
-	//	"quantitative hardware: " quantitativeHardwareRequirement=[requirement::QuantitativeHardwareRequirement|Fqn] | "os: "
-	//	osOrImageRequirement=[requirement::OSRequirement|Fqn] | "image: "
-	//	osOrImageRequirement=[requirement::ImageRequirement|Fqn] "provider: "
-	//	providerRequirement=[requirement::ProviderRequirement|Fqn])* "}";
+	//VMRequirementSet deployment::VMRequirementSet:
+	//	'requirement set ' name=ID '{' ('location: ' locationRequirement=[requirement::LocationRequirement|Fqn] |
+	//	'qualitative hardware: ' qualitativeHardwareRequirement=[requirement::QualitativeHardwareRequirement|Fqn] |
+	//	'quantitative hardware: ' quantitativeHardwareRequirement=[requirement::QuantitativeHardwareRequirement|Fqn] |
+	//	'os: ' osOrImageRequirement=[requirement::OSRequirement|Fqn] |
+	//	'image: ' osOrImageRequirement=[requirement::ImageRequirement|Fqn]
+	//	'provider: ' providerRequirement=[requirement::ProviderRequirement|Fqn])*
+	//	'}'
 	public VMRequirementSetElements getVMRequirementSetAccess() {
 		return pVMRequirementSet;
 	}
@@ -16949,10 +17194,11 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getVMRequirementSetAccess().getRule();
 	}
 
-	//InternalComponent returns deployment::InternalComponent:
-	//	"internal component " name=ID "{" (providedCommunications+=ProvidedCommunication |
+	//InternalComponent deployment::InternalComponent:
+	//	'internal component ' name=ID '{' (providedCommunications+=ProvidedCommunication |
 	//	requiredCommunications+=RequiredCommunication | providedHosts+=ProvidedHost | requiredHost=RequiredHost |
-	//	configurations+=Configuration ("version: " version=EString)?)* "}";
+	//	configurations+=Configuration ('version: ' version=EString)?)*
+	//	'}'
 	public InternalComponentElements getInternalComponentAccess() {
 		return pInternalComponent;
 	}
@@ -16961,8 +17207,9 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getInternalComponentAccess().getRule();
 	}
 
-	//ProvidedCommunication returns deployment::ProvidedCommunication:
-	//	"provided communication " name=ID ("{" (("port: " portNumber=INT) ","?)* "}")?;
+	//ProvidedCommunication deployment::ProvidedCommunication:
+	//	'provided communication ' name=ID ('{' (('port: ' portNumber=INT) ','?)*
+	//	'}')?
 	public ProvidedCommunicationElements getProvidedCommunicationAccess() {
 		return pProvidedCommunication;
 	}
@@ -16971,8 +17218,9 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getProvidedCommunicationAccess().getRule();
 	}
 
-	//RequiredCommunication returns deployment::RequiredCommunication:
-	//	"required communication " name=ID ("{" (("port: " portNumber=INT | isMandatory?="mandatory") ","?)* "}")?;
+	//RequiredCommunication deployment::RequiredCommunication:
+	//	'required communication ' name=ID ('{' (('port: ' portNumber=INT | isMandatory?='mandatory') ','?)*
+	//	'}')?
 	public RequiredCommunicationElements getRequiredCommunicationAccess() {
 		return pRequiredCommunication;
 	}
@@ -16981,8 +17229,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getRequiredCommunicationAccess().getRule();
 	}
 
-	//ProvidedHost returns deployment::ProvidedHost:
-	//	"provided host " name=ID;
+	//ProvidedHost deployment::ProvidedHost:
+	//	'provided host ' name=ID
 	public ProvidedHostElements getProvidedHostAccess() {
 		return pProvidedHost;
 	}
@@ -16991,8 +17239,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getProvidedHostAccess().getRule();
 	}
 
-	//RequiredHost returns deployment::RequiredHost:
-	//	"required host " name=ID;
+	//RequiredHost deployment::RequiredHost:
+	//	'required host ' name=ID
 	public RequiredHostElements getRequiredHostAccess() {
 		return pRequiredHost;
 	}
@@ -17004,18 +17252,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	//enum CommunicationType returns deployment::CommunicationType:
 	//	LOCAL | REMOTE | ANY;
 	public CommunicationTypeElements getCommunicationTypeAccess() {
-		return unknownRuleCommunicationType;
+		return eCommunicationType;
 	}
 	
 	public EnumRule getCommunicationTypeRule() {
 		return getCommunicationTypeAccess().getRule();
 	}
 
-	//Communication returns deployment::Communication:
-	//	"communication " name=ID "{" ("type: " type=CommunicationType)? "from "
-	//	requiredCommunication=[deployment::RequiredCommunication|Fqn] "to "
-	//	providedCommunication=[deployment::ProvidedCommunication|Fqn] ("provided port "
-	//	providedPortConfiguration=Configuration)? ("required port " requiredPortConfiguration=Configuration)? "}";
+	//Communication deployment::Communication:
+	//	'communication ' name=ID '{' ('type: ' type=CommunicationType)?
+	//	'from ' requiredCommunication=[deployment::RequiredCommunication|Fqn]
+	//	'to ' providedCommunication=[deployment::ProvidedCommunication|Fqn] ('provided port '
+	//	providedPortConfiguration=Configuration)? ('required port ' requiredPortConfiguration=Configuration)?
+	//	'}'
 	public CommunicationElements getCommunicationAccess() {
 		return pCommunication;
 	}
@@ -17024,9 +17273,11 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getCommunicationAccess().getRule();
 	}
 
-	//Hosting returns deployment::Hosting:
-	//	"hosting " name=ID "{" "from " requiredHost=[deployment::RequiredHost|Fqn] "to "
-	//	providedHost=[deployment::ProvidedHost|Fqn] "}";
+	//Hosting deployment::Hosting:
+	//	'hosting ' name=ID '{'
+	//	'from ' requiredHost=[deployment::RequiredHost|Fqn]
+	//	'to ' providedHost=[deployment::ProvidedHost|Fqn]
+	//	'}'
 	public HostingElements getHostingAccess() {
 		return pHosting;
 	}
@@ -17035,10 +17286,11 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getHostingAccess().getRule();
 	}
 
-	//VMInstance returns deployment::VMInstance:
-	//	"vm instance " name=ID "typed " type=[deployment::VM|Fqn] "{" ("ip: " ip=EString)? ("vm type:"
-	//	vmType=[provider::Attribute|Fqn])? ("vm type value:" vmTypeValue=[type::SingleValue|Fqn])?
-	//	providedHostInstances+=ProvidedHostInstance* "}";
+	//VMInstance deployment::VMInstance:
+	//	'vm instance ' name=ID 'typed ' type=[deployment::VM|Fqn] '{' ('ip: ' ip=EString)? ('vm type:'
+	//	vmType=[provider::Attribute|Fqn])? ('vm type value:' vmTypeValue=[type::SingleValue|Fqn])?
+	//	providedHostInstances+=ProvidedHostInstance*
+	//	'}'
 	public VMInstanceElements getVMInstanceAccess() {
 		return pVMInstance;
 	}
@@ -17047,11 +17299,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getVMInstanceAccess().getRule();
 	}
 
-	//InternalComponentInstance returns deployment::InternalComponentInstance:
-	//	"internal component instance " name=ID "typed " type=[deployment::InternalComponent|Fqn] "{"
+	//InternalComponentInstance deployment::InternalComponentInstance:
+	//	'internal component instance ' name=ID 'typed ' type=[deployment::InternalComponent|Fqn] '{'
 	//	(providedCommunicationInstances+=ProvidedCommunicationInstance |
 	//	requiredCommunicationInstances+=RequiredCommunicationInstance | providedHostInstances+=ProvidedHostInstance |
-	//	requiredHostInstance=RequiredHostInstance)* "}";
+	//	requiredHostInstance=RequiredHostInstance)*
+	//	'}'
 	public InternalComponentInstanceElements getInternalComponentInstanceAccess() {
 		return pInternalComponentInstance;
 	}
@@ -17060,8 +17313,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getInternalComponentInstanceAccess().getRule();
 	}
 
-	//ProvidedCommunicationInstance returns deployment::ProvidedCommunicationInstance:
-	//	"provided communication instance " name=ID "typed " type=[deployment::CommunicationPort|Fqn];
+	//ProvidedCommunicationInstance deployment::ProvidedCommunicationInstance:
+	//	'provided communication instance ' name=ID 'typed ' type=[deployment::CommunicationPort|Fqn]
 	public ProvidedCommunicationInstanceElements getProvidedCommunicationInstanceAccess() {
 		return pProvidedCommunicationInstance;
 	}
@@ -17070,8 +17323,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getProvidedCommunicationInstanceAccess().getRule();
 	}
 
-	//RequiredCommunicationInstance returns deployment::RequiredCommunicationInstance:
-	//	"required communication instance " name=ID "typed " type=[deployment::CommunicationPort|Fqn];
+	//RequiredCommunicationInstance deployment::RequiredCommunicationInstance:
+	//	'required communication instance ' name=ID 'typed ' type=[deployment::CommunicationPort|Fqn]
 	public RequiredCommunicationInstanceElements getRequiredCommunicationInstanceAccess() {
 		return pRequiredCommunicationInstance;
 	}
@@ -17080,8 +17333,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getRequiredCommunicationInstanceAccess().getRule();
 	}
 
-	//ProvidedHostInstance returns deployment::ProvidedHostInstance:
-	//	"provided host instance " name=ID "typed " type=[deployment::HostingPort|Fqn];
+	//ProvidedHostInstance deployment::ProvidedHostInstance:
+	//	'provided host instance ' name=ID 'typed ' type=[deployment::HostingPort|Fqn]
 	public ProvidedHostInstanceElements getProvidedHostInstanceAccess() {
 		return pProvidedHostInstance;
 	}
@@ -17090,8 +17343,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getProvidedHostInstanceAccess().getRule();
 	}
 
-	//RequiredHostInstance returns deployment::RequiredHostInstance:
-	//	"required host instance " name=ID "typed " type=[deployment::HostingPort|Fqn];
+	//RequiredHostInstance deployment::RequiredHostInstance:
+	//	'required host instance ' name=ID 'typed ' type=[deployment::HostingPort|Fqn]
 	public RequiredHostInstanceElements getRequiredHostInstanceAccess() {
 		return pRequiredHostInstance;
 	}
@@ -17100,10 +17353,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getRequiredHostInstanceAccess().getRule();
 	}
 
-	//CommunicationInstance returns deployment::CommunicationInstance:
-	//	"connect " requiredCommunicationInstance=[deployment::RequiredCommunicationInstance|Fqn] "to "
-	//	providedCommunicationInstance=[deployment::ProvidedCommunicationInstance|Fqn] "typed "
-	//	type=[deployment::Communication|Fqn] ("named " name=ID)?;
+	//CommunicationInstance deployment::CommunicationInstance:
+	//	'connect ' requiredCommunicationInstance=[deployment::RequiredCommunicationInstance|Fqn] 'to '
+	//	providedCommunicationInstance=[deployment::ProvidedCommunicationInstance|Fqn] 'typed '
+	//	type=[deployment::Communication|Fqn] ('named ' name=ID)?
 	public CommunicationInstanceElements getCommunicationInstanceAccess() {
 		return pCommunicationInstance;
 	}
@@ -17112,10 +17365,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getCommunicationInstanceAccess().getRule();
 	}
 
-	//HostingInstance returns deployment::HostingInstance:
-	//	"host " requiredHostInstance=[deployment::RequiredHostInstance|Fqn] "on "
-	//	providedHostInstance=[deployment::ProvidedHostInstance|Fqn] "typed " type=[deployment::Hosting|Fqn] ("named "
-	//	name=ID)?;
+	//HostingInstance deployment::HostingInstance:
+	//	'host ' requiredHostInstance=[deployment::RequiredHostInstance|Fqn] 'on '
+	//	providedHostInstance=[deployment::ProvidedHostInstance|Fqn] 'typed ' type=[deployment::Hosting|Fqn] ('named '
+	//	name=ID)?
 	public HostingInstanceElements getHostingInstanceAccess() {
 		return pHostingInstance;
 	}
@@ -17124,11 +17377,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getHostingInstanceAccess().getRule();
 	}
 
-	/// * Execution model * / ExecutionModel returns execution::ExecutionModel:
-	//	{execution::ExecutionModel} ("importURI " "{" importURI+=EString ("," importURI+=EString)* "}")? "execution model "
-	//	name=ID "{" (actionRealisations+=ActionRealisation | eventInstances+=EventInstance |
+	/// * Execution model * / ExecutionModel execution::ExecutionModel:
+	//	{execution::ExecutionModel} ('importURI ' '{' importURI+=EString (',' importURI+=EString)* '}')?
+	//	'execution model ' name=ID '{' (actionRealisations+=ActionRealisation | eventInstances+=EventInstance |
 	//	executionContexts+=ExecutionContext | measurements+=Measurement | sloAssessessments+=SLOAssessment |
-	//	ruleTriggers+=RuleTrigger)* "}";
+	//	ruleTriggers+=RuleTrigger)*
+	//	'}'
 	public ExecutionModelElements getExecutionModelAccess() {
 		return pExecutionModel;
 	}
@@ -17137,9 +17391,11 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getExecutionModelAccess().getRule();
 	}
 
-	//ActionRealisation returns execution::ActionRealisation:
-	//	"action realisation " name=ID "{" "action: " action=[camel::Action|Fqn] ("low level actions: "
-	//	lowLevelActions=EString)? ("start time: " startTime=EDate)? ("end time: " endTime=EDate)? "}";
+	//ActionRealisation execution::ActionRealisation:
+	//	'action realisation ' name=ID '{'
+	//	'action: ' action=[camel::Action|Fqn] ('low level actions: ' lowLevelActions=EString)? ('start time: '
+	//	startTime=EDate)? ('end time: ' endTime=EDate)?
+	//	'}'
 	public ActionRealisationElements getActionRealisationAccess() {
 		return pActionRealisation;
 	}
@@ -17148,11 +17404,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getActionRealisationAccess().getRule();
 	}
 
-	//ExecutionContext returns execution::ExecutionContext:
-	//	"execution context " name=ID "{" ("start time: " startTime=EDate)? ("end time: " endTime=EDate)? ("total cost: "
-	//	totalCost=EDouble)? "application: " application=[camel::Application|Fqn] ("cost unit: "
-	//	costUnit=[unit::MonetaryUnit|Fqn])? "deployment model: " deploymentModel=[deployment::DeploymentModel|Fqn]
-	//	"requirement group: " requirementGroup=[requirement::RequirementGroup|Fqn] "}";
+	//ExecutionContext execution::ExecutionContext:
+	//	'execution context ' name=ID '{' ('start time: ' startTime=EDate)? ('end time: ' endTime=EDate)? ('total cost: '
+	//	totalCost=EDouble)?
+	//	'application: ' application=[camel::Application|Fqn] ('cost unit: ' costUnit=[unit::MonetaryUnit|Fqn])?
+	//	'deployment model: ' deploymentModel=[deployment::DeploymentModel|Fqn]
+	//	'requirement group: ' requirementGroup=[requirement::RequirementGroup|Fqn]
+	//	'}'
 	public ExecutionContextElements getExecutionContextAccess() {
 		return pExecutionContext;
 	}
@@ -17161,8 +17419,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getExecutionContextAccess().getRule();
 	}
 
-	//Measurement returns execution::Measurement:
-	//	ApplicationMeasurement | InternalComponentMeasurement | VMMeasurement | CommunicationMeasurement;
+	//Measurement execution::Measurement:
+	//	ApplicationMeasurement | InternalComponentMeasurement | VMMeasurement | CommunicationMeasurement
 	public MeasurementElements getMeasurementAccess() {
 		return pMeasurement;
 	}
@@ -17171,12 +17429,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getMeasurementAccess().getRule();
 	}
 
-	//ApplicationMeasurement returns execution::ApplicationMeasurement:
-	//	"application measurement " name=ID "{" "application: " application=[camel::Application|Fqn] "value: " value=EDouble
-	//	("raw data: " rawData=EString)? ("event instance: " eventInstance=[scalability::EventInstance|Fqn])?
-	//	"measurement time: " measurementTime=EDate "execution context: " executionContext=[execution::ExecutionContext|Fqn]
-	//	"metric instance: " metricInstance=[metric::MetricInstance|Fqn] ("slo: "
-	//	slo=[requirement::ServiceLevelObjective|Fqn])? "}";
+	//ApplicationMeasurement execution::ApplicationMeasurement:
+	//	'application measurement ' name=ID '{'
+	//	'application: ' application=[camel::Application|Fqn]
+	//	'value: ' value=EDouble ('raw data: ' rawData=EString)? ('event instance: '
+	//	eventInstance=[scalability::EventInstance|Fqn])?
+	//	'measurement time: ' measurementTime=EDate
+	//	'execution context: ' executionContext=[execution::ExecutionContext|Fqn]
+	//	'metric instance: ' metricInstance=[metric::MetricInstance|Fqn] ('slo: '
+	//	slo=[requirement::ServiceLevelObjective|Fqn])?
+	//	'}'
 	public ApplicationMeasurementElements getApplicationMeasurementAccess() {
 		return pApplicationMeasurement;
 	}
@@ -17185,12 +17447,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getApplicationMeasurementAccess().getRule();
 	}
 
-	//InternalComponentMeasurement returns execution::InternalComponentMeasurement:
-	//	"internal component measurement " name=ID "{" "internal component instance: "
-	//	internalComponentInstance=[deployment::InternalComponentInstance|Fqn] "value: " value=EDouble ("raw data: "
-	//	rawData=EString)? ("event instance: " eventInstance=[scalability::EventInstance|Fqn])? "measurement time: "
-	//	measurementTime=EDate "execution context: " executionContext=[execution::ExecutionContext|Fqn] "metric instance: "
-	//	metricInstance=[metric::MetricInstance|Fqn] ("slo: " slo=[requirement::ServiceLevelObjective|Fqn])? "}";
+	//InternalComponentMeasurement execution::InternalComponentMeasurement:
+	//	'internal component measurement ' name=ID '{'
+	//	'internal component instance: ' internalComponentInstance=[deployment::InternalComponentInstance|Fqn]
+	//	'value: ' value=EDouble ('raw data: ' rawData=EString)? ('event instance: '
+	//	eventInstance=[scalability::EventInstance|Fqn])?
+	//	'measurement time: ' measurementTime=EDate
+	//	'execution context: ' executionContext=[execution::ExecutionContext|Fqn]
+	//	'metric instance: ' metricInstance=[metric::MetricInstance|Fqn] ('slo: '
+	//	slo=[requirement::ServiceLevelObjective|Fqn])?
+	//	'}'
 	public InternalComponentMeasurementElements getInternalComponentMeasurementAccess() {
 		return pInternalComponentMeasurement;
 	}
@@ -17199,12 +17465,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getInternalComponentMeasurementAccess().getRule();
 	}
 
-	//CommunicationMeasurement returns execution::CommunicationMeasurement:
-	//	"resource coupling measurement" name=ID "{" "source vm instance: " sourceVMInstance=[deployment::VMInstance|Fqn]
-	//	"destination vm instance: " destinationVMInstance=[deployment::VMInstance|Fqn] "value: " value=EDouble ("raw data: "
-	//	rawData=EString)? ("event instance: " eventInstance=[scalability::EventInstance|Fqn])? "measurement time: "
-	//	measurementTime=EDate "execution context: " executionContext=[execution::ExecutionContext|Fqn] "metric instance: "
-	//	metricInstance=[metric::MetricInstance|Fqn] ("slo: " slo=[requirement::ServiceLevelObjective|Fqn])? "}";
+	//CommunicationMeasurement execution::CommunicationMeasurement:
+	//	'resource coupling measurement' name=ID '{'
+	//	'source vm instance: ' sourceVMInstance=[deployment::VMInstance|Fqn]
+	//	'destination vm instance: ' destinationVMInstance=[deployment::VMInstance|Fqn]
+	//	'value: ' value=EDouble ('raw data: ' rawData=EString)? ('event instance: '
+	//	eventInstance=[scalability::EventInstance|Fqn])?
+	//	'measurement time: ' measurementTime=EDate
+	//	'execution context: ' executionContext=[execution::ExecutionContext|Fqn]
+	//	'metric instance: ' metricInstance=[metric::MetricInstance|Fqn] ('slo: '
+	//	slo=[requirement::ServiceLevelObjective|Fqn])?
+	//	'}'
 	public CommunicationMeasurementElements getCommunicationMeasurementAccess() {
 		return pCommunicationMeasurement;
 	}
@@ -17213,12 +17484,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getCommunicationMeasurementAccess().getRule();
 	}
 
-	//VMMeasurement returns execution::VMMeasurement:
-	//	"vm measurement " name=ID "{" "vm instance: " vmInstance=[deployment::VMInstance|Fqn] "value: " value=EDouble
-	//	("raw data: " rawData=EString)? ("event instance: " eventInstance=[scalability::EventInstance|Fqn])?
-	//	"measurement time: " measurementTime=EDate "execution context: " executionContext=[execution::ExecutionContext|Fqn]
-	//	"metric instance: " metricInstance=[metric::MetricInstance|Fqn] ("slo: "
-	//	slo=[requirement::ServiceLevelObjective|Fqn])? "}";
+	//VMMeasurement execution::VMMeasurement:
+	//	'vm measurement ' name=ID '{'
+	//	'vm instance: ' vmInstance=[deployment::VMInstance|Fqn]
+	//	'value: ' value=EDouble ('raw data: ' rawData=EString)? ('event instance: '
+	//	eventInstance=[scalability::EventInstance|Fqn])?
+	//	'measurement time: ' measurementTime=EDate
+	//	'execution context: ' executionContext=[execution::ExecutionContext|Fqn]
+	//	'metric instance: ' metricInstance=[metric::MetricInstance|Fqn] ('slo: '
+	//	slo=[requirement::ServiceLevelObjective|Fqn])?
+	//	'}'
 	public VMMeasurementElements getVMMeasurementAccess() {
 		return pVMMeasurement;
 	}
@@ -17227,10 +17502,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getVMMeasurementAccess().getRule();
 	}
 
-	//SLOAssessment returns execution::SLOAssessment:
-	//	"assessment " name=ID "{" "measurement: " measurement=[execution::Measurement|Fqn] "execution context: "
-	//	executionContext=[execution::ExecutionContext|Fqn] "assessment time: " assessmentTime=EDate "slo: "
-	//	slo=[requirement::ServiceLevelObjective|Fqn] assessment?="violated" "}";
+	//SLOAssessment execution::SLOAssessment:
+	//	'assessment ' name=ID '{'
+	//	'measurement: ' measurement=[execution::Measurement|Fqn]
+	//	'execution context: ' executionContext=[execution::ExecutionContext|Fqn]
+	//	'assessment time: ' assessmentTime=EDate
+	//	'slo: ' slo=[requirement::ServiceLevelObjective|Fqn] assessment?='violated'
+	//	'}'
 	public SLOAssessmentElements getSLOAssessmentAccess() {
 		return pSLOAssessment;
 	}
@@ -17239,12 +17517,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getSLOAssessmentAccess().getRule();
 	}
 
-	//RuleTrigger returns execution::RuleTrigger:
-	//	"rule trigger " name=ID "{" "rule: " scalabilityRule=[scalability::ScalabilityRule|Fqn] "triggering time: "
-	//	trigerringTime=EDate "action realisations: " "(" actionRealisations+=[execution::ActionRealisation|Fqn] (","
-	//	actionRealisations+=[execution::ActionRealisation|Fqn])* ")" "execution context: "
-	//	executionContext=[execution::ExecutionContext|Fqn] "event instances: " "("
-	//	eventInstances+=[scalability::EventInstance|Fqn] ("," eventInstances+=[scalability::EventInstance|Fqn])* ")" "}";
+	//RuleTrigger execution::RuleTrigger:
+	//	'rule trigger ' name=ID '{'
+	//	'rule: ' scalabilityRule=[scalability::ScalabilityRule|Fqn]
+	//	'triggering time: ' trigerringTime=EDate
+	//	'action realisations: ' '(' actionRealisations+=[execution::ActionRealisation|Fqn] (','
+	//	actionRealisations+=[execution::ActionRealisation|Fqn])* ')'
+	//	'execution context: ' executionContext=[execution::ExecutionContext|Fqn]
+	//	'event instances: ' '(' eventInstances+=[scalability::EventInstance|Fqn] (','
+	//	eventInstances+=[scalability::EventInstance|Fqn])* ')'
+	//	'}'
 	public RuleTriggerElements getRuleTriggerAccess() {
 		return pRuleTrigger;
 	}
@@ -17253,9 +17535,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getRuleTriggerAccess().getRule();
 	}
 
-	/// * Location model * / LocationModel returns location::LocationModel:
-	//	{location::LocationModel} "location model " name=ID "{" (regions+=GeographicalRegion | countries+=Country |
-	//	cloudLocations+=CloudLocation)* "}";
+	/// * Location model * / LocationModel location::LocationModel:
+	//	{location::LocationModel}
+	//	'location model ' name=ID '{' (regions+=GeographicalRegion | countries+=Country | cloudLocations+=CloudLocation)*
+	//	'}'
 	public LocationModelElements getLocationModelAccess() {
 		return pLocationModel;
 	}
@@ -17264,10 +17547,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getLocationModelAccess().getRule();
 	}
 
-	//CloudLocation returns location::CloudLocation:
-	//	"cloud location " id=ID "{" isAssignable?="assignable"? ("parent: " parent=[location::CloudLocation|Fqn])?
-	//	("geographical region: " geographicalRegion=[location::GeographicalRegion|Fqn])? ("sub-locations " "["
-	//	subLocations+=CloudLocation ("," subLocations+=CloudLocation)* "]")? "}";
+	//CloudLocation location::CloudLocation:
+	//	'cloud location ' id=ID '{'
+	//	isAssignable?='assignable'? ('parent: ' parent=[location::CloudLocation|Fqn])? ('geographical region: '
+	//	geographicalRegion=[location::GeographicalRegion|Fqn])? ('sub-locations ' '[' subLocations+=CloudLocation (','
+	//	subLocations+=CloudLocation)* ']')?
+	//	'}'
 	public CloudLocationElements getCloudLocationAccess() {
 		return pCloudLocation;
 	}
@@ -17276,10 +17561,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getCloudLocationAccess().getRule();
 	}
 
-	//Country returns location::Country:
-	//	"country " id=ID "{" "name: " name=EString ("alternative names " "[" alternativeNames+=EString (","
-	//	alternativeNames+=EString)* "]")? ("parent regions " "[" parentRegions+=[location::GeographicalRegion|Fqn] (","
-	//	parentRegions+=[location::GeographicalRegion|Fqn])* "]")? "}";
+	//Country location::Country:
+	//	'country ' id=ID '{'
+	//	'name: ' name=EString ('alternative names ' '[' alternativeNames+=EString (',' alternativeNames+=EString)* ']')?
+	//	('parent regions ' '[' parentRegions+=[location::GeographicalRegion|Fqn] (','
+	//	parentRegions+=[location::GeographicalRegion|Fqn])* ']')?
+	//	'}'
 	public CountryElements getCountryAccess() {
 		return pCountry;
 	}
@@ -17288,10 +17575,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getCountryAccess().getRule();
 	}
 
-	//GeographicalRegion returns location::GeographicalRegion:
-	//	"region " id=ID "{" "name: " name=EString ("alternative names " "[" alternativeNames+=EString (","
-	//	alternativeNames+=EString)* "]")? ("parent regions " "[" parentRegions+=[location::GeographicalRegion|Fqn] (","
-	//	parentRegions+=[location::GeographicalRegion|Fqn])* "]")? "}";
+	//GeographicalRegion location::GeographicalRegion:
+	//	'region ' id=ID '{'
+	//	'name: ' name=EString ('alternative names ' '[' alternativeNames+=EString (',' alternativeNames+=EString)* ']')?
+	//	('parent regions ' '[' parentRegions+=[location::GeographicalRegion|Fqn] (','
+	//	parentRegions+=[location::GeographicalRegion|Fqn])* ']')?
+	//	'}'
 	public GeographicalRegionElements getGeographicalRegionAccess() {
 		return pGeographicalRegion;
 	}
@@ -17300,11 +17589,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getGeographicalRegionAccess().getRule();
 	}
 
-	/// * Metric model * / MetricModel returns metric::MetricModel:
-	//	{metric::MetricModel} ("importURI" "{" importURI+=EString ("," importURI+=EString)* "}")? "metric model " name=ID "{"
-	//	(contexts+=ConditionContext | metrics+=Metric | metricInstances+=MetricInstance | conditions+=Condition |
-	//	properties+=Property | bindings+=MetricObjectBinding | windows+=Window | schedules+=Schedule |
-	//	parameters+=FormulaParameter | sensors+=Sensor)* "}";
+	/// * Metric model * / MetricModel metric::MetricModel:
+	//	{metric::MetricModel} ('importURI' '{' importURI+=EString (',' importURI+=EString)* '}')?
+	//	'metric model ' name=ID '{' (contexts+=ConditionContext | metrics+=Metric | metricInstances+=MetricInstance |
+	//	conditions+=Condition | properties+=Property | bindings+=MetricObjectBinding | windows+=Window | schedules+=Schedule |
+	//	parameters+=FormulaParameter | sensors+=Sensor)*
+	//	'}'
 	public MetricModelElements getMetricModelAccess() {
 		return pMetricModel;
 	}
@@ -17313,8 +17603,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getMetricModelAccess().getRule();
 	}
 
-	//MetricInstance returns metric::MetricInstance:
-	//	CompositeMetricInstance | RawMetricInstance;
+	//MetricInstance metric::MetricInstance:
+	//	CompositeMetricInstance | RawMetricInstance
 	public MetricInstanceElements getMetricInstanceAccess() {
 		return pMetricInstance;
 	}
@@ -17323,12 +17613,14 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getMetricInstanceAccess().getRule();
 	}
 
-	//CompositeMetricInstance returns metric::CompositeMetricInstance:
-	//	"composite metric instance " name=ID "{" "metric: " metric=[metric::Metric|Fqn] "binding: "
-	//	objectBinding=[metric::MetricObjectBinding|Fqn] "composing metric instances " "["
-	//	composingMetricInstances+=[metric::MetricInstance|Fqn] ("," composingMetricInstances+=[metric::MetricInstance|Fqn])*
-	//	"]" ("schedule: " schedule=[metric::Schedule|Fqn])? ("window: " window=[metric::Window|Fqn])? ("context: "
-	//	metricContext=[metric::MetricContext|Fqn])? "}";
+	//CompositeMetricInstance metric::CompositeMetricInstance:
+	//	'composite metric instance ' name=ID '{'
+	//	'metric: ' metric=[metric::Metric|Fqn]
+	//	'binding: ' objectBinding=[metric::MetricObjectBinding|Fqn]
+	//	'composing metric instances ' '[' composingMetricInstances+=[metric::MetricInstance|Fqn] (','
+	//	composingMetricInstances+=[metric::MetricInstance|Fqn])* ']' ('schedule: ' schedule=[metric::Schedule|Fqn])?
+	//	('window: ' window=[metric::Window|Fqn])? ('context: ' metricContext=[metric::MetricContext|Fqn])?
+	//	'}'
 	public CompositeMetricInstanceElements getCompositeMetricInstanceAccess() {
 		return pCompositeMetricInstance;
 	}
@@ -17337,10 +17629,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getCompositeMetricInstanceAccess().getRule();
 	}
 
-	//RawMetricInstance returns metric::RawMetricInstance:
-	//	"raw metric instance " name=ID "{" "metric: " metric=[metric::Metric|Fqn] "sensor: " sensor=[metric::Sensor|Fqn]
-	//	"binding: " objectBinding=[metric::MetricObjectBinding|Fqn] ("schedule: " schedule=[metric::Schedule|Fqn])?
-	//	("window: " window=[metric::Window|Fqn])? ("context: " metricContext=[metric::MetricContext|Fqn])? "}";
+	//RawMetricInstance metric::RawMetricInstance:
+	//	'raw metric instance ' name=ID '{'
+	//	'metric: ' metric=[metric::Metric|Fqn]
+	//	'sensor: ' sensor=[metric::Sensor|Fqn]
+	//	'binding: ' objectBinding=[metric::MetricObjectBinding|Fqn] ('schedule: ' schedule=[metric::Schedule|Fqn])?
+	//	('window: ' window=[metric::Window|Fqn])? ('context: ' metricContext=[metric::MetricContext|Fqn])?
+	//	'}'
 	public RawMetricInstanceElements getRawMetricInstanceAccess() {
 		return pRawMetricInstance;
 	}
@@ -17349,10 +17644,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getRawMetricInstanceAccess().getRule();
 	}
 
-	//Window returns metric::Window:
-	//	"window " name=ID "{" "window type: " windowType=WindowType "size type: " sizeType=WindowSizeType
-	//	("measurement size: " measurementSize=ELong)? ("time size: " timeSize=ELong)? ("unit: "
-	//	unit=[unit::TimeIntervalUnit|Fqn])? "}";
+	//Window metric::Window:
+	//	'window ' name=ID '{'
+	//	'window type: ' windowType=WindowType
+	//	'size type: ' sizeType=WindowSizeType ('measurement size: ' measurementSize=ELong)? ('time size: ' timeSize=ELong)?
+	//	('unit: ' unit=[unit::TimeIntervalUnit|Fqn])?
+	//	'}'
 	public WindowElements getWindowAccess() {
 		return pWindow;
 	}
@@ -17364,7 +17661,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	//enum WindowType returns metric::WindowType:
 	//	FIXED | SLIDING;
 	public WindowTypeElements getWindowTypeAccess() {
-		return unknownRuleWindowType;
+		return eWindowType;
 	}
 	
 	public EnumRule getWindowTypeRule() {
@@ -17374,15 +17671,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	//enum WindowSizeType returns metric::WindowSizeType:
 	//	MEASUREMENTS_ONLY | TIME_ONLY | FIRST_MATCH | BOTH_MATCH;
 	public WindowSizeTypeElements getWindowSizeTypeAccess() {
-		return unknownRuleWindowSizeType;
+		return eWindowSizeType;
 	}
 	
 	public EnumRule getWindowSizeTypeRule() {
 		return getWindowSizeTypeAccess().getRule();
 	}
 
-	//ELong returns ecore::ELong:
-	//	"-"? INT;
+	//ELong ecore::ELong:
+	//	'-'? INT
 	public ELongElements getELongAccess() {
 		return pELong;
 	}
@@ -17394,17 +17691,20 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	//enum ScheduleType returns metric::ScheduleType:
 	//	FIXED_RATE | FIXED_DELAY | SINGLE_EVENT;
 	public ScheduleTypeElements getScheduleTypeAccess() {
-		return unknownRuleScheduleType;
+		return eScheduleType;
 	}
 	
 	public EnumRule getScheduleTypeRule() {
 		return getScheduleTypeAccess().getRule();
 	}
 
-	//Schedule returns metric::Schedule:
-	//	"schedule " name=ID "{" "type: " type=ScheduleType "interval: " interval=ELong "unit: "
-	//	unit=[unit::TimeIntervalUnit|Fqn] ("start: " start=EDate)? ("end: " end=EDate)? ("repetitions: " repetitions=EInt)?
-	//	"}";
+	//Schedule metric::Schedule:
+	//	'schedule ' name=ID '{'
+	//	'type: ' type=ScheduleType
+	//	'interval: ' interval=ELong
+	//	'unit: ' unit=[unit::TimeIntervalUnit|Fqn] ('start: ' start=EDate)? ('end: ' end=EDate)? ('repetitions: '
+	//	repetitions=EInt)?
+	//	'}'
 	public ScheduleElements getScheduleAccess() {
 		return pSchedule;
 	}
@@ -17413,10 +17713,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getScheduleAccess().getRule();
 	}
 
-	//MetricComponentBinding returns metric::MetricComponentBinding:
-	//	"component binding " name=ID "{" "execution context: " executionContext=[execution::ExecutionContext|Fqn]
-	//	"component instance: " componentInstance=[deployment::ComponentInstance|Fqn] ("vm instance: "
-	//	vmInstance=[deployment::VMInstance|Fqn])? "}";
+	//MetricComponentBinding metric::MetricComponentBinding:
+	//	'component binding ' name=ID '{'
+	//	'execution context: ' executionContext=[execution::ExecutionContext|Fqn]
+	//	'component instance: ' componentInstance=[deployment::ComponentInstance|Fqn] ('vm instance: '
+	//	vmInstance=[deployment::VMInstance|Fqn])?
+	//	'}'
 	public MetricComponentBindingElements getMetricComponentBindingAccess() {
 		return pMetricComponentBinding;
 	}
@@ -17425,9 +17727,11 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getMetricComponentBindingAccess().getRule();
 	}
 
-	//MetricVMBinding returns metric::MetricVMBinding:
-	//	"vm binding " name=ID "{" "execution context: " executionContext=[execution::ExecutionContext|Fqn] "vm instance: "
-	//	vmInstance=[deployment::VMInstance|Fqn] "}";
+	//MetricVMBinding metric::MetricVMBinding:
+	//	'vm binding ' name=ID '{'
+	//	'execution context: ' executionContext=[execution::ExecutionContext|Fqn]
+	//	'vm instance: ' vmInstance=[deployment::VMInstance|Fqn]
+	//	'}'
 	public MetricVMBindingElements getMetricVMBindingAccess() {
 		return pMetricVMBinding;
 	}
@@ -17436,8 +17740,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getMetricVMBindingAccess().getRule();
 	}
 
-	//MetricApplicationBinding returns metric::MetricApplicationBinding:
-	//	"application binding " name=ID "{" "execution context: " executionContext=[execution::ExecutionContext|Fqn] "}";
+	//MetricApplicationBinding metric::MetricApplicationBinding:
+	//	'application binding ' name=ID '{'
+	//	'execution context: ' executionContext=[execution::ExecutionContext|Fqn]
+	//	'}'
 	public MetricApplicationBindingElements getMetricApplicationBindingAccess() {
 		return pMetricApplicationBinding;
 	}
@@ -17446,8 +17752,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getMetricApplicationBindingAccess().getRule();
 	}
 
-	//MetricObjectBinding returns metric::MetricObjectBinding:
-	//	MetricApplicationBinding | MetricComponentBinding | MetricVMBinding;
+	//MetricObjectBinding metric::MetricObjectBinding:
+	//	MetricApplicationBinding | MetricComponentBinding | MetricVMBinding
 	public MetricObjectBindingElements getMetricObjectBindingAccess() {
 		return pMetricObjectBinding;
 	}
@@ -17456,8 +17762,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getMetricObjectBindingAccess().getRule();
 	}
 
-	//Condition returns metric::Condition:
-	//	MetricCondition | PropertyCondition;
+	//Condition metric::Condition:
+	//	MetricCondition | PropertyCondition
 	public ConditionElements getConditionAccess() {
 		return pCondition;
 	}
@@ -17466,9 +17772,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getConditionAccess().getRule();
 	}
 
-	//MetricCondition returns metric::MetricCondition:
-	//	"metric condition " name=ID "{" "context: " metricContext=[metric::MetricContext|Fqn] "threshold: " threshold=EDouble
-	//	"comparison operator: " comparisonOperator=ComparisonOperatorType ("validity: " validity=EDate)? "}";
+	//MetricCondition metric::MetricCondition:
+	//	'metric condition ' name=ID '{'
+	//	'context: ' metricContext=[metric::MetricContext|Fqn]
+	//	'threshold: ' threshold=EDouble
+	//	'comparison operator: ' comparisonOperator=ComparisonOperatorType ('validity: ' validity=EDate)?
+	//	'}'
 	public MetricConditionElements getMetricConditionAccess() {
 		return pMetricCondition;
 	}
@@ -17477,11 +17786,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getMetricConditionAccess().getRule();
 	}
 
-	//PropertyCondition returns metric::PropertyCondition:
-	//	"property condition " name=ID "{" "property context: " propertyContext=[metric::PropertyContext|Fqn] "threshold: "
-	//	threshold=EDouble "comparison operator: " comparisonOperator=ComparisonOperatorType ("unit: "
-	//	unit=[unit::MonetaryUnit|Fqn])? ("time unit: " timeUnit=[unit::TimeIntervalUnit|Fqn])? ("validity: " validity=EDate)?
-	//	"}";
+	//PropertyCondition metric::PropertyCondition:
+	//	'property condition ' name=ID '{'
+	//	'property context: ' propertyContext=[metric::PropertyContext|Fqn]
+	//	'threshold: ' threshold=EDouble
+	//	'comparison operator: ' comparisonOperator=ComparisonOperatorType ('unit: ' unit=[unit::MonetaryUnit|Fqn])?
+	//	('time unit: ' timeUnit=[unit::TimeIntervalUnit|Fqn])? ('validity: ' validity=EDate)?
+	//	'}'
 	public PropertyConditionElements getPropertyConditionAccess() {
 		return pPropertyCondition;
 	}
@@ -17491,18 +17802,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum ComparisonOperatorType returns metric::ComparisonOperatorType:
-	//	GREATER_THAN=">" | GREATER_EQUAL_THAN="> = " | LESS_THAN="<" | LESS_EQUAL_THAN="< = " | EQUAL=" =  = " |
-	//	NOT_EQUAL="<>";
+	//	GREATER_THAN='>' | GREATER_EQUAL_THAN='> = ' | LESS_THAN='<' | LESS_EQUAL_THAN='< = ' | EQUAL=' =  = ' |
+	//	NOT_EQUAL='<>';
 	public ComparisonOperatorTypeElements getComparisonOperatorTypeAccess() {
-		return unknownRuleComparisonOperatorType;
+		return eComparisonOperatorType;
 	}
 	
 	public EnumRule getComparisonOperatorTypeRule() {
 		return getComparisonOperatorTypeAccess().getRule();
 	}
 
-	//ConditionContext returns metric::ConditionContext:
-	//	CompositeMetricContext | RawMetricContext | PropertyContext;
+	//ConditionContext metric::ConditionContext:
+	//	CompositeMetricContext | RawMetricContext | PropertyContext
 	public ConditionContextElements getConditionContextAccess() {
 		return pConditionContext;
 	}
@@ -17514,20 +17825,22 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	//enum QuantifierType returns metric::QuantifierType:
 	//	ANY | ALL | SOME;
 	public QuantifierTypeElements getQuantifierTypeAccess() {
-		return unknownRuleQuantifierType;
+		return eQuantifierType;
 	}
 	
 	public EnumRule getQuantifierTypeRule() {
 		return getQuantifierTypeAccess().getRule();
 	}
 
-	//CompositeMetricContext returns metric::CompositeMetricContext:
-	//	"composite metric context " name=ID "{" "metric: " metric=[metric::Metric|Fqn] ("component: "
-	//	component=[deployment::Component|Fqn])? ("application: " application=[camel::Application|Fqn])? ("window: "
-	//	window=[metric::Window|Fqn])? ("schedule: " schedule=[metric::Schedule|Fqn])? ("composing metric contexts " "["
-	//	composingMetricContexts+=[metric::MetricContext|Fqn] ("," composingMetricContexts+=[metric::MetricContext|Fqn])*
-	//	"]")? ("quantifier: " quantifier=QuantifierType)? isRelative?="relative"? ("quantity: " minQuantity=EDouble ".."
-	//	maxQuantity=EDouble)? "}";
+	//CompositeMetricContext metric::CompositeMetricContext:
+	//	'composite metric context ' name=ID '{'
+	//	'metric: ' metric=[metric::Metric|Fqn] ('component: ' component=[deployment::Component|Fqn])? ('application: '
+	//	application=[camel::Application|Fqn])? ('window: ' window=[metric::Window|Fqn])? ('schedule: '
+	//	schedule=[metric::Schedule|Fqn])? ('composing metric contexts ' '['
+	//	composingMetricContexts+=[metric::MetricContext|Fqn] (',' composingMetricContexts+=[metric::MetricContext|Fqn])* ']')?
+	//	('quantifier: ' quantifier=QuantifierType)?
+	//	isRelative?='relative'? ('quantity: ' minQuantity=EDouble '..' maxQuantity=EDouble)?
+	//	'}'
 	public CompositeMetricContextElements getCompositeMetricContextAccess() {
 		return pCompositeMetricContext;
 	}
@@ -17536,11 +17849,14 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getCompositeMetricContextAccess().getRule();
 	}
 
-	//RawMetricContext returns metric::RawMetricContext:
-	//	"raw metric context " name=ID "{" "metric: " metric=[metric::Metric|Fqn] "sensor: " sensor=[metric::Sensor|Fqn]
-	//	("component: " component=[deployment::Component|Fqn])? ("application: " application=[camel::Application|Fqn])?
-	//	("window: " window=[metric::Window|Fqn])? ("schedule: " schedule=[metric::Schedule|Fqn])? ("quantifier: "
-	//	quantifier=QuantifierType)? isRelative?="relative"? ("quantity: " minQuantity=EDouble ".." maxQuantity=EDouble)? "}";
+	//RawMetricContext metric::RawMetricContext:
+	//	'raw metric context ' name=ID '{'
+	//	'metric: ' metric=[metric::Metric|Fqn]
+	//	'sensor: ' sensor=[metric::Sensor|Fqn] ('component: ' component=[deployment::Component|Fqn])? ('application: '
+	//	application=[camel::Application|Fqn])? ('window: ' window=[metric::Window|Fqn])? ('schedule: '
+	//	schedule=[metric::Schedule|Fqn])? ('quantifier: ' quantifier=QuantifierType)?
+	//	isRelative?='relative'? ('quantity: ' minQuantity=EDouble '..' maxQuantity=EDouble)?
+	//	'}'
 	public RawMetricContextElements getRawMetricContextAccess() {
 		return pRawMetricContext;
 	}
@@ -17549,10 +17865,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getRawMetricContextAccess().getRule();
 	}
 
-	//PropertyContext returns metric::PropertyContext:
-	//	"property context " name=ID "{" "property: " property=[metric::Property|Fqn] ("component: "
-	//	component=[deployment::Component|Fqn])? ("application: " application=[camel::Application|Fqn])? ("quantifier: "
-	//	quantifier=QuantifierType)? isRelative?="relative"? ("quantity: " minQuantity=EDouble ".." maxQuantity=EDouble)? "}";
+	//PropertyContext metric::PropertyContext:
+	//	'property context ' name=ID '{'
+	//	'property: ' property=[metric::Property|Fqn] ('component: ' component=[deployment::Component|Fqn])? ('application: '
+	//	application=[camel::Application|Fqn])? ('quantifier: ' quantifier=QuantifierType)?
+	//	isRelative?='relative'? ('quantity: ' minQuantity=EDouble '..' maxQuantity=EDouble)?
+	//	'}'
 	public PropertyContextElements getPropertyContextAccess() {
 		return pPropertyContext;
 	}
@@ -17561,10 +17879,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getPropertyContextAccess().getRule();
 	}
 
-	//CompositeMetric returns metric::CompositeMetric:
-	//	"composite metric " name=ID "{" ("description: " description=EString)? ("value direction: " valueDirection=EShort)?
-	//	("layer: " layer=LayerType)? "property: " property=[metric::Property|Fqn] "unit: " unit=[unit::Unit|Fqn]
-	//	("value type: " valueType=[type::ValueType|Fqn])? formula=MetricFormula "}";
+	//CompositeMetric metric::CompositeMetric:
+	//	'composite metric ' name=ID '{' ('description: ' description=EString)? ('value direction: ' valueDirection=EShort)?
+	//	('layer: ' layer=LayerType)?
+	//	'property: ' property=[metric::Property|Fqn]
+	//	'unit: ' unit=[unit::Unit|Fqn] ('value type: ' valueType=[type::ValueType|Fqn])?
+	//	formula=MetricFormula
+	//	'}'
 	public CompositeMetricElements getCompositeMetricAccess() {
 		return pCompositeMetric;
 	}
@@ -17573,10 +17894,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getCompositeMetricAccess().getRule();
 	}
 
-	//RawMetric returns metric::RawMetric:
-	//	"raw metric " name=ID "{" ("description: " description=EString)? ("value direction: " valueDirection=EShort)?
-	//	("layer: " layer=LayerType)? "property: " property=[metric::Property|Fqn] "unit: " unit=[unit::Unit|Fqn]
-	//	("value type: " valueType=[type::ValueType|Fqn])? isVariable?="variable"? "}";
+	//RawMetric metric::RawMetric:
+	//	'raw metric ' name=ID '{' ('description: ' description=EString)? ('value direction: ' valueDirection=EShort)?
+	//	('layer: ' layer=LayerType)?
+	//	'property: ' property=[metric::Property|Fqn]
+	//	'unit: ' unit=[unit::Unit|Fqn] ('value type: ' valueType=[type::ValueType|Fqn])?
+	//	isVariable?='variable'?
+	//	'}'
 	public RawMetricElements getRawMetricAccess() {
 		return pRawMetric;
 	}
@@ -17585,8 +17909,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getRawMetricAccess().getRule();
 	}
 
-	//Metric returns metric::Metric:
-	//	CompositeMetric | RawMetric;
+	//Metric metric::Metric:
+	//	CompositeMetric | RawMetric
 	public MetricElements getMetricAccess() {
 		return pMetric;
 	}
@@ -17598,15 +17922,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	//enum LayerType returns camel::LayerType:
 	//	SaaS | PaaS | IaaS | BPM | SCC;
 	public LayerTypeElements getLayerTypeAccess() {
-		return unknownRuleLayerType;
+		return eLayerType;
 	}
 	
 	public EnumRule getLayerTypeRule() {
 		return getLayerTypeAccess().getRule();
 	}
 
-	//MetricFormulaParameter returns metric::MetricFormulaParameter:
-	//	MetricFormulaParameter_Impl | MetricFormula | CompositeMetric | RawMetric;
+	//MetricFormulaParameter metric::MetricFormulaParameter:
+	//	MetricFormulaParameter_Impl | MetricFormula | CompositeMetric | RawMetric
 	public MetricFormulaParameterElements getMetricFormulaParameterAccess() {
 		return pMetricFormulaParameter;
 	}
@@ -17615,8 +17939,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getMetricFormulaParameterAccess().getRule();
 	}
 
-	//FormulaParameter returns metric::MetricFormulaParameter:
-	//	MetricFormulaParameter_Impl | MetricFormula;
+	//FormulaParameter metric::MetricFormulaParameter:
+	//	MetricFormulaParameter_Impl | MetricFormula
 	public FormulaParameterElements getFormulaParameterAccess() {
 		return pFormulaParameter;
 	}
@@ -17625,8 +17949,11 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getFormulaParameterAccess().getRule();
 	}
 
-	//MetricFormulaParameter_Impl returns metric::MetricFormulaParameter:
-	//	{metric::MetricFormulaParameter} "parameter " name=ID "{" value=[type::SingleValue|Fqn] "}";
+	//MetricFormulaParameter_Impl metric::MetricFormulaParameter:
+	//	{metric::MetricFormulaParameter}
+	//	'parameter ' name=ID '{'
+	//	value=[type::SingleValue|Fqn]
+	//	'}'
 	public MetricFormulaParameter_ImplElements getMetricFormulaParameter_ImplAccess() {
 		return pMetricFormulaParameter_Impl;
 	}
@@ -17635,10 +17962,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getMetricFormulaParameter_ImplAccess().getRule();
 	}
 
-	//MetricFormula returns metric::MetricFormula:
-	//	"metric formula " name=ID "{" "function arity: " functionArity=MetricFunctionArityType ("function pattern: "
-	//	functionPattern=FunctionPatternType)? function=MetricFunctionType "("
-	//	parameters+=[metric::MetricFormulaParameter|Fqn] ("," parameters+=[metric::MetricFormulaParameter|Fqn])* ")" "}";
+	//MetricFormula metric::MetricFormula:
+	//	'metric formula ' name=ID '{'
+	//	'function arity: ' functionArity=MetricFunctionArityType ('function pattern: ' functionPattern=FunctionPatternType)?
+	//	function=MetricFunctionType '(' parameters+=[metric::MetricFormulaParameter|Fqn] (','
+	//	parameters+=[metric::MetricFormulaParameter|Fqn])* ')'
+	//	'}'
 	public MetricFormulaElements getMetricFormulaAccess() {
 		return pMetricFormula;
 	}
@@ -17650,7 +17979,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	//enum MetricFunctionType returns metric::MetricFunctionType:
 	//	PLUS | MINUS | TIMES | DIV | MODULO | MEAN | STD | COUNT | MIN | MAX | PERCENTILE | DERIVATIVE | MODE | MEDIAN;
 	public MetricFunctionTypeElements getMetricFunctionTypeAccess() {
-		return unknownRuleMetricFunctionType;
+		return eMetricFunctionType;
 	}
 	
 	public EnumRule getMetricFunctionTypeRule() {
@@ -17660,7 +17989,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	//enum MetricFunctionArityType returns metric::MetricFunctionArityType:
 	//	UNARY | BINARY | N_ARY;
 	public MetricFunctionArityTypeElements getMetricFunctionArityTypeAccess() {
-		return unknownRuleMetricFunctionArityType;
+		return eMetricFunctionArityType;
 	}
 	
 	public EnumRule getMetricFunctionArityTypeRule() {
@@ -17670,7 +17999,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	//enum FunctionPatternType returns metric::FunctionPatternType:
 	//	MAP | REDUCE;
 	public FunctionPatternTypeElements getFunctionPatternTypeAccess() {
-		return unknownRuleFunctionPatternType;
+		return eFunctionPatternType;
 	}
 	
 	public EnumRule getFunctionPatternTypeRule() {
@@ -17680,17 +18009,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	//enum PropertyType returns metric::PropertyType:
 	//	ABSTRACT | MEASURABLE;
 	public PropertyTypeElements getPropertyTypeAccess() {
-		return unknownRulePropertyType;
+		return ePropertyType;
 	}
 	
 	public EnumRule getPropertyTypeRule() {
 		return getPropertyTypeAccess().getRule();
 	}
 
-	//Property returns metric::Property:
-	//	"property " name=ID "{" ("description: " description=EString)? "type: " type=PropertyType ("sub-properties " "["
-	//	subProperties+=[metric::Property|Fqn] ("," subProperties+=[metric::Property|Fqn])* "]")? ("sensors " "["
-	//	sensors+=[metric::Sensor|Fqn] ("," sensors+=[metric::Sensor|Fqn])* "]")? "}";
+	//Property metric::Property:
+	//	'property ' name=ID '{' ('description: ' description=EString)?
+	//	'type: ' type=PropertyType ('sub-properties ' '[' subProperties+=[metric::Property|Fqn] (','
+	//	subProperties+=[metric::Property|Fqn])* ']')? ('sensors ' '[' sensors+=[metric::Sensor|Fqn] (','
+	//	sensors+=[metric::Sensor|Fqn])* ']')?
+	//	'}'
 	public PropertyElements getPropertyAccess() {
 		return pProperty;
 	}
@@ -17699,8 +18030,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getPropertyAccess().getRule();
 	}
 
-	//Sensor returns metric::Sensor:
-	//	"sensor " name=ID "{" ("configuration: " configuration=EString)? isPush?="push"? "}";
+	//Sensor metric::Sensor:
+	//	'sensor ' name=ID '{' ('configuration: ' configuration=EString)?
+	//	isPush?='push'?
+	//	'}'
 	public SensorElements getSensorAccess() {
 		return pSensor;
 	}
@@ -17709,11 +18042,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getSensorAccess().getRule();
 	}
 
-	/// * Organisation model * / OrganisationModel returns organisation::OrganisationModel:
-	//	{organisation::OrganisationModel} "organisation model " name=ID "{" organisation=Organisation_Impl?
+	/// * Organisation model * / OrganisationModel organisation::OrganisationModel:
+	//	{organisation::OrganisationModel}
+	//	'organisation model ' name=ID '{'
+	//	organisation=Organisation_Impl?
 	//	provider=CloudProvider? (externalIdentifiers+=ExternalIdentifier | users+=User | userGroups+=UserGroup |
 	//	dataCentres+=DataCenter | roles+=Role | roleAssigments+=RoleAssignment | permissions+=Permission |
-	//	resourceFilters+=ResourceFilter)* "security level: " securityLevel=SecurityLevel "}";
+	//	resourceFilters+=ResourceFilter)*
+	//	'security level: ' securityLevel=SecurityLevel
+	//	'}'
 	public OrganisationModelElements getOrganisationModelAccess() {
 		return pOrganisationModel;
 	}
@@ -17722,8 +18059,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getOrganisationModelAccess().getRule();
 	}
 
-	//Entity returns organisation::Entity:
-	//	Entity_Impl | Organisation_Impl | CloudProvider | User;
+	//Entity organisation::Entity:
+	//	Entity_Impl | Organisation_Impl | CloudProvider | User
 	public EntityElements getEntityAccess() {
 		return pEntity;
 	}
@@ -17732,8 +18069,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getEntityAccess().getRule();
 	}
 
-	//Organisation returns organisation::Organisation:
-	//	Organisation_Impl | CloudProvider;
+	//Organisation organisation::Organisation:
+	//	Organisation_Impl | CloudProvider
 	public OrganisationElements getOrganisationAccess() {
 		return pOrganisation;
 	}
@@ -17742,8 +18079,11 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getOrganisationAccess().getRule();
 	}
 
-	//DataCenter returns organisation::DataCenter:
-	//	"data centre " name=ID "{" "code name: " codeName=EString "location: " location=[location::Location|Fqn] "}";
+	//DataCenter organisation::DataCenter:
+	//	'data centre ' name=ID '{'
+	//	'code name: ' codeName=EString
+	//	'location: ' location=[location::Location|Fqn]
+	//	'}'
 	public DataCenterElements getDataCenterAccess() {
 		return pDataCenter;
 	}
@@ -17752,8 +18092,9 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getDataCenterAccess().getRule();
 	}
 
-	//Entity_Impl returns organisation::Entity:
-	//	{organisation::Entity} "entity";
+	//Entity_Impl organisation::Entity:
+	//	{organisation::Entity}
+	//	'entity'
 	public Entity_ImplElements getEntity_ImplAccess() {
 		return pEntity_Impl;
 	}
@@ -17762,9 +18103,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getEntity_ImplAccess().getRule();
 	}
 
-	//Organisation_Impl returns organisation::Organisation:
-	//	"organisation " name=ID "{" ("www: " www=EString)? ("postal address: " postalAddress=EString)? "email: "
-	//	email=EString "}";
+	//Organisation_Impl organisation::Organisation:
+	//	'organisation ' name=ID '{' ('www: ' www=EString)? ('postal address: ' postalAddress=EString)?
+	//	'email: ' email=EString
+	//	'}'
 	public Organisation_ImplElements getOrganisation_ImplAccess() {
 		return pOrganisation_Impl;
 	}
@@ -17773,11 +18115,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getOrganisation_ImplAccess().getRule();
 	}
 
-	//CloudProvider returns organisation::CloudProvider:
-	//	"provider " name=ID "{" ("www: " www=EString)? ("postal address: " postalAddress=EString)? "email: " email=EString
-	//	public?="Public"? SaaS?="SaaS"? PaaS?="PaaS"? IaaS?="IaaS"? ("security capability " "["
-	//	securityCapability+=[security::SecurityCapability|Fqn] ("," securityCapability+=[security::SecurityCapability|Fqn])*
-	//	"]")? ("provider model: " providerModel=[provider::ProviderModel|Fqn])? "}";
+	//CloudProvider organisation::CloudProvider:
+	//	'provider ' name=ID '{' ('www: ' www=EString)? ('postal address: ' postalAddress=EString)?
+	//	'email: ' email=EString
+	//	public?='Public'?
+	//	SaaS?='SaaS'?
+	//	PaaS?='PaaS'?
+	//	IaaS?='IaaS'? ('security capability ' '[' securityCapability+=[security::SecurityCapability|Fqn] (','
+	//	securityCapability+=[security::SecurityCapability|Fqn])* ']')? ('provider model: '
+	//	providerModel=[provider::ProviderModel|Fqn])?
+	//	'}'
 	public CloudProviderElements getCloudProviderAccess() {
 		return pCloudProvider;
 	}
@@ -17786,14 +18133,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getCloudProviderAccess().getRule();
 	}
 
-	//User returns organisation::User:
-	//	"user " name=ID "{" "first name: " firstName=EString "last name: " lastName=EString "email: " email=EString ("www: "
-	//	www=EString)? paasageCredentials=PaaSageCredentials ("cloud credentials " "[" cloudCredentials+=CloudCredentials (","
-	//	cloudCredentials+=CloudCredentials)* "]")? ("external identifiers " "[" externalIdentifiers+=ExternalIdentifier (","
-	//	externalIdentifiers+=ExternalIdentifier)* "]")? ("requirement models " "["
-	//	requirementModels+=[requirement::RequirementModel|Fqn] ("," requirementModels+=[requirement::RequirementModel|Fqn])*
-	//	"]")? ("deployment models " "[" deploymentModels+=[deployment::DeploymentModel|Fqn] (","
-	//	deploymentModels+=[deployment::DeploymentModel|Fqn])* "]")? "}";
+	//User organisation::User:
+	//	'user ' name=ID '{'
+	//	'first name: ' firstName=EString
+	//	'last name: ' lastName=EString
+	//	'email: ' email=EString ('www: ' www=EString)?
+	//	paasageCredentials=PaaSageCredentials ('cloud credentials ' '[' cloudCredentials+=CloudCredentials (','
+	//	cloudCredentials+=CloudCredentials)* ']')? ('external identifiers ' '[' externalIdentifiers+=ExternalIdentifier (','
+	//	externalIdentifiers+=ExternalIdentifier)* ']')? ('requirement models ' '['
+	//	requirementModels+=[requirement::RequirementModel|Fqn] (',' requirementModels+=[requirement::RequirementModel|Fqn])*
+	//	']')? ('deployment models ' '[' deploymentModels+=[deployment::DeploymentModel|Fqn] (','
+	//	deploymentModels+=[deployment::DeploymentModel|Fqn])* ']')?
+	//	'}'
 	public UserElements getUserAccess() {
 		return pUser;
 	}
@@ -17802,8 +18153,9 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getUserAccess().getRule();
 	}
 
-	//ExternalIdentifier returns organisation::ExternalIdentifier:
-	//	"external id " identifier=ID "{" ("description: " description=EString)? "}";
+	//ExternalIdentifier organisation::ExternalIdentifier:
+	//	'external id ' identifier=ID '{' ('description: ' description=EString)?
+	//	'}'
 	public ExternalIdentifierElements getExternalIdentifierAccess() {
 		return pExternalIdentifier;
 	}
@@ -17812,10 +18164,11 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getExternalIdentifierAccess().getRule();
 	}
 
-	//CloudCredentials returns organisation::CloudCredentials:
-	//	name=ID "{" ("security group: " securityGroup=EString)? ("public SSH key: " publicSSHKey=EString)?
-	//	("private SSH key: " privateSSHKey=EString)? ("username: " username=EString)? ("password: " password=EString)?
-	//	"cloud provider: " cloudProvider=[organisation::CloudProvider|Fqn] "}";
+	//CloudCredentials organisation::CloudCredentials:
+	//	name=ID '{' ('security group: ' securityGroup=EString)? ('public SSH key: ' publicSSHKey=EString)?
+	//	('private SSH key: ' privateSSHKey=EString)? ('username: ' username=EString)? ('password: ' password=EString)?
+	//	'cloud provider: ' cloudProvider=[organisation::CloudProvider|Fqn]
+	//	'}'
 	public CloudCredentialsElements getCloudCredentialsAccess() {
 		return pCloudCredentials;
 	}
@@ -17824,8 +18177,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getCloudCredentialsAccess().getRule();
 	}
 
-	//PaaSageCredentials returns organisation::PaaSageCredentials:
-	//	"paasage credentials " password=EString;
+	//PaaSageCredentials organisation::PaaSageCredentials:
+	//	'paasage credentials ' password=EString
 	public PaaSageCredentialsElements getPaaSageCredentialsAccess() {
 		return pPaaSageCredentials;
 	}
@@ -17834,8 +18187,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getPaaSageCredentialsAccess().getRule();
 	}
 
-	/// * TODO: implement this rule and an appropriate IValueConverter * / EDate returns ecore::EDate:
-	//	MYDATE;
+	//EDate ecore::EDate:
+	//	MYDATE
 	public EDateElements getEDateAccess() {
 		return pEDate;
 	}
@@ -17844,9 +18197,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getEDateAccess().getRule();
 	}
 
-	//UserGroup returns organisation::UserGroup:
-	//	"user group " name=ID "{" "users " "[" users+=[organisation::User|Fqn] ("," users+=[organisation::User|Fqn])* "]"
-	//	"}";
+	//UserGroup organisation::UserGroup:
+	//	'user group ' name=ID '{'
+	//	'users ' '[' users+=[organisation::User|Fqn] (',' users+=[organisation::User|Fqn])* ']'
+	//	'}'
 	public UserGroupElements getUserGroupAccess() {
 		return pUserGroup;
 	}
@@ -17855,10 +18209,11 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getUserGroupAccess().getRule();
 	}
 
-	//RoleAssignment returns organisation::RoleAssignment:
-	//	"role assignment " name=ID "{" ("start: " startTime=EDate)? ("end: " endTime=EDate)? "assigned on: "
-	//	assignmentTime=EDate ("user: " user=[organisation::User|Fqn])? "role: " role=[organisation::Role|Fqn] ("user group: "
-	//	userGroup=[organisation::UserGroup|Fqn])? "}";
+	//RoleAssignment organisation::RoleAssignment:
+	//	'role assignment ' name=ID '{' ('start: ' startTime=EDate)? ('end: ' endTime=EDate)?
+	//	'assigned on: ' assignmentTime=EDate ('user: ' user=[organisation::User|Fqn])?
+	//	'role: ' role=[organisation::Role|Fqn] ('user group: ' userGroup=[organisation::UserGroup|Fqn])?
+	//	'}'
 	public RoleAssignmentElements getRoleAssignmentAccess() {
 		return pRoleAssignment;
 	}
@@ -17867,8 +18222,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getRoleAssignmentAccess().getRule();
 	}
 
-	//Role returns organisation::Role:
-	//	"role " name=ID;
+	//Role organisation::Role:
+	//	'role ' name=ID
 	public RoleElements getRoleAccess() {
 		return pRole;
 	}
@@ -17877,9 +18232,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getRoleAccess().getRule();
 	}
 
-	//Permission returns organisation::Permission:
-	//	"permission " name=ID "{" "start: " startTime=EDate ("end: " endTime=EDate)? "role: " role=[organisation::Role|Fqn]
-	//	"resource filter: " resourceFilter=[organisation::ResourceFilter|Fqn] "action: " action=ActionType "}";
+	//Permission organisation::Permission:
+	//	'permission ' name=ID '{'
+	//	'start: ' startTime=EDate ('end: ' endTime=EDate)?
+	//	'role: ' role=[organisation::Role|Fqn]
+	//	'resource filter: ' resourceFilter=[organisation::ResourceFilter|Fqn]
+	//	'action: ' action=ActionType
+	//	'}'
 	public PermissionElements getPermissionAccess() {
 		return pPermission;
 	}
@@ -17888,8 +18247,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getPermissionAccess().getRule();
 	}
 
-	//ResourceFilter returns organisation::ResourceFilter:
-	//	InformationResourceFilter | ServiceResourceFilter;
+	//ResourceFilter organisation::ResourceFilter:
+	//	InformationResourceFilter | ServiceResourceFilter
 	public ResourceFilterElements getResourceFilterAccess() {
 		return pResourceFilter;
 	}
@@ -17901,7 +18260,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	//enum ResourcePattern returns organisation::ResourcePattern:
 	//	EXACT | TREE;
 	public ResourcePatternElements getResourcePatternAccess() {
-		return unknownRuleResourcePattern;
+		return eResourcePattern;
 	}
 	
 	public EnumRule getResourcePatternRule() {
@@ -17911,16 +18270,18 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	//enum SecurityLevel returns organisation::SecurityLevel:
 	//	LOW | MEDIUM | HIGH;
 	public SecurityLevelElements getSecurityLevelAccess() {
-		return unknownRuleSecurityLevel;
+		return eSecurityLevel;
 	}
 	
 	public EnumRule getSecurityLevelRule() {
 		return getSecurityLevelAccess().getRule();
 	}
 
-	//InformationResourceFilter returns organisation::InformationResourceFilter:
-	//	"information resource filter " name=ID "{" "pattern: " resourcePattern=ResourcePattern ("information resource path: "
-	//	informationResourcePath=EString)? everyInformationResource?="all" "}";
+	//InformationResourceFilter organisation::InformationResourceFilter:
+	//	'information resource filter ' name=ID '{'
+	//	'pattern: ' resourcePattern=ResourcePattern ('information resource path: ' informationResourcePath=EString)?
+	//	everyInformationResource?='all'
+	//	'}'
 	public InformationResourceFilterElements getInformationResourceFilterAccess() {
 		return pInformationResourceFilter;
 	}
@@ -17929,9 +18290,11 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getInformationResourceFilterAccess().getRule();
 	}
 
-	//ServiceResourceFilter returns organisation::ServiceResourceFilter:
-	//	"service resource filter " name=ID "{" "pattern: " resourcePattern=ResourcePattern ("service url: "
-	//	serviceURL=EString)? everyService?="all" "}";
+	//ServiceResourceFilter organisation::ServiceResourceFilter:
+	//	'service resource filter ' name=ID '{'
+	//	'pattern: ' resourcePattern=ResourcePattern ('service url: ' serviceURL=EString)?
+	//	everyService?='all'
+	//	'}'
 	public ServiceResourceFilterElements getServiceResourceFilterAccess() {
 		return pServiceResourceFilter;
 	}
@@ -17940,9 +18303,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getServiceResourceFilterAccess().getRule();
 	}
 
-	/// * Provider model * / ProviderModel returns provider::ProviderModel:
-	//	"provider model " name=ID "{" ("constraints " "{" (constraints+=Constraint constraints+=Constraint*)? "}")? "root "
-	//	rootFeature=Feature "}";
+	/// * Provider model * / ProviderModel provider::ProviderModel:
+	//	'provider model ' name=ID '{' ('constraints ' '{' (constraints+=Constraint constraints+=Constraint*)? '}')?
+	//	'root ' rootFeature=Feature
+	//	'}'
 	public ProviderModelElements getProviderModelAccess() {
 		return pProviderModel;
 	}
@@ -17951,8 +18315,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getProviderModelAccess().getRule();
 	}
 
-	//Constraint returns provider::Constraint:
-	//	Excludes | Implies | Requires_Impl | Functional;
+	//Constraint provider::Constraint:
+	//	Excludes | Implies | Requires_Impl | Functional
 	public ConstraintElements getConstraintAccess() {
 		return pConstraint;
 	}
@@ -17961,8 +18325,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getConstraintAccess().getRule();
 	}
 
-	//Feature returns provider::Feature:
-	//	Feature_Impl | Alternative_Impl | Exclusive;
+	//Feature provider::Feature:
+	//	Feature_Impl | Alternative_Impl | Exclusive
 	public FeatureElements getFeatureAccess() {
 		return pFeature;
 	}
@@ -17971,8 +18335,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getFeatureAccess().getRule();
 	}
 
-	//Scope returns provider::Scope:
-	//	Instance | Product;
+	//Scope provider::Scope:
+	//	Instance | Product
 	public ScopeElements getScopeAccess() {
 		return pScope;
 	}
@@ -17981,8 +18345,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getScopeAccess().getRule();
 	}
 
-	//ValueType returns type::ValueType:
-	//	BoolValueType | Enumeration | List | Range | RangeUnion | StringsValueType;
+	//ValueType type::ValueType:
+	//	BoolValueType | Enumeration | List | Range | RangeUnion | StringsValueType
 	public ValueTypeElements getValueTypeAccess() {
 		return pValueType;
 	}
@@ -17991,8 +18355,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getValueTypeAccess().getRule();
 	}
 
-	//NumericValue returns type::NumericValue:
-	//	IntegerValue | FloatsValue | DoublePrecisionValue | NegativeInf | PositiveInf | ValueToIncrease;
+	//NumericValue type::NumericValue:
+	//	IntegerValue | FloatsValue | DoublePrecisionValue | NegativeInf | PositiveInf | ValueToIncrease
 	public NumericValueElements getNumericValueAccess() {
 		return pNumericValue;
 	}
@@ -18001,10 +18365,11 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getNumericValueAccess().getRule();
 	}
 
-	//Feature_Impl returns provider::Feature:
-	//	"feature " name=ID "{" ("attributes " "{" (attributes+=Attribute attributes+=Attribute*)? "}")? ("sub-features " "{"
-	//	(subFeatures+=Feature subFeatures+=Feature*)? "}")? featureCardinality=FeatCardinality ("clones " "{" clones+=Clone
-	//	("," clones+=Clone)* "}")? "}";
+	//Feature_Impl provider::Feature:
+	//	'feature ' name=ID '{' ('attributes ' '{' (attributes+=Attribute attributes+=Attribute*)? '}')? ('sub-features ' '{'
+	//	(subFeatures+=Feature subFeatures+=Feature*)? '}')?
+	//	featureCardinality=FeatCardinality ('clones ' '{' clones+=Clone (',' clones+=Clone)* '}')?
+	//	'}'
 	public Feature_ImplElements getFeature_ImplAccess() {
 		return pFeature_Impl;
 	}
@@ -18013,7 +18378,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getFeature_ImplAccess().getRule();
 	}
 
-	//EString returns ecore::EString:
+	//EString:
 	//	STRING | ID;
 	public EStringElements getEStringAccess() {
 		return pEString;
@@ -18023,9 +18388,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getEStringAccess().getRule();
 	}
 
-	//AttributeConstraint returns provider::AttributeConstraint:
-	//	"attribute constraint " "{" "from: " from=[provider::Attribute|Fqn] "to: " to=[provider::Attribute|Fqn]
-	//	"from value: " fromValue=Value "to value: " toValue=Value "}";
+	//AttributeConstraint provider::AttributeConstraint:
+	//	'attribute constraint ' '{'
+	//	'from: ' from=[provider::Attribute|Fqn]
+	//	'to: ' to=[provider::Attribute|Fqn]
+	//	'from value: ' fromValue=Value
+	//	'to value: ' toValue=Value
+	//	'}'
 	public AttributeConstraintElements getAttributeConstraintAccess() {
 		return pAttributeConstraint;
 	}
@@ -18034,10 +18403,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getAttributeConstraintAccess().getRule();
 	}
 
-	//Excludes returns provider::Excludes:
-	//	"excludes " name=ID "{" "from: " from=[provider::Feature|Fqn] "to: " to=[provider::Feature|Fqn]
-	//	("attribute constraints " "{" (attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint*)?
-	//	"}")? "}";
+	//Excludes provider::Excludes:
+	//	'excludes ' name=ID '{'
+	//	'from: ' from=[provider::Feature|Fqn]
+	//	'to: ' to=[provider::Feature|Fqn] ('attribute constraints ' '{' (attributeConstraints+=AttributeConstraint
+	//	attributeConstraints+=AttributeConstraint*)? '}')?
+	//	'}'
 	public ExcludesElements getExcludesAccess() {
 		return pExcludes;
 	}
@@ -18046,10 +18417,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getExcludesAccess().getRule();
 	}
 
-	//Implies returns provider::Implies:
-	//	"implies " name=ID "{" "from: " from=[provider::Feature|Fqn] "to: " to=[provider::Feature|Fqn]
-	//	("attribute constraints " "{" attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint*
-	//	"}")? "}";
+	//Implies provider::Implies:
+	//	'implies ' name=ID '{'
+	//	'from: ' from=[provider::Feature|Fqn]
+	//	'to: ' to=[provider::Feature|Fqn] ('attribute constraints ' '{' attributeConstraints+=AttributeConstraint
+	//	attributeConstraints+=AttributeConstraint* '}')?
+	//	'}'
 	public ImpliesElements getImpliesAccess() {
 		return pImplies;
 	}
@@ -18058,11 +18431,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getImpliesAccess().getRule();
 	}
 
-	//Requires_Impl returns provider::Requires:
-	//	"requires " name=ID "{" "from: " from=[provider::Feature|Fqn] "to: " to=[provider::Feature|Fqn]
-	//	("attribute constraints " "{" attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint*
-	//	"}")? ("scope from: " scopeFrom=Scope)? ("scope to: " scopeTo=Scope)? ("card from: " cardFrom=FeatCardinality)?
-	//	("card to: " cardTo=FeatCardinality)? "}";
+	//Requires_Impl provider::Requires:
+	//	'requires ' name=ID '{'
+	//	'from: ' from=[provider::Feature|Fqn]
+	//	'to: ' to=[provider::Feature|Fqn] ('attribute constraints ' '{' attributeConstraints+=AttributeConstraint
+	//	attributeConstraints+=AttributeConstraint* '}')? ('scope from: ' scopeFrom=Scope)? ('scope to: ' scopeTo=Scope)?
+	//	('card from: ' cardFrom=FeatCardinality)? ('card to: ' cardTo=FeatCardinality)?
+	//	'}'
 	public Requires_ImplElements getRequires_ImplAccess() {
 		return pRequires_Impl;
 	}
@@ -18071,12 +18446,14 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getRequires_ImplAccess().getRule();
 	}
 
-	//Functional returns provider::Functional:
-	//	"functional " name=ID "{" ("type: " type=Operator)? ("order: " order=EInt)? "value: " value=EInt "from: "
-	//	from=[provider::Feature|Fqn] "to: " to=[provider::Feature|Fqn] ("attribute constraints " "{"
-	//	attributeConstraints+=AttributeConstraint attributeConstraints+=AttributeConstraint* "}")? ("scope from: "
-	//	scopeFrom=Scope)? ("scope to: " scopeTo=Scope)? ("card from: " cardFrom=FeatCardinality)? ("card to: "
-	//	cardTo=FeatCardinality)? "}";
+	//Functional provider::Functional:
+	//	'functional ' name=ID '{' ('type: ' type=Operator)? ('order: ' order=EInt)?
+	//	'value: ' value=EInt
+	//	'from: ' from=[provider::Feature|Fqn]
+	//	'to: ' to=[provider::Feature|Fqn] ('attribute constraints ' '{' attributeConstraints+=AttributeConstraint
+	//	attributeConstraints+=AttributeConstraint* '}')? ('scope from: ' scopeFrom=Scope)? ('scope to: ' scopeTo=Scope)?
+	//	('card from: ' cardFrom=FeatCardinality)? ('card to: ' cardTo=FeatCardinality)?
+	//	'}'
 	public FunctionalElements getFunctionalAccess() {
 		return pFunctional;
 	}
@@ -18085,9 +18462,11 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getFunctionalAccess().getRule();
 	}
 
-	//Attribute returns provider::Attribute:
-	//	{provider::Attribute} "attribute " name=ID "{" ("unit type: " unitType=UnitType)? ("value: " value=Value)?
-	//	("value type: " valueType=[type::ValueType|Fqn])? "}";
+	//Attribute provider::Attribute:
+	//	{provider::Attribute}
+	//	'attribute ' name=ID '{' ('unit type: ' unitType=UnitType)? ('value: ' value=Value)? ('value type: '
+	//	valueType=[type::ValueType|Fqn])?
+	//	'}'
 	public AttributeElements getAttributeAccess() {
 		return pAttribute;
 	}
@@ -18096,8 +18475,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getAttributeAccess().getRule();
 	}
 
-	//FeatCardinality returns provider::FeatCardinality:
-	//	"feature cardinality" "{" "cardinality: " cardinalityMin=EInt ".." cardinalityMax=EInt ("value: " value=EInt)? "}";
+	//FeatCardinality provider::FeatCardinality:
+	//	'feature cardinality' '{'
+	//	'cardinality: ' cardinalityMin=EInt '..' cardinalityMax=EInt ('value: ' value=EInt)?
+	//	'}'
 	public FeatCardinalityElements getFeatCardinalityAccess() {
 		return pFeatCardinality;
 	}
@@ -18106,8 +18487,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getFeatCardinalityAccess().getRule();
 	}
 
-	//Instance returns provider::Instance:
-	//	"instance" "{" "feature: " feature=[provider::Feature|Fqn] "}";
+	//Instance provider::Instance:
+	//	'instance' '{'
+	//	'feature: ' feature=[provider::Feature|Fqn]
+	//	'}'
 	public InstanceElements getInstanceAccess() {
 		return pInstance;
 	}
@@ -18116,8 +18499,9 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getInstanceAccess().getRule();
 	}
 
-	//Product returns provider::Product:
-	//	{provider::Product} "product";
+	//Product provider::Product:
+	//	{provider::Product}
+	//	'product'
 	public ProductElements getProductAccess() {
 		return pProduct;
 	}
@@ -18129,16 +18513,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	//enum Operator returns provider::Operator:
 	//	select | add | remove | multiply | divide;
 	public OperatorElements getOperatorAccess() {
-		return unknownRuleOperator;
+		return eOperator;
 	}
 	
 	public EnumRule getOperatorRule() {
 		return getOperatorAccess().getRule();
 	}
 
-	//Clone returns provider::Clone:
-	//	{provider::Clone} "clone " name=ID "{" ("sub-clones " "[" subClones+=[provider::Clone|Fqn] (","
-	//	subClones+=[provider::Clone|Fqn])* "]")? "}";
+	//Clone provider::Clone:
+	//	{provider::Clone}
+	//	'clone ' name=ID '{' ('sub-clones ' '[' subClones+=[provider::Clone|Fqn] (',' subClones+=[provider::Clone|Fqn])* ']')?
+	//	'}'
 	public CloneElements getCloneAccess() {
 		return pClone;
 	}
@@ -18147,11 +18532,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getCloneAccess().getRule();
 	}
 
-	//Alternative_Impl returns provider::Alternative:
-	//	"alternative" name=ID "{" ("attributes " "{" attributes+=Attribute attributes+=Attribute* "}")? ("sub-features " "{"
-	//	subFeatures+=Feature subFeatures+=Feature* "}")? featureCardinality=FeatCardinality ("clones " "{" clones+=Clone (","
-	//	clones+=Clone)* "}")? groupCardinality=GroupCardinality? "variants " "{" variants+=Feature ("," variants+=Feature)*
-	//	"}" "}";
+	//Alternative_Impl provider::Alternative:
+	//	'alternative' name=ID '{' ('attributes ' '{' attributes+=Attribute attributes+=Attribute* '}')? ('sub-features ' '{'
+	//	subFeatures+=Feature subFeatures+=Feature* '}')?
+	//	featureCardinality=FeatCardinality ('clones ' '{' clones+=Clone (',' clones+=Clone)* '}')?
+	//	groupCardinality=GroupCardinality?
+	//	'variants ' '{' variants+=Feature (',' variants+=Feature)* '}'
+	//	'}'
 	public Alternative_ImplElements getAlternative_ImplAccess() {
 		return pAlternative_Impl;
 	}
@@ -18160,11 +18547,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getAlternative_ImplAccess().getRule();
 	}
 
-	//Exclusive returns provider::Exclusive:
-	//	"exclusive " name=ID "{" ("attributes " "{" attributes+=Attribute attributes+=Attribute* "}")? ("sub-features " "{"
-	//	subFeatures+=Feature subFeatures+=Feature* "}")? featureCardinality=FeatCardinality ("clones " "{" clones+=Clone (","
-	//	clones+=Clone)* "}")? groupCardinality=GroupCardinality? "variants " "{" variants+=Feature variants+=Feature* "}"
-	//	"}";
+	//Exclusive provider::Exclusive:
+	//	'exclusive ' name=ID '{' ('attributes ' '{' attributes+=Attribute attributes+=Attribute* '}')? ('sub-features ' '{'
+	//	subFeatures+=Feature subFeatures+=Feature* '}')?
+	//	featureCardinality=FeatCardinality ('clones ' '{' clones+=Clone (',' clones+=Clone)* '}')?
+	//	groupCardinality=GroupCardinality?
+	//	'variants ' '{' variants+=Feature variants+=Feature* '}'
+	//	'}'
 	public ExclusiveElements getExclusiveAccess() {
 		return pExclusive;
 	}
@@ -18173,8 +18562,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getExclusiveAccess().getRule();
 	}
 
-	//GroupCardinality returns provider::GroupCardinality:
-	//	"group cardinality" "{" "cardinality: " cardinalityMin=EInt ".." cardinalityMax=EInt "}";
+	//GroupCardinality provider::GroupCardinality:
+	//	'group cardinality' '{'
+	//	'cardinality: ' cardinalityMin=EInt '..' cardinalityMax=EInt
+	//	'}'
 	public GroupCardinalityElements getGroupCardinalityAccess() {
 		return pGroupCardinality;
 	}
@@ -18183,12 +18574,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getGroupCardinalityAccess().getRule();
 	}
 
-	/// * Requirements model * / RequirementModel returns requirement::RequirementModel:
-	//	"requirement model " name=ID "{" (requirements+=LocationRequirement | requirements+=QuantitativeHardwareRequirement |
+	/// * Requirements model * / RequirementModel requirement::RequirementModel:
+	//	'requirement model ' name=ID '{' (requirements+=LocationRequirement | requirements+=QuantitativeHardwareRequirement |
 	//	requirements+=QualitativeHardwareRequirement | requirements+=ImageRequirement | requirements+=OSRequirement |
 	//	requirements+=HorizontalScaleRequirement | requirements+=VerticalScaleRequirement | requirements+=SecurityRequirement
 	//	| requirements+=ServiceLevelObjective | requirements+=OptimisationRequirement | requirements+=ProviderRequirement |
-	//	requirements+=RequirementGroup)* "}";
+	//	requirements+=RequirementGroup)*
+	//	'}'
 	public RequirementModelElements getRequirementModelAccess() {
 		return pRequirementModel;
 	}
@@ -18197,10 +18589,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getRequirementModelAccess().getRule();
 	}
 
-	//RequirementGroup returns requirement::RequirementGroup:
-	//	"group " name=ID "{" "operator: " requirementOperator=RequirementOperatorType "requirements " "["
-	//	requirements+=[requirement::Requirement|Fqn] ("," requirements+=[requirement::Requirement|Fqn])* "]" ("application "
-	//	"[" application+=[camel::Application|Fqn] ("," application+=[camel::Application|Fqn])* "]")? "}";
+	//RequirementGroup requirement::RequirementGroup:
+	//	'group ' name=ID '{'
+	//	'operator: ' requirementOperator=RequirementOperatorType
+	//	'requirements ' '[' requirements+=[requirement::Requirement|Fqn] (',' requirements+=[requirement::Requirement|Fqn])*
+	//	']' ('application ' '[' application+=[camel::Application|Fqn] (',' application+=[camel::Application|Fqn])* ']')?
+	//	'}'
 	public RequirementGroupElements getRequirementGroupAccess() {
 		return pRequirementGroup;
 	}
@@ -18212,16 +18606,16 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	//enum RequirementOperatorType returns requirement::RequirementOperatorType:
 	//	AND | OR | XOR;
 	public RequirementOperatorTypeElements getRequirementOperatorTypeAccess() {
-		return unknownRuleRequirementOperatorType;
+		return eRequirementOperatorType;
 	}
 	
 	public EnumRule getRequirementOperatorTypeRule() {
 		return getRequirementOperatorTypeAccess().getRule();
 	}
 
-	//Requirement returns requirement::Requirement:
+	//Requirement requirement::Requirement:
 	//	LocationRequirement | HorizontalScaleRequirement | VerticalScaleRequirement | SecurityRequirement |
-	//	ServiceLevelObjective | OptimisationRequirement | RequirementGroup;
+	//	ServiceLevelObjective | OptimisationRequirement | RequirementGroup
 	public RequirementElements getRequirementAccess() {
 		return pRequirement;
 	}
@@ -18230,8 +18624,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getRequirementAccess().getRule();
 	}
 
-	//ServiceLevelObjective returns requirement::ServiceLevelObjective:
-	//	"slo " name=ID "{" "service level: " customServiceLevel=[metric::Condition|Fqn] "}";
+	//ServiceLevelObjective requirement::ServiceLevelObjective:
+	//	'slo ' name=ID '{'
+	//	'service level: ' customServiceLevel=[metric::Condition|Fqn]
+	//	'}'
 	public ServiceLevelObjectiveElements getServiceLevelObjectiveAccess() {
 		return pServiceLevelObjective;
 	}
@@ -18240,9 +18636,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getServiceLevelObjectiveAccess().getRule();
 	}
 
-	//ProviderRequirement returns requirement::ProviderRequirement:
-	//	"provider requirement " name=ID "{" "providers: " "[" providers+=[organisation::CloudProvider|Fqn] (","
-	//	providers+=[organisation::CloudProvider|Fqn])* "]" "}";
+	//ProviderRequirement requirement::ProviderRequirement:
+	//	'provider requirement ' name=ID '{'
+	//	'providers: ' '[' providers+=[organisation::CloudProvider|Fqn] (',' providers+=[organisation::CloudProvider|Fqn])* ']'
+	//	'}'
 	public ProviderRequirementElements getProviderRequirementAccess() {
 		return pProviderRequirement;
 	}
@@ -18251,11 +18648,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getProviderRequirementAccess().getRule();
 	}
 
-	//OptimisationRequirement returns requirement::OptimisationRequirement:
-	//	"optimisation requirement " name=ID "{" "function: " optimisationFunction=OptimisationFunctionType ("metric: "
-	//	metric=[metric::Metric|Fqn])? ("metric context: " metricContext=[metric::MetricContext|Fqn])? ("property: "
-	//	property=[metric::Property|Fqn])? ("application: " application=[camel::Application|Fqn])? ("component: "
-	//	component=[deployment::Component|Fqn])? ("priority: " priority=EDouble)? "}";
+	//OptimisationRequirement requirement::OptimisationRequirement:
+	//	'optimisation requirement ' name=ID '{'
+	//	'function: ' optimisationFunction=OptimisationFunctionType ('metric: ' metric=[metric::Metric|Fqn])?
+	//	('metric context: ' metricContext=[metric::MetricContext|Fqn])? ('property: ' property=[metric::Property|Fqn])?
+	//	('application: ' application=[camel::Application|Fqn])? ('component: ' component=[deployment::Component|Fqn])?
+	//	('priority: ' priority=EDouble)?
+	//	'}'
 	public OptimisationRequirementElements getOptimisationRequirementAccess() {
 		return pOptimisationRequirement;
 	}
@@ -18265,17 +18664,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum OptimisationFunctionType returns requirement::OptimisationFunctionType:
-	//	MINIMISE="MIN" | MAXIMISE="MAX";
+	//	MINIMISE='MIN' | MAXIMISE='MAX';
 	public OptimisationFunctionTypeElements getOptimisationFunctionTypeAccess() {
-		return unknownRuleOptimisationFunctionType;
+		return eOptimisationFunctionType;
 	}
 	
 	public EnumRule getOptimisationFunctionTypeRule() {
 		return getOptimisationFunctionTypeAccess().getRule();
 	}
 
-	//OSRequirement returns requirement::OSRequirement:
-	//	"os " name=ID "{" "os: " os=EString is64os?="64os"? "}";
+	//OSRequirement requirement::OSRequirement:
+	//	'os ' name=ID '{' 'os: ' os=EString is64os?='64os'? '}'
 	public OSRequirementElements getOSRequirementAccess() {
 		return pOSRequirement;
 	}
@@ -18284,8 +18683,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getOSRequirementAccess().getRule();
 	}
 
-	//ImageRequirement returns requirement::ImageRequirement:
-	//	"image " name=ID "{" "imageID: " imageId=EString "}";
+	//ImageRequirement requirement::ImageRequirement:
+	//	'image ' name=ID '{'
+	//	'imageID: ' imageId=EString
+	//	'}'
 	public ImageRequirementElements getImageRequirementAccess() {
 		return pImageRequirement;
 	}
@@ -18294,8 +18695,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getImageRequirementAccess().getRule();
 	}
 
-	//Double returns ecore::EDouble:
-	//	"-"? INT? "." INT;
+	//Double ecore::EDouble:
+	//	'-'? INT? '.' INT
 	public DoubleElements getDoubleAccess() {
 		return pDouble;
 	}
@@ -18304,8 +18705,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getDoubleAccess().getRule();
 	}
 
-	//QualitativeHardwareRequirement returns requirement::QualitativeHardwareRequirement:
-	//	"qualitative" "hardware " name=ID "{" "benchmark: " minBenchmark=Double ".." maxBenchmark=Double? "}";
+	//QualitativeHardwareRequirement requirement::QualitativeHardwareRequirement:
+	//	'qualitative' 'hardware ' name=ID '{'
+	//	'benchmark: ' minBenchmark=Double '..' maxBenchmark=Double?
+	//	'}'
 	public QualitativeHardwareRequirementElements getQualitativeHardwareRequirementAccess() {
 		return pQualitativeHardwareRequirement;
 	}
@@ -18314,9 +18717,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getQualitativeHardwareRequirementAccess().getRule();
 	}
 
-	//QuantitativeHardwareRequirement returns requirement::QuantitativeHardwareRequirement:
-	//	"quantitative hardware " name=ID "{" ("core: " minCores=INT ".." maxCores=INT?)? ("ram: " minRAM=INT ".."
-	//	maxRAM=INT?)? ("storage: " minStorage=INT ".." maxStorage=INT?)? ("cpu: " minCPU=Double ".." maxCPU=Double?)? "}";
+	//QuantitativeHardwareRequirement requirement::QuantitativeHardwareRequirement:
+	//	'quantitative hardware ' name=ID '{' ('core: ' minCores=INT '..' maxCores=INT?)? ('ram: ' minRAM=INT '..'
+	//	maxRAM=INT?)? ('storage: ' minStorage=INT '..' maxStorage=INT?)? ('cpu: ' minCPU=Double '..' maxCPU=Double?)?
+	//	'}'
 	public QuantitativeHardwareRequirementElements getQuantitativeHardwareRequirementAccess() {
 		return pQuantitativeHardwareRequirement;
 	}
@@ -18325,9 +18729,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getQuantitativeHardwareRequirementAccess().getRule();
 	}
 
-	//LocationRequirement returns requirement::LocationRequirement:
-	//	"location requirement "+ name=ID "{" ("locations " "[" (locations+=[location::Location|Fqn] (","
-	//	locations+=[location::Location|Fqn])*)? "]")? "}";
+	//LocationRequirement requirement::LocationRequirement:
+	//	'location requirement '+ name=ID '{' ('locations ' '[' (locations+=[location::Location|Fqn] (','
+	//	locations+=[location::Location|Fqn])*)? ']')?
+	//	'}'
 	public LocationRequirementElements getLocationRequirementAccess() {
 		return pLocationRequirement;
 	}
@@ -18336,10 +18741,11 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getLocationRequirementAccess().getRule();
 	}
 
-	/// * Scalability model * / ScalabilityModel returns scalability::ScalabilityModel:
-	//	{scalability::ScalabilityModel} ("importURI" "{" importURI+=EString ("," importURI+=EString)* "}")?
-	//	"scalability model " name=ID "{" (rules+=ScalabilityRule | events+=Event | eventInstances+=EventInstance |
-	//	actions+=ScalingAction | timers+=Timer | scaleRequirements+=ScaleRequirement)* "}";
+	/// * Scalability model * / ScalabilityModel scalability::ScalabilityModel:
+	//	{scalability::ScalabilityModel} ('importURI' '{' importURI+=EString (',' importURI+=EString)* '}')?
+	//	'scalability model ' name=ID '{' (rules+=ScalabilityRule | events+=Event | eventInstances+=EventInstance |
+	//	actions+=ScalingAction | timers+=Timer | scaleRequirements+=ScaleRequirement)*
+	//	'}'
 	public ScalabilityModelElements getScalabilityModelAccess() {
 		return pScalabilityModel;
 	}
@@ -18348,9 +18754,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getScalabilityModelAccess().getRule();
 	}
 
-	//EventInstance returns scalability::EventInstance:
-	//	"event instance" name=ID "{" "event: " event=[scalability::SimpleEvent|Fqn] "status: " status=StatusType ("layer: "
-	//	layer=LayerType)? ("metric instance: " metricInstance=[metric::MetricInstance|Fqn])? "}";
+	//EventInstance scalability::EventInstance:
+	//	'event instance' name=ID '{'
+	//	'event: ' event=[scalability::SimpleEvent|Fqn]
+	//	'status: ' status=StatusType ('layer: ' layer=LayerType)? ('metric instance: '
+	//	metricInstance=[metric::MetricInstance|Fqn])?
+	//	'}'
 	public EventInstanceElements getEventInstanceAccess() {
 		return pEventInstance;
 	}
@@ -18359,8 +18768,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getEventInstanceAccess().getRule();
 	}
 
-	//ScaleRequirement returns requirement::ScaleRequirement:
-	//	HorizontalScaleRequirement | VerticalScaleRequirement;
+	//ScaleRequirement requirement::ScaleRequirement:
+	//	HorizontalScaleRequirement | VerticalScaleRequirement
 	public ScaleRequirementElements getScaleRequirementAccess() {
 		return pScaleRequirement;
 	}
@@ -18369,9 +18778,11 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getScaleRequirementAccess().getRule();
 	}
 
-	//HorizontalScaleRequirement returns requirement::HorizontalScaleRequirement:
-	//	"horizontal scale requirement " name=ID "{" "component: " component=[deployment::InternalComponent|Fqn] "instances: "
-	//	minInstances=EInt ".." maxInstances=EInt "}";
+	//HorizontalScaleRequirement requirement::HorizontalScaleRequirement:
+	//	'horizontal scale requirement ' name=ID '{'
+	//	'component: ' component=[deployment::InternalComponent|Fqn]
+	//	'instances: ' minInstances=EInt '..' maxInstances=EInt
+	//	'}'
 	public HorizontalScaleRequirementElements getHorizontalScaleRequirementAccess() {
 		return pHorizontalScaleRequirement;
 	}
@@ -18380,10 +18791,11 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getHorizontalScaleRequirementAccess().getRule();
 	}
 
-	//VerticalScaleRequirement returns requirement::VerticalScaleRequirement:
-	//	"vertical scale requirement " name=ID "{" "vm: " vm=[deployment::VM|Fqn] ("core: " minCores=INT ".." maxCores=INT?)?
-	//	("ram: " minRAM=INT ".." maxRAM=INT?)? ("storage: " minStorage=INT ".." maxStorage=INT?)? ("cpu: " minCPU=Double ".."
-	//	maxCPU=Double?)? "}";
+	//VerticalScaleRequirement requirement::VerticalScaleRequirement:
+	//	'vertical scale requirement ' name=ID '{'
+	//	'vm: ' vm=[deployment::VM|Fqn] ('core: ' minCores=INT '..' maxCores=INT?)? ('ram: ' minRAM=INT '..' maxRAM=INT?)?
+	//	('storage: ' minStorage=INT '..' maxStorage=INT?)? ('cpu: ' minCPU=Double '..' maxCPU=Double?)?
+	//	'}'
 	public VerticalScaleRequirementElements getVerticalScaleRequirementAccess() {
 		return pVerticalScaleRequirement;
 	}
@@ -18392,12 +18804,14 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getVerticalScaleRequirementAccess().getRule();
 	}
 
-	//ScalabilityRule returns scalability::ScalabilityRule:
-	//	"scalability rule " name=ID "{" "event: " event=[scalability::Event|Fqn] "actions " "[" actions+=[camel::Action|Fqn]
-	//	("," actions+=[camel::Action|Fqn])* "]" ("entities " "[" entity+=[organisation::Entity|Fqn] (","
-	//	entity+=[organisation::Entity|Fqn])* "]")? ("scale requirements " "["
-	//	scaleRequirements+=[requirement::ScaleRequirement|Fqn] ("," scaleRequirements+=[requirement::ScaleRequirement|Fqn])*
-	//	"]")? "}";
+	//ScalabilityRule scalability::ScalabilityRule:
+	//	'scalability rule ' name=ID '{'
+	//	'event: ' event=[scalability::Event|Fqn]
+	//	'actions ' '[' actions+=[camel::Action|Fqn] (',' actions+=[camel::Action|Fqn])* ']' ('entities ' '['
+	//	entity+=[organisation::Entity|Fqn] (',' entity+=[organisation::Entity|Fqn])* ']')? ('scale requirements ' '['
+	//	scaleRequirements+=[requirement::ScaleRequirement|Fqn] (',' scaleRequirements+=[requirement::ScaleRequirement|Fqn])*
+	//	']')?
+	//	'}'
 	public ScalabilityRuleElements getScalabilityRuleAccess() {
 		return pScalabilityRule;
 	}
@@ -18406,8 +18820,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getScalabilityRuleAccess().getRule();
 	}
 
-	//ScalingAction returns scalability::ScalingAction:
-	//	HorizontalScalingAction | VerticalScalingAction;
+	//ScalingAction scalability::ScalingAction:
+	//	HorizontalScalingAction | VerticalScalingAction
 	public ScalingActionElements getScalingActionAccess() {
 		return pScalingAction;
 	}
@@ -18416,9 +18830,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getScalingActionAccess().getRule();
 	}
 
-	//HorizontalScalingAction returns scalability::HorizontalScalingAction:
-	//	"horizontal scaling action " name=ID "{" "type: " type=ActionType "vm: " vm=[deployment::VM|Fqn]
-	//	"internal component: " internalComponent=[deployment::InternalComponent|Fqn] ("count: " count=EInt)? "}";
+	//HorizontalScalingAction scalability::HorizontalScalingAction:
+	//	'horizontal scaling action ' name=ID '{'
+	//	'type: ' type=ActionType
+	//	'vm: ' vm=[deployment::VM|Fqn]
+	//	'internal component: ' internalComponent=[deployment::InternalComponent|Fqn] ('count: ' count=EInt)?
+	//	'}'
 	public HorizontalScalingActionElements getHorizontalScalingActionAccess() {
 		return pHorizontalScalingAction;
 	}
@@ -18427,10 +18844,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getHorizontalScalingActionAccess().getRule();
 	}
 
-	//VerticalScalingAction returns scalability::VerticalScalingAction:
-	//	"vertical scaling action " name=ID "{" "type: " type=ActionType "vm: " vm=[deployment::VM|Fqn] ("core update: "
-	//	coreUpdate=EInt)? ("CPU update: " CPUUpdate=EDouble)? ("memory update: " memoryUpdate=EInt)? ("storage update: "
-	//	storageUpdate=EInt)? ("io update: " ioUpdate=EInt)? ("network update: " networkUpdate=EInt)? "}";
+	//VerticalScalingAction scalability::VerticalScalingAction:
+	//	'vertical scaling action ' name=ID '{'
+	//	'type: ' type=ActionType
+	//	'vm: ' vm=[deployment::VM|Fqn] ('core update: ' coreUpdate=EInt)? ('CPU update: ' CPUUpdate=EDouble)?
+	//	('memory update: ' memoryUpdate=EInt)? ('storage update: ' storageUpdate=EInt)? ('io update: ' ioUpdate=EInt)?
+	//	('network update: ' networkUpdate=EInt)?
+	//	'}'
 	public VerticalScalingActionElements getVerticalScalingActionAccess() {
 		return pVerticalScalingAction;
 	}
@@ -18439,8 +18859,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getVerticalScalingActionAccess().getRule();
 	}
 
-	//EventPattern returns scalability::EventPattern:
-	//	BinaryEventPattern | UnaryEventPattern;
+	//EventPattern scalability::EventPattern:
+	//	BinaryEventPattern | UnaryEventPattern
 	public EventPatternElements getEventPatternAccess() {
 		return pEventPattern;
 	}
@@ -18449,8 +18869,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getEventPatternAccess().getRule();
 	}
 
-	//Event returns scalability::Event:
-	//	BinaryEventPattern | UnaryEventPattern | FunctionalEvent | NonFunctionalEvent;
+	//Event scalability::Event:
+	//	BinaryEventPattern | UnaryEventPattern | FunctionalEvent | NonFunctionalEvent
 	public EventElements getEventAccess() {
 		return pEvent;
 	}
@@ -18459,8 +18879,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getEventAccess().getRule();
 	}
 
-	//SimpleEvent returns scalability::SimpleEvent:
-	//	FunctionalEvent | NonFunctionalEvent;
+	//SimpleEvent scalability::SimpleEvent:
+	//	FunctionalEvent | NonFunctionalEvent
 	public SimpleEventElements getSimpleEventAccess() {
 		return pSimpleEvent;
 	}
@@ -18472,15 +18892,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	//enum StatusType returns scalability::StatusType:
 	//	CRITICAL | WARNING | SUCCESS | FATAL;
 	public StatusTypeElements getStatusTypeAccess() {
-		return unknownRuleStatusType;
+		return eStatusType;
 	}
 	
 	public EnumRule getStatusTypeRule() {
 		return getStatusTypeAccess().getRule();
 	}
 
-	//FunctionalEvent returns scalability::FunctionalEvent:
-	//	"functional event " name=ID "{" "functional type: " functionalType=EString "}";
+	//FunctionalEvent scalability::FunctionalEvent:
+	//	'functional event ' name=ID '{'
+	//	'functional type: ' functionalType=EString
+	//	'}'
 	public FunctionalEventElements getFunctionalEventAccess() {
 		return pFunctionalEvent;
 	}
@@ -18489,9 +18911,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getFunctionalEventAccess().getRule();
 	}
 
-	//NonFunctionalEvent returns scalability::NonFunctionalEvent:
-	//	"non-functional event " name=ID "{" "metric condition: " metricCondition=[metric::MetricCondition|Fqn]
-	//	isViolation?="violation" "}";
+	//NonFunctionalEvent scalability::NonFunctionalEvent:
+	//	'non-functional event ' name=ID '{'
+	//	'metric condition: ' metricCondition=[metric::MetricCondition|Fqn] isViolation?='violation'
+	//	'}'
 	public NonFunctionalEventElements getNonFunctionalEventAccess() {
 		return pNonFunctionalEvent;
 	}
@@ -18500,11 +18923,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getNonFunctionalEventAccess().getRule();
 	}
 
-	//BinaryEventPattern returns scalability::BinaryEventPattern:
-	//	"binary event pattern " name=ID "{" ("left event: " leftEvent=[scalability::Event|Fqn])? ("right event: "
-	//	rightEvent=[scalability::Event|Fqn])? ("timer: " timer=[scalability::Timer|Fqn])? "operator: "
-	//	operator=BinaryPatternOperatorType ("lower occurrence bound: " lowerOccurrenceBound=EInt)?
-	//	("upper occurrence bound: " upperOccurrenceBound=EInt)? "}";
+	//BinaryEventPattern scalability::BinaryEventPattern:
+	//	'binary event pattern ' name=ID '{' ('left event: ' leftEvent=[scalability::Event|Fqn])? ('right event: '
+	//	rightEvent=[scalability::Event|Fqn])? ('timer: ' timer=[scalability::Timer|Fqn])?
+	//	'operator: ' operator=BinaryPatternOperatorType ('lower occurrence bound: ' lowerOccurrenceBound=EInt)?
+	//	('upper occurrence bound: ' upperOccurrenceBound=EInt)?
+	//	'}'
 	public BinaryEventPatternElements getBinaryEventPatternAccess() {
 		return pBinaryEventPattern;
 	}
@@ -18513,10 +18937,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getBinaryEventPatternAccess().getRule();
 	}
 
-	//UnaryEventPattern returns scalability::UnaryEventPattern:
-	//	"unary event pattern " name=ID "{" "event: " event=[scalability::Event|Fqn] "operator: "
-	//	operator=UnaryPatternOperatorType ("timer: " timer=[scalability::Timer|Fqn])? ("occurrence num: "
-	//	occurrenceNum=EInt)? "}";
+	//UnaryEventPattern scalability::UnaryEventPattern:
+	//	'unary event pattern ' name=ID '{'
+	//	'event: ' event=[scalability::Event|Fqn]
+	//	'operator: ' operator=UnaryPatternOperatorType ('timer: ' timer=[scalability::Timer|Fqn])? ('occurrence num: '
+	//	occurrenceNum=EInt)?
+	//	'}'
 	public UnaryEventPatternElements getUnaryEventPatternAccess() {
 		return pUnaryEventPattern;
 	}
@@ -18525,9 +18951,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getUnaryEventPatternAccess().getRule();
 	}
 
-	//Timer returns scalability::Timer:
-	//	"timer " name=ID "{" "type: " type=TimerType "time value: " timeValue=EInt "unit: " unit=[unit::TimeIntervalUnit|Fqn]
-	//	("max occurrence num: " maxOccurrenceNum=EInt)? "}";
+	//Timer scalability::Timer:
+	//	'timer ' name=ID '{'
+	//	'type: ' type=TimerType
+	//	'time value: ' timeValue=EInt
+	//	'unit: ' unit=[unit::TimeIntervalUnit|Fqn] ('max occurrence num: ' maxOccurrenceNum=EInt)?
+	//	'}'
 	public TimerElements getTimerAccess() {
 		return pTimer;
 	}
@@ -18539,7 +18968,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	//enum TimerType returns scalability::TimerType:
 	//	WITHIN | WITHIN_MAX | INTERVAL;
 	public TimerTypeElements getTimerTypeAccess() {
-		return unknownRuleTimerType;
+		return eTimerType;
 	}
 	
 	public EnumRule getTimerTypeRule() {
@@ -18549,7 +18978,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	//enum BinaryPatternOperatorType returns scalability::BinaryPatternOperatorType:
 	//	AND | OR | XOR | PRECEDES | REPEAT_UNTIL;
 	public BinaryPatternOperatorTypeElements getBinaryPatternOperatorTypeAccess() {
-		return unknownRuleBinaryPatternOperatorType;
+		return eBinaryPatternOperatorType;
 	}
 	
 	public EnumRule getBinaryPatternOperatorTypeRule() {
@@ -18559,20 +18988,21 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	//enum UnaryPatternOperatorType returns scalability::UnaryPatternOperatorType:
 	//	EVERY | NOT | REPEAT | WHEN;
 	public UnaryPatternOperatorTypeElements getUnaryPatternOperatorTypeAccess() {
-		return unknownRuleUnaryPatternOperatorType;
+		return eUnaryPatternOperatorType;
 	}
 	
 	public EnumRule getUnaryPatternOperatorTypeRule() {
 		return getUnaryPatternOperatorTypeAccess().getRule();
 	}
 
-	/// * Security model * / SecurityModel returns security::SecurityModel:
-	//	{security::SecurityModel} ("importURI" "{" importURI+=EString ("," importURI+=EString)* "}")? "security model "
-	//	name=ID "{" (securityControls+=SecurityControl | / *securityRequirements += SecurityRequirement | * /
-	//	securityProperties+=SecurityProperty | rawSecurityMetrics+=RawSecurityMetric |
-	//	compositeSecurityMetrics+=CompositeSecurityMetric | rawSecurityMetricInstances+=RawSecurityMetricInstance |
+	/// * Security model * / SecurityModel security::SecurityModel:
+	//	{security::SecurityModel} ('importURI' '{' importURI+=EString (',' importURI+=EString)* '}')?
+	//	'security model ' name=ID '{' (securityControls+=SecurityControl | securityProperties+=SecurityProperty |
+	//	rawSecurityMetrics+=RawSecurityMetric | compositeSecurityMetrics+=CompositeSecurityMetric |
+	//	rawSecurityMetricInstances+=RawSecurityMetricInstance |
 	//	compositeSecurityMetricInstances+=CompositeSecurityMetricInstance | securityDomains+=SecurityDomain |
-	//	securityCapabilities+=SecurityCapability | securitySLOs+=SecuritySLO)* "}";
+	//	securityCapabilities+=SecurityCapability | securitySLOs+=SecuritySLO)*
+	//	'}'
 	public SecurityModelElements getSecurityModelAccess() {
 		return pSecurityModel;
 	}
@@ -18581,11 +19011,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getSecurityModelAccess().getRule();
 	}
 
-	//RawSecurityMetric returns security::RawSecurityMetric:
-	//	"raw security metric " name=ID "{" ("description: " description=EString)? "property: "
-	//	property=[security::SecurityProperty|Fqn] ("value direction: " valueDirection=EShort)? ("layer: " layer=LayerType)?
-	//	("value: " value=[type::SingleValue|Fqn])? ("value type: " valueType=[type::ValueType|Fqn])? "unit: "
-	//	unit=[unit::Unit|Fqn] "}";
+	//RawSecurityMetric security::RawSecurityMetric:
+	//	'raw security metric ' name=ID '{' ('description: ' description=EString)?
+	//	'property: ' property=[security::SecurityProperty|Fqn] ('value direction: ' valueDirection=EShort)? ('layer: '
+	//	layer=LayerType)? ('value: ' value=[type::SingleValue|Fqn])? ('value type: ' valueType=[type::ValueType|Fqn])?
+	//	'unit: ' unit=[unit::Unit|Fqn]
+	//	'}'
 	public RawSecurityMetricElements getRawSecurityMetricAccess() {
 		return pRawSecurityMetric;
 	}
@@ -18594,11 +19025,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getRawSecurityMetricAccess().getRule();
 	}
 
-	//CompositeSecurityMetric returns security::CompositeSecurityMetric:
-	//	"composite security metric " name=ID "{" ("description: " description=EString)? "property: "
-	//	property=[security::SecurityProperty|Fqn] ("value direction: " valueDirection=EShort)? ("layer: " layer=LayerType)?
-	//	("value: " value=[type::SingleValue|Fqn])? ("value type: " valueType=[type::ValueType|Fqn])? "unit: "
-	//	unit=[unit::Unit|Fqn] formula=MetricFormula "}";
+	//CompositeSecurityMetric security::CompositeSecurityMetric:
+	//	'composite security metric ' name=ID '{' ('description: ' description=EString)?
+	//	'property: ' property=[security::SecurityProperty|Fqn] ('value direction: ' valueDirection=EShort)? ('layer: '
+	//	layer=LayerType)? ('value: ' value=[type::SingleValue|Fqn])? ('value type: ' valueType=[type::ValueType|Fqn])?
+	//	'unit: ' unit=[unit::Unit|Fqn] formula=MetricFormula
+	//	'}'
 	public CompositeSecurityMetricElements getCompositeSecurityMetricAccess() {
 		return pCompositeSecurityMetric;
 	}
@@ -18607,11 +19039,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getCompositeSecurityMetricAccess().getRule();
 	}
 
-	//RawSecurityMetricInstance returns security::RawSecurityMetricInstance:
-	//	"raw security metric instance " name=ID "{" "metric: " metric=[metric::Metric|Fqn] "sensor: "
-	//	sensor=[metric::Sensor|Fqn] "object binding: " objectBinding=[metric::MetricObjectBinding|Fqn] ("schedule: "
-	//	schedule=[metric::Schedule|Fqn])? ("window: " window=[metric::Window|Fqn])? ("context: "
-	//	metricContext=[metric::MetricContext|Fqn])? "}";
+	//RawSecurityMetricInstance security::RawSecurityMetricInstance:
+	//	'raw security metric instance ' name=ID '{'
+	//	'metric: ' metric=[metric::Metric|Fqn]
+	//	'sensor: ' sensor=[metric::Sensor|Fqn]
+	//	'object binding: ' objectBinding=[metric::MetricObjectBinding|Fqn] ('schedule: ' schedule=[metric::Schedule|Fqn])?
+	//	('window: ' window=[metric::Window|Fqn])? ('context: ' metricContext=[metric::MetricContext|Fqn])?
+	//	'}'
 	public RawSecurityMetricInstanceElements getRawSecurityMetricInstanceAccess() {
 		return pRawSecurityMetricInstance;
 	}
@@ -18620,12 +19054,14 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getRawSecurityMetricInstanceAccess().getRule();
 	}
 
-	//CompositeSecurityMetricInstance returns security::CompositeSecurityMetricInstance:
-	//	"composite security metric instance" name=ID "{" "metric: " metric=[metric::Metric|Fqn] "composing metric instances "
-	//	"[" composingMetricInstances+=[metric::MetricInstance|Fqn] (","
-	//	composingMetricInstances+=[metric::MetricInstance|Fqn])* "]" "object binding: "
-	//	objectBinding=[metric::MetricObjectBinding|Fqn] ("schedule: " schedule=[metric::Schedule|Fqn])? ("window: "
-	//	window=[metric::Window|Fqn])? ("context: " metricContext=[metric::MetricContext|Fqn])? "}";
+	//CompositeSecurityMetricInstance security::CompositeSecurityMetricInstance:
+	//	'composite security metric instance' name=ID '{'
+	//	'metric: ' metric=[metric::Metric|Fqn]
+	//	'composing metric instances ' '[' composingMetricInstances+=[metric::MetricInstance|Fqn] (','
+	//	composingMetricInstances+=[metric::MetricInstance|Fqn])* ']'
+	//	'object binding: ' objectBinding=[metric::MetricObjectBinding|Fqn] ('schedule: ' schedule=[metric::Schedule|Fqn])?
+	//	('window: ' window=[metric::Window|Fqn])? ('context: ' metricContext=[metric::MetricContext|Fqn])?
+	//	'}'
 	public CompositeSecurityMetricInstanceElements getCompositeSecurityMetricInstanceAccess() {
 		return pCompositeSecurityMetricInstance;
 	}
@@ -18634,8 +19070,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getCompositeSecurityMetricInstanceAccess().getRule();
 	}
 
-	//SecuritySLO returns security::SecuritySLO:
-	//	"security slo " name=ID "{" "custom service level: " customServiceLevel=[metric::Condition|Fqn] "}";
+	//SecuritySLO security::SecuritySLO:
+	//	'security slo ' name=ID '{'
+	//	'custom service level: ' customServiceLevel=[metric::Condition|Fqn]
+	//	'}'
 	public SecuritySLOElements getSecuritySLOAccess() {
 		return pSecuritySLO;
 	}
@@ -18644,8 +19082,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getSecuritySLOAccess().getRule();
 	}
 
-	//SecurityProperty returns security::SecurityProperty:
-	//	SecurityProperty_Impl | Certifiable;
+	//SecurityProperty security::SecurityProperty:
+	//	SecurityProperty_Impl | Certifiable
 	public SecurityPropertyElements getSecurityPropertyAccess() {
 		return pSecurityProperty;
 	}
@@ -18654,9 +19092,11 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getSecurityPropertyAccess().getRule();
 	}
 
-	//SecurityDomain returns security::SecurityDomain:
-	//	"domain " id=ID "{" "name: " name=EString ("sub-domains " "[" subDomain+=[security::SecurityDomain|Fqn] (","
-	//	subDomain+=[security::SecurityDomain|Fqn])* "]")? "}";
+	//SecurityDomain security::SecurityDomain:
+	//	'domain ' id=ID '{'
+	//	'name: ' name=EString ('sub-domains ' '[' subDomain+=[security::SecurityDomain|Fqn] (','
+	//	subDomain+=[security::SecurityDomain|Fqn])* ']')?
+	//	'}'
 	public SecurityDomainElements getSecurityDomainAccess() {
 		return pSecurityDomain;
 	}
@@ -18665,11 +19105,13 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getSecurityDomainAccess().getRule();
 	}
 
-	//SecurityProperty_Impl returns security::SecurityProperty:
-	//	"property " name=ID "{" ("description: " description=EString)? "type: " type=PropertyType ("sub-properties " "["
-	//	subProperties+=[security::SecurityProperty|Fqn] ("," subProperties+=[security::SecurityProperty|Fqn])* "]")?
-	//	("sensors " "[" sensors+=[metric::Sensor|Fqn] ("," sensors+=[metric::Sensor|Fqn])* "]")? "domain: "
-	//	domain=[security::SecurityDomain|Fqn] "}";
+	//SecurityProperty_Impl security::SecurityProperty:
+	//	'property ' name=ID '{' ('description: ' description=EString)?
+	//	'type: ' type=PropertyType ('sub-properties ' '[' subProperties+=[security::SecurityProperty|Fqn] (','
+	//	subProperties+=[security::SecurityProperty|Fqn])* ']')? ('sensors ' '[' sensors+=[metric::Sensor|Fqn] (','
+	//	sensors+=[metric::Sensor|Fqn])* ']')?
+	//	'domain: ' domain=[security::SecurityDomain|Fqn]
+	//	'}'
 	public SecurityProperty_ImplElements getSecurityProperty_ImplAccess() {
 		return pSecurityProperty_Impl;
 	}
@@ -18678,10 +19120,11 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getSecurityProperty_ImplAccess().getRule();
 	}
 
-	//Certifiable returns security::Certifiable:
-	//	"certifiable" name=ID "{" ("description: " description=EString)? "type: " type=PropertyType ("sensors: " "["
-	//	sensors+=[metric::Sensor|Fqn] ("," sensors+=[metric::Sensor|Fqn])* "]")? "domain: "
-	//	domain=[security::SecurityDomain|Fqn] "}";
+	//Certifiable security::Certifiable:
+	//	'certifiable' name=ID '{' ('description: ' description=EString)?
+	//	'type: ' type=PropertyType ('sensors: ' '[' sensors+=[metric::Sensor|Fqn] (',' sensors+=[metric::Sensor|Fqn])* ']')?
+	//	'domain: ' domain=[security::SecurityDomain|Fqn]
+	//	'}'
 	public CertifiableElements getCertifiableAccess() {
 		return pCertifiable;
 	}
@@ -18690,10 +19133,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getCertifiableAccess().getRule();
 	}
 
-	//SecurityRequirement returns requirement::SecurityRequirement:
-	//	"security requirement " name=ID "{" "controls " "[" securityControls+=[security::SecurityControl|Fqn] (","
-	//	securityControls+=[security::SecurityControl|Fqn])* "]" ("application: " application=[camel::Application|Fqn])?
-	//	("component: " component=[deployment::InternalComponent|Fqn])? "}";
+	//SecurityRequirement requirement::SecurityRequirement:
+	//	'security requirement ' name=ID '{'
+	//	'controls ' '[' securityControls+=[security::SecurityControl|Fqn] (','
+	//	securityControls+=[security::SecurityControl|Fqn])* ']' ('application: ' application=[camel::Application|Fqn])?
+	//	('component: ' component=[deployment::InternalComponent|Fqn])?
+	//	'}'
 	public SecurityRequirementElements getSecurityRequirementAccess() {
 		return pSecurityRequirement;
 	}
@@ -18702,10 +19147,11 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getSecurityRequirementAccess().getRule();
 	}
 
-	//SecurityCapability returns security::SecurityCapability:
-	//	"security capability " name=ID "{" "controls " "[" securityControls+=[security::SecurityControl|Fqn] (","
-	//	securityControls+=[security::SecurityControl|Fqn])* "]" ("data center: " dataCenter=[organisation::DataCenter|Fqn])?
-	//	"}";
+	//SecurityCapability security::SecurityCapability:
+	//	'security capability ' name=ID '{'
+	//	'controls ' '[' securityControls+=[security::SecurityControl|Fqn] (','
+	//	securityControls+=[security::SecurityControl|Fqn])* ']' ('data center: ' dataCenter=[organisation::DataCenter|Fqn])?
+	//	'}'
 	public SecurityCapabilityElements getSecurityCapabilityAccess() {
 		return pSecurityCapability;
 	}
@@ -18714,14 +19160,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getSecurityCapabilityAccess().getRule();
 	}
 
-	//SecurityControl returns security::SecurityControl:
-	//	"security control " name=ID "{" "specification: " specification=EString "domain: "
-	//	domain=[security::SecurityDomain|Fqn] "sub-domain: " subDomain=[security::SecurityDomain|Fqn] ("security properties "
-	//	"[" securityProperties+=[security::SecurityProperty|Fqn] ("," securityProperties+=[security::SecurityProperty|Fqn])*
-	//	"]")? ("raw security metrics " "[" rawSecurityMetrics+=[security::RawSecurityMetric|Fqn] (","
-	//	rawSecurityMetrics+=[security::RawSecurityMetric|Fqn])* "]")? ("composite security metrics " "["
-	//	compositeSecurityMetrics+=[security::CompositeSecurityMetric|Fqn] (","
-	//	compositeSecurityMetrics+=[security::CompositeSecurityMetric|Fqn])* "]")? "}";
+	//SecurityControl security::SecurityControl:
+	//	'security control ' name=ID '{'
+	//	'specification: ' specification=EString
+	//	'domain: ' domain=[security::SecurityDomain|Fqn]
+	//	'sub-domain: ' subDomain=[security::SecurityDomain|Fqn] ('security properties ' '['
+	//	securityProperties+=[security::SecurityProperty|Fqn] (',' securityProperties+=[security::SecurityProperty|Fqn])* ']')?
+	//	('raw security metrics ' '[' rawSecurityMetrics+=[security::RawSecurityMetric|Fqn] (','
+	//	rawSecurityMetrics+=[security::RawSecurityMetric|Fqn])* ']')? ('composite security metrics ' '['
+	//	compositeSecurityMetrics+=[security::CompositeSecurityMetric|Fqn] (','
+	//	compositeSecurityMetrics+=[security::CompositeSecurityMetric|Fqn])* ']')?
+	//	'}'
 	public SecurityControlElements getSecurityControlAccess() {
 		return pSecurityControl;
 	}
@@ -18730,9 +19179,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getSecurityControlAccess().getRule();
 	}
 
-	/// * Type model * / TypeModel returns type::TypeModel:
-	//	{type::TypeModel} ("importURI" "{" importURI+=EString ("," importURI+=EString)* "}")? "type model " name=ID "{"
-	//	(dataTypes+=ValueType | values+=Value)* "}";
+	/// * Type model * / TypeModel type::TypeModel:
+	//	{type::TypeModel} ('importURI' '{' importURI+=EString (',' importURI+=EString)* '}')?
+	//	'type model ' name=ID '{' (dataTypes+=ValueType | values+=Value)*
+	//	'}'
 	public TypeModelElements getTypeModelAccess() {
 		return pTypeModel;
 	}
@@ -18741,9 +19191,9 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getTypeModelAccess().getRule();
 	}
 
-	//Value returns type::SingleValue:
+	//Value type::SingleValue:
 	//	BoolValue | EnumerateValue | IntegerValue | FloatsValue | DoublePrecisionValue | NegativeInf | PositiveInf |
-	//	ValueToIncrease | StringsValue;
+	//	ValueToIncrease | StringsValue
 	public ValueElements getValueAccess() {
 		return pValue;
 	}
@@ -18752,8 +19202,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getValueAccess().getRule();
 	}
 
-	//BoolValueType returns type::BooleanValueType:
-	//	"boolean value type " name=ID "{" "primitive type: " primitiveType=TypeEnum "}";
+	//BoolValueType type::BooleanValueType:
+	//	'boolean value type ' name=ID '{'
+	//	'primitive type: ' primitiveType=TypeEnum
+	//	'}'
 	public BoolValueTypeElements getBoolValueTypeAccess() {
 		return pBoolValueType;
 	}
@@ -18762,8 +19214,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getBoolValueTypeAccess().getRule();
 	}
 
-	//Enumeration returns type::Enumeration:
-	//	"enumeration " name=ID "{" "values " "[" values+=EnumerateValue ("," values+=EnumerateValue)* "]" "}";
+	//Enumeration type::Enumeration:
+	//	'enumeration ' name=ID '{'
+	//	'values ' '[' values+=EnumerateValue (',' values+=EnumerateValue)* ']'
+	//	'}'
 	public EnumerationElements getEnumerationAccess() {
 		return pEnumeration;
 	}
@@ -18772,9 +19226,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getEnumerationAccess().getRule();
 	}
 
-	//List returns type::List:
-	//	"list " name=ID "{" ("primitive type: " primitiveType=TypeEnum)? ("type: " type=[type::ValueType|Fqn])? "values " "["
-	//	values+=Value ("," values+=Value)* "]" "}";
+	//List type::List:
+	//	'list ' name=ID '{' ('primitive type: ' primitiveType=TypeEnum)? ('type: ' type=[type::ValueType|Fqn])?
+	//	'values ' '[' values+=Value (',' values+=Value)* ']'
+	//	'}'
 	public ListElements getListAccess() {
 		return pList;
 	}
@@ -18783,9 +19238,12 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getListAccess().getRule();
 	}
 
-	//Range returns type::Range:
-	//	"range " name=ID "{" "primitive type: " primitiveType=TypeEnum "lower limit " lowerLimit=Limit "upper limit "
-	//	upperLimit=Limit "}";
+	//Range type::Range:
+	//	'range ' name=ID '{'
+	//	'primitive type: ' primitiveType=TypeEnum
+	//	'lower limit ' lowerLimit=Limit
+	//	'upper limit ' upperLimit=Limit
+	//	'}'
 	public RangeElements getRangeAccess() {
 		return pRange;
 	}
@@ -18794,9 +19252,11 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getRangeAccess().getRule();
 	}
 
-	//RangeUnion returns type::RangeUnion:
-	//	"range union " name=ID "{" "primitive type: " primitiveType=TypeEnum "ranges " "[" ranges+=Range ("," ranges+=Range)*
-	//	"]" "}";
+	//RangeUnion type::RangeUnion:
+	//	'range union ' name=ID '{'
+	//	'primitive type: ' primitiveType=TypeEnum
+	//	'ranges ' '[' ranges+=Range (',' ranges+=Range)* ']'
+	//	'}'
 	public RangeUnionElements getRangeUnionAccess() {
 		return pRangeUnion;
 	}
@@ -18805,8 +19265,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getRangeUnionAccess().getRule();
 	}
 
-	//StringsValueType returns type::StringValueType:
-	//	"string value type " name=ID "{" "primitive type: " primitiveType=TypeEnum "}";
+	//StringsValueType type::StringValueType:
+	//	'string value type ' name=ID '{'
+	//	'primitive type: ' primitiveType=TypeEnum
+	//	'}'
 	public StringsValueTypeElements getStringsValueTypeAccess() {
 		return pStringsValueType;
 	}
@@ -18818,15 +19280,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	//enum TypeEnum returns type::TypeEnum:
 	//	IntType | StringType | BooleanType | FloatType | DoubleType;
 	public TypeEnumElements getTypeEnumAccess() {
-		return unknownRuleTypeEnum;
+		return eTypeEnum;
 	}
 	
 	public EnumRule getTypeEnumRule() {
 		return getTypeEnumAccess().getRule();
 	}
 
-	//EnumerateValue returns type::EnumerateValue:
-	//	name=EString ":" value=EInt;
+	//EnumerateValue type::EnumerateValue:
+	//	name=EString ':' value=EInt
 	public EnumerateValueElements getEnumerateValueAccess() {
 		return pEnumerateValue;
 	}
@@ -18835,8 +19297,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getEnumerateValueAccess().getRule();
 	}
 
-	//EInt returns ecore::EInt:
-	//	"-"? INT;
+	//EInt ecore::EInt:
+	//	'-'? INT
 	public EIntElements getEIntAccess() {
 		return pEInt;
 	}
@@ -18845,8 +19307,11 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getEIntAccess().getRule();
 	}
 
-	//Limit returns type::Limit:
-	//	"{" value=NumericValue included?="included"? "}";
+	//Limit type::Limit:
+	//	'{'
+	//	value=NumericValue
+	//	included?='included'?
+	//	'}'
 	public LimitElements getLimitAccess() {
 		return pLimit;
 	}
@@ -18855,8 +19320,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getLimitAccess().getRule();
 	}
 
-	//EBoolean returns ecore::EBoolean:
-	//	"true" | "false";
+	//EBoolean ecore::EBoolean:
+	//	'true' | 'false'
 	public EBooleanElements getEBooleanAccess() {
 		return pEBoolean;
 	}
@@ -18865,8 +19330,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getEBooleanAccess().getRule();
 	}
 
-	//EShort returns ecore::EShort:
-	//	"-"? INT;
+	//EShort ecore::EShort:
+	//	'-'? INT
 	public EShortElements getEShortAccess() {
 		return pEShort;
 	}
@@ -18875,8 +19340,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getEShortAccess().getRule();
 	}
 
-	//IntegerValue returns type::IntegerValue:
-	//	"int value " value=EInt;
+	//IntegerValue type::IntegerValue:
+	//	'int value ' value=EInt
 	public IntegerValueElements getIntegerValueAccess() {
 		return pIntegerValue;
 	}
@@ -18885,8 +19350,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getIntegerValueAccess().getRule();
 	}
 
-	//FloatsValue returns type::FloatsValue:
-	//	"float value " value=EFloat;
+	//FloatsValue type::FloatsValue:
+	//	'float value ' value=EFloat
 	public FloatsValueElements getFloatsValueAccess() {
 		return pFloatsValue;
 	}
@@ -18895,8 +19360,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getFloatsValueAccess().getRule();
 	}
 
-	//DoublePrecisionValue returns type::DoublePrecisionValue:
-	//	"double value " value=EDouble;
+	//DoublePrecisionValue type::DoublePrecisionValue:
+	//	'double value ' value=EDouble
 	public DoublePrecisionValueElements getDoublePrecisionValueAccess() {
 		return pDoublePrecisionValue;
 	}
@@ -18905,8 +19370,9 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getDoublePrecisionValueAccess().getRule();
 	}
 
-	//NegativeInf returns type::NegativeInf:
-	//	{type::NegativeInf} "negative infinity";
+	//NegativeInf type::NegativeInf:
+	//	{type::NegativeInf}
+	//	'negative infinity'
 	public NegativeInfElements getNegativeInfAccess() {
 		return pNegativeInf;
 	}
@@ -18915,8 +19381,9 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getNegativeInfAccess().getRule();
 	}
 
-	//PositiveInf returns type::PositiveInf:
-	//	{type::PositiveInf} "positive infinity";
+	//PositiveInf type::PositiveInf:
+	//	{type::PositiveInf}
+	//	'positive infinity'
 	public PositiveInfElements getPositiveInfAccess() {
 		return pPositiveInf;
 	}
@@ -18925,8 +19392,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getPositiveInfAccess().getRule();
 	}
 
-	//ValueToIncrease returns type::ValueToIncrease:
-	//	"value to increase " value=NumericValue;
+	//ValueToIncrease type::ValueToIncrease:
+	//	'value to increase ' value=NumericValue
 	public ValueToIncreaseElements getValueToIncreaseAccess() {
 		return pValueToIncrease;
 	}
@@ -18935,8 +19402,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getValueToIncreaseAccess().getRule();
 	}
 
-	//EFloat returns ecore::EFloat:
-	//	"-"? INT? "." INT (("E" | "e") "-"? INT)?;
+	//EFloat ecore::EFloat:
+	//	'-'? INT? '.' INT (('E' | 'e') '-'? INT)?
 	public EFloatElements getEFloatAccess() {
 		return pEFloat;
 	}
@@ -18945,8 +19412,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getEFloatAccess().getRule();
 	}
 
-	//EDouble returns ecore::EDouble:
-	//	"-"? INT? "." INT (("E" | "e") "-"? INT)?;
+	//EDouble ecore::EDouble:
+	//	'-'? INT? '.' INT (('E' | 'e') '-'? INT)?
 	public EDoubleElements getEDoubleAccess() {
 		return pEDouble;
 	}
@@ -18955,8 +19422,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getEDoubleAccess().getRule();
 	}
 
-	//BoolValue returns type::BoolValue:
-	//	"boolean value " value=EBoolean;
+	//BoolValue type::BoolValue:
+	//	'boolean value ' value=EBoolean
 	public BoolValueElements getBoolValueAccess() {
 		return pBoolValue;
 	}
@@ -18965,8 +19432,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getBoolValueAccess().getRule();
 	}
 
-	//StringsValue returns type::StringsValue:
-	//	"string value " value=EString;
+	//StringsValue type::StringsValue:
+	//	'string value ' value=EString
 	public StringsValueElements getStringsValueAccess() {
 		return pStringsValue;
 	}
@@ -18975,8 +19442,10 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getStringsValueAccess().getRule();
 	}
 
-	/// * Unit model * / UnitModel returns unit::UnitModel:
-	//	"unit model " name=ID "{" units+=Unit* "}";
+	/// * Unit model * / UnitModel unit::UnitModel:
+	//	'unit model ' name=ID '{'
+	//	units+=Unit*
+	//	'}'
 	public UnitModelElements getUnitModelAccess() {
 		return pUnitModel;
 	}
@@ -18985,9 +19454,9 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getUnitModelAccess().getRule();
 	}
 
-	//Unit returns unit::Unit:
+	//Unit unit::Unit:
 	//	CoreUnit | Dimensionless | MonetaryUnit | RequestUnit | StorageUnit | ThroughputUnit | TimeIntervalUnit |
-	//	TransactionUnit;
+	//	TransactionUnit
 	public UnitElements getUnitAccess() {
 		return pUnit;
 	}
@@ -18996,8 +19465,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getUnitAccess().getRule();
 	}
 
-	//TimeIntervalUnit returns unit::TimeIntervalUnit:
-	//	"time interval unit " "{" name=ID ":" unit=UnitType "}";
+	//TimeIntervalUnit unit::TimeIntervalUnit:
+	//	'time interval unit ' '{' name=ID ':' unit=UnitType '}'
 	public TimeIntervalUnitElements getTimeIntervalUnitAccess() {
 		return pTimeIntervalUnit;
 	}
@@ -19006,8 +19475,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getTimeIntervalUnitAccess().getRule();
 	}
 
-	//MonetaryUnit returns unit::MonetaryUnit:
-	//	"monetary unit " "{" name=ID ":" unit=UnitType "}";
+	//MonetaryUnit unit::MonetaryUnit:
+	//	'monetary unit ' '{' name=ID ':' unit=UnitType '}'
 	public MonetaryUnitElements getMonetaryUnitAccess() {
 		return pMonetaryUnit;
 	}
@@ -19016,8 +19485,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getMonetaryUnitAccess().getRule();
 	}
 
-	//CoreUnit returns unit::CoreUnit:
-	//	"core unit " "{" name=ID ":" unit=UnitType "}";
+	//CoreUnit unit::CoreUnit:
+	//	'core unit ' '{' name=ID ':' unit=UnitType '}'
 	public CoreUnitElements getCoreUnitAccess() {
 		return pCoreUnit;
 	}
@@ -19026,8 +19495,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getCoreUnitAccess().getRule();
 	}
 
-	//Dimensionless returns unit::Dimensionless:
-	//	"dimensionless " "{" name=ID ":" unit=UnitType "}";
+	//Dimensionless unit::Dimensionless:
+	//	'dimensionless ' '{' name=ID ':' unit=UnitType '}'
 	public DimensionlessElements getDimensionlessAccess() {
 		return pDimensionless;
 	}
@@ -19036,8 +19505,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getDimensionlessAccess().getRule();
 	}
 
-	//RequestUnit returns unit::RequestUnit:
-	//	"request unit " "{" name=ID ":" unit=UnitType "}";
+	//RequestUnit unit::RequestUnit:
+	//	'request unit ' '{' name=ID ':' unit=UnitType '}'
 	public RequestUnitElements getRequestUnitAccess() {
 		return pRequestUnit;
 	}
@@ -19046,8 +19515,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getRequestUnitAccess().getRule();
 	}
 
-	//StorageUnit returns unit::StorageUnit:
-	//	"storage unit " "{" name=ID ":" unit=UnitType "}";
+	//StorageUnit unit::StorageUnit:
+	//	'storage unit ' '{' name=ID ':' unit=UnitType '}'
 	public StorageUnitElements getStorageUnitAccess() {
 		return pStorageUnit;
 	}
@@ -19056,8 +19525,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getStorageUnitAccess().getRule();
 	}
 
-	//ThroughputUnit returns unit::ThroughputUnit:
-	//	"throughput unit " "{" name=ID ":" unit=UnitType "}";
+	//ThroughputUnit unit::ThroughputUnit:
+	//	'throughput unit ' '{' name=ID ':' unit=UnitType '}'
 	public ThroughputUnitElements getThroughputUnitAccess() {
 		return pThroughputUnit;
 	}
@@ -19066,8 +19535,8 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getThroughputUnitAccess().getRule();
 	}
 
-	//TransactionUnit returns unit::TransactionUnit:
-	//	"transaction unit " "{" name=ID ":" unit=UnitType "}";
+	//TransactionUnit unit::TransactionUnit:
+	//	'transaction unit ' '{' name=ID ':' unit=UnitType '}'
 	public TransactionUnitElements getTransactionUnitAccess() {
 		return pTransactionUnit;
 	}
@@ -19077,19 +19546,21 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum UnitType returns unit::UnitType:
-	//	BYTES | KILOBYTES | GIGABYTES | MEGABYTES | EUROS | DOLLARS | POUNDS | MILLISECONDS | SECONDS | MINUTES | HOURS |
-	//	DAYS | WEEKS | MONTHS | REQUESTS | REQUESTS_PER_SECOND | TRANSACTIONS | TRANSACTIONS_PER_SECOND | BYTES_PER_SECOND |
+	//	BYTES | KILOBYTES | GIGABYTES | MEGABYTES | EUROS | DOLLARS | POUNDS | MILLISECONDS | SECONDS | MINUTES | HOURS | DAYS
+	//	| WEEKS | MONTHS | REQUESTS | REQUESTS_PER_SECOND | TRANSACTIONS | TRANSACTIONS_PER_SECOND | BYTES_PER_SECOND |
 	//	PERCENTAGE | CORES;
 	public UnitTypeElements getUnitTypeAccess() {
-		return unknownRuleUnitType;
+		return eUnitType;
 	}
 	
 	public EnumRule getUnitTypeRule() {
 		return getUnitTypeAccess().getRule();
 	}
 
-	/// * Global CAMEL elements * / Action returns camel::Action:
-	//	"action " name=ID "{" "type: " type=ActionType "}";
+	/// * Global CAMEL elements * / Action camel::Action:
+	//	'action ' name=ID '{'
+	//	'type: ' type=ActionType
+	//	'}'
 	public ActionElements getActionAccess() {
 		return pAction;
 	}
@@ -19099,20 +19570,22 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum ActionType returns camel::ActionType:
-	//	EVENT_CREATION="EVENT CREATION" | SCALE_IN="SCALE IN" | SCALE_OUT="SCALE OUT" | SCALE_UP="SCALE UP" |
-	//	SCALE_DOWN="SCALE DOWN";
+	//	EVENT_CREATION='EVENT CREATION' | SCALE_IN='SCALE IN' | SCALE_OUT='SCALE OUT' | SCALE_UP='SCALE UP' |
+	//	SCALE_DOWN='SCALE DOWN';
 	public ActionTypeElements getActionTypeAccess() {
-		return unknownRuleActionType;
+		return eActionType;
 	}
 	
 	public EnumRule getActionTypeRule() {
 		return getActionTypeAccess().getRule();
 	}
 
-	//Application returns camel::Application:
-	//	"application " name=ID "{" "version: " version=EString ("description: " description=EString)? "owner: "
-	//	owner=[organisation::Entity|Fqn] ("deployment models " "[" deploymentModels+=[deployment::DeploymentModel|Fqn] (","
-	//	deploymentModels+=[deployment::DeploymentModel|Fqn])* "]")? "}";
+	//Application camel::Application:
+	//	'application ' name=ID '{'
+	//	'version: ' version=EString ('description: ' description=EString)?
+	//	'owner: ' owner=[organisation::Entity|Fqn] ('deployment models ' '['
+	//	deploymentModels+=[deployment::DeploymentModel|Fqn] (',' deploymentModels+=[deployment::DeploymentModel|Fqn])* ']')?
+	//	'}'
 	public ApplicationElements getApplicationAccess() {
 		return pApplication;
 	}
@@ -19122,7 +19595,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	/// * Auxiliary terminals * / Fqn:
-	//	ID ("." ID)*;
+	//	ID ('.' ID)*;
 	public FqnElements getFqnAccess() {
 		return pFqn;
 	}
@@ -19132,45 +19605,49 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//terminal MYDATE:
-	//	"0".."9" "0".."9" "0".."9" "0".."9" "-" "0".."9" "0".."9" "-" "0".."9" "0".."9" ("T" "0".."9" "0".."9" ":" "0".."9"
-	//	"0".."9" ":" "0".."9" "0".."9" ("." "0".."9" "0".."9" "0".."9")? ("+" "0".."9" "0".."9" "0".."9" "0".."9")?)?;
+	//	'0'..'9' '0'..'9' '0'..'9' '0'..'9' '-'
+	//	'0'..'9' '0'..'9' '-'
+	//	'0'..'9' '0'..'9' ('T'
+	//	'0'..'9' '0'..'9' ':'
+	//	'0'..'9' '0'..'9' ':'
+	//	'0'..'9' '0'..'9' ('.' '0'..'9' '0'..'9' '0'..'9')? ('+' '0'..'9' '0'..'9' '0'..'9' '0'..'9')?)?;
 	public TerminalRule getMYDATERule() {
 		return tMYDATE;
 	} 
 
 	//terminal ID:
-	//	"^"? ("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;
+	//	'^'? ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*;
 	public TerminalRule getIDRule() {
 		return gaTerminals.getIDRule();
 	} 
 
 	//terminal INT returns ecore::EInt:
-	//	"0".."9"+;
+	//	'0'..'9'+;
 	public TerminalRule getINTRule() {
 		return gaTerminals.getINTRule();
 	} 
 
 	//terminal STRING:
-	//	"\"" ("\\" . / * 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' * / | !("\\" | "\""))* "\"" | "\'" ("\\" .
-	//	/ * 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' * / | !("\\" | "\'"))* "\'";
+	//	'"' ('\\' . | !('\\' | '"'))* '"' |
+	//	"'" ('\\' . | !('\\' | "'"))* "'";
 	public TerminalRule getSTRINGRule() {
 		return gaTerminals.getSTRINGRule();
 	} 
 
 	//terminal ML_COMMENT:
-	//	"/ *"->"* /";
+	//	'/ *'->'* /';
 	public TerminalRule getML_COMMENTRule() {
 		return gaTerminals.getML_COMMENTRule();
 	} 
 
 	//terminal SL_COMMENT:
-	//	"//" !("\n" | "\r")* ("\r"? "\n")?;
+	//	'//' !('\n' | '\r')* ('\r'? '\n')?;
 	public TerminalRule getSL_COMMENTRule() {
 		return gaTerminals.getSL_COMMENTRule();
 	} 
 
 	//terminal WS:
-	//	(" " | "\t" | "\r" | "\n")+;
+	//	' ' | '\t' | '\r' | '\n'+;
 	public TerminalRule getWSRule() {
 		return gaTerminals.getWSRule();
 	} 
