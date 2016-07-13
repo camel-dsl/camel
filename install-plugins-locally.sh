@@ -9,7 +9,8 @@ $DRY mvn install:install-file -DcreateChecksum=true \
      -Dversion=$version \
      -Durl=http://repository.ow2.org/nexus/content/repositories/snapshots \
      -DrepositoryId=deployment \
-     -Dfile=$file_name
+     -Dfile=$file_name \
+     -Dpackaging=jar
 }
 
 groupId=org.ow2.paasage
