@@ -5834,19 +5834,19 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cValueAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final CrossReference cValueSingleValueCrossReference_4_0 = (CrossReference)cValueAssignment_4.eContents().get(0);
-		private final RuleCall cValueSingleValueFqnParserRuleCall_4_0_1 = (RuleCall)cValueSingleValueCrossReference_4_0.eContents().get(1);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cValueKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cValueAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cValueValueParserRuleCall_5_0 = (RuleCall)cValueAssignment_5.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//MetricFormulaParameter_Impl metric::MetricFormulaParameter:
 		//	{metric::MetricFormulaParameter}
 		//	'parameter ' name=ID '{'
-		//	value=[type::SingleValue|Fqn]
+		//	'value: ' value=Value
 		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//{metric::MetricFormulaParameter} 'parameter ' name=ID '{' value=[type::SingleValue|Fqn] '}'
+		//{metric::MetricFormulaParameter} 'parameter ' name=ID '{' 'value: ' value=Value '}'
 		public Group getGroup() { return cGroup; }
 
 		//{metric::MetricFormulaParameter}
@@ -5864,17 +5864,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
-		//value=[type::SingleValue|Fqn]
-		public Assignment getValueAssignment_4() { return cValueAssignment_4; }
+		//'value: '
+		public Keyword getValueKeyword_4() { return cValueKeyword_4; }
 
-		//[type::SingleValue|Fqn]
-		public CrossReference getValueSingleValueCrossReference_4_0() { return cValueSingleValueCrossReference_4_0; }
+		//value=Value
+		public Assignment getValueAssignment_5() { return cValueAssignment_5; }
 
-		//Fqn
-		public RuleCall getValueSingleValueFqnParserRuleCall_4_0_1() { return cValueSingleValueFqnParserRuleCall_4_0_1; }
+		//Value
+		public RuleCall getValueValueParserRuleCall_5_0() { return cValueValueParserRuleCall_5_0; }
 
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class MetricFormulaElements extends AbstractParserRuleElementFinder {
@@ -12313,8 +12313,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
 		private final Keyword cValueKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
 		private final Assignment cValueAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
-		private final CrossReference cValueSingleValueCrossReference_8_1_0 = (CrossReference)cValueAssignment_8_1.eContents().get(0);
-		private final RuleCall cValueSingleValueFqnParserRuleCall_8_1_0_1 = (RuleCall)cValueSingleValueCrossReference_8_1_0.eContents().get(1);
+		private final RuleCall cValueValueParserRuleCall_8_1_0 = (RuleCall)cValueAssignment_8_1.eContents().get(0);
 		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
 		private final Keyword cValueTypeKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
 		private final Assignment cValueTypeAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
@@ -12329,15 +12328,14 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//RawSecurityMetric security::RawSecurityMetric:
 		//	'raw security metric ' name=ID '{' ('description: ' description=EString)?
 		//	'property: ' property=[security::SecurityProperty|Fqn] ('value direction: ' valueDirection=EShort)? ('layer: '
-		//	layer=LayerType)? ('value: ' value=[type::SingleValue|Fqn])? ('value type: ' valueType=[type::ValueType|Fqn])?
+		//	layer=LayerType)? ('value: ' value=Value)? ('value type: ' valueType=[type::ValueType|Fqn])?
 		//	'unit: ' unit=[unit::Unit|Fqn]
 		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
 		//'raw security metric ' name=ID '{' ('description: ' description=EString)? 'property: '
 		//property=[security::SecurityProperty|Fqn] ('value direction: ' valueDirection=EShort)? ('layer: ' layer=LayerType)?
-		//('value: ' value=[type::SingleValue|Fqn])? ('value type: ' valueType=[type::ValueType|Fqn])? 'unit: '
-		//unit=[unit::Unit|Fqn] '}'
+		//('value: ' value=Value)? ('value type: ' valueType=[type::ValueType|Fqn])? 'unit: ' unit=[unit::Unit|Fqn] '}'
 		public Group getGroup() { return cGroup; }
 
 		//'raw security metric '
@@ -12400,20 +12398,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//LayerType
 		public RuleCall getLayerLayerTypeEnumRuleCall_7_1_0() { return cLayerLayerTypeEnumRuleCall_7_1_0; }
 
-		//('value: ' value=[type::SingleValue|Fqn])?
+		//('value: ' value=Value)?
 		public Group getGroup_8() { return cGroup_8; }
 
 		//'value: '
 		public Keyword getValueKeyword_8_0() { return cValueKeyword_8_0; }
 
-		//value=[type::SingleValue|Fqn]
+		//value=Value
 		public Assignment getValueAssignment_8_1() { return cValueAssignment_8_1; }
 
-		//[type::SingleValue|Fqn]
-		public CrossReference getValueSingleValueCrossReference_8_1_0() { return cValueSingleValueCrossReference_8_1_0; }
-
-		//Fqn
-		public RuleCall getValueSingleValueFqnParserRuleCall_8_1_0_1() { return cValueSingleValueFqnParserRuleCall_8_1_0_1; }
+		//Value
+		public RuleCall getValueValueParserRuleCall_8_1_0() { return cValueValueParserRuleCall_8_1_0; }
 
 		//('value type: ' valueType=[type::ValueType|Fqn])?
 		public Group getGroup_9() { return cGroup_9; }
@@ -12472,8 +12467,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
 		private final Keyword cValueKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
 		private final Assignment cValueAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
-		private final CrossReference cValueSingleValueCrossReference_8_1_0 = (CrossReference)cValueAssignment_8_1.eContents().get(0);
-		private final RuleCall cValueSingleValueFqnParserRuleCall_8_1_0_1 = (RuleCall)cValueSingleValueCrossReference_8_1_0.eContents().get(1);
+		private final RuleCall cValueValueParserRuleCall_8_1_0 = (RuleCall)cValueAssignment_8_1.eContents().get(0);
 		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
 		private final Keyword cValueTypeKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
 		private final Assignment cValueTypeAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
@@ -12490,15 +12484,15 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//CompositeSecurityMetric security::CompositeSecurityMetric:
 		//	'composite security metric ' name=ID '{' ('description: ' description=EString)?
 		//	'property: ' property=[security::SecurityProperty|Fqn] ('value direction: ' valueDirection=EShort)? ('layer: '
-		//	layer=LayerType)? ('value: ' value=[type::SingleValue|Fqn])? ('value type: ' valueType=[type::ValueType|Fqn])?
+		//	layer=LayerType)? ('value: ' value=Value)? ('value type: ' valueType=[type::ValueType|Fqn])?
 		//	'unit: ' unit=[unit::Unit|Fqn] formula=MetricFormula
 		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
 		//'composite security metric ' name=ID '{' ('description: ' description=EString)? 'property: '
 		//property=[security::SecurityProperty|Fqn] ('value direction: ' valueDirection=EShort)? ('layer: ' layer=LayerType)?
-		//('value: ' value=[type::SingleValue|Fqn])? ('value type: ' valueType=[type::ValueType|Fqn])? 'unit: '
-		//unit=[unit::Unit|Fqn] formula=MetricFormula '}'
+		//('value: ' value=Value)? ('value type: ' valueType=[type::ValueType|Fqn])? 'unit: ' unit=[unit::Unit|Fqn]
+		//formula=MetricFormula '}'
 		public Group getGroup() { return cGroup; }
 
 		//'composite security metric '
@@ -12561,20 +12555,17 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 		//LayerType
 		public RuleCall getLayerLayerTypeEnumRuleCall_7_1_0() { return cLayerLayerTypeEnumRuleCall_7_1_0; }
 
-		//('value: ' value=[type::SingleValue|Fqn])?
+		//('value: ' value=Value)?
 		public Group getGroup_8() { return cGroup_8; }
 
 		//'value: '
 		public Keyword getValueKeyword_8_0() { return cValueKeyword_8_0; }
 
-		//value=[type::SingleValue|Fqn]
+		//value=Value
 		public Assignment getValueAssignment_8_1() { return cValueAssignment_8_1; }
 
-		//[type::SingleValue|Fqn]
-		public CrossReference getValueSingleValueCrossReference_8_1_0() { return cValueSingleValueCrossReference_8_1_0; }
-
-		//Fqn
-		public RuleCall getValueSingleValueFqnParserRuleCall_8_1_0_1() { return cValueSingleValueFqnParserRuleCall_8_1_0_1; }
+		//Value
+		public RuleCall getValueValueParserRuleCall_8_1_0() { return cValueValueParserRuleCall_8_1_0; }
 
 		//('value type: ' valueType=[type::ValueType|Fqn])?
 		public Group getGroup_9() { return cGroup_9; }
@@ -17952,7 +17943,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	//MetricFormulaParameter_Impl metric::MetricFormulaParameter:
 	//	{metric::MetricFormulaParameter}
 	//	'parameter ' name=ID '{'
-	//	value=[type::SingleValue|Fqn]
+	//	'value: ' value=Value
 	//	'}'
 	public MetricFormulaParameter_ImplElements getMetricFormulaParameter_ImplAccess() {
 		return pMetricFormulaParameter_Impl;
@@ -19014,7 +19005,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	//RawSecurityMetric security::RawSecurityMetric:
 	//	'raw security metric ' name=ID '{' ('description: ' description=EString)?
 	//	'property: ' property=[security::SecurityProperty|Fqn] ('value direction: ' valueDirection=EShort)? ('layer: '
-	//	layer=LayerType)? ('value: ' value=[type::SingleValue|Fqn])? ('value type: ' valueType=[type::ValueType|Fqn])?
+	//	layer=LayerType)? ('value: ' value=Value)? ('value type: ' valueType=[type::ValueType|Fqn])?
 	//	'unit: ' unit=[unit::Unit|Fqn]
 	//	'}'
 	public RawSecurityMetricElements getRawSecurityMetricAccess() {
@@ -19028,7 +19019,7 @@ public class CamelDslGrammarAccess extends AbstractGrammarElementFinder {
 	//CompositeSecurityMetric security::CompositeSecurityMetric:
 	//	'composite security metric ' name=ID '{' ('description: ' description=EString)?
 	//	'property: ' property=[security::SecurityProperty|Fqn] ('value direction: ' valueDirection=EShort)? ('layer: '
-	//	layer=LayerType)? ('value: ' value=[type::SingleValue|Fqn])? ('value type: ' valueType=[type::ValueType|Fqn])?
+	//	layer=LayerType)? ('value: ' value=Value)? ('value type: ' valueType=[type::ValueType|Fqn])?
 	//	'unit: ' unit=[unit::Unit|Fqn] formula=MetricFormula
 	//	'}'
 	public CompositeSecurityMetricElements getCompositeSecurityMetricAccess() {

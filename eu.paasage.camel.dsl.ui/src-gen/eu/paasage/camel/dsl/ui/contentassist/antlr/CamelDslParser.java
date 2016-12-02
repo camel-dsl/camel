@@ -842,7 +842,7 @@ public class CamelDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRawMetricAccess().getValueTypeAssignment_10_1(), "rule__RawMetric__ValueTypeAssignment_10_1");
 					put(grammarAccess.getRawMetricAccess().getIsVariableAssignment_11(), "rule__RawMetric__IsVariableAssignment_11");
 					put(grammarAccess.getMetricFormulaParameter_ImplAccess().getNameAssignment_2(), "rule__MetricFormulaParameter_Impl__NameAssignment_2");
-					put(grammarAccess.getMetricFormulaParameter_ImplAccess().getValueAssignment_4(), "rule__MetricFormulaParameter_Impl__ValueAssignment_4");
+					put(grammarAccess.getMetricFormulaParameter_ImplAccess().getValueAssignment_5(), "rule__MetricFormulaParameter_Impl__ValueAssignment_5");
 					put(grammarAccess.getMetricFormulaAccess().getNameAssignment_1(), "rule__MetricFormula__NameAssignment_1");
 					put(grammarAccess.getMetricFormulaAccess().getFunctionArityAssignment_4(), "rule__MetricFormula__FunctionArityAssignment_4");
 					put(grammarAccess.getMetricFormulaAccess().getFunctionPatternAssignment_5_1(), "rule__MetricFormula__FunctionPatternAssignment_5_1");

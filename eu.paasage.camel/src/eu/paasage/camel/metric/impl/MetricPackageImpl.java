@@ -1798,7 +1798,7 @@ public class MetricPackageImpl extends EPackageImpl implements MetricPackage {
 
 		initEClass(metricFormulaParameterEClass, MetricFormulaParameter.class, "MetricFormulaParameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMetricFormulaParameter_Name(), ecorePackage.getEString(), "name", null, 1, 1, MetricFormulaParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMetricFormulaParameter_Value(), theTypePackage.getSingleValue(), null, "value", null, 0, 1, MetricFormulaParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMetricFormulaParameter_Value(), theTypePackage.getSingleValue(), null, "value", null, 0, 1, MetricFormulaParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(metricFormulaEClass, MetricFormula.class, "MetricFormula", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMetricFormula_Function(), this.getMetricFunctionType(), "function", null, 1, 1, MetricFormula.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

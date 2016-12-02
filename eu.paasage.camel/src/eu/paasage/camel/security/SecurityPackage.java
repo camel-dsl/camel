@@ -465,7 +465,7 @@ public interface SecurityPackage extends EPackage {
 	int RAW_SECURITY_METRIC__NAME = MetricPackage.RAW_METRIC__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' reference.
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -848,7 +848,7 @@ public interface SecurityPackage extends EPackage {
 	int COMPOSITE_SECURITY_METRIC__NAME = MetricPackage.COMPOSITE_METRIC__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' reference.
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

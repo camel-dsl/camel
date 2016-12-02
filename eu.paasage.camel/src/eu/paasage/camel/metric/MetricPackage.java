@@ -600,7 +600,7 @@ public interface MetricPackage extends EPackage {
 	int METRIC_FORMULA_PARAMETER__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' reference.
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -646,7 +646,7 @@ public interface MetricPackage extends EPackage {
 	int METRIC_FORMULA__NAME = METRIC_FORMULA_PARAMETER__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' reference.
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -746,7 +746,7 @@ public interface MetricPackage extends EPackage {
 	int METRIC__NAME = METRIC_FORMULA_PARAMETER__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' reference.
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -864,7 +864,7 @@ public interface MetricPackage extends EPackage {
 	int COMPOSITE_METRIC__NAME = METRIC__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' reference.
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1000,7 +1000,7 @@ public interface MetricPackage extends EPackage {
 	int RAW_METRIC__NAME = METRIC__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' reference.
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2695,10 +2695,10 @@ public interface MetricPackage extends EPackage {
 	EAttribute getMetricFormulaParameter_Name();
 
 	/**
-	 * Returns the meta object for the reference '{@link eu.paasage.camel.metric.MetricFormulaParameter#getValue <em>Value</em>}'.
+	 * Returns the meta object for the containment reference '{@link eu.paasage.camel.metric.MetricFormulaParameter#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Value</em>'.
+	 * @return the meta object for the containment reference '<em>Value</em>'.
 	 * @see eu.paasage.camel.metric.MetricFormulaParameter#getValue()
 	 * @see #getMetricFormulaParameter()
 	 * @generated
@@ -3955,7 +3955,7 @@ public interface MetricPackage extends EPackage {
 		EAttribute METRIC_FORMULA_PARAMETER__NAME = eINSTANCE.getMetricFormulaParameter_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

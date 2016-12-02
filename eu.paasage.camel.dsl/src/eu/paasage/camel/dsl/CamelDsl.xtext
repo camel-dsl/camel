@@ -533,14 +533,14 @@ enum LayerType returns camel::LayerType:
 
 MetricFormulaParameter returns metric::MetricFormulaParameter:
     MetricFormulaParameter_Impl | MetricFormula | CompositeMetric | RawMetric;
-
+    
 FormulaParameter returns metric::MetricFormulaParameter:
     MetricFormulaParameter_Impl | MetricFormula;
 
 MetricFormulaParameter_Impl returns metric::MetricFormulaParameter:
     {metric::MetricFormulaParameter}
     'parameter ' name = ID '{'
-        value = [type::SingleValue | Fqn]
+    	'value: ' value = Value
     '}';
 
 MetricFormula returns metric::MetricFormula:
@@ -1111,7 +1111,7 @@ RawSecurityMetric returns security::RawSecurityMetric:
         'property: ' property = [security::SecurityProperty | Fqn]
         ('value direction: ' valueDirection = EShort)?
         ('layer: ' layer = LayerType)?
-        ('value: ' value = [type::SingleValue | Fqn])?
+        ('value: ' value = Value)?
         ('value type: ' valueType = [type::ValueType | Fqn])?
         'unit: ' unit = [unit::Unit | Fqn]
     '}';
@@ -1122,7 +1122,7 @@ CompositeSecurityMetric returns security::CompositeSecurityMetric:
         'property: ' property = [security::SecurityProperty | Fqn]
         ('value direction: ' valueDirection = EShort)?
         ('layer: ' layer = LayerType)?
-        ('value: ' value = [type::SingleValue | Fqn])?
+        ('value: ' value = Value)?
         ('value type: ' valueType = [type::ValueType | Fqn])?
         'unit: ' unit = [unit::Unit | Fqn]
         formula = MetricFormula

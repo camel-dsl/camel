@@ -1132,7 +1132,7 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         property=[SecurityProperty|Fqn] 
 	 *         valueDirection=EShort? 
 	 *         layer=LayerType? 
-	 *         value=[SingleValue|Fqn]? 
+	 *         value=Value? 
 	 *         valueType=[ValueType|Fqn]? 
 	 *         unit=[Unit|Fqn] 
 	 *         formula=MetricFormula
@@ -1916,7 +1916,7 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *     MetricFormulaParameter_Impl returns MetricFormulaParameter
 	 *
 	 * Constraint:
-	 *     (name=ID value=[SingleValue|Fqn])
+	 *     (name=ID value=Value)
 	 */
 	protected void sequence_MetricFormulaParameter_Impl(ISerializationContext context, MetricFormulaParameter semanticObject) {
 		if (errorAcceptor != null) {
@@ -1927,7 +1927,7 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, (EObject) semanticObject);
 		feeder.accept(grammarAccess.getMetricFormulaParameter_ImplAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getMetricFormulaParameter_ImplAccess().getValueSingleValueFqnParserRuleCall_4_0_1(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getMetricFormulaParameter_ImplAccess().getValueValueParserRuleCall_5_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
@@ -2526,7 +2526,7 @@ public abstract class AbstractCamelDslSemanticSequencer extends AbstractDelegati
 	 *         property=[SecurityProperty|Fqn] 
 	 *         valueDirection=EShort? 
 	 *         layer=LayerType? 
-	 *         value=[SingleValue|Fqn]? 
+	 *         value=Value? 
 	 *         valueType=[ValueType|Fqn]? 
 	 *         unit=[Unit|Fqn]
 	 *     )

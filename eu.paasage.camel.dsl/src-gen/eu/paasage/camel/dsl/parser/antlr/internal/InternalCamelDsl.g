@@ -7926,24 +7926,31 @@ ruleMetricFormulaParameter_Impl returns [EObject current=null]
     {
     	newLeafNode(otherlv_3, grammarAccess.getMetricFormulaParameter_ImplAccess().getLeftCurlyBracketKeyword_3());
     }
+	otherlv_4='value: ' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getMetricFormulaParameter_ImplAccess().getValueKeyword_4());
+    }
 (
 (
-		{
-			if ($current==null) {
-	            $current = createModelElement(grammarAccess.getMetricFormulaParameter_ImplRule());
-	        }
-        }
 		{ 
-	        newCompositeNode(grammarAccess.getMetricFormulaParameter_ImplAccess().getValueSingleValueCrossReference_4_0()); 
+	        newCompositeNode(grammarAccess.getMetricFormulaParameter_ImplAccess().getValueValueParserRuleCall_5_0()); 
 	    }
-		ruleFqn		{ 
+		lv_value_5_0=ruleValue		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getMetricFormulaParameter_ImplRule());
+	        }
+       		set(
+       			$current, 
+       			"value",
+        		lv_value_5_0, 
+        		"eu.paasage.camel.dsl.CamelDsl.Value");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_5='}' 
+)	otherlv_6='}' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getMetricFormulaParameter_ImplAccess().getRightCurlyBracketKeyword_5());
+    	newLeafNode(otherlv_6, grammarAccess.getMetricFormulaParameter_ImplAccess().getRightCurlyBracketKeyword_6());
     }
 )
 ;
@@ -17045,15 +17052,18 @@ ruleRawSecurityMetric returns [EObject current=null]
     }
 (
 (
-		{
-			if ($current==null) {
-	            $current = createModelElement(grammarAccess.getRawSecurityMetricRule());
-	        }
-        }
 		{ 
-	        newCompositeNode(grammarAccess.getRawSecurityMetricAccess().getValueSingleValueCrossReference_8_1_0()); 
+	        newCompositeNode(grammarAccess.getRawSecurityMetricAccess().getValueValueParserRuleCall_8_1_0()); 
 	    }
-		ruleFqn		{ 
+		lv_value_12_0=ruleValue		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getRawSecurityMetricRule());
+	        }
+       		set(
+       			$current, 
+       			"value",
+        		lv_value_12_0, 
+        		"eu.paasage.camel.dsl.CamelDsl.Value");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -17238,15 +17248,18 @@ ruleCompositeSecurityMetric returns [EObject current=null]
     }
 (
 (
-		{
-			if ($current==null) {
-	            $current = createModelElement(grammarAccess.getCompositeSecurityMetricRule());
-	        }
-        }
 		{ 
-	        newCompositeNode(grammarAccess.getCompositeSecurityMetricAccess().getValueSingleValueCrossReference_8_1_0()); 
+	        newCompositeNode(grammarAccess.getCompositeSecurityMetricAccess().getValueValueParserRuleCall_8_1_0()); 
 	    }
-		ruleFqn		{ 
+		lv_value_12_0=ruleValue		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getCompositeSecurityMetricRule());
+	        }
+       		set(
+       			$current, 
+       			"value",
+        		lv_value_12_0, 
+        		"eu.paasage.camel.dsl.CamelDsl.Value");
 	        afterParserOrEnumRuleCall();
 	    }
 

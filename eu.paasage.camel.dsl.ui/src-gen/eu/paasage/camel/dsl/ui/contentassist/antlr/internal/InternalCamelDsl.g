@@ -30427,9 +30427,11 @@ rule__MetricFormulaParameter_Impl__Group__4__Impl
     }
 :
 (
-{ before(grammarAccess.getMetricFormulaParameter_ImplAccess().getValueAssignment_4()); }
-(rule__MetricFormulaParameter_Impl__ValueAssignment_4)
-{ after(grammarAccess.getMetricFormulaParameter_ImplAccess().getValueAssignment_4()); }
+{ before(grammarAccess.getMetricFormulaParameter_ImplAccess().getValueKeyword_4()); }
+
+	'value: ' 
+
+{ after(grammarAccess.getMetricFormulaParameter_ImplAccess().getValueKeyword_4()); }
 )
 
 ;
@@ -30444,6 +30446,7 @@ rule__MetricFormulaParameter_Impl__Group__5
     }
 :
 	rule__MetricFormulaParameter_Impl__Group__5__Impl
+	rule__MetricFormulaParameter_Impl__Group__6
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -30455,17 +30458,47 @@ rule__MetricFormulaParameter_Impl__Group__5__Impl
     }
 :
 (
-{ before(grammarAccess.getMetricFormulaParameter_ImplAccess().getRightCurlyBracketKeyword_5()); }
-
-	'}' 
-
-{ after(grammarAccess.getMetricFormulaParameter_ImplAccess().getRightCurlyBracketKeyword_5()); }
+{ before(grammarAccess.getMetricFormulaParameter_ImplAccess().getValueAssignment_5()); }
+(rule__MetricFormulaParameter_Impl__ValueAssignment_5)
+{ after(grammarAccess.getMetricFormulaParameter_ImplAccess().getValueAssignment_5()); }
 )
 
 ;
 finally {
 	restoreStackSize(stackSize);
 }
+
+
+rule__MetricFormulaParameter_Impl__Group__6
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__MetricFormulaParameter_Impl__Group__6__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MetricFormulaParameter_Impl__Group__6__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getMetricFormulaParameter_ImplAccess().getRightCurlyBracketKeyword_6()); }
+
+	'}' 
+
+{ after(grammarAccess.getMetricFormulaParameter_ImplAccess().getRightCurlyBracketKeyword_6()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
 
 
 
@@ -75803,18 +75836,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__MetricFormulaParameter_Impl__ValueAssignment_4
+rule__MetricFormulaParameter_Impl__ValueAssignment_5
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getMetricFormulaParameter_ImplAccess().getValueSingleValueCrossReference_4_0()); }
-(
-{ before(grammarAccess.getMetricFormulaParameter_ImplAccess().getValueSingleValueFqnParserRuleCall_4_0_1()); }
-	ruleFqn{ after(grammarAccess.getMetricFormulaParameter_ImplAccess().getValueSingleValueFqnParserRuleCall_4_0_1()); }
-)
-{ after(grammarAccess.getMetricFormulaParameter_ImplAccess().getValueSingleValueCrossReference_4_0()); }
+{ before(grammarAccess.getMetricFormulaParameter_ImplAccess().getValueValueParserRuleCall_5_0()); }
+	ruleValue{ after(grammarAccess.getMetricFormulaParameter_ImplAccess().getValueValueParserRuleCall_5_0()); }
 )
 
 ;
@@ -80958,12 +80987,8 @@ rule__RawSecurityMetric__ValueAssignment_8_1
     }
 :
 (
-{ before(grammarAccess.getRawSecurityMetricAccess().getValueSingleValueCrossReference_8_1_0()); }
-(
-{ before(grammarAccess.getRawSecurityMetricAccess().getValueSingleValueFqnParserRuleCall_8_1_0_1()); }
-	ruleFqn{ after(grammarAccess.getRawSecurityMetricAccess().getValueSingleValueFqnParserRuleCall_8_1_0_1()); }
-)
-{ after(grammarAccess.getRawSecurityMetricAccess().getValueSingleValueCrossReference_8_1_0()); }
+{ before(grammarAccess.getRawSecurityMetricAccess().getValueValueParserRuleCall_8_1_0()); }
+	ruleValue{ after(grammarAccess.getRawSecurityMetricAccess().getValueValueParserRuleCall_8_1_0()); }
 )
 
 ;
@@ -81094,12 +81119,8 @@ rule__CompositeSecurityMetric__ValueAssignment_8_1
     }
 :
 (
-{ before(grammarAccess.getCompositeSecurityMetricAccess().getValueSingleValueCrossReference_8_1_0()); }
-(
-{ before(grammarAccess.getCompositeSecurityMetricAccess().getValueSingleValueFqnParserRuleCall_8_1_0_1()); }
-	ruleFqn{ after(grammarAccess.getCompositeSecurityMetricAccess().getValueSingleValueFqnParserRuleCall_8_1_0_1()); }
-)
-{ after(grammarAccess.getCompositeSecurityMetricAccess().getValueSingleValueCrossReference_8_1_0()); }
+{ before(grammarAccess.getCompositeSecurityMetricAccess().getValueValueParserRuleCall_8_1_0()); }
+	ruleValue{ after(grammarAccess.getCompositeSecurityMetricAccess().getValueValueParserRuleCall_8_1_0()); }
 )
 
 ;
