@@ -87,7 +87,7 @@ VMRequirementSet returns deployment::VMRequirementSet:
             'qualitative hardware: ' qualitativeHardwareRequirement = [requirement::QualitativeHardwareRequirement | Fqn] |
             'quantitative hardware: ' quantitativeHardwareRequirement = [requirement::QuantitativeHardwareRequirement | Fqn] |
             'os: ' osOrImageRequirement = [requirement::OSRequirement | Fqn] |
-            'image: ' osOrImageRequirement = [requirement::ImageRequirement | Fqn]
+            'image: ' osOrImageRequirement = [requirement::ImageRequirement | Fqn] |
             'provider: ' providerRequirement = [requirement::ProviderRequirement | Fqn]
         )*
     '}'

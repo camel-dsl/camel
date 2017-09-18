@@ -27,6 +27,7 @@ public class CamelDslFormatter extends AbstractDeclarativeFormatter {
   @Extension
   private CamelDslGrammarAccess _camelDslGrammarAccess;
   
+  @Override
   protected void configureFormatting(final FormattingConfig c) {
     List<Pair<Keyword, Keyword>> _findKeywordPairs = this._camelDslGrammarAccess.findKeywordPairs("{", "}");
     for (final Pair<Keyword, Keyword> pair : _findKeywordPairs) {
